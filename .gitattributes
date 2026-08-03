@@ -1,0 +1,28 @@
+# Line endings are decided here, not by each machine's core.autocrlf.
+# The repository stores LF and checks out LF everywhere, so Windows, macOS
+# and the Cloudflare Pages build all see the same bytes.
+* text=auto eol=lf
+
+# Files where the ending is not ours to choose.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+*.sh text eol=lf
+
+# Binary assets. Git must never rewrite or try to diff these.
+*.webp binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary
+*.zip binary
+*.pdf binary
+
+# Keeps the diff readable when the generated pages change.
+classes/*.html diff
+sitemap.xml diff
