@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Priest | Nightmare RO class guide</title>
+<meta name="description" content="Priest is the primary advancement option for the Acolyte. Much like the Acolyte, Priests have a solid mixture of supportive abilities meant to keep themselve...">
+<link rel="canonical" href="https://www.nightmarero.com/classes/priest.html">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#07060a" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4f1ee" media="(prefers-color-scheme: light)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Nightmare RO">
+<meta property="og:url" content="https://www.nightmarero.com/classes/priest.html">
+<meta property="og:title" content="Priest | Nightmare RO class guide">
+<meta property="og:description" content="Priest is the primary advancement option for the Acolyte. Much like the Acolyte, Priests have a solid mixture of supportive abilities meant to keep themselve...">
+<meta property="og:image" content="https://www.nightmarero.com/assets/img/og-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Priest | Nightmare RO class guide">
+<meta name="twitter:description" content="Priest is the primary advancement option for the Acolyte. Much like the Acolyte, Priests have a solid mixture of supportive abilities meant to keep themselve...">
+<meta name="twitter:image" content="https://www.nightmarero.com/assets/img/og-cover.jpg">
+<link rel="icon" href="../assets/img/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../assets/img/icon-180.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>
+(function () {
+  try {
+    var t = localStorage.getItem('nm-theme');
+    if (!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    document.documentElement.dataset.theme = t;
+  } catch (e) {}
+})();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nightmarero.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Classes", "item": "https://www.nightmarero.com/classes.html" },
+        { "@type": "ListItem", "position": 3, "name": "Priest", "item": "https://www.nightmarero.com/classes/priest.html" }
+      ]
+    },
+    {
+      "@type": "Article",
+      "headline": "Priest class guide",
+      "about": "Priest",
+      "inLanguage": "en",
+      "isPartOf": { "@type": "WebSite", "name": "Nightmare RO", "url": "https://www.nightmarero.com/" },
+      "publisher": { "@type": "Organization", "name": "Nightmare RO" },
+      "description": "Priest is the primary advancement option for the Acolyte. Much like the Acolyte, Priests have a solid mixture of supportive abilities meant to keep themselve..."
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+<svg width="0" height="0" aria-hidden="true" style="position:absolute">
+  <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.3A8.6 8.6 0 0 1 9.7 3.5a8.6 8.6 0 1 0 10.8 10.8Z"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.7 3.9 6.1 3.9 9s-1.3 6.3-3.9 9c-2.6-2.7-3.9-6.1-3.9-9S9.4 5.7 12 3Z"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-discord" viewBox="0 0 24 24" fill="currentColor"><path d="M19.3 5.3A16.9 16.9 0 0 0 15.1 4l-.3.6a12.6 12.6 0 0 1 3.7 1.9 15.5 15.5 0 0 0-12.9 0 12.6 12.6 0 0 1 3.7-1.9L9 4a16.9 16.9 0 0 0-4.2 1.3C2.1 9.3 1.4 13.2 1.7 17a17 17 0 0 0 5.2 2.6l1.1-1.7a11 11 0 0 1-1.8-.9l.4-.3a12.1 12.1 0 0 0 10.4 0l.4.3a11 11 0 0 1-1.8.9l1.1 1.7A17 17 0 0 0 22 17c.4-4.4-.7-8.3-2.7-11.7ZM8.4 14.7c-1 0-1.9-.9-1.9-2.1s.8-2.1 1.9-2.1 1.9 1 1.9 2.1-.8 2.1-1.9 2.1Zm7.2 0c-1 0-1.9-.9-1.9-2.1s.8-2.1 1.9-2.1 1.9 1 1.9 2.1-.8 2.1-1.9 2.1Z"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7.5 10.5 12 15l4.5-4.5M4 17v2.5a1.5 1.5 0 0 0 1.5 1.5h13a1.5 1.5 0 0 0 1.5-1.5V17"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12.5 5.5 19 12l-6.5 6.5"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="11" cy="11" r="6.4"/><path d="m16 16 4.5 4.5"/></symbol>
+  <symbol id="i-image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="15" rx="2"/><circle cx="8.5" cy="10" r="1.6"/><path d="m4 17 5-4.5 4 3.5 3-2.5 4 3.5"/></symbol>
+</svg>
+<header class="site-header" id="siteHeader">
+  <div class="shell header-inner">
+    <a class="brand" href="../index.html" aria-label="Nightmare RO, home">
+      <img src="../assets/img/logo.webp" alt="Nightmare RO" width="180" height="38" fetchpriority="high">
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../index.html#server" data-i18n="nav.server">The server</a>
+      <a href="../index.html#features" data-i18n="nav.features">Features</a>
+      <a href="../classes.html" aria-current="page" data-i18n="nav.classes">Classes</a>
+      <a href="../download.html" data-i18n="nav.download">Download</a>
+      <a href="../index.html#start" data-i18n="nav.start">Get started</a>
+      <a href="../index.html#faq" data-i18n="nav.faq">FAQ</a>
+    </nav>
+    <div class="header-tools">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch theme" title="Switch theme">
+        <svg class="i-sun" aria-hidden="true"><use href="#i-sun"></use></svg>
+        <svg class="i-moon" aria-hidden="true"><use href="#i-moon"></use></svg>
+      </button>
+      <div class="lang">
+        <button class="lang-btn" id="langBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Change language">
+          <svg aria-hidden="true"><use href="#i-globe"></use></svg>
+          <span class="lang-code" id="langCode">EN</span>
+        </button>
+        <div class="lang-menu" id="langMenu" role="menu" aria-labelledby="langBtn"></div>
+      </div>
+      <a class="btn -primary -sm header-cta" href="https://nightmareofragnarok.com/?module=account&amp;action=create" target="_blank" rel="noopener" data-i18n="cta.register">Create account</a>
+      <button class="icon-btn burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false">
+        <svg aria-hidden="true"><use href="#i-menu"></use></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="shell">
+    <div class="drawer-top">
+      <img src="../assets/img/logo.webp" alt="Nightmare RO" width="150" height="32">
+      <button class="icon-btn" id="drawerClose" type="button" aria-label="Close menu">
+        <svg aria-hidden="true"><use href="#i-close"></use></svg>
+      </button>
+    </div>
+    <nav aria-label="Mobile">
+      <a href="../index.html#server" data-i18n="nav.server">The server</a>
+      <a href="../index.html#features" data-i18n="nav.features">Features</a>
+      <a href="../classes.html" data-i18n="nav.classes">Classes</a>
+      <a href="../download.html" data-i18n="nav.download">Download</a>
+      <a href="../index.html#start" data-i18n="nav.start">Get started</a>
+      <a href="../index.html#faq" data-i18n="nav.faq">FAQ</a>
+    </nav>
+    <div class="drawer-actions">
+      <a class="btn -primary -block" href="https://nightmareofragnarok.com/?module=account&amp;action=create" target="_blank" rel="noopener" data-i18n="cta.register">Create account</a>
+      <a class="btn -ghost -block" href="https://discord.gg/gHgFtmvudD" target="_blank" rel="noopener">
+        <svg aria-hidden="true"><use href="#i-discord"></use></svg><span data-i18n="cta.discord">Join the Discord</span>
+      </a>
+    </div>
+  </div>
+</div>
+<main id="main">
+  <section class="page-head">
+    <div class="shell">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><ol>
+        <li><a href="../index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="../classes.html" data-i18n="nav.classes">Classes</a></li>
+        <li>Priest</li>
+      </ol></nav>
+    </div>
+  </section>
+
+  <section>
+    <div class="shell class-hero">
+      <div class="stack">
+        <p class="eyebrow" data-i18n="tier.2">Second tier</p>
+        <h1>Priest</h1>
+        <div class="tier-tags">
+          <span class="tag -accent" data-i18n="tier.2">Second tier</span>
+          <span class="tag">Base level 51 to 99</span>
+          <span class="tag">Acolyte line</span>
+        </div>
+        <p class="muted">Priest is the primary advancement option for the Acolyte. Much like the Acolyte, Priests have a solid mixture of supportive abilities meant to keep themselves and their party alive, as well as powerful offensive abilities specialized for exorcizing the undead and unnatural.</p>
+        <p class="muted">Priest skills branch in two directions based on their two passives: Divine Grace and Divine Authority. Grace skills offer supportive abilities, from healing over time, to cleansing and protection from status effects, to an extended and enhanced Aspersio effect. The branch is capped by the skill Kyrie Eleison, a defensive buff that halves all damage taken by an ally for a short duration.</p>
+        <p class="muted">Authority skills are offensively oriented. Banishing Light does a small burst of damage, and is especially effective against Demon, Undead, and Angel race enemies. Searing Light burns a target, dealing damage over time that is enhanced if the target is Dark, Undead, or Ghost property, though reduced if they are Holy property. Purifying Light is a small AoE that deals a large amount of damage in its own right, but also leaves enemies vulnerable to further Holy property attacks. Finally, the branch is capped by Divine Judgment, a skill that doubles the damage enemies take for a fixed number of hits based on the skill's level.</p>
+        <p class="muted">However, as distinct and separate as these two branches seem at first glance, the core mechanic of the Priest class ties the two firmly back together. Whenever the Priest casts a Grace skill, they receive the Divine Grace buff. If an Authority skill is cast while this buff is active, the Authority skill will be cast at the same level as the Grace skill that preceded it: for example, if a Priest casts Aspersio at level 5, then attempts to cast Purifying Light at level 1, the Purifying Light will be cast as if it were level 5 instead.</p>
+        <p class="muted">This interaction works in both directions, allowing both support focused Priests to contribute considerable damage and exorcist Priests to continue offering excellent support capabilities without having to spread their skill points so thinly between the two branches. This extra layer of complexity makes careful planning, both in the skill build and on the battlefield, critical to mastering the Priest class.</p>
+      </div>
+      <div class="portrait">
+        <div class="sex-toggle" role="group" aria-label="Character art"><button type="button" data-src="../assets/img/classes/priest-male.webp" data-alt="Priest male" aria-pressed="true" data-i18n="cls.male">Male</button><button type="button" data-src="../assets/img/classes/priest-female.webp" data-alt="Priest female" aria-pressed="false" data-i18n="cls.female">Female</button></div>
+        <img src="../assets/img/classes/priest-male.webp" alt="Priest character art" width="700" height="760" loading="eager" decoding="async">
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad-sm">
+    <div class="shell stack">
+      <p class="eyebrow" data-i18n="cls.path">Where it sits</p>
+      <div class="path-map"><a href="acolyte.html">Acolyte</a><span class="arrow" aria-hidden="true">&rsaquo;</span><span class="current">Priest</span><span class="arrow" aria-hidden="true">&rsaquo;</span><a href="high-priest.html">High Priest</a><span class="arrow" aria-hidden="true">or</span><a href="arch-bishop.html">Arch Bishop</a></div>
+    </div>
+  </section>
+
+  <section class="section-pad-sm">
+    <div class="shell">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
+        <h2 data-i18n="cls.skillsTitle">Skills</h2>
+        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+      </div>
+      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-burn">Burning</span><span class="kw-vuln">Vulnerable</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <ul class="skill-list">
+        <li class="skill"><strong>Divine Grace</strong><p>Passive. Increases the effectiveness of all Grace skills cast by the user. After casting a Grace skill, the next Authority skill they cast will be cast at the same level as that Grace skill, unless the Authority skill is already a higher level.</p></li>
+        <li class="skill"><strong>Aspersio</strong><p>Grace Skill. Endows the weapons of all party members with the Holy property. For each level of Divine Grace learned, all Holy property damage dealt by those party members is increased.</p></li>
+        <li class="skill"><strong>Renovatio</strong><p>Grace Skill. Calls a regenerating light to shine on all party members, restoring life over time for a short duration. Higher levels of Divine Grace reduce this skill's cooldown.</p></li>
+        <li class="skill"><strong>Impositio Manus</strong><p>Grace Skill. Invokes a miracle of restoration on all party members through the laying of hands. Removes a number of damaging status effects from all party members and provides immunity to them for a short period of time. Higher levels of Divine Grace reduce this skill's cooldown.</p></li>
+        <li class="skill"><strong>Offertorium</strong><p>Grace Skill. The user presents themselves as an offering to the divine, preparing themselves to prioritize the will of Heaven before their own wants and needs. While active, the user gains a bonus to Healing Power based on their Strength, and gains a chance to autocast the Smite skill when autoattacking.</p></li>
+        <li class="skill"><strong>Kyrie Eleison</strong><p>Grace Skill. The user prays for divine intervention, calling on heavenly powers to protect a target from all harm. For a short duration, all damage taken by the target is halved. Higher levels of Divine Grace reduce this skill's cooldown.</p></li>
+        <li class="skill"><strong>Divine Authority</strong><p>Passive. Increases the effectiveness of all Authority skills cast by the user. After casting an Authority skill, the next Grace skill they cast will be cast at the same level as that Authority skill, unless the Grace skill is already a higher level.</p></li>
+        <li class="skill"><strong>Banishing Light</strong><p>Authority Skill.; Summons a holy light to banish the target from the mortal realm, dealing Holy property damage that is increased against Demon, Undead, and Angel race monsters. For each level of Divine Authority learned, a portion of this bonus is applied to enemies of other races.</p></li>
+        <li class="skill"><strong>Searing Light</strong><p>Authority Skill. Calls sacred fire from the heavens to incinerate the target, inflicting them with a status effect similar to the <b class="kw kw-burn">Burning</b> status. The damage is heavily influenced by the user's Base Level, Skill Level, and Int, and is increased against Dark, Undead, and Ghost Property targets, while halved against Holy Property targets. The duration of the status is increased by the Divine Authority skill.</p></li>
+        <li class="skill"><strong>Purifying Light</strong><p>Authority Skill. Invokes a divine light to purify the world of the enemy and their surroundings. Deals significant Holy property damage to enemies in an area around the target and inflicts the Holy Vulnerability status, increasing the damage they take from Holy property attacks from all sources (Holy Vulnerability does not affect Searing Light damage). The strength of the Vulnerability is based on the learned level of the Divine Authority skill.</p></li>
+        <li class="skill"><strong>Austere Light</strong><p>Authority Skill. The user smashes an enemy with their weapon, dealing Weapon Property Physical damage to a single target and boosting the user's Attack Speed for a short duration. This skill has a chance to inflict the <b class="kw kw-vuln">Vulnerable</b> Status based on the user's learned level of Divine Authority.</p></li>
+        <li class="skill"><strong>Divine Judgment</strong><p>Authority Skill. Calls divine judgment down on a target, causing them to take double damage from attacks of all sources for a set number of hits, based on the level of the skill. Higher levels of Divine Authority reduce this skill's cooldown.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section-pad-sm">
+    <div class="shell">
+      <div class="pager">
+        <a href="acolyte.html"><small data-i18n="cls.prev">Previous class</small><strong>Acolyte</strong></a>
+        <a class="-next" href="high-priest.html"><small data-i18n="cls.next">Next class</small><strong>High Priest</strong></a>
+      </div>
+      <div class="cta-band mt-xl">
+        <div class="inner">
+          <h2 data-i18n="band.title">Come find out what changed</h2>
+          <p class="lede text-center" data-i18n="band.lede">Make an account now, grab the client, and be there when the servers go up.</p>
+          <div class="hero-actions">
+            <a class="btn -primary -lg" href="https://nightmareofragnarok.com/?module=account&amp;action=create" target="_blank" rel="noopener" data-i18n="cta.registerFree">Create a free account</a>
+            <a class="btn -ghost -lg" href="../classes.html" data-i18n="cta.allClasses">See all 55 classes</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-grid">
+      <div>
+        <img src="../assets/img/logo.webp" alt="Nightmare RO" width="170" height="36" loading="lazy">
+        <p class="dim" style="margin-top:1rem;max-width:34ch" data-i18n="footer.blurb">A fully custom private server. Rebuilt, rebalanced and still being worked on.</p>
+      </div>
+      <div>
+        <h4 data-i18n="footer.play">Play</h4>
+        <ul>
+          <li><a href="https://nightmareofragnarok.com/?module=account&amp;action=create" target="_blank" rel="noopener" data-i18n="cta.register">Create account</a></li>
+          <li><a href="../download.html" data-i18n="nav.download">Download</a></li>
+          <li><a href="../classes.html" data-i18n="nav.classes">Classes</a></li>
+          <li><a href="../index.html#faq" data-i18n="nav.faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer.community">Community</h4>
+        <ul>
+          <li><a href="https://discord.gg/gHgFtmvudD" target="_blank" rel="noopener">Discord</a></li>
+          <li><a href="https://nightmarero.miraheze.org/wiki/Main_Page" target="_blank" rel="noopener" data-i18n="footer.wiki">Player wiki</a></li>
+          <li><a href="https://nightmareofragnarok.com/" target="_blank" rel="noopener" data-i18n="footer.panel">Control panel</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer.references">References</h4>
+        <ul>
+          <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vT3yuB3St__9v202ZUU9pUZm4PX88tph379Dr2eMR3TFNfZ0GUVD0tvuBl99Ma8GHp5e2pLzLG6Bmds/pubhtml" target="_blank" rel="noopener" data-i18n="footer.gear">Gear reference</a></li>
+          <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRaVCw9eEP3D-VlpBCryCcXy84FkDTm2RU-whdMIAZ8HuYhRvlsQrKqBiUUQlcLHq6gUqq6PXeUKB_5/pubhtml" target="_blank" rel="noopener" data-i18n="footer.cards">Card reference</a></li>
+          <li><a href="https://docs.google.com/document/d/e/2PACX-1vSlu9yEhoRVn5ob2yCJ8f_lOEQLq476hibjolBnnpDko-VXRWiB88o7aumdASXs0WwC0a1aTgH2QcjP/pub" target="_blank" rel="noopener" data-i18n="footer.overview">Full server overview</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer.legal">Nightmare RO is a free, non-commercial fan project. Not affiliated with any commercial game publisher.</span>
+      <span>&copy; <span id="year">2026</span> Nightmare RO</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/i18n.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sura | Nightmare RO class guide</title>
+<meta name="description" content="Sura is the alternative advancement option for the Monk. While Champion sought to bring the Combo and Spirit sides of the Monk tree into harmony, the Sura do...">
+<link rel="canonical" href="https://www.nightmarero.com/classes/sura.html">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#07060a" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4f1ee" media="(prefers-color-scheme: light)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Nightmare RO">
+<meta property="og:url" content="https://www.nightmarero.com/classes/sura.html">
+<meta property="og:title" content="Sura | Nightmare RO class guide">
+<meta property="og:description" content="Sura is the alternative advancement option for the Monk. While Champion sought to bring the Combo and Spirit sides of the Monk tree into harmony, the Sura do...">
+<meta property="og:image" content="https://www.nightmarero.com/assets/img/og-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sura | Nightmare RO class guide">
+<meta name="twitter:description" content="Sura is the alternative advancement option for the Monk. While Champion sought to bring the Combo and Spirit sides of the Monk tree into harmony, the Sura do...">
+<meta name="twitter:image" content="https://www.nightmarero.com/assets/img/og-cover.jpg">
+<link rel="icon" href="../assets/img/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../assets/img/icon-180.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>
+(function () {
+  try {
+    var t = localStorage.getItem('nm-theme');
+    if (!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    document.documentElement.dataset.theme = t;
+  } catch (e) {}
+})();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nightmarero.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Classes", "item": "https://www.nightmarero.com/classes.html" },
+        { "@type": "ListItem", "position": 3, "name": "Sura", "item": "https://www.nightmarero.com/classes/sura.html" }
+      ]
+    },
+    {
+      "@type": "Article",
+      "headline": "Sura class guide",
+      "about": "Sura",
+      "inLanguage": "en",
+      "isPartOf": { "@type": "WebSite", "name": "Nightmare RO", "url": "https://www.nightmarero.com/" },
+      "publisher": { "@type": "Organization", "name": "Nightmare RO" },
+      "description": "Sura is the alternative advancement option for the Monk. While Champion sought to bring the Combo and Spirit sides of the Monk tree into harmony, the Sura do..."
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+<svg width="0" height="0" aria-hidden="true" style="position:absolute">
+  <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.3A8.6 8.6 0 0 1 9.7 3.5a8.6 8.6 0 1 0 10.8 10.8Z"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.7 3.9 6.1 3.9 9s-1.3 6.3-3.9 9c-2.6-2.7-3.9-6.1-3.9-9S9.4 5.7 12 3Z"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-discord" viewBox="0 0 24 24" fill="currentColor"><path d="M19.3 5.3A16.9 16.9 0 0 0 15.1 4l-.3.6a12.6 12.6 0 0 1 3.7 1.9 15.5 15.5 0 0 0-12.9 0 12.6 12.6 0 0 1 3.7-1.9L9 4a16.9 16.9 0 0 0-4.2 1.3C2.1 9.3 1.4 13.2 1.7 17a17 17 0 0 0 5.2 2.6l1.1-1.7a11 11 0 0 1-1.8-.9l.4-.3a12.1 12.1 0 0 0 10.4 0l.4.3a11 11 0 0 1-1.8.9l1.1 1.7A17 17 0 0 0 22 17c.4-4.4-.7-8.3-2.7-11.7ZM8.4 14.7c-1 0-1.9-.9-1.9-2.1s.8-2.1 1.9-2.1 1.9 1 1.9 2.1-.8 2.1-1.9 2.1Zm7.2 0c-1 0-1.9-.9-1.9-2.1s.8-2.1 1.9-2.1 1.9 1 1.9 2.1-.8 2.1-1.9 2.1Z"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7.5 10.5 12 15l4.5-4.5M4 17v2.5a1.5 1.5 0 0 0 1.5 1.5h13a1.5 1.5 0 0 0 1.5-1.5V17"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12.5 5.5 19 12l-6.5 6.5"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="11" cy="11" r="6.4"/><path d="m16 16 4.5 4.5"/></symbol>
+  <symbol id="i-image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="15" rx="2"/><circle cx="8.5" cy="10" r="1.6"/><path d="m4 17 5-4.5 4 3.5 3-2.5 4 3.5"/></symbol>
+</svg>
+<header class="site-header" id="siteHeader">
+  <div class="shell header-inner">
+    <a class="brand" href="../index.html" aria-label="Nightmare RO, home">
+      <img src="../assets/img/logo.webp" alt="Nightmare RO" width="180" height="38" fetchpriority="high">
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../index.html#server" data-i18n="nav.server">The server</a>
+      <a href="../index.html#features" data-i18n="nav.features">Features</a>
+      <a href="../classes.html" aria-current="page" data-i18n="nav.classes">Classes</a>
+      <a href="../download.html" data-i18n="nav.download">Download</a>
+      <a href="../index.html#start" data-i18n="nav.start">Get started</a>
+      <a href="../index.html#faq" data-i18n="nav.faq">FAQ</a>
+    </nav>
+    <div class="header-tools">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch theme" title="Switch theme">
+        <svg class="i-sun" aria-hidden="true"><use href="#i-sun"></use></svg>
+        <svg class="i-moon" aria-hidden="true"><use href="#i-moon"></use></svg>
+      </button>
+      <div class="lang">
+        <button class="lang-btn" id="langBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Change language">
+          <svg aria-hidden="true"><use href="#i-globe"></use></svg>
+          <span class="lang-code" id="langCode">EN</span>
+        </button>
+        <div class="lang-menu" id="langMenu" role="menu" aria-labelledby="langBtn"></div>
+      </div>
+      <a class="btn -primary -sm header-cta" href="https://nightmareofragnarok.com/?module=account&amp;action=create" target="_blank" rel="noopener" data-i18n="cta.register">Create account</a>
+      <button class="icon-btn burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false">
+        <svg aria-hidden="true"><use href="#i-menu"></use></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="shell">
+    <div class="drawer-top">
+      <img src="../assets/img/logo.webp" alt="Nightmare RO" width="150" height="32">
+      <button class="icon-btn" id="drawerClose" type="button" aria-label="Close menu">
+        <svg aria-hidden="true"><use href="#i-close"></use></svg>
+      </button>
+    </div>
+    <nav aria-label="Mobile">
+      <a href="../index.html#server" data-i18n="nav.server">The server</a>
+      <a href="../index.html#features" data-i18n="nav.features">Features</a>
+      <a href="../classes.html" data-i18n="nav.classes">Classes</a>
+      <a href="../download.html" data-i18n="nav.download">Download</a>
+      <a href="../index.html#start" data-i18n="nav.start">Get started</a>
+      <a href="../index.html#faq" data-i18n="nav.faq">FAQ</a>
+    </nav>
+    <div class="drawer-actions">
+      <a class="btn -primary -block" href="https://nightmareofragnarok.com/?module=account&amp;action=create" target="_blank" rel="noopener" data-i18n="cta.register">Create account</a>
+      <a class="btn -ghost -block" href="https://discord.gg/gHgFtmvudD" target="_blank" rel="noopener">
+        <svg aria-hidden="true"><use href="#i-discord"></use></svg><span data-i18n="cta.discord">Join the Discord</span>
+      </a>
+    </div>
+  </div>
+</div>
+<main id="main">
+  <section class="page-head">
+    <div class="shell">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><ol>
+        <li><a href="../index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="../classes.html" data-i18n="nav.classes">Classes</a></li>
+        <li>Sura</li>
+      </ol></nav>
+    </div>
+  </section>
+
+  <section>
+    <div class="shell class-hero">
+      <div class="stack">
+        <p class="eyebrow" data-i18n="tier.3">Third tier</p>
+        <h1>Sura</h1>
+        <div class="tier-tags">
+          <span class="tag -accent" data-i18n="tier.3">Third tier</span>
+          <span class="tag">Base level 100 to 150</span>
+          <span class="tag">Acolyte line</span>
+        </div>
+        <p class="muted">Sura is the alternative advancement option for the Monk. While Champion sought to bring the Combo and Spirit sides of the Monk tree into harmony, the Sura doubles down on specialization, preferring to focus entirely on one side and drawing out its maximum potential.</p>
+        <p class="muted">Naturally, this means each side of the Monk tree is expanded. Furious Thrust, Furious Barrage, and Furious Execution add to the Combo side of the tree, providing a new rotation that can be added alongside the Monk skills or woven between them to create a new rotation altogether. The same can be said for the Spirit skills, Zealous Hammer, Zealous Echo, and Zealous Rage, which add a persistent <b class="kw kw-burn">Burning</b> effect for the Sura to take advantage of in their combos.</p>
+        <p class="muted">These trees are each capped with a built-in combo skill. Flash Combo rapidly executes all three Monk Combo skills, ignoring their cooldowns, while Last Exorcism does the same for the Monk's Spirit Skills.</p>
+        <p class="muted">In order to squeeze out even more damage from these skills, Sura skills also have the Stigmata mechanic. Each skill inflicts a set number of Stigmata stacks on the target, to a maximum of 10. For each stack, all Sura skills deal additional damage to that target. Together with some self buffs and passives that add additional interactions with these stacks, Suras are perfectly positioned to deal maximum damage to whatever crosses their path.</p>
+      </div>
+      <div class="portrait">
+        <div class="portrait-empty">
+          <svg aria-hidden="true"><use href="#i-image"></use></svg>
+          <span data-i18n="cls.noArt">Artwork for this class is on the way.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad-sm">
+    <div class="shell stack">
+      <p class="eyebrow" data-i18n="cls.path">Where it sits</p>
+      <div class="path-map"><a href="acolyte.html">Acolyte</a><span class="arrow" aria-hidden="true">&rsaquo;</span><a href="monk.html">Monk</a><span class="arrow" aria-hidden="true">&rsaquo;</span><span class="current">Sura</span></div>
+    </div>
+  </section>
+
+  <section class="section-pad-sm">
+    <div class="shell">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
+        <h2 data-i18n="cls.skillsTitle">Skills</h2>
+        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+      </div>
+      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-burn">Burning</span><span class="kw-stun">Stun</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <ul class="skill-list">
+        <li class="skill"><strong><b class="kw kw-burn">Burning</b> Faith</strong><p>Passively increases the damage dealt by Sura skills against enemies with Stigmata Stacks. When activated, Monk Combo Skills also gain this benefit, and also inflict Stigmata stacks.</p></li>
+        <li class="skill"><strong>Resolute Faith</strong><p>Passively reduces the damage taken from enemies that have any Stigmata stacks. When activated, Monk Spirit skills are treated as Sura skills for Stigmata damage buffs, and also inflict Stigmata stacks.</p></li>
+        <li class="skill"><strong>Judge's Conviction</strong><p>The user channels their inner fury, preparing to turn it against all enemies in the area around them. Inflicts a number of Stigmata stacks on all enemies in the area around the user. All Sura skills deal increased damage for each Stigmata stack on a target.</p></li>
+        <li class="skill"><strong>Furious Thrust</strong><p>The user throws a quick jab, delivering tremendous force with the minimum motion possible. Deals physical damage to a single target and inflicts one stack of Stigmata. If the user is under the Discipline Status, this skill is guaranteed to Crit. If the user is under the Iron Fists Status, this skill additionally grants the user the Aspersio status.</p></li>
+        <li class="skill"><strong>Furious Barrage</strong><p>The user unleashes a rapid barrage of strikes against a single target, dealing significant damage and inflicting two stacks of Stigmata. If the user is under the Discipline Status, this skill is guaranteed to Crit. If the user is under the Iron Fists status, the cooldown of Furious Thrust is refreshed.</p></li>
+        <li class="skill"><strong>Furious Execution</strong><p>The user delivers a single crushing blow to an enemy, dealing exceptional physical damage to a single target and inflicting three stacks of Stigmata. If the user is under the Discipline Status, this skill is guaranteed to Crit. If the user is under the Iron Fists status, this skill splashes in a 5x5 area. This skill consumes the Discipline and Iron Fists statuses, but does not grant them.</p></li>
+        <li class="skill"><strong>Flash Combo</strong><p>The user unleashes a string of powerful Combo skills, dealing exceptional damage to a single target. Immediately casts Raging Trifecta, Raging Quadruple Blow, and Raging Thrust in quick succession, ignoring the internal cooldowns of the skills. The skills are cast at a level equal to the number of Stigmata stacks on the target, ignoring the learned level. If the target is at 10 stacks of Stigmata, Furious Guillotine is added to the end of the combo.</p></li>
+        <li class="skill"><strong>Furious Guillotine</strong><p>The user delivers a finishing blow to the target, dealing massive physical damage and inflicting the <b class="kw kw-stun">Stun</b> status. This skill does not benefit from the Iron Fists or Discipline statuses, and does not grant them. This skill cannot be learned, and can only be cast through Flash Combo.</p></li>
+        <li class="skill"><strong>Zealous Hammer</strong><p>The user slams a fist charged with burning spiritual energy into the target, dealing heavy damage to a single target and inflicting one stack of Stigmata. If the user is under the Iron Fists status, this skill also inflicts the <b class="kw kw-burn">Burning</b> status. If the user is under the Discipline status, this skill also grants the Aspersio status to the user.</p></li>
+        <li class="skill"><strong>Zealous Echo</strong><p>The user unleashes a concentrated wave of spiritual energy, striking all enemies in the area around them. Deals physical damage to all enemies around the user and inflicting two stacks of Stigmata. If the user is under the Iron Fists status, also inflicts the Intense <b class="kw kw-burn">Burning</b> status. If the user is under the Discipline status, the cooldown of Zealous Hammer is instantly refreshed.</p></li>
+        <li class="skill"><strong>Zealous Rage</strong><p>The user unleashes an explosive wave of spiritual energy, scorching all enemies around them with holy fire. Deals physical damage to all enemies around the user and inflicts three stacks of Stigmata. If the user is under the Iron Fists status, the skill also inflicts Intense <b class="kw kw-burn">Burning</b>. If the user is under the Discipline status, the Variable Cast Time of the skill is removed.</p></li>
+        <li class="skill"><strong>Last Exorcism</strong><p>The user unleashes a string of powerful Spirit skills, dealing exceptional damage to their target. Immediately casts Soul Piercer, Spiritual Lash, and Soul Quake in quick succession, ignoring the internal cooldowns of the skills. The skills are cast at a level equal to the number of Stigmata stacks on the target. If the target has 10 stacks of Stigmata, Zealous Pyre is added to the end of the combo.</p></li>
+        <li class="skill"><strong>Zealous Pyre</strong><p>The user focuses their spiritual might on the targeted enemy, creating a localized inferno to obliterate them and all nearby enemies. Deals massive physical damage and inflicts both <b class="kw kw-burn">Burning</b> and <b class="kw kw-burn">Severe Burning</b>. This skill does not benefit from the Iron Fists or Discipline statuses, and does not grant them. This skill cannot be learned, and can only be cast through Last Exorcism.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section-pad-sm">
+    <div class="shell">
+      <div class="pager">
+        <a href="champion.html"><small data-i18n="cls.prev">Previous class</small><strong>Champion</strong></a>
+        <a class="-next" href="taekwon.html"><small data-i18n="cls.next">Next class</small><strong>Taekwon</strong></a>
+      </div>
+      <div class="cta-band mt-xl">
+        <div class="inner">
+          <h2 data-i18n="band.title">Come find out what changed</h2>
+          <p class="lede text-center" data-i18n="band.lede">Make an account now, grab the client, and be there when the servers go up.</p>
+          <div class="hero-actions">
+            <a class="btn -primary -lg" href="https://nightmareofragnarok.com/?module=account&amp;action=create" target="_blank" rel="noopener" data-i18n="cta.registerFree">Create a free account</a>
+            <a class="btn -ghost -lg" href="../classes.html" data-i18n="cta.allClasses">See all 55 classes</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-grid">
+      <div>
+        <img src="../assets/img/logo.webp" alt="Nightmare RO" width="170" height="36" loading="lazy">
+        <p class="dim" style="margin-top:1rem;max-width:34ch" data-i18n="footer.blurb">A fully custom private server. Rebuilt, rebalanced and still being worked on.</p>
+      </div>
+      <div>
+        <h4 data-i18n="footer.play">Play</h4>
+        <ul>
+          <li><a href="https://nightmareofragnarok.com/?module=account&amp;action=create" target="_blank" rel="noopener" data-i18n="cta.register">Create account</a></li>
+          <li><a href="../download.html" data-i18n="nav.download">Download</a></li>
+          <li><a href="../classes.html" data-i18n="nav.classes">Classes</a></li>
+          <li><a href="../index.html#faq" data-i18n="nav.faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer.community">Community</h4>
+        <ul>
+          <li><a href="https://discord.gg/gHgFtmvudD" target="_blank" rel="noopener">Discord</a></li>
+          <li><a href="https://nightmarero.miraheze.org/wiki/Main_Page" target="_blank" rel="noopener" data-i18n="footer.wiki">Player wiki</a></li>
+          <li><a href="https://nightmareofragnarok.com/" target="_blank" rel="noopener" data-i18n="footer.panel">Control panel</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer.references">References</h4>
+        <ul>
+          <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vT3yuB3St__9v202ZUU9pUZm4PX88tph379Dr2eMR3TFNfZ0GUVD0tvuBl99Ma8GHp5e2pLzLG6Bmds/pubhtml" target="_blank" rel="noopener" data-i18n="footer.gear">Gear reference</a></li>
+          <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRaVCw9eEP3D-VlpBCryCcXy84FkDTm2RU-whdMIAZ8HuYhRvlsQrKqBiUUQlcLHq6gUqq6PXeUKB_5/pubhtml" target="_blank" rel="noopener" data-i18n="footer.cards">Card reference</a></li>
+          <li><a href="https://docs.google.com/document/d/e/2PACX-1vSlu9yEhoRVn5ob2yCJ8f_lOEQLq476hibjolBnnpDko-VXRWiB88o7aumdASXs0WwC0a1aTgH2QcjP/pub" target="_blank" rel="noopener" data-i18n="footer.overview">Full server overview</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer.legal">Nightmare RO is a free, non-commercial fan project. Not affiliated with any commercial game publisher.</span>
+      <span>&copy; <span id="year">2026</span> Nightmare RO</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/i18n.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Keep the AI crawlers out of nothing in particular, but be explicit
+# so nobody has to guess.
+User-agent: GPTBot
+Allow: /
+
+Sitemap: https://www.nightmarero.com/sitemap.xml

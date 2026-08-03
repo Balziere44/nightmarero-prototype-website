@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Nightmare RO | Custom Private RO Server, Rebuilt From Zero</title>
+<meta name="description" content="Nightmare RO is a fully custom private RO server. Every class, skill, item and monster remade from scratch. 55 classes, level 150/50, summoned bosses, solo friendly PvE. Free to play, no pay to win.">
+<link rel="canonical" href="https://www.nightmarero.com/">
+
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="keywords" content="private RO server, custom RO server, RO private server, new RO server 2026, free MMORPG server, PvE RO server, custom MMORPG, renewal RO server, low rate RO server, midgard private server">
+<meta name="author" content="Twilight">
+<meta name="theme-color" content="#07060a" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4f1ee" media="(prefers-color-scheme: light)">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nightmare RO">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:url" content="https://www.nightmarero.com/">
+<meta property="og:title" content="Nightmare RO | Custom Private RO Server, Rebuilt From Zero">
+<meta property="og:description" content="Every class, skill, item and monster remade from scratch. 55 classes, level 150/50, summoned bosses, solo friendly PvE. Free to play.">
+<meta property="og:image" content="https://www.nightmarero.com/assets/img/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Nightmare RO">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nightmare RO | Custom Private RO Server">
+<meta name="twitter:description" content="A full remake. 55 classes, level 150/50, summoned bosses, solo friendly PvE.">
+<meta name="twitter:image" content="https://www.nightmarero.com/assets/img/og-cover.jpg">
+
+<link rel="icon" href="assets/img/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/img/icon-180.png">
+<link rel="manifest" href="site.webmanifest">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="assets/img/bg/hero.webp" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img/hero-a.webp">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<script>
+/* Applied before first paint so the theme never flashes. */
+(function () {
+  try {
+    var t = localStorage.getItem('nm-theme');
+    if (!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    document.documentElement.dataset.theme = t;
+  } catch (e) {}
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.nightmarero.com/#website",
+      "url": "https://www.nightmarero.com/",
+      "name": "Nightmare RO",
+      "description": "Custom private RO server rebuilt from scratch.",
+      "inLanguage": ["en", "pt", "fr", "it", "de", "ja"]
+    },
+    {
+      "@type": "VideoGame",
+      "@id": "https://www.nightmarero.com/#game",
+      "name": "Nightmare RO",
+      "url": "https://www.nightmarero.com/",
+      "description": "A fully custom private MMORPG server. All classes, skills, items, monsters and spawns were remade from scratch. Max level 150/50, 55 playable classes, summoned bosses, PvE focused and designed to be playable solo.",
+      "genre": ["MMORPG", "Fantasy", "Role Playing"],
+      "gamePlatform": "PC",
+      "playMode": ["MultiPlayer", "SinglePlayer"],
+      "applicationCategory": "Game",
+      "operatingSystem": "Windows",
+      "isAccessibleForFree": true,
+      "inLanguage": "en",
+      "author": { "@type": "Person", "name": "Twilight" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.nightmarero.com/#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "Is Nightmare RO free to play?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Account, client and all content are free. No shop sells power, and nothing you buy makes your character stronger." } },
+        { "@type": "Question", "name": "What are the rates on this private RO server?",
+          "acceptedAnswer": { "@type": "Answer", "text": "There is no clean multiplier, because the experience tables were rewritten. Roughly 5% of a level per kill around base 50, 1% around 100 and 0.1% near 149. Monsters also take far longer to kill here." } },
+        { "@type": "Question", "name": "How many playable classes are there?",
+          "acceptedAnswer": { "@type": "Answer", "text": "55. Nine starting classes, fourteen second tier and thirty two third tier, each with a fully rewritten skill set." } },
+        { "@type": "Question", "name": "Do I need a party to progress?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. The design starts from the idea that a single character can play the whole game. End game group content exists, but nothing in the levelling path assumes friends are online." } },
+        { "@type": "Question", "name": "Is there PvP or guild siege?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Nightmare RO is a PvE server. There is no player versus player combat at all." } },
+        { "@type": "Question", "name": "When does the server open?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Nightmare RO opens on August 7th, 2026." } }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+<a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+
+<!-- icon sprite -->
+<svg width="0" height="0" aria-hidden="true" style="position:absolute">
+  <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.3A8.6 8.6 0 0 1 9.7 3.5a8.6 8.6 0 1 0 10.8 10.8Z"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.7 3.9 6.1 3.9 9s-1.3 6.3-3.9 9c-2.6-2.7-3.9-6.1-3.9-9S9.4 5.7 12 3Z"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-discord" viewBox="0 0 24 24" fill="currentColor"><path d="M19.3 5.3A16.9 16.9 0 0 0 15.1 4l-.3.6a12.6 12.6 0 0 1 3.7 1.9 15.5 15.5 0 0 0-12.9 0 12.6 12.6 0 0 1 3.7-1.9L9 4a16.9 16.9 0 0 0-4.2 1.3C2.1 9.3 1.4 13.2 1.7 17a17 17 0 0 0 5.2 2.6l1.1-1.7a11 11 0 0 1-1.8-.9l.4-.3a12.1 12.1 0 0 0 10.4 0l.4.3a11 11 0 0 1-1.8.9l1.1 1.7A17 17 0 0 0 22 17c.4-4.4-.7-8.3-2.7-11.7ZM8.4 14.7c-1 0-1.9-.9-1.9-2.1s.8-2.1 1.9-2.1 1.9 1 1.9 2.1-.8 2.1-1.9 2.1Zm7.2 0c-1 0-1.9-.9-1.9-2.1s.8-2.1 1.9-2.1 1.9 1 1.9 2.1-.8 2.1-1.9 2.1Z"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7.5 10.5 12 15l4.5-4.5M4 17v2.5a1.5 1.5 0 0 0 1.5 1.5h13a1.5 1.5 0 0 0 1.5-1.5V17"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12.5 5.5 19 12l-6.5 6.5"/></symbol>
+  <symbol id="i-shard" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 2 4 9l3 12 10-2 3-11Z"/><path d="m12 2 1 8 7-1M13 10l-6 11M13 10l4 9"/></symbol>
+  <symbol id="i-solo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 21a7.5 7.5 0 0 1 15 0"/></symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 3v6.2L4.8 18a2 2 0 0 0 1.7 3h11a2 2 0 0 0 1.7-3l-4.7-8.8V3M8 3h8M6.4 15h11.2"/></symbol>
+  <symbol id="i-skull" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 2.5c-4.7 0-8 3.3-8 7.8 0 2.6 1.2 4.3 2.5 5.3.5.4.8 1 .8 1.6v1.3a1.5 1.5 0 0 0 1.5 1.5h6.4a1.5 1.5 0 0 0 1.5-1.5v-1.3c0-.6.3-1.2.8-1.6 1.3-1 2.5-2.7 2.5-5.3 0-4.5-3.3-7.8-8-7.8Z"/><circle cx="9" cy="11" r="1.6"/><circle cx="15" cy="11" r="1.6"/></symbol>
+  <symbol id="i-anvil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h6l2.5 3H21v3.2a5 5 0 0 1-5 5H9.5"/><path d="M7 19.2h10L15.5 21h-7Z"/><path d="M6 8V5.5"/></symbol>
+  <symbol id="i-gate" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V9.5a7 7 0 0 1 14 0V21"/><path d="M12 21V12M3 21h18"/></symbol>
+  <symbol id="i-banner" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v18M6 4h12l-2.5 4L18 12H6"/></symbol>
+  <symbol id="i-scales" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16M7 20h10M5 8h14M5 8 2.5 14h5ZM19 8l-2.5 6h5Z"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="11" cy="11" r="6.4"/><path d="m16 16 4.5 4.5"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4.5A1.5 1.5 0 0 1 5.5 3H19v15H5.5A1.5 1.5 0 0 0 4 19.5Z"/><path d="M4 19.5A1.5 1.5 0 0 1 5.5 21H19v-3"/></symbol>
+</svg>
+
+<!-- ====================== HEADER ====================== -->
+<header class="site-header" id="siteHeader">
+  <div class="shell header-inner">
+    <a class="brand" href="index.html" aria-label="Nightmare RO, home">
+      <img src="assets/img/logo.webp" alt="Nightmare RO" width="180" height="38" fetchpriority="high">
+    </a>
+
+    <nav class="nav" aria-label="Main">
+      <a href="#server" data-i18n="nav.server">The server</a>
+      <a href="#features" data-i18n="nav.features">Features</a>
+      <a href="classes.html" data-i18n="nav.classes">Classes</a>
+      <a href="download.html" data-i18n="nav.download">Download</a>
+      <a href="#start" data-i18n="nav.start">Get started</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+    </nav>
+
+    <div class="header-tools">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch theme" title="Switch theme">
+        <svg class="i-sun" aria-hidden="true"><use href="#i-sun"></use></svg>
+        <svg class="i-moon" aria-hidden="true"><use href="#i-moon"></use></svg>
+      </button>
+
+      <div class="lang">
+        <button class="lang-btn" id="langBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Change language">
+          <svg aria-hidden="true"><use href="#i-globe"></use></svg>
+          <span class="lang-code" id="langCode">EN</span>
+        </button>
+        <div class="lang-menu" id="langMenu" role="menu" aria-labelledby="langBtn"></div>
+      </div>
+
+      <a class="btn -primary -sm header-cta" href="https://nightmareofragnarok.com/?module=account&amp;action=create" target="_blank" rel="noopener" data-i18n="cta.register">Create account</a>
+
+      <button class="icon-btn burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false">
+        <svg aria-hidden="true"><use href="#i-menu"></use></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- mobile drawer -->
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="shell">
+    <div class="drawer-top">
+      <img src="assets/img/logo.webp" alt="Nightmare RO" width="150" height="32">
+      <button class="icon-btn" id="drawerClose" type="button" aria-label="Close menu">
+        <svg aria-hidden="true"><use href="#i-close"></use></svg>
+      </button>
+    </div>
+    <nav aria-label="Mobile">
+      <a href="#server" data-i18n="nav.server">The server</a>
+      <a href="#features" data-i18n="nav.features">Features</a>
+      <a href="classes.html" data-i18n="nav.classes">Classes</a>
+      <a href="download.html" data-i18n="nav.download">Download</a>
+      <a href="#start" data-i18n="nav.start">Get started</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+    </nav>
+    <div class="drawer-actions">
+      <a class="btn -primary -block" href="https://nightmareofragnarok.com/?module=account&amp;action=create" target="_blank" rel="noopener" data-i18n="cta.register">Create account</a>
+      <a class="btn -ghost -block" href="https://discord.gg/gHgFtmvudD" target="_blank" rel="noopener">
+        <svg aria-hidden="true"><use href="#i-discord"></use></svg><span data-i18n="cta.discord">Join the Discord</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- ====================== HERO ====================== -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="assets/img/bg/hero.webp" alt="" width="2000" height="1091" fetchpriority="high" decoding="async">
+    </div>
+    <div class="eclipse-field" aria-hidden="true">
+      <div class="eclipse-ring"></div>
+      <svg class="fractures" viewBox="0 0 1200 800" preserveAspectRatio="none">
+        <path d="M0 210 L280 330 L520 250 L760 400 L1200 300"/>
+        <path class="-pale" d="M140 0 L300 240 L210 520 L420 800"/>
+        <path class="-pale" d="M1060 0 L900 260 L1010 470 L820 800"/>
+        <path d="M300 240 L620 200 L760 400"/>
+      </svg>
+    </div>
+
+    <div class="shell hero-inner">
+      <div class="hero-copy">
+        <span class="badge">
+          <span class="dot"></span>
+          <span data-i18n="hero.badge">Opening August 7, 2026</span>
+        </span>
+
+        <h1><span data-i18n="hero.title1">The RO you know,</span> <span class="fracture-word" data-i18n="hero.title2">rebuilt from zero.</span></h1>
+
+        <p class="lede" data-i18n="hero.lede">Every class, skill, item and monster here was <strong>remade from scratch</strong>. 55 classes, level 150, bosses you summon yourself, and a design built so you can <strong>play solo without hitting a wall</strong>.</p>
+
+        <ul class="countdown" id="countdown" aria-live="off">
+          <li><b data-cd="d">--</b><small data-i18n="cd.days">days</small></li>
+          <li><b data-cd="h">--</b><small data-i18n="cd.hours">hours</small></li>
+          <li><b data-cd="m">--</b><small data-i18n="cd.minutes">minutes</small></li>
+          <li><b data-cd="s">--</b><small data-i18n="cd.seconds">seconds</small></li>
+        </ul>
+
+        <p class="badge" id="liveNow" hidden>
+          <span class="dot"></span>
+          <span data-i18n="hero.live">Servers are live. Come in.</span>
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn -primary -lg" href="https://nightmareofragnarok.com/?module=account&amp;action=create" target="_blank" rel="noopener" data-i18n="cta.registerFree">Create a free account</a>
+          <a class="btn -ghost -lg" href="download.html">
+            <svg aria-hidden="true"><use href="#i-download"></use></svg><span data-i18n="cta.download">Download</span>
+          </a>
+          <a class="btn -ghost -lg" href="classes.html" data-i18n="cta.classes">See the 55 classes</a>
+        </div>
+
+        <p class="dim" data-i18n="hero.foot">Free to play. No cash shop that sells power. PvE only.</p>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <img class="-a" src="assets/img/hero-a.webp" alt="" width="648" height="872" loading="eager" decoding="async" fetchpriority="high">
+        <img class="-b" src="assets/img/hero-b.webp" alt="" width="568" height="869" loading="eager" decoding="async">
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== STAT STRIP ====================== -->
+  <section class="stat-strip">
+    <div class="shell">
+      <ul class="stat-grid reveal">
+        <li><b>150 / 50</b><span data-i18n="stats.level">max level</span></li>
+        <li><b>55</b><span data-i18n="stats.classes">playable classes</span></li>
+        <li><b>5</b><span data-i18n="stats.party">players per party</span></li>
+        <li><b>100%</b><span data-i18n="stats.custom">custom content</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ====================== THE SERVER ====================== -->
+  <section id="server" class="section-pad">
+    <div class="bloom -left" aria-hidden="true"></div>
+    <div class="shell">
+      <div class="split">
+        <div class="stack reveal">
+          <p class="eyebrow" data-i18n="server.eyebrow">What this is</p>
+          <h2 data-i18n="server.title">A private RO server that plays like a new game</h2>
+          <p class="muted" data-i18n="server.p1">Not a reskin, not a rate change. Classes, skills, items, monsters and spawns were <strong>all rewritten</strong>. You will recognise the world and almost nothing else.</p>
+          <p class="muted" data-i18n="server.p2">One rule drives it: <strong>every character should be self sufficient at every stage</strong>. Any class, at any level, should be able to play without the design getting in the way.</p>
+          <p class="muted" data-i18n="server.p3">Party content still exists, and much of the end game needs a group. But monsters hit <strong>far harder than you expect</strong>, and the game never assumes you brought four friends.</p>
+          <div class="hero-actions">
+            <a class="btn -ghost" href="classes.html">
+              <span data-i18n="cta.browseClasses">Browse the classes</span>
+              <svg aria-hidden="true"><use href="#i-arrow"></use></svg>
+            </a>
+          </div>
+        </div>
+
+        <dl class="rows reveal" data-delay="1">
+          <div class="row"><dt data-i18n="rows.k1">Experience</dt><dd data-i18n="rows.v1">Tables were rewritten, so there is no honest rate to quote. Roughly <strong>5% of a level per kill at 50</strong>, <strong>1% at 100</strong>, <strong>0.1% near 149</strong>. Kills take much longer than you are used to.</dd></div>
+          <div class="row"><dt data-i18n="rows.k2">Drops</dt><dd data-i18n="rows.v2">Trash loot always drops. Gear is <strong>1 to 5%</strong> from normal monsters, <strong>10 to 50%</strong> from champions and bosses. Cards are 1% and 5%. No level based penalty.</dd></div>
+          <div class="row"><dt data-i18n="rows.k3">Parties</dt><dd data-i18n="rows.v3"><strong>Five players</strong>, with a 15 level share range between the lowest and highest member.</dd></div>
+          <div class="row"><dt data-i18n="rows.k4">PvP</dt><dd data-i18n="rows.v4"><strong>None.</strong> PvE from top to bottom.</dd></div>
+          <div class="row"><dt data-i18n="rows.k5">Quality of life</dt><dd data-i18n="rows.v5">Faster movement, <strong>5x HP and SP regen</strong>, random options on most gear, and a Sense skill that replaces the old monster info command.</dd></div>
+          <div class="row"><dt data-i18n="rows.k6">Warps</dt><dd data-i18n="rows.v6">Teleports are account wide, but you have to <strong>visit a town once</strong> before you can warp to it. Six are open from the start.</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== FEATURES ====================== -->
+  <section id="features" class="section-pad">
+    <div class="shell">
+      <div class="section-head reveal">
+        <p class="eyebrow" data-i18n="feat.eyebrow">Core systems</p>
+        <h2 data-i18n="feat.title">Eight things that make it different</h2>
+        <p class="lede" data-i18n="feat.lede">These are the systems you will actually feel in the first hour, and the ones that keep mattering three hundred hours later.</p>
+      </div>
+
+      <div class="grid-auto">
+        <article class="shard reveal">
+          <div class="shard-icon"><svg aria-hidden="true"><use href="#i-shard"></use></svg></div>
+          <h3 data-i18n="feat.t1">Rebuilt from scratch</h3>
+          <p data-i18n="feat.d1">All classes, skills, items, monsters and spawns were remade. <strong>Old builds and old guides do not apply here.</strong></p>
+        </article>
+
+        <article class="shard reveal" data-delay="1">
+          <div class="shard-icon"><svg aria-hidden="true"><use href="#i-solo"></use></svg></div>
+          <h3 data-i18n="feat.t2">Built to be soloable</h3>
+          <p data-i18n="feat.d2">Every class holds its own alone at every level. <strong>Grouping is a choice</strong>, not a requirement the game puts on you.</p>
+        </article>
+
+        <article class="shard reveal" data-delay="2">
+          <div class="shard-icon"><svg aria-hidden="true"><use href="#i-flask"></use></svg></div>
+          <h3 data-i18n="feat.t3">Status driven combat</h3>
+          <p data-i18n="feat.d3"><b class="kw kw-bleed">Bleeding</b>, <b class="kw kw-burn">Burning</b>, <b class="kw kw-poison">Poison</b>, <b class="kw kw-vuln">Vulnerable</b>, <b class="kw kw-frozen">Frozen</b>, <b class="kw kw-stun">Stun</b> and more. Short durations, strong effects, and <strong>most skills change behaviour based on what is on the target</strong>.</p>
+          <p style="margin-top:.7rem"><a class="btn -quiet -sm" style="padding-inline:0" href="classes.html#codex" data-i18n="feat.codexLink">Read the status codex</a></p>
+        </article>
+
+        <article class="shard reveal" data-delay="3">
+          <div class="shard-icon"><svg aria-hidden="true"><use href="#i-skull"></use></svg></div>
+          <h3 data-i18n="feat.t4">Bosses you summon</h3>
+          <p data-i18n="feat.d4">Bosses never spawn on their own. Farm relics, light the altar in that region, and <strong>the loot priority is yours</strong>. No kill stealing.</p>
+        </article>
+
+        <article class="shard reveal">
+          <div class="shard-icon"><svg aria-hidden="true"><use href="#i-anvil"></use></svg></div>
+          <h3 data-i18n="feat.t5">Refining that never breaks</h3>
+          <p data-i18n="feat.d5">Gear <strong>never breaks and never downgrades</strong>. Cap is +10, one ore line for weapons and one for armour. The only risk is your zeny.</p>
+        </article>
+
+        <article class="shard reveal" data-delay="1">
+          <div class="shard-icon"><svg aria-hidden="true"><use href="#i-gate"></use></svg></div>
+          <h3 data-i18n="feat.t6">Nightmare Dungeons</h3>
+          <p data-i18n="feat.d6">Three depths each. Deeper means <strong>monsters gain resistance and the map drains your health</strong>. Shadow gear is how you survive it.</p>
+        </article>
+
+        <article class="shard reveal" data-delay="2">
+          <div class="shard-icon"><svg aria-hidden="true"><use href="#i-banner"></use></svg></div>
+          <h3 data-i18n="feat.t7">Guilds that level up</h3>
+          <p data-i18n="feat.d7">Guilds gain experience from taxes, weekly quests and raids. The leader spends it on storage, capacity and <strong>permanent stat boosts for every member</strong>.</p>
+        </article>
+
+        <article class="shard reveal" data-delay="3">
+          <div class="shard-icon"><svg aria-hidden="true"><use href="#i-scales"></use></svg></div>
+          <h3 data-i18n="feat.t8">Pick a side, or don't</h3>
+          <p data-i18n="feat.d8">Two nations at civil war, three reputation lines. Help one, both or neither. <strong>Make enemies and they send people after you.</strong></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== CLASSES ====================== -->
+  <section id="classes" class="section-pad">
+    <div class="bloom -right" aria-hidden="true"></div>
+    <div class="shell">
+      <div class="section-head reveal">
+        <p class="eyebrow" data-i18n="cls.eyebrow">55 classes</p>
+        <h2 data-i18n="cls.title">Three tiers, and none of them play like they used to</h2>
+        <p class="lede" data-i18n="cls.lede">Nine starting classes, fourteen second tier classes, thirty two third tier classes. Every skill tree was written from a blank page, and each second tier class branches into two very different third tier options.</p>
+      </div>
+    </div>
+
+    <div class="class-rail reveal">
+      <a class="class-card" href="classes/rune-knight.html">
+        <img class="art" src="assets/img/classes/rune-knight-male-sm.webp" alt="Rune Knight" width="400" height="420" loading="lazy" decoding="async">
+        <span class="meta"><em data-i18n="cls.t3">Third tier</em><strong>Rune Knight</strong></span>
+      </a>
+      <a class="class-card" href="classes/warlock.html">
+        <img class="art" src="assets/img/classes/warlock-female-sm.webp" alt="Warlock" width="400" height="420" loading="lazy" decoding="async">
+        <span class="meta"><em data-i18n="cls.t3">Third tier</em><strong>Warlock</strong></span>
+      </a>
+      <a class="class-card" href="classes/guillotine-cross.html">
+        <img class="art" src="assets/img/classes/guillotine-cross-female-sm.webp" alt="Guillotine Cross" width="400" height="420" loading="lazy" decoding="async">
+        <span class="meta"><em data-i18n="cls.t3">Third tier</em><strong>Guillotine Cross</strong></span>
+      </a>
+      <a class="class-card" href="classes/arch-bishop.html">
+        <img class="art" src="assets/img/classes/arch-bishop-female-sm.webp" alt="Arch Bishop" width="400" height="420" loading="lazy" decoding="async">
+        <span class="meta"><em data-i18n="cls.t3">Third tier</em><strong>Arch Bishop</strong></span>
+      </a>
+      <a class="class-card" href="classes/ranger.html">
+        <img class="art" src="assets/img/classes/ranger-male-sm.webp" alt="Ranger" width="400" height="420" loading="lazy" decoding="async">
+        <span class="meta"><em data-i18n="cls.t3">Third tier</em><strong>Ranger</strong></span>
+      </a>
+      <a class="class-card" href="classes/royal-guard.html">
+        <img class="art" src="assets/img/classes/royal-guard-female-sm.webp" alt="Royal Guard" width="400" height="420" loading="lazy" decoding="async">
+        <span class="meta"><em data-i18n="cls.t3">Third tier</em><strong>Royal Guard</strong></span>
+      </a>
+      <a class="class-card" href="classes/mechanic.html">
+        <img class="art" src="assets/img/classes/mechanic-male-sm.webp" alt="Mechanic" width="400" height="420" loading="lazy" decoding="async">
+        <span class="meta"><em data-i18n="cls.t3">Third tier</em><strong>Mechanic</strong></span>
+      </a>
+      <a class="class-card" href="classes/high-wizard.html">
+        <img class="art" src="assets/img/classes/high-wizard-female-sm.webp" alt="High Wizard" width="400" height="420" loading="lazy" decoding="async">
+        <span class="meta"><em data-i18n="cls.t3">Third tier</em><strong>High Wizard</strong></span>
+      </a>
+      <a class="class-card" href="classes/sniper.html">
+        <img class="art" src="assets/img/classes/sniper-female-sm.webp" alt="Sniper" width="400" height="420" loading="lazy" decoding="async">
+        <span class="meta"><em data-i18n="cls.t3">Third tier</em><strong>Sniper</strong></span>
+      </a>
+      <a class="class-card" href="classes/paladin.html">
+        <img class="art" src="assets/img/classes/paladin-male-sm.webp" alt="Paladin" width="400" height="420" loading="lazy" decoding="async">
+        <span class="meta"><em data-i18n="cls.t3">Third tier</em><strong>Paladin</strong></span>
+      </a>
+      <a class="class-card" href="classes/assassin-cross.html">
+        <img class="art" src="assets/img/classes/assassin-cross-male-sm.webp" alt="Assassin Cross" width="400" height="420" loading="lazy" decoding="async">
+        <span class="meta"><em data-i18n="cls.t3">Third tier</em><strong>Assassin Cross</strong></span>
+      </a>
+      <a class="class-card" href="classes/mastersmith.html">
+        <img class="art" src="assets/img/classes/mastersmith-female-sm.webp" alt="Mastersmith" width="400" height="420" loading="lazy" decoding="async">
+        <span class="meta"><em data-i18n="cls.t3">Third tier</em><strong>Mastersmith</strong></span>
+      </a>
+    </div>
+
+    <div class="shell text-center mt-lg reveal">
+      <a class="btn -primary -lg" href="classes.html">
+        <span data-i18n="cta.allClasses">See all 55 classes</span>
+        <svg aria-hidden="true"><use href="#i-arrow"></use></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ====================== END GAME ====================== -->
+  <section id="endgame" class="section-pad">
+    <div class="shell">
+      <div class="section-head reveal">
+        <p class="eyebrow" data-i18n="end.eyebrow">End game</p>
+        <h2 data-i18n="end.title">Where it stops being comfortable</h2>
+      </div>
+
+      <div class="grid-2">
+        <article class="shard reveal">
+          <h3 data-i18n="end.t1">Nightmare Dungeons</h3>
+          <p data-i18n="end.d1">Three depths each. Every step down raises monster stats and adds <strong>Resistance</strong>, which cuts every point of damage you deal. Deeper still, the map itself <strong>drains your maximum health</strong> every few seconds.</p>
+          <p class="mt-lg" data-i18n="end.d1b"><strong>Shadow Gear</strong> is the answer. It sits in your costume slots so it never competes with your real build, and it is the only thing keeping you alive down there.</p>
+        </article>
+
+        <article class="shard reveal" data-delay="1">
+          <h3 data-i18n="end.t2">Challenge Mode Dungeons</h3>
+          <p data-i18n="end.d2">Level 150 and up, harder than anything else at their level. Every monster drops ore and herb boxes, each dungeon hides <strong>its own equipment set</strong>, and the bosses expect three to five players.</p>
+          <p class="mt-lg" data-i18n="end.d2b">The entrances are not waiting for you on a map. Some sit behind long quests, some <strong>cost materials every time you enter</strong>.</p>
+        </article>
+
+        <article class="shard reveal" data-delay="2">
+          <h3 data-i18n="end.t3">Guild raids</h3>
+          <p data-i18n="end.d3">High end instances for five, feeding <strong>large amounts of guild experience</strong> back into your roster. Passes are bought by the leader and shared through guild storage, so nobody gets locked out.</p>
+        </article>
+
+        <article class="shard reveal" data-delay="3">
+          <h3 data-i18n="end.t4">A war worth choosing</h3>
+          <p data-i18n="end.d4">Two cities turned on each other and the land between is a battlefield. Reputation buys <strong>shops, discounts, safe passage and combat blessings</strong>. Sink low enough and they send assassins instead.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== GET STARTED ====================== -->
+  <section id="start" class="section-pad">
+    <div class="bloom -left" aria-hidden="true"></div>
+    <div class="shell">
+      <div class="section-head reveal">
+        <p class="eyebrow" data-i18n="start.eyebrow">Get started</p>
+        <h2 data-i18n="start.title">Three steps and you are in</h2>
+      </div>
+
+      <div class="steps">
+        <div class="step reveal">
+          <h3 data-i18n="start.t1">Create your account</h3>
+          <p data-i18n="start.d1">Free, takes a minute, and it is the same account you use for the control panel, rankings and server status.</p>
+          <a class="btn -ghost -sm" href="https://nightmareofragnarok.com/?module=account&amp;action=create" target="_blank" rel="noopener" data-i18n="cta.register">Create account</a>
+        </div>
+        <div class="step reveal" data-delay="1">
+          <h3 data-i18n="start.t2">Download the client</h3>
+          <p data-i18n="start.d2">One package with everything in it. Unpack it anywhere, run the patcher, and it keeps itself up to date from then on.</p>
+          <a class="btn -ghost -sm" href="download.html" data-i18n="cta.downloadPage">Download page</a>
+        </div>
+        <div class="step reveal" data-delay="2">
+          <h3 data-i18n="start.t3">Say hello on Discord</h3>
+          <p data-i18n="start.d3">Patch notes, bug reports, build talk and direct access to the person who built the server. Worth joining before your first login.</p>
+          <a class="btn -ghost -sm" href="https://discord.gg/gHgFtmvudD" target="_blank" rel="noopener" data-i18n="cta.discord">Join the Discord</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== FAQ ====================== -->
+  <section id="faq" class="section-pad">
+    <div class="shell-narrow">
+      <div class="section-head reveal">
+        <p class="eyebrow" data-i18n="faq.eyebrow">FAQ</p>
+        <h2 data-i18n="faq.title">Questions people actually ask</h2>
+      </div>
+
+      <div class="faq reveal">
+        <details open>
+          <summary data-i18n="faq.q1">Is Nightmare RO free to play?</summary>
+          <div class="faq-body" data-i18n="faq.a1">Yes. Account, client and all content are free. <strong>No shop sells power</strong>, and nothing you buy makes your character stronger.</div>
+        </details>
+        <details>
+          <summary data-i18n="faq.q2">What are the rates on this private RO server?</summary>
+          <div class="faq-body" data-i18n="faq.a2">There is no clean multiplier, because the experience tables were rewritten. Roughly <strong>5% of a level per kill around base 50</strong>, <strong>1% around 100</strong>, <strong>0.1% near 149</strong>. Monsters also take far longer to kill here.</div>
+        </details>
+        <details>
+          <summary data-i18n="faq.q3">How many classes are there?</summary>
+          <div class="faq-body" data-i18n="faq.a3"><strong>55.</strong> Nine starting classes, fourteen second tier and thirty two third tier. Each tier gives 50 job levels, so 50 skill points per tier.</div>
+        </details>
+        <details>
+          <summary data-i18n="faq.q4">Do I need a party to get anywhere?</summary>
+          <div class="faq-body" data-i18n="faq.a4">No. The design starts from the idea that <strong>a single character can play the whole game</strong>. End game group content exists and is worth doing, but nothing in the levelling path assumes friends are online.</div>
+        </details>
+        <details>
+          <summary data-i18n="faq.q5">Is there PvP or guild siege?</summary>
+          <div class="faq-body" data-i18n="faq.a5">No. <strong>There is no player versus player combat of any kind.</strong> Guilds still matter, through progression, quests and raids.</div>
+        </details>
+        <details>
+          <summary data-i18n="faq.q6">Is it pre-renewal or renewal?</summary>
+          <div class="faq-body" data-i18n="faq.a6">Neither, really. The base sits closest to renewal, but <strong>many formulas were rewritten</strong>, including cast time, attack speed, critical hits and the whole element table.</div>
+        </details>
+        <details>
+          <summary data-i18n="faq.q7">Can I lose my gear when refining?</summary>
+          <div class="faq-body" data-i18n="faq.a7">Never. Gear <strong>does not break and does not downgrade</strong> on failure. Cap is +10, success is 100% minus 10% per current refine, so the last step is a 10% roll. You lose only the ore and the zeny.</div>
+        </details>
+        <details>
+          <summary data-i18n="faq.q8">When does the server open?</summary>
+          <div class="faq-body" data-i18n="faq.a8"><strong>August 7th, 2026.</strong> Accounts can be created now, and the Discord is already active.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== CTA ====================== -->
+  <section class="section-pad-sm">
+    <div class="shell">
+      <div class="cta-band reveal">
+        <div class="inner">
+          <p class="eyebrow" data-i18n="band.eyebrow">Opening August 7, 2026</p>
+          <h2 data-i18n="band.title">Come find out what changed</h2>
+          <p class="lede text-center" data-i18n="band.lede">Make an account now, grab the client, and be there when the servers go up.</p>
+          <div class="hero-actions">
+            <a class="btn -primary -lg" href="https://nightmareofragnarok.com/?module=account&amp;action=create" target="_blank" rel="noopener" data-i18n="cta.registerFree">Create a free account</a>
+            <a class="btn -ghost -lg" href="https://discord.gg/gHgFtmvudD" target="_blank" rel="noopener">
+              <svg aria-hidden="true"><use href="#i-discord"></use></svg><span data-i18n="cta.discord">Join the Discord</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ====================== FOOTER ====================== -->
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-grid">
+      <div>
+        <img src="assets/img/logo.webp" alt="Nightmare RO" width="170" height="36" loading="lazy">
+        <p class="dim" style="margin-top:1rem;max-width:34ch" data-i18n="footer.blurb">A fully custom private server. Rebuilt, rebalanced and still being worked on.</p>
+      </div>
+      <div>
+        <h4 data-i18n="footer.play">Play</h4>
+        <ul>
+          <li><a href="https://nightmareofragnarok.com/?module=account&amp;action=create" target="_blank" rel="noopener" data-i18n="cta.register">Create account</a></li>
+          <li><a href="download.html" data-i18n="nav.download">Download</a></li>
+          <li><a href="classes.html" data-i18n="nav.classes">Classes</a></li>
+          <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer.community">Community</h4>
+        <ul>
+          <li><a href="https://discord.gg/gHgFtmvudD" target="_blank" rel="noopener">Discord</a></li>
+          <li><a href="https://nightmarero.miraheze.org/wiki/Main_Page" target="_blank" rel="noopener" data-i18n="footer.wiki">Player wiki</a></li>
+          <li><a href="https://nightmareofragnarok.com/" target="_blank" rel="noopener" data-i18n="footer.panel">Control panel</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer.references">References</h4>
+        <ul>
+          <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vT3yuB3St__9v202ZUU9pUZm4PX88tph379Dr2eMR3TFNfZ0GUVD0tvuBl99Ma8GHp5e2pLzLG6Bmds/pubhtml" target="_blank" rel="noopener" data-i18n="footer.gear">Gear reference</a></li>
+          <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRaVCw9eEP3D-VlpBCryCcXy84FkDTm2RU-whdMIAZ8HuYhRvlsQrKqBiUUQlcLHq6gUqq6PXeUKB_5/pubhtml" target="_blank" rel="noopener" data-i18n="footer.cards">Card reference</a></li>
+          <li><a href="https://docs.google.com/document/d/e/2PACX-1vSlu9yEhoRVn5ob2yCJ8f_lOEQLq476hibjolBnnpDko-VXRWiB88o7aumdASXs0WwC0a1aTgH2QcjP/pub" target="_blank" rel="noopener" data-i18n="footer.overview">Full server overview</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span data-i18n="footer.legal">Nightmare RO is a free, non-commercial fan project. Not affiliated with any commercial game publisher.</span>
+      <span>&copy; <span id="year">2026</span> Nightmare RO</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/i18n.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,829 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Builds classes.html and every page under classes/ from tools/classes.json.
+
+Run it from the project root:
+
+    python tools/build_classes.py
+
+classes.json is the text of the Class Overviews document, already split by
+class. To refresh it after Twilight updates the doc, re-run tools/extract.py.
+"""
+
+import io
+import json
+import os
+import re
+import unicodedata
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA = os.path.join(ROOT, "tools", "classes.json")
+OUT_DIR = os.path.join(ROOT, "classes")
+IMG_DIR = os.path.join(ROOT, "assets", "img", "classes")
+
+SITE = "https://www.nightmarero.com"
+REGISTER = "https://nightmareofragnarok.com/?module=account&amp;action=create"
+DISCORD = "https://discord.gg/gHgFtmvudD"
+
+# --------------------------------------------------------------------------
+# Class tree. (family label, [(first, [(second, [third, third]), ...])])
+# --------------------------------------------------------------------------
+
+TREE = [
+    ("Swordsman", [
+        ("Knight", ["Lord Knight", "Rune Knight"]),
+        ("Crusader", ["Paladin", "Royal Guard"]),
+    ]),
+    ("Merchant", [
+        ("Blacksmith", ["Mastersmith", "Mechanic"]),
+        ("Alchemist", ["Biochemist", "Geneticist"]),
+    ]),
+    ("Thief", [
+        ("Assassin", ["Assassin Cross", "Guillotine Cross"]),
+        ("Rogue", ["Stalker", "Shadow Chaser"]),
+    ]),
+    ("Mage", [
+        ("Wizard", ["High Wizard", "Warlock"]),
+        ("Sage", ["Scholar", "Sorcerer"]),
+    ]),
+    ("Archer", [
+        ("Hunter", ["Sniper", "Ranger"]),
+        ("Bard and Dancer", ["Clown/Gypsy", "Minstrel/Wanderer"]),
+    ]),
+    ("Acolyte", [
+        ("Priest", ["High Priest", "Arch Bishop"]),
+        ("Monk", ["Champion", "Sura"]),
+    ]),
+    ("Taekwon", [
+        ("Star Gladiator", ["Star Emperor", "Sky Emperor"]),
+        ("Soul Linker", ["Soul Reaper", "Soul Ascetic"]),
+    ]),
+    ("Ninja", [
+        (None, ["Kagemusha", "Maboroshi"]),
+    ]),
+    ("Gunslinger", [
+        (None, ["Rebel", "Night Watch"]),
+    ]),
+]
+
+# --------------------------------------------------------------------------
+# Status codex. One colour per family. The terms are matched case sensitively
+# in skill text, so an ordinary lowercase "cold" or "slow" is left alone.
+# Longer terms are matched first so "Internal Bleeding" wins over "Bleeding".
+# --------------------------------------------------------------------------
+
+STATUS = [
+    ("bleed", "Bleeding", ["Internal Bleeding", "Bleeding", "Bleed"],
+     "Damage every second, scaled off the applier's Strength and level. "
+     "Internal Bleeding works the same but scales off Dexterity."),
+    ("burn", "Burning", ["Severe Burning", "Burning"],
+     "Damage every second, scaled off Intelligence. "
+     "Severe Burning scales off Vitality instead."),
+    ("poison", "Poison", ["Deadly Poison", "Poison"],
+     "Damage every second, scaled off Agility. "
+     "Deadly Poison scales off Luck instead."),
+    ("blind", "Blind", ["Blinded", "Blind"],
+     "Cuts the target's Hit and Flee by a flat 30, and shrinks how much of "
+     "the screen a player can see."),
+    ("vuln", "Vulnerable", ["Vulnerable", "Breach"],
+     "Strips 40% of the target's hard and soft defence. No attack bonus, "
+     "unlike the Provoke you remember."),
+    ("frozen", "Frozen", ["Frozen", "Freeze", "Chill", "Cold"],
+     "Cancels casting and locks the target until it takes damage. Chill slows "
+     "movement and attack speed, Cold is the follow up during the resist window."),
+    ("stun", "Stun", ["Stunned", "Stun", "Staggered", "Stagger"],
+     "Cancels casting and stops the target acting. Monsters resist for 30 "
+     "seconds afterwards and take Stagger instead."),
+    ("sleep", "Sleep", ["Sleeping", "Sleep", "Dazed"],
+     "Cancels casting and stops the target acting until it takes damage. "
+     "Monsters take Dazed during the resist window."),
+    ("slow", "Slow", ["Slowcast", "Slowed", "Slow", "Atrophy", "Immobilized", "Immobilize"],
+     "Movement speed down. Atrophy hits attack speed instead, and Slowcast "
+     "stretches fixed cast time."),
+]
+
+TERM_CLASS = {}
+for _key, _label, _terms, _desc in STATUS:
+    for _t in _terms:
+        TERM_CLASS[_t] = _key
+
+STATUS_RE = re.compile(
+    r"\b(%s)\b" % "|".join(sorted((re.escape(t) for t in TERM_CLASS),
+                                  key=len, reverse=True)))
+
+
+def colorize(text):
+    """Wraps status names so they pick up their codex colour."""
+    return STATUS_RE.sub(
+        lambda m: '<b class="kw kw-%s">%s</b>' % (TERM_CLASS[m.group(1)], m.group(1)),
+        text)
+
+
+def families_in(text):
+    """Which status families a page actually mentions, in codex order."""
+    found = set(TERM_CLASS[m] for m in STATUS_RE.findall(text))
+    return [s for s in STATUS if s[0] in found]
+
+
+TIER_LABEL = {1: "First tier", 2: "Second tier", 3: "Third tier"}
+LEVEL_RANGE = {1: "Base level 1 to 50", 2: "Base level 51 to 99", 3: "Base level 100 to 150"}
+LEVEL_RANGE_SOLO = {1: "Base level 1 to 99", 3: "Base level 100 to 150"}
+
+# --------------------------------------------------------------------------
+# Helpers
+# --------------------------------------------------------------------------
+
+QUOTES = {
+    "‘": "'", "’": "'", "“": '"', "”": '"',
+    "–": " to ", "—": ", ", "…": "...", " ": " ",
+    "�": "'",
+}
+
+
+def tidy(text):
+    """Normalise punctuation. Em dashes are deliberately removed."""
+    for bad, good in QUOTES.items():
+        text = text.replace(bad, good)
+    text = unicodedata.normalize("NFC", text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def esc(text):
+    return (text.replace("&", "&amp;").replace("<", "&lt;")
+                .replace(">", "&gt;").replace('"', "&quot;"))
+
+
+def slugify(name):
+    s = name.lower().replace("/", "-").replace(" and ", "-")
+    s = re.sub(r"[^a-z0-9]+", "-", s)
+    return s.strip("-")
+
+
+def has_art(slug):
+    """Returns the sexes that have artwork available, in display order."""
+    out = []
+    for sex in ("male", "female"):
+        if os.path.exists(os.path.join(IMG_DIR, "%s-%s.webp" % (slug, sex))):
+            out.append(sex)
+    return out
+
+
+# --------------------------------------------------------------------------
+# Content parsing
+# --------------------------------------------------------------------------
+
+SKILL_RE = re.compile(r"^([A-Z][^:]{1,48}):\s*(.*)$")
+MARKER_RE = re.compile(r"(following skills|^skills:|skill points to spend)", re.I)
+
+
+def parse(blocks):
+    """Splits a class body into intro paragraphs and skill entries."""
+    texts = [tidy(b["x"]) for b in blocks]
+    texts = [t for t in texts if t]
+
+    start = None
+    for i, t in enumerate(texts):
+        if t.endswith(":") and MARKER_RE.search(t):
+            start = i + 1
+            break
+    if start is None:
+        for i, t in enumerate(texts):
+            m = SKILL_RE.match(t)
+            if m and len(m.group(2)) > 40:
+                start = i
+                break
+    if start is None:
+        start = len(texts)
+
+    intro = [t for t in texts[:start] if not (t.endswith(":") and MARKER_RE.search(t))]
+
+    skills = []
+    for i, t in enumerate(texts[start:]):
+        m = SKILL_RE.match(t)
+        if m:
+            name, rest = m.group(1).strip(), m.group(2).strip()
+            # "Command: Attack!" and "Shuriken:" are headings, not name/body pairs
+            if not rest or (len(rest) < 32 and not rest.endswith(".")):
+                skills.append({"name": t.rstrip(":").strip(), "body": []})
+            else:
+                skills.append({"name": name, "body": [rest]})
+        elif skills:
+            skills[-1]["body"].append(t)
+        else:
+            intro.append(t)
+
+    return intro, skills
+
+
+# --------------------------------------------------------------------------
+# Shared chrome
+# --------------------------------------------------------------------------
+
+SPRITE = """<svg width="0" height="0" aria-hidden="true" style="position:absolute">
+  <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.3A8.6 8.6 0 0 1 9.7 3.5a8.6 8.6 0 1 0 10.8 10.8Z"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.7 3.9 6.1 3.9 9s-1.3 6.3-3.9 9c-2.6-2.7-3.9-6.1-3.9-9S9.4 5.7 12 3Z"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-discord" viewBox="0 0 24 24" fill="currentColor"><path d="M19.3 5.3A16.9 16.9 0 0 0 15.1 4l-.3.6a12.6 12.6 0 0 1 3.7 1.9 15.5 15.5 0 0 0-12.9 0 12.6 12.6 0 0 1 3.7-1.9L9 4a16.9 16.9 0 0 0-4.2 1.3C2.1 9.3 1.4 13.2 1.7 17a17 17 0 0 0 5.2 2.6l1.1-1.7a11 11 0 0 1-1.8-.9l.4-.3a12.1 12.1 0 0 0 10.4 0l.4.3a11 11 0 0 1-1.8.9l1.1 1.7A17 17 0 0 0 22 17c.4-4.4-.7-8.3-2.7-11.7ZM8.4 14.7c-1 0-1.9-.9-1.9-2.1s.8-2.1 1.9-2.1 1.9 1 1.9 2.1-.8 2.1-1.9 2.1Zm7.2 0c-1 0-1.9-.9-1.9-2.1s.8-2.1 1.9-2.1 1.9 1 1.9 2.1-.8 2.1-1.9 2.1Z"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7.5 10.5 12 15l4.5-4.5M4 17v2.5a1.5 1.5 0 0 0 1.5 1.5h13a1.5 1.5 0 0 0 1.5-1.5V17"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12.5 5.5 19 12l-6.5 6.5"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="11" cy="11" r="6.4"/><path d="m16 16 4.5 4.5"/></symbol>
+  <symbol id="i-image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="15" rx="2"/><circle cx="8.5" cy="10" r="1.6"/><path d="m4 17 5-4.5 4 3.5 3-2.5 4 3.5"/></symbol>
+</svg>"""
+
+
+def head(prefix, title, description, canonical, extra_ld="", og_image="assets/img/og-cover.jpg"):
+    return """<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{title}</title>
+<meta name="description" content="{desc}">
+<link rel="canonical" href="{site}/{canon}">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#07060a" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4f1ee" media="(prefers-color-scheme: light)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Nightmare RO">
+<meta property="og:url" content="{site}/{canon}">
+<meta property="og:title" content="{title}">
+<meta property="og:description" content="{desc}">
+<meta property="og:image" content="{site}/{ogimg}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{title}">
+<meta name="twitter:description" content="{desc}">
+<meta name="twitter:image" content="{site}/{ogimg}">
+<link rel="icon" href="{p}assets/img/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="{p}assets/img/icon-180.png">
+<link rel="manifest" href="{p}site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{p}assets/css/style.css">
+<script>
+(function () {{
+  try {{
+    var t = localStorage.getItem('nm-theme');
+    if (!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    document.documentElement.dataset.theme = t;
+  }} catch (e) {{}}
+}})();
+</script>
+{ld}
+</head>
+<body>
+<a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+{sprite}
+""".format(title=esc(title), desc=esc(description), site=SITE, canon=canonical,
+           p=prefix, ld=extra_ld, sprite=SPRITE, ogimg=og_image)
+
+
+def header(prefix, active):
+    def cur(name):
+        return ' aria-current="page"' if name == active else ""
+    return """<header class="site-header" id="siteHeader">
+  <div class="shell header-inner">
+    <a class="brand" href="{p}index.html" aria-label="Nightmare RO, home">
+      <img src="{p}assets/img/logo.webp" alt="Nightmare RO" width="180" height="38" fetchpriority="high">
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="{p}index.html#server" data-i18n="nav.server">The server</a>
+      <a href="{p}index.html#features" data-i18n="nav.features">Features</a>
+      <a href="{p}classes.html"{c_classes} data-i18n="nav.classes">Classes</a>
+      <a href="{p}download.html"{c_dl} data-i18n="nav.download">Download</a>
+      <a href="{p}index.html#start" data-i18n="nav.start">Get started</a>
+      <a href="{p}index.html#faq" data-i18n="nav.faq">FAQ</a>
+    </nav>
+    <div class="header-tools">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch theme" title="Switch theme">
+        <svg class="i-sun" aria-hidden="true"><use href="#i-sun"></use></svg>
+        <svg class="i-moon" aria-hidden="true"><use href="#i-moon"></use></svg>
+      </button>
+      <div class="lang">
+        <button class="lang-btn" id="langBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Change language">
+          <svg aria-hidden="true"><use href="#i-globe"></use></svg>
+          <span class="lang-code" id="langCode">EN</span>
+        </button>
+        <div class="lang-menu" id="langMenu" role="menu" aria-labelledby="langBtn"></div>
+      </div>
+      <a class="btn -primary -sm header-cta" href="{reg}" target="_blank" rel="noopener" data-i18n="cta.register">Create account</a>
+      <button class="icon-btn burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false">
+        <svg aria-hidden="true"><use href="#i-menu"></use></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="shell">
+    <div class="drawer-top">
+      <img src="{p}assets/img/logo.webp" alt="Nightmare RO" width="150" height="32">
+      <button class="icon-btn" id="drawerClose" type="button" aria-label="Close menu">
+        <svg aria-hidden="true"><use href="#i-close"></use></svg>
+      </button>
+    </div>
+    <nav aria-label="Mobile">
+      <a href="{p}index.html#server" data-i18n="nav.server">The server</a>
+      <a href="{p}index.html#features" data-i18n="nav.features">Features</a>
+      <a href="{p}classes.html" data-i18n="nav.classes">Classes</a>
+      <a href="{p}download.html" data-i18n="nav.download">Download</a>
+      <a href="{p}index.html#start" data-i18n="nav.start">Get started</a>
+      <a href="{p}index.html#faq" data-i18n="nav.faq">FAQ</a>
+    </nav>
+    <div class="drawer-actions">
+      <a class="btn -primary -block" href="{reg}" target="_blank" rel="noopener" data-i18n="cta.register">Create account</a>
+      <a class="btn -ghost -block" href="{dc}" target="_blank" rel="noopener">
+        <svg aria-hidden="true"><use href="#i-discord"></use></svg><span data-i18n="cta.discord">Join the Discord</span>
+      </a>
+    </div>
+  </div>
+</div>
+""".format(p=prefix, reg=REGISTER, dc=DISCORD,
+           c_classes=cur("classes"), c_dl=cur("download"))
+
+
+def footer(prefix):
+    return """<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-grid">
+      <div>
+        <img src="{p}assets/img/logo.webp" alt="Nightmare RO" width="170" height="36" loading="lazy">
+        <p class="dim" style="margin-top:1rem;max-width:34ch" data-i18n="footer.blurb">A fully custom private server. Rebuilt, rebalanced and still being worked on.</p>
+      </div>
+      <div>
+        <h4 data-i18n="footer.play">Play</h4>
+        <ul>
+          <li><a href="{reg}" target="_blank" rel="noopener" data-i18n="cta.register">Create account</a></li>
+          <li><a href="{p}download.html" data-i18n="nav.download">Download</a></li>
+          <li><a href="{p}classes.html" data-i18n="nav.classes">Classes</a></li>
+          <li><a href="{p}index.html#faq" data-i18n="nav.faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer.community">Community</h4>
+        <ul>
+          <li><a href="{dc}" target="_blank" rel="noopener">Discord</a></li>
+          <li><a href="https://nightmarero.miraheze.org/wiki/Main_Page" target="_blank" rel="noopener" data-i18n="footer.wiki">Player wiki</a></li>
+          <li><a href="https://nightmareofragnarok.com/" target="_blank" rel="noopener" data-i18n="footer.panel">Control panel</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer.references">References</h4>
+        <ul>
+          <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vT3yuB3St__9v202ZUU9pUZm4PX88tph379Dr2eMR3TFNfZ0GUVD0tvuBl99Ma8GHp5e2pLzLG6Bmds/pubhtml" target="_blank" rel="noopener" data-i18n="footer.gear">Gear reference</a></li>
+          <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRaVCw9eEP3D-VlpBCryCcXy84FkDTm2RU-whdMIAZ8HuYhRvlsQrKqBiUUQlcLHq6gUqq6PXeUKB_5/pubhtml" target="_blank" rel="noopener" data-i18n="footer.cards">Card reference</a></li>
+          <li><a href="https://docs.google.com/document/d/e/2PACX-1vSlu9yEhoRVn5ob2yCJ8f_lOEQLq476hibjolBnnpDko-VXRWiB88o7aumdASXs0WwC0a1aTgH2QcjP/pub" target="_blank" rel="noopener" data-i18n="footer.overview">Full server overview</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer.legal">Nightmare RO is a free, non-commercial fan project. Not affiliated with any commercial game publisher.</span>
+      <span>&copy; <span id="year">2026</span> Nightmare RO</span>
+    </div>
+  </div>
+</footer>
+
+<script src="{p}assets/js/i18n.js" defer></script>
+<script src="{p}assets/js/main.js" defer></script>
+</body>
+</html>
+""".format(p=prefix, reg=REGISTER, dc=DISCORD)
+
+
+# --------------------------------------------------------------------------
+# Build the flat class registry
+# --------------------------------------------------------------------------
+
+def build_registry():
+    reg = {}
+    order = []
+
+    for first, branches in TREE:
+        reg[first] = {"name": first, "tier": 1, "family": first,
+                      "parent": None, "children": []}
+        order.append(first)
+
+        for second, thirds in branches:
+            if second:
+                reg[second] = {"name": second, "tier": 2, "family": first,
+                               "parent": first, "children": list(thirds)}
+                reg[first]["children"].append(second)
+                order.append(second)
+                parent = second
+            else:
+                reg[first]["children"].extend(thirds)
+                parent = first
+
+            for third in thirds:
+                reg[third] = {"name": third, "tier": 3, "family": first,
+                              "parent": parent, "children": []}
+                order.append(third)
+
+    for i, name in enumerate(order):
+        reg[name]["slug"] = slugify(name)
+        reg[name]["prev"] = order[i - 1] if i else None
+        reg[name]["next"] = order[i + 1] if i + 1 < len(order) else None
+        reg[name]["index"] = i
+
+    return reg, order
+
+
+# --------------------------------------------------------------------------
+# Class page
+# --------------------------------------------------------------------------
+
+def portrait_block(slug, name):
+    sexes = has_art(slug)
+    if not sexes:
+        return """      <div class="portrait">
+        <div class="portrait-empty">
+          <svg aria-hidden="true"><use href="#i-image"></use></svg>
+          <span data-i18n="cls.noArt">Artwork for this class is on the way.</span>
+        </div>
+      </div>"""
+
+    first = sexes[0]
+    toggle = ""
+    if len(sexes) > 1:
+        buttons = "".join(
+            '<button type="button" data-src="../assets/img/classes/{s}-{x}.webp" '
+            'data-alt="{n} {x}" aria-pressed="{p}" data-i18n="cls.{x}">{L}</button>'.format(
+                s=slug, x=x, n=esc(name), p="true" if x == first else "false",
+                L=x.capitalize())
+            for x in sexes)
+        toggle = '\n        <div class="sex-toggle" role="group" aria-label="Character art">%s</div>' % buttons
+
+    return """      <div class="portrait">{toggle}
+        <img src="../assets/img/classes/{slug}-{first}.webp" alt="{name} character art" width="700" height="760" loading="eager" decoding="async">
+      </div>""".format(toggle=toggle, slug=slug, first=first, name=esc(name))
+
+
+def path_map(reg, name):
+    info = reg[name]
+    chain = []
+    node = name
+    while node:
+        chain.append(node)
+        node = reg[node]["parent"]
+    chain.reverse()
+
+    parts = []
+    for i, step in enumerate(chain):
+        if i:
+            parts.append('<span class="arrow" aria-hidden="true">&rsaquo;</span>')
+        if step == name:
+            parts.append('<span class="current">%s</span>' % esc(step))
+        else:
+            parts.append('<a href="%s.html">%s</a>' % (reg[step]["slug"], esc(step)))
+
+    for i, kid in enumerate(info["children"]):
+        parts.append('<span class="arrow" aria-hidden="true">%s</span>'
+                     % ("&rsaquo;" if i == 0 else "or"))
+        parts.append('<a href="%s.html">%s</a>' % (reg[kid]["slug"], esc(kid)))
+
+    return '<div class="path-map">%s</div>' % "".join(parts)
+
+
+def class_page(reg, name, blocks):
+    info = reg[name]
+    slug = info["slug"]
+    intro, skills = parse(blocks)
+
+    tier = info["tier"]
+    if info["family"] in ("Ninja", "Gunslinger"):
+        levels = LEVEL_RANGE_SOLO.get(tier, LEVEL_RANGE[tier])
+    else:
+        levels = LEVEL_RANGE[tier]
+
+    summary = intro[0] if intro else "%s is a playable class on Nightmare RO." % name
+    desc = (summary[:157] + "...") if len(summary) > 160 else summary
+
+    ld = """<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@graph": [
+    {{
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "{site}/" }},
+        {{ "@type": "ListItem", "position": 2, "name": "Classes", "item": "{site}/classes.html" }},
+        {{ "@type": "ListItem", "position": 3, "name": "{name}", "item": "{site}/classes/{slug}.html" }}
+      ]
+    }},
+    {{
+      "@type": "Article",
+      "headline": "{name} class guide",
+      "about": "{name}",
+      "inLanguage": "en",
+      "isPartOf": {{ "@type": "WebSite", "name": "Nightmare RO", "url": "{site}/" }},
+      "publisher": {{ "@type": "Organization", "name": "Nightmare RO" }},
+      "description": "{desc}"
+    }}
+  ]
+}}
+</script>""".format(site=SITE, name=esc(name), slug=slug, desc=esc(desc.replace('"', "'")))
+
+    title = "%s | Nightmare RO class guide" % name
+    parts = [head("../", title, desc, "classes/%s.html" % slug, ld),
+             header("../", "classes"),
+             '<main id="main">']
+
+    # ---- hero
+    parts.append("""
+  <section class="page-head">
+    <div class="shell">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><ol>
+        <li><a href="../index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="../classes.html" data-i18n="nav.classes">Classes</a></li>
+        <li>{name}</li>
+      </ol></nav>
+    </div>
+  </section>
+
+  <section>
+    <div class="shell class-hero">
+      <div class="stack">
+        <p class="eyebrow" data-i18n="tier.{tier}">{tierlabel}</p>
+        <h1>{name}</h1>
+        <div class="tier-tags">
+          <span class="tag -accent" data-i18n="tier.{tier}">{tierlabel}</span>
+          <span class="tag">{levels}</span>
+          <span class="tag">{family} line</span>
+        </div>
+        {intro}
+      </div>
+{portrait}
+    </div>
+  </section>
+""".format(name=esc(name), tier=tier, tierlabel=TIER_LABEL[tier], levels=esc(levels),
+           family=esc(info["family"]),
+           intro="\n        ".join('<p class="muted">%s</p>' % colorize(esc(p))
+                                   for p in intro),
+           portrait=portrait_block(slug, name)))
+
+    # ---- path
+    parts.append("""
+  <section class="section-pad-sm">
+    <div class="shell stack">
+      <p class="eyebrow" data-i18n="cls.path">Where it sits</p>
+      {pmap}
+    </div>
+  </section>
+""".format(pmap=path_map(reg, name)))
+
+    # ---- skills
+    if skills:
+        rows = []
+        for s in skills:
+            body = " ".join(s["body"]).strip()
+            rows.append('        <li class="skill"><strong>%s</strong>%s</li>' % (
+                colorize(esc(s["name"])),
+                "<p>%s</p>" % colorize(esc(body)) if body else ""))
+
+        # Only chip the statuses this class actually uses.
+        page_text = esc(" ".join(intro) + " " +
+                        " ".join(s["name"] + " " + " ".join(s["body"]) for s in skills))
+        chips = families_in(page_text)
+        legend = ""
+        if chips:
+            legend = ('\n      <div class="kw-legend" style="margin-bottom:1.1rem">%s'
+                      '<a href="../classes.html#codex" data-i18n="cls.legendMore">'
+                      'What these do</a></div>' %
+                      "".join('<span class="kw-%s">%s</span>' % (k, l)
+                              for k, l, _t, _d in chips))
+
+        parts.append("""
+  <section class="section-pad-sm">
+    <div class="shell">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
+        <h2 data-i18n="cls.skillsTitle">Skills</h2>
+        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+      </div>{legend}
+      <ul class="skill-list">
+{rows}
+      </ul>
+    </div>
+  </section>
+""".format(rows="\n".join(rows), legend=legend))
+
+    # ---- pager
+    prev, nxt = info["prev"], info["next"]
+    pager = []
+    if prev:
+        pager.append('        <a href="{s}.html"><small data-i18n="cls.prev">Previous class</small><strong>{n}</strong></a>'
+                     .format(s=reg[prev]["slug"], n=esc(prev)))
+    if nxt:
+        pager.append('        <a class="-next" href="{s}.html"><small data-i18n="cls.next">Next class</small><strong>{n}</strong></a>'
+                     .format(s=reg[nxt]["slug"], n=esc(nxt)))
+
+    parts.append("""
+  <section class="section-pad-sm">
+    <div class="shell">
+      <div class="pager">
+{pager}
+      </div>
+      <div class="cta-band mt-xl">
+        <div class="inner">
+          <h2 data-i18n="band.title">Come find out what changed</h2>
+          <p class="lede text-center" data-i18n="band.lede">Make an account now, grab the client, and be there when the servers go up.</p>
+          <div class="hero-actions">
+            <a class="btn -primary -lg" href="{reg}" target="_blank" rel="noopener" data-i18n="cta.registerFree">Create a free account</a>
+            <a class="btn -ghost -lg" href="../classes.html" data-i18n="cta.allClasses">See all 55 classes</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+""".format(pager="\n".join(pager), reg=REGISTER))
+
+    parts.append(footer("../"))
+    return "".join(parts)
+
+
+# --------------------------------------------------------------------------
+# Classes index
+# --------------------------------------------------------------------------
+
+def index_card(reg, name):
+    info = reg[name]
+    slug = info["slug"]
+    sexes = has_art(slug)
+    if sexes:
+        art = ('<img class="art" src="assets/img/classes/{s}-{x}-sm.webp" alt="{n}" '
+               'width="400" height="420" loading="lazy" decoding="async">'
+               .format(s=slug, x=sexes[0], n=esc(name)))
+    else:
+        art = '<span class="art-fallback" aria-hidden="true">%s</span>' % esc(name[0])
+
+    return """          <a class="class-card" href="classes/{slug}.html" data-class data-tier="{tier}" data-search="{search}">
+            {art}
+            <span class="meta"><em data-i18n="tier.{tier}">{tierlabel}</em><strong>{name}</strong></span>
+          </a>""".format(slug=slug, tier=info["tier"], art=art, name=esc(name),
+                         tierlabel=TIER_LABEL[info["tier"]],
+                         search=esc((name + " " + info["family"]).lower()))
+
+
+def classes_index(reg):
+    ld = """<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "{site}/" }},
+    {{ "@type": "ListItem", "position": 2, "name": "Classes", "item": "{site}/classes.html" }}
+  ]
+}}
+</script>""".format(site=SITE)
+
+    parts = [head("", "All 55 Classes | Nightmare RO",
+                  "Every playable class on Nightmare RO. Nine starting classes, fourteen second tier and thirty two third tier classes, each with a fully rewritten skill set.",
+                  "classes.html", ld),
+             header("", "classes"),
+             """<main id="main">
+  <section class="page-head">
+    <div class="shell">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><ol>
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li data-i18n="nav.classes">Classes</li>
+      </ol></nav>
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="idx.eyebrow">55 classes</p>
+        <h1 data-i18n="idx.title">Pick something and see how little you remember</h1>
+        <p class="lede" data-i18n="idx.lede">Every skill tree here was written from a blank page. Nine starting classes, fourteen second tier classes, and thirty two third tier classes, each branching two ways from its parent.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad-sm">
+    <div class="shell">
+      <div class="filter-bar">
+        <button class="chip" type="button" data-tier="all" aria-pressed="true" data-i18n="idx.all">All</button>
+        <button class="chip" type="button" data-tier="1" aria-pressed="false" data-i18n="tier.1">First tier</button>
+        <button class="chip" type="button" data-tier="2" aria-pressed="false" data-i18n="tier.2">Second tier</button>
+        <button class="chip" type="button" data-tier="3" aria-pressed="false" data-i18n="tier.3">Third tier</button>
+        <div class="search-field">
+          <svg aria-hidden="true"><use href="#i-search"></use></svg>
+          <label class="visually-hidden" for="classSearch" data-i18n="idx.searchLabel">Search classes</label>
+          <input id="classSearch" type="search" placeholder="Search classes" autocomplete="off"
+                 data-i18n-attr="placeholder:idx.search">
+        </div>
+      </div>
+
+      <div id="classIndex">"""]
+
+    for family, branches in TREE:
+        names = [family]
+        for second, thirds in branches:
+            if second:
+                names.append(second)
+            names.extend(thirds)
+
+        cards = "\n".join(index_card(reg, n) for n in names)
+        parts.append("""
+        <div class="branch">
+          <div class="branch-head">
+            <h2>{family}</h2>
+            <span>{count} classes</span>
+          </div>
+          <div class="class-grid">
+{cards}
+          </div>
+        </div>""".format(family=esc(family), count=len(names), cards=cards))
+
+    codex_cards = "\n".join(
+        """        <li class="kw-{key}">
+          <i class="swatch" aria-hidden="true"></i>
+          <div>
+            <b>{label}</b>
+            <span data-i18n="codex.d{n}">{desc}</span>
+            <em>{terms}</em>
+          </div>
+        </li>""".format(key=key, label=esc(label), n=i + 1, desc=esc(desc),
+                        terms=esc(", ".join(sorted(set(terms), key=len, reverse=True)[:3])))
+        for i, (key, label, terms, desc) in enumerate(STATUS))
+
+    parts.append("""
+      </div>
+      <p class="empty-state" id="classEmpty" hidden data-i18n="idx.empty">Nothing matched that search.</p>
+    </div>
+  </section>
+
+  <section class="section-pad-sm" id="codex">
+    <div class="shell">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="codex.eyebrow">Status codex</p>
+        <h2 data-i18n="codex.title">The colours you will see in every skill</h2>
+        <p class="lede" data-i18n="codex.lede">Combat here runs on status effects. Durations are short, effects are strong, and most skills read the target before deciding what to do. Each family gets a colour, used everywhere on this site.</p>
+      </div>
+      <ul class="codex">
+{codex}
+      </ul>
+    </div>
+  </section>
+""".format(codex=codex_cards))
+
+    parts.append("""
+
+  <section class="section-pad-sm">
+    <div class="shell">
+      <div class="cta-band">
+        <div class="inner">
+          <h2 data-i18n="band.title">Come find out what changed</h2>
+          <p class="lede text-center" data-i18n="band.lede">Make an account now, grab the client, and be there when the servers go up.</p>
+          <div class="hero-actions">
+            <a class="btn -primary -lg" href="{reg}" target="_blank" rel="noopener" data-i18n="cta.registerFree">Create a free account</a>
+            <a class="btn -ghost -lg" href="download.html" data-i18n="cta.download">Download</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+""".format(reg=REGISTER))
+
+    parts.append(footer(""))
+    return "".join(parts)
+
+
+# --------------------------------------------------------------------------
+# Main
+# --------------------------------------------------------------------------
+
+def main():
+    data = json.load(io.open(DATA, encoding="utf-8"))
+    reg, order = build_registry()
+
+    missing_data = [n for n in order if n not in data]
+    if missing_data:
+        print("No document section for: %s" % ", ".join(missing_data))
+
+    if not os.path.isdir(OUT_DIR):
+        os.makedirs(OUT_DIR)
+
+    for name in order:
+        html = class_page(reg, name, data.get(name, []))
+        path = os.path.join(OUT_DIR, reg[name]["slug"] + ".html")
+        io.open(path, "w", encoding="utf-8", newline="\n").write(html)
+
+    io.open(os.path.join(ROOT, "classes.html"), "w", encoding="utf-8",
+            newline="\n").write(classes_index(reg))
+
+    no_art = [n for n in order if not has_art(reg[n]["slug"])]
+    print("Wrote %d class pages plus classes.html" % len(order))
+    print("Classes still without artwork (%d):" % len(no_art))
+    for n in no_art:
+        print("  - %s  ->  %s-male.png / %s-female.png" %
+              (n, reg[n]["slug"], reg[n]["slug"]))
+
+    io.open(os.path.join(ROOT, "tools", "missing-art.txt"), "w",
+            encoding="utf-8", newline="\n").write("\n".join(no_art))
+
+
+if __name__ == "__main__":
+    main()
