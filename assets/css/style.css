@@ -872,7 +872,7 @@ html[data-theme="light"] .hero-bg img { opacity: 0.3; filter: saturate(0.6) cont
 /* The male leans into the column gap on the left, the female sits just
    inside the right edge. They end up overlapping by roughly a tenth. */
 .hero-art img.-a { left: -5%; width: 85%; z-index: 2; }
-.hero-art img.-b { right: -22%; width: 80%; bottom: 5%; z-index: 1; animation-delay: -5s; }
+.hero-art img.-b { right: -22%; width: 75%; bottom: 5%; z-index: 1; animation-delay: -5s; }
 
 @keyframes float {
   0%, 100% { translate: 0 0; }
