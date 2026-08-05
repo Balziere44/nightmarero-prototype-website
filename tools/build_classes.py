@@ -257,7 +257,7 @@ SPRITE = """<svg width="0" height="0" aria-hidden="true" style="position:absolut
 </svg>"""
 
 
-def head(prefix, title, description, canonical, extra_ld="", og_image="assets/img/og-cover.jpg"):
+def head(prefix, title, description, canonical, extra_ld="", og_image="assets/social/og-cover.jpg"):
     return """<!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>

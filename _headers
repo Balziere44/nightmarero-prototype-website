@@ -8,14 +8,19 @@
   Permissions-Policy: geolocation=(), microphone=(), camera=(), interest-cohort=()
   Strict-Transport-Security: max-age=31536000; includeSubDomains
 
-# Hashed-forever assets. Images and fonts never change under the same name.
+# Hashed-forever assets. Artwork never changes under the same name.
+#
+# The share card deliberately lives outside this folder, in /assets/social/.
+# Pages merges every matching rule instead of letting a more specific one
+# win, so a second block for one file here produces a header with two
+# conflicting max-age values. Keeping it off this path is the way to give it
+# a different cache policy.
 /assets/img/*
   Cache-Control: public, max-age=31536000, immutable
 
-# The share card is the one image that does get replaced under the same
-# name. A year of immutable caching would leave Discord and Google showing
-# the old artwork long after it changed, so this one revalidates.
-/assets/img/og-cover.jpg
+# Replaced under the same name whenever the branding changes, so it has to
+# revalidate or Discord and Google keep showing last year's card.
+/assets/social/*
   Cache-Control: public, max-age=3600, must-revalidate
 
 # CSS and JS do change, so keep them fresh but cheap to revalidate.
