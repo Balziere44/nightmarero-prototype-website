@@ -42,15 +42,21 @@ Two things need a real value. Everything else is ready.
 
 ### 1. The domain
 
-Every canonical URL, Open Graph tag and sitemap entry currently points at
-`https://www.nightmarero.com`. Replace it with the real domain everywhere:
+Every canonical URL, Open Graph tag and sitemap entry points at the current
+home, `https://nightmarero.pages.dev`. These have to be absolute and they have
+to resolve: Discord, Slack and Google fetch the share image from that exact
+address, so if it points at a domain that is not live yet the preview comes up
+blank.
+
+When the real domain is ready, swap it in and rebuild:
 
 ```bash
-grep -rl "www.nightmarero.com" . | xargs sed -i 's|https://www.nightmarero.com|https://YOUR-DOMAIN|g'
+grep -rl "nightmarero.pages.dev" . --exclude-dir=.git | xargs sed -i 's|https://nightmarero.pages.dev|https://YOUR-DOMAIN|g'
+python tools/build_classes.py && python tools/build_sitemap.py
 ```
 
-Then update the same constant in `tools/build_classes.py` (`SITE`) and
-`tools/build_sitemap.py` (`SITE`) so regenerated pages keep the right URL.
+The `grep` covers `tools/build_classes.py` and `tools/build_sitemap.py` too, so
+the `SITE` constant in both scripts moves with everything else.
 
 ### 2. The client download link
 

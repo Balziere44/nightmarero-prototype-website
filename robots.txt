@@ -6,4 +6,4 @@ Allow: /
 User-agent: GPTBot
 Allow: /
 
-Sitemap: https://www.nightmarero.com/sitemap.xml
+Sitemap: https://nightmarero.pages.dev/sitemap.xml

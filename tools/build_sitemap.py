@@ -8,7 +8,7 @@ import glob
 import datetime
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SITE = "https://www.nightmarero.com"
+SITE = "https://nightmarero.pages.dev"
 TODAY = datetime.date.today().isoformat()
 
 PRIORITY = {"index.html": ("1.0", "weekly"),

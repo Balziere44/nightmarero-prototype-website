@@ -45,7 +45,7 @@ PAIRED = {
     "Minstrel/Wanderer": ("Minstrel", "Wanderer"),
 }
 
-SITE = "https://www.nightmarero.com"
+SITE = "https://nightmarero.pages.dev"
 REGISTER = "https://nightmareofragnarok.com/?module=account&amp;action=create"
 DISCORD = "https://discord.gg/gHgFtmvudD"
 
