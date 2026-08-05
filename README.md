@@ -134,6 +134,31 @@ python tools/prepare_art.py "path/to/new/art"
 
 Then re-run `build_classes.py` so the pages pick them up. Nothing else changes.
 
+`prepare_art.py` also writes `tools/art-sizes.json`, the real pixel size of
+every file. `build_classes.py` reads it to put `width` and `height` on each
+image so the layout does not jump while the art loads. It is generated, so
+there is nothing to edit by hand.
+
+### Classes that show two characters
+
+Bard and Dancer, Clown/Gypsy and Minstrel/Wanderer are two jobs sharing one
+page, not two genders of one job. They skip the male/female toggle and show
+both characters side by side, each with its own name underneath.
+
+The mapping lives in `PAIRED` near the top of `tools/build_classes.py`:
+
+```python
+PAIRED = {
+    "Bard and Dancer": ("Bard", "Dancer"),      # male art, female art
+    "Clown/Gypsy": ("Clown", "Gypsy"),
+    "Minstrel/Wanderer": ("Minstrel", "Wanderer"),
+}
+```
+
+The artwork still uses the `-male` and `-female` filenames, since that is
+which slot each job occupies. On the card these get the `-pair` class, which
+lays them out as a band rather than one full height figure.
+
 ---
 
 ## Languages

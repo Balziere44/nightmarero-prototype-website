@@ -21,6 +21,29 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "tools", "classes.json")
 OUT_DIR = os.path.join(ROOT, "classes")
 IMG_DIR = os.path.join(ROOT, "assets", "img", "classes")
+SIZES_FILE = os.path.join(ROOT, "tools", "art-sizes.json")
+
+# Real pixel sizes for the artwork, written by prepare_art.py. Missing
+# entries just mean no width/height attribute, which still renders fine.
+try:
+    ART_SIZES = json.load(io.open(SIZES_FILE, encoding="utf-8"))
+except (IOError, ValueError):
+    ART_SIZES = {}
+
+
+def art_dims(name):
+    size = ART_SIZES.get(name)
+    return ' width="%d" height="%d"' % (size[0], size[1]) if size else ""
+
+
+# Three classes where the "male" and "female" artwork is really two separate
+# jobs that share one page. They get shown side by side and labelled, rather
+# than hidden behind a gender toggle.
+PAIRED = {
+    "Bard and Dancer": ("Bard", "Dancer"),
+    "Clown/Gypsy": ("Clown", "Gypsy"),
+    "Minstrel/Wanderer": ("Minstrel", "Wanderer"),
+}
 
 SITE = "https://www.nightmarero.com"
 REGISTER = "https://nightmareofragnarok.com/?module=account&amp;action=create"
@@ -445,6 +468,17 @@ def portrait_block(slug, name):
         </div>
       </div>"""
 
+    pair = PAIRED.get(name)
+    if pair and len(sexes) > 1:
+        figures = "".join("""
+        <figure>
+          <img src="../assets/img/classes/{s}-{x}.webp" alt="{label}"{dim} loading="eager" decoding="async">
+          <figcaption>{label}</figcaption>
+        </figure>""".format(s=slug, x=x, label=esc(label),
+                            dim=art_dims("%s-%s" % (slug, x)))
+            for x, label in (("male", pair[0]), ("female", pair[1])))
+        return '      <div class="portrait -pair">%s\n      </div>' % figures
+
     first = sexes[0]
     toggle = ""
     if len(sexes) > 1:
@@ -457,8 +491,9 @@ def portrait_block(slug, name):
         toggle = '\n        <div class="sex-toggle" role="group" aria-label="Character art">%s</div>' % buttons
 
     return """      <div class="portrait">{toggle}
-        <img src="../assets/img/classes/{slug}-{first}.webp" alt="{name} character art" width="700" height="760" loading="eager" decoding="async">
-      </div>""".format(toggle=toggle, slug=slug, first=first, name=esc(name))
+        <img src="../assets/img/classes/{slug}-{first}.webp" alt="{name} character art"{dim} loading="eager" decoding="async">
+      </div>""".format(toggle=toggle, slug=slug, first=first, name=esc(name),
+                       dim=art_dims("%s-%s" % (slug, first)))
 
 
 def path_map(reg, name):
@@ -654,18 +689,31 @@ def index_card(reg, name):
     info = reg[name]
     slug = info["slug"]
     sexes = has_art(slug)
-    if sexes:
-        art = ('<img class="art" src="assets/img/classes/{s}-{x}-sm.webp" alt="{n}" '
-               'width="400" height="420" loading="lazy" decoding="async">'
-               .format(s=slug, x=sexes[0], n=esc(name)))
+    pair = PAIRED.get(name)
+    extra = ""
+
+    if pair and len(sexes) > 1:
+        # Both counterparts on the card, side by side.
+        extra = " -pair"
+        art = "".join(
+            '<img class="art -{k}" src="assets/img/classes/{s}-{x}-sm.webp" alt="{label}"{dim} '
+            'loading="lazy" decoding="async">'.format(
+                k=x[0], s=slug, x=x, label=esc(label),
+                dim=art_dims("%s-%s-sm" % (slug, x)))
+            for x, label in (("male", pair[0]), ("female", pair[1])))
+    elif sexes:
+        art = ('<img class="art" src="assets/img/classes/{s}-{x}-sm.webp" alt="{n}"{dim} '
+               'loading="lazy" decoding="async">'
+               .format(s=slug, x=sexes[0], n=esc(name),
+                       dim=art_dims("%s-%s-sm" % (slug, sexes[0]))))
     else:
         art = '<span class="art-fallback" aria-hidden="true">%s</span>' % esc(name[0])
 
-    return """          <a class="class-card" href="classes/{slug}.html" data-class data-tier="{tier}" data-search="{search}">
+    return """          <a class="class-card{extra}" href="classes/{slug}.html" data-class data-tier="{tier}" data-search="{search}">
             {art}
             <span class="meta"><em data-i18n="tier.{tier}">{tierlabel}</em><strong>{name}</strong></span>
           </a>""".format(slug=slug, tier=info["tier"], art=art, name=esc(name),
-                         tierlabel=TIER_LABEL[info["tier"]],
+                         extra=extra, tierlabel=TIER_LABEL[info["tier"]],
                          search=esc((name + " " + info["family"]).lower()))
 
 

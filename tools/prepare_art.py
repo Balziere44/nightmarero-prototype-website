@@ -21,6 +21,7 @@ import os
 import re
 import sys
 import glob
+import json
 
 try:
     from PIL import Image
@@ -29,6 +30,7 @@ except ImportError:
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "assets", "img", "classes")
+SIZES = os.path.join(ROOT, "tools", "art-sizes.json")
 
 FULL_H, FULL_W = 760, 700
 CARD_H, CARD_W = 420, 400
@@ -78,6 +80,16 @@ def main():
 
     written, skipped = [], []
 
+    # Real pixel sizes, so the class pages can set width/height and the
+    # browser stops reflowing when the art loads.
+    sizes = {}
+    if os.path.exists(SIZES):
+        try:
+            with open(SIZES) as fh:
+                sizes = json.load(fh)
+        except ValueError:
+            sizes = {}
+
     for path in sorted(glob.glob(os.path.join(src, "*.png")) +
                        glob.glob(os.path.join(src, "*.webp"))):
         base = os.path.splitext(os.path.basename(path))[0]
@@ -99,11 +111,17 @@ def main():
         full = fit(img, FULL_H, FULL_W)
         full.save(os.path.join(OUT, "%s-%s.webp" % (slug, sex)),
                   "WEBP", quality=84, method=4)
-        fit(full, CARD_H, CARD_W).save(
-            os.path.join(OUT, "%s-%s-sm.webp" % (slug, sex)),
-            "WEBP", quality=82, method=4)
+        card = fit(full, CARD_H, CARD_W)
+        card.save(os.path.join(OUT, "%s-%s-sm.webp" % (slug, sex)),
+                  "WEBP", quality=82, method=4)
 
-        written.append("%s-%s" % (slug, sex))
+        name = "%s-%s" % (slug, sex)
+        sizes[name] = list(full.size)
+        sizes[name + "-sm"] = list(card.size)
+        written.append(name)
+
+    with open(SIZES, "w", newline="\n") as fh:
+        json.dump(sizes, fh, indent=1, sort_keys=True)
 
     print("Wrote %d image pairs:" % len(written))
     for name in written:

@@ -1,0 +1,882 @@
+{
+ "acolyte-female": [
+  387,
+  760
+ ],
+ "acolyte-female-sm": [
+  213,
+  420
+ ],
+ "acolyte-male": [
+  266,
+  760
+ ],
+ "acolyte-male-sm": [
+  147,
+  420
+ ],
+ "alchemist-female": [
+  700,
+  733
+ ],
+ "alchemist-female-sm": [
+  400,
+  418
+ ],
+ "alchemist-male": [
+  700,
+  696
+ ],
+ "alchemist-male-sm": [
+  400,
+  397
+ ],
+ "arch-bishop-female": [
+  700,
+  547
+ ],
+ "arch-bishop-female-sm": [
+  400,
+  312
+ ],
+ "arch-bishop-male": [
+  700,
+  590
+ ],
+ "arch-bishop-male-sm": [
+  400,
+  337
+ ],
+ "archer-female": [
+  411,
+  760
+ ],
+ "archer-female-sm": [
+  227,
+  420
+ ],
+ "archer-male": [
+  678,
+  760
+ ],
+ "archer-male-sm": [
+  374,
+  420
+ ],
+ "assassin-cross-female": [
+  678,
+  760
+ ],
+ "assassin-cross-female-sm": [
+  374,
+  420
+ ],
+ "assassin-cross-male": [
+  700,
+  594
+ ],
+ "assassin-cross-male-sm": [
+  400,
+  339
+ ],
+ "assassin-female": [
+  700,
+  611
+ ],
+ "assassin-female-sm": [
+  400,
+  349
+ ],
+ "assassin-male": [
+  619,
+  760
+ ],
+ "assassin-male-sm": [
+  342,
+  420
+ ],
+ "bard-dancer-female": [
+  700,
+  648
+ ],
+ "bard-dancer-female-sm": [
+  400,
+  370
+ ],
+ "bard-dancer-male": [
+  700,
+  674
+ ],
+ "bard-dancer-male-sm": [
+  400,
+  385
+ ],
+ "biochemist-female": [
+  700,
+  703
+ ],
+ "biochemist-female-sm": [
+  400,
+  401
+ ],
+ "biochemist-male": [
+  700,
+  743
+ ],
+ "biochemist-male-sm": [
+  395,
+  420
+ ],
+ "blacksmith-female": [
+  350,
+  760
+ ],
+ "blacksmith-female-sm": [
+  193,
+  420
+ ],
+ "blacksmith-male": [
+  394,
+  760
+ ],
+ "blacksmith-male-sm": [
+  217,
+  420
+ ],
+ "champion-female": [
+  700,
+  576
+ ],
+ "champion-female-sm": [
+  400,
+  329
+ ],
+ "champion-male": [
+  700,
+  555
+ ],
+ "champion-male-sm": [
+  400,
+  317
+ ],
+ "clown-gypsy-female": [
+  700,
+  708
+ ],
+ "clown-gypsy-female-sm": [
+  400,
+  404
+ ],
+ "clown-gypsy-male": [
+  700,
+  560
+ ],
+ "clown-gypsy-male-sm": [
+  400,
+  320
+ ],
+ "crusader-female": [
+  615,
+  760
+ ],
+ "crusader-female-sm": [
+  339,
+  420
+ ],
+ "crusader-male": [
+  632,
+  760
+ ],
+ "crusader-male-sm": [
+  349,
+  420
+ ],
+ "geneticist-female": [
+  700,
+  442
+ ],
+ "geneticist-female-sm": [
+  400,
+  252
+ ],
+ "geneticist-male": [
+  700,
+  457
+ ],
+ "geneticist-male-sm": [
+  400,
+  261
+ ],
+ "guillotine-cross-female": [
+  700,
+  550
+ ],
+ "guillotine-cross-female-sm": [
+  400,
+  314
+ ],
+ "guillotine-cross-male": [
+  700,
+  516
+ ],
+ "guillotine-cross-male-sm": [
+  400,
+  294
+ ],
+ "gunslinger-female": [
+  430,
+  760
+ ],
+ "gunslinger-female-sm": [
+  237,
+  420
+ ],
+ "gunslinger-male": [
+  501,
+  760
+ ],
+ "gunslinger-male-sm": [
+  276,
+  420
+ ],
+ "high-priest-female": [
+  700,
+  720
+ ],
+ "high-priest-female-sm": [
+  400,
+  411
+ ],
+ "high-priest-male": [
+  615,
+  760
+ ],
+ "high-priest-male-sm": [
+  339,
+  420
+ ],
+ "high-wizard-female": [
+  700,
+  648
+ ],
+ "high-wizard-female-sm": [
+  400,
+  370
+ ],
+ "high-wizard-male": [
+  700,
+  664
+ ],
+ "high-wizard-male-sm": [
+  400,
+  379
+ ],
+ "hunter-female": [
+  556,
+  760
+ ],
+ "hunter-female-sm": [
+  307,
+  420
+ ],
+ "hunter-male": [
+  533,
+  760
+ ],
+ "hunter-male-sm": [
+  294,
+  420
+ ],
+ "kagemusha-female": [
+  520,
+  760
+ ],
+ "kagemusha-female-sm": [
+  287,
+  420
+ ],
+ "kagemusha-male": [
+  455,
+  760
+ ],
+ "kagemusha-male-sm": [
+  251,
+  420
+ ],
+ "knight-female": [
+  508,
+  760
+ ],
+ "knight-female-sm": [
+  280,
+  420
+ ],
+ "knight-male": [
+  657,
+  760
+ ],
+ "knight-male-sm": [
+  363,
+  420
+ ],
+ "lord-knight-female": [
+  651,
+  760
+ ],
+ "lord-knight-female-sm": [
+  359,
+  420
+ ],
+ "lord-knight-male": [
+  700,
+  714
+ ],
+ "lord-knight-male-sm": [
+  400,
+  408
+ ],
+ "maboroshi-female": [
+  503,
+  760
+ ],
+ "maboroshi-female-sm": [
+  277,
+  420
+ ],
+ "maboroshi-male": [
+  700,
+  721
+ ],
+ "maboroshi-male-sm": [
+  400,
+  412
+ ],
+ "mage-female": [
+  508,
+  760
+ ],
+ "mage-female-sm": [
+  280,
+  420
+ ],
+ "mage-male": [
+  622,
+  760
+ ],
+ "mage-male-sm": [
+  343,
+  420
+ ],
+ "mastersmith-female": [
+  700,
+  750
+ ],
+ "mastersmith-female-sm": [
+  392,
+  420
+ ],
+ "mastersmith-male": [
+  656,
+  760
+ ],
+ "mastersmith-male-sm": [
+  362,
+  420
+ ],
+ "mechanic-female": [
+  700,
+  612
+ ],
+ "mechanic-female-sm": [
+  400,
+  349
+ ],
+ "mechanic-male": [
+  700,
+  596
+ ],
+ "mechanic-male-sm": [
+  400,
+  340
+ ],
+ "merchant-female": [
+  554,
+  760
+ ],
+ "merchant-female-sm": [
+  306,
+  420
+ ],
+ "merchant-male": [
+  405,
+  760
+ ],
+ "merchant-male-sm": [
+  223,
+  420
+ ],
+ "minstrel-wanderer-female": [
+  700,
+  476
+ ],
+ "minstrel-wanderer-female-sm": [
+  400,
+  272
+ ],
+ "minstrel-wanderer-male": [
+  700,
+  508
+ ],
+ "minstrel-wanderer-male-sm": [
+  400,
+  290
+ ],
+ "monk-female": [
+  685,
+  760
+ ],
+ "monk-female-sm": [
+  378,
+  420
+ ],
+ "monk-male": [
+  700,
+  681
+ ],
+ "monk-male-sm": [
+  400,
+  389
+ ],
+ "night-watch-female": [
+  700,
+  682
+ ],
+ "night-watch-female-sm": [
+  400,
+  389
+ ],
+ "night-watch-male": [
+  700,
+  731
+ ],
+ "night-watch-male-sm": [
+  400,
+  417
+ ],
+ "ninja-female": [
+  557,
+  760
+ ],
+ "ninja-female-sm": [
+  307,
+  420
+ ],
+ "ninja-male": [
+  532,
+  760
+ ],
+ "ninja-male-sm": [
+  294,
+  420
+ ],
+ "paladin-female": [
+  700,
+  731
+ ],
+ "paladin-female-sm": [
+  400,
+  417
+ ],
+ "paladin-male": [
+  677,
+  760
+ ],
+ "paladin-male-sm": [
+  374,
+  420
+ ],
+ "priest-female": [
+  519,
+  760
+ ],
+ "priest-female-sm": [
+  286,
+  420
+ ],
+ "priest-male": [
+  700,
+  682
+ ],
+ "priest-male-sm": [
+  400,
+  389
+ ],
+ "ranger-female": [
+  699,
+  482
+ ],
+ "ranger-female-sm": [
+  400,
+  275
+ ],
+ "ranger-male": [
+  700,
+  544
+ ],
+ "ranger-male-sm": [
+  400,
+  310
+ ],
+ "rebel-female": [
+  529,
+  760
+ ],
+ "rebel-female-sm": [
+  292,
+  420
+ ],
+ "rebel-male": [
+  599,
+  760
+ ],
+ "rebel-male-sm": [
+  331,
+  420
+ ],
+ "rogue-female": [
+  700,
+  586
+ ],
+ "rogue-female-sm": [
+  400,
+  334
+ ],
+ "rogue-male": [
+  610,
+  760
+ ],
+ "rogue-male-sm": [
+  337,
+  420
+ ],
+ "royal-guard-female": [
+  700,
+  455
+ ],
+ "royal-guard-female-sm": [
+  400,
+  260
+ ],
+ "royal-guard-male": [
+  700,
+  469
+ ],
+ "royal-guard-male-sm": [
+  400,
+  268
+ ],
+ "rune-knight-female": [
+  700,
+  462
+ ],
+ "rune-knight-female-sm": [
+  400,
+  264
+ ],
+ "rune-knight-male": [
+  700,
+  460
+ ],
+ "rune-knight-male-sm": [
+  400,
+  262
+ ],
+ "sage-female": [
+  700,
+  679
+ ],
+ "sage-female-sm": [
+  400,
+  388
+ ],
+ "sage-male": [
+  700,
+  716
+ ],
+ "sage-male-sm": [
+  400,
+  409
+ ],
+ "scholar-female": [
+  700,
+  661
+ ],
+ "scholar-female-sm": [
+  400,
+  377
+ ],
+ "scholar-male": [
+  700,
+  750
+ ],
+ "scholar-male-sm": [
+  392,
+  420
+ ],
+ "shadow-chaser-female": [
+  700,
+  461
+ ],
+ "shadow-chaser-female-sm": [
+  400,
+  263
+ ],
+ "shadow-chaser-male": [
+  700,
+  406
+ ],
+ "shadow-chaser-male-sm": [
+  400,
+  232
+ ],
+ "sky-emperor-female": [
+  616,
+  760
+ ],
+ "sky-emperor-female-sm": [
+  340,
+  420
+ ],
+ "sky-emperor-male": [
+  700,
+  732
+ ],
+ "sky-emperor-male-sm": [
+  400,
+  418
+ ],
+ "sniper-female": [
+  700,
+  685
+ ],
+ "sniper-female-sm": [
+  400,
+  391
+ ],
+ "sniper-male": [
+  700,
+  584
+ ],
+ "sniper-male-sm": [
+  400,
+  333
+ ],
+ "sorcerer-female": [
+  700,
+  608
+ ],
+ "sorcerer-female-sm": [
+  400,
+  347
+ ],
+ "sorcerer-male": [
+  699,
+  556
+ ],
+ "sorcerer-male-sm": [
+  400,
+  318
+ ],
+ "soul-ascetic-female": [
+  700,
+  724
+ ],
+ "soul-ascetic-female-sm": [
+  400,
+  413
+ ],
+ "soul-ascetic-male": [
+  436,
+  760
+ ],
+ "soul-ascetic-male-sm": [
+  240,
+  420
+ ],
+ "soul-linker-female": [
+  632,
+  760
+ ],
+ "soul-linker-female-sm": [
+  349,
+  420
+ ],
+ "soul-linker-male": [
+  487,
+  760
+ ],
+ "soul-linker-male-sm": [
+  269,
+  420
+ ],
+ "soul-reaper-female": [
+  575,
+  760
+ ],
+ "soul-reaper-female-sm": [
+  317,
+  420
+ ],
+ "soul-reaper-male": [
+  700,
+  754
+ ],
+ "soul-reaper-male-sm": [
+  389,
+  420
+ ],
+ "stalker-female": [
+  700,
+  595
+ ],
+ "stalker-female-sm": [
+  400,
+  340
+ ],
+ "stalker-male": [
+  684,
+  760
+ ],
+ "stalker-male-sm": [
+  378,
+  420
+ ],
+ "star-emperor-female": [
+  465,
+  760
+ ],
+ "star-emperor-female-sm": [
+  256,
+  420
+ ],
+ "star-emperor-male": [
+  672,
+  760
+ ],
+ "star-emperor-male-sm": [
+  371,
+  420
+ ],
+ "star-gladiator-female": [
+  452,
+  760
+ ],
+ "star-gladiator-female-sm": [
+  249,
+  420
+ ],
+ "star-gladiator-male": [
+  491,
+  760
+ ],
+ "star-gladiator-male-sm": [
+  271,
+  420
+ ],
+ "sura-female": [
+  700,
+  374
+ ],
+ "sura-female-sm": [
+  400,
+  213
+ ],
+ "sura-male": [
+  700,
+  569
+ ],
+ "sura-male-sm": [
+  400,
+  325
+ ],
+ "swordsman-female": [
+  543,
+  760
+ ],
+ "swordsman-female-sm": [
+  300,
+  420
+ ],
+ "swordsman-male": [
+  513,
+  760
+ ],
+ "swordsman-male-sm": [
+  283,
+  420
+ ],
+ "taekwon-female": [
+  545,
+  760
+ ],
+ "taekwon-female-sm": [
+  301,
+  420
+ ],
+ "taekwon-male": [
+  521,
+  760
+ ],
+ "taekwon-male-sm": [
+  287,
+  420
+ ],
+ "thief-female": [
+  316,
+  760
+ ],
+ "thief-female-sm": [
+  174,
+  420
+ ],
+ "thief-male": [
+  497,
+  760
+ ],
+ "thief-male-sm": [
+  274,
+  420
+ ],
+ "warlock-female": [
+  700,
+  531
+ ],
+ "warlock-female-sm": [
+  400,
+  303
+ ],
+ "warlock-male": [
+  700,
+  500
+ ],
+ "warlock-male-sm": [
+  400,
+  285
+ ],
+ "wizard-female": [
+  700,
+  721
+ ],
+ "wizard-female-sm": [
+  400,
+  412
+ ],
+ "wizard-male": [
+  676,
+  760
+ ],
+ "wizard-male-sm": [
+  373,
+  420
+ ]
+}

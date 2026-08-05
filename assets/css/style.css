@@ -1057,6 +1057,20 @@ html[data-theme="light"] .hero-bg img { opacity: 0.3; filter: saturate(0.6) cont
 }
 .class-card:hover .art { scale: 1.07; filter: drop-shadow(0 14px 30px var(--glow)); }
 
+/* Bard/Dancer, Clown/Gypsy and Minstrel/Wanderer are two jobs on one page,
+   so the card carries both. Their art is wide rather than full body, which
+   is why these sit as a band near the top instead of filling the card. */
+.class-card.-pair .art {
+  inset: 20% auto auto auto;
+  width: 68%;
+  height: auto;
+  object-fit: contain;
+  object-position: top center;
+}
+.class-card.-pair .art.-m { left: -10%; z-index: 1; }
+.class-card.-pair .art.-f { right: -10%; }
+.class-card.-pair:hover .art { scale: 1.05; }
+
 .class-card .art-fallback {
   position: absolute;
   inset: 0;
@@ -1429,6 +1443,39 @@ html[data-theme="light"] .site-footer { background: color-mix(in srgb, var(--bg)
   object-fit: contain;
   filter: drop-shadow(0 24px 36px rgba(0, 0, 0, 0.55));
 }
+/* The two counterpart jobs, shown together and named. */
+.portrait.-pair {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: clamp(0.5rem, 2vw, 1.6rem);
+  padding: var(--gap-md) var(--gap-sm) var(--gap-md);
+}
+
+.portrait.-pair figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+.portrait.-pair img {
+  max-height: 300px;
+  width: auto;
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.5));
+}
+
+.portrait.-pair figcaption {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent-soft);
+}
+
 .portrait .portrait-empty {
   place-self: center;
   padding: 2rem;
