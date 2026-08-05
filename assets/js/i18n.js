@@ -101,6 +101,10 @@
     snapshot();
     var table = dict[code] || {};
 
+    /* Scripts that build strings at runtime (the database filters) read the
+       active table straight off the window instead of the DOM. */
+    window.NM_I18N_TABLE = table;
+
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
       var key = el.getAttribute('data-i18n');
       var value = code === 'en' ? originals.text.get(el) : table[key];

@@ -1,0 +1,179 @@
+,,,,,
+Name,Slots,Def/Mdef,Effects,"Req, Level",Drops From
+,,,,,
+ARMORS,,,,,
+White Tiger Armor,1,25/10,Atk/Matk against Earth property +10%,30,Eddga
+Desert Leather Robe,1,15/5,Earth and Fire Resist +5%                               Combo with Full Set: Atk/Matk vs Earth and Fire +15%,30,Phreeoni
+Captain's Overcoat,1,20/0,"Water Resist +30%, Chill Resist +30%",30,Drake
+Ebon Armor,1,20/0,"Blind Potency +5, Blind Potency Received -5                       Combo with Boots: Blind Resist +30%",30,Kublin
+Sacred Vestments,1,20/10,Demon/Undead Resist +10%. Dark/Undead Resist +10%,50,Pharaoh
+Assault Armor,1,40/10,"Atk +5%, Max SP -20%",70,Captain Sweety
+Corrupted Chain Mail,1,45/0,"All Stats +1, Fire/Water/Earth/Wind Resist +5%  /  Dark, Undead, Ghost, Holy Resist -5%            Set Bonus",70,Nightmare Pitaya
+Faceworm Scale Armor,1,20/10,For every 5 Agi: Max HP +1%. For every 10 Agi: ASPD -1,70,Faceworm Queen
+Living Bone Armor,1,30/0,Autocast Blood Drain Lv1 when taking damage / Holy and Fire Resist -30%,70,Orc Necromancer
+Gaia Plate,1,35/10,Earth and Wind Resist +30%  /  Fire and Water Resist -30%,70,Wootan Defender
+Deep Sea Plate,1,35/10,Fire and Water Resist +30% / Earth and Wind Resist -30%,70,Kraken
+Lifespring Mail,1,50/0,Recover 500 HP every 10 seconds. SP Recovery -50%,90,RSX-0806
+Juperos Mail,1,30/0,"Max HP/SP +10%         Set Bonus: Max HP/SP +5%, Fire/Water/Wind/Earth Resist +5%, Move Speed +5%",90,Vesper
+World Serpent Robe,1,25/20,"Matk +3%. At +4, Matk +3%. At +7, Matk +4%",90,Avatar of the Serpent
+Fallen Hero's Armor,1,55/0,Max HP +30%. Damage from all Elements +30%,110,Lord of the Dead
+Legion Plate Armor,1,55/0,Damage from All Sizes -10%. Move Speed -5%. Move Speed is locked.,110,Bloody Knight
+Underworld's Dream,1,25/25,Max HP +5% per Refine. Potion Effectiveness -50%,110,Dark Lord
+Diabolus Armor,1,50/0,"Str/Vit +3. For each Diabolus item equipped, Crit +5, Crit Pierce +5%",110,Morroc's Shadow
+Diabolus Robe,1,25/25,"Int/Dex +3. For each Diabolus item equipped, VCT -5%, Mdef Pierce +5%",110,Morroc's Shadow
+Naga Scale Armor,1,30/0,"For each Refine, Crit +1, Crit Pierce +1%. If +7, additional Crit +5/Crit Pierce +5%",130,Tendrilion
+Excellion Suit,1,60/0,Healing Received +10%. Barriers Received +10%,130,Final Defense Drone
+Armor of the Ancients,1,60/0,"Phys and Magic Damage to All Sizes +1% per Refine. Damage from All Sizes +1% per Refine. If +7, Def/Mdef Pierce 10%",130,Ancient Temple Excavation
+Siege Master Plate,1,40/10,"Physical Damage to All Sizes +10%, -2% per Refine. For each Refine over 5, Damage from All Sizes -2%. If exactly +5, Physical Damage to All Sizes +5%, Damage from All Sizes -5%",130,Castle Siege
+,,,,,
+GARMENTS,,,,,
+,,,,,
+,,,,,
+Insect Wing Manteau,1,10/0,"Backslide level +1, High Jump level +1",30,Maya
+Phoenix Cloak,1,15/10,"-10% damage from Fire property, -10% damage from Fire monsters",30,Eddga
+Ancient Cape,1,10/5,"Enables Hiding Lv 1, Hiding has a chance to cast Blinding Pulse",30,Dracula
+Desert Leather Cloak,1,10/5,Earth and Fire Resist +5%,30,Phreeoni
+Giant Snake Skin,1,20/5,Poison Property Resistance +10% / Damage from Poison Property Enemies -10%,50,Guardian Serpent
+Grave Cloak,1,10/10,Dark and Undead Resist +30% / Holy and Fire Resist -30%,70,Orc Necromancer
+Corrupted Muffler,1,20/10,"All Stats +1, Fire/Water/Earth/Wind Resist +5%  /  Dark, Undead, Ghost, Holy Resist -5%            Set Bonus",70,Nightmare Pitaya
+Magma Manteau,1,20/10,"Burning Damage +10%, Burning Damage Taken -10%, Magic pierces Fire Resistance",70,Pyuriel
+Cultist's Cloak,1,20/10,Poison Property Resistance +10%. Poison Status damage taken -10%.,70,False Snake God
+Juperos Wing,1,20/10,Fire/Water/Wind/Earth Resist +10%,90,Vesper
+World Serpent Cloak,1,25/15,"Ghost, Undead, Dark, Holy Resist +5%. At +4, another +5%. At +7, another +5%",90,Avatar of the Serpent
+Fallen Hero's Manteau,1,45/0,"Max SP +30%, SP Regen -30%",110,Lord of the Dead
+Ragged Cloak,1,25/20,Physical Damage to Dark/Undead/Ghost +10%. Magic Pierce to them +20%. Resistance to those elements -20%,110,Ragged Golem
+Diabolus Manteau,1,25/15,"Luk +3. For each Diabolus item equipped, Neutral Resist +3%",110,Morroc's Shadow
+Leather of Tendrilion,1,10/15,"For each Refine, Wind/Water/Earth Resist +1%. If +7, Phys/Magic Damage to Brute/Fish/Insect Race +10%",130,Tendrilion
+Excellion Engine,1,50/0,Healing Received +10%. Barriers Received +10%,130,Final Defense Drone
+Cloak of Dusk,1,30/20,Holy/Fire Property Resistance +20%. Magic Damage to Holy and Fire enemies +10%,130,Herald of Dusk
+Death's Embrace,1,30/25,"Undead Magic Damage +2% per Refine. Max HP -2% per Refine. If +7, gain 1000 HP per kill caused by Magic Damage.",130,Ancient Temple Excavation
+Siege Master Manteau,1,25/10,"Defense Pierce +30%, -6% per Refine. For each Refine over 5, Non-Neutral Resist +4%. If exactly +5, Def Pierce +15%, Non-Neutral Resist +10%",130,Castle Siege
+,,,,,
+SHOES,,,,,
+,,,,,
+Desert Leather Shoes,1,10/5,Earth and Fire Resist +5%,30,Phreeoni
+Sandwalker Shoes,1,10/0,"Hit +10, Flee +10",30,Maya
+Marauder Boots,1,15/0,"For every Base Str, Slow Resist +1%.  For every Base Int, Chill Resist +1%",30,Drake
+Ebon Boots,1,15/0,"Blind Potency +5, Blind Potency Received -5                       Combo with Armor: Blind Resist +30%",30,Kublin
+Dance Shoes,1,10/5,"If already learned, Music Mastery/Dancing Dexterity Level +2",50,Tao Gunka
+Pharaonic Greaves,1,20/5,Slow and Chilled Resist +40%,50,Osiris
+Depthwalker Shoes,1,20/5,"Immune to Knockback, ASPD -3, VCT +10%",70,Kraken
+Corrupted Shoes,1,20/5,"All Stats +1, Fire/Water/Earth/Wind Resist +5%  /  Dark, Undead, Ghost, Holy Resist -5%            Set Bonus",70,Nightmare Pitaya
+Crimson Boots,1,20/5,"Ranged Damage +5%, Fire Resistance -20%",70,Pyuriel
+Cultist's Shoes,1,20/5,Pierce Def/Mdef of Poison monsters by 15%. Physical and Magical damage to Poison monsters +5%,70,False Snake God
+Juperos Boots,1,20/10,Move Speed +5%,90,Vesper
+World Serpent Boots,1,25/15,"VCT -5%, FCT -0.1. At +4, Additional 10%/0.2. At +7, Additional 10%/0.2",90,Avatar of the Serpent
+Diabolus Boots,1,25/10,"Agi +3. For each Diabolus item equipped, Movement Speed +2%",110,Morroc's Shadow
+Living Tree Shoes,1,10/15,"For each Refine, Max HP/SP +2%, Atk/Matk -1%. If +7, HP/SP Regen +50%, Atk/Matk -5%",130,Tendrilion
+Excellion Boots,1,50/0,Healing Received +10%. Barriers Received +10%,130,Final Defense Drone
+Siege Master Boots,1,25/10,"Crit Rate +20, -4 per Refine. For each Refine over 5, Perfect Dodge +4. If exactly +5, Crit Rate +10, Perfect Dodge +10",130,Castle Siege
+,,,,,
+HEADGEARS,,,,,
+,,,,,
+Golden Gear,1,15/10,"Atk/Matk +5%, Max HP/SP -5%                    Golden Combo: All Stats +5, Perma Endure, Max HP/SP -15%",30,Golden Thief Bug
+Tiara,0,7/0,"Int +2, Fixed Cast Time -0.2s",30,Maya
+Crown of Mistress,1,2/0,"Healing Power +10%, Healing Received -20%",30,Mistress
+Magician Hat,1,6/0,Variable Cast Time -10%,30,Mistress
+Corsair,1,10/0,Def Pierce +20%,30,Drake
+Elven Ears,0,0/0,Accessory Random Options,30,Kublin
+Fox Ear Bell Ribbon,1,5/5,"ASPD +1, VCT -5%",30,Moonlight Flower
+Goblin King Mask,0,0/0,Accessory Random Options,50,Goblin King
+Puppy Headband,1,3/0,"Crit Rate +5, Move Speed +5%",50,Kobold Warchief
+Miniature Guardian,1,5/0,"Agi +2, Enables use of Detoxify Lv 1, Detoxify Cooldown +60 seconds",50,Guardian Serpent
+Jeweled Crown,1,9/0,"All Stats +1, Magic Damage Received -5%                                                                  Set Bonus",50,Tao Gunka
+Crown,1,5/5,"All Stats +1, Atk/Matk +3%",50,Osiris
+Pharaoh's Headdress,1,10/0,"Str +3, Atk +5%, ASPD -5",50,Pharaoh
+Orc Helm,1,9/0,Str +2 / Vit +2,70,Orc Lord
+Necromancer's Hood,1,6/6,"Int +3, Matk +5%, Variable Cast Time +15%",70,Orc Necromancer
+Gangster Scarf,0,2/0,Ranged Damage Received -5%,70,Captain Sweety
+Deep Sea Rose,0,0/0,FCT -0.1s,70,Kraken
+Repairman's Casquette,1,5/5,Variable Cast Time -10%,70,Pyuriel
+Banana Hat,1,3/0,Enables Provoke Lv 1,70,Lady Tanee
+Majestic Goat,1,9/0,Crit Damage +5%,70,Baphomet
+Reindeer Hat,1,5/0,Water Resist +20%. Chill Resist +40%,70,Stormy Knight
+Ancient Serpent Crown,1,5/5,Poison Status Damage Taken -10% / Poison Property Resistance +10%,70,Faceworm Queen
+Blazing Mask,1,10/0,Fire Property Resistance +10% / Burning Resistance +10% / Burning Damage Taken -10%,70,Muspellskoll
+Skull Helm,1,10/0,Physical Damage to all Elements +10%  /  All Element Resistance -20%,70,Rogue Prototype R4885
+False God's Crown,1,5/0,Physical and Magical Damage to Poison monsters +10%,70,False Snake God
+Safety Helmet,1,25/0,Vulnerable Potency Received -20%,90,RSX-0806
+General's Helm,1,20/0,"Vulnerable Potency +10%, Barrier Potency +10%",90,Turtle General
+World Serpent's Head,1,10/5,Damage to Rgans +5%. Damage from Rgans -5%,90,Avatar of the Serpent
+Death's Helm,1,20/0,Physical and Magical Damage to Champions +15%. Damage taken from Champions -15%,110,Lord of the Dead
+Zealotus Mask,1,5/0,Physical Damage to enemies below half HP +10%,110,Zealotus
+Crown of Deceit,2,10/0,Atk/Matk +1% per Refine. Max HP -2% per Refine,110,Dark Lord
+Ulle's Cap,1,5/0,Physical Damage to Brute Race +10%. Damage taken from Brute Race -10%,110,Atroce
+Black Feather Beret,1,5/0,"Dark, Undead, Ghost Property Resistance +10%",110,Song of Despair
+Azure Diadem,1,10/10,Fire/Water Resistance +10%. Earth/Wind Resistance -10%,110,Ktullanux
+Flame Lord's Diadem,1,10/10,Phys/Magic Damage to Wind/Earth +10%. Phys/Magic Damage to Fire/Water -10%,110,Ifrit
+Diabolus Crown,2,10/10,"For each Diabolus item equipped, Atrophy/Slowcast/Curse Resistance +15%",110,Morroc's Shadow
+Tendrilion Helm,1,10/5,Bleeding Damage +10%. Vulnerable Potency +10%,130,Tendrilion
+Bone Head,1,20/0,Vulnerable/Breach Potency Received -20%,130,Hardrock Mammoth
+Robotic Eye,1,0/0,Vulnerable and Breach Potency +10%,130,Final Defense Drone
+Sanctuary Diadem,1,10/5,Deal 10% more Physical and Magical damage in Rachel Dungeons. Take 10% less damage in Rachel dungeons.,130,Gloom Under Night
+Mitra,1,0/10,Deal 10% more Physical and Magical damage in Veins Dungeons. Take 10% less damage in Veins dungeons.,130,Fallen Bishop
+Technician Cap,1,15/0,Atk/Matk +10%. Def/Mdef Pierce -20%,130,Kiel D-01
+Queen Scaraba Crown,1,5/5,FCT -0.25s. VCT -15%,130,Queen Scaraba
+Hat of the Sun God,1,0/0,Damage from enemies under Searing Light -10%,130,Herald of Dawn
+Celestial Dark Flame,1,0/0,FCT -0.5s,130,Herald of Dusk
+Valkyrie Circlet,1,10/10,SP Consumption -3% per Refine,130,Valkyrie Randgris
+,,,,,
+ACCESSORIES,,,,,
+,,,,,
+Shiny Coin,1,X,"Crit +5, Mammonite SP Cost -25%",30,Golden Thief Bug
+Armlet of Obedience,1,X,"Hit +5, VCT -5%",30,Maya
+Pirate Glove,1,X,ASPD +1,30,Drake
+Cursed Lantern,1,X,"Enables Magic Eyes Lv1, Blind Potency Received +20",30,Kublin
+Moonsilver Ring,1,X,SP Regen +10%,30,Moonlight Flower
+Bloodstone Ring,1,X,10% chance to gain life equal to 5% of damage dealt on physical attacks,30,Dracula
+Jeweled Pendant,1,X,"All Stats +1, Magic Damage Received -5%",50,Tao Gunka
+Mummified Hand,1,X,HP Regen +15% / Potion Effectiveness +15%,50,Osiris
+Celebrant's Mitten,1,X,FCT -0.1s,50,Pharaoh
+Skull Ring,1,X,Magic Pierce +5%  /  Combo with itself: Matk +4%,70,Orc Necromancer
+Diamond of the Deep,1,X,"Water Magic +3%, Magic Pierces Resistances of Water Monsters",70,Kraken
+Pocket Watch,1,X,Slow Resist +15%,70,Pyuriel
+Usurper's Ring,1,X,Poison Damage inflicted +10%. Poison Status damage taken +10%,70,False Snake God
+Black Rosary,1,X,Crit Damage +5%,70,Baphomet
+Storm Ring,1,X,Wind Magic +3%. Magic Pierces Resistances of Wind Monsters,70,Stormy Knight
+Amulet of Savagery,1,X,"Atk/Matk +5%, Potion Effectiveness -20%",70,Wootan Defender
+Magma's Heart,1,X,Burning Damage Dealt +10%  /  Burning Damage Taken +10%,70,Muspellskoll
+Mining Gloves,1,X,"Def Pierce +5%, Combo with itself: Atk +4%",90,RSX-0806
+Vesper Core,1,X,"For each stat above Base 49: Increase that stat by 3   /   For each stat below Base 50, Max HP/SP -5%",90,Vesper
+Ceremonial Incense,1,X,Slowcast and Atrophy Resistance +30%,90,Turtle General
+Ring of the Serpent,1,X,Attacks have a chance to inflict Deadly Poison,90,Avatar of the Serpent
+Ring of Souls,1,X,Physical and Magical Damage to Undead Race +10%. Damage Taken from Undead Race -10%,110,Lord of the Dead
+Shield Ring,1,X,Incoming Barrier +10%.,110,Bloody Knight
+Iron Cuff,1,X,"Vulnerable Potency +10%, Vulnerable Potency Received +10%",110,Zealotus
+Dragon's Diamond,1,X,Crit Pierce +15%. Combo with self: Crit Rate +10,110,Detardeurus
+Laboratory Permit,1,X,Physical Attacks pierce Ghost Resistance. Physical Damage to Medium Size +5%,110,Egnigem Cenia
+Necrolace,1,X,Heal 200 HP when killing an enemy with Physical or Magical attacks,110,Ragged Golem
+Last Light,1,X,Physical and Magical Damage to Holy enemies +10%. Holy Resistance +10%,110,Dark Lord
+Fenrir's Chain,1,X,"Stun, Sleep, and Slow Resistance +50%",110,Atroce
+Forgotten Amulet,1,X,All Skill Cooldowns -1s. Max HP/SP -10%. Combo with itself: Additional Max HP/SP -10%,110,Song of Despair
+Ring of the Flame Lord,1,X,"Phys damage to All Sizes +3%. Additional +3% with Lv5 Veins Rep or higher. Combo with v: ASPD +5, autocast Overcharge when dealing damage",110,Ifrit
+Ring of Resonance,1,X,"Magic Damage to All Sizes +3%. Additional +3% with Lv5 Rachel Rep or higher. Combo with ^: Casting is uninterruptible, autocast Assumptio when hit",110,Ktullanux
+Diabolus Ring,1,X,"For each Diabolus item equipped, Max HP/SP +1%",110,Morroc's Shadow
+Pinguicula Corsage,1,X,SP Consumption -10%,130,Tendrilion
+Control Chip 02,1,X,Summoned Entity Damage +5%,130,Final Defense Drone
+Bishop's Ring,1,X,Atk +5% while under the Aspersio Status,130,Gloom Under Night
+Glove of the Possessed,1,X,"Breach Potency +10%, Breach Potency Received +10%",130,Fallen Bishop
+Auxiliary Power Core,1,X,Perfect Dodge +5. Combo with Apolytos Weapons: Max HP/SP +1% per Refine,130,Kiel D-01
+Auxiliary Power Siphon,1,X,"ASPD +3. Combo with Apolytos Weapons: Max HP/SP -1% per Refine, Atk/Matk +1% per Refine",130,Kiel Prime
+Truesilver Bracelet,1,X,Max HP/SP +5%. Atk/Matk -5%,130,Queen Scaraba
+Dawnbringer Sigil,1,X,Phys/Magic Attacks have a chance to inflict Searing Light. Chance is increased for each Dawnbringer item equipped.,130,Herald of Dawn
+Ring of Dusk,1,X,All Property Magic Damage +5%. All SP Costs +20%,130,Herald of Dusk
+Einherjar's Mark,1,X,Pierce Resistance of Holy Property enemies. Damage from All Sizes -5%,130,Valkyrie Randgris
+Paradise Lost,1,X,"Dark, Undead, Ghost Property Magic Damage +5%. Potion Effectiveness -25%",130,Ancient Temple Excavation
+Siege Master Ring,1,X,"For each Siege Master item equipped, All Stats +1. The bonus is doubled for pieces that are exactly +5",130,Castle Siege
+,,,,,
+SHIELDS,,,,,
+,,,,,
+Golden Buckler,1,25/10,"Physical and Magical Damage Received -5%, Max HP/SP -5%",30,Golden Thief Bug
+St. Darmain's Aegis,1,50/15,Ranged Damage Received -10%,70,Captain Sweety
+Inferno Shield,1,20/10,Damage Received from Fire Property Monsters -15% / Burning Damage Taken +30%,70,Muspellskoll
+Colossal Shield,1,40/15,Immune to Knockback  /  Move Speed -20%,70,Wootan Defender
+Gemmed Shield,1,30/20,Vulnerable and Breach Resistance +50%,90,RSX-0806
+Resplendent Shield,1,40/15,"Magic Damage Taken -5%. If +4, another -5%. If +7, another -5%",110,Detardeurus
+Bloody Knight Shield,1,50/15,Damage from Bleeding enemies -20%. Shield Boomerang and Shield Slam inflict Bleeding (10% chance per Refine),110,Bloody Knight
+Naga Scale Shield,1,15/5,"For each Refine, Crit +1, Crit Pierce +1%. If +7, additional Crit +5/Crit Pierce +5%",130,Tendrilion
+Titan Shield,1,75/25,"Shield Boomerang/Shield Slam Damage +5% per Refine. Movement Speed -2% per Refine. If +7, Damage from Vulnerable Enemies -15%",130,Ancient Temple Excavation
+Apolytos Shield,1,35/15,"At +3, Vit/Agi +5. At +6, Magic Damage Taken -15%. At +9, gain a barrier when dropping below half HP.",130,Kiel Prime

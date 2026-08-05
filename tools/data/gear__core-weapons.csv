@@ -1,0 +1,173 @@
+,,,,,
+Name,Slots,ATK/MATK,Effects,Req. Level,"Drops From
+(This list is not exhaustive)"
+,,,,,
+ONE-HANDED SWORDS,,,,,
+Toy Sword,4,10/0,0.5 ASPD per Mastery. Str +1,1,"Tarou, Picky, Piere, Poring, Horn, Yoyo"
+Falchion ,4,20/0,"2 Soft Def per Mastery. Vit +2, Max HP +50",30,"Soldier Deniro, Mace Goblin, Pirate Skeleton, Pot Dofle"
+Scimitar,3,30/0,ASPD +1 per Mastery. Str +2. Provoke Cooldown -5s,50,"Bandit Cutthroat, High ooroc, Mummy, Swordfish"
+Blade,3,40/0,"ASPD +1 per Mastery. Vit +2, HP Regen +1% per Vit",70,"Fulbuk, Demon Pungus, Sky Deleter"
+Flamberge,3,50/0,"ASPD +1 per Mastery. Str +2, Vit +2, Melee Damage +1% per Refine",90,Rachel Infantry
+Haedonggum,2,2,"ASPD +1 per Mastery, Vulnerable Potency +15%, if +4: Vuln Potency +10%, if +7: Max HP +10%",110,"Blue Acidus, Wanderer"
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+TWO-HANDED SWORDS,,,,,
+Katana,4,50/0,Crit +2 per Mastery. Str +2,50,"Aqua Elemental, Bandit Enforcer, ???, Pasana"
+Bastard Sword,3,70/0,Crit +2 per Mastery. Str +2. Remove FCT of Devastating Blow,70,"Plateau Brute, Lost Knight, Alarm"
+Claymore,3,90/0,"Crit +2 per Mastery. Str +2, Luk +2, Melee Damage +1% per Refine",90,"Galion, Solider"
+Katzbalger,2,110/0,"Crit Rate +2 per Mastery, Crit Damage +10%, if +4: Crit Damage +5%, if +7: Bleeding Damage +10%",110,"Raydric, Snowier"
+,,,,,
+ONE-HANDED SPEARS,,,,,
+Javelin,4,35/0,Vulnerable Potency +2% per Mastery. Vit +1,50,"Mace Kobold, Beetle King, Phen, ???"
+Spear,3,50/0,Vulnerable Potency +2% per Mastery. Dex +2. Reduces the Cooldown of Provoke by 2 Seconds,70,"Lost Crusader, Ash Hopper, Punk"
+Pole Axe,3,65/0,"Vulnerable Potency +2% per Mastery. Str +2, Dex +2, Melee Damage +1% per Refine",90,"Hill Wind, Heater"
+Duelling Spear,2,80/0,"Vulnerable Potency +2%, Melee Damage +10%, if +4: Melee Damage +5%, if +7: Crit Rate +20",110,"Green Ferus, Magmaring"
+,,,,,
+TWO-HANDED SPEARS,,,,,
+Guisarme,4,50/0,Vulnerable Potency +3% per Mastery. Vit +2,50,"Megalodon, Goat, Leopard, Merman"
+Partizan,3,70/0,"Vulnerable Potency +3% per Mastery. Str +2, Melee Resist +1% per Mastery",70,"Kaho, Bapho Jr, Faceworm"
+Halberd,3,90/0,"Vulnerable Potency +3% per Mastery, Str +2, Vit +2, Melee Damage +1% per Refine",90,"Gibbet, Rock Spider"
+Lance,2,110,"Vulnerable Potency +3% per Mastery, Melee Damage +10%, if +4: Melee Damage +5%, if +7: Damage from All Sizes -10%",110,"Khalitzburg, Salamander"
+,,,,,
+ONE-HANDED AXES,,,,,
+Toy Axe,4,15/0,ASPD +0.5 per Mastery. Str +1,1,"Ambernite, Baby Deset Wolf, Desert Wolf, Wormtail, Wolf, Rocker, Savage"
+Cleaver,4,30/0,Crit +2 per Mastery. Str +2. Axe Boomerang can inflict Bleeding.,30,"Axe Goblin, Argos, Octopus Tentacle, Cornutus"
+Windhawk,3,40/0,"Crit +2 per Mastery. Str +2, ASPD +3",50,"Axe Kobold, Yellow Pitaya, Mimic"
+Battle Hatchet,3,60/0,"Crit +2 per Mastery. Extort, Demonstration, and Acid Terror have a chance to generate extra Extort stacks.",70,"Plateau Crawler, Lost Alchemist, Metaling"
+Jagged Iron,3,75/0,"Crit +2 per Mastery. Str +2, Vit +2, Ranged Damage +1% per Refine",90,"Archdam, Stapo"
+Heart Breaker,2,90/0,"Crit +2 per Mastery, Ranged Damage +10%, if +4: Ranged Damage +5%, if +7: FCT -0.5s",110,"Rybio, Repair Robot"
+,,,,,
+TWO-HANDED AXES,,,,,
+Battle Axe,4,50/0,"Crit Damage +2% per Mastery. Str +3, ASPD +3",50,"Obeaune, Orc Warrior, Tomb Scorpion"
+Battle Pick,3,70/0,"Crit Damage +2% per Mastery. Str +2, Rush Down Cooldown -2s",70,"Ash Toad, Lost Blacksmith, Toxic Mantis, Pitman"
+Berdysz,3,90/0,"Crit Damage +2% per Mastery. Str +2, Luk +2, Melee Damage +1% per Refine",90,"Dullahan, Amitera"
+Titan Axe,2,110,"Crit Damage +2% per Mastery, Melee Damage +10%, if +4: Melee Damage +5%, if +7: ASPD +3",110,"Gold Acidus, Frus"
+,,,,,
+DAGGERS,,,,,
+Toy Dagger,4,8/0,Flee +2 per Mastery. Agi +1,1,"Familiar, Drops, Hode, Andre, Boa, Hornet, Stainer, Poporing"
+Asura,4,8/8,Perfect Dodge +2/SP Regen +3% per Mastery. ,1,Coco
+Cutter,4,18/0,Flee +2 per Mastery. Agi +2,30,"Soldier Skeleton, Kukre, Martin, Mantis"
+Obsidian Dagger,4,18/18,Perfect Dodge +2/SP Regen +3% per Mastery.  Ranged Damage +5%,30,"Mantis, Baby Octopus, Myst"
+Stiletto,3,26/0,"Flee +2 per Mastery. Agi +3, Def Pierce +20%",50,"Corpse Worm, Baby Leopard, Hunter Fly, Hebian Scout"
+Murasame,3,26/26,"Perfect Dodge +2/SP Regen +3% per Mastery. Melee inflicts Bleeding, Ranged inflicts Vulnerable, Magic inflicts Blind",50,"Grove, Marine Sphere, ???"
+Dirk,3,34/0,"Flee +2 per Mastery, Agi +2, Double Attack Chance +30%",70,"Violet Pitaya, Lost Rogue, Ash Pup"
+Kamaitachi,3,34/34,Perfect Dodge +2/SP Regen +3% per Mastery. Def/Mdef Pierce +30%,70,"Dust Wolf, Rafflesia, Obsidian"
+Gladius,3,42/0,"Flee +2 per Mastery, Str +2, Agi +2, Melee Damage +1% per Refine",90,"Venatu, Freezer"
+Khukri,3,42/42,Perfect Dodge +2/SP Regen +3% per Mastery. Melee/Ranged/Magic Damage +1% per Mastery,90,"Loli Ruri, Rachel Captain"
+Black Wing Dagger,2,50/50,"Flee +2/SP Recovery +3% per Mastery, Bleeding/Burning/Poison Damage +10%, if +4: Additional 5%, if +7: Def Pierce +30%",110,"Zombie Prisoner, Frost Colt"
+Damascus,2,50/0,"Flee +2 per Mastery, Def Pierce +25%, if +4: Def Pierce +15%, if +7: ASPD +3",110,"Sage Worm, Data Drone"
+,,,,,
+KATARS,,,,,
+Jur,4,45/0,"Crit Damage +2% per Mastery, Luk +3",50,"Nereid, Zenorc, Tumblering, Sedora, ???"
+Katar,3,60/0,"Crit Damage +2% per Mastery, Luk +2, Hard Def +5 per Mastery",70,"Explosion, Lost Assassin, Alnoldi, Faceworm Larva"
+Jamadhar,3,75/0,"Crit Damage +2% per Mastery, Agi +2, Luk +2, Melee Damage +1% per Refine",90,Rock Scorpion
+Ravager,2,90/0,"Crit Damage +2% per Mastery, Damage to Poisoned Enemies +10%, if +4: Additional 5%, if +7: Poison Damage +10%",110,"Injustice, Duskling"
+,,,,,
+BOWS,,,,,
+Toy Bow,4,10/0,Ranged Damage +1% per Mastery. Dex +1,1,"Smokie, Caramel, Condor, Peco Peco, Willow, Greatest General, Metaller"
+Composite Bow,4,20/0,Ranged Damage +1% per Mastery. Dex +2,30,"Archer Skeleton, Goblin Archer, Giearth"
+Great Bow,3,30/0,"Ranged Damage +1% per Mastery. Dex +3, Arrow Shower inflicts Slow",50,"Orc Archer, Jungle Mosquito, ???, Tomb Scarab"
+Arbalest,3,40/0,Ranged Damage +1% per Mastery. Dex +2. Double Strage Damage +50%. Double Strafe Cooldown +100%,70,"Wootan Shooter, Lost Hunter, Clock"
+Gakkung Bow,3,50/0,"Ranged Damage +1% per Mastery, Dex +2, Agi +2, Ranged Damage +1% per Refine",90,Rock Striker
+Gigantic Bow,2,60/0,"Ranged Damage +1% per Mastery, Crit Damage +10%, if +4: Crit Damage +5%, if +7: SP Consumption -30%",110,"Raydric Archer, Gazeti"
+,,,,,
+,,,,,
+,,,,,
+INSTRUMENTS,,,,,
+Violin,4,30/30,SP Consumpion -2% per Mastery. Dex +3,50,"Grove, Dustiness, Verit, Requiem"
+Mandolin,3,40/40,"SP Consumpion -2% per Mastery. Int +2, Synchronic Strike/Vicious Verse SP Cost -50%",70,"Lost Bard, Noxious, Breeze"
+Guitar,3,50/50,"SP Consumption -2% per Mastery. Dex +2, Int +2, SP Cost of Synchronic Strike and Vicious Verse is halved",90,"Lude, Dry Rafflesia"
+Harp,2,60/60,"SP Consumption -2% per Mastery, Magic Damage to All Sizes +10%, if +4: Additional 5%, if +7: Ranged Physical Damage +15%",110,"Maintenance Drone, Violy"
+,,,,,
+WHIPS,,,,,
+Rope,4,30/30,SP Consumpion -2% per Mastery. Dex +3,50,"Aster, Orc Zombie, Parasite, Ashring"
+Whip,3,40/40,"SP Consumpion -2% per Mastery. Int +2, Synchronic Strike/Vicious Verse SP Cost -50%",70,"Blazer, Lost Dancer, Yellow Novus"
+Lariat Whip,3,50/50,"SP Consumption -2% per Mastery. Dex +2, Int +2, Ranged and Magic Damage +1% per Refine",90,"Quve, Drosera"
+Rante Whip,2,60/60,"SP Consumption -2% per Mastery, Ranged Damage +10%, if +4: Additional 5%, if +7: Magic Damage +15%",110,"Cleaning Drone, Violy"
+,,,,,
+STAFFS,,,,,
+Toy Rod,4,5/10,VCT -1% per Mastery. Int +1,1,"Chonchon, Mandragora, Magnolia, Deniro, Eggyra, Lunatic, Creamy"
+Wand,4,10/25,"VCT -1% per Mastery. Int +2, Bolt SP Cost -20%",30,"Soldier Andre, Flail Goblin, Plankton, Jakk"
+Staff,3,20/40,VCT -1% per Mastery. Int +3. Add 1 level to all Bolt spells.,50,"Shellfish, orc Lady, Dryad, Volcaring, ???"
+Arc Wand,3,15/55,"VCT -1% per Mastery. Int +2. Removes FCT of Fireball, Frost Blast, and Static Burst",70,"Plateau Sprite, Lost Wizard, Venomous, Bathory"
+Soul Staff,3,25/70,"VCT -1% per Mastery. Int +2, Dex +2, Magic Damage +1% per Refine",90,"Photon Cannon, Rockskin Toad"
+Noble Staff,2,10/85,"VCT -1% per Mastery, Magic Pierce +25%, if +4: Magic Pierce +15%, if +7: FCT -0.3s",110,"Red Ferus, Wicked Shade, Kasa"
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+MACES,,,,,
+Toy Club,4,10/10,Crit +2 / Healing Power +3% per Mastery. Int +1,1,"Steel Chonchon, Muka, Frilldora, Elder Willow, Fabre, Roda Frog"
+Mace,4,20/20,"Crit +2 / Healing Power +3% per Mastery. Int +2, ASPD +5",30,"Hammer Goblin, Earth Petite, Whisper, Vadon, Marionette"
+Smasher,3,30/30,"Crit +2 / Healing Power +3% per Mastery. Str +1, Int +1, ASPD +2, VCT -10%",50,"Crab, Hammer Kobold, Red Pitaya, Zerom"
+Flail,3,40/40,Crit +2 / Healing Power +3% per Mastery. Autocasts Lash Out when taking damage.,70,"Green Pitaya, Lost Priest, Earth Deleter, Gaster"
+Chain,3,50/50,"Crit +2 / Healing Power +3% per Mastery. Str +2, Int +2, Melee and Magic Damage +1% per Refine",90,Muscipular
+Morning Star,2,60/60,"Crit +2/Healing Power +3% per Mastery, Holy Magic +10%, if +4: Additional 5%, if +7: Magic Pierce +25%",110,"Siroma, Succubus"
+,,,,,
+,,,,,
+,,,,,
+FISTS,,,,,
+Iron Knuckles,4,25/0,"Crit Damage +2% per Mastery, Str +2",50,"Tri Joint, Fur Seal, Harpy, Marc"
+Knuckle Dusters,3,40/0,"Crit Damage +2% per Mastery, Str +2, ASPD +3",70,"Wootan Fighter, Lost Monk, Red Novus"
+Fist,3,55/0,"Crit Damage +2% per Mastery, Str +2, Agi +2, Melee Damage +1% per Refine",90,"Disguise, Roween"
+Claw,2,70/0,"Crit Damage +2% per Mastery, Melee Damage +10%, if +4: Melee Damage +5%, if +7: Defense Pierce +25%",110,"Security Drone, Incubus"
+,,,,,
+REVOLVERS,,,,,
+Six Shooter,4,10/0,Double Chance +5% per Mastery. Dex +1,1,"Spore, Thief Bug"
+Crimson Bolt,4,20/0,"Double Chance +5% per Mastery. Dex +2, ASPD +5",30,"Marina, Deviruchi"
+Wasteland's Outlaw,3,30/0,"Double Chance +5% per Mastery. Dex +3, Move Speed +10%",50,"Bandit Gunman, Matyr"
+Garrison,3,40/0,"Double Chance +5% per Mastery. Dex +3, Chance to cast Rapid Reload after Rapid Shower.",70,"Porcellio, Holden, Toxious"
+Cold Steel,3,50/0,"Double Chance +5% per Mastery, Dex +2, Agi +2, Ranged Damage +1% per Refine",90,Veins Engineer
+Iron Ally,2,60/0,"Double Chance +5% per Mastery, Ranged Damage +10%, if +4: Ranged Damage +5%, if +7: Slow Potency +30",110,Dark Frame
+,,,,,
+RIFLES,,,,,
+Branch,4,30/0,Crit +2 per Mastery. Dex +1,1,Dragon Tail
+Cyclone,4,45/0,"Crit +2 per Mastery. Dex +2, 20% Def Pierce",30,"Skeleton, Skel Worker"
+Dusk,3,60/0,"Crit +2 per Mastery. Dex +3, FCT -1s",50,Bandit Enforcer
+Lever Action Rifle,3,75/0,Crit +2 per Mastery. Dex +3. Chance to autocast Rapid Reload after Snipe,70,"Bapho Jr, Failed Prototype"
+Jungle Carbine,3,90/0,"Crit +2 per Mastery, Dex +2, Luk +2, Ranged Damage +1% per Refine",90,"Dimik, Veins Smasher"
+Long Barrel,2,105/0,"Crit Rate +2 per Mastery, Crit Damage +10%, if +4: Crit Damage +5%, if +7: Vulnerable Potency +20%",110,Gargoyle
+,,,,,
+                                                                          SHOTGUNS    (All Shotguns have 3x3 Splash on Autoattacks ,,,,,
+Rolling Stone,4,15/0,Ranged Damage +1% per Mastery. Dex +1,1,Bigfoot
+Black Rose,4,30/0,Ranged Damage +1% per Mastery. Dex +2. Scatter Shot and Full Blast SP Cost -30%,30,"Flora, Ghoul"
+Gate Keeper,3,45/0,"Ranged Damage +1% per Mastery, Dex +3, Attacks and Skills can inflict Vulnerable",50,"Bandit Cutthroat, ???"
+Thunder P,3,60/0,"Ranged Damage +1% per Mastery. Dex +3, Chance to autocast Rapid Reload after Full Blast",70,"Lava Toad, Ash Wolf, Mineral"
+Rolling Thunder,3,75/0,"Ranged Damage +1% per Mastery, Dex +2, Vit +2, Ranged Damage +1% per Refine",90,Veins Ripper
+Dust Fire,2,90/0,"Ranged Damage +1% per Mastery, Bleeding Damage +10%, if +4: Bleeding Damage +5%, if +7: Crit Damage +10%",110,"Wraith, Imp"
+,,,,,
+GATLING GUNS,,,,,
+Drifter,X,2% per Ref,Gatling CD -0.25s per Mastery. Lead Barrage CD -5s,99,
+Butcher,X,2% per Ref,"Gatling CD -0.25s per Mastery. Spray and Pray deals 10 Additional Hits, but has 15% lower accuracy",110,
+The Revolutionary,X,3% per Ref,Gatling CD -0.25s per Mastery. Pyrrhic Rainstorm hits twice as fast and lasts half as long,130,Crafting Only
+,,,,,
+GRENADE LAUNCHERS,,,,,
+Destroyer,X,2% per Ref,Burning Damage +1% per Mastery. Crimson Marker Level +3,99,
+Inferno,X,2% per Ref,Burning Damage +1% per Mastery. Physical Attacks and Skillls have a 35% Chance to inflict Crimson Marker Status,110,
+Last Sentinel,X,3% per Ref,Burning Damage +2% per Mastery. Damage from Burning/Crimson Marker'd targets -10%,130,Crafting Only
+,,,,,
+BOOKS,,,,,
+Book,4,30/0,All Stats +1/3 per Mastery. ,50,"Sropho, ???"
+Sealed Diary,3,40/0,All Stats +1/3 per Mastery. TK Kick CDs -20%,70,"Lost Sage,  Caterpillar, Rideword"
+Bible,3,50/0,All Stats +1/3 per Mastery. Melee Damage +1% per Refine,90,"Hill Wind, Permeter"
+Hardcover Book,2,70/0,"All Stats +1/3 per Mastery, Melee Damage +10%, if +4: Melee Damage +5%, if +7: ASPD +3",110,"Evil Druid, Command Drone"
+,,,,,
+SOULS,,,,,
+Empty Soul,X,5/5,Max HP +1% per Mastery. Enables Crush and Earth Spike Lv 3,50,NPC Only
+Knight Soul,X,10/5,"Enables Rend, Pierce, Brandish Spear based on Mastery",50,Lost Knight
+Crusader Soul,X,10/5,"Enables Brilliant Strike, Shield Slam, Holy Cross based on Mastery.",50,Lost Crusader
+Blacksmith Soul,X,15/0,"Enables Crush, Rush Down, Axe Tornado based on Mastery",50,Lost Blacksmith
+Alchemist Soul,X,15/0,"Enables Axe Boomerang, Acid Terror, Demonstration based on Mastery",50,Lost Alchemist
+Assassin Soul,X,10/5,"Enables Rolling Cutter, Grimtooth, Clooaking based on Mastery",50,Lost Assassin
+Rogue Soul,X,10/5,"Enables Disorient, Ambush, Dramatic Exit based on Mastery",50,Lost Rogue
+Wizard Soul,X,0/15,"Enables Force Pulse, Storm Gust, Rapid Incantation based on Mastery.",50,Lost Wizard
+Sage Soul,X,0/15,"Enables Wind Walk, Fire Wall, Transposition Spell based on Mastery",50,Lost Sage
+Hunter Soul,X,10/5,"Enables Arrow Repel, Threefold Arrow, Shrapnel Mine based on Mastery. Threefold + Shrapnel Mine Cast Time -75%",50,Lost Hunter
+Performer Soul,X,5/10,"Enables Vicious Verse, Restorative Refrain, Sinister Saunter based on Mastery",50,"Lost Bard, Lost Dancer"
+Priest Soul,X,5/10,"Enables Divine Authority, Banishing Light, Purifying Light based on Mastery",50,Lost Priest
+Monk Soul,X,10/5,"Enables Soul Piercer, Raging Trifecta, Fury based on Mastery",50,Lost Monk
+Forgotten Soul,X,???,???,70,???
+False Soul,X,???,???,70,???

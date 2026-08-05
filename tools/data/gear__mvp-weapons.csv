@@ -1,0 +1,259 @@
+,,,,,
+Name,Slots,ATK/MATK,Effects,Req. Level,Drops From
+,,,,,
+ONE-HANDED SWORDS,,,,,
+Practice Sword,4,10/0,"Exp +2% per Mastery, Atk +1% per Refine",1,Doppelganger
+Cutlass,2,30/0,"ASPD +1 per Mastery, Slash has a high chance to Stun, Bleeding Duration off Slash -10s",30,Drake
+Vampiric Rapier,2,30/0,"1% Blood Drain Chance per Mastery, Blood Drain inflicts Bleeding",30,Dracula
+Golden Blade,2,30/0,"Aspd +1 per Mastery, Atk/Matk +5%, HP/SP -5%",30,Golden Thief Bug
+Stone Blade,2,40/0,"Hit +2 per Mastery, Str +3, Max SP +1 per Vit",50,Goblin King
+Jeweled Sword,2,40/0,"Soft Mdef +5 per Mastery, All Stats +1, Magic Damage Taken -5%",50,Tao Gunka
+Orcish Sword,2,50/0,"Def Pierce +3% per Mastery, Str +3, Hard Def +20, ASPD -3",70,Orc Lord
+Burning Brand,2,50/0,"Int +1 per Mastery, Int +3, Enables Fire Ball Lv 1, Fire Ball has a chance to Burn self",70,Muspellskoll
+Mining Saber,2,60/0,ASPD +2 per Mastery. Vulnerable Potency +20%. Bleeding Damage +20%,90,RSX-0806
+Ymir's Sword,2,70/0,"ASPD +2 per Mastery. For each Refine, Damage to Bleeding enemies +2%,  Max SP -5%. If +7, enables Ignition Break Lv5. If already learned, Damage +50% instead.",110,Egnigem Cenia
+Ice Falchion,2,70/0,ASPD +2 per Mastery. Autocasts Frost Blast when attacking. Frost Blast inflicts Bleeding. Physical Damage to Bleeding and Chilled enemies +1% per Refine,110,Ktullanux
+Byeollungum,2,70/0,ASPD +2 per Mastery. Crit +1 per Assault Stance/Guardian Stance level. Reduce CD of Assault/Guardian Stance by 1s per Refine,110,Bloody Knight
+Apolytos Blade,2,80/0,"ASPD +2 per Mastery. At +3, Agi/Vit +5. At +6, Increase Damage Dealt while under Barrier. At +9, Barrier Potency +50%",130,Kiel D-01
+Aesir Edge,2,80/0,ASPD +2 per Mastery. Holy Property. Physical Damage +3% per Refine while above 50% HP. At +7: Hesperus Lit autocasts Storm Blast. Burst Slash autocasts Crush Strike.,130,Valkyrie Randgris
+Scissor Blade,2,80/0,"ASPD +2 per Mastery. Vuln Potency +30%, -6% per Refine. For each refine above 5, Melee Damage +6%, If exactly +5, Vol Potency +10%, Melee Damage +10%, 30% Double Attack Chance",130,Castle Siege
+,,,,,
+TWO-HANDED SWORDS,,,,,
+Broad Sword,2,70/0,"Crit +3 per Mastery, Str +2, Vit +1, Soft Def +1 per Agi, ASPD +1 per 10 Vit",50,Kobold Warchief
+Executioner,2,90/0,"Crit +3 per Mastery, Permanent Endure, Endure damage reduction disabled",70,Baphomet
+Schweizersabel,2,90/0,Crit +3 per Mastery. Physical attacks have a chance to Sleep. Damage to Sleeping and Dazed enemies +20%,70,Stormy Knight
+Tae Goo Lyeon,2,110/0,"Crit +3 per Mastery. For each level of Quicken learned, ASPD +1. For each level of Rend learned, Bleeding Damage +3%",90,Turtle General
+Soul Eater,2,130/0,Crit Rate +3 per Mastery. All cooldowns -5s whenever an enemy is killed.,110,Lord of the Dead
+Dragon Claw,2,130/0,Crit Rate +3 per Mastery. Bleed/Burning Damage +20%. Damage to Bleeding/Burning enemies +1% per Refine,110,Detardeurus
+Atlas Weapon,2,130/0,"Crit Rate +3 per Mastery. Damage to Vulnerable Enemies +2% per Refine. For every three Refines, Crush Strike Level +1",110,Atroce
+Death Guidance,2,150/0,"Crit rate +3 per Mastery. Bleeding Damage +3% per Refine. If +7, Storm Slash CD -5s, 5% chance to autocast Storm Slash at user's Bloodthirst level.",130,Fallen Bishop
+Veteran Sword,2,150/0,"Crit Rate +3 per Mastery. Damage to Bleeding enemies +3% per Refine. If +7, Damage from Bleeding enemies -15%",130,Hardrock Mammoth
+Scaraba Greatsword,2,150/0,"Crit Rate +3 per Mastery. Damage to Vulnerable Enemies +3% per Refine. If +7, Vulnerable Potency +30%",130,Queen Scaraba
+Apolytos Greatsword,2,150/0,"Crit Rate +3 per Mastery. At +3, Str/Dex +5. At +6, Damage to Bleeding enemies +30%. At +9, Quicken Cooldown -20s.",130,Kiel Prime
+,,,,,
+ONE-HANDED SPEARS,,,,,
+Gungnir,2,40/0,"Vulnerable Potency +3% per Mastery, Hit +30, Perfect Hit +30",50,Mistress
+Battle Hook,2,65/0,Vulnerable Potency +3% per Mastery. Pierce and Brilliant Strike have a high chance to cast Rend.,70,Rogue Prototype
+Venom Lance,2,65/0,Vulnerable Potency +3% per Mastery. High chance to inflict Poison on attacks and skills. Poison Damage +30%,70,Faceworm Queen
+Fortrage,2,95/0,Vulnerable Potency +3% per Mastery. Each kill reduces Spear Flurry CD by 5s. Damage +2% per Refine against Vulnerable enemies,110,Bloody Knight
+Inferno Spear,2,95/0,Vulnerable Potency +3% per Mastery. Chance to inflict Severe Burning with physical attacks. Damage to Burning enemies +2% per Refine,110,Ifrit
+Hunting Spear,2,110/0,"Vulnerable Potency +3% per Mastery. 5% Chance per Refine for skills to inflict Slow. Damage to Slowed enemies +3% per Refine. If +7, Grand Banishment/Cannon Spear CD -15s",130,Fallen Bishop
+Truesilver Spear,2,110/0,"Vulnerable Potency +3% per Mastery. Damage to Bleeding enemies +3% per Refine. If +7, Bleeding Damage +30%",130,Queen Scaraba
+Aesir Horn,2,110/0,Vulnerable Potency +3% per Mastery. Holy Property. Physical Damage +3% per Refine while above 50% HP. At +7: Martyr's Reckoning autocasts Tenacity. Impale autocasts Overbrand.,130,Valkyrie Randgris
+Apolytos Spear,2,110/0,"Vulnerable Potency +3% per Mastery. At +3, Str/Vit +5. At +6, Damage to Vulnerable enemies +30%. At +9, Max HP +20%.",130,Kiel Prime
+,,,,,
+TWO-HANDED SPEARS,,,,,
+Kobold Glaive,2,70/0,"Vulnerable Potency +4% per Mastery. Str +2, Vit +1, Damage to Medium +10%, Damage from Medium -10%",50,Kobold Warchief
+Royal Lance,2,70/0,"Vulnerable Potency +4% per Mastery, Dark/Undead/Ghost Property Resist +15%, Bleed/Burn/Poison Resist +15%",50,Osiris
+Crescent Scythe,2,90/0,"Vulnerable Potency +4% per Mastery, Attacks autocast Rolling Cutter, Pierce/Spear Stab/Brilliant Strike/Holy Cross autocast Rolling Cutter",70,Baphomet
+Zephyrus,2,90/0,Vulnerable Potency +4% per Mastery. Pierce/Spear Stab autoocast Lightning Bolt. Brandish autocasts Static Burst.,70,Stormy Knight
+Fallen Hero's Lance,2,130/0,"Vulnerable Potency +4% per Mastery. For every 1000 Max HP the user has, Physical Damage +2%",110,Lord of the Dead
+Inferno Trident,2,130/0,Vulnerable Potency +4% per Mastery. Burning Damage +1% per 3 Str. Damage to Burning Enemies +2% per Refine,110,Ifrit
+Ivory Lance,2,150/0,"Vulnerable Potency +4% per Mastery. Crit +3, Crit Damage +3% per Refine. If +7, Damage from Vulnerable enemies -15%",130,Hardrock Mammoth
+Apolytos Lance,2,150/0,"Vulnerable Potency +4% per Mastery. At +3, Str/Vit +5. At +6, Damage to Vulnerable enemies +30%. At +9, Vulnerable inflicts damage",130,Kiel D-01
+Dawnbringer Lance,2,150/0,"Vulnerable Potency +4% per Mastery. Damage to enemies under Searing Light +4% per Mastery. If +7, Searing Light Duration +5s, Damage from Searing enemies -15%",130,Herald of Dawn
+Battle Fork,2,150/0,"Vulnerable Potency +4% per Mastery. Crit Rate +30, -6 per Refine. For each refine above 5, Crit Damage +6%. If exactly +5, Crit Rate +10, Crit Damage +10%, Vuln Potency +20%",130,Castle Siege
+,,,,,
+ONE-HANDED AXES,,,,,
+Practice Axe,4,15/0,"Exp +2% per Mastery, Atk +1% per Refine",1,Doppelganger
+Golden Axe,2,45/0,"Crit +3 per Mastery, Atk/Matk +5%, HP/SP -5%",30,Golden Thief Bug
+Tomahawk,2,45/0,"Crit +3 per Mastery, Axe Boomerang Cooldown -2s, Crush Cooldown +2s",30,Kublin
+War Axe,2,60/0,"Crush Damage +2% per Mastery, Str +3, Crit +1 per 3 Luk",50,Goblin King
+Orcish Axe,2,75/0,"Def Pierce +3% per Mastery, Str +3, Chance to inflict Bleeding with each attack, Aspd -3",70,Orc Lord
+Dofle Axe,2,75/0,"Crit +3 per Mastery, Ranged Damage +10%, Axe Boomerang, Acid Terror, Demonstration inflict Chilled",70,Kraken
+Vecer Axe,2,90/0,"Crit +3 per Mastery. For each level of Chemical Research learned, Ranged Damage +2%. For each level of Enhancement Research learned, Summon Atk +2%",90,Turtle General
+Ymir's Axe,2,105/0,"Crit +3 per Mastery. For each Refine, Crit Damage +2%, Max SP -5%. If +7, enables Power Swing Lv5. If already learned, Damage +50% instead.",110,Egnigem Cenia
+Glacier Reaver,2,105/0,Crit +3 per Mastery. Gift of Flame and Pyrelight become Water Property and inflict Chill. Damage to Chilled enemies +2% per Refine,110,Ktullanux
+Guardian Knight Axe,2,105/0,Crit +3 per Mastery. Def +5/MDef +1 per Refine. Summon Atk and HP +1% per Refine. Autocast Endure when attacked.,110,Bloody Knight
+Soul Cleaver,2,120/0,"Crit +3 per Mastery. Burning Damage and Vulnerable Potency +3% per Refine. If +7, Chemical Research Level +5",130,Gloom Under Night
+Truesilver Axe,2,120/0,"Crit +3 per Mastery. Ranged Damage/Summoned Entity Atk +2% per Refine. If +7, Summon Crit +20",130,Queen Scaraba
+Apolytos Axe,2,120/0,"Crit +3 per Mastery. At +3, Str/Int +5. At +6, Phys Damage +5% per Extort Stack. At +9, save 2 Extort Stacks on consume.",130,Kiel D-01
+,,,,,
+TWO-HANDED AXES,,,,,
+Buster,2,70/0,"Crit Damage +3% per Mastery, Str +2, Vit +1, Autocast Provoke when attacking",50,Kobold Warchief
+Ygnus Stale,2,90/0,"Crit Damage +3% per Mastery, Autocast Demonstration when attacking",70,Pyuriel
+Colossal Axe,2,90/0,"Crit Damage +3% per Mastery, Str +3, Def Pierce +30%, ASPD -6",70,Wootan Defender
+Plasma Axe,2,110/0,"Crit Damage +3% per Mastery, Str +2, Luk +2, Maximize Power Cooldown -15 Seconds",90,Vesper
+Guillotine,2,130/0,"Crit Damage +3% per Mastery. If Vit > Agi, Crit +20 ASPD -10. If Agi > Vit, ASPD +5 Crit -10",110,Lord of the Dead
+Slaughter,2,130/0,Crit Damage +3% per Mastery. Axe Tornado inflicts Bleeding. Damage to Bleeding enemies +3% per Refine. Damage from Bleeding enemies -3% per Refine.,110,Atroce
+Maxi Spanner,2,150/0,Crit Damage +3% per Mastery. Summoned Entity Damage +3% per Refine. Attack/Defense Protocol CD -5 Seconds,130,Final Defense Drone
+Veteran Axe,2,150/0,"Crit Damage +3% per Mastery. Physical Damage +0.5% per Refine for each Extort Stack active. If +7, Damage Taken -4% per Extort active.",130,Hardrock Mammoth
+Gatekeeper's Axe,2,150/0,"Crit Damage +3% per Mastery. Damage to Stunned/Staggered/Vulnerable +3% per Refine. ASPD -2 per Refine. At +7, Stun Duration +1s, Vuln Duration +3s",130,Ancient Temple Excavation
+Apolytos Greatsaw,2,150/0,"Crit Damage +3% per Mastery. At +3, Str/Luk +5. At +6, Damage to Stunned/Staggered +30%. At +9, Berserk CD -30s, Summoned Entity Damage +30%",130,Kiel Prime
+Aesir Avenger,2,150/0,Crit Damage +3% per Mastery. Holy Property. Physical Damage +3% per Refine while above 50% HP. At +7: Power Swing autocasts Martyr's Reckoning. Overdrive autocasts Sanctify.,130,Valkyrie Randgris
+,,,,,
+DAGGERS,,,,,
+Practice Knife,4,8/0,"Exp +2% per Mastery, Atk +1% per Refine",1,Doppelganger
+Poison Knife,2,15/0,"Aspd +1 per Mastery, Agi +5, High chance to inflict Poison with attacks",30,Phreeoni
+Ancient Dagger,2,26/26,"Flee +3 per Mastery. Melee Atk +10% OR Ranged Atk +10% OR All Ele Magic +10%, based on Base Stats",30,Kublin
+Moonlight Dagger,2,24/0,"Flee +3 per Mastery, Agi +2, Regen 15 SP every 30 Seconds",30,Moonlight Flower
+Goblin Knife,2,35/0,"Flee +3 per Mastery, Str +3, Perfect Dodge +1 per 5 Agi",50,Goblin King
+Great Serpent's Fang,2,37/0,"Flee +3, Agi +3, Poison status damage +30%",50,Guardian Serpent
+Ritual Dagger,2,50/50,"Burning Damage +3% per Dagger Mastery, Poison Damage +3% per Attunement, Physical Attacks can Burn, Magical Attacks can Poison",70,Orc Necromancer
+Faceworm Queen's Leg,2,42/42,Perf Dodge +3/SP Regen+4% per mastery. Crit pierce equal to Base Int. MDef Pierce equal to Crit Rate.,70,Faceworm Queen
+Usurper's Fang,2,42/0,"Flee +3 per Mastery. Poison Property. For every point of Base Agi, Def Pierce +0.5%",70,False Snake God
+Metal Detector,2,50/50,Flee +3 per Mastery. SP Regen +4% per Magical Attunement. Mainhand: +0.5 ASPD per Dagger Mastery. Offhand:  3% Def Pierce per Dual Wield,90,RSX-0806
+Jewel Detector,2,50/50,Flee +3 per Mastery. SP Regen +4% per Magical Attunement. Mainhand: +2 Crit per Dagger Mastery. Offhand:  3% Crit Damage per Dual Wield,90,RSX-0806
+Ymir's Dagger,2,58/58,"Flee +3 per Mastery. Mainhand: For each Refine, Damage to Poisoned/Blind enemies +1%, Max SP -5%.
+Offhand: For each Refine, Poison Damage +2%, Blind Potency +2, Max SP -5%
+Both Hands:  If +7, enables Fate Sealer Lv5. If already learned, Damage +50% instead.",110,Egnigem Cenia
+Dragon Fang,2,58/58,"Flee +3 per Mastery, SP Regen +4% per Magical Attunement. Mainhand: Physical and Magical Damage to Burning enemies +5% + 1% per refine. Offhand: Crit Pierce +10% + 2% per Refine",110,Detardeurus
+Inferno Razor,2,58/58,"Flee +3 per Mastery, SP Regen +4% per Magical Attunement. Mainhand: Burning Damage +3% per Refine. Fire Magic Damage +3% per Refine.  Offhand: Burning Damage Taken -3% per Refine",110,Ifrit
+Fang of the Abyss,2,58/58,Flee +3/SP Regen +4% per Mastery. Mainhand: FCT -1s. Magic Pierce +5% per Refine Offhand: Blind Potency +3 per Refine. Blind Potency Received -3 per Refine,110,Dark Lord
+Tooth Blade,2,64/0,"Flee +3 per Mastery. Mainhand: Damage to Bleeding/Burning/Poisoned enemies +1% per refine. If +7, Bleeding/Burning/Poison damage +30% Offhand: Damage taken from Bleeding enemies -3% per Refine. If +7, Counter Slash inflicts Bleeding",130,Fallen Bishop
+Ivory Knife,2,64/0,"Flee +3 per Mastery.
+Mainhand: Vuln Potency +2%, Damage to Vuln enemies +2% per Refine. If +7, Crit +25
+Offhand: Vuln Potency +2%, Damage from Vuln enemies -2% per Refine. If +7, Counter Slash inflicts Vulnerable",130,Hardrock Mammoth
+Nightfall Razor,2,64/64,"Flee +3/SP Regen +4% per Mastery. Dark Property. Mainhand: Phys/Magic damage to Holy Property and Angel Race +3% per Refine. Offhand: Dark Resist +3% per Refine, Poison Damage +3% per Refine",130,Herald of Dusk
+Apolytos Dagger,2,64/64,"Flee +3/SP Regen +4% per Mastery. 
+Mainhand: At +3, Dex/Int +5. At +6, Melee/Ranged/Magic Damage +10%. At +9, Chance to gain all three Ninja Arts when dealing damage
+Offhand: At +3, Agi/Dex +5, At +6: Damage from All Sizes -15%, At +9: Savage Blade Cooldown -15s",130,Kiel Prime
+Apolytos Razor,2,64/0,"Flee +3 per Mastery. 
+Mainhand: At +3, Str/Agi +5. At +6, Damage to Vulnerable/Blind +20%. At +9, Stalker's/Chaser's Instinct CD halved.
+Offhand: At +3, Vit/Luk +5, At +6: Vuln Potency +30%, Blind Potency +30, At +9: Final Fang CD -15s",130,Kiel Prime
+Backstabber,2,64/0,"Flee +3 per Mastery.
+Mainhand: Blind/Vuln Potency +30/30%, -6/6% per Refine. For each refine above 5, Damage to Blind/Vulnerable enemies +4%. If exactly +5, Blind/Vuln Potency +10/10%, Damage to Blind/Vulnerable enemies +7%, Back Stab Cooldown -4s
+Offhand: ASPD +5, -1 per Refine. For each Refine above 5, Crit Rate +5. If exacty +5, ASPD +2, Crit Rate +10, 10% Chance to autocast Backstab",130,Castle Siege
+,,,,,
+KATARS,,,,,
+Chakram,2,60/0,"Crit Damage +3% per Mastery, Rejuvenating Blades level +1",50,Osiris
+Katar of Raging Blaze,2,75/0,"Burning Damage +10% per Mastery, Int +3, Fire Property, Attacks and Skills have a chance to inflict Burning",70,Muspellskoll
+Scorpion Claw,2,75/0,Crit Damage +3% per Mastery. Toxic Blades level +1. Crit +1 per 5 Agi,70,Faceworm Queen
+Infiltrator,2,105/0,"Crit Damage +3% per Mastery, Phantom Claw/Seeking Fang CD -3s, Damage to enemies below half HP +2% per Refine",110,Zealotus
+Wild Beast Claw,2,105/0,Crit Damage +3% per Mastery. Damage to Vulnerable and Bleeding Enemies +1% per Refine. Sonic Acceleration CD -5 seconds per kill,110,Atroce
+Apolytos Katar,2,120/0,"Crit Damage +3% per Mastery. At +3, Agi/Luk +5. At +6, Crit Damage +30%. At +9, Deadly/Venomous Shadow CD is halved.",130,Kiel D-01
+Dawnbringer Katar,2,120/0,"Crit Damage +3% per Mastery. Damage to enemies under Searing Light +4% per Refine. If +7, Searing Light Duration +5s, Damage from Searing enemies -15%",130,Herald of Dawn
+Carnage,2,120/0,"Crit Damage +3% per Mastery. ASPD +10, -2 per Refine. For each Refine above 5, Crit Pierce +10%. If exactly +5, ASPD +3, Crit Pierce +20%, Sonic Blow damage +100%",130,Castle Siege
+,,,,,
+BOWS,,,,,
+Practice Bow,4,10/0,"Exp +2% per Mastery, Atk +1% per Refine",1,Doppelganger
+Burning Bow,2,25/0,"1% Burn Chance per Mastery, Atk +30% vs Earth, Atk -30% vs Fire, Chance to Burn Self on Attack",30,Eddga
+Ballista,0,40/0,Ranged Attack +3% per Mastery,30,Dracula
+Moonlight Bow,2,25/0,"1% Chance to Arrow Repel when taking damage per Mastery, Dex +2, Regen 15 SP every 30 Seconds",30,Moonlight Flower
+Ancient Bow,2,40/0,"Ranged Damage +2% per Mastery. Autocast Aggravating Assault, chance based on Falconry Mastery",50,Pharaoh
+Orc Archer Bow,2,50/0,"Def Pierce +3% per Mastery, Dex +3, Attacks have a chance to Slow, ASPD -3",70,Orc Lord
+Jungle Arch,2,50/0,"Ranged Attack +2% per Mastery, Bleeding/Burning/Poison damage +10%",70,Lady Tanee
+World Serpent's Arc,2,60/0,Ranged Damage +2% per Mastery. Status Damage +3% per Trapper's Focus. Crit Damage +3% per Marksman's Focus.,90,Avatar of the Serpent
+Ymir's Bow,2,70/0,"Ranged Damage +2% per Mastery. For each Refine, damage to Slowed enemies +2%, Max SP -5%. If +7, enables Explosive Shot Lv5. If already learned, Damage +50% instead.
+Non-Snipers: Explosive Shot is always treated as having 3 Preparation Counters",110,Egnigem Cenia
+Dragon Wing,2,70/0,Ranged Damage +2% per Mastery. Incendiary Mine FCT Removed. Incendiary Mine Cooldown -5s,110,Detardeurus
+Frozen Bow,2,70/0,Ranged Damage +2% per Mastery. Falcon Skills inflict Chilled. Physical Damage to Chilled enemies +2% per Refine. Glacial Chill Cast Time -3s,110,Ktullanux
+Rapture Bow,2,70/0,"Ranged Damage +2% per Mastery, Punishing Bolt CD is halved, Physical Damage to Burning/Bleeding/Poisoned enemies +1% per Refine",110,Zealotus
+Giant Crossbow,2,70/0,Ranged Damage +2% per Mastery. Slow Potency +25. Slow Duration +3 seconds,110,Atroce
+Ravenous Bow,2,80/0,"Ranged Damage +2% per Mastery. Physical Damage to Bleeding Enemies +3% per Refine. If +7, Razor Shot Cooldown -3s",130,Gloom Under Night
+Apolytos Bow,2,80/0,"Ranged Damage +2% per Mastery. At +3, Dex/Agi +5. At +6, Damage to Slowed enemies +30%. At +9, VCT -100%",130,Kiel D-01
+Scaraba Bow,2,80/0,"Ranged Damage +2% per Mastery. Damage to Blind enemies +3% per Refine. If +7, Shrouding Shot CD -3s",130,Queen Scaraba
+Catapult,2,80/0,"Ranged Damage +2% per Mastery. FCT -1s, +0.2s per Refine. For each Refine above 5, Damage to Slow/Vulnerable enemies +4%. If exactly +5, FCT -0.3s, Damage to Slow/Vulnerable +7%, Skills have a 20% chance to autocast Double Strafe Lv10",130,Castle Siege
+,,,,,
+INSTRUMENTS/WHIPS,,,,,
+Snakeskin Whip,2,40/40,"SP Consumption -3% per Mastery, Agi +3, Chance to Poison with attacks",50,Guardian Serpent
+Comodo Trumpet,2,40/40,"SP Consumption -3% per Mastery, Int +2, Vulnerable Potency +10%, Breach Potency +10%",50,Tao Gunka
+Blade Whip,2,40/40,"SP Consumption -3% per Mastery, Dex +2, Slow Potency +25",50,Tao Gunka
+Umbala Guitar,2,50/50,"SP Consumption -3% per Mastery, Synchronic Strike autocasts Heaven's Drive",70,Lady Tanee
+Sea Witch's Foot,2,50/50,"SP Consumption -3% per Mastery, Vicious Verse autocasts Chilling Frost",70,Kraken
+Glacial Strings,2,70/70,SP Consumption -3% per Mastery. Phys/Magic has a chance to inflict Chill. Phys/Magic Damage to Chilled enemies +1% per Refine,110,Ktullanux
+Icicle Whip,2,70/70,SP Consumption -3% per Mastery. Phys/Magic has a chance to inflict Chill. Phys/Magic Damage to Chilled enemies +1% per Refine,110,Ktullanux
+Queen's Whip,2,70/70,"SP Consumption -3% per Mastery. The Fool CD -5s, Melodic Mark CD -2s, Increase damage to enemies under The Fool and Mark by 5+1% per Refine",110,Zealotus
+Antique Cello,2,70/70,"SP Consumption -3% per Mastery. The Fool CD -5s, Melodic Mark CD -2s, Increase damage to enemies under The Fool and Mark by 5+1% per Refine",110,Ragged Golem
+Underworld's Melody,2,70/70,"SP Consumption -3% per Mastery. Physical Damage +1.5% per 1000 Max HP. If +7, Tarot: Death CD -45s, Woeful Warcry grants Crit +30",110,Song of Despair
+Underworld's Lash,2,70/70,"SP Consumption -3% per Mastery. Physical Damage +1.5% per 1000 Max HP. If +7, Tarot: Death CD -45s, Woeful Warcry grants Crit +30",110,Song of Despair
+Aesir Harp,2,80/80,"SP Consumption -3% per Mastery. While SP is above 50%, Magic Damage +3% per Refine to all enemies. If +7, Desperate Dynamic autocasts Sanctify, Tarot: The Tower autocasts Arbitrium",130,Fallen Bishop
+Aesir Ribbon,2,80/80,"SP Consumption -3% per Mastery. While HP is above 50%, Physical Damage +3% per refine to all enemies. If +7, Desperate Dynamic autocasts Sanctify, Tarot: The Tower autocasts Banishing Strike",130,Fallen Bishop
+Dawnbringer Violin,2,80/80,"SP Consumption -3% per Mastery. Phys/Magic Damage to Searing enemies +4%/+2% per Refine. If +7, Searing Light Duration +5s, Searing Light Damage +50%",130,Herald of Dawn
+Dawnbringer Whip,2,80/80,"SP Consumption -3% per Mastery. Phys/Magic Damage to Searing enemies +4%/+2% per Refine. If +7, Searing Light Duration +5s, Searing Light Damage +50%",130,Herald of Dawn
+Apolytos Guitar,2,80/80,"SP Consumption -3% per Mastery. At +3, Dex/Int +5. At +6, Magic Damage +20%. At +9, heal whenever Rhythm ends.",130,Kiel Prime
+Apolytos Whip,2,80/80,"SP Consumption -3% per Mastery.. At +3, Dex/Int +5. At +6, Ranged Damage +20%. At +9, heal whenever Rhythm ends.",130,Kiel Prime
+,,,,,
+STAFFS,,,,,
+Practice Rod,4,5/10,"Exp +2% per Mastery, Matk +1% per Refine",1,Doppelganger
+Firestarter,2,10/35,"Fire Magic Damage +3%, Int +3, VCT of Non-Fire spells +30%",30,Maya
+Moonlight Staff,2,10/35,"MDef Pierce +3% per Mastery, Int +2, Chance to inflict Confusion when casting Fire Ball",30,Moonlight Flower
+Pharaoh's Scepter,2,10/55,"VCT -2% per Mastery. If low refine, FCT -0.5s. If high refine, All element Magic +10%",50,Pharaoh
+Wand of Occult,2,35/70,"VCT -2% per Mastery, Magic Damage to Demihuman/Brute/Insect +15%, Magic Damage to Demon/Undead/Formless -15%",70,Orc Necromancer
+Tanee's Branch,2,15/70,"VCT -2% per Mastery, Wind/Earth Magic Damage +20%, Fire/Water Magic Damage -20%",70,Lady Tanee
+Eye of the Volcano,2,15/70,"Fixed Cast -0.1 per Mastery, Int +3, Chance to inflict Burning on self when dealing Magic Damage",70,Muspellskoll
+Staff of Juperos,2,25/85,"VCT -2% per Mastery, Int +2, Dex +2, Reduce the Cooldown of Rapid Incantation by 15 Seconds",90,Vesper
+Ymir's Staff,2,10/100,"VCT -2% per Mastery. For each Refine, Magic Damage to Chilld/Burning/Sleeping/Dazed +1% for each, Max SP -5%. If +7, enables Elemental Annihilation Lv5. If already learned, Damage +50% instead",110,Egnigem Cenia
+Staff of Blue Flame,2,15/100,VCT -2% per Mastery. Magic autocasts Frost Bite. Magic Damage to Chilled enemies +2% per Refine,110,Ktullanux
+Broken Covenant,2,10/100,VCT -2% per Mastery. Magic Damage to Fire/Water/Wind/Earth Property +3% per Refine. Drain 2% of Max HP per cast.,110,Dark Lord
+Nihil Star,2,10/100,"VCT -2% per Mastery. Mdef Pierce +3% per Refine. If +7, chance to autocast Dark Soul Strike Lv10 when magically attacking.",110,Song of Despair
+Mind Shaper,2,15/115,"VCT -2% per Mastery. Summoned Entity Attack and Max HP +2% per Refine. If +7, increase skill level of Elemental Spirit attacks by 1",130,Gloom Under Night
+Feystone Staff,2,15/115,"VCT -2% per Mastery. For each Refine, All CDs -3%, Matk -3%. If +7, Summon HP +25%",130,Queen Scaraba
+Dusk Caller,2,10/115,"VCT -2% per Mastery. Magic Damage to Neutral, Fire, and Holy Property Monsters +3% per Refine. If +7: Void Channeling CD -45s",130,Herald of Dusk
+Profane Scepter,2,25/115,"VCT -2% per Mastery. For each Refine, FCT -0.25s, each cast consumes 1% of Max HP. If +7, magical attacks autocast Spiteful Spirit",130,Ancient Temple Excavation
+Apolytos Staff,2,15/115,"VCT -2% per Mastery. At +3, Int/Dex +5. At +6, Ignore all Elements. At +9, Magic Damage to All Races +30%",130,Kiel D-01
+,,,,,
+MACES,,,,,
+Practice Club,4,10/0,"Exp +2% per Mastery, Atk +1% per Refine",1,Doppelganger
+Red Square Bag,2,30/30,"Crit +3 per Mace Mastery, Healing Power +4% per Piety, Chance to inflict Bleeding, Burning, Poison, Blind, Slow, Vulnerable on attack",30,Mistress
+Guardian's Rod,2,30/30,Crit Rate +3/Healing Power +4% per Mastery. Int +2. Heal has a chance to autocast Kyrie Eleison.,30,Mistress
+Long Mace,2,30/30,"Crit +3/Healing Power+4% per Mastery, Long Ranged Reduction +10%, Attack Range +2",30,Dracula
+Golden Mace,2,30/30,"Healing Power +3% per Mastery, Atk/Matk +5%, HP/SP -5%",30,Golden Thief Bug
+Nemesis,2,30/30,Crit Rate +3/Healing Power +4% per Mastery. Str/Int +1. Signum Crucis Damage +30%,30,Maya
+Quadrille,2,40/40,Crit Rate +3/Healing Power +4% per Mastery / Spiritual Lash Cooldown -3s / Banishing Light Cooldown -2s,50,Osiris
+Carga Mace,2,50/50,"Crit +3 per Mace Mastery, Healing Power +4% per Piety, Smite inflicts Vulnerable, Holy Light inflicts Breach",70,Pyuriel
+War Mace,2,50/50,Crit +3/Healing Power +4% per Mastery. Atk/Matk +5% for every 50 Combined Str + Int,70,Rogue Prototype
+Turtle Hammer,2,60/60,Crit +3/Healing Power +4% per Mastery. Add a chance to autocast Crush Strike. Vulnerable Potency +20%,90,Turtle General
+Ymir's Mace,2,70/70,"Crit +3/Healing Power +4% per Mastery. For each Refine, Physical/Magical Damage +2% under Aspersio, Max SP -5%. If +7, enables Zealous Rage Lv5. If already learned, Damage +50% instead",110,Egnigem Cenia
+Bloody Cross,2,70/70,Crit +3/Healing Power +4% per Mastery. Holy Magic +2% per Refine. Physical Damage to Bleeding/Burning +2% per Refine,110,Ragged Golem
+Penitence,2,70/70,"Crit +3/Healing Power +4% per Mastery. Damage to Stigmata'd enemies +2% per Refine. If +7, Stigmata Duration +5s",110,Song of Despair
+Inferno Hammer,2,70/70,Crit +3/Healing Power +4% per Mastery. Magic inflicts Burning. Physical inflicts Severe Burning. Phys/Magic Damage to Burning enemies +2% per Refine,110,Ifrit
+Pile Bunker,2,80/80,Crit +3/Healing Power +4% per Mastery. Def Pierce +50%. Autocasts Pierce when attacking.,130,Final Defense Drone
+Veteran Hammer,2,80/80,"Crit +3/Healing Power +4% per Mastery. Damage to Vulnerable enemies +3% per Refine. If +7, Physical Attacks/Skill have a 35% Chance to inflict Vulnerable.",130,Hardrock Mammoth
+Shade Mace,2,80/80,Crit +3/Healing Power +4% per Mastery. Dark Property. Magic pierces Holy property resistances. Magic Damage to Holy +5% per Refine,130,Herald of Dusk
+Aesir Scepter,2,80/80,Crit +3/Healing Power +4% per Mastery. Permanent Aspersio effect. Physical Damage +3% per Refine while above 50% HP. At +7: Sura Faith skills autocast Ignition Break. Zen autocasts Sanctify. Chance to autocast Gloria Domini when attacking.,130,Valkyrie Randgris
+Tainted Cross,2,80/80,"Crit +3/Healing Power +4% per Mastery. Signum Crucis inflicts Vulnerable/Breach. Physical Damage +3% per refine to Vulnerable. Magic Damage +3% per Refine to Breach. If +7, Vuln/Breach Potency +30%. Reduces Asperios Duration",130,Ancient Temple Excavation
+,,,,,
+FISTS,,,,,
+Primal Fist,2,55/20,"Crit Damage +3% per Mastery, Str +3, Combo Skills have a chance to inflict Bleeding",70,Wootan Defender
+Usurper's Claw,2,55/0,Crit Damage +3% per Mastery. Poison Property. Enables Envenom 10,70,False Snake God
+Shock Fist,2,55/0,Crit Damage +3% per Mastery. Raging Thrust inflicts Sleep,70,Stormy Knight
+Ferocious Fangs,2,70/0,"Crit Damage +3% per Mastery. Autocast Raging Trifecta and Raging Quadruple. For each level of Raging Thrust learned, Crit +3",90,Turtle General
+Tormentor's Claw,2,85/0,Crit Damage +3% per Mastery. Monk Combo Skills inflict Vulnerable. Damage +2% per Refine to Vulnerable enemies.,110,Zealotus
+Inferno Claw,2,85/0,Crit Damage +3% per Mastery. Burning Damage +1% per Refine. Damage to Burning enemies +1% per Refine. Burning Faith CD -1s per Refine,110,Ifrit
+Aesir Fist,2,100/0,"Crit Damage +3% per Mastery. While above 50% HP, Physical Damage +3% per Refine. If +7, Zen maxes out Spiritual Cadence, Burning Faith maxes out Fury",130,Gloom Under Night
+Dawnbringer Knuckle,2,100/0,"Crit Damage +3% per Mastery. Damage to enemies under Searing Light +4% per Refine. If +7, Searing Light Duration +5s, Searing Light Damage +50%",130,Herald of Dawn
+Apolytos Fist,2,100/0,"Crit Damage +3% per Mastery. At +3, Str/Luk +5. At +6, Damage during Fury +30%. At +9, Falling Mountain/Furious Execution reset CD of Raging Thrust.",130,Kiel Prime
+,,,,,
+REVOLVERS,,,,,
+Gold Lux,2,30/0,"Movement Speed +2% per Mastery, Atk/Matk +5%. Max HP/SP -5%.                         ",30,Golden Thief Bug
+Antique Revolver,2,30/0,"Movement Speed +2% per Mastery, High chance to Blind enemies on Attack, Low chance to blind Self on attack",30,Drake
+Sweety's Handgun,2,50/0,"Movement Speed +2% per Mastery, Dex +3, Rapid Reload and Redeploy Cooldown -5s",70,Captain Sweety
+Devil's Sidearm,2,70/0,"Movement Speed +2% per Mastery. Increased damage to Vulnerable, Bleeding, and Slowed Enemies based on Refine.",110,Dark Lord
+,,,,,
+RIFLES,,,,,
+Final Destiny,2,90/0,"Crit Damage +3% per Mastery, Fixed Cast Time -50%, Crits ignore 100% of Physical Defense",70,Rogue Prototype
+Patience,2,120/0,Crit Damage +3% per Mastery. Crit Damage +3% per Refine. FCT +0.1s per Refine. Breaking Shot/Snipe knock back by 4/6 Cells,110,Atroce
+Reliever,2,135/0,"Crit Damage +3% per Mastery. Physical Damage to Bleeding/Slowed enemies +2% per Refine. If +7, Burst Fire and Hammer Round CD -7.5s",130,Fallen Bishop
+,,,,,
+SHOTGUNS,,,,,
+Demon Slayer,2,75/0,"Melee Damage Taken -2% per Mastery, Physical Damage to Demon/Undead/Angels +50%, Bleed Damage -50%",70,Baphomet
+Deathfire,2,105/0,Melee Damage Taken -2% per Mastery. Shotgun Skills inflict Severe Burning. Damage to Burning enemies +2% per Refine,110,Ragged Golem
+,,,,,
+GATLINGS,,,,,
+Apolytos Gatling,X,3% per Ref,"Gatling CDs -2% per Mastery. At +3, Dex/Luk +5. At +6, Damage to Slow/Bleeding/Vulnerable +10%. At +9, Redeploy can be cast twice before entering CD.",130,Kiel Prime
+,,,,,
+GRENADE LAUNCHERS,,,,,
+Apolytos Launcher,X,3% per Ref,"Burning Damage +1% per Mastery. At +3, Dex/Int +5. At +6, Damage to Burning +30%. At +9, Launcher skills treat all enemies as having Crimson Marker",130,Kiel Prime
+,,,,,
+BOOKS,,,,,
+Book of the Sun,2,40/0,Int +0.5 per Mastery. Burning Damage +25%. Crit Damage -25%,50,Pharaoh
+Devil's Grimoire,2,50/0,"Agi +0.5 per Mastery, Umbral Veil Level +2",70,Baphomet
+Book of Storms,2,55/0,Dex +0.5 per Mastery. Stellar Barrage has a 30% chance to autocast Tornado Kick.,70,Stormy Knight
+Tactician's Manual,2,70/0,"Vit +0.5 per Mastery. For each level of Lunar Protection learned, Counter/Axe Kick Damage +5%, Lunar Glow CD -0.5s",90,Turtle General
+Legacy of Dragons,2,85/0,"Int +1/2 per Mastery. For every 10 Str, Burning Damage +3%. For every 10 Int, Crit Damage +3%",110,Detardeurus
+Wicked Apocrypha,2,85/0,Vit +1/2 per Mastery. Lunar Glow CD -5s. Damage to Blind enemies +2% per Refine,110,Ragged Golem
+Book of the Lost,2,85/0,"Agi +1/2 per Mastery. Crit Pierce +3% per Refine. If +7, Umbral Howl CD -10s, Encroaching Darkness CD -30s",110,Song of Despair
+Testament of Freya,2,100/0,"Dex +1/2 per Mastery. Damage to Stellar Marked enemies +3% per Refine. If +7, Stellar Flicker CD -2s, Stellar Barrage and Stellar Tempest CD -5s",130,Gloom Under Night
+Ancient Enigma,2,100/0,"All Stats +1/2 per Mastery. Autocasts Cosmic Nova/Celestial Miracle at 1% per Refine. Revelation/Encroaching Dark Duration -1s per Refine. At +7, ASPD +10",130,Ancient Temple Excavation
+,,,,,
+SOULS,,,,,
+Berserker Soul,2,20/0,"Enables Rend, Devastating Blow, Deafening Roar, Maximize Power. Per Vicious Possession Level: Melee +3%, FCT -0.1s",70,Rogue Prototype
+Pyromancer Soul,2,0/20,"Enables Fire Ball, Volcano, Crimson Rock.  Per Arcane Possession Level: Burning Damage +3%, VCT -2%",70,Muspellskoll
+Serpent Soul,2,10/25,"Enables Envenom, Venom Eater, Poison Wave. Per Arcane Possession Level: Agi +1, Poison Damage +5%",90,Avatar of the Serpent
+Underworld Soul,2,10/25,"Enables Frozen Grip, Meteor Breath, Lord of Vermillion. MDef Pierce +15%",110,Dark Lord
+Dusk Soul,2,15/30,"Enables Dark Soul Strike, Psychic Storm, Grand Darkness. Abyssal Comet consumes Spirits/AP to determine damage instead of Void Spheres.",130,Herald of Dusk
+Valkyrie Soul,2,20/20,"Enables Magnus Exorcismus, Grand Banishment, Sanctify (half level). Physical Damage +15% while above half HP. Magic Damage +15% while above half SP",130,Valkyrie Randgris
+,,,,,
+Huuma Shurikens,,,,,
+Apolytos Huuma,X,X,"Ranged Damage +3% per Refine.  At +3, Dex/Luk +5. At +6, Crit Damage +30%. At +9, Throw Huuma CD is halved.",130,Kiel Prime

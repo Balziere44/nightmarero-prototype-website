@@ -194,6 +194,36 @@ purpose, because that is how they appear in game.
 
 ---
 
+## The item database
+
+`database.html` searches every weapon, armour piece and card on the server.
+It loads `assets/data/items.json` once and filters in memory, painting results
+in chunks of 60 so a 1200 entry list never stalls the page.
+
+The data comes from Twilight's two published reference sheets. Refresh it in
+two steps:
+
+```bash
+python tools/fetch_sheets.py     # re-download tools/data/*.csv from Google
+python tools/build_database.py   # rebuild assets/data/items.json
+```
+
+`fetch_sheets.py` is the only script that needs the network. The CSVs are
+committed, so anyone can rebuild the JSON offline.
+
+Two things to know about the source data:
+
+- **Shadow Gear and Shadow Enchants are empty tabs** in the gear sheet, so
+  none of it is in the database yet. It will appear on its own once Twilight
+  fills those tabs in and the two commands above are re-run.
+- **The sheets mark champion drops with a green cell fill.** Colour does not
+  survive the CSV export, so that distinction is not in the database. If it
+  matters later, the champion names would need their own column.
+
+Category names differ slightly between the two gear docs (`GATLINGS` versus
+`GATLING GUNS`). `CATEGORY_ALIASES` in `build_database.py` folds those
+together so the filter does not list near-duplicates.
+
 ## The launch countdown
 
 The hero counts down to launch and then swaps itself for a "servers are live"

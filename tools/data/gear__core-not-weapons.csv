@@ -1,0 +1,175 @@
+,,,,,
+Name,Slots,Def/Mdef,Effects,"Req, Level",Drops From
+,,,,,
+ARMORS,,,,,
+Cotton Shirt,1,10/0,Max SP +25,1,"Smokie, Mandragora, Magnolia, Creamy"
+Jacket,1,15/0,Max HP/SP +10,1,"Thara Frog, Condor, Hode, Andre, Elder Willow, Poporing, Yoyo, Thief Bug"
+Adventurer's Suit,1,20/0,Max HP +25,1,"Tarou, Peco Peco, Bigfoot, Roda Frog"
+Silver Robe,1,15/5,"Int +1, Max SP +50, Healing Power +8%",30,"Sohee, Blue Papilla, Whisper, Ghoul"
+Pantie,1,15/0,"Agi +1, Dex +1, Flee +5",30,"Pirate Skeleton, Kukre, Soldier Andre, Archer Skeleton"
+Wooden Mail,1,25/0,"Vit +1, Max HP +50, HP Regen +10%",30,"Savage, Alligator, Octopus Tentacle, Pot Dofle"
+Saint's Robe,1,15/7,"Int +2, SP Consumption -10%",50,"Obeaune, Orc Lady, Dryad, Harpy, Isis, Marc, ???"
+Thief Clothes,1,20/0,"Agi +2, Crit +5, Perfect Dodge +5",50,"Fur Seal, Bandit Enforcer, Orc Zombie, Baby Leopard, Tumblering, Verit, Sropho, ???"
+Padded Armor,1,35/0,"Vit +3, Melee Damage Taken -5%",50,"Crab, High Orc, Beetle King, Swordfish, Pasana"
+Formal Suit,1,20/10,"Int +2, Dex +2, Burn, Chill, Sleep Resist +15%",70,"Kaho, Lost Wizard, Noxious, Holden, Bathroy, Gaster"
+Noble Suit,1,20/0,"Agi +2, Luk +2, Blind, Slow, Vulnerable Resist +15%",70,"Wootan Shooter, Explosion, Lost Assassin, Venomous, Toxic Mantis, Toxious"
+Chain Mail,1,40/0,"Str +2, Vit +2, Bleed, Poison, Stun Resistance +15%",70,"Plateau Brute, Lost Knight, Ash Hopper, Metaling, Faceworm, Pitman"
+Blessed Robe,1,20/15,"Int +2, Dex +2, Healing Power +3% per Refine",90,"Disguise, Hill Wind"
+Ninja Suit,1,25/0,"Agi +2, Dex +2, Perfect Dodge +2 per Refine",90,"Galion, Rock Spider, Veins Silencer"
+Full Plate,1,45/0,"Str +2, Vit +2, Melee Resist +1% per Refine",90,"Dullahan, Rachel Captain, Rockskin Toad, Solider"
+Dragon Scale Plate,1,50/0,"Str/Vit +2, Melee Damage Taken -5%   Set Bonus: Max HP/SP +5%, +20: Max HP/SP +5%, Melee Damage Taken -5%",110,Abyss Lake
+Infantry Mail,1,50/0,Bleeding Damage +1% per Refine    Set Bonus: Bleeding Damage Taken -1% per Refine,110,Glast Heim
+Pariah's Cloth,1,30/0,"Def Pierce +30%, Max HP -15%         Set Bonus: At +20, Max HP +15%, Neutral Resist +10%, Flee +30, Movespeed +10%",110,Glast Heim
+Apostle's Robe,1,25/20,"Magic Pierce +30%, Magic Attack -10%, Magic Attack +1% per Refine        Set Bonus: VCT -1% per Refine, FCT -0.1 per 10 Refines",110,Glast Heim
+Gilded Robe,1,30/0,"Agi/Luk +2, Ranged Damage Taken -5%   Set Bonus: Max HP/SP +5%, At +20: Max HP/SP +5%, Ranged Damage Taken -5%",110,Glast Heim
+Rekember Uniform,1,30/5,"Damage from Medium enemies -3%. If +7, Phys/Magic Damage to Medium enemies +3%",110,Somatology Laboratory
+Black Sand Suit,1,30/5,"Bleeding Damage Taken -10%. If +7, additional -10%",110,Endless Desert
+Snowflower Armor,1,30/10,"Chill Resist +20%, Water Property Resistance +5%    Set Bonus: Phys/Magic Damage to Water Property +1% per Refine",110,Ice Dungeon
+Volcanic Armor,1,30/10,"Burning Resist +20%, Fire Property Resistance +5%   Set Bonus: Phys/Magic Damage to Fire Property +1% per Refine",110,Thor's Volcano
+Archaeologist Suit,1,30/0,Max HP +100 per Refine. Max SP +10 per Refine    Set Bonus: Physical/Magical Attack increased by Max HP/SP,110,Verus Ruins
+Hollow Plate,1,50/0,"All Stats -1. Max HP/SP +1% per Refine. Set Bonus: All Stats -1, All Race Resistance +10%",110,Opera House
+Honor Guard Uniform,1,40/10,Vulnerable/Breach Potency Received -2% per Refine. Set Bonus: Gain Offensive Bonuses based on the Defensive Bonuses of the set,110,Thanatos Tower
+Sprint Mail,1,25/10,"Flee +10, ASPD +1. If +7, Additional ASPD +1. Set Bonus: ASPD Limit +1",110,New World Fields
+Engineer's Armor,1,35/0,"Summon HP +1% per Refine. At +7, additional 5%. Combo:  Engineer Bonuses apply to the user.",130,Robot Factory
+Sanctuary Cassock,1,25/20,"Int, Vit, Dex +1. Max SP +25%. If Rachel Rep is 5 or higher, FCT -0.25s",130,Rachel Sanctuary
+Operative's Suit,1,30/0,"Str, Agi, Luk +1. Max HP +10%. If Veins Rep is 5 or higher, ASPD +1",130,Nameless Island
+Dawnbringer Mail,1,40/15,"Dark, Undead, Ghost Resist +1% per Refine. If +7, Max HP +10%.     Set Bonus: Phys/Magic Damage to Dark/Undead/Ghost +1% per Refine",130,Tower of the Morning
+Dicastes Robes,1,20/20,"Magic Damage Received -10%. If +7, Burn/Chill/Sleep Resist +30%.   Set: Magic Damage Received -5%, Burn/Chill/Sleep Resist +10%",130,Scaraba Nest
+High Arcanist Robes,1,25/25,"All Element Magic Damage +1% per Refine, Magic Pierce +1% per Refine    Set Bonus: FCT -1s, VCT -30%",130,Geffenia
+Odin's Blessing,1,35/0,"Str/Vit +1 per Refine. At +7, Atk +10%, Def Pierce +20%.    Combo: Pierce elemental resistance of Holy enemies",130,Odin's Temple
+Glacial Armor,1,50/0,"Physical Damage to Wind/Water +1% per Refine. If +7, Wind/Water Resist +5%.   Set Bonus: While Chilled, Damage +10%, Damage Taken -10%",130,Far North
+Glacial Robe,1,25/25,"Magical Damage to Wind/Water +1% per Refine. If +7, Wind/Water Resist +5%.   Set Bonus: While Chilled, Damage +10%, Damage Taken -10%",130,Far North
+Exuvic Armor,1,50/0,"Physical Damage to Neutral/Poison +1% per Refine. If +7, Poison Property Resistance +5%, Poison Status Damage Taken -10%. Set: Max HP +1%/Damage Taken -1% for each level of Exuvic Blessing",130,Rgan Tunnels
+Exuvic Robe,1,25/25,"Magical Damage to Neutral/Poison +1% per Refine. If +7, Poison Property Resistance +5%, Poison Status Damage Taken -10%. Set: Max HP +1%/Damage Taken -1% for each level of Exuvic Blessing",130,Rgan Tunnels
+Ascendant Robe,1,30/15,Physical/Magical Damage +0.5% per Refine to Bleeding/Burning/Poisoned enemies. Set Bonus: Bleeding/Burning/Poison Duration +5s,130,Rgan Sacred Ground
+,,,,,
+GARMENTS,,,,,
+Hood,1,5/0,Soft Mdef +10,1,"Chonchon, Muka, Spore, Wormtail, Lunatic"
+Muffler,1,10/0,Soft Def/Mdef +5,1,"Familiar, Coco, Pikcy, Piere, Frilldora, Willow, Dragon Tail, Hornet"
+Manteau,1,15/0,Soft Def +10,1,"Desert Wolf, Poison Spore, Horn"
+Servant's Hood,1,10/5,VCT -10%,30,"Zombie, Red Papilla, Marse, Skel Worker"
+Undershirt,1,10/0,"Agi +1, Dex +1, Flee +5",30,"Nine Tail, Baby Octopus, Myst, Soldier Piere, Argos"
+Ragamuffin Manteau,1,15/0,Soft MDef +30,30,"Anacondaq, Horong, Martin, Soldier Skeleton"
+Magician's Stole,1,15/10,FCT -0.15s,50,"Aster, Aqua Elemental, Zenorc, Toucan, Volcaring, Sedora, ???"
+Vagrant's Cloak,1,15/5,ASPD +2,50,"Tri Joint, Bandit Gunman, Leopard, Mimic, Merman, ???, Tomb Scorpion"
+Drifter's Cloak,1,20/0,"Soft Def +20%, Magic Damage Received -5%",50,"Orc Warrior, Jungle Mosquito, Ashring, ???, Requiem"
+Eagle Wing,1,15/10,"Int +1, Burn, Chill, Sleep Resist +15%",70,"Plateau Sprite, Lost Priest, Lost Monk, Ash Pup, Breeze"
+Falcon Muffler,1,15/5,"Agi +1, Blind, Slow, Vulnerable Resist +15%",70,"Violet Pitaya, Ash Toad, Lost Hunter, Lost Dancer, Porcellio, Punk"
+Hero's Cloak,1,30/0,"Str +1, Bleeding, Poison, Stun Resist +15%",70,"Wootan Fighter, Lost Blacksmith, Dust Wolf, Earth Deleter, Clock"
+Raven Cloak,1,20/10,"Int +1, Dex +1, VCT -2% per Refine",90,"Drosera, Freezer"
+Assassin's Hood,1,20/10,"Agi +1, Dex +1, Flee +3 per Refine",90,"Dimik, Roween, Rockstriker, Veins Ripper"
+Pauldron,1,35/0,"Str +1, Vit +1, Ranged Resist +1% per Refine",90,"Archdam, Dry Rafflesia, Rock Scorpion"
+Dragon Scale Manteau,1,40/0,"Str/Vit +2, Melee Damage Taken -5%",110,Abyss Lake
+Infantry Pauldrons,1,40/0,Bleeding Damage +1% per Refine,110,Glast Heim
+Skeleton Manteau,1,20/10,"Crit +15, Neutral Resist -10%, Flee -30",110,Glast Heim
+Apostle's Stole,1,15/15,"Non-Neutral Resist +10%, Neutral Resistance -10%, Neutral Resistance +1% per Refine",110,Glast Heim
+Rekember Cloak,1,20/5,"Damage Taken from Medium enemies -1%. If +7, Phys/Magic Damage to Medium enemies +1%",110,Somatology Laboratory
+Black Sand Cloak,1,20/5,"Burning Damage Taken -10%. If +7, additional -10%",110,Endless Desert
+Gilded Scarf,1,20/10,"Agi/Luk +2, Ranged Damage Taken -5%",110,Glast Heim
+Snowflower Manteau,1,20/5,"Chill Resist +20%, Water Property Resistance +5%",110,Ice Dungeon
+Volcanic Manteau,1,20/5,"Burning Resist +20%, Fire Property Resistance +5%",110,Thor's Volcano
+Archaeologist Manteau,1,20/10,"Max HP +100 per Refine, Max SP +10 per Refine",110,Verus Ruins
+Hollow Manteau,1,40/0,All Stats -1. Non-Neutral Resistance +1% per Refine,110,Opera House
+Sprint Muffler,1,15/5,"Flee +5, ASPD +1. If +7, additional Aspd +1",110,New World Fields
+Honor Guard Cloak,1,25/10,Bleeding/Burning/Poison Damage Taken -3% per Refine,110,Thanatos Tower
+Engineer's Backpack,1,25/15,"Summon Atk +1% per Refine. At +7, additional 5%",130,Robot Factory
+Sanctuary Manteau,1,20/15,"Int, Vit, Dex +1. VCT -15%. If Rachel Rep is 5 or higher, FCT -0.25s",130,Rachel Sanctuary
+Operative's Cape,1,20/10,"Str, Agi, Luk +1. Flee +15. If Veins Rep is 5 or higher, ASPD +1",130,Nameless Island
+Dawnbringer Manteau,1,20/15,"Dark/Undead/Ghost Resist +1% per Refine. If +7, Neutral Resist +10%",130,Tower of the Morning
+Dicastes Cloak,1,15/15,"Magic Damage Received -5%. If +7, Burn/Chill/Sleep Resist +30%",130,Scaraba Nest
+High Arcanist Cloak,1,25/20,"All Element Magic Damage +1% per Refine, Magic Pierce +1% per Refine",130,Geffenia
+Vali's Manteau,1,25/15,"Dex/Int +1 per Refine. At +7, All Elemental Resistances +10%",130,Odin's Temple
+Glacier Manteau,1,40/0,"Physical Damage to Wind/Water +1% per Refine. If +7, Wind/Water Resistance +5%",130,Far North
+Glacier Muffler,1,25/20,"Magical Damage to Wind/Water +1% per Refine. If +7, Wind/Water Resistance +5%",130,Far North
+Exuvic Manteau,1,40/0,"Physical Damage to Neutral/Poison +1% per Refine. If +7, Poison Property Resistance +5%, Poison Status Resistance +10%",130,Rgan Tunnels
+Exuvic Muffler,1,25/20,"Magical Damage to Neutral/Poison +1% per Refine. If +7, Poison Property Resistance +5%, Poison Status Resistance +10%",130,Rgan Tunnels
+Ascendant Muffler,1,20/15,Bleeding/Burning/Poison Damage Taken -3% per Refine,130,Rgan Sacred Ground
+,,,,,
+SHOES,,,,,
+Sandals,1,5/0,SP Regen +20%,1,"Wild Rose, Baby Desert Wolf, Eggyra, Poring, Rocker"
+Shoes,1,10/0,HP/SP Regen +10%,1,"Drops, Deniro, Boa, Spring Rabbit, Fabre, Metaller"
+Boots,1,15/0,HP Regen +20%,1,"Caramel, Wolf, Stainer, Savage Babe"
+Wooden Slippers,1,10/5,VCT -10%,30,"Bongun, Purple Papilla, Vadon, Skeleton, Marionette"
+Fur-Lined Boots,1,10/0,HP/SP Regen +15%,30,"Munak, Galapago, Giearth, Soldier Deniro"
+Rubber Boots,1,15/0,Slow and Chill Resist +20%,30,"Raggler, Argiope, Hydra, Marina, Jakk"
+Fluffy Fish Shoes,1,12/5,FCT -0.15s,50,"Shellfish, Yellow Pitaya, Megalodon, Mummy, Marine Sphere, ???"
+Black Leather Boots,1,15/0,ASPD +2,50,"Nereid, Dustiness, Orc Archer, Bandit Cutthroat, Phen, ???, Matyr"
+Frontier Boots,1,20/0,Ranged Damage Taken -5%,50,"Grove, Corpse Worm, Red Pitaya, ???, Zerom"
+Crystal Pumps,1,15/10,"Dex +1, Burn, Chill, Sleep Resist +15%",70,"Blazer, Lost Sage, Caterpillar, Alnoldi, Yellow Novus"
+Pursuers,1,15/5,"Luk +1, Blind, Slow, Vulnerable Resist +15%",70,"Plateau Crawler, Fulbuk, Lost Rogue, Ash Wolf, Red Novus, Rideword"
+Combat Boots,1,30/0,"Vit +1, Bleeding, Poison, Stun Resist +15%",70,"Green Pitaya, Lost Alchemist, Demon Pungus, Rafflesia, Sky Deleter"
+Golden Rose Shoes,1,20/10,"Int +1, Dex +1, FCT -0.05s per Refine",90,"Loli Ruri, Muscipular, Heater"
+Enforcer Shoes,1,20/10,"Agi +1, Dex +1, ASPD +1 per 2 Refines",90,"Venatu, Lude, Hill Wind, Amitera, Veins Smasher"
+Greaves,1,35/0,"Str +1, Vit +1, Bleeding, Burning, and Poison damage taken -3% per Refine",90,"Quve, Rachel Infantry, Stapo"
+Dragon Scale Greaves,1,40/0,"Str/Vit +2, Melee Damage Taken -5%",110,Abyss Lake
+Infantry Greaves,1,40/0,Bleeding Damage +1% per Refine,110,Glast Heim
+Shackles,1,20/5,"ASPD +5, Movement Speed -10%",110,Glast Heim
+Apostle's Boots,1,15/15,"SP Regen +30%, Max SP -30%, Max SP +3% per Refine",110,Glast Heim
+Gilded Shoes,1,20/0,"Agi/Luk +2, Ranged Damage Taken -5%",110,Glast Heim
+Rekember Boots,1,20/5,"Damage Taken from Medium enemies -1%. If +7, Phys/Magic Damage to Medium enemies +1%",110,Somatology Laboratory
+Black Sand Boots,1,20/5,"Poison Status Damage Taken -10%. If +7, additional -10%",110,Endless Desert
+Snowflower Boots,1,20/5,"Chill Resist +20%, Water Property Resistance +5%",110,Ice Dungeon
+Volcanic Boots,1,20/5,"Burning Resist +20%, Fire Property Resistance +5%",110,Thor's Volcano
+Archaeologist Shoes,1,20/5,"Max HP +100 per Refine, Max SP +10 per Refine",110,Verus Ruins
+Hollow Boots,1,40/0,"All Stats -1. Crit +1, VCT -2% per Refine",110,Opera House
+Sprint Shoes,1,15/5,"Flee +5, ASPD +1. If +7, Additional ASPD +1",110,New World Fields
+Honor Guard Boots,1,25/10,Slow Potency Received -5 per Refine. Blind Potency Received -2 per Refine.,110,Thanatos Tower
+Engineer's Boots,1,25/10,"Summon Crit +2 per Refine. At +7, additional +10.",130,Robot Factory
+Sanctuary Boots,1,20/15,"Int, Vit, Dex +1. Slow and Chill Resistance +50%. If Rachel Rep is 5 or higher, FCT -0.25s",130,Rachel Sanctuary
+Operative's Shoes,1,20/10,"Str, Agi, Luk +1. Crit Rate +5. If Veins Rep is 5 or higher, ASPD +1",130,Nameless Island
+Dawnbringer Shoes,1,20/10,"Dark/Undead/Ghost Resist +1% per Refine. If +7, Crit +10, VCT -15%",130,Tower of the Morning
+Dicastes Shoes,1,15/15,"Magic Damage Received -5%. If +7, Burn/Chill/Sleep Resist +30%",130,Scaraba Nest
+High Arcanist Shoes,1,25/20,"All Element Magic Damage +1% per Refine, Magic Pierce +1% per Refine",130,Geffenia
+Vidar's Boots,1,25/10,"Agi/Luk +1 per Refine. At +7, FCT -0.5, Crit +10",130,Odin's Temple
+Glacial Boots,1,40/0,"Physical Damage to Wind/Water +1% per Refine. If +7, Wind/Water Resistance +5%",130,Far North
+Glacial Shoes,1,25/20,"Magical Damage to Wind/Water +1% per Refine. If +7, Wind/Water Resistance +5%",130,Far North
+Exuvic Boots,1,40/0,"Physical Damage to Neutral/Poison +1% per Refine. If +7, Poison Property Resistance +5%, Poison Status Resistance +10%",130,Rgan Tunnels
+Exuvic Shoes,1,25/20,"Magical Damage to Neutral/Poison +1% per Refine. If +7, Poison Property Resistance +5%, Poison Status Resistance +10%",130,Rgan Tunnels
+Ascendant Shoes,1,20/15,Bleeding/Burning/Poison Damage +3% per Refine,130,Rgan Sacred Ground
+,,,,,
+HEADGEARS,,,,,
+,,,"I'll be real guys, I implemented a bunch of headgears but I forget which ones and where they drop. They're probably all boring ones you can find in the NPC hat store anyway",,
+Mind Control Chip,1,0/0,Summon Atk/Max HP +5%.              Combo with Both Control Chips: Summon Atk/Max HP +10%,110,Matrix Macrounit
+,,,,,
+,,,,,
+ACCESSORIES,,,,,
+Belt,1,X,-No Effect-,1,NPC Shop Only
+Clip,1,X,SP +10,1,Field MVPs below level 50
+Nile Rose,1,X,HP +10,1,Field MVPS below level 50
+Ring,1,X,Str +1,50,Field MVPS below level 100
+Brooch,1,X,Agi +1,50,Field MVPS below level 100
+Necklace,1,X,Vit +1,50,Field MVPS below level 100
+Earring,1,X,Int +1,50,Field MVPS below level 100
+Glove,1,X,Dex +1,50,Field MVPS below level 100
+Rosary,1,X,Luk +1,50,Field MVPS below level 100
+Dragon's Eye,1,X,"Burning Damage +5%, Def Pierce +10%",110,Abyss Lake
+Ancient Crest,1,X,"Bleeding Damage Taken -10%, Vulnerable Potency Received -10%",110,Glast Heim
+Handcuffs,1,X,Atrophy Resistance +50%,110,Somatology Laboratory
+Black Sand Ring,1,X,Bleeding/Burning/Poison Damage Taken -10%,110,Endless Desert
+Snowflower Pendant,1,X,"Chill Resist +10% per Snowflower piece equipped, Fire Resist +5% per Volcanic piece equipped",110,Ice Dungeon
+Volcanic Ring,1,X,"Burning Resist +10% per Volcanic piece equipped, Water Resist +5% per Snowflower piece equipped",110,Thor's Volcano
+Control Chip 01,1,X,Increase the Max HP of Summoned Entities by 5%,110,Verus Ruins
+Hollow Ring,1,X,"All Stats -1. For each Hollow Equipment piece equipped (except Rings), ASPD +1, FCT -0.1s",110,Opera House
+Sprint Ring,1,X,Reduce internal CD of Autocasts by 0.25s,110,New World Fields
+Sprint Glove,1,X,"Flee +15.       Set Bonus: Reduce internal CD of Autocasts by 0.25s, Flee +15, ASPD Limit +1",110,New World Fields
+Honor Guard Signet,1,X,Sleep Duration Received -1.5s Stun Duration Received -0.5s,110,Thanatos Tower
+Augment Chip,1,X,Enhance the effect of all Engineer's Armor pieces,130,Robot Factory
+Sanctuary Ring,1,X,"Int, Vit, Dex +1. VCT -10%. If Rachel Rep is 5 or higher, FCT -0.25s",130,Rachel Sanctuary
+Operative's Scarf,1,X,"Str, Agi, Luk +1. Flat Def Pierce +10. If Veins Rep is 5 or higher, ASPD +1",130,Nameless Island
+Dawnbringer Ring,1,X,For each Dawnbringer item equipped: Slow/Slowcast/Atrophy Resist +10%,130,Tower of the Morning
+Dicastes Ring,1,X,"For each Dicastes item equipped, Vulnerable/Breach Resistance +10%",130,Scaraba Nest
+Cursed Clover,1,X,"Mdef pierce +20%, Chance to Curse self when attacked",130,Geffenia
+Sigrun's Ring,1,X,Atk/Matk +3%. Holy/Dark Resist +5%,130,Odin's Temple
+Glacial Ring,1,X,"For each Glacial item equipped, Atk+5",130,Far North
+Glacial Necklace,1,X,"For each Glacial item equipped, Matk+5",130,Far North
+Exuvic Ring,1,X,"For each Exuvic item equiped, Exuvic Blessing Level +1",130,Rgan Tunnels
+Ascendant Earring,1,X,Bleeding/Burning/Poison Status Duration Received -1s,130,Rgan Sacred Ground
+,,,,,
+SHIELDS,,,,,
+Guard,1,10/0,"Vit +1, Soft Def +5",1,"Steel Chonchon, Ambernite, Peco Peco Egg, Greatest General, Pupa, Thief Bug Egg"
+Buckler,1,15/5,Soft Def +10,30,"Ant Egg, Nine Tail, Nightmare, Kobolds, Cornutus"
+Mirror Shield,1,10/15,-No Effects-,50,"Parasite, Goat, ???, Tomb Scarab"
+Shield ,1,20/10,"Ranged Damage Taken -5%, Movement Speed -10%",70,"Lava Toad, Lost Crusader, Failed Prototype, Faceworm Larva, Alarm"
+Iron Bulwark,1,25/15,"Vit +3, Hard Def +5 per Refine",90,"Gibbet, Veins Engineer, Permeter"
+Auric Shield,1,30/15,"While HP is below half, Damage Taken -10%",110,Abyss Lake
+Glacial Shield,1,50/20,Damage Taken from Wind/Water enemies -1% per Refine,130,Far North

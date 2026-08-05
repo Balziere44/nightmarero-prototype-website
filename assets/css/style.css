@@ -162,7 +162,9 @@ body {
   font-synthesis-weight: none;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  overflow-x: hidden;
+  /* No overflow-x here on purpose. Setting it on html and body at once makes
+     both compute overflow-y:auto, and the page stops responding to scripted
+     scrolling. The clip on html is enough. */
   transition: background-color 0.35s var(--ease), color 0.35s var(--ease);
 }
 
@@ -1710,6 +1712,160 @@ html[data-theme="light"] .site-footer { background: color-mix(in srgb, var(--bg)
   text-underline-offset: 3px;
 }
 .kw-legend a:hover { color: var(--accent-soft); }
+
+/* --------------------------------------------------------------------------
+   20c. Item database
+   -------------------------------------------------------------------------- */
+
+.db-layout {
+  display: grid;
+  gap: var(--gap-lg);
+  align-items: start;
+}
+@media (min-width: 900px) {
+  .db-layout { grid-template-columns: 270px minmax(0, 1fr); gap: var(--gap-md); }
+}
+
+.db-filters {
+  display: grid;
+  gap: var(--gap-md);
+  padding: 1.3rem;
+  background: var(--bg-panel);
+  border: 1px solid var(--surface-line);
+  border-radius: var(--radius);
+  backdrop-filter: blur(12px);
+}
+@media (min-width: 900px) {
+  .db-filters { position: sticky; top: calc(var(--header-h) + 14px); }
+}
+
+.db-field { display: grid; gap: 0.45rem; }
+
+.db-field label,
+.db-field .db-label {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.db-field select,
+.db-range input {
+  width: 100%;
+  padding: 0.52rem 0.75rem;
+  font-size: 0.88rem;
+  color: var(--text);
+  background: var(--bg-elevated);
+  border: 1px solid var(--surface-line);
+  border-radius: var(--radius-sm);
+  transition: border-color 0.2s var(--ease);
+}
+.db-field select:focus,
+.db-range input:focus { outline: none; border-color: var(--accent); }
+.db-field select option { background: var(--bg); color: var(--text); }
+
+.db-field .search-field { margin-inline-start: 0; flex: none; }
+.db-field .search-field input { border-radius: var(--radius-sm); }
+
+.db-range {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 0.5rem;
+}
+.db-range span { font-size: 0.75rem; color: var(--text-dim); }
+
+.db-filters .filter-bar { margin-bottom: 0; gap: 0.35rem; }
+.db-filters .chip { padding: 0.4rem 0.75rem; font-size: 0.78rem; }
+
+.db-status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1rem;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: var(--gap-md);
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--surface-line);
+}
+.db-status #dbCount { color: var(--text); font-weight: 600; }
+
+.db-grid {
+  display: grid;
+  gap: 0.7rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 310px), 1fr));
+}
+
+.db-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 1.05rem 1.15rem 2.4rem;
+  background: var(--bg-panel);
+  border: 1px solid var(--surface-line);
+  border-inline-start: 2px solid var(--accent);
+  border-radius: var(--radius-sm);
+  transition: border-color 0.22s var(--ease), transform 0.22s var(--ease);
+}
+.db-card:hover { transform: translateY(-2px); border-color: var(--surface-line-strong); }
+.db-card.-card { border-inline-start-color: var(--kw-poison); }
+
+.db-card-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.7rem;
+}
+.db-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.db-tag {
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+
+.db-meta {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent-soft);
+}
+
+.db-effect { font-size: var(--step--1); line-height: 1.55; color: var(--text); }
+
+.db-line { font-size: 0.76rem; line-height: 1.5; color: var(--text-muted); }
+.db-line b {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-inline-end: 0.35rem;
+}
+
+.db-source {
+  position: absolute;
+  left: 1.15rem;
+  bottom: 0.85rem;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.db-source.-mvp { color: var(--accent-soft); }
+.db-source.-card { color: var(--kw-poison); }
 
 /* --------------------------------------------------------------------------
    21. Reveal on scroll

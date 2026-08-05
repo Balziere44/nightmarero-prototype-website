@@ -61,6 +61,7 @@
   <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
   <symbol id="i-discord" viewBox="0 0 24 24" fill="currentColor"><path d="M19.3 5.3A16.9 16.9 0 0 0 15.1 4l-.3.6a12.6 12.6 0 0 1 3.7 1.9 15.5 15.5 0 0 0-12.9 0 12.6 12.6 0 0 1 3.7-1.9L9 4a16.9 16.9 0 0 0-4.2 1.3C2.1 9.3 1.4 13.2 1.7 17a17 17 0 0 0 5.2 2.6l1.1-1.7a11 11 0 0 1-1.8-.9l.4-.3a12.1 12.1 0 0 0 10.4 0l.4.3a11 11 0 0 1-1.8.9l1.1 1.7A17 17 0 0 0 22 17c.4-4.4-.7-8.3-2.7-11.7ZM8.4 14.7c-1 0-1.9-.9-1.9-2.1s.8-2.1 1.9-2.1 1.9 1 1.9 2.1-.8 2.1-1.9 2.1Zm7.2 0c-1 0-1.9-.9-1.9-2.1s.8-2.1 1.9-2.1 1.9 1 1.9 2.1-.8 2.1-1.9 2.1Z"/></symbol>
   <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7.5 10.5 12 15l4.5-4.5M4 17v2.5a1.5 1.5 0 0 0 1.5 1.5h13a1.5 1.5 0 0 0 1.5-1.5V17"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4.5A1.5 1.5 0 0 1 5.5 3H19v15H5.5A1.5 1.5 0 0 0 4 19.5Z"/><path d="M4 19.5A1.5 1.5 0 0 1 5.5 21H19v-3"/></symbol>
   <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12.5 5.5 19 12l-6.5 6.5"/></symbol>
 </svg>
 
@@ -71,10 +72,10 @@
     </a>
     <nav class="nav" aria-label="Main">
       <a href="index.html#server" data-i18n="nav.server">The server</a>
-      <a href="index.html#features" data-i18n="nav.features">Features</a>
       <a href="classes.html" data-i18n="nav.classes">Classes</a>
+      <a href="database.html" data-i18n="nav.database">Database</a>
+      <a href="https://wiki.nightmareofragnarok.com/" target="_blank" rel="noopener" data-i18n="nav.wiki">Wiki</a>
       <a href="download.html" aria-current="page" data-i18n="nav.download">Download</a>
-      <a href="index.html#start" data-i18n="nav.start">Get started</a>
       <a href="index.html#faq" data-i18n="nav.faq">FAQ</a>
     </nav>
     <div class="header-tools">
@@ -109,6 +110,8 @@
       <a href="index.html#server" data-i18n="nav.server">The server</a>
       <a href="index.html#features" data-i18n="nav.features">Features</a>
       <a href="classes.html" data-i18n="nav.classes">Classes</a>
+      <a href="database.html" data-i18n="nav.database">Database</a>
+      <a href="https://wiki.nightmareofragnarok.com/" target="_blank" rel="noopener" data-i18n="nav.wiki">Wiki</a>
       <a href="download.html" data-i18n="nav.download">Download</a>
       <a href="index.html#start" data-i18n="nav.start">Get started</a>
       <a href="index.html#faq" data-i18n="nav.faq">FAQ</a>
@@ -138,10 +141,10 @@
 
       <div class="hero-actions">
         <!--
-          Twilight: replace the href below with the real client download link.
-          To add mirrors, duplicate the button and change the label.
+          Client download. To add a mirror, duplicate this button and change
+          the href and the label.
         -->
-        <a class="btn -primary -lg" href="https://nightmareofragnarok.com/" target="_blank" rel="noopener">
+        <a class="btn -primary -lg" href="https://drive.google.com/file/d/1XzsSKNlwEE5M74A3CIWuLLpbNSJY0DyB/view?usp=sharing" target="_blank" rel="noopener">
           <svg aria-hidden="true"><use href="#i-download"></use></svg>
           <span data-i18n="dl.getClient">Get the client</span>
         </a>
@@ -173,6 +176,8 @@
           <p data-i18n="dl.s3d">It pulls the current game files and then hands you the play button. Every future update goes through the same window, so keep the shortcut.</p>
         </div>
       </div>
+
+      <p class="note mt-lg" data-i18n="dl.hotkeys">The three panels you will live in: <strong>Alt+Q</strong> for equipment and stat points, <strong>Alt+E</strong> for your inventory, <strong>Alt+S</strong> for the skill tree and unspent skill points.</p>
     </div>
   </section>
 
@@ -241,6 +246,9 @@
             <a class="btn -primary -lg" href="https://discord.gg/gHgFtmvudD" target="_blank" rel="noopener">
               <svg aria-hidden="true"><use href="#i-discord"></use></svg><span data-i18n="cta.discord">Join the Discord</span>
             </a>
+            <a class="btn -ghost -lg" href="https://wiki.nightmareofragnarok.com/" target="_blank" rel="noopener">
+              <svg aria-hidden="true"><use href="#i-book"></use></svg><span data-i18n="cta.wiki">Open the wiki</span>
+            </a>
             <a class="btn -ghost -lg" href="classes.html" data-i18n="cta.allClasses">See all 55 classes</a>
           </div>
         </div>
@@ -263,6 +271,7 @@
           <li><a href="https://nightmareofragnarok.com/?module=account&amp;action=create" target="_blank" rel="noopener" data-i18n="cta.register">Create account</a></li>
           <li><a href="download.html" data-i18n="nav.download">Download</a></li>
           <li><a href="classes.html" data-i18n="nav.classes">Classes</a></li>
+          <li><a href="database.html" data-i18n="nav.database">Database</a></li>
           <li><a href="index.html#faq" data-i18n="nav.faq">FAQ</a></li>
         </ul>
       </div>
@@ -270,7 +279,7 @@
         <h4 data-i18n="footer.community">Community</h4>
         <ul>
           <li><a href="https://discord.gg/gHgFtmvudD" target="_blank" rel="noopener">Discord</a></li>
-          <li><a href="https://nightmarero.miraheze.org/wiki/Main_Page" target="_blank" rel="noopener" data-i18n="footer.wiki">Player wiki</a></li>
+          <li><a href="https://wiki.nightmareofragnarok.com/" target="_blank" rel="noopener" data-i18n="footer.wiki">Player wiki</a></li>
           <li><a href="https://nightmareofragnarok.com/" target="_blank" rel="noopener" data-i18n="footer.panel">Control panel</a></li>
         </ul>
       </div>
