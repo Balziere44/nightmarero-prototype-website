@@ -104,26 +104,35 @@
       if (document.hidden) stop(); else start();
     });
 
-    /* Most visitors are not in Brazil, so show the launch moment in their
-       own time zone as well. Re-runs when the language changes so the date
-       is spelled the way the rest of the page is. */
-    var localEl = $('#localLaunch');
-    var localWrap = $('#localWrap');
+    /* The countdown already ticks to a fixed instant. The date printed next
+       to it is rendered in the visitor's own time zone and language, so a
+       player in Tokyo reads a Tokyo date. The Brasilia wording sitting in
+       the markup is the fallback for anyone without scripting.
+       Re-runs on a language change so the date is spelled like the page. */
+    var whenEl = $('#whenLocal');
+    var sourceEl = $('#whenSource');
 
-    var showLocalTime = function () {
-      if (!localEl || !localWrap || !window.Intl) return;
-      if (-new Date().getTimezoneOffset() === LAUNCH_OFFSET_MIN) return;
+    var showLaunchDate = function () {
+      if (!whenEl || !window.Intl) return;
       try {
-        localEl.textContent = new Intl.DateTimeFormat(document.documentElement.lang || 'en', {
-          weekday: 'long', day: 'numeric', month: 'long', year: 'numeric',
-          hour: '2-digit', minute: '2-digit', timeZoneName: 'short'
-        }).format(new Date(LAUNCH));
-        localWrap.hidden = false;
-      } catch (e) { /* leave the Brasilia line on its own */ }
+        whenEl.textContent = new Intl.DateTimeFormat(
+          document.documentElement.lang || undefined,
+          {
+            weekday: 'long', day: 'numeric', month: 'long', year: 'numeric',
+            hour: '2-digit', minute: '2-digit', timeZoneName: 'short'
+          }
+        ).format(new Date(LAUNCH));
+
+        /* Only worth naming the server's own time zone to people who are
+           not already in it. */
+        if (sourceEl) {
+          sourceEl.hidden = -new Date().getTimezoneOffset() === LAUNCH_OFFSET_MIN;
+        }
+      } catch (e) { /* the markup already states it in Brasilia time */ }
     };
 
-    showLocalTime();
-    document.addEventListener('nm:lang', showLocalTime);
+    showLaunchDate();
+    document.addEventListener('nm:lang', showLaunchDate);
   }
 
   /* ----------------------------------------------------- 5. scroll reveals */

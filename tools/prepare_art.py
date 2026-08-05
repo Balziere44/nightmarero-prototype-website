@@ -33,8 +33,23 @@ OUT = os.path.join(ROOT, "assets", "img", "classes")
 FULL_H, FULL_W = 760, 700
 CARD_H, CARD_W = 420, 400
 
-# Filenames in the source set that do not match the class name.
-ALIASES = {"mastermsith": "mastersmith"}
+# Filenames in the source set that do not match the class name. Some are
+# typos, some are the gendered job names, which the site keeps as one page.
+ALIASES = {
+    "mastermsith": "mastersmith",   # typo
+    "scholas": "scholar",           # typo
+    "shura": "sura",
+    "nightwatcher": "night watch",
+    "bard": "bard and dancer",
+    "dancer": "bard and dancer",
+    "clown": "clown/gypsy",
+    "gypsy": "clown/gypsy",
+    "minstrel": "minstrel/wanderer",
+    "wanderer": "minstrel/wanderer",
+}
+
+# Artwork in the same folder that is not a class portrait.
+SKIP = {"aprendiz"}             # the two figures in the landing page hero
 
 NAME_RE = re.compile(r"^(.*?)[\s_-]+(male|female)$", re.I)
 
@@ -72,6 +87,8 @@ def main():
             continue
 
         cls, sex = match.group(1).strip(), match.group(2).lower()
+        if cls.lower() in SKIP:
+            continue
         slug = slugify(ALIASES.get(cls.lower(), cls))
 
         img = Image.open(path).convert("RGBA")

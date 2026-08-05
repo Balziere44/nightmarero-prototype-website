@@ -1,8 +1,8 @@
 /* Deutsch */
 window.NM_I18N_REGISTER('de', {
+  'cd.sourceTime': 'Serverzeit: 20:00 Uhr in Brasília (UTC-3)',
   'cd.label': 'Server starten in',
   'cd.when': 'Freitag, 7. August 2026 um 20:00 Uhr Brasília-Zeit (UTC-3)',
-  'cd.yourTime': 'Deine Zeit:',
   'feat.codexLink': 'Zum Status-Codex',
   'cls.legendMore': 'Was sie bewirken',
   'codex.eyebrow': 'Status-Codex',

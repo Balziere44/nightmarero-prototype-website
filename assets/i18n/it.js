@@ -1,8 +1,8 @@
 /* Italiano */
 window.NM_I18N_REGISTER('it', {
+  'cd.sourceTime': 'Ora del server: 20:00 a Brasilia (UTC-3)',
   'cd.label': 'I server aprono tra',
   'cd.when': 'Venerdì 7 agosto 2026 alle 20:00, ora di Brasilia (UTC-3)',
-  'cd.yourTime': 'Ora locale:',
   'feat.codexLink': 'Leggi il codex degli status',
   'cls.legendMore': 'Cosa fanno',
   'codex.eyebrow': 'Codex degli status',

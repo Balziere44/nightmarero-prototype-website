@@ -1,8 +1,8 @@
 /* Português (Brasil) */
 window.NM_I18N_REGISTER('pt', {
+  'cd.sourceTime': 'Horário do servidor: 20h em Brasília (UTC-3)',
   'cd.label': 'Os servidores abrem em',
   'cd.when': 'Sexta-feira, 7 de agosto de 2026, às 20h de Brasília (UTC-3)',
-  'cd.yourTime': 'No seu horário:',
   'feat.codexLink': 'Ver o codex de status',
   'cls.legendMore': 'O que fazem',
   'codex.eyebrow': 'Codex de status',

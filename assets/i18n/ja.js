@@ -1,8 +1,8 @@
 /* 日本語 */
 window.NM_I18N_REGISTER('ja', {
+  'cd.sourceTime': 'サーバー時間: ブラジリア 20時（UTC-3）',
   'cd.label': 'サーバー稼働まで',
   'cd.when': '2026年8月7日（金）20時 ブラジリア時間（UTC-3）',
-  'cd.yourTime': '現地時間:',
   'feat.codexLink': 'ステータス一覧を見る',
   'cls.legendMore': '効果を見る',
   'codex.eyebrow': 'ステータス一覧',
