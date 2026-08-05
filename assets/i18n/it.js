@@ -1,5 +1,8 @@
 /* Italiano */
 window.NM_I18N_REGISTER('it', {
+  'cd.label': 'I server aprono tra',
+  'cd.when': 'Venerdì 7 agosto 2026 alle 20:00, ora di Brasilia (UTC-3)',
+  'cd.yourTime': 'Ora locale:',
   'feat.codexLink': 'Leggi il codex degli status',
   'cls.legendMore': 'Cosa fanno',
   'codex.eyebrow': 'Codex degli status',
@@ -33,7 +36,7 @@ window.NM_I18N_REGISTER('it', {
   'cta.allClasses': 'Vedi tutte le 55 classi',
   'cta.browseClasses': 'Sfoglia le classi',
 
-  'hero.badge': 'Apertura il 7 agosto 2026',
+  'hero.badge': 'Apre venerdì 7 agosto 2026',
   'hero.title1': 'Il RO che conosci,',
   'hero.title2': 'ricostruito da zero.',
   'hero.lede': 'Ogni classe, abilità, oggetto e mostro qui è stato <strong>rifatto da zero</strong>. 55 classi, livello 150, boss che evochi tu stesso, e un design pensato per <strong>giocare da solo senza mai bloccarti</strong>.',
@@ -133,9 +136,9 @@ window.NM_I18N_REGISTER('it', {
   'faq.q7': 'Posso perdere l’equipaggiamento raffinando?',
   'faq.a7': 'Mai. L’equipaggiamento <strong>non si rompe e non scende di livello</strong> in caso di fallimento. Tetto +10, successo al 100% meno 10% per livello attuale, quindi l’ultimo passo è un tiro al 10%. Perdi solo il minerale e gli zeny.',
   'faq.q8': 'Quando apre il server?',
-  'faq.a8': '<strong>7 agosto 2026.</strong> Gli account si creano già ora, e il Discord è già attivo.',
+  'faq.a8': '<strong>Venerdì 7 agosto 2026 alle 20:00, ora di Brasilia (UTC-3).</strong> Cioè le 23:00 UTC. Gli account si creano già ora, e il Discord è già attivo.',
 
-  'band.eyebrow': 'Apertura il 7 agosto 2026',
+  'band.eyebrow': 'Apre venerdì 7 agosto 2026',
   'band.title': 'Vieni a vedere cosa è cambiato',
   'band.lede': 'Crea un account adesso, prendi il client, e fatti trovare quando i server si accendono.',
 

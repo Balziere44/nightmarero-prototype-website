@@ -83,6 +83,7 @@
       "applicationCategory": "Game",
       "operatingSystem": "Windows",
       "isAccessibleForFree": true,
+      "datePublished": "2026-08-07",
       "inLanguage": "en",
       "author": { "@type": "Person", "name": "Twilight" },
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
@@ -102,7 +103,7 @@
         { "@type": "Question", "name": "Is there PvP or guild siege?",
           "acceptedAnswer": { "@type": "Answer", "text": "No. Nightmare RO is a PvE server. There is no player versus player combat at all." } },
         { "@type": "Question", "name": "When does the server open?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Nightmare RO opens on August 7th, 2026." } }
+          "acceptedAnswer": { "@type": "Answer", "text": "Nightmare RO opens on Friday, August 7th, 2026 at 20:00 Brasilia time (UTC-3), which is 23:00 UTC." } }
       ]
     }
   ]
@@ -221,19 +222,29 @@
       <div class="hero-copy">
         <span class="badge">
           <span class="dot"></span>
-          <span data-i18n="hero.badge">Opening August 7, 2026</span>
+          <span data-i18n="hero.badge">Opens Friday, August 7, 2026</span>
         </span>
 
         <h1><span data-i18n="hero.title1">The RO you know,</span> <span class="fracture-word" data-i18n="hero.title2">rebuilt from zero.</span></h1>
 
         <p class="lede" data-i18n="hero.lede">Every class, skill, item and monster here was <strong>remade from scratch</strong>. 55 classes, level 150, bosses you summon yourself, and a design built so you can <strong>play solo without hitting a wall</strong>.</p>
 
-        <ul class="countdown" id="countdown" aria-live="off">
-          <li><b data-cd="d">--</b><small data-i18n="cd.days">days</small></li>
-          <li><b data-cd="h">--</b><small data-i18n="cd.hours">hours</small></li>
-          <li><b data-cd="m">--</b><small data-i18n="cd.minutes">minutes</small></li>
-          <li><b data-cd="s">--</b><small data-i18n="cd.seconds">seconds</small></li>
-        </ul>
+        <div class="countdown-block" id="countdownBlock">
+          <p class="countdown-label" data-i18n="cd.label">Servers go live in</p>
+          <ul class="countdown" id="countdown" aria-live="off">
+            <li><b data-cd="d">--</b><small data-i18n="cd.days">days</small></li>
+            <li><b data-cd="h">--</b><small data-i18n="cd.hours">hours</small></li>
+            <li><b data-cd="m">--</b><small data-i18n="cd.minutes">minutes</small></li>
+            <li><b data-cd="s">--</b><small data-i18n="cd.seconds">seconds</small></li>
+          </ul>
+          <p class="countdown-when">
+            <span data-i18n="cd.when">Friday, August 7, 2026 at 20:00 Brasilia time (UTC-3)</span>
+            <span class="local-time" id="localWrap" hidden>
+              <span data-i18n="cd.yourTime">Your time:</span>
+              <time id="localLaunch" datetime="2026-08-07T23:00:00Z"></time>
+            </span>
+          </p>
+        </div>
 
         <p class="badge" id="liveNow" hidden>
           <span class="dot"></span>
@@ -535,7 +546,7 @@
         </details>
         <details>
           <summary data-i18n="faq.q8">When does the server open?</summary>
-          <div class="faq-body" data-i18n="faq.a8"><strong>August 7th, 2026.</strong> Accounts can be created now, and the Discord is already active.</div>
+          <div class="faq-body" data-i18n="faq.a8"><strong>Friday, August 7th, 2026 at 20:00 Brasilia time (UTC-3).</strong> That is 23:00 UTC. Accounts can be created now, and the Discord is already active.</div>
         </details>
       </div>
     </div>
@@ -546,7 +557,7 @@
     <div class="shell">
       <div class="cta-band reveal">
         <div class="inner">
-          <p class="eyebrow" data-i18n="band.eyebrow">Opening August 7, 2026</p>
+          <p class="eyebrow" data-i18n="band.eyebrow">Opens Friday, August 7, 2026</p>
           <h2 data-i18n="band.title">Come find out what changed</h2>
           <p class="lede text-center" data-i18n="band.lede">Make an account now, grab the client, and be there when the servers go up.</p>
           <div class="hero-actions">

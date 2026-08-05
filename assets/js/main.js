@@ -55,25 +55,33 @@
 
   /* --------------------------------------------------------- 4. countdown */
 
-  var LAUNCH = Date.UTC(2026, 7, 7, 0, 0, 0); // August 7, 2026, 00:00 UTC
+  /* Friday 7 August 2026, 20:00 Brasilia time (UTC-3) = 23:00 UTC. */
+  var LAUNCH = Date.UTC(2026, 7, 7, 23, 0, 0);
+  var LAUNCH_OFFSET_MIN = -180;              // Brasilia, minutes from UTC
   var cd = $('#countdown');
 
   if (cd) {
+    var block = $('#countdownBlock') || cd;
+    var live = $('#liveNow');
     var cells = {
       d: cd.querySelector('[data-cd="d"]'),
       h: cd.querySelector('[data-cd="h"]'),
       m: cd.querySelector('[data-cd="m"]'),
       s: cd.querySelector('[data-cd="s"]')
     };
+    var timer = null;
     var pad = function (n) { return n < 10 ? '0' + n : String(n); };
 
-    var tick = function () {
+    var stop = function () {
+      if (timer) { clearInterval(timer); timer = null; }
+    };
+
+    var render = function () {
       var left = LAUNCH - Date.now();
       if (left <= 0) {
-        cd.hidden = true;
-        var live = $('#liveNow');
+        block.hidden = true;
         if (live) live.hidden = false;
-        clearInterval(timer);
+        stop();
         return;
       }
       var s = Math.floor(left / 1000);
@@ -82,8 +90,40 @@
       cells.m.textContent = pad(Math.floor(s / 60) % 60);
       cells.s.textContent = pad(s % 60);
     };
-    tick();
-    var timer = setInterval(tick, 1000);
+
+    var start = function () {
+      if (timer || block.hidden) return;
+      render();
+      timer = setInterval(render, 1000);
+    };
+
+    start();
+
+    /* No point burning a tick a second on a tab nobody is looking at. */
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) stop(); else start();
+    });
+
+    /* Most visitors are not in Brazil, so show the launch moment in their
+       own time zone as well. Re-runs when the language changes so the date
+       is spelled the way the rest of the page is. */
+    var localEl = $('#localLaunch');
+    var localWrap = $('#localWrap');
+
+    var showLocalTime = function () {
+      if (!localEl || !localWrap || !window.Intl) return;
+      if (-new Date().getTimezoneOffset() === LAUNCH_OFFSET_MIN) return;
+      try {
+        localEl.textContent = new Intl.DateTimeFormat(document.documentElement.lang || 'en', {
+          weekday: 'long', day: 'numeric', month: 'long', year: 'numeric',
+          hour: '2-digit', minute: '2-digit', timeZoneName: 'short'
+        }).format(new Date(LAUNCH));
+        localWrap.hidden = false;
+      } catch (e) { /* leave the Brasilia line on its own */ }
+    };
+
+    showLocalTime();
+    document.addEventListener('nm:lang', showLocalTime);
   }
 
   /* ----------------------------------------------------- 5. scroll reveals */

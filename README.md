@@ -166,6 +166,26 @@ purpose, because that is how they appear in game.
 
 ---
 
+## The launch countdown
+
+The hero counts down to launch and then swaps itself for a "servers are live"
+badge. The moment is defined once, at the top of the countdown section in
+`assets/js/main.js`:
+
+```js
+var LAUNCH = Date.UTC(2026, 7, 7, 23, 0, 0);  // 7 Aug 2026, 20:00 Brasilia
+var LAUNCH_OFFSET_MIN = -180;                 // Brasilia, minutes from UTC
+```
+
+Months are zero based, so `7` is August, and the hour is **UTC**, not local.
+If the date moves, change those two lines and then update the text in three
+places: `cd.when` and `hero.badge` in each locale file plus the English in
+`index.html`, `faq.a8`, and the `datePublished` field in the JSON-LD block.
+
+Visitors outside Brazil also get the launch time in their own zone,
+formatted by `Intl.DateTimeFormat` and re-rendered whenever the language
+changes. That line stays hidden for anyone already on UTC-3.
+
 ## The status codex
 
 Combat runs on status effects, so each family has a colour that is used

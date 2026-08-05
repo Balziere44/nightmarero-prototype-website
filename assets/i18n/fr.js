@@ -1,5 +1,8 @@
 /* Français */
 window.NM_I18N_REGISTER('fr', {
+  'cd.label': 'Les serveurs ouvrent dans',
+  'cd.when': 'Vendredi 7 août 2026 à 20h00, heure de Brasilia (UTC-3)',
+  'cd.yourTime': 'Chez vous :',
   'feat.codexLink': 'Lire le codex des statuts',
   'cls.legendMore': 'Ce qu’ils font',
   'codex.eyebrow': 'Codex des statuts',
@@ -33,7 +36,7 @@ window.NM_I18N_REGISTER('fr', {
   'cta.allClasses': 'Voir les 55 classes',
   'cta.browseClasses': 'Parcourir les classes',
 
-  'hero.badge': 'Ouverture le 7 août 2026',
+  'hero.badge': 'Ouverture vendredi 7 août 2026',
   'hero.title1': 'Le RO que vous connaissez,',
   'hero.title2': 'reconstruit de zéro.',
   'hero.lede': 'Chaque classe, compétence, objet et monstre ici a été <strong>refait de zéro</strong>. 55 classes, niveau 150, des boss que vous invoquez vous-même, et un design pensé pour <strong>jouer seul sans jamais être bloqué</strong>.',
@@ -133,9 +136,9 @@ window.NM_I18N_REGISTER('fr', {
   'faq.q7': 'Puis-je perdre mon équipement en raffinant ?',
   'faq.a7': 'Jamais. L’équipement <strong>ne casse pas et ne redescend pas</strong> en cas d’échec. Plafond +10, réussite à 100 % moins 10 % par niveau actuel, donc la dernière étape est un jet à 10 %. Vous ne perdez que le minerai et le zeny.',
   'faq.q8': 'Quand le serveur ouvre-t-il ?',
-  'faq.a8': '<strong>Le 7 août 2026.</strong> Les comptes se créent dès maintenant, et le Discord est déjà actif.',
+  'faq.a8': '<strong>Le vendredi 7 août 2026 à 20h00, heure de Brasilia (UTC-3).</strong> Soit 23h00 UTC. Les comptes se créent dès maintenant, et le Discord est déjà actif.',
 
-  'band.eyebrow': 'Ouverture le 7 août 2026',
+  'band.eyebrow': 'Ouverture vendredi 7 août 2026',
   'band.title': 'Venez voir ce qui a changé',
   'band.lede': 'Créez un compte maintenant, récupérez le client, et soyez là quand les serveurs s’allument.',
 

@@ -72,8 +72,8 @@
   --shell: 1220px;
   --shell-narrow: 860px;
 
-  --header-h: 92px;
-  --logo-h: 56px;
+  --header-h: 132px;
+  --logo-h: 100px;
 
   /* Status effect codex. One colour per family, used in skill text,
      the legend chips and the codex cards. */
@@ -127,8 +127,13 @@ html[data-theme="light"] {
   --kw-slow: #4e6280;
 }
 
+/* The logo drives the header height, so both step down together. */
+@media (max-width: 1000px) {
+  :root { --header-h: 100px; --logo-h: 72px; }
+}
+
 @media (max-width: 720px) {
-  :root { --header-h: 76px; --logo-h: 44px; }
+  :root { --header-h: 78px; --logo-h: 52px; }
 }
 
 /* --------------------------------------------------------------------------
@@ -160,6 +165,10 @@ body {
   overflow-x: hidden;
   transition: background-color 0.35s var(--ease), color 0.35s var(--ease);
 }
+
+/* Must outrank any component that sets its own display, otherwise the
+   hidden attribute silently stops working. */
+[hidden] { display: none !important; }
 
 img, svg, video { display: block; max-width: 100%; height: auto; }
 button, input, select, textarea { font: inherit; color: inherit; }
@@ -802,6 +811,31 @@ html[data-theme="light"] .hero-bg img { opacity: 0.3; filter: saturate(0.6) cont
 }
 
 /* countdown */
+.countdown-block {
+  display: grid;
+  gap: 0.7rem;
+  justify-items: start;
+}
+
+.countdown-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.countdown-when {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.85rem;
+  font-size: 0.83rem;
+  color: var(--text-muted);
+}
+.countdown-when .local-time { color: var(--text-dim); }
+.countdown-when time { font-variant-numeric: tabular-nums; }
+
 .countdown {
   display: flex;
   gap: 0.55rem;
@@ -841,8 +875,10 @@ html[data-theme="light"] .hero-bg img { opacity: 0.3; filter: saturate(0.6) cont
   position: relative;
   display: none;
   width: 100%;
-  aspect-ratio: 1.16;
-  min-height: 360px;
+  /* Tall enough that both figures fit at their current widths. If you
+     change the widths below, this has to follow them. */
+  aspect-ratio: 0.84;
+  min-height: 420px;
 }
 @media (min-width: 940px) { .hero-art { display: block; } }
 
@@ -871,8 +907,18 @@ html[data-theme="light"] .hero-bg img { opacity: 0.3; filter: saturate(0.6) cont
 }
 /* The male leans into the column gap on the left, the female sits just
    inside the right edge. They end up overlapping by roughly a tenth. */
-.hero-art img.-a { left: -5%; width: 63%; z-index: 2; }
-.hero-art img.-b { right: -2%; width: 53%; bottom: 5%; z-index: 1; animation-delay: -5s; }
+.hero-art img.-a { left: -5%; width: 85%; z-index: 2; }
+.hero-art img.-b { right: -22%; width: 75%; bottom: 3%; z-index: 1; animation-delay: -5s; }
+
+/* Below roughly 1400px there is no page gutter left for the -22% bleed, so
+   her arm would get sliced off at the viewport edge. Pulling her back alone
+   would bury her behind him, so both scale down together and the pair keeps
+   the same shape. Delete this block to use the wide values everywhere. */
+@media (max-width: 1400px) {
+  .hero-art { aspect-ratio: 0.99; }
+  .hero-art img.-a { width: 72%; }
+  .hero-art img.-b { right: -4%; width: 64%; }
+}
 
 @keyframes float {
   0%, 100% { translate: 0 0; }

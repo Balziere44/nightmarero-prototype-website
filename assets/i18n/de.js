@@ -1,5 +1,8 @@
 /* Deutsch */
 window.NM_I18N_REGISTER('de', {
+  'cd.label': 'Server starten in',
+  'cd.when': 'Freitag, 7. August 2026 um 20:00 Uhr Brasília-Zeit (UTC-3)',
+  'cd.yourTime': 'Deine Zeit:',
   'feat.codexLink': 'Zum Status-Codex',
   'cls.legendMore': 'Was sie bewirken',
   'codex.eyebrow': 'Status-Codex',
@@ -33,7 +36,7 @@ window.NM_I18N_REGISTER('de', {
   'cta.allClasses': 'Alle 55 Klassen ansehen',
   'cta.browseClasses': 'Klassen durchstöbern',
 
-  'hero.badge': 'Start am 7. August 2026',
+  'hero.badge': 'Öffnet Freitag, 7. August 2026',
   'hero.title1': 'Das RO, das du kennst,',
   'hero.title2': 'von Grund auf neu.',
   'hero.lede': 'Jede Klasse, jeder Skill, jedes Item und jedes Monster hier wurde <strong>von Grund auf neu gebaut</strong>. 55 Klassen, Level 150, Bosse, die du selbst beschwörst, und ein Design, mit dem du <strong>allein spielen kannst, ohne gegen eine Wand zu laufen</strong>.',
@@ -133,9 +136,9 @@ window.NM_I18N_REGISTER('de', {
   'faq.q7': 'Kann ich beim Aufwerten Ausrüstung verlieren?',
   'faq.a7': 'Nie. Ausrüstung <strong>zerbricht nicht und fällt nicht zurück</strong>. Limit +10, Erfolg ist 100% minus 10% pro aktueller Stufe, der letzte Schritt ist also ein 10% Wurf. Du verlierst nur Erz und Zeny.',
   'faq.q8': 'Wann öffnet der Server?',
-  'faq.a8': '<strong>Am 7. August 2026.</strong> Konten lassen sich schon jetzt anlegen, und der Discord ist bereits aktiv.',
+  'faq.a8': '<strong>Am Freitag, 7. August 2026 um 20:00 Uhr Brasília-Zeit (UTC-3).</strong> Das sind 23:00 Uhr UTC. Konten lassen sich schon jetzt anlegen, und der Discord ist bereits aktiv.',
 
-  'band.eyebrow': 'Start am 7. August 2026',
+  'band.eyebrow': 'Öffnet Freitag, 7. August 2026',
   'band.title': 'Schau dir an, was sich geändert hat',
   'band.lede': 'Leg jetzt ein Konto an, hol dir den Client, und sei dabei, wenn die Server hochfahren.',
 

@@ -1,5 +1,8 @@
 /* Português (Brasil) */
 window.NM_I18N_REGISTER('pt', {
+  'cd.label': 'Os servidores abrem em',
+  'cd.when': 'Sexta-feira, 7 de agosto de 2026, às 20h de Brasília (UTC-3)',
+  'cd.yourTime': 'No seu horário:',
   'feat.codexLink': 'Ver o codex de status',
   'cls.legendMore': 'O que fazem',
   'codex.eyebrow': 'Codex de status',
@@ -33,7 +36,7 @@ window.NM_I18N_REGISTER('pt', {
   'cta.allClasses': 'Ver todas as 55 classes',
   'cta.browseClasses': 'Explorar as classes',
 
-  'hero.badge': 'Abertura em 7 de agosto de 2026',
+  'hero.badge': 'Abre sexta, 7 de agosto de 2026',
   'hero.title1': 'O RO que você conhece,',
   'hero.title2': 'reconstruído do zero.',
   'hero.lede': 'Cada classe, skill, item e monstro daqui foi <strong>refeito do zero</strong>. 55 classes, nível 150, chefes que você mesmo invoca, e um design feito pra você <strong>jogar sozinho sem bater numa parede</strong>.',
@@ -133,9 +136,9 @@ window.NM_I18N_REGISTER('pt', {
   'faq.q7': 'Posso perder meu equipamento refinando?',
   'faq.a7': 'Nunca. O equipamento <strong>não quebra e não perde refino</strong> ao falhar. Limite +10, sucesso é 100% menos 10% por refino atual, então o último passo é uma chance de 10%. Você perde só o minério e o zeny.',
   'faq.q8': 'Quando o servidor abre?',
-  'faq.a8': '<strong>7 de agosto de 2026.</strong> Dá pra criar conta agora, e o Discord já está ativo.',
+  'faq.a8': '<strong>Sexta-feira, 7 de agosto de 2026, às 20h de Brasília (UTC-3).</strong> Isso é 23:00 UTC. Dá pra criar conta agora, e o Discord já está ativo.',
 
-  'band.eyebrow': 'Abertura em 7 de agosto de 2026',
+  'band.eyebrow': 'Abre sexta, 7 de agosto de 2026',
   'band.title': 'Venha ver o que mudou',
   'band.lede': 'Crie a conta agora, pegue o cliente, e esteja lá quando os servidores subirem.',
 
