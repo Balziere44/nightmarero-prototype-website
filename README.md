@@ -38,7 +38,7 @@ static host and it works.
 
 ## Before it goes live
 
-Three things need a real value. Everything else is ready.
+Two things need a real value. Everything else is ready.
 
 ### 1. The domain
 
@@ -67,11 +67,8 @@ To add mirrors, duplicate that button:
 </a>
 ```
 
-### 3. Missing class artwork
-
-28 of the 55 classes have no character art yet and fall back to a letter
-placeholder. The current list is in `tools/missing-art.txt`. See below for how
-to add them.
+That is all that is strictly outstanding. All 55 classes have artwork, so
+nothing on the site falls back to a placeholder.
 
 ---
 
