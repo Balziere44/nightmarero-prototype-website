@@ -12,6 +12,12 @@
 /assets/img/*
   Cache-Control: public, max-age=31536000, immutable
 
+# The share card is the one image that does get replaced under the same
+# name. A year of immutable caching would leave Discord and Google showing
+# the old artwork long after it changed, so this one revalidates.
+/assets/img/og-cover.jpg
+  Cache-Control: public, max-age=3600, must-revalidate
+
 # CSS and JS do change, so keep them fresh but cheap to revalidate.
 /assets/css/*
   Cache-Control: public, max-age=3600, must-revalidate
