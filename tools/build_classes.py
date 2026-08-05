@@ -801,7 +801,9 @@ def classes_index(reg):
             <em>{terms}</em>
           </div>
         </li>""".format(key=key, label=esc(label), n=i + 1, desc=esc(desc),
-                        terms=esc(", ".join(sorted(set(terms), key=len, reverse=True)[:3])))
+                        # length first, then alphabetical, so the build is
+                        # reproducible when two terms are the same length
+                        terms=esc(", ".join(sorted(set(terms), key=lambda w: (-len(w), w))[:3])))
         for i, (key, label, terms, desc) in enumerate(STATUS))
 
     parts.append("""
