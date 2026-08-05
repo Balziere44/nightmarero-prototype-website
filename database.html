@@ -75,10 +75,10 @@
     <nav class="nav" aria-label="Main">
       <a href="index.html#server" data-i18n="nav.server">The server</a>
       <a href="classes.html" data-i18n="nav.classes">Classes</a>
+      <a href="quiz.html" data-i18n="nav.quiz">Class test</a>
       <a href="database.html" aria-current="page" data-i18n="nav.database">Database</a>
       <a href="https://wiki.nightmareofragnarok.com/" target="_blank" rel="noopener" data-i18n="nav.wiki">Wiki</a>
       <a href="download.html" data-i18n="nav.download">Download</a>
-      <a href="index.html#faq" data-i18n="nav.faq">FAQ</a>
     </nav>
     <div class="header-tools">
       <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch theme" title="Switch theme">
@@ -112,6 +112,7 @@
       <a href="index.html#server" data-i18n="nav.server">The server</a>
       <a href="index.html#features" data-i18n="nav.features">Features</a>
       <a href="classes.html" data-i18n="nav.classes">Classes</a>
+      <a href="quiz.html" data-i18n="nav.quiz">Class test</a>
       <a href="database.html" data-i18n="nav.database">Database</a>
       <a href="https://wiki.nightmareofragnarok.com/" target="_blank" rel="noopener" data-i18n="nav.wiki">Wiki</a>
       <a href="download.html" data-i18n="nav.download">Download</a>
@@ -138,7 +139,6 @@
       <div class="section-head">
         <p class="eyebrow" data-i18n="db.eyebrow">Item database</p>
         <h1 data-i18n="db.title">Every piece of gear and every card</h1>
-        <p class="lede" data-i18n="db.lede">Weapons, armour, shields, garments, shoes, headgear, accessories and monster cards. Search by name or by what the thing actually does.</p>
       </div>
     </div>
   </section>
@@ -212,7 +212,6 @@
         <div class="db-results">
           <div class="db-status">
             <p id="dbCount" class="dim" aria-live="polite"><span data-i18n="db.loading">Loading the database…</span></p>
-            <p class="dim" data-i18n="db.note">Pulled from Twilight's gear and card reference sheets.</p>
           </div>
 
           <ul class="db-grid" id="dbGrid"></ul>
@@ -226,24 +225,6 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
-    <div class="shell">
-      <div class="cta-band">
-        <div class="inner">
-          <h2 data-i18n="db.ctaTitle">Missing something?</h2>
-          <p class="lede text-center" data-i18n="db.ctaLede">Shadow gear and secret dungeon drops are not in the reference sheets yet. The wiki and the Discord fill the gaps.</p>
-          <div class="hero-actions">
-            <a class="btn -primary -lg" href="https://wiki.nightmareofragnarok.com/" target="_blank" rel="noopener">
-              <svg aria-hidden="true"><use href="#i-book"></use></svg><span data-i18n="cta.wiki">Open the wiki</span>
-            </a>
-            <a class="btn -ghost -lg" href="https://discord.gg/gHgFtmvudD" target="_blank" rel="noopener">
-              <svg aria-hidden="true"><use href="#i-discord"></use></svg><span data-i18n="cta.discord">Join the Discord</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
 </main>
 
@@ -286,6 +267,22 @@
     </div>
   </div>
 </footer>
+
+<div class="db-modal" id="dbModal" hidden role="dialog" aria-modal="true" aria-labelledby="dbModalTitle">
+  <div class="db-modal-card">
+    <button class="icon-btn db-modal-x" id="dbModalClose" type="button" aria-label="Close">
+      <svg aria-hidden="true"><use href="#i-close"></use></svg>
+    </button>
+    <div id="dbModalBody"></div>
+    <div class="db-modal-actions">
+      <button class="btn -primary -sm" id="dbShare" type="button">
+        <svg aria-hidden="true"><use href="#i-discord"></use></svg>
+        <span data-i18n="db.shareDiscord">Copy for Discord</span>
+      </button>
+      <button class="btn -ghost -sm" id="dbShareLink" type="button" data-i18n="db.copyLink">Copy link</button>
+    </div>
+  </div>
+</div>
 
 <script src="assets/js/i18n.js" defer></script>
 <script src="assets/js/main.js" defer></script>

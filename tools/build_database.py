@@ -16,7 +16,11 @@ import io
 import json
 import os
 import re
+import sys
 import datetime
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from status_codex import STATUS, TERM_CLASS
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "tools", "data")
@@ -38,6 +42,16 @@ CARD_SLOT = {
     "garment": "garment", "shoes": "shoes", "shield": "shield",
     "accessory": "accessory", "multiple": "any",
 }
+
+
+def split_lines(text):
+    """One stat per line. Splits on sentence breaks only, so a decimal like
+    0.5 (no space after the dot) is never cut in half."""
+    text = clean(text)
+    if not text:
+        return []
+    parts = [p.strip(" .") for p in re.split(r"\.\s+", text)]
+    return [p for p in parts if p]
 
 
 def clean(text):
@@ -117,9 +131,9 @@ def parse_gear(path, source, kind_of_sheet):
             "slot": slot,
             "cat": category,
             "slots": as_int(cells[1]),
-            "stat": clean(cells[2]),
+            "stat": stat,
             "statLabel": "ATK/MATK" if kind_of_sheet == "weapons" else "DEF/MDEF",
-            "effect": clean(cells[3]),
+            "effect": split_lines(cells[3]),
             "level": as_int(cells[4]),
             "drops": clean(cells[5]),
             "source": source,
@@ -144,7 +158,7 @@ def parse_cards(path, slot):
             "kind": "card",
             "slot": slot,
             "cat": "Card",
-            "effect": clean(cells[1]),
+            "effect": split_lines(cells[1]),
             "affix": clean(cells[2]),
             "source": "card",
         })
@@ -195,6 +209,9 @@ def main():
         "count": len(unique),
         "slots": sorted(set(i["slot"] for i in unique)),
         "categories": sorted(set(i["cat"] for i in unique)),
+        # term -> codex family, so database.js highlights the same words the
+        # class pages do without keeping a second copy of the list
+        "statusTerms": TERM_CLASS,
         "items": unique,
     }
 

@@ -1798,16 +1798,24 @@ html[data-theme="light"] .site-footer { background: color-mix(in srgb, var(--bg)
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 310px), 1fr));
 }
 
+.db-grid > li { display: flex; }
+
 .db-card {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 0.45rem;
+  align-items: stretch;
+  gap: 0.5rem;
+  width: 100%;
   padding: 1.05rem 1.15rem 2.4rem;
+  text-align: left;
+  font: inherit;
+  color: inherit;
   background: var(--bg-panel);
   border: 1px solid var(--surface-line);
   border-inline-start: 2px solid var(--accent);
   border-radius: var(--radius-sm);
+  cursor: pointer;
   transition: border-color 0.22s var(--ease), transform 0.22s var(--ease);
 }
 .db-card:hover { transform: translateY(-2px); border-color: var(--surface-line-strong); }
@@ -1819,7 +1827,9 @@ html[data-theme="light"] .site-footer { background: color-mix(in srgb, var(--bg)
   justify-content: space-between;
   gap: 0.7rem;
 }
-.db-card h3 {
+
+.db-name {
+  font-family: var(--font-display);
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: -0.01em;
@@ -1834,6 +1844,8 @@ html[data-theme="light"] .site-footer { background: color-mix(in srgb, var(--bg)
   color: var(--text-dim);
   white-space: nowrap;
 }
+/* the slot a card occupies is the useful label, so it gets the accent */
+.db-tag.-slot { color: var(--kw-poison); }
 
 .db-meta {
   font-family: var(--font-mono);
@@ -1841,17 +1853,35 @@ html[data-theme="light"] .site-footer { background: color-mix(in srgb, var(--bg)
   color: var(--accent-soft);
 }
 
-.db-effect { font-size: var(--step--1); line-height: 1.55; color: var(--text); }
+/* one stat per line, so a wall of text becomes a list you can scan */
+.db-effects {
+  display: grid;
+  gap: 0.3rem;
+  font-size: var(--step--1);
+  line-height: 1.5;
+  color: var(--text);
+}
+.db-effects li {
+  position: relative;
+  padding-inline-start: 0.85rem;
+}
+.db-effects li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--surface-line-strong);
+}
 
-.db-line { font-size: 0.76rem; line-height: 1.5; color: var(--text-muted); }
-.db-line b {
+.db-rest {
   font-family: var(--font-mono);
-  font-size: 0.62rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-dim);
-  margin-inline-end: 0.35rem;
 }
 
 .db-source {
@@ -1866,6 +1896,263 @@ html[data-theme="light"] .site-footer { background: color-mix(in srgb, var(--bg)
 }
 .db-source.-mvp { color: var(--accent-soft); }
 .db-source.-card { color: var(--kw-poison); }
+
+/* ---- item panel ---- */
+
+.db-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: grid;
+  place-items: center;
+  padding: 1.2rem;
+  background: color-mix(in srgb, var(--ink-000) 72%, transparent);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  animation: dbFade 0.18s var(--ease);
+}
+@keyframes dbFade { from { opacity: 0; } to { opacity: 1; } }
+
+.db-modal-card {
+  position: relative;
+  width: min(100%, 540px);
+  max-height: min(86svh, 760px);
+  overflow-y: auto;
+  padding: 1.7rem 1.6rem 1.4rem;
+  background: color-mix(in srgb, var(--bg) 96%, transparent);
+  border: 1px solid var(--surface-line-strong);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+}
+
+.db-modal-x { position: absolute; top: 0.7rem; right: 0.7rem; }
+
+.db-modal-tag {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 0.35rem;
+  padding-inline-end: 2.2rem;
+}
+.db-modal-tag b { color: var(--kw-poison); font-weight: 500; }
+
+.db-modal-card h2 { font-size: var(--step-2); margin-bottom: 0.4rem; }
+
+.db-modal-h {
+  margin-top: 1.2rem;
+  margin-bottom: 0.45rem;
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.db-modal-p { font-size: var(--step--1); line-height: 1.55; color: var(--text-muted); }
+
+.db-modal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--surface-line);
+}
+
+/* --------------------------------------------------------------------------
+   20d. Class personality test
+   -------------------------------------------------------------------------- */
+
+.quiz-card {
+  padding: clamp(1.5rem, 4vw, 2.4rem);
+  background: var(--bg-panel);
+  border: 1px solid var(--surface-line);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(12px);
+}
+.quiz-card h2 { margin: 0.6rem 0 0.7rem; }
+.quiz-card .muted + .quiz-label { margin-top: 1.6rem; }
+
+.quiz-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.quiz-card select {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  font-size: 0.95rem;
+  color: var(--text);
+  background: var(--bg-elevated);
+  border: 1px solid var(--surface-line);
+  border-radius: var(--radius-sm);
+}
+.quiz-card select:focus { outline: none; border-color: var(--accent); }
+.quiz-card select option { background: var(--bg); color: var(--text); }
+.quiz-card .dim { margin: 0.5rem 0 1.4rem; }
+
+.quiz-progress {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 1.4rem;
+}
+.quiz-progress span {
+  flex: 1;
+  height: 3px;
+  border-radius: 99px;
+  background: var(--surface-line);
+  transition: background-color 0.3s var(--ease);
+}
+.quiz-progress span.-done { background: var(--accent); }
+.quiz-progress span.-now { background: var(--accent-soft); box-shadow: 0 0 10px var(--glow); }
+
+.quiz-q {
+  font-size: var(--step-2);
+  margin-bottom: 1.4rem;
+}
+
+.quiz-answers { display: grid; gap: 0.55rem; }
+
+.quiz-answer {
+  position: relative;
+  padding: 1rem 1.2rem 1rem 2.6rem;
+  font-size: var(--step-0);
+  line-height: 1.45;
+  text-align: left;
+  color: var(--text);
+  background: var(--bg-elevated);
+  border: 1px solid var(--surface-line);
+  border-radius: var(--radius-sm);
+  transition: border-color 0.2s var(--ease), transform 0.2s var(--ease),
+              background-color 0.2s var(--ease);
+}
+.quiz-answer::before {
+  content: "";
+  position: absolute;
+  left: 1.1rem;
+  top: 1.35rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid var(--surface-line-strong);
+  transition: background-color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+.quiz-answer:hover {
+  border-color: var(--accent);
+  transform: translateX(3px);
+}
+.quiz-answer:hover::before { background: var(--accent); border-color: var(--accent); }
+
+.quiz-back { margin-top: 1.2rem; padding-inline: 0; }
+
+/* ---- result ---- */
+
+.quiz-result { display: grid; gap: var(--gap-md); }
+
+.quiz-result-head {
+  padding: clamp(1.5rem, 4vw, 2.4rem);
+  border: 1px solid var(--surface-line);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(90% 130% at 10% 0%, rgba(232, 17, 43, 0.2), transparent 62%),
+    var(--bg-panel);
+}
+.quiz-result-head h2 { font-size: var(--step-4); margin: 0.5rem 0 0.5rem; }
+
+.quiz-motto {
+  font-family: var(--font-display);
+  font-size: var(--step-1);
+  font-style: italic;
+  color: var(--accent-soft);
+  margin-bottom: 0.8rem;
+}
+
+.quiz-bars { display: grid; gap: 0.5rem; margin-top: 1.5rem; }
+.quiz-bars li {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr;
+  align-items: center;
+  gap: 0.8rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.quiz-bar {
+  height: 5px;
+  border-radius: 99px;
+  background: var(--surface-line);
+  overflow: hidden;
+}
+.quiz-bar i {
+  display: block;
+  height: 100%;
+  border-radius: 99px;
+  background: linear-gradient(90deg, var(--red-700), var(--accent));
+}
+
+.quiz-pick {
+  display: grid;
+  gap: var(--gap-md);
+  padding: clamp(1.4rem, 3vw, 2rem);
+  background: var(--bg-panel);
+  border: 1px solid var(--surface-line);
+  border-radius: var(--radius-lg);
+}
+@media (min-width: 760px) {
+  .quiz-pick { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); align-items: center; }
+}
+
+.quiz-art {
+  display: grid;
+  place-items: center;
+  min-height: 220px;
+  border-radius: var(--radius);
+  background: radial-gradient(80% 70% at 50% 100%, rgba(232, 17, 43, 0.22), transparent 68%);
+}
+.quiz-art img {
+  max-height: 320px;
+  width: auto;
+  filter: drop-shadow(0 20px 32px rgba(0, 0, 0, 0.55));
+}
+
+.quiz-pick-body h3 { font-size: var(--step-3); margin: 0.4rem 0 0.6rem; }
+.quiz-pick-body .tag { margin-bottom: 1rem; }
+.quiz-why { display: grid; gap: 0.7rem; }
+.quiz-why p { font-size: var(--step--1); line-height: 1.6; color: var(--text-muted); }
+.quiz-why b { color: var(--text); }
+
+.quiz-skills {
+  padding: clamp(1.4rem, 3vw, 2rem);
+  background: var(--bg-panel);
+  border: 1px solid var(--surface-line);
+  border-radius: var(--radius-lg);
+}
+.quiz-skills .eyebrow { margin-bottom: 1rem; }
+
+.quiz-alt {
+  padding: 1.2rem 1.4rem;
+  border: 1px dashed var(--surface-line-strong);
+  border-radius: var(--radius);
+}
+.quiz-alt p { font-size: var(--step--1); color: var(--text-muted); margin-top: 0.5rem; }
+.quiz-alt a { color: var(--accent-soft); text-decoration: underline; text-underline-offset: 3px; }
+
+.quiz-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+}
 
 /* --------------------------------------------------------------------------
    21. Reveal on scroll

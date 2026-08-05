@@ -15,7 +15,11 @@ import io
 import json
 import os
 import re
+import sys
 import unicodedata
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from status_codex import STATUS, colorize, families_in
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "tools", "classes.json")
@@ -90,65 +94,6 @@ TREE = [
         (None, ["Rebel", "Night Watch"]),
     ]),
 ]
-
-# --------------------------------------------------------------------------
-# Status codex. One colour per family. The terms are matched case sensitively
-# in skill text, so an ordinary lowercase "cold" or "slow" is left alone.
-# Longer terms are matched first so "Internal Bleeding" wins over "Bleeding".
-# --------------------------------------------------------------------------
-
-STATUS = [
-    ("bleed", "Bleeding", ["Internal Bleeding", "Bleeding", "Bleed"],
-     "Damage every second, scaled off the applier's Strength and level. "
-     "Internal Bleeding works the same but scales off Dexterity."),
-    ("burn", "Burning", ["Severe Burning", "Burning"],
-     "Damage every second, scaled off Intelligence. "
-     "Severe Burning scales off Vitality instead."),
-    ("poison", "Poison", ["Deadly Poison", "Poison"],
-     "Damage every second, scaled off Agility. "
-     "Deadly Poison scales off Luck instead."),
-    ("blind", "Blind", ["Blinded", "Blind"],
-     "Cuts the target's Hit and Flee by a flat 30, and shrinks how much of "
-     "the screen a player can see."),
-    ("vuln", "Vulnerable", ["Vulnerable", "Breach"],
-     "Strips 40% of the target's hard and soft defence. No attack bonus, "
-     "unlike the Provoke you remember."),
-    ("frozen", "Frozen", ["Frozen", "Freeze", "Chill", "Cold"],
-     "Cancels casting and locks the target until it takes damage. Chill slows "
-     "movement and attack speed, Cold is the follow up during the resist window."),
-    ("stun", "Stun", ["Stunned", "Stun", "Staggered", "Stagger"],
-     "Cancels casting and stops the target acting. Monsters resist for 30 "
-     "seconds afterwards and take Stagger instead."),
-    ("sleep", "Sleep", ["Sleeping", "Sleep", "Dazed"],
-     "Cancels casting and stops the target acting until it takes damage. "
-     "Monsters take Dazed during the resist window."),
-    ("slow", "Slow", ["Slowcast", "Slowed", "Slow", "Atrophy", "Immobilized", "Immobilize"],
-     "Movement speed down. Atrophy hits attack speed instead, and Slowcast "
-     "stretches fixed cast time."),
-]
-
-TERM_CLASS = {}
-for _key, _label, _terms, _desc in STATUS:
-    for _t in _terms:
-        TERM_CLASS[_t] = _key
-
-STATUS_RE = re.compile(
-    r"\b(%s)\b" % "|".join(sorted((re.escape(t) for t in TERM_CLASS),
-                                  key=len, reverse=True)))
-
-
-def colorize(text):
-    """Wraps status names so they pick up their codex colour."""
-    return STATUS_RE.sub(
-        lambda m: '<b class="kw kw-%s">%s</b>' % (TERM_CLASS[m.group(1)], m.group(1)),
-        text)
-
-
-def families_in(text):
-    """Which status families a page actually mentions, in codex order."""
-    found = set(TERM_CLASS[m] for m in STATUS_RE.findall(text))
-    return [s for s in STATUS if s[0] in found]
-
 
 TIER_LABEL = {1: "First tier", 2: "Second tier", 3: "Third tier"}
 LEVEL_RANGE = {1: "Base level 1 to 50", 2: "Base level 51 to 99", 3: "Base level 100 to 150"}
@@ -316,11 +261,11 @@ def header(prefix, active):
     </a>
     <nav class="nav" aria-label="Main">
       <a href="{p}index.html#server" data-i18n="nav.server">The server</a>
-      <a href="{p}classes.html"{c_classes} data-i18n="nav.classes">Classes</a>
+      <a href="{p}classes.html" {c_classes} data-i18n="nav.classes">Classes</a>
+      <a href="{p}quiz.html" data-i18n="nav.quiz">Class test</a>
       <a href="{p}database.html" data-i18n="nav.database">Database</a>
-      <a href="{wiki}" target="_blank" rel="noopener" data-i18n="nav.wiki">Wiki</a>
-      <a href="{p}download.html"{c_dl} data-i18n="nav.download">Download</a>
-      <a href="{p}index.html#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="https://wiki.nightmareofragnarok.com/" target="_blank" rel="noopener" data-i18n="nav.wiki">Wiki</a>
+      <a href="{p}download.html" {c_dl} data-i18n="nav.download">Download</a>
     </nav>
     <div class="header-tools">
       <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch theme" title="Switch theme">
@@ -354,8 +299,9 @@ def header(prefix, active):
       <a href="{p}index.html#server" data-i18n="nav.server">The server</a>
       <a href="{p}index.html#features" data-i18n="nav.features">Features</a>
       <a href="{p}classes.html" data-i18n="nav.classes">Classes</a>
+      <a href="{p}quiz.html" data-i18n="nav.quiz">Class test</a>
       <a href="{p}database.html" data-i18n="nav.database">Database</a>
-      <a href="{wiki}" target="_blank" rel="noopener" data-i18n="nav.wiki">Wiki</a>
+      <a href="https://wiki.nightmareofragnarok.com/" target="_blank" rel="noopener" data-i18n="nav.wiki">Wiki</a>
       <a href="{p}download.html" data-i18n="nav.download">Download</a>
       <a href="{p}index.html#start" data-i18n="nav.start">Get started</a>
       <a href="{p}index.html#faq" data-i18n="nav.faq">FAQ</a>
@@ -386,6 +332,7 @@ def footer(prefix):
           <li><a href="{reg}" target="_blank" rel="noopener" data-i18n="cta.register">Create account</a></li>
           <li><a href="{p}download.html" data-i18n="nav.download">Download</a></li>
           <li><a href="{p}classes.html" data-i18n="nav.classes">Classes</a></li>
+          <li><a href="{p}quiz.html" data-i18n="nav.quiz">Class test</a></li>
           <li><a href="{p}database.html" data-i18n="nav.database">Database</a></li>
           <li><a href="{p}index.html#faq" data-i18n="nav.faq">FAQ</a></li>
         </ul>
@@ -758,6 +705,10 @@ def classes_index(reg):
 
   <section class="section-pad-sm">
     <div class="shell">
+      <p class="note" style="margin-bottom:var(--gap-md)">
+        <span data-i18n="idx.quizNudge">Fifty five of them is a lot to read through. If you are not sure where to start, the class test asks nine questions and picks one for you.</span>
+        <a href="quiz.html" style="color:var(--accent-soft);text-decoration:underline;text-underline-offset:3px" data-i18n="idx.quizLink">Take the test</a>
+      </p>
       <div class="filter-bar">
         <button class="chip" type="button" data-tier="all" aria-pressed="true" data-i18n="idx.all">All</button>
         <button class="chip" type="button" data-tier="1" aria-pressed="false" data-i18n="tier.1">First tier</button>
@@ -856,6 +807,56 @@ def classes_index(reg):
 # Main
 # --------------------------------------------------------------------------
 
+
+# --------------------------------------------------------------------------
+# Class brief, consumed by the personality test
+# --------------------------------------------------------------------------
+
+def write_brief(reg, order, data):
+    """A small JSON with just enough per class for quiz.html to draw a result
+    card: one line of flavour, a handful of skills, and the artwork path."""
+    out = []
+    for name in order:
+        info = reg[name]
+        intro, skills = parse(data.get(name, []))
+        slug = info["slug"]
+        sexes = has_art(slug)
+
+        summary = intro[0] if intro else ""
+        # keep it to two sentences so the card stays readable
+        bits = re.split(r"(?<=\.)\s+", summary)
+        summary = " ".join(bits[:2]).strip()
+
+        picked = []
+        for sk in skills:
+            body = " ".join(sk["body"]).strip()
+            if not body:
+                continue
+            picked.append({"name": sk["name"], "text": re.split(r"(?<=\.)\s+", body)[0]})
+            if len(picked) == 5:
+                break
+
+        out.append({
+            "slug": slug,
+            "name": name,
+            "tier": info["tier"],
+            "family": info["family"],
+            "parent": info["parent"],
+            "summary": summary,
+            "skills": picked,
+            "art": ("assets/img/classes/%s-%s.webp" % (slug, sexes[0])) if sexes else None,
+        })
+
+    path = os.path.join(ROOT, "assets", "data", "classes-brief.json")
+    if not os.path.isdir(os.path.dirname(path)):
+        os.makedirs(os.path.dirname(path))
+    io.open(path, "w", encoding="utf-8", newline="\n").write(
+        json.dumps({"count": len(out), "classes": out},
+                   ensure_ascii=False, separators=(",", ":")))
+    print("assets/data/classes-brief.json: %d classes (%.0f KB)"
+          % (len(out), os.path.getsize(path) / 1024.0))
+
+
 def main():
     data = json.load(io.open(DATA, encoding="utf-8"))
     reg, order = build_registry()
@@ -874,6 +875,8 @@ def main():
 
     io.open(os.path.join(ROOT, "classes.html"), "w", encoding="utf-8",
             newline="\n").write(classes_index(reg))
+
+    write_brief(reg, order, data)
 
     no_art = [n for n in order if not has_art(reg[n]["slug"])]
     print("Wrote %d class pages plus classes.html" % len(order))

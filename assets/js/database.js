@@ -3,6 +3,8 @@
    --------------------------------------------------------------------------
    Loads assets/data/items.json once, filters it in memory, and paints the
    results in chunks so a 1200 item list never blocks the main thread.
+   Clicking a result opens a panel with the full entry and a share block
+   ready to paste into Discord.
    ========================================================================== */
 
 (function () {
@@ -18,7 +20,9 @@
     slot: $('fSlot'), cat: $('fCat'), source: $('fSource'), sort: $('fSort'),
     lvMin: $('lvMin'), lvMax: $('lvMax'),
     count: $('dbCount'), empty: $('dbEmpty'), reset: $('dbReset'),
-    more: $('dbMore'), sentinel: $('dbSentinel')
+    more: $('dbMore'), sentinel: $('dbSentinel'),
+    modal: $('dbModal'), modalBody: $('dbModalBody'), modalClose: $('dbModalClose'),
+    share: $('dbShare'), shareLink: $('dbShareLink')
   };
 
   var CHUNK = 60;
@@ -26,11 +30,12 @@
   var view = [];
   var painted = 0;
   var kind = 'all';
+  var statusTerms = {};
+  var statusRe = null;
+  var open = null;          // the item currently in the panel
 
   /* ------------------------------------------------------------ dictionary */
 
-  /* Slot names are UI words, so they translate. Category names are the game's
-     own weapon types and stay as they are, like the skill names elsewhere. */
   function t(key, fallback) {
     var table = window.NM_I18N_TABLE;
     return (table && table[key]) || fallback;
@@ -45,6 +50,28 @@
 
   function slotLabel(s) { return t('db.s.' + s, SLOT_FALLBACK[s] || s); }
   function sourceLabel(s) { return t('db.src.' + s, SOURCE_FALLBACK[s] || s); }
+
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  /* Same colours the class pages use. The term list rides along in the JSON
+     so there is only ever one copy of it. */
+  function colorize(text) {
+    if (!statusRe) return esc(text);
+    return esc(text).replace(statusRe, function (m) {
+      return '<b class="kw kw-' + statusTerms[m] + '">' + m + '</b>';
+    });
+  }
+
+  function buildStatusRe() {
+    var terms = Object.keys(statusTerms);
+    if (!terms.length) return;
+    terms.sort(function (a, b) { return b.length - a.length; });
+    var safe = terms.map(function (s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); });
+    statusRe = new RegExp('\\b(' + safe.join('|') + ')\\b', 'g');
+  }
 
   /* ---------------------------------------------------------------- selects */
 
@@ -81,8 +108,8 @@
     fillCategories();
   }
 
-  /* Categories depend on the slot and kind currently chosen, so the list
-     never offers a combination that returns nothing. */
+  /* Categories follow the slot and kind already chosen, so the list never
+     offers a combination that returns nothing. */
   function fillCategories() {
     var chosen = els.cat.value;
     var pool = all.filter(function (i) {
@@ -118,7 +145,7 @@
       if (cat && i.cat !== cat) return false;
       if (src && i.source !== src) return false;
       if (qn && norm(i.name).indexOf(qn) === -1) return false;
-      if (qe && norm(i.effect).indexOf(qe) === -1 && norm(i.affix).indexOf(qe) === -1) return false;
+      if (qe && i._search.indexOf(qe) === -1) return false;
       if (!isNaN(lo) && (i.level == null || i.level < lo)) return false;
       if (!isNaN(hi) && (i.level == null || i.level > hi)) return false;
       return true;
@@ -145,68 +172,190 @@
 
   /* ----------------------------------------------------------------- paint */
 
-  function esc(s) {
-    return String(s == null ? '' : s)
-      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  function metaBits(i) {
+    var bits = [];
+    if (i.slots != null) bits.push(i.slots + ' ' + t('db.slotsWord', 'slots'));
+    if (i.stat) bits.push(esc(i.statLabel) + ' ' + esc(i.stat));
+    if (i.level != null) bits.push(t('db.lv', 'Lv') + ' ' + i.level);
+    return bits;
   }
 
-  function card(i) {
-    var meta = [];
-    if (i.slots != null) meta.push(i.slots + ' ' + t('db.slotsWord', 'slots'));
-    if (i.stat) meta.push(esc(i.statLabel) + ' ' + esc(i.stat));
-    if (i.level != null) meta.push(t('db.lv', 'Lv') + ' ' + i.level);
+  /* A card's category is always the word "Card", which says nothing. The slot
+     it goes in is the useful part, so that is what the tag shows. */
+  function tagFor(i) {
+    return i.kind === 'card' ? slotLabel(i.slot) : i.cat;
+  }
 
-    var html =
-      '<li class="db-card' + (i.kind === 'card' ? ' -card' : '') + '">' +
-        '<div class="db-card-top">' +
-          '<h3>' + esc(i.name) + '</h3>' +
-          '<span class="db-tag">' + esc(i.cat) + '</span>' +
-        '</div>' +
-        (meta.length ? '<p class="db-meta">' + meta.join('<span aria-hidden="true"> · </span>') + '</p>' : '') +
-        '<p class="db-effect">' + esc(i.effect) + '</p>';
+  function effectList(i, limit) {
+    var lines = i.effect || [];
+    var shown = limit ? lines.slice(0, limit) : lines;
+    var html = '<ul class="db-effects">' + shown.map(function (line) {
+      return '<li>' + colorize(line) + '</li>';
+    }).join('') + '</ul>';
+    if (limit && lines.length > limit) {
+      html += '<p class="db-rest">+' + (lines.length - limit) + ' ' +
+              t('db.moreLines', 'more') + '</p>';
+    }
+    return html;
+  }
 
-    if (i.affix) {
-      html += '<p class="db-line"><b>' + t('db.affix', 'Affix') + '</b> ' + esc(i.affix) + '</p>';
-    }
-    if (i.drops) {
-      html += '<p class="db-line"><b>' + t('db.drops', 'Drops from') + '</b> ' + esc(i.drops) + '</p>';
-    }
-    html += '<span class="db-source -' + i.source + '">' + esc(sourceLabel(i.source)) + '</span>';
-    return html + '</li>';
+  function card(i, idx) {
+    var meta = metaBits(i);
+    return '<li><button class="db-card' + (i.kind === 'card' ? ' -card' : '') +
+             '" type="button" data-idx="' + idx + '">' +
+        '<span class="db-card-top">' +
+          '<span class="db-name">' + esc(i.name) + '</span>' +
+          '<span class="db-tag' + (i.kind === 'card' ? ' -slot' : '') + '">' +
+            esc(tagFor(i)) + '</span>' +
+        '</span>' +
+        (meta.length ? '<span class="db-meta">' + meta.join('<span aria-hidden="true"> · </span>') + '</span>' : '') +
+        effectList(i, 3) +
+        '<span class="db-source -' + i.source + '">' + esc(sourceLabel(i.source)) + '</span>' +
+      '</button></li>';
   }
 
   function paint() {
     if (painted >= view.length) { syncMore(); return; }
     var slice = view.slice(painted, painted + CHUNK);
-    grid.insertAdjacentHTML('beforeend', slice.map(card).join(''));
+    var html = '';
+    for (var n = 0; n < slice.length; n++) html += card(slice[n], painted + n);
+    grid.insertAdjacentHTML('beforeend', html);
     painted += slice.length;
     syncMore();
     keepFilling();
   }
 
-  /* Scrolling tops the list up on its own, but the button is what guarantees
-     the rest is reachable: by keyboard, and anywhere the observer misbehaves. */
   function syncMore() {
     if (!els.more) return;
     var left = view.length - painted;
     els.more.hidden = left <= 0;
-    if (left > 0) {
-      els.more.textContent = t('db.more', 'Show more') + ' (' + left + ')';
-    }
+    if (left > 0) els.more.textContent = t('db.more', 'Show more') + ' (' + left + ')';
   }
 
   /* IntersectionObserver only fires when the sentinel crosses the boundary.
-     After a chunk lands the sentinel is often still on screen, and no second
-     event ever comes, so top up until it is pushed out of range. */
+     After a chunk lands it is often still on screen and no second event
+     comes, so top up until it is pushed out of range. */
   function keepFilling() {
     if (!els.sentinel || painted >= view.length) return;
     requestAnimationFrame(function () {
-      var box = els.sentinel.getBoundingClientRect();
-      if (box.top < window.innerHeight + 600) paint();
+      if (els.sentinel.getBoundingClientRect().top < window.innerHeight + 600) paint();
     });
   }
 
+  /* ----------------------------------------------------------------- panel */
+
+  /* Always English. This gets pasted into a Discord channel where people run
+     every UI language, and the item names are English in game anyway. */
+  function shareText(i) {
+    var head = ['**' + i.name + '**', i.kind === 'card' ? 'Card' : i.cat];
+    if (i.kind === 'card') head.push(SLOT_FALLBACK[i.slot] + ' slot');
+    if (i.slots != null) head.push(i.slots + ' slots');
+    if (i.stat) head.push(i.statLabel + ' ' + i.stat);
+    if (i.level != null) head.push('Lv ' + i.level);
+
+    var lines = [head.shift() + '  ' + head.join(' · ')];
+    (i.effect || []).forEach(function (line) { lines.push('- ' + line); });
+    if (i.affix) lines.push('Affix: ' + i.affix);
+    if (i.drops) lines.push('Drops from: ' + i.drops);
+    lines.push('<' + itemUrl(i) + '>');
+    return lines.join('\n');
+  }
+
+  function itemUrl(i) {
+    return location.origin + location.pathname + '?item=' + encodeURIComponent(i.name);
+  }
+
+  function openItem(i) {
+    if (!els.modal) return;
+    open = i;
+    var meta = metaBits(i);
+
+    var html =
+      '<p class="db-modal-tag">' + esc(i.cat) + '<span aria-hidden="true"> · </span>' +
+        '<b>' + esc(slotLabel(i.slot)) + '</b><span aria-hidden="true"> · </span>' +
+        esc(sourceLabel(i.source)) + '</p>' +
+      '<h2 id="dbModalTitle">' + esc(i.name) + '</h2>' +
+      (meta.length ? '<p class="db-meta">' + meta.join('<span aria-hidden="true"> · </span>') + '</p>' : '') +
+      '<h3 class="db-modal-h">' + t('db.effectHead', 'Effects') + '</h3>' +
+      effectList(i);
+
+    if (i.affix) {
+      html += '<h3 class="db-modal-h">' + t('db.affix', 'Affix') + '</h3>' +
+              '<p class="db-modal-p">' + esc(i.affix) + '</p>';
+    }
+    if (i.drops) {
+      html += '<h3 class="db-modal-h">' + t('db.drops', 'Drops from') + '</h3>' +
+              '<p class="db-modal-p">' + esc(i.drops) + '</p>';
+    }
+
+    els.modalBody.innerHTML = html;
+    els.modal.hidden = false;
+    document.body.classList.add('no-scroll');
+    if (els.modalClose) els.modalClose.focus();
+
+    history.replaceState(null, '', itemUrl(i));
+  }
+
+  function closeItem() {
+    if (!els.modal || els.modal.hidden) return;
+    els.modal.hidden = true;
+    open = null;
+    document.body.classList.remove('no-scroll');
+    history.replaceState(null, '', location.pathname);
+  }
+
+  function flash(btn, key, fallback) {
+    var old = btn.dataset.label || btn.textContent;
+    btn.dataset.label = old;
+    btn.textContent = t(key, fallback);
+    setTimeout(function () { btn.textContent = btn.dataset.label; }, 1600);
+  }
+
+  function copy(text, btn) {
+    var done = function () { flash(btn, 'db.copied', 'Copied'); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, function () { fallbackCopy(text, done); });
+    } else {
+      fallbackCopy(text, done);
+    }
+  }
+
+  function fallbackCopy(text, done) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly', '');
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch (e) {}
+    document.body.removeChild(ta);
+  }
+
   /* ------------------------------------------------------------------ wire */
+
+  grid.addEventListener('click', function (e) {
+    var btn = e.target.closest('.db-card');
+    if (!btn) return;
+    var i = view[parseInt(btn.dataset.idx, 10)];
+    if (i) openItem(i);
+  });
+
+  if (els.modal) {
+    els.modalClose.addEventListener('click', closeItem);
+    els.modal.addEventListener('click', function (e) {
+      if (e.target === els.modal) closeItem();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeItem();
+    });
+    els.share.addEventListener('click', function () {
+      if (open) copy(shareText(open), els.share);
+    });
+    els.shareLink.addEventListener('click', function () {
+      if (open) copy(itemUrl(open), els.shareLink);
+    });
+  }
 
   var debounce;
   function onInput() {
@@ -254,7 +403,6 @@
     }, { rootMargin: '600px' }).observe(els.sentinel);
   }
 
-  /* Rebuild the option labels when the language changes. */
   document.addEventListener('nm:lang', function () {
     var keep = { slot: els.slot.value, cat: els.cat.value, src: els.source.value, sort: els.sort.value };
     fillSelects();
@@ -264,6 +412,7 @@
     fillCategories();
     els.cat.value = keep.cat;
     apply();
+    if (open) openItem(open);
   });
 
   /* ------------------------------------------------------------------ boot */
@@ -275,9 +424,22 @@
     })
     .then(function (data) {
       all = data.items || [];
+      statusTerms = data.statusTerms || {};
+      buildStatusRe();
+
+      all.forEach(function (i) {
+        i._search = norm((i.effect || []).join(' ') + ' ' + (i.affix || ''));
+      });
+
       fillSelects();
       els.sort.value = 'name';
       apply();
+
+      var wanted = new URLSearchParams(location.search).get('item');
+      if (wanted) {
+        var hit = all.filter(function (i) { return i.name === wanted; })[0];
+        if (hit) openItem(hit);
+      }
     })
     .catch(function () {
       els.count.textContent = t('db.failed', 'The database could not be loaded. Try a refresh.');
