@@ -176,22 +176,53 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-stun">Stun</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Axe Mastery</strong><p>Boosts the damage and Hit rate of One and Two-Handed Axes.</p></li>
-        <li class="skill"><strong>Axe Boomerang</strong><p>Throws the user's axe at a distant target, knocking them back a few cells and also having a chance to inflict the <b class="kw kw-stun">Stun</b> status.</p></li>
-        <li class="skill"><strong>Crush</strong><p>Delivers a single heavy blow to the target with a chance to <b class="kw kw-stun">Stun</b> them. This skill gets bonus damage and Crit Rate against enemies that are already stunned.</p></li>
-        <li class="skill"><strong>Extort</strong><p>Deals a small amount of damage to an enemy, increasing the user's &quot;coin&quot; count by one. The coins provide a minimal ATK boost, but are mostly used as a resource to be consumed by other skills.</p></li>
-        <li class="skill"><strong>Mammonite</strong><p>Deals heavy damage to a single target. If the user has any stacks of Extort, consumes all of them to do massively improved damage and guarantees the skill will Crit.</p></li>
-        <li class="skill"><strong>Crazy Uproar</strong><p>Consumes Extort stacks to whip the party into an uproar, increasing the ASPD and Crit Rate of all members.</p></li>
-      </ul>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-stun">Stun</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-passive" data-i18n="cls.t.passive">Passive</span><span class="sk-utility" data-i18n="cls.t.utility">Utility</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Skills<span>6 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-physical" id="s-crush">
+            <div class="sk-top"><strong>Crush</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Can Crit, can <b class="kw kw-stun">Stun</b>, deals additional damage to <b class="kw kw-stun">Stunned</b>.</p>
+            <p class="sk-body">Delivers a single heavy blow to the target with a chance to <b class="kw kw-stun">Stun</b> them. This skill gets bonus damage and Crit Rate against enemies that are already stunned.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-axe-boomerang">
+            <div class="sk-top"><strong>Axe Boomerang</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Ranged attack that can <b class="kw kw-stun">Stun</b></p>
+            <p class="sk-body">Throws the user's axe at a distant target, knocking them back a few cells and also having a chance to inflict the <b class="kw kw-stun">Stun</b> status.</p>
+          </li>
+          <li class="skill-card sk-passive" id="s-axe-mastery">
+            <div class="sk-top"><strong>Axe Mastery</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Increases damage of 1H and 2H Axes</p>
+            <p class="sk-body">Boosts the damage and Hit rate of One and Two-Handed Axes.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-extort">
+            <div class="sk-top"><strong>Extort</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Deals damage and generates Extort stacks</p>
+            <p class="sk-body">Deals a small amount of damage to an enemy, increasing the user's &quot;coin&quot; count by one. The coins provide a minimal ATK boost, but are mostly used as a resource to be consumed by other skills.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-mammonite">
+            <div class="sk-top"><strong>Mammonite</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Consumes Extort stacks to deal massive damage</p>
+            <p class="sk-body">Deals heavy damage to a single target. If the user has any stacks of Extort, consumes all of them to do massively improved damage and guarantees the skill will Crit.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-extort">Extort</a></p>
+          </li>
+          <li class="skill-card sk-utility" id="s-crazy-uproar">
+            <div class="sk-top"><strong>Crazy Uproar</strong><i class="sk-type">Utility</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Consumes Extort stacks to buff party Crit and ASPD</p>
+            <p class="sk-body">Consumes Extort stacks to whip the party into an uproar, increasing the ASPD and Crit Rate of all members.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-extort">Extort</a></p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

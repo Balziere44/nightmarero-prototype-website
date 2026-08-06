@@ -175,26 +175,95 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-bleed">Bleeding</span><span class="kw-vuln">Vulnerable</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Vanguard Stance</strong><p>The user shifts into an offensive stance, optimizing their ability to deal damage. Increases the user's Hit Rate and adds Agility scaling to all Lord Knight skills. Requires a Two-Handed Weapon.</p></li>
-        <li class="skill"><strong>Warden Stance</strong><p>The user shifts into a defensive stance, maximizing their survivability. Increases the user's resistance to all damage and adds Vitality scaling to all Lord Knight skills.</p></li>
-        <li class="skill"><strong>Sonic Wave</strong><p>Flexible Skill. The user swings their weapon violently, creating a shock wave that strikes a distant enemy. Inflicts <b class="kw kw-bleed">Bleeding</b> if the user has a Two-Handed Sword equipped, or <b class="kw kw-vuln">Vulnerable</b> if the user has a Two-Handed Spear equipped. Grants the user increased Movement Speed during Vanguard Stance, or inflicts <b class="kw kw-slow">Slow</b> during Warden Stance.</p></li>
-        <li class="skill"><strong>Shattering Strike</strong><p>Flexible Skill. The user dashes toward a distant enemy, delivering a precision blow with remarkable speed. If the user is wielding a Two-Handed Sword, the damage is treated as <b class="kw kw-bleed">Bleeding</b> damage. If the user is wielding a Two-Handed Spear, the damage is increased by <b class="kw kw-vuln">Vulnerable</b> Potency. During Vanguard Stance, the skill also inflicts <b class="kw kw-bleed">Bleeding</b>. During Warden Stance, it also inflicts <b class="kw kw-vuln">Vulnerable</b>.</p></li>
-        <li class="skill"><strong>Flourish</strong><p>Sword Skill. The user swings their weapon in a wide arc, tearing apart all enemies in the area. Any enemies struck receive the <b class="kw kw-bleed">Bleeding</b> Status. This skill gains Luck Scaling, plus scaling based on the active Stance. During Vanguard Stance, the damage is treated as <b class="kw kw-bleed">Bleeding</b> Damage. During Warden Stance, the <b class="kw kw-bleed">Bleeding</b> Status inflicted by this skill has doubled duration.</p></li>
-        <li class="skill"><strong>Storm Slash</strong><p>Sword Skill. The user delivers a flurry of wild slashes, dealing devastating damage to a single foe. This skill deals additional damage to <b class="kw kw-bleed">Bleeding</b> enemies, and scales with Luck and the user's Stance. Its cooldown is halved during Vanguard Stance, and grants the user the Endure status during Warden Stance.</p></li>
-        <li class="skill"><strong>Execute</strong><p>Sword Skill. Deals a final, fatal blow to the targeted enemy, consuming their <b class="kw kw-bleed">Bleeding</b> to deal a massive burst of damage. If the target is <b class="kw kw-bleed">Bleeding</b>, it ends and they take additional damage based on the strength of the <b class="kw kw-bleed">Bleeding</b> Status they had. If used during Vanguard Stance, Knight-level Sword skills have their cooldowns refreshed. If used during Warden Stance, it additionally stuns the target.</p></li>
-        <li class="skill"><strong>Phantom Thrust</strong><p>Spear Skill. Strikes a distant enemy with the user's spear, throwing them off balance and attempting to leave them <b class="kw kw-vuln">Vulnerable</b>. The skill's damage scales with the user's Dexterity, as well as the scaling granted by their Stance. Its damage is enhanced by the user's <b class="kw kw-vuln">Vulnerable</b> Potency if used during Vanguard Stance, and pulls the enemy to the user if used during Warden Stance.</p></li>
-        <li class="skill"><strong>Clashing Spiral</strong><p>Spear Skill. The user drives their spear into the target while spinning it, dealing exceptional damage to their person and their armor. Deals additional damage based on the user's <b class="kw kw-vuln">Vulnerable</b> Potency, and scales with the user's Dexterity and their Stance scaling. During Vanguard Stance, its cooldown is halved, and during Warden Stance, it deals additional damage based on the user's current HP.</p></li>
-        <li class="skill"><strong>Gatling Pierce</strong><p>Spear Skill. The user delivers a rapid flurry of stabs with their spear, dealing exceptional damage to the target and all enemies in the area around them. Targets suffering from the <b class="kw kw-vuln">Vulnerable</b> Status take additional damage. During Vanguard Stance, this skill refreshes the cooldowns of all Knight-level Spear skills. During Warden Stance, all enemies affected are also stunned.</p></li>
-      </ul>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-vuln">Vulnerable</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-stance" data-i18n="cls.t.stance">Stance</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Stances<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-stance" id="s-vanguard-stance">
+            <div class="sk-top"><strong>Vanguard Stance</strong><i class="sk-type">Stance</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Offensive stance: adds Hit and Agility scaling to all skills.</p>
+            <p class="sk-body">The user shifts into an offensive stance, optimizing their ability to deal damage. Increases the user's Hit Rate and adds Agility scaling to all Lord Knight skills. Requires a Two-Handed Weapon.</p>
+          </li>
+          <li class="skill-card sk-stance" id="s-warden-stance">
+            <div class="sk-top"><strong>Warden Stance</strong><i class="sk-type">Stance</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Defensive stance: adds damage reduction and Vitality scaling to all skills.</p>
+            <p class="sk-body">The user shifts into a defensive stance, maximizing their survivability. Increases the user's resistance to all damage and adds Vitality scaling to all Lord Knight skills.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">General Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-physical" id="s-sonic-wave">
+            <div class="sk-top"><strong>Sonic Wave</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Ranged shockwave with weapon- and stance-based status effects.</p>
+            <p class="sk-body">The user swings their weapon violently, creating a shock wave that strikes a distant enemy. Inflicts <b class="kw kw-bleed">Bleeding</b> if the user has a Two-Handed Sword equipped, or <b class="kw kw-vuln">Vulnerable</b> if the user has a Two-Handed Spear equipped. Grants the user increased Movement Speed during Vanguard Stance, or inflicts <b class="kw kw-slow">Slow</b> during Warden Stance.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-vanguard-stance">Vanguard Stance</a><a href="#s-warden-stance">Warden Stance</a></p>
+          </li>
+          <li class="skill-card sk-physical" id="s-shattering-strike">
+            <div class="sk-top"><strong>Shattering Strike</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Gap-closing strike with weapon- and stance-based effects.</p>
+            <p class="sk-body">The user dashes toward a distant enemy, delivering a precision blow with remarkable speed. If the user is wielding a Two-Handed Sword, the damage is treated as <b class="kw kw-bleed">Bleeding</b> damage. If the user is wielding a Two-Handed Spear, the damage is increased by <b class="kw kw-vuln">Vulnerable</b> Potency. During Vanguard Stance, the skill also inflicts <b class="kw kw-bleed">Bleeding</b>. During Warden Stance, it also inflicts <b class="kw kw-vuln">Vulnerable</b>.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-vanguard-stance">Vanguard Stance</a><a href="#s-warden-stance">Warden Stance</a></p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Sword Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-physical" id="s-flourish">
+            <div class="sk-top"><strong>Flourish</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">AoE slash that always inflicts <b class="kw kw-bleed">Bleeding</b>.</p>
+            <p class="sk-body">The user swings their weapon in a wide arc, tearing apart all enemies in the area. Any enemies struck receive the <b class="kw kw-bleed">Bleeding</b> Status. This skill gains Luck Scaling, plus scaling based on the active Stance. During Vanguard Stance, the damage is treated as <b class="kw kw-bleed">Bleeding</b> Damage. During Warden Stance, the <b class="kw kw-bleed">Bleeding</b> Status inflicted by this skill has doubled duration.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-vanguard-stance">Vanguard Stance</a><a href="#s-warden-stance">Warden Stance</a></p>
+          </li>
+          <li class="skill-card sk-physical" id="s-storm-slash">
+            <div class="sk-top"><strong>Storm Slash</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Single-target flurry with bonus damage against <b class="kw kw-bleed">Bleeding</b> enemies.</p>
+            <p class="sk-body">The user delivers a flurry of wild slashes, dealing devastating damage to a single foe. This skill deals additional damage to <b class="kw kw-bleed">Bleeding</b> enemies, and scales with Luck and the user's Stance. Its cooldown is halved during Vanguard Stance, and grants the user the Endure status during Warden Stance.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-vanguard-stance">Vanguard Stance</a><a href="#s-warden-stance">Warden Stance</a></p>
+          </li>
+          <li class="skill-card sk-physical" id="s-execute">
+            <div class="sk-top"><strong>Execute</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Consumes the target's <b class="kw kw-bleed">Bleeding</b> for a massive damage burst.</p>
+            <p class="sk-body">Deals a final, fatal blow to the targeted enemy, consuming their <b class="kw kw-bleed">Bleeding</b> to deal a massive burst of damage. If the target is <b class="kw kw-bleed">Bleeding</b>, it ends and they take additional damage based on the strength of the <b class="kw kw-bleed">Bleeding</b> Status they had. If used during Vanguard Stance, Knight-level Sword skills have their cooldowns refreshed. If used during Warden Stance, it additionally stuns the target.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-vanguard-stance">Vanguard Stance</a><a href="#s-warden-stance">Warden Stance</a></p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Spear Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-physical" id="s-phantom-thrust">
+            <div class="sk-top"><strong>Phantom Thrust</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Ranged jab that inflicts <b class="kw kw-vuln">Vulnerable</b>.</p>
+            <p class="sk-body">Strikes a distant enemy with the user's spear, throwing them off balance and attempting to leave them <b class="kw kw-vuln">Vulnerable</b>. The skill's damage scales with the user's Dexterity, as well as the scaling granted by their Stance. Its damage is enhanced by the user's <b class="kw kw-vuln">Vulnerable</b> Potency if used during Vanguard Stance, and pulls the enemy to the user if used during Warden Stance.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-vanguard-stance">Vanguard Stance</a><a href="#s-warden-stance">Warden Stance</a></p>
+          </li>
+          <li class="skill-card sk-physical" id="s-clashing-spiral">
+            <div class="sk-top"><strong>Clashing Spiral</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Piercing strike scaling with <b class="kw kw-vuln">Vulnerable</b> Potency.</p>
+            <p class="sk-body">The user drives their spear into the target while spinning it, dealing exceptional damage to their person and their armor. Deals additional damage based on the user's <b class="kw kw-vuln">Vulnerable</b> Potency, and scales with the user's Dexterity and their Stance scaling.</p>
+            <p class="sk-body">During Vanguard Stance, its cooldown is halved, and during Warden Stance, it deals additional damage based on the user's current HP.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-vanguard-stance">Vanguard Stance</a><a href="#s-warden-stance">Warden Stance</a></p>
+          </li>
+          <li class="skill-card sk-physical" id="s-gatling-pierce">
+            <div class="sk-top"><strong>Gatling Pierce</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">AoE stab flurry with heavy bonus damage against <b class="kw kw-vuln">Vulnerable</b> enemies.</p>
+            <p class="sk-body">The user delivers a rapid flurry of stabs with their spear, dealing exceptional damage to the target and all enemies in the area around them. Targets suffering from the <b class="kw kw-vuln">Vulnerable</b> Status take additional damage. During Vanguard Stance, this skill refreshes the cooldowns of all Knight-level Spear skills. During Warden Stance, all enemies affected are also stunned.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-vanguard-stance">Vanguard Stance</a><a href="#s-warden-stance">Warden Stance</a></p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

@@ -176,28 +176,87 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-burn">Burning</span><span class="kw-frozen">Frozen</span><span class="kw-sleep">Sleep</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Elemental Mastery</strong><p>Passive. Increases the damage dealt and reduces the damage received from attacks of the Fire, Water, Wind, and Earth properties.</p></li>
-        <li class="skill"><strong>Fire Wall</strong><p>Creates a wall of fire that will inflict minor damage and knock back enemies trying to pass through it. Each hit has a chance of inflicting the <b class="kw kw-burn">Burning</b> status.</p></li>
-        <li class="skill"><strong>Inferno</strong><p>Summons a blazing inferno at the targeted location, dealing Fire property damage over time to all enemies within. The damage is increased if the target is <b class="kw kw-burn">Burning</b>.</p></li>
-        <li class="skill"><strong>Chilling Frost</strong><p>Creates a blast of cold air at the targeted location, dealing minor Water property damage and attempting to <b class="kw kw-frozen">Chill</b> all enemies in a wide area. Enemies that are already Chilled have a chance of being <b class="kw kw-frozen">Frozen</b>.</p></li>
-        <li class="skill"><strong>Deluge</strong><p>Summons a raging torrent at the targeted location, dealing Water property damage over time to all enemies within. The damage is increased if the target is Chilled.</p></li>
-        <li class="skill"><strong>Tailwind</strong><p>Calls an enchanted wind to follow the party, increasing all party members' Movement Speed and Flee for the duration.</p></li>
-        <li class="skill"><strong>Whirlwind</strong><p>Summons a fierce gale at the targeted location, dealing Wind property damage over time to enemies within. The damage is increased if the caster is under the Tailwind status.</p></li>
-        <li class="skill"><strong>Transposition Spell</strong><p>Instantly teleports the user to the targeted location. The user must have an unobstructed line of sight to the target or the skill will fail.</p></li>
-        <li class="skill"><strong>Spell Eater</strong><p>For two seconds, the user enters a defensive stance that will nullify all single-target magic aimed at them. If this skill successfully nullifies a spell, the user regenerates a small amount of SP, and the next spell they cast will be instant.</p></li>
-        <li class="skill"><strong>Antimagic Field</strong><p>Creates a null zone of magic, massively reducing the magic damage taken by all allies and enemies standing inside. Affected targets will also be immune to the <b class="kw kw-burn">Burning</b>, Chilled, and <b class="kw kw-sleep">Sleep</b> statuses.</p></li>
-        <li class="skill"><strong>Endow Weapon</strong><p>Endows the target's weapon with one of the natural elements, making all physical attacks take that element and increasing the damage of magic of the same. Requires a catalyst crafted at the Sage Castle in Juno to be used above level 1. At level 1, the spell gives a &quot;Neutral Endow,&quot; forcing the target's weapon to be Neutral property and blocking all other attempts at changing their weapon property for the duration.</p></li>
-        <li class="skill"><strong>Endow Armor</strong><p>Endows the target's armor with one of the natural elements, reducing all damage they take from that element considerably, but also increasing the damage they take of its opposite. Requires a catalyst crafted at the Sage Castle in Juno to be used above level 1. At level 1, the spell gives a &quot;Neutral Endow,&quot; forcing the target's armor to be Neutral property and blocking all other attempts at changing their armor property for the duration.</p></li>
-      </ul>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-burn">Burning</span><span class="kw-frozen">Frozen</span><span class="kw-sleep">Sleep</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-magic" data-i18n="cls.t.magic">Magic</span><span class="sk-support" data-i18n="cls.t.support">Support</span><span class="sk-passive" data-i18n="cls.t.passive">Passive</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Elemental Skills<span>7 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-passive" id="s-elemental-mastery">
+            <div class="sk-top"><strong>Elemental Mastery</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Improves damage caused by and resistance to Fire, Water, Wind, and Earth damage.</p>
+            <p class="sk-body">Increases the damage dealt and reduces the damage received from attacks of the Fire, Water, Wind, and Earth properties.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-tailwind">
+            <div class="sk-top"><strong>Tailwind</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Increases the party's movement speed and Flee.</p>
+            <p class="sk-body">Calls an enchanted wind to follow the party, increasing all party members' Movement Speed and Flee for the duration.</p>
+          </li>
+          <li class="skill-card sk-magic" id="s-whirlwind">
+            <div class="sk-top"><strong>Whirlwind</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Summons a violent, persistent gale that does Wind damage over time to an area.</p>
+            <p class="sk-body">Summons a fierce gale at the targeted location, dealing Wind property damage over time to enemies within. The damage is increased if the caster is under the Tailwind status.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-tailwind">Tailwind</a></p>
+          </li>
+          <li class="skill-card sk-magic" id="s-chilling-frost">
+            <div class="sk-top"><strong>Chilling Frost</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Flash-freezes an area, Chilling or Freezing already chilled enemies.</p>
+            <p class="sk-body">Creates a blast of cold air at the targeted location, dealing minor Water property damage and attempting to <b class="kw kw-frozen">Chill</b> all enemies in a wide area. Enemies that are already Chilled have a chance of being <b class="kw kw-frozen">Frozen</b>.</p>
+          </li>
+          <li class="skill-card sk-magic" id="s-deluge">
+            <div class="sk-top"><strong>Deluge</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Summons a persistent torrent of water, that does Water damage over time to an area.</p>
+            <p class="sk-body">Summons a raging torrent at the targeted location, dealing Water property damage over time to all enemies within. The damage is increased if the target is Chilled.</p>
+          </li>
+          <li class="skill-card sk-magic" id="s-fire-wall">
+            <div class="sk-top"><strong>Fire Wall</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Creates a wall of intense flame that prevents movement through it and inflicts Burn on contact.</p>
+            <p class="sk-body">Creates a wall of fire that will inflict minor damage and knock back enemies trying to pass through it. Each hit has a chance of inflicting the <b class="kw kw-burn">Burning</b> status.</p>
+          </li>
+          <li class="skill-card sk-magic" id="s-inferno">
+            <div class="sk-top"><strong>Inferno</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Summons a raging inferno that does Fire damage over time to an area.</p>
+            <p class="sk-body">Summons a blazing inferno at the targeted location, dealing Fire property damage over time to all enemies within. The damage is increased if the target is <b class="kw kw-burn">Burning</b>.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Utility Skills<span>5 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-support" id="s-transposition-spell">
+            <div class="sk-top"><strong>Transposition Spell</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Instantly teleports the user to a targeted cell in sight.</p>
+            <p class="sk-body">Instantly teleports the user to the targeted location. The user must have an unobstructed line of sight to the target or the skill will fail.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-spell-eater">
+            <div class="sk-top"><strong>Spell Eater</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Casts a counter-spell that consumes incoming magic.</p>
+            <p class="sk-body">For two seconds, the user enters a defensive stance that will nullify all single-target magic aimed at them. If this skill successfully nullifies a spell, the user regenerates a small amount of SP, and the next spell they cast will be instant.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-antimagic-field">
+            <div class="sk-top"><strong>Antimagic Field</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Enchants the ground with a field that massively reduces incoming magical damage.</p>
+            <p class="sk-body">Creates a null zone of magic, massively reducing the magic damage taken by all allies and enemies standing inside. Affected targets will also be immune to the <b class="kw kw-burn">Burning</b>, Chilled, and <b class="kw kw-sleep">Sleep</b> statuses.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-endow-weapon">
+            <div class="sk-top"><strong>Endow Weapon</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Endows the target's weapon, changing the elemental property of their attacks and enhancing magic of that element.</p>
+            <p class="sk-body">Endows the target's weapon with one of the natural elements, making all physical attacks take that element and increasing the damage of magic of the same. Requires a catalyst crafted at the Sage Castle in Juno to be used above level 1. At level 1, the spell gives a &quot;Neutral Endow,&quot; forcing the target's weapon to be Neutral property and blocking all other attempts at changing their weapon property for the duration.</p>
+          </li>
+          <li class="skill-card sk-magic" id="s-endow-armor">
+            <div class="sk-top"><strong>Endow Armor</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Endows the target's armor with an element, increasing resistance to that element while reducing resistance to the opposite element.</p>
+            <p class="sk-body">Endows the target's armor with one of the natural elements, reducing all damage they take from that element considerably, but also increasing the damage they take of its opposite. Requires a catalyst crafted at the Sage Castle in Juno to be used above level 1. At level 1, the spell gives a &quot;Neutral Endow,&quot; forcing the target's armor to be Neutral property and blocking all other attempts at changing their armor property for the duration.</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

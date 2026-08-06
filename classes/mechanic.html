@@ -159,7 +159,7 @@
         <p class="muted">Mechanic is the alternative advancement option for Blacksmiths. While the Mastersmith focuses their efforts on drawing the maximum possible power out of the equipment they and their friends use, the Mechanic turns to creating brand new tools to aid them in combat.</p>
         <p class="muted">This manifests in two very different build paths. The first is the construction of the Madogear, a massive suit of power armor that grants the wearer greatly enhanced physical abilities. The Madogear gives access to a wide variety of skills from single target heavy damage, to ranged attacks, to even defensive shielding to protect them from harm. The user also has the option of pushing the Madogear into overdrive, greatly increasing its capabilities at the cost of overheating and dealing constant damage to themselves over time.</p>
         <p class="muted">The second build path revolves around the creation of support drones. These drones fight alongside the user, attacking and using skills at their own discretion, while also providing a passive bonus to their summoner while alive. These are coupled with a pair of Command skills, allowing the Mechanic to push their drones past their ordinary limits for short bursts of time to exhibit greater combat effectiveness.</p>
-        <p class="muted">Unlike the Mastersmith, the Mechanic gains no new abilities that generate Extort Stacks, and virtually all of their abilities cost Extort Stacks to use. But things are not so dire as they appear: while wearing a Madogear, all Madogear skills have their Extort costs reduced to 0. Similarly, while the user is NOT wearing a Madogear, all Drone skills have their Extort costs waived. This allows Mechanics to splash into both trees if they so wish, while rewarding those that dedicate fully to one side.</p>
+        <p class="muted">Unlike the Mastersmith, the Mechanic gains no new abilities that generate <b class="mech">Extort Stacks</b>, and virtually all of their abilities cost <b class="mech">Extort Stacks</b> to use. But things are not so dire as they appear: while wearing a Madogear, all Madogear skills have their Extort costs reduced to 0. Similarly, while the user is NOT wearing a Madogear, all Drone skills have their Extort costs waived. This allows Mechanics to splash into both trees if they so wish, while rewarding those that dedicate fully to one side.</p>
       </div>
       <div class="portrait">
         <div class="sex-toggle" role="group" aria-label="Character art"><button type="button" data-src="../assets/img/classes/mechanic-male.webp" data-alt="Mechanic male" aria-pressed="true" data-i18n="cls.male">Male</button><button type="button" data-src="../assets/img/classes/mechanic-female.webp" data-alt="Mechanic female" aria-pressed="false" data-i18n="cls.female">Female</button></div>
@@ -175,26 +175,76 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-burn">Burning</span><span class="kw-blind">Blind</span><span class="kw-vuln">Vulnerable</span><span class="kw-stun">Stun</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Madogear Construction</strong><p>Skill in the construction of Madogear, a mechanical suit of power armor that enhances the user's abilities. Each level increases the effectiveness of Madogear skills and reduces the amount of damage taken from the <b class="kw kw-burn">Burning</b> status. These bonuses only apply while the Madogear is equipped. While it is equipped, the Extort Cost of all Madogear skills is removed.</p></li>
-        <li class="skill"><strong>Machine Slam</strong><p>Madogear Skill. The user leverages the immense strength of the Madogear to crush the targeted enemy, dealing massive damage in an area around them. The damage of this skill scales with the user's Vitality. During Overdrive, this skill has a reduced Cooldown and additionally inflicts <b class="kw kw-stun">Stun</b>.</p></li>
-        <li class="skill"><strong>Arm Cannon</strong><p>Madogear Skill. The user fires a barrage from the Madogear's cannon, dealing repeated hits to a single target. Deals additional damage to targets that are <b class="kw kw-stun">Stunned</b> or <b class="kw kw-stun">Staggered</b>, and inflicts the <b class="kw kw-stun">Staggered</b> status. The damage of this skill scales with the user's Vitality. During Overdrive, this skill has a reduced Cooldown and additionally inflicts <b class="kw kw-vuln">Vulnerable</b> and <b class="kw kw-burn">Severe Burning</b>.</p></li>
-        <li class="skill"><strong>Active Shielding</strong><p>Madogear Skill. The user activates the defensive shielding of the Madogear, creating a protective Barrier that blocks all damage received for a short duration. The Barrier's HP is based on the Madogear Construction level of the user and the current amount of Extort Stacks they have. If a Madogear is currently equipped, the Extort stacks are counted, but they are not consumed. During Overdrive, this skill always treats the user as having five Extort Stacks.</p></li>
-        <li class="skill"><strong>Overdrive</strong><p>Madogear Skill. The user forces the Madogear into overdrive, increasing its performance but causing it to overheat to a dangerous degree. Instantly refreshes the cooldowns of all Madogear Skills when activated, then gives them bonus effects for a short duration, but continuously inflicts <b class="kw kw-burn">Burning</b> Damage on the user until its duration expires.</p></li>
-        <li class="skill"><strong>Support Unit Construction</strong><p>Skill in the construction and deployment of support drones. Each level increases the base stats of constructed drones and enhances the effects of supporting Protocol skills. While a Madogear is NOT equipped, the Extort Cost of all Drone skills is removed. Support Drones inherit their summoner's Hit Rate and half of their Crit Rate, and are not targeted for attacks by monsters.</p></li>
-        <li class="skill"><strong>Deploy Combat Drone</strong><p>Drone Skill. Deploys a mobile combat drone to fight alongside the user. Its stats are influenced by the user's Base Level and stats, and the user's level of Support Unit Construction. Combat Drones are melee combatants that regularly inflict the <b class="kw kw-burn">Severe Burning</b> status. While a Combat Drone is active, its master gains a bonus to their ASPD Limit.</p></li>
-        <li class="skill"><strong>Deploy Support Drone</strong><p>Drone Skill. Deploys a mobile support drone to fight alongside the user. Its stats are influenced by the user's Base Level and stats, and the user's level of Support Unit Construction. Support Drones are ranged combatants that regularly inflict the <b class="kw kw-blind">Blind</b> status on enemies they attack. While a Support Drone is active, its master gains a bonus to their Defense Pierce.</p></li>
-        <li class="skill"><strong>Attack Protocol</strong><p>Drone Skill. Issues an offensive command to all currently active drones, causing them to enter a berserk state where they gain new skills. At the same time, all allies in the area of the user have their Attack increased.</p></li>
-        <li class="skill"><strong>Defense Protocol</strong><p>Drone Skill. Issues a defensive command to all currently active drones, causing them to enter a protective state where they gain new skills. At the same time, all allies in the area of the user receive a small Barrier.</p></li>
-      </ul>
+      <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Barrier</span><span>Extort Stacks</span></div>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-burn">Burning</span><span class="kw-blind">Blind</span><span class="kw-vuln">Vulnerable</span><span class="kw-stun">Stun</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-summon" data-i18n="cls.t.summon">Summon</span><span class="sk-passive" data-i18n="cls.t.passive">Passive</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Madogear Skills<span>5 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-passive" id="s-madogear-construction">
+            <div class="sk-top"><strong>Madogear Construction</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Boosts Madogear skills and waives their Extort costs while suited.</p>
+            <p class="sk-body">Skill in the construction of Madogear, a mechanical suit of power armor that enhances the user's abilities. Each level increases the effectiveness of Madogear skills and reduces the amount of damage taken from the <b class="kw kw-burn">Burning</b> status. These bonuses only apply while the Madogear is equipped. While it is equipped, the Extort Cost of all Madogear skills is removed.</p>
+          </li>
+          <li class="skill-card sk-summon" id="s-machine-slam">
+            <div class="sk-top"><strong>Machine Slam</strong><i class="sk-type">Madogear</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Massive AoE crush.</p>
+            <p class="sk-body">The user leverages the immense strength of the Madogear to crush the targeted enemy, dealing massive damage in an area around them. The damage of this skill scales with the user's Vitality. During Overdrive, this skill has a reduced Cooldown and additionally inflicts <b class="kw kw-stun">Stun</b>.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-overdrive">Overdrive</a></p>
+          </li>
+          <li class="skill-card sk-summon" id="s-arm-cannon">
+            <div class="sk-top"><strong>Arm Cannon</strong><i class="sk-type">Madogear</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Ranged cannon blast, strongest against <b class="kw kw-stun">Stunned</b> targets.</p>
+            <p class="sk-body">The user fires a barrage from the Madogear's cannon, dealing repeated hits to a single target. Deals additional damage to targets that are <b class="kw kw-stun">Stunned</b> or <b class="kw kw-stun">Staggered</b>, and inflicts the <b class="kw kw-stun">Staggered</b> status. The damage of this skill scales with the user's Vitality. During Overdrive, this skill has a reduced Cooldown and additionally inflicts <b class="kw kw-vuln">Vulnerable</b> and <b class="kw kw-burn">Severe Burning</b>.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-overdrive">Overdrive</a></p>
+          </li>
+          <li class="skill-card sk-summon" id="s-active-shielding">
+            <div class="sk-top"><strong>Active Shielding</strong><i class="sk-type">Madogear</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Extort-fueled defensive <b class="mech">Barrier</b>.</p>
+            <p class="sk-body">The user activates the defensive shielding of the Madogear, creating a protective <b class="mech">Barrier</b> that blocks all damage received for a short duration. The <b class="mech">Barrier</b>'s HP is based on the Madogear Construction level of the user and the current amount of <b class="mech">Extort Stacks</b> they have. If a Madogear is currently equipped, the Extort stacks are counted, but they are not consumed. During Overdrive, this skill always treats the user as having five <b class="mech">Extort Stacks</b>.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-madogear-construction">Madogear Construction</a><a href="#s-overdrive">Overdrive</a></p>
+          </li>
+          <li class="skill-card sk-summon" id="s-overdrive">
+            <div class="sk-top"><strong>Overdrive</strong><i class="sk-type">Madogear</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Refreshes and empowers Madogear skills at the cost of self-<b class="kw kw-burn">Burning</b>.</p>
+            <p class="sk-body">The user forces the Madogear into overdrive, increasing its performance but causing it to overheat to a dangerous degree. Instantly refreshes the cooldowns of all Madogear Skills when activated, then gives them bonus effects for a short duration, but continuously inflicts <b class="kw kw-burn">Burning</b> Damage on the user until its duration expires.</p>
+            <ul class="sk-options"><li><b>Support Unit Construction</b>Skill in the construction and deployment of support drones. Each level increases the base stats of constructed drones and enhances the effects of supporting Protocol skills. While a Madogear is NOT equipped, the Extort Cost of all Drone skills is removed. Support Drones inherit their summoner's Hit Rate and half of their Crit Rate, and are not targeted for attacks by monsters.</li></ul>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Drone Skills<span>4 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-summon" id="s-deploy-combat-drone">
+            <div class="sk-top"><strong>Deploy Combat Drone</strong><i class="sk-type">Drone</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Melee drone that inflicts <b class="kw kw-burn">Severe Burning</b>; grants ASPD.</p>
+            <p class="sk-body">Deploys a mobile combat drone to fight alongside the user. Its stats are influenced by the user's Base Level and stats, and the user's level of Support Unit Construction. Combat Drones are melee combatants that regularly inflict the <b class="kw kw-burn">Severe Burning</b> status. While a Combat Drone is active, its master gains a bonus to their ASPD Limit.</p>
+          </li>
+          <li class="skill-card sk-summon" id="s-deploy-support-drone">
+            <div class="sk-top"><strong>Deploy Support Drone</strong><i class="sk-type">Drone</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Ranged drone that inflicts <b class="kw kw-blind">Blind</b>; grants Defense Pierce.</p>
+            <p class="sk-body">Deploys a mobile support drone to fight alongside the user. Its stats are influenced by the user's Base Level and stats, and the user's level of Support Unit Construction. Support Drones are ranged combatants that regularly inflict the <b class="kw kw-blind">Blind</b> status on enemies they attack. While a Support Drone is active, its master gains a bonus to their Defense Pierce.</p>
+          </li>
+          <li class="skill-card sk-summon" id="s-attack-protocol">
+            <div class="sk-top"><strong>Attack Protocol</strong><i class="sk-type">Drone</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Sends drones berserk and buffs allies' offense.</p>
+            <p class="sk-body">Issues an offensive command to all currently active drones, causing them to enter a berserk state where they gain new skills. At the same time, all allies in the area of the user have their Attack increased.</p>
+          </li>
+          <li class="skill-card sk-summon" id="s-defense-protocol">
+            <div class="sk-top"><strong>Defense Protocol</strong><i class="sk-type">Drone</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Puts drones on defense and shields allies.</p>
+            <p class="sk-body">Issues a defensive command to all currently active drones, causing them to enter a protective state where they gain new skills. At the same time, all allies in the area of the user receive a small <b class="mech">Barrier</b>.</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

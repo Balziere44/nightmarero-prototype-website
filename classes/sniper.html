@@ -176,27 +176,90 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-blind">Blind</span><span class="kw-vuln">Vulnerable</span><span class="kw-stun">Stun</span><span class="kw-sleep">Sleep</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Sniper's Resolve</strong><p>The user steels themselves, determined to keep fighting no matter the odds. For a short time, the user takes reduced damage from all attacks based on the number of Preparation Counters they have. If they already have three Preparation Counters when casting this skill, most damaging Status Effects are removed.</p></li>
-        <li class="skill"><strong>Tactical Retreat</strong><p>The user instantly jumps to the targeted location, moving them out of harm's way, then refreshes all active Preparation Counters. If the user already had three Preparation Counters before casting, all enemies around their previous location are also <b class="kw kw-slow">Slowed</b>.</p></li>
-        <li class="skill"><strong>Called Shot</strong><p>The user marks a target for elimination. While marked, the user deals more damage to them and takes less damage from them, but all attacks against unmarked targets miss. If the user has three Preparation Counters when casting this skill, the marked target is also inflicted with the <b class="kw kw-vuln">Vulnerable</b> Status. Otherwise, they gain Preparation Counters.</p></li>
-        <li class="skill"><strong>Shrouding Shot</strong><p>The user fires an arrow cloaked in dark fog to inhibit the target's vision. Deals damage to a single target and generates one Preparation Counter. Attempts to inflict the <b class="kw kw-blind">Blind</b> Status, with an increased duration for each Preparation Counter the user has. If the user already had three Preparation Counters, casting this skill refreshes the CD of Hammer Shot.</p></li>
-        <li class="skill"><strong>Hammer Shot</strong><p>Fires an arrow with tremendous force, keeping the target from reaching the user. Deals Ranged Physical damage to a single target and generates one Preparation Counter, then knocks the target back. The knockback distance is increased for each Preparation Counter the user has. If the user already had three Preparation Counters, this skill refreshes the CD of Razor Shot.</p></li>
-        <li class="skill"><strong>Razor Shot</strong><p>Fires a serrated arrow at the target, slicing through flesh to cause heavy bleeding. Deals Ranged Physical damage to a single target and generates one Preparation Counter. Attempts to inflict the <b class="kw kw-bleed">Internal Bleeding</b> Status, with an increased duration for each Preparation Counter the user has. If the user had three, it refreshes the duration of Piercing Shot.</p></li>
-        <li class="skill"><strong>Piercing Shot</strong><p>Fires a tapered arrow at the target, intended to pierce through even the toughest armor. Deals Ranged Physical damage to a single target and generates one Preparation Counter. Attempts to inflict the <b class="kw kw-vuln">Vulnerable</b> Status, with an increased duration for each Preparation Counter the user has. If the user had three, it refreshes the CD of Shrouding Shot.</p></li>
-        <li class="skill"><strong>Arrow Storm</strong><p>The user fires a massive barrage of arrows at the target, striking them and all enemies in a wide area around them for tremendous damage. All enemies struck are left <b class="kw kw-slow">Slow</b> and <b class="kw kw-vuln">Vulnerable</b>. For each Preparation Counter the user has, the Cast Time of this skill is greatly reduced, and its damage is greatly increased. After casting, all Preparation Counters are lost.</p></li>
-        <li class="skill"><strong>Heaven's Arrow</strong><p>The user fires an enormous arrow up into the sky, arcing it to fall on their foes from directly overhead. All enemies struck are <b class="kw kw-stun">Stunned</b>. For each Preparation Counter the user has, the Cast Time of this skill is greatly reduced, and its damage is greatly increased. After casting, all Preparation Counters are lost.</p></li>
-        <li class="skill"><strong>Explosive Barrage</strong><p>The user fires an arrow strapped with a powerful explosive that detonates on impact, dealing tremendous damage to the target and all enemies around them. All enemies struck are left <b class="kw kw-blind">Blind</b> and <b class="kw kw-burn">Burning</b>. For each Preparation Counter the user has, the Cast Time of this skill is greatly reduced, and its damage is greatly increased. After casting, all Preparation Counters are lost.</p></li>
-        <li class="skill"><strong>Numbing Volley</strong><p>The user fires a volley of arrows that disperse a potent numbing toxin, dealing damage and inflicting the <b class="kw kw-sleep">Sleep</b> status on all enemies in the area. For each Preparation Counter the user has, the Cast Time of this skill is greatly reduced, and its damage is greatly increased. After casting, all Preparation Counters are lost.</p></li>
-      </ul>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-blind">Blind</span><span class="kw-vuln">Vulnerable</span><span class="kw-stun">Stun</span><span class="kw-sleep">Sleep</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-support" data-i18n="cls.t.support">Support</span><span class="sk-utility" data-i18n="cls.t.utility">Utility</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Utility Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-support" id="s-sniper-s-resolve">
+            <div class="sk-top"><strong>Sniper's Resolve</strong><i class="sk-type">Defensive</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Massive damage reduction per Preparation Counter.</p>
+            <p class="sk-body">The user steels themselves, determined to keep fighting no matter the odds. For a short time, the user takes reduced damage from all attacks based on the number of Preparation Counters they have. If they already have three Preparation Counters when casting this skill, most damaging Status Effects are removed.</p>
+          </li>
+          <li class="skill-card sk-utility" id="s-tactical-retreat">
+            <div class="sk-top"><strong>Tactical Retreat</strong><i class="sk-type">Movement</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Repositions without sacrificing Preparation Counters.</p>
+            <p class="sk-body">The user instantly jumps to the targeted location, moving them out of harm's way, then refreshes all active Preparation Counters. If the user already had three Preparation Counters before casting, all enemies around their previous location are also <b class="kw kw-slow">Slowed</b>.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-called-shot">
+            <div class="sk-top"><strong>Called Shot</strong><i class="sk-type">Debuff</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Marks one enemy for maximum damage dealt and minimum taken.</p>
+            <p class="sk-body">The user marks a target for elimination. While marked, the user deals more damage to them and takes less damage from them, but all attacks against unmarked targets miss. If the user has three Preparation Counters when casting this skill, the marked target is also inflicted with the <b class="kw kw-vuln">Vulnerable</b> Status. Otherwise, they gain Preparation Counters.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Opener Skills<span>4 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-physical" id="s-shrouding-shot">
+            <div class="sk-top"><strong>Shrouding Shot</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Generates Preparation; inflicts <b class="kw kw-blind">Blind</b>.</p>
+            <p class="sk-body">The user fires an arrow cloaked in dark fog to inhibit the target's vision. Deals damage to a single target and generates one Preparation Counter. Attempts to inflict the <b class="kw kw-blind">Blind</b> Status, with an increased duration for each Preparation Counter the user has. If the user already had three Preparation Counters, casting this skill refreshes the CD of Hammer Shot.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-hammer-shot">Hammer Shot</a></p>
+          </li>
+          <li class="skill-card sk-physical" id="s-hammer-shot">
+            <div class="sk-top"><strong>Hammer Shot</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Generates Preparation; knocks the target back.</p>
+            <p class="sk-body">Fires an arrow with tremendous force, keeping the target from reaching the user. Deals Ranged Physical damage to a single target and generates one Preparation Counter, then knocks the target back. The knockback distance is increased for each Preparation Counter the user has. If the user already had three Preparation Counters, this skill refreshes the CD of Razor Shot.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-razor-shot">Razor Shot</a></p>
+          </li>
+          <li class="skill-card sk-physical" id="s-razor-shot">
+            <div class="sk-top"><strong>Razor Shot</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Generates Preparation; inflicts <b class="kw kw-bleed">Internal Bleeding</b>.</p>
+            <p class="sk-body">Fires a serrated arrow at the target, slicing through flesh to cause heavy bleeding. Deals Ranged Physical damage to a single target and generates one Preparation Counter. Attempts to inflict the <b class="kw kw-bleed">Internal Bleeding</b> Status, with an increased duration for each Preparation Counter the user has. If the user had three, it refreshes the duration of Piercing Shot.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-piercing-shot">Piercing Shot</a></p>
+          </li>
+          <li class="skill-card sk-physical" id="s-piercing-shot">
+            <div class="sk-top"><strong>Piercing Shot</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Generates Preparation; inflicts <b class="kw kw-vuln">Vulnerable</b>.</p>
+            <p class="sk-body">Fires a tapered arrow at the target, intended to pierce through even the toughest armor. Deals Ranged Physical damage to a single target and generates one Preparation Counter. Attempts to inflict the <b class="kw kw-vuln">Vulnerable</b> Status, with an increased duration for each Preparation Counter the user has. If the user had three, it refreshes the CD of Shrouding Shot.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-shrouding-shot">Shrouding Shot</a></p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Finisher Skills<span>4 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-physical" id="s-arrow-storm">
+            <div class="sk-top"><strong>Arrow Storm</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Preparation-fueled AoE that Slows and exposes all targets.</p>
+            <p class="sk-body">The user fires a massive barrage of arrows at the target, striking them and all enemies in a wide area around them for tremendous damage. All enemies struck are left <b class="kw kw-slow">Slow</b> and <b class="kw kw-vuln">Vulnerable</b>. For each Preparation Counter the user has, the Cast Time of this skill is greatly reduced, and its damage is greatly increased. After casting, all Preparation Counters are lost.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-heaven-s-arrow">
+            <div class="sk-top"><strong>Heaven's Arrow</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Preparation-fueled AoE that can <b class="kw kw-stun">Stun</b>.</p>
+            <p class="sk-body">The user fires an enormous arrow up into the sky, arcing it to fall on their foes from directly overhead. All enemies struck are <b class="kw kw-stun">Stunned</b>. For each Preparation Counter the user has, the Cast Time of this skill is greatly reduced, and its damage is greatly increased. After casting, all Preparation Counters are lost.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-explosive-barrage">
+            <div class="sk-top"><strong>Explosive Barrage</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Preparation-fueled AoE that Burns and Blinds.</p>
+            <p class="sk-body">The user fires an arrow strapped with a powerful explosive that detonates on impact, dealing tremendous damage to the target and all enemies around them. All enemies struck are left <b class="kw kw-blind">Blind</b> and <b class="kw kw-burn">Burning</b>. For each Preparation Counter the user has, the Cast Time of this skill is greatly reduced, and its damage is greatly increased. After casting, all Preparation Counters are lost.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-numbing-volley">
+            <div class="sk-top"><strong>Numbing Volley</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Preparation-fueled AoE that can put enemies to <b class="kw kw-sleep">Sleep</b>.</p>
+            <p class="sk-body">The user fires a volley of arrows that disperse a potent numbing toxin, dealing damage and inflicting the <b class="kw kw-sleep">Sleep</b> status on all enemies in the area. For each Preparation Counter the user has, the Cast Time of this skill is greatly reduced, and its damage is greatly increased. After casting, all Preparation Counters are lost.</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

@@ -157,9 +157,9 @@
           <span class="tag">Acolyte line</span>
         </div>
         <p class="muted">Champion is the primary advancement option for the Monk. While Monks found themselves with the option to dedicate themselves to either Spiritual or Combo skills, the Champion seeks to marry these two skill branches together into a perfect harmony.</p>
-        <p class="muted">As with Monk before it, Champion has two primary skill branches. The first is Combo skills, which either repeat rapidly if under the Iron Fists status, or are guaranteed to be Critical if under the Discipline status. These are matched by the Spirit skills, which similarly gain reduced cooldowns while under the Discipline Status, and inflict various status effects while under the Iron Fists Status.</p>
-        <p class="muted">Linking these two disparate branches together are two support skills. One is Unburden, stripping the user's Iron Fists and Discipline statuses to heal and recover SP, depending on which status was consumed. This becomes a powerful sustain option when combined with the other skill, Zen, which grants the user both the Iron Fists and the Discipline Status simultaneously.</p>
-        <p class="muted">The final two skills are what everyone who plays Monk inevitably asks about. Unbreakable Resolve consumes the user's remaining SP to grant themselves a powerful damage reduction buff, while Guillotine Fist consumes the user's remaining SP to deal unbelievable damage to a single target. Both of these skills gain additional effects based on which of Iron Fists or Discipline are active, and thanks to Zen, are capable of benefiting from both.</p>
+        <p class="muted">As with Monk before it, Champion has two primary skill branches. The first is Combo skills, which either repeat rapidly if under the <b class="mech">Iron Fists</b> status, or are guaranteed to be Critical if under the <b class="mech">Discipline</b> status. These are matched by the Spirit skills, which similarly gain reduced cooldowns while under the <b class="mech">Discipline</b> Status, and inflict various status effects while under the <b class="mech">Iron Fists</b> Status.</p>
+        <p class="muted">Linking these two disparate branches together are two support skills. One is Unburden, stripping the user's <b class="mech">Iron Fists</b> and <b class="mech">Discipline</b> statuses to heal and recover SP, depending on which status was consumed. This becomes a powerful sustain option when combined with the other skill, Zen, which grants the user both the <b class="mech">Iron Fists</b> and the <b class="mech">Discipline</b> Status simultaneously.</p>
+        <p class="muted">The final two skills are what everyone who plays Monk inevitably asks about. Unbreakable Resolve consumes the user's remaining SP to grant themselves a powerful damage reduction buff, while Guillotine Fist consumes the user's remaining SP to deal unbelievable damage to a single target. Both of these skills gain additional effects based on which of <b class="mech">Iron Fists</b> or <b class="mech">Discipline</b> are active, and thanks to Zen, are capable of benefiting from both.</p>
       </div>
       <div class="portrait">
         <div class="sex-toggle" role="group" aria-label="Character art"><button type="button" data-src="../assets/img/classes/champion-male.webp" data-alt="Champion male" aria-pressed="true" data-i18n="cls.male">Male</button><button type="button" data-src="../assets/img/classes/champion-female.webp" data-alt="Champion female" aria-pressed="false" data-i18n="cls.female">Female</button></div>
@@ -175,26 +175,97 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-bleed">Bleeding</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Zen</strong><p>The user calms their mind and relaxes their body, drawing out their true inner strength and exceeding their limits for a brief moment. Immediately grants both the Iron Fists and Discipline statuses. This skill does not interfere with the stack count of Spiritual Cadence or Fury.</p></li>
-        <li class="skill"><strong>Unburden</strong><p>The user releases themselves of all worldly attachments, freeing themselves to focus solely on the enemy before them. Consumes the Iron Fists, Discipline, and Fury Statuses to gain various effects. If Iron Fists is consumed, the user recovers a large amount of HP. If Discipline is consumed, the user recovers a large amount of SP.</p></li>
-        <li class="skill"><strong>Raging Barrage</strong><p>Combo Skill. Deals heavy damage to a single target. If the user is under the Discipline Status, this skill is guaranteed to Crit and grants double the level of Iron Fists. If the user is under the Iron Fists status, its cooldown is halved.</p></li>
-        <li class="skill"><strong>Raging Windmill</strong><p>Combo Skill. Unleashes a whirling blow, striking all enemies in the area around the user for moderate physical damage. If the user is in the Discipline status, it is guaranteed to Crit and grants double the level of Iron Fists. If the user is in the Iron Fists status, its cooldown is halved.</p></li>
-        <li class="skill"><strong>Falling Mountain</strong><p>Combo Finisher. Delivers a single crushing blow to the target. If the user is in the Discipline Status, it is guaranteed to Crit. If the user is in the Iron Fists status, its cooldown is halved. This skill consumes Iron Fists and Discipline, but does not grant them.</p></li>
-        <li class="skill"><strong>Spiritual Rupture</strong><p>Spirit Skill. The user creates a burst of spiritual energy at the targeted location, dealing Ranged Physical Damage to all enemies in the area. The damage is increased by the user's Magic Attack. If the user is in th eIron Fists Status, it has a chance to inflict <b class="kw kw-bleed">Bleeding</b> and grants double the level of Discipline. If the user is under the Discipline status, its cooldown is halved.</p></li>
-        <li class="skill"><strong>Spiritual Pursuit</strong><p>Spirit skill. The user wields their spiritual energy to hurl themselves at a distant foe, using their own body as a projectile. Deals Ranged Physical Damage to a single target that is increased by the user's Magic Attack. If the user is in the Iron Fists status, has a chance to inflict <b class="kw kw-bleed">Internal Bleeding</b> and grants double the level of Discipline. If the user is in the Discipline status, its cooldown is halved.</p></li>
-        <li class="skill"><strong>Soul Explosion</strong><p>Spirit Finisher. The user unleashes all of their spiritual power in a massive blast centered on themselves. Deals physical damage in an area around the caster, which is increased by the user's Magic Attack. If the user is in the Iron Fists status, all enemies struck are knocked back. If the user is in the Discipline status, its cooldown is halved. This skill consumes Iron Fists and Discipline, but does not grant them.</p></li>
-        <li class="skill"><strong>Unbreakable Resolve</strong><p>The user focuses inward, drawing out a supernatural resilience from within themselves. Consumes the user's remaining SP to grant them a buff that reduces all damage taken for the duration. While this skill is active, the user cannot gain the Iron Fists or Discipline statuses.</p></li>
-        <li class="skill"><strong>Guillotine Fist</strong><p>The user focuses all of their strength into a single blow, exhausting everything they have to ensure it is fatal. Consumes all of the user's remaining SP to deal massive damage to a single target. The damage is based on the amount of SP consumed, and is increased by the percentage of missing HP from the target. If the user is in the Iron Fists status, this skill is guaranteed to Crit and ignores Defense. If the user is in the Discipline status, the damage dealt is based on the user's Max SP instead of the amount of SP consumed. Once struck by this skill, the target will be immune to the effects of Guillotine Fist from the same caster for the next five minutes.</p></li>
-      </ul>
+      <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Discipline</span><span>Iron Fists</span></div>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-support" data-i18n="cls.t.support">Support</span><span class="sk-summon" data-i18n="cls.t.summon">Summon</span><span class="sk-utility" data-i18n="cls.t.utility">Utility</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Support Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-support" id="s-zen">
+            <div class="sk-top"><strong>Zen</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Grants both <b class="mech">Iron Fists</b> and <b class="mech">Discipline</b> at double level.</p>
+            <p class="sk-body">The user calms their mind and relaxes their body, drawing out their true inner strength and exceeding their limits for a brief moment. Immediately grants both the <b class="mech">Iron Fists</b> and <b class="mech">Discipline</b> statuses. This skill does not interfere with the stack count of Spiritual Cadence or Fury.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-unburden">
+            <div class="sk-top"><strong>Unburden</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Consumes the stances to restore HP or SP.</p>
+            <p class="sk-body">The user releases themselves of all worldly attachments, freeing themselves to focus solely on the enemy before them. Consumes the <b class="mech">Iron Fists</b>, <b class="mech">Discipline</b>, and Fury Statuses to gain various effects.</p>
+            <ul class="sk-riders"><li>If <b class="mech">Iron Fists</b> is consumed, the user recovers a large amount of HP.</li><li>If <b class="mech">Discipline</b> is consumed, the user recovers a large amount of SP.</li></ul>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Combo Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-utility" id="s-raging-barrage">
+            <div class="sk-top"><strong>Raging Barrage</strong><i class="sk-type">Combo</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Single-target barrage of blows.</p>
+            <p class="sk-body">Deals heavy damage to a single target. If the user is under the <b class="mech">Discipline</b> Status, this skill is guaranteed to Crit and grants double the level of <b class="mech">Iron Fists</b>. If the user is under the <b class="mech">Iron Fists</b> status, its cooldown is halved.</p>
+          </li>
+          <li class="skill-card sk-utility" id="s-raging-windmill">
+            <div class="sk-top"><strong>Raging Windmill</strong><i class="sk-type">Combo</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Point-blank AoE combo strike.</p>
+            <p class="sk-body">Unleashes a whirling blow, striking all enemies in the area around the user for moderate physical damage. If the user is in the <b class="mech">Discipline</b> status, it is guaranteed to Crit and grants double the level of <b class="mech">Iron Fists</b>. If the user is in the <b class="mech">Iron Fists</b> status, its cooldown is halved.</p>
+          </li>
+          <li class="skill-card sk-utility" id="s-falling-mountain">
+            <div class="sk-top"><strong>Falling Mountain</strong><i class="sk-type">Combo Finisher</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Combo finisher: one crushing blow that consumes the stances.</p>
+            <p class="sk-body">Combo Finisher. Delivers a single crushing blow to the target. If the user is in the <b class="mech">Discipline</b> Status, it is guaranteed to Crit. If the user is in the <b class="mech">Iron Fists</b> status, its cooldown is halved.</p>
+            <p class="sk-body">This skill consumes <b class="mech">Iron Fists</b> and <b class="mech">Discipline</b>, but does not grant them.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Spirit Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-summon" id="s-spiritual-rupture">
+            <div class="sk-top"><strong>Spiritual Rupture</strong><i class="sk-type">Spirit</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Ranged ground explosion of spiritual energy.</p>
+            <p class="sk-body">The user creates a burst of spiritual energy at the targeted location, dealing Ranged Physical Damage to all enemies in the area. The damage is increased by the user's Magic Attack. If the user is in th eIron Fists Status, it has a chance to inflict <b class="kw kw-bleed">Bleeding</b> and grants double the level of <b class="mech">Discipline</b>. If the user is under the <b class="mech">Discipline</b> status, its cooldown is halved.</p>
+          </li>
+          <li class="skill-card sk-summon" id="s-spiritual-pursuit">
+            <div class="sk-top"><strong>Spiritual Pursuit</strong><i class="sk-type">Spirit</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Teleports to a distant target and strikes.</p>
+            <p class="sk-body">Spirit skill. The user wields their spiritual energy to hurl themselves at a distant foe, using their own body as a projectile. Deals Ranged Physical Damage to a single target that is increased by the user's Magic Attack.</p>
+            <p class="sk-body">If the user is in the <b class="mech">Iron Fists</b> status, has a chance to inflict <b class="kw kw-bleed">Internal Bleeding</b> and grants double the level of <b class="mech">Discipline</b>.</p>
+            <p class="sk-body">If the user is in the <b class="mech">Discipline</b> status, its cooldown is halved.</p>
+          </li>
+          <li class="skill-card sk-summon" id="s-soul-explosion">
+            <div class="sk-top"><strong>Soul Explosion</strong><i class="sk-type">Spirit Finisher</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Spirit finisher: a massive self-centered blast.</p>
+            <p class="sk-body">Spirit Finisher. The user unleashes all of their spiritual power in a massive blast centered on themselves. Deals physical damage in an area around the caster, which is increased by the user's Magic Attack.</p>
+            <p class="sk-body">If the user is in the <b class="mech">Iron Fists</b> status, all enemies struck are knocked back.</p>
+            <p class="sk-body">If the user is in the <b class="mech">Discipline</b> status, its cooldown is halved.</p>
+            <p class="sk-body">This skill consumes <b class="mech">Iron Fists</b> and <b class="mech">Discipline</b>, but does not grant them.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Ultimate Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-support" id="s-unbreakable-resolve">
+            <div class="sk-top"><strong>Unbreakable Resolve</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Consumes all remaining SP for heavy damage reduction.</p>
+            <p class="sk-body">The user focuses inward, drawing out a supernatural resilience from within themselves. Consumes the user's remaining SP to grant them a buff that reduces all damage taken for the duration. While this skill is active, the user cannot gain the <b class="mech">Iron Fists</b> or <b class="mech">Discipline</b> statuses.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-guillotine-fist">
+            <div class="sk-top"><strong>Guillotine Fist</strong><i class="sk-type">Physical Melee</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Consumes all remaining SP for unbelievable single-target damage.</p>
+            <p class="sk-body">The user focuses all of their strength into a single blow, exhausting everything they have to ensure it is fatal. Consumes all of the user's remaining SP to deal massive damage to a single target. The damage is based on the amount of SP consumed, and is increased by the percentage of missing HP from the target.</p>
+            <p class="sk-body">If the user is in the <b class="mech">Iron Fists</b> status, this skill is guaranteed to Crit and ignores Defense.</p>
+            <p class="sk-body">If the user is in the <b class="mech">Discipline</b> status, the damage dealt is based on the user's Max SP instead of the amount of SP consumed.</p>
+            <p class="sk-body">Once struck by this skill, the target will be immune to the effects of Guillotine Fist from the same caster for the next five minutes.</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

@@ -175,31 +175,83 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-poison">Poison</span><span class="kw-blind">Blind</span><span class="kw-vuln">Vulnerable</span><span class="kw-stun">Stun</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Stalker's Instinct</strong><p>The user hones their instincts for dirty fighting, taking every battlefield advantage they can and leaving their opponents no opportunity to fight back. For a short duration, the cooldowns of all other skills are massively reduced. If the user takes damage from any skill, the status ends early. This effect DOES stack with other Rogue Instincts.</p></li>
-        <li class="skill"><strong>Lightning Reflexes</strong><p>The user responds instantly to an incoming attack, preventing the damage and taking advantage of the enemy's now misdirected momentum. Blocks a single Physical Skill against the user. If a skill is successfully blocked, the user gains a different benefit based on which level of this skill was cast.</p></li>
-        <li class="skill"><strong>Level 1</strong><p>Increased Movement Speed for a short time.</p></li>
-        <li class="skill"><strong>Level 2</strong><p>Inflicts <b class="kw kw-blind">Blind</b> on the enemy. Deft Stab and Ricochet Knife are refreshed.</p></li>
-        <li class="skill"><strong>Level 3</strong><p>Inflicts <b class="kw kw-vuln">Vulnerable</b> on the enemy. Blindside and Scorpion Lash are refreshed.</p></li>
-        <li class="skill"><strong>Level 4</strong><p>The user enters Cloaking. Breakout and Firecracker are refreshed.</p></li>
-        <li class="skill"><strong>Level 5</strong><p>The Cooldown of Stalker's Instinct is reduced by 10 seconds.</p></li>
-        <li class="skill"><strong>Deft Stab</strong><p>The user delivers a quick, distracting jab to the enemy. If the target is already <b class="kw kw-blind">Blind</b>, inflicts <b class="kw kw-vuln">Vulnerable</b>. If the target is already <b class="kw kw-vuln">Vulnerable</b>, inflicts <b class="kw kw-bleed">Bleeding</b>. If the target is already <b class="kw kw-bleed">Bleeding</b>, inflicts <b class="kw kw-blind">Blind</b>.</p></li>
-        <li class="skill"><strong>Blindside</strong><p>The user dashes to a distant target, hitting them with a surprise attack that has a chance to leave the target <b class="kw kw-blind">Blind</b>.</p></li>
-        <li class="skill"><strong>Breakout</strong><p>The user jumps out from hiding, striking all enemies around them. For two seconds after this skill is cast, the user can cast Ambush as if they were in Hiding. Requires the Hiding or Cloaking status.</p></li>
-        <li class="skill"><strong>Fate Sealer</strong><p>The user delivers a whirling strike to the target, dealing massive damage that has additional properties based on the target's HP. If the target is above half health, the skill inflicts <b class="kw kw-blind">Blind</b> and <b class="kw kw-vuln">Vulnerable</b> and has its cooldown reduced. If they are below half HP, it deals double damage instead.</p></li>
-        <li class="skill"><strong>Ricochet Knife</strong><p>The user hurls a throwing knife at the target, which then ricochets between them and all enemies in the area around them. All enemies struck are inflicted with the <b class="kw kw-bleed">Bleeding</b> Status. For each <b class="kw kw-burn">Burning</b> target struck, the Cooldown of this skill is reduced by 1 second. The damage of this skill is treated as <b class="kw kw-bleed">Bleeding</b> Damage.</p></li>
-        <li class="skill"><strong>Scorpion Lash</strong><p>The user lashes out around them with a venom-tipped knife, damaging and inflicting the <b class="kw kw-poison">Poison</b> Status on all enemies in an area around them. For each <b class="kw kw-bleed">Bleeding</b> target struck, the Cooldown of this skill is reduced by 1 second. The damage of this skill is treated as <b class="kw kw-poison">Poison</b> Status damage.</p></li>
-        <li class="skill"><strong>Firecracker</strong><p>The user throws a handful of gunpowder into the air around them, which ignites and explodes after a short delay. All enemies around the user take Fire Property Physical damage and receive the <b class="kw kw-burn">Burning</b> Status. For each target struck that is suffering from <b class="kw kw-poison">Poison</b>, the cooldown of this skill is reduced by 1 second. The damage of this skill is treated as <b class="kw kw-burn">Burning</b> Damage.</p></li>
-        <li class="skill"><strong>Annihilate</strong><p>Delivers a savage blow to a single enemy, dealing exceptional damage. If the target is suffering from <b class="kw kw-bleed">Bleeding</b>, <b class="kw kw-burn">Burning</b>, or <b class="kw kw-poison">Poison</b>, consumes those statuses to inflict additional damage and reduce this skill's Cooldown. If all three statuses are consumed, additionally inflicts the <b class="kw kw-stun">Stun</b> status.</p></li>
-      </ul>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-poison">Poison</span><span class="kw-blind">Blind</span><span class="kw-vuln">Vulnerable</span><span class="kw-stun">Stun</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-support" data-i18n="cls.t.support">Support</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Utility Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-support" id="s-stalker-s-instinct">
+            <div class="sk-top"><strong>Stalker's Instinct</strong><i class="sk-type">Buff</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Halves all skill cooldowns; ends early if the user takes skill damage.</p>
+            <p class="sk-body">The user hones their instincts for dirty fighting, taking every battlefield advantage they can and leaving their opponents no opportunity to fight back. For a short duration, the cooldowns of all other skills are massively reduced. If the user takes damage from any skill, the status ends early. This effect DOES stack with other Rogue Instincts.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-lightning-reflexes">
+            <div class="sk-top"><strong>Lightning Reflexes</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Blocks a Physical skill with level-based rewards.</p>
+            <p class="sk-body">The user responds instantly to an incoming attack, preventing the damage and taking advantage of the enemy's now misdirected momentum. Blocks a single Physical Skill against the user. If a skill is successfully blocked, the user gains a different benefit based on which level of this skill was cast.</p>
+            <ul class="sk-options"><li><b>Level 1</b>Increased Movement Speed for a short time.</li><li><b>Level 2</b>Inflicts <b class="kw kw-blind">Blind</b> on the enemy. Deft Stab and Ricochet Knife are refreshed.</li><li><b>Level 3</b>Inflicts <b class="kw kw-vuln">Vulnerable</b> on the enemy. Blindside and Scorpion Lash are refreshed.</li><li><b>Level 4</b>The user enters Cloaking. Breakout and Firecracker are refreshed.</li><li><b>Level 5</b>The Cooldown of Stalker's Instinct is reduced by 10 seconds.</li></ul>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-stalker-s-instinct">Stalker's Instinct</a><a href="#s-ricochet-knife">Ricochet Knife</a><a href="#s-scorpion-lash">Scorpion Lash</a></p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Predatory Skills<span>4 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-physical" id="s-deft-stab">
+            <div class="sk-top"><strong>Deft Stab</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Cycles <b class="kw kw-blind">Blind</b>, <b class="kw kw-vuln">Vulnerable</b>, and <b class="kw kw-bleed">Bleeding</b>.</p>
+            <p class="sk-body">The user delivers a quick, distracting jab to the enemy. If the target is already <b class="kw kw-blind">Blind</b>, inflicts <b class="kw kw-vuln">Vulnerable</b>. If the target is already <b class="kw kw-vuln">Vulnerable</b>, inflicts <b class="kw kw-bleed">Bleeding</b>. If the target is already <b class="kw kw-bleed">Bleeding</b>, inflicts <b class="kw kw-blind">Blind</b>.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-blindside">
+            <div class="sk-top"><strong>Blindside</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Gap-closing surprise attack that inflicts <b class="kw kw-blind">Blind</b>.</p>
+            <p class="sk-body">The user dashes to a distant target, hitting them with a surprise attack that has a chance to leave the target <b class="kw kw-blind">Blind</b>.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-breakout">
+            <div class="sk-top"><strong>Breakout</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">AoE from Hiding that briefly enables free Ambush casts.</p>
+            <p class="sk-body">The user jumps out from hiding, striking all enemies around them. For two seconds after this skill is cast, the user can cast Ambush as if they were in Hiding. Requires the Hiding or Cloaking status.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-fate-sealer">
+            <div class="sk-top"><strong>Fate Sealer</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Ultimate: debuffs healthy targets, executes weakened ones.</p>
+            <p class="sk-body">The user delivers a whirling strike to the target, dealing massive damage that has additional properties based on the target's HP. If the target is above half health, the skill inflicts <b class="kw kw-blind">Blind</b> and <b class="kw kw-vuln">Vulnerable</b> and has its cooldown reduced. If they are below half HP, it deals double damage instead.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Malicious Skills<span>4 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-physical" id="s-ricochet-knife">
+            <div class="sk-top"><strong>Ricochet Knife</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Bouncing knife that always inflicts <b class="kw kw-bleed">Bleeding</b>.</p>
+            <p class="sk-body">The user hurls a throwing knife at the target, which then ricochets between them and all enemies in the area around them. All enemies struck are inflicted with the <b class="kw kw-bleed">Bleeding</b> Status. For each <b class="kw kw-burn">Burning</b> target struck, the Cooldown of this skill is reduced by 1 second. The damage of this skill is treated as <b class="kw kw-bleed">Bleeding</b> Damage.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-scorpion-lash">
+            <div class="sk-top"><strong>Scorpion Lash</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">AoE lash that always inflicts <b class="kw kw-poison">Poison</b>.</p>
+            <p class="sk-body">The user lashes out around them with a venom-tipped knife, damaging and inflicting the <b class="kw kw-poison">Poison</b> Status on all enemies in an area around them. For each <b class="kw kw-bleed">Bleeding</b> target struck, the Cooldown of this skill is reduced by 1 second. The damage of this skill is treated as <b class="kw kw-poison">Poison</b> Status damage.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-fire-cracker">
+            <div class="sk-top"><strong>Fire Cracker</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">AoE blast that always inflicts <b class="kw kw-burn">Burning</b>.</p>
+            <p class="sk-body">The user throws a handful of gunpowder into the air around them, which ignites and explodes after a short delay. All enemies around the user take Fire Property Physical damage and receive the <b class="kw kw-burn">Burning</b> Status. For each target struck that is suffering from <b class="kw kw-poison">Poison</b>, the cooldown of this skill is reduced by 1 second. The damage of this skill is treated as <b class="kw kw-burn">Burning</b> Damage.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-annihilate">
+            <div class="sk-top"><strong>Annihilate</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Ultimate: amplified by each damaging status on the target.</p>
+            <p class="sk-body">Delivers a savage blow to a single enemy, dealing exceptional damage. If the target is suffering from <b class="kw kw-bleed">Bleeding</b>, <b class="kw kw-burn">Burning</b>, or <b class="kw kw-poison">Poison</b>, consumes those statuses to inflict additional damage and reduce this skill's Cooldown. If all three statuses are consumed, additionally inflicts the <b class="kw kw-stun">Stun</b> status.</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

@@ -176,26 +176,103 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-poison">Poison</span><span class="kw-blind">Blind</span><span class="kw-vuln">Vulnerable</span><span class="kw-stun">Stun</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Cosmic Insight</strong><p>Passive. The Star Gladiator harmonizes themselves with the cosmos, drawing closer to the heavenly bodies and further away from their earthly roots. They gain the ability to divine greater truths from seemingly mundane knowledge, able to transform knowledge into raw physical power. Increases the damage and Hit Rate of Book class weapons, as well as increasing the user's Luck. Books typically give raw stats as Mastery bonuses.</p></li>
-        <li class="skill"><strong>Solar Heat</strong><p>Cosmic Alignment. The user infuses themselves with the heat of the Sun, increasing the damage of the <b class="kw kw-burn">Burning</b> status they inflict and increasing their resistance to the <b class="kw kw-burn">Burning</b> and Chilled statuses. In addition, while this buff is active, Counter Kick and Roundhouse Kick deal additional damage based on the user's Int. Only one Cosmic Alignment can be active at a time.</p></li>
-        <li class="skill"><strong>Solar Pulse</strong><p>The user delivers a blazing kick, inflicting damage that is increased by the user's Int and has a high chance to inflict the <b class="kw kw-burn">Burning</b> status. If the user is under the Solar Heat alignment, the damage inflicted by this skill is counted as <b class="kw kw-burn">Burning</b> damage in addition to physical damage for card and skill bonuses. If used during Counter Stance, this skill cannot miss and bypasses skills like Guard. If used during Roundhouse Stance, its cooldown is halved.</p></li>
-        <li class="skill"><strong>Lunar Protection</strong><p>Cosmic Alignment. The user infuses themselves with the protective essence of the Moon, reducing the damage they take from <b class="kw kw-burn">Burning</b>, <b class="kw kw-bleed">Bleeding</b>, and <b class="kw kw-poison">Poison</b> while increasing their resistance to <b class="kw kw-bleed">Bleeding</b> and <b class="kw kw-vuln">Vulnerable</b>. In addition, while this buff is active, Counter Kick and Axe Kick deal additional damage based on the user's Vit. Only one Cosmic Alignment can be active at a time.</p></li>
-        <li class="skill"><strong>Lunar Glow</strong><p>The user shines with the light of the Moon, concentrating it into their hands and feet to deal a powerful blow to a single enemy. The damage dealt by this skill is increased by the user's Vit. If cast while the Lunar Protection alignment is active, the user regenerates HP equal to a portion of their Max HP. If cast while Counter Stance is active, this skill cannot miss and bypasses skills like Guard. If used while Axe Stance is active, it puts the user into the Cloaking state for a few seconds.</p></li>
-        <li class="skill"><strong>Stellar Blessing</strong><p>Cosmic Alignment. The user infuses themselves with the ever-present light of the stars, granting them enhanced Hit and Defense Pierce, while also increasing their resistance to <b class="kw kw-poison">Poison</b> and <b class="kw kw-slow">Slow</b>. In addition, while this buff is active, Axe Kick and Tornado Kick deal additional damage based on the user's Dex. Only one Cosmic Alignment can be active at a time.</p></li>
-        <li class="skill"><strong>Stellar Barrage</strong><p>The user launches themselves at an enemy, striking them for physical damage that is increased by the user's Dex. If cast while the Stellar Blessing alignment is active, the attack then repeats two more times at enemies nearby. If there are fewer than three enemies in the area, the same enemy can be struck multiple times. If used during Axe Stance, enemies struck have their elemental property changed to Neutral for a short duration. If used during Tornado Stance, the attack splashes in a 5x5 area.</p></li>
-        <li class="skill"><strong>Umbral Veil</strong><p>The user shrouds themselves in the infinite darkness of the cosmos, foregoing all pretense at defense in favor of inflicting the maximum possible harm. Increases the Crit Rate and Crit Damage of the user, while also giving resistance to <b class="kw kw-blind">Blind</b> and <b class="kw kw-stun">Stun</b>. In addition, while this buff is active, Tornado Kick and Roundhouse Kick deal additional damage based on the user's Agi. Only one Cosmic Alignment can be active at a time.</p></li>
-        <li class="skill"><strong>Umbral Blade</strong><p>The user lashes out at nearby enemies with a blade woven from the emptiness of deep space. The damage dealt by this skill is increased by the user's Agi, and splashes in a 3x3 area. If cast while Umbral Veil is active, the skill is guaranteed to Crit. If used during Tornado Stance, it splashes in a 7x7 area instead. If used during Roundhouse Stance, its cooldown is halved.</p></li>
-        <li class="skill"><strong>Cosmic Union</strong><p>Cosmic Alignment. The user unifies with the balanced forces of the cosmos, channeling the power of the Sun, Moon, Stars, and the Darkness between them simultaneously. While in Union status, the following effects are applied: Max HP, Attack, Defense Pierce, and Crit Rate are increased (based on the learned levels of Lunar Protection, Solar Heat, Stellar Blessing, and Umbral Veil respectively) Movement Speed is increased All attacks have a chance to autocast Solar Pulse, Lunar Glow, Stellar Barrage, and Umbral Blade. All Star Gladiator skills deal additional damage based on the user's Luck, and gain their bonus Alignment effects. Max SP is reduced to 1. Only one Cosmic Alignment can be active at a time.</p></li>
-      </ul>
+      <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Axe Stance</span><span>Counter Stance</span><span>Roundhouse Stance</span><span>Tornado Stance</span></div>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-poison">Poison</span><span class="kw-blind">Blind</span><span class="kw-vuln">Vulnerable</span><span class="kw-frozen">Frozen</span><span class="kw-stun">Stun</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-passive" data-i18n="cls.t.passive">Passive</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Core Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-passive" id="s-cosmic-insight">
+            <div class="sk-top"><strong>Cosmic Insight</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Increases damage and Hit with Books; passively raises Luk.</p>
+            <p class="sk-body">The Star Gladiator harmonizes themselves with the cosmos, drawing closer to the heavenly bodies and further away from their earthly roots. They gain the ability to divine greater truths from seemingly mundane knowledge, able to transform knowledge into raw physical power. Increases the damage and Hit Rate of Book class weapons, as well as increasing the user's Luck. Books typically give raw stats as Mastery bonuses.</p>
+          </li>
+          <li class="skill-card sk-passive" id="s-cosmic-union">
+            <div class="sk-top"><strong>Cosmic Union</strong><i class="sk-type">Alignment</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Toggle: autocasts skills at Level 1 with all Alignment bonuses, and locks Max SP to 1.</p>
+            <p class="sk-body">Cosmic Alignment. The user unifies with the balanced forces of the cosmos, channeling the power of the Sun, Moon, Stars, and the Darkness between them simultaneously. While in Union status, the following effects are applied:</p>
+            <p class="sk-body">Max HP, Attack, Defense Pierce, and Crit Rate are increased (based on the learned levels of Lunar Protection, Solar Heat, Stellar Blessing, and Umbral Veil respectively)</p>
+            <p class="sk-body">Movement Speed is increased</p>
+            <p class="sk-body">All attacks have a chance to autocast Solar Pulse, Lunar Glow, Stellar Barrage, and Umbral Blade.</p>
+            <p class="sk-body">All Star Gladiator skills deal additional damage based on the user's Luck, and gain their bonus Alignment effects.</p>
+            <p class="sk-body">Max SP is reduced to 1.</p>
+            <p class="sk-body">Only one Cosmic Alignment can be active at a time.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-lunar-protection">Lunar Protection</a><a href="#s-stellar-blessing">Stellar Blessing</a><a href="#s-stellar-barrage">Stellar Barrage</a></p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Solar Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-passive" id="s-solar-heat">
+            <div class="sk-top"><strong>Solar Heat</strong><i class="sk-type">Alignment</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Boosts <b class="kw kw-burn">Burning</b> damage dealt and Burn/<b class="kw kw-frozen">Chill</b> resistance.</p>
+            <p class="sk-body">Cosmic Alignment. The user infuses themselves with the heat of the Sun, increasing the damage of the <b class="kw kw-burn">Burning</b> status they inflict and increasing their resistance to the <b class="kw kw-burn">Burning</b> and Chilled statuses. In addition, while this buff is active, Counter Kick and Roundhouse Kick deal additional damage based on the user's Int. Only one Cosmic Alignment can be active at a time.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-solar-pulse">
+            <div class="sk-top"><strong>Solar Pulse</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Blazing kick with a high chance to inflict <b class="kw kw-burn">Burning</b>.</p>
+            <p class="sk-body">The user delivers a blazing kick, inflicting damage that is increased by the user's Int and has a high chance to inflict the <b class="kw kw-burn">Burning</b> status. If the user is under the Solar Heat alignment, the damage inflicted by this skill is counted as <b class="kw kw-burn">Burning</b> damage in addition to physical damage for card and skill bonuses. If used during <b class="mech">Counter Stance</b>, this skill cannot miss and bypasses skills like Guard. If used during <b class="mech">Roundhouse Stance</b>, its cooldown is halved.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-solar-heat">Solar Heat</a></p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Lunar Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-passive" id="s-lunar-protection">
+            <div class="sk-top"><strong>Lunar Protection</strong><i class="sk-type">Alignment</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Reduces status damage taken and resists <b class="kw kw-bleed">Bleeding</b>/<b class="kw kw-vuln">Vulnerable</b>.</p>
+            <p class="sk-body">Cosmic Alignment. The user infuses themselves with the protective essence of the Moon, reducing the damage they take from <b class="kw kw-burn">Burning</b>, <b class="kw kw-bleed">Bleeding</b>, and <b class="kw kw-poison">Poison</b> while increasing their resistance to <b class="kw kw-bleed">Bleeding</b> and <b class="kw kw-vuln">Vulnerable</b>. In addition, while this buff is active, Counter Kick and Axe Kick deal additional damage based on the user's Vit. Only one Cosmic Alignment can be active at a time.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-lunar-glow">
+            <div class="sk-top"><strong>Lunar Glow</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Heavy blow that cleanses statuses and restores HP under Lunar Protection.</p>
+            <p class="sk-body">The user shines with the light of the Moon, concentrating it into their hands and feet to deal a powerful blow to a single enemy. The damage dealt by this skill is increased by the user's Vit. If cast while the Lunar Protection alignment is active, the user regenerates HP equal to a portion of their Max HP. If cast while <b class="mech">Counter Stance</b> is active, this skill cannot miss and bypasses skills like Guard. If used while <b class="mech">Axe Stance</b> is active, it puts the user into the Cloaking state for a few seconds.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-lunar-protection">Lunar Protection</a></p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Stellar Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-passive" id="s-stellar-blessing">
+            <div class="sk-top"><strong>Stellar Blessing</strong><i class="sk-type">Alignment</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Grants Hit and card-like Defense Pierce.</p>
+            <p class="sk-body">Cosmic Alignment. The user infuses themselves with the ever-present light of the stars, granting them enhanced Hit and Defense Pierce, while also increasing their resistance to <b class="kw kw-poison">Poison</b> and <b class="kw kw-slow">Slow</b>. In addition, while this buff is active, Axe Kick and Tornado Kick deal additional damage based on the user's Dex. Only one Cosmic Alignment can be active at a time.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-stellar-barrage">
+            <div class="sk-top"><strong>Stellar Barrage</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Leaping strike that repeats against nearby enemies under Stellar Blessing.</p>
+            <p class="sk-body">The user launches themselves at an enemy, striking them for physical damage that is increased by the user's Dex. If cast while the Stellar Blessing alignment is active, the attack then repeats two more times at enemies nearby. If there are fewer than three enemies in the area, the same enemy can be struck multiple times. If used during <b class="mech">Axe Stance</b>, enemies struck have their elemental property changed to Neutral for a short duration. If used during <b class="mech">Tornado Stance</b>, the attack splashes in a 5x5 area.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-stellar-blessing">Stellar Blessing</a></p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Umbral Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-passive" id="s-umbral-veil">
+            <div class="sk-top"><strong>Umbral Veil</strong><i class="sk-type">Alignment</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Boosts Crit Rate and Crit Damage.</p>
+            <p class="sk-body">The user shrouds themselves in the infinite darkness of the cosmos, foregoing all pretense at defense in favor of inflicting the maximum possible harm. Increases the Crit Rate and Crit Damage of the user, while also giving resistance to <b class="kw kw-blind">Blind</b> and <b class="kw kw-stun">Stun</b>. In addition, while this buff is active, Tornado Kick and Roundhouse Kick deal additional damage based on the user's Agi. Only one Cosmic Alignment can be active at a time.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-umbral-blade">
+            <div class="sk-top"><strong>Umbral Blade</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Ground-targeted AoE, guaranteed to Crit under Umbral Veil.</p>
+            <p class="sk-body">The user lashes out at nearby enemies with a blade woven from the emptiness of deep space. The damage dealt by this skill is increased by the user's Agi, and splashes in a 3x3 area. If cast while Umbral Veil is active, the skill is guaranteed to Crit. If used during <b class="mech">Tornado Stance</b>, it splashes in a 7x7 area instead. If used during <b class="mech">Roundhouse Stance</b>, its cooldown is halved.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-umbral-veil">Umbral Veil</a></p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

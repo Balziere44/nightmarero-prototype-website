@@ -176,26 +176,82 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-poison">Poison</span><span class="kw-blind">Blind</span><span class="kw-vuln">Vulnerable</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Needle Burst</strong><p>Unleashes a burst of razor sharp needles, dealing damage that is treated as <b class="kw kw-bleed">Bleeding</b> damage and inflicting the <b class="kw kw-bleed">Bleeding</b> status on both the target and the user. If the target is <b class="kw kw-burn">Burning</b> or Poisoned, this skill repeats an additional time for each at half damage.</p></li>
-        <li class="skill"><strong>Scalding Blade</strong><p>Delivers a searing strike to the enemy, dealing damage that is treated as <b class="kw kw-burn">Burning</b> damage and inflicting the <b class="kw kw-burn">Burning</b> status on both the target and the user. Reduces the active cooldown of Chaser's Respite for each of <b class="kw kw-bleed">Bleeding</b> and <b class="kw kw-poison">Poison</b> that the target is suffering from.</p></li>
-        <li class="skill"><strong>Plague Touch</strong><p>The user cloaks themselves in noxious fumes before striking the target, dealing damage that is treated as <b class="kw kw-poison">Poison</b> damage and inflicting the <b class="kw kw-poison">Poison</b> status on both the target and the user. If the target is <b class="kw kw-burn">Burning</b> or <b class="kw kw-bleed">Bleeding</b>, the intensity and duration of those statuses are increased.</p></li>
-        <li class="skill"><strong>Malicious Reprisal</strong><p>The user delivers a retaliatory strike against all enemies in the area around them, inflicting exceptional Physical damage. For each of <b class="kw kw-bleed">Bleeding</b>, <b class="kw kw-burn">Burning</b>, and <b class="kw kw-poison">Poison</b> the user is suffering from, those statuses are consumed to amplify the damage dealt and inflict those statuses on all targets struck.</p></li>
-        <li class="skill"><strong>Bloodletter's Mark</strong><p>The user draws a cursed mark on the target, inflaming their <b class="kw kw-bleed">Bleeding</b> status. If the target is not <b class="kw kw-bleed">Bleeding</b>, inflicts the <b class="kw kw-bleed">Bleeding</b> status. If they are, the mark ignites to deal <b class="kw kw-bleed">Bleeding</b> Damage to all enemies around the target, including the target themselves, every second.</p></li>
-        <li class="skill"><strong>Arsonist's Mark</strong><p>The user draws a cursed mark on the target, inflaming their <b class="kw kw-burn">Burning</b> status. If the target is not <b class="kw kw-burn">Burning</b>, inflicts the <b class="kw kw-burn">Burning</b> status. If they are, the mark ignites to deal <b class="kw kw-burn">Burning</b> Damage to all enemies around the target, including the target themselves, every second.</p></li>
-        <li class="skill"><strong>Noxious Mark</strong><p>The user draws a cursed mark on the target, inflaming their <b class="kw kw-poison">Poison</b> status. If the target is not Poisoned, inflicts the <b class="kw kw-poison">Poison</b> status. If they are, the mark ignites to deal <b class="kw kw-poison">Poison</b> Damage to all enemies around the target, including the target themselves, every second.</p></li>
-        <li class="skill"><strong>Maelstrom</strong><p>The user draws a cursed mark on the target, creating a storm of negative energy around them that constantly inflicts negative statuses on them and all enemies in the area. Enemies struck are randomly inflicted with <b class="kw kw-bleed">Bleeding</b>, <b class="kw kw-burn">Burning</b>, <b class="kw kw-poison">Poison</b>, <b class="kw kw-blind">Blind</b>, <b class="kw kw-slow">Slow</b>, and <b class="kw kw-vuln">Vulnerable</b> every second.</p></li>
-        <li class="skill"><strong>Chaser's Respite</strong><p>The user refreshes themselves, removing <b class="kw kw-bleed">Bleeding</b>, <b class="kw kw-burn">Burning</b>, and <b class="kw kw-poison">Poison</b> from themselves. For each status removed, the user restores a small amount of HP.</p></li>
-        <li class="skill"><strong>Chaser's Instinct</strong><p>The user hones and sharpens their instincts, maximizing their ability to debilitate and disable enemies. While active, Intimidate, Debilitate, Disorient, and Ambush inflict their statuses at 100% chance, regardless of level, and all Shadow Chaser skills inflict additional Status Effects. This skill DOES stack with other Rogue Instincts.</p></li>
-      </ul>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-poison">Poison</span><span class="kw-blind">Blind</span><span class="kw-vuln">Vulnerable</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-support" data-i18n="cls.t.support">Support</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Strike Skills<span>4 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-physical" id="s-needle-burst">
+            <div class="sk-top"><strong>Needle Burst</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short"><b class="kw kw-bleed">Bleeding</b> strike that also Bleeds the user.</p>
+            <p class="sk-body">Unleashes a burst of razor sharp needles, dealing damage that is treated as <b class="kw kw-bleed">Bleeding</b> damage and inflicting the <b class="kw kw-bleed">Bleeding</b> status on both the target and the user. If the target is <b class="kw kw-burn">Burning</b> or Poisoned, this skill repeats an additional time for each at half damage.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-scalding-blade">
+            <div class="sk-top"><strong>Scalding Blade</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short"><b class="kw kw-burn">Burning</b> strike that also Burns the user.</p>
+            <p class="sk-body">Delivers a searing strike to the enemy, dealing damage that is treated as <b class="kw kw-burn">Burning</b> damage and inflicting the <b class="kw kw-burn">Burning</b> status on both the target and the user. Reduces the active cooldown of Chaser's Respite for each of <b class="kw kw-bleed">Bleeding</b> and <b class="kw kw-poison">Poison</b> that the target is suffering from.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-chaser-s-respite">Chaser's Respite</a></p>
+          </li>
+          <li class="skill-card sk-physical" id="s-plague-touch">
+            <div class="sk-top"><strong>Plague Touch</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short"><b class="kw kw-poison">Poison</b> strike that also Poisons the user.</p>
+            <p class="sk-body">The user cloaks themselves in noxious fumes before striking the target, dealing damage that is treated as <b class="kw kw-poison">Poison</b> damage and inflicting the <b class="kw kw-poison">Poison</b> status on both the target and the user. If the target is <b class="kw kw-burn">Burning</b> or <b class="kw kw-bleed">Bleeding</b>, the intensity and duration of those statuses are increased.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-malicious-reprisal">
+            <div class="sk-top"><strong>Malicious Reprisal</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Consumes the user's own statuses to amplify and spread them.</p>
+            <p class="sk-body">The user delivers a retaliatory strike against all enemies in the area around them, inflicting exceptional Physical damage. For each of <b class="kw kw-bleed">Bleeding</b>, <b class="kw kw-burn">Burning</b>, and <b class="kw kw-poison">Poison</b> the user is suffering from, those statuses are consumed to amplify the damage dealt and inflict those statuses on all targets struck.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Mark Skills<span>4 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-support" id="s-bloodletter-s-mark">
+            <div class="sk-top"><strong>Bloodletter's Mark</strong><i class="sk-type">Debuff</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Inflicts or detonates <b class="kw kw-bleed">Bleeding</b> over an area.</p>
+            <p class="sk-body">The user draws a cursed mark on the target, inflaming their <b class="kw kw-bleed">Bleeding</b> status. If the target is not <b class="kw kw-bleed">Bleeding</b>, inflicts the <b class="kw kw-bleed">Bleeding</b> status. If they are, the mark ignites to deal <b class="kw kw-bleed">Bleeding</b> Damage to all enemies around the target, including the target themselves, every second.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-arsonist-s-mark">
+            <div class="sk-top"><strong>Arsonist's Mark</strong><i class="sk-type">Debuff</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Inflicts or detonates <b class="kw kw-burn">Burning</b> over an area.</p>
+            <p class="sk-body">The user draws a cursed mark on the target, inflaming their <b class="kw kw-burn">Burning</b> status. If the target is not <b class="kw kw-burn">Burning</b>, inflicts the <b class="kw kw-burn">Burning</b> status. If they are, the mark ignites to deal <b class="kw kw-burn">Burning</b> Damage to all enemies around the target, including the target themselves, every second.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-noxious-mark">
+            <div class="sk-top"><strong>Noxious Mark</strong><i class="sk-type">Debuff</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Inflicts or detonates <b class="kw kw-poison">Poison</b> over an area.</p>
+            <p class="sk-body">The user draws a cursed mark on the target, inflaming their <b class="kw kw-poison">Poison</b> status. If the target is not Poisoned, inflicts the <b class="kw kw-poison">Poison</b> status. If they are, the mark ignites to deal <b class="kw kw-poison">Poison</b> Damage to all enemies around the target, including the target themselves, every second.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-maelstrom">
+            <div class="sk-top"><strong>Maelstrom</strong><i class="sk-type">Debuff</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Storm of random negative statuses over an area.</p>
+            <p class="sk-body">The user draws a cursed mark on the target, creating a storm of negative energy around them that constantly inflicts negative statuses on them and all enemies in the area. Enemies struck are randomly inflicted with <b class="kw kw-bleed">Bleeding</b>, <b class="kw kw-burn">Burning</b>, <b class="kw kw-poison">Poison</b>, <b class="kw kw-blind">Blind</b>, <b class="kw kw-slow">Slow</b>, and <b class="kw kw-vuln">Vulnerable</b> every second.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Utility Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-support" id="s-chaser-s-respite">
+            <div class="sk-top"><strong>Chaser's Respite</strong><i class="sk-type">Support</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Cleanses the user's damaging statuses, healing per status removed.</p>
+            <p class="sk-body">The user refreshes themselves, removing <b class="kw kw-bleed">Bleeding</b>, <b class="kw kw-burn">Burning</b>, and <b class="kw kw-poison">Poison</b> from themselves. For each status removed, the user restores a small amount of HP.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-chaser-s-instinct">
+            <div class="sk-top"><strong>Chaser's Instinct</strong><i class="sk-type">Buff</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Maximizes status application for Rogue and Shadow Chaser skills.</p>
+            <p class="sk-body">The user hones and sharpens their instincts, maximizing their ability to debilitate and disable enemies. While active, Intimidate, Debilitate, Disorient, and Ambush inflict their statuses at 100% chance, regardless of level, and all Shadow Chaser skills inflict additional Status Effects. This skill DOES stack with other Rogue Instincts.</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

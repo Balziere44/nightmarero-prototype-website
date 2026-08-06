@@ -183,31 +183,111 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-blind">Blind</span><span class="kw-vuln">Vulnerable</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Musical Mastery</strong><p>Passive. Increases the Hit Rate and Damage of Instruments, and increases the duration of Rhythm stacks gained. Instruments typically gain Reduced SP Consumption as a mastery bonus.</p></li>
-        <li class="skill"><strong>Restorative Refrain</strong><p>Plays a gentle song to encourage and reinvigorate the party, healing all party members a small amount over time. If the current Rhythm Level is Odd, it is increased by 1. Otherwise, it is decreased by 1.</p></li>
-        <li class="skill"><strong>Quickening Chorus</strong><p>Plays an energetic song to inspire the party to quick action. Reduces the Variable Cast Time of all skills cast by each party member significantly. If cast while the current Rhythm Level is even or zero, it is increased by 1. Otherwise, it is decreased by 1.</p></li>
-        <li class="skill"><strong>Darkening Dirge</strong><p>Plays a haunting melody to cloud the minds, and eyes, of enemies. Has a high chance to inflict the <b class="kw kw-blind">Blind</b> status to all enemies in an enormous area. If the current Rhythm Level is odd, it is increased by 1. Otherwise, it is decreased by 1.</p></li>
-        <li class="skill"><strong>Enervating Elegy</strong><p>Plays an eerie tune that saps the energy from enemies, leaving them weak and vulnerable. Inflicts the <b class="kw kw-vuln">Vulnerable</b> and <b class="kw kw-vuln">Breach</b> Statuses on all enemies in the area. If the current Rhythm Level is even or zero, it is increased by 1. Otherwise, it is decreased by 1. Dancer Only Skills</p></li>
-        <li class="skill"><strong>Dancing Dexterity</strong><p>Passive. Increases the Hit Rate and Damage of Whips, and increases the duration of Rhythm stacks gained. Whips typically gain Reduced SP Consumption as a mastery bonus.</p></li>
-        <li class="skill"><strong>Noetic Number</strong><p>The user performs an edifying dance, restoring SP to the party over a short period of time. If the current Rhythm level is odd, it is increased by 1. Otherwise, it is decreased by 1.</p></li>
-        <li class="skill"><strong>Savage Stride</strong><p>The user performs a savagely beautiful dance, inspiring the party to acts of great violence. Provides a massive boost to Crit Rate for a short duration. If the current Rhythm Level is even or zero, it is increased by 1. Otherwise, it is decreased by 1.</p></li>
-        <li class="skill"><strong>Wearying Waltz</strong><p>The user performs a strangely enervating dance, attempting to <b class="kw kw-slow">Slow</b> all enemies in the area. If the current Rhythm level is odd, it is increased by 1. Otherwise, it is decreased by 1.</p></li>
-        <li class="skill"><strong>Sinister Saunter</strong><p>The user performs an alluring dance, distracting enemies into letting down their guard. All enemies in the area take increased damage for a short period of time. If the current Rhythm Level is even or zero, it is increased by 1. Otherwise, it is decreased by 1. Shared Skills</p></li>
-        <li class="skill"><strong>Synchronic Strike</strong><p>Uses the Instrument or Whip to throw a volley of arrows at a distant target, carefully timed to synchronize with their performance. Deals increased damage based on the currently active Rhythm level, and increases its duration slightly.</p></li>
-        <li class="skill"><strong>Vicious Verse</strong><p>The user recites an enchanted verse laced with deadly magic to harm their enemies without breaking the rhythm of their performance. Deals magic damage to the target, which is increased by the current Rhythm Level, and slightly increases its duration.</p></li>
-        <li class="skill"><strong>Hero's Hymn</strong><p>The user sings a majestic song to steel the party's resolve, consuming all Rhythm stacks to provide massive buffs to Attack, Magic Attack, Defense, and Magic Defense for the duration. The duration of the buff is based on the number of Rhythm Stacks consumed. Does not stack with Ardent Anthem.</p></li>
-        <li class="skill"><strong>Ardent Anthem</strong><p>The user sings an energizing melody, inspiring their party to quicker and safer movement. Consumes all of the user's Rhythm stacks to give massive boosts to Movement Speed, Flee, and Perfect Dodge to the whole party. The duration of the buff is based on the number of Rhythm Stacks consumed. Does not stack with Hero's Hymn.</p></li>
-        <li class="skill"><strong>Devastating Descant</strong><p>The user infuses their voice with destructive power and screams, consuming all Rhythm stacks to deal massive hybrid-type damage to all enemies in the area around them. The damage dealt is heavily influenced by the number of Rhythm stacks consumed.</p></li>
-      </ul>
+      <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Even Rhythm</span><span>Odd Rhythm</span><span>Rhythm Stacks</span></div>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-blind">Blind</span><span class="kw-vuln">Vulnerable</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-magic" data-i18n="cls.t.magic">Magic</span><span class="sk-support" data-i18n="cls.t.support">Support</span><span class="sk-passive" data-i18n="cls.t.passive">Passive</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Bard Skills<span>5 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-passive" id="s-musical-mastery">
+            <div class="sk-top"><strong>Musical Mastery</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Increases damage and Hit with Instruments; extends Rhythm duration.</p>
+            <p class="sk-body">Increases the Hit Rate and Damage of Instruments, and increases the duration of Rhythm stacks gained. Instruments typically gain Reduced SP Consumption as a mastery bonus.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-restorative-refrain">
+            <div class="sk-top"><strong>Restorative Refrain</strong><i class="sk-type">Song</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Party AoE heal over time. <b class="mech">Odd Rhythm</b>.</p>
+            <p class="sk-body">Plays a gentle song to encourage and reinvigorate the party, healing all party members a small amount over time. If the current Rhythm Level is Odd, it is increased by 1. Otherwise, it is decreased by 1.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-quickening-chorus">
+            <div class="sk-top"><strong>Quickening Chorus</strong><i class="sk-type">Song</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Reduces party Variable Cast Time. <b class="mech">Even Rhythm</b>.</p>
+            <p class="sk-body">Plays an energetic song to inspire the party to quick action. Reduces the Variable Cast Time of all skills cast by each party member significantly. If cast while the current Rhythm Level is even or zero, it is increased by 1. Otherwise, it is decreased by 1.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-darkening-dirge">
+            <div class="sk-top"><strong>Darkening Dirge</strong><i class="sk-type">Song</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Inflicts <b class="kw kw-blind">Blind</b> on approaching enemies. <b class="mech">Odd Rhythm</b>.</p>
+            <p class="sk-body">Plays a haunting melody to cloud the minds, and eyes, of enemies. Has a high chance to inflict the <b class="kw kw-blind">Blind</b> status to all enemies in an enormous area. If the current Rhythm Level is odd, it is increased by 1. Otherwise, it is decreased by 1.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-enervating-elegy">
+            <div class="sk-top"><strong>Enervating Elegy</strong><i class="sk-type">Song</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Inflicts <b class="kw kw-vuln">Vulnerable</b> and <b class="kw kw-vuln">Breach</b> on approaching enemies. <b class="mech">Even Rhythm</b>.</p>
+            <p class="sk-body">Plays an eerie tune that saps the energy from enemies, leaving them weak and vulnerable. Inflicts the <b class="kw kw-vuln">Vulnerable</b> and <b class="kw kw-vuln">Breach</b> Statuses on all enemies in the area. If the current Rhythm Level is even or zero, it is increased by 1. Otherwise, it is decreased by 1.</p>
+            <p class="sk-body">Dancer Only Skills</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Dancer Skills<span>5 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-passive" id="s-dancing-dexterity">
+            <div class="sk-top"><strong>Dancing Dexterity</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Increases damage and Hit with Whips; extends Rhythm duration.</p>
+            <p class="sk-body">Increases the Hit Rate and Damage of Whips, and increases the duration of Rhythm stacks gained. Whips typically gain Reduced SP Consumption as a mastery bonus.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-noetic-number">
+            <div class="sk-top"><strong>Noetic Number</strong><i class="sk-type">Dance</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Party AoE SP restoration over time. <b class="mech">Odd Rhythm</b>.</p>
+            <p class="sk-body">The user performs an edifying dance, restoring SP to the party over a short period of time. If the current Rhythm level is odd, it is increased by 1. Otherwise, it is decreased by 1.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-savage-stride">
+            <div class="sk-top"><strong>Savage Stride</strong><i class="sk-type">Dance</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Massively increases party Crit Rate. <b class="mech">Even Rhythm</b>.</p>
+            <p class="sk-body">The user performs a savagely beautiful dance, inspiring the party to acts of great violence. Provides a massive boost to Crit Rate for a short duration. If the current Rhythm Level is even or zero, it is increased by 1. Otherwise, it is decreased by 1.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-wearying-waltz">
+            <div class="sk-top"><strong>Wearying Waltz</strong><i class="sk-type">Dance</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Inflicts <b class="kw kw-slow">Slow</b> on approaching enemies. <b class="mech">Odd Rhythm</b>.</p>
+            <p class="sk-body">The user performs a strangely enervating dance, attempting to <b class="kw kw-slow">Slow</b> all enemies in the area. If the current Rhythm level is odd, it is increased by 1. Otherwise, it is decreased by 1.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-sinister-saunter">
+            <div class="sk-top"><strong>Sinister Saunter</strong><i class="sk-type">Dance</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Increases damage taken by nearby enemies. <b class="mech">Even Rhythm</b>.</p>
+            <p class="sk-body">The user performs an alluring dance, distracting enemies into letting down their guard. All enemies in the area take increased damage for a short period of time. If the current Rhythm Level is even or zero, it is increased by 1. Otherwise, it is decreased by 1.</p>
+            <p class="sk-body">Shared Skills</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Shared Skills<span>5 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-physical" id="s-synchronic-strike">
+            <div class="sk-top"><strong>Synchronic Strike</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Ranged attack that scales with and extends Rhythm.</p>
+            <p class="sk-body">Uses the Instrument or Whip to throw a volley of arrows at a distant target, carefully timed to synchronize with their performance. Deals increased damage based on the currently active Rhythm level, and increases its duration slightly.</p>
+          </li>
+          <li class="skill-card sk-magic" id="s-vicious-verse">
+            <div class="sk-top"><strong>Vicious Verse</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Magic attack that scales with and extends Rhythm.</p>
+            <p class="sk-body">The user recites an enchanted verse laced with deadly magic to harm their enemies without breaking the rhythm of their performance. Deals magic damage to the target, which is increased by the current Rhythm Level, and slightly increases its duration.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-hero-s-hymn">
+            <div class="sk-top"><strong>Hero's Hymn</strong><i class="sk-type">Performance</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Finale: consumes Rhythm for massive offense and defense buffs.</p>
+            <p class="sk-body">The user sings a majestic song to steel the party's resolve, consuming all Rhythm stacks to provide massive buffs to Attack, Magic Attack, Defense, and Magic Defense for the duration. The duration of the buff is based on the number of <b class="mech">Rhythm Stacks</b> consumed. Does not stack with Ardent Anthem.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-ardent-anthem">Ardent Anthem</a></p>
+          </li>
+          <li class="skill-card sk-support" id="s-ardent-anthem">
+            <div class="sk-top"><strong>Ardent Anthem</strong><i class="sk-type">Performance</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Finale: consumes Rhythm for Movement Speed, Flee, and Perfect Dodge buffs.</p>
+            <p class="sk-body">The user sings an energizing melody, inspiring their party to quicker and safer movement. Consumes all of the user's Rhythm stacks to give massive boosts to Movement Speed, Flee, and Perfect Dodge to the whole party. The duration of the buff is based on the number of <b class="mech">Rhythm Stacks</b> consumed. Does not stack with Hero's Hymn.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-hero-s-hymn">Hero's Hymn</a></p>
+          </li>
+          <li class="skill-card sk-support" id="s-devastating-descant">
+            <div class="sk-top"><strong>Devastating Descant</strong><i class="sk-type">Performance</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Finale: consumes Rhythm for a massive Hybrid damage AoE.</p>
+            <p class="sk-body">The user infuses their voice with destructive power and screams, consuming all Rhythm stacks to deal massive hybrid-type damage to all enemies in the area around them. The damage dealt is heavily influenced by the number of Rhythm stacks consumed.</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

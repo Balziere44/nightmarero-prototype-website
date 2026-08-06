@@ -177,26 +177,83 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-vuln">Vulnerable</span><span class="kw-stun">Stun</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Spiritual Discipline</strong><p>Passive. Increases the damage of all Spirit skills. Whenever the user casts a Spirit skill, the next Combo skill they use will be cast at the same level, assuming it isn't already higher.</p></li>
-        <li class="skill"><strong>Soul Piercer</strong><p>Spirit skill. The user strikes a target with a concentrated blast of spiritual energy, capable of piercing through any armor. This skill does additional damage based on the user's Int, and is also increased by the target's Defense. If cast immediately after a Combo skill, this skill also inflicts the <b class="kw kw-vuln">Vulnerable</b> status. If cast immediately after a Spirit skill, its cooldown is halved.</p></li>
-        <li class="skill"><strong>Spiritual Lash</strong><p>Spirit Skill. The user focuses their spiritual energy into a physical projectile before hurling it at a distant enemy. This skill does additional damage based on the user's Int. If used immediately after a Combo skill, it also inflicts the <b class="kw kw-slow">Slow</b> status. If used immediately after another Spirit skill, its cooldown is halved.</p></li>
-        <li class="skill"><strong>Soul Quake</strong><p>Spirit Finisher. The user unleashes a destructive wave of spiritual energy in every direction, damaging all enemies in a wide area. This skill does additional damage based on the user's Int. If cast immediately after a Combo skill, this skill also inflicts the <b class="kw kw-stun">Stun</b> status. If cast immediately after another Spirit skill, its cooldown is halved. This skill does not grant the Discipline status.</p></li>
-        <li class="skill"><strong>Fist Mastery</strong><p>Passive. Increases the damage, Hit Rate, and Attack Speed of Fist-type weapons, including when unarmed. Whenever the user casts a Combo skill, the next Spirit skill used will be cast at the same level, assuming it isn't already higher.</p></li>
-        <li class="skill"><strong>Raging Triple Blow</strong><p>Combo Skill. Delivers a flurry of three quick blows to an enemy, dealing moderate damage. It can be cast freely, and will not autocast on attacking. If cast immediately after a Spirit skill, this skill is guaranteed to be Critical. If cast immediately after another Combo skill, its cooldown is halved.</p></li>
-        <li class="skill"><strong>Raging Quadruple Blow</strong><p>Combo skill. Delivers a flurry of four quick blows to an enemy, dealing moderate damage. It can be cast freely, and does not require a combo state to activate. If cast immediately after a Spirit skill, this skill is guaranteed to be Critical. If cast immediately after another Combo skill, its cooldown is halved.</p></li>
-        <li class="skill"><strong>Raging Thrust</strong><p>Combo Finisher. Delivers a single devastating punch to an enemy. It can be cast freely, and does not require a combo state to activate. If cast immediately after a Spirit skill, this skill is guaranteed to be Critical. If cast immediately after another Combo skill, its cooldown is halved. This skill does not grant the Iron Fists status.</p></li>
-        <li class="skill"><strong>Spiritual Cadence</strong><p>Perfection through balance. The user focuses on maintaining perfect balance in all things, fighting in a steady rhythm to maximize staying power. While active, whenever the user gains the Iron Fists or Discipline Status, if it replaced the opposite, the stack count of this skill increases by 1. If it replaced itself, the stack count is reduced to zero. For each stack, the user's Agility and intelligence are increased, and they regenerate a portion of their HP and SP every five seconds. Does not stack with Fury.</p></li>
-        <li class="skill"><strong>Fury</strong><p>Perfection through extremity. The user focuses all their might into delivering explosive performance, increasing the power they are able to bring to bear. While active, whenever the user gains the Iron Fists or Discipline Status, if it replaced itself, the stack count of this skill increases by 1. If it replaced its opposite, the stack count is reduced to zero. For each stack, the user's Strength, Luck, and Crit Rate are increased. Does not stack with Spiritual Cadence.</p></li>
-      </ul>
+      <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Iron Fists</span></div>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-vuln">Vulnerable</span><span class="kw-stun">Stun</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-support" data-i18n="cls.t.support">Support</span><span class="sk-summon" data-i18n="cls.t.summon">Summon</span><span class="sk-passive" data-i18n="cls.t.passive">Passive</span><span class="sk-utility" data-i18n="cls.t.utility">Utility</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Spirit Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-summon" id="s-soul-piercer">
+            <div class="sk-top"><strong>Soul Piercer</strong><i class="sk-type">Spirit</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Armor-piercing strike that gains damage from the target's Defense.</p>
+            <p class="sk-body">Spirit skill. The user strikes a target with a concentrated blast of spiritual energy, capable of piercing through any armor. This skill does additional damage based on the user's Int, and is also increased by the target's Defense. If cast immediately after a Combo skill, this skill also inflicts the <b class="kw kw-vuln">Vulnerable</b> status. If cast immediately after a Spirit skill, its cooldown is halved.</p>
+          </li>
+          <li class="skill-card sk-summon" id="s-spiritual-lash">
+            <div class="sk-top"><strong>Spiritual Lash</strong><i class="sk-type">Spirit</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Long-range spiritual projectile.</p>
+            <p class="sk-body">The user focuses their spiritual energy into a physical projectile before hurling it at a distant enemy. This skill does additional damage based on the user's Int. If used immediately after a Combo skill, it also inflicts the <b class="kw kw-slow">Slow</b> status. If used immediately after another Spirit skill, its cooldown is halved.</p>
+          </li>
+          <li class="skill-card sk-summon" id="s-soul-quake">
+            <div class="sk-top"><strong>Soul Quake</strong><i class="sk-type">Spirit</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Finisher: AoE blast that consumes Discipline and <b class="mech">Iron Fists</b>.</p>
+            <p class="sk-body">Spirit Finisher. The user unleashes a destructive wave of spiritual energy in every direction, damaging all enemies in a wide area. This skill does additional damage based on the user's Int. If cast immediately after a Combo skill, this skill also inflicts the <b class="kw kw-stun">Stun</b> status. If cast immediately after another Spirit skill, its cooldown is halved. This skill does not grant the Discipline status.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Combo Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-passive" id="s-fist-mastery">
+            <div class="sk-top"><strong>Fist Mastery</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Boosts Fist damage, ASPD, and Hit; grants the <b class="mech">Iron Fists</b> status.</p>
+            <p class="sk-body">Increases the damage, Hit Rate, and Attack Speed of Fist-type weapons, including when unarmed. Whenever the user casts a Combo skill, the next Spirit skill used will be cast at the same level, assuming it isn't already higher.</p>
+            <ul class="sk-options"><li><b>Raging Triple Blow</b>Combo Skill. Delivers a flurry of three quick blows to an enemy, dealing moderate damage. It can be cast freely, and will not autocast on attacking. If cast immediately after a Spirit skill, this skill is guaranteed to be Critical. If cast immediately after another Combo skill, its cooldown is halved.</li></ul>
+          </li>
+          <li class="skill-card sk-utility" id="s-raging-quadruple-blow">
+            <div class="sk-top"><strong>Raging Quadruple Blow</strong><i class="sk-type">Combo</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Powerful four-hit strike.</p>
+            <p class="sk-body">Combo skill. Delivers a flurry of four quick blows to an enemy, dealing moderate damage. It can be cast freely, and does not require a combo state to activate. If cast immediately after a Spirit skill, this skill is guaranteed to be Critical. If cast immediately after another Combo skill, its cooldown is halved.</p>
+          </li>
+          <li class="skill-card sk-utility" id="s-raging-thrust">
+            <div class="sk-top"><strong>Raging Thrust</strong><i class="sk-type">Combo</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Finisher: single devastating blow that consumes Discipline and <b class="mech">Iron Fists</b>.</p>
+            <p class="sk-body">Combo Finisher. Delivers a single devastating punch to an enemy. It can be cast freely, and does not require a combo state to activate. If cast immediately after a Spirit skill, this skill is guaranteed to be Critical. If cast immediately after another Combo skill, its cooldown is halved. This skill does not grant the <b class="mech">Iron Fists</b> status.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Balance Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-support" id="s-spiritual-cadence">
+            <div class="sk-top"><strong>Spiritual Cadence</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Stacking regen buff for alternating skill types.</p>
+            <p class="sk-body">Perfection through balance. The user focuses on maintaining perfect balance in all things, fighting in a steady rhythm to maximize staying power. While active, whenever the user gains the <b class="mech">Iron Fists</b> or Discipline Status, if it replaced the opposite, the stack count of this skill increases by 1. If it replaced itself, the stack count is reduced to zero. For each stack, the user's Agility and intelligence are increased, and they regenerate a portion of their HP and SP every five seconds. Does not stack with Fury.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-fury">
+            <div class="sk-top"><strong>Fury</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Stacking Crit buff for repeating skill types.</p>
+            <p class="sk-body">Perfection through extremity. The user focuses all their might into delivering explosive performance, increasing the power they are able to bring to bear. While active, whenever the user gains the <b class="mech">Iron Fists</b> or Discipline Status, if it replaced itself, the stack count of this skill increases by 1. If it replaced its opposite, the stack count is reduced to zero. For each stack, the user's Strength, Luck, and Crit Rate are increased. Does not stack with Spiritual Cadence.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-spiritual-cadence">Spiritual Cadence</a></p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Passive</h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-passive" id="s-spiritual-discipline">
+            <div class="sk-top"><strong>Spiritual Discipline</strong><i class="sk-type">Passive</i></div>
+            <p class="sk-body">Increases the damage of all Spirit skills. Whenever the user casts a Spirit skill, the next Combo skill they use will be cast at the same level, assuming it isn't already higher.</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

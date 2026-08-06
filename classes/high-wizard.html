@@ -158,7 +158,7 @@
         </div>
         <p class="muted">High Wizard is the primary advancement option for Wizards. It continues to excel at what the Wizard does best - dish out huge amounts of elemental damage over a wide area.</p>
         <p class="muted">The High Wizard turns back to its roots, focusing on the four natural elements with its magic, leaving the more esoteric magics to the Warlock. Their skills divide into the four branches you would expect: fire, water, wind, and earth magic.</p>
-        <p class="muted">Each branch comes with two skills. A major skill, dealing a large amount of damage over a wide area, and a minor skill, dealing damage over a much smaller area. The major skills each grant the user an Elemental Affinity, which boosts the effects of all magic used of the same element, even enhancing their Mage and Wizard skills. The minor skills all gain powerful additional effects while their appropriate Affinity is active, and also serve to reset the duration of that Affinity.</p>
+        <p class="muted">Each branch comes with two skills. A major skill, dealing a large amount of damage over a wide area, and a minor skill, dealing damage over a much smaller area. The major skills each grant the user an <b class="mech">Elemental Affinity</b>, which boosts the effects of all magic used of the same element, even enhancing their Mage and Wizard skills. The minor skills all gain powerful additional effects while their appropriate Affinity is active, and also serve to reset the duration of that Affinity.</p>
         <p class="muted">Affinities serve two powerful functions. The first is its enhancement to all elemental magic that matches it: while an Affinity is active, all magic of that element gains an enormous bonus to its Magic Defense Pierce. In addition, the Affinities alter the behavior of the remaining two High Wizard skills that sit outside the elemental branches.</p>
         <p class="muted">Mystical Amplification increases the user's Magic Attack for a single cast, at the cost of also increasing that skill's Fixed Cast Time. If an Affinity is active, it is consumed to grant an additional bonus that lasts much longer depending on which Affinity was consumed.</p>
         <p class="muted">The final High Wizard Skill is Elemental Annihilation, a massive nuke that deals incredible damage of all elements across four waves to the target and all enemies immediately around them. Usually this skill deals damage in the order of Fire, Water, Wind, and then Earth, but if any Affinity is active, it instead deals four waves of that particular element instead.</p>
@@ -177,31 +177,103 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-frozen">Frozen</span><span class="kw-sleep">Sleep</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Affinities</strong><p>Affinities come in the four natural elements, Fire, Water, Wind, or Earth. While an Affinity is active, all magic that matches its element gains additional Magic Defense Pierce. Only one Affinity can be active at a time.</p></li>
-        <li class="skill"><strong>Crimson Arrow</strong><p>The user fires a bolt of concentrated Fire Magic, striking all targets in a straight line. Any target struck that is <b class="kw kw-burn">Burning</b> takes additional damage, otherwise it attempts to inflict the <b class="kw kw-burn">Burning</b> Status. If Fire Affinity is active, its duration is reset and the damage is treated as <b class="kw kw-burn">Burning</b> Damage.</p></li>
-        <li class="skill"><strong>Volcanic Burst</strong><p>The user causes a burst of blazing magical energy to erupt beneath their target's feet, dealing Fire damage to them and all enemies around them. This skill deals additional damage to <b class="kw kw-burn">Burning</b> enemies and applies the Fire Affinity status on the user.</p></li>
-        <li class="skill"><strong><b class="kw kw-frozen">Frozen</b> Grip</strong><p>The user summons spikes of ice at the target's location, dealing Water property damage to them and all enemies nearby. If this skill strikes a Chilled target, it deals additional damage. Otherwise, it attempts to inflict the Chilled status. If Water Affinity is active, its duration is reset and this skill has a chance to <b class="kw kw-frozen">Freeze</b>.</p></li>
-        <li class="skill"><strong>Frost Nova</strong><p>The user unleashes a blast of freezing magic around themselves, dealing Water Property damage to all enemies in an area around them. This skill deals additional damage to Chilled enemies, and applies the Water Affinity status on the user.</p></li>
-        <li class="skill"><strong>Chain Lightning</strong><p>Invokes a burst of lightning on the target, dealing Wind Property damage before repeating against another nearby target. The number of bounces is affected by the level of the skill. If there are no other targets in the area, the same target can be struck multiple times. This skill deals additional damage to <b class="kw kw-sleep">Sleeping</b> and <b class="kw kw-sleep">Dazed</b> enemies. If Wind Affinity is active, its duration is reset and this skill gains additional bounces.</p></li>
-        <li class="skill"><strong>Static Storm</strong><p>Creates an electrically charged zone that is struck repeatedly by lightning bolts, dealing rapid Wind Property damage over time to all enemies within it. This skill deals additional damage to <b class="kw kw-sleep">Sleeping</b> and <b class="kw kw-sleep">Dazed</b> targets, and applies the Wind Affinity Status on the user.</p></li>
-        <li class="skill"><strong>Stone Crush</strong><p>Summons an enormous stone sphere and drops it on the target's location, dealing Earth Property damage to them and all enemies around them. Deals additional damage to <b class="kw kw-bleed">Bleeding</b> enemies, otherwise has a chance to inflict <b class="kw kw-bleed">Internal Bleeding</b>. If Earth Affinity is active, its duration is reset and the damage is treated as <b class="kw kw-bleed">Bleeding</b> damage.</p></li>
-        <li class="skill"><strong>Seismic Tremor</strong><p>Infuses magic into the ground at the target location, causing it to tremor and deal Earth Property damage to all enemies above it. This skill deals additional damage to <b class="kw kw-bleed">Bleeding</b> enemies, and applies the Earth Affinity status on the user.</p></li>
-        <li class="skill"><strong>Mystic Amplification</strong><p>The user infuses their staff with incredible magical energies, amplifying the effects of their next spell. For a single skill cast, the user's Magic Attack is massively increased, but so is its Fixed Cast Time. If the user is under any Elemental Affinity when this skill is cast, it is consumed to grant and additional buff for thirty seconds:</p></li>
-        <li class="skill"><strong>Fire: <b class="kw kw-burn">Burning</b> Damage increased by 30%</strong></li>
-        <li class="skill"><strong>Water</strong><p>All skills have a chance to inflict <b class="kw kw-frozen">Freeze</b></p></li>
-        <li class="skill"><strong>Wind</strong><p>All skills have a chance to inflict <b class="kw kw-sleep">Sleep</b></p></li>
-        <li class="skill"><strong>Earth</strong><p><b class="kw kw-bleed">Bleeding</b> Damage increased by 30% This skill does not stack with Rapid Incantation.</p></li>
-        <li class="skill"><strong>Elemental Annihilation</strong><p>The user channels a massive blast of elemental energy, obliterating a single target and all enemies nearby. Attacks in four waves, in the order of Fire, Water, Wind, Earth. If the user has an Elemental Affinity active, all four waves will match that element instead.</p></li>
-      </ul>
+      <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Earth Affinity</span><span>Elemental Affinity</span><span>Fire Affinity</span><span>Water Affinity</span><span>Wind Affinity</span></div>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-frozen">Frozen</span><span class="kw-sleep">Sleep</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-magic" data-i18n="cls.t.magic">Magic</span><span class="sk-support" data-i18n="cls.t.support">Support</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Fire Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-magic" id="s-crimson-arrow">
+            <div class="sk-top"><strong>Crimson Arrow</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Line-piercing Fire bolt with <b class="kw kw-burn">Burning</b> synergy.</p>
+            <p class="sk-body">The user fires a bolt of concentrated Fire Magic, striking all targets in a straight line. Any target struck that is <b class="kw kw-burn">Burning</b> takes additional damage, otherwise it attempts to inflict the <b class="kw kw-burn">Burning</b> Status. If <b class="mech">Fire Affinity</b> is active, its duration is reset and the damage is treated as <b class="kw kw-burn">Burning</b> Damage.</p>
+          </li>
+          <li class="skill-card sk-magic" id="s-volcanic-burst">
+            <div class="sk-top"><strong>Volcanic Burst</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Massive Fire AoE that grants <b class="mech">Fire Affinity</b>.</p>
+            <p class="sk-body">The user causes a burst of blazing magical energy to erupt beneath their target's feet, dealing Fire damage to them and all enemies around them. This skill deals additional damage to <b class="kw kw-burn">Burning</b> enemies and applies the <b class="mech">Fire Affinity</b> status on the user.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Water Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-magic" id="s-frozen-grip">
+            <div class="sk-top"><strong>Frozen Grip</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Ice spikes with Chilled synergy.</p>
+            <p class="sk-body">The user summons spikes of ice at the target's location, dealing Water property damage to them and all enemies nearby. If this skill strikes a Chilled target, it deals additional damage. Otherwise, it attempts to inflict the Chilled status. If <b class="mech">Water Affinity</b> is active, its duration is reset and this skill has a chance to <b class="kw kw-frozen">Freeze</b>.</p>
+          </li>
+          <li class="skill-card sk-magic" id="s-frost-nova">
+            <div class="sk-top"><strong>Frost Nova</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Massive self-centered Water AoE that grants <b class="mech">Water Affinity</b>.</p>
+            <p class="sk-body">The user unleashes a blast of freezing magic around themselves, dealing Water Property damage to all enemies in an area around them. This skill deals additional damage to Chilled enemies, and applies the <b class="mech">Water Affinity</b> status on the user.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Wind Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-magic" id="s-chain-lightning">
+            <div class="sk-top"><strong>Chain Lightning</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Bouncing lightning with <b class="kw kw-sleep">Sleep</b> synergy.</p>
+            <p class="sk-body">Invokes a burst of lightning on the target, dealing Wind Property damage before repeating against another nearby target. The number of bounces is affected by the level of the skill. If there are no other targets in the area, the same target can be struck multiple times. This skill deals additional damage to <b class="kw kw-sleep">Sleeping</b> and <b class="kw kw-sleep">Dazed</b> enemies. If <b class="mech">Wind Affinity</b> is active, its duration is reset and this skill gains additional bounces.</p>
+          </li>
+          <li class="skill-card sk-magic" id="s-static-storm">
+            <div class="sk-top"><strong>Static Storm</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Lightning DoT field that grants <b class="mech">Wind Affinity</b>.</p>
+            <p class="sk-body">Creates an electrically charged zone that is struck repeatedly by lightning bolts, dealing rapid Wind Property damage over time to all enemies within it. This skill deals additional damage to <b class="kw kw-sleep">Sleeping</b> and <b class="kw kw-sleep">Dazed</b> targets, and applies the <b class="mech">Wind Affinity</b> Status on the user.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Earth Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-magic" id="s-stone-crush">
+            <div class="sk-top"><strong>Stone Crush</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Falling boulder that inflicts <b class="kw kw-bleed">Internal Bleeding</b>.</p>
+            <p class="sk-body">Summons an enormous stone sphere and drops it on the target's location, dealing Earth Property damage to them and all enemies around them. Deals additional damage to <b class="kw kw-bleed">Bleeding</b> enemies, otherwise has a chance to inflict <b class="kw kw-bleed">Internal Bleeding</b>. If <b class="mech">Earth Affinity</b> is active, its duration is reset and the damage is treated as <b class="kw kw-bleed">Bleeding</b> damage.</p>
+          </li>
+          <li class="skill-card sk-magic" id="s-seismic-tremors">
+            <div class="sk-top"><strong>Seismic Tremors</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Earth DoT field that grants <b class="mech">Earth Affinity</b>.</p>
+            <p class="sk-body">Infuses magic into the ground at the target location, causing it to tremor and deal Earth Property damage to all enemies above it. This skill deals additional damage to <b class="kw kw-bleed">Bleeding</b> enemies, and applies the <b class="mech">Earth Affinity</b> status on the user.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Arcane Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-support" id="s-mystical-amplification">
+            <div class="sk-top"><strong>Mystical Amplification</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Massively amplifies one cast; consumes Affinities for lasting buffs.</p>
+            <p class="sk-body">The user infuses their staff with incredible magical energies, amplifying the effects of their next spell. For a single skill cast, the user's Magic Attack is massively increased, but so is its Fixed Cast Time. If the user is under any <b class="mech">Elemental Affinity</b> when this skill is cast, it is consumed to grant and additional buff for thirty seconds:</p>
+            <ul class="sk-options"><li><b>Fire</b><b class="kw kw-burn">Burning</b> Damage increased by 30%</li><li><b>Water</b>All skills have a chance to inflict <b class="kw kw-frozen">Freeze</b></li><li><b>Wind</b>All skills have a chance to inflict <b class="kw kw-sleep">Sleep</b></li><li><b>Earth</b><b class="kw kw-bleed">Bleeding</b> Damage increased by 30% This skill does not stack with Rapid Incantation.</li></ul>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-affinities">Affinities</a></p>
+          </li>
+          <li class="skill-card sk-magic" id="s-elemental-annihilation">
+            <div class="sk-top"><strong>Elemental Annihilation</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Four-wave elemental nuke, unified by any active Affinity.</p>
+            <p class="sk-body">The user channels a massive blast of elemental energy, obliterating a single target and all enemies nearby. Attacks in four waves, in the order of Fire, Water, Wind, Earth. If the user has an <b class="mech">Elemental Affinity</b> active, all four waves will match that element instead.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Mechanics</h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-other" id="s-affinities">
+            <div class="sk-top"><strong>Affinities</strong><i class="sk-type">Mechanic</i></div>
+            <p class="sk-body">Affinities come in the four natural elements, Fire, Water, Wind, or Earth. While an Affinity is active, all magic that matches its element gains additional Magic Defense Pierce. Only one Affinity can be active at a time.</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

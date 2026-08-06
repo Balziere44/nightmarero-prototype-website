@@ -176,28 +176,86 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-vuln">Vulnerable</span><span class="kw-sleep">Sleep</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Cloak of Flame</strong><p>The user wraps themselves in flame, dealing Fire property damage to all enemies that approach within a 5x5 area. Enemies struck suffer from Fire Vulnerability for ten seconds.</p></li>
-        <li class="skill"><strong>Crimson Rock</strong><p>Calls a flaming meteor from the heavens to deal heavy Fire property damage and inflict the <b class="kw kw-burn">Burning</b> status to a target and all enemies around it.</p></li>
-        <li class="skill"><strong>Freezing Breath</strong><p>Unleashes a blast of cold air at a target location, dealing Water property damage and attempting to inflict the Chilled and Water Vulnerability statuses.</p></li>
-        <li class="skill"><strong>Storm Gust</strong><p>Summons a wintry storm at the targeted location, dealing repeated Water property damage with a chance to inflict the Chilled status each time.</p></li>
-        <li class="skill"><strong>Jupitel Thunder</strong><p>Fires a ball of lightning at a target, knocking them back and inflicting the Wind Vulnerability status for ten seconds. <b class="kw kw-sleep">Sleeping</b> enemies take additional damage.</p></li>
-        <li class="skill"><strong>Lord of Vermillion</strong><p>Summons a barrage of lightning bolts that does significant damage and possibly inflicts the <b class="kw kw-sleep">Sleep</b> status on all targets over a huge area.</p></li>
-        <li class="skill"><strong>Earth Spike</strong><p>Deals Earth property damage to a single target, which is increased if the target is <b class="kw kw-bleed">Bleeding</b>.</p></li>
-        <li class="skill"><strong>Heaven's Drive</strong><p>Deals Earth property damage to targets over a small area, with a high chance to inflict the <b class="kw kw-bleed">Bleeding</b> status. <b class="kw kw-bleed">Bleeding</b> inflicted by this skill scales with Dex instead of Str.</p></li>
-        <li class="skill"><strong>Force Pulse</strong><p>Deals Neutral Physical damage to a single target, which is increased if the target is <b class="kw kw-vuln">Vulnerable</b>. This skill takes its damage from the user's Magic Attack, but is only reduced by Physical Defense.</p></li>
-        <li class="skill"><strong>Gravitational Collapse</strong><p>Deals Neutral Physical damage to targets over a small area, attempting to inflict the <b class="kw kw-vuln">Vulnerable</b> status with each hit. Enemies within the area of effect are slowed, though this does not count as the <b class="kw kw-slow">Slow</b> status effect. This skill takes its damage from the user's Magic Attack, but is only reduced by Physical Defense.</p></li>
-        <li class="skill"><strong>Energy Coat</strong><p>The user creates a magic forcefield around themselves, reducing the damage of all incoming attacks by a percentage based on the amount of SP they have remaining. Each hit taken under this status drains a percentage of the user's Max SP.</p></li>
-        <li class="skill"><strong>Rapid Incantation</strong><p>For five seconds, all spells cast by the user have their Variable Cast Time halved.</p></li>
-      </ul>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-vuln">Vulnerable</span><span class="kw-frozen">Frozen</span><span class="kw-sleep">Sleep</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-magic" data-i18n="cls.t.magic">Magic</span><span class="sk-support" data-i18n="cls.t.support">Support</span><span class="sk-utility" data-i18n="cls.t.utility">Utility</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Elemental Skills<span>10 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-utility" id="s-cloak-of-flame">
+            <div class="sk-top"><strong>Cloak of Flame</strong><i class="sk-type">Utility</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Deals constant Fire damage over time in an area around the caster, applying Fire Vulnerability.</p>
+            <p class="sk-body">The user wraps themselves in flame, dealing Fire property damage to all enemies that approach within a 5x5 area. Enemies struck suffer from Fire Vulnerability for ten seconds.</p>
+          </li>
+          <li class="skill-card sk-magic" id="s-crimson-rock">
+            <div class="sk-top"><strong>Crimson Rock</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Deals massive Fire area damage, inflicting <b class="kw kw-burn">Burning</b>.</p>
+            <p class="sk-body">Calls a flaming meteor from the heavens to deal heavy Fire property damage and inflict the <b class="kw kw-burn">Burning</b> status to a target and all enemies around it.</p>
+          </li>
+          <li class="skill-card sk-magic" id="s-freezing-breath">
+            <div class="sk-top"><strong>Freezing Breath</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Blasts the target area with Water damage, inflicting <b class="kw kw-frozen">Chill</b> and Water Vulnerability.</p>
+            <p class="sk-body">Unleashes a blast of cold air at a target location, dealing Water property damage and attempting to inflict the Chilled and Water Vulnerability statuses.</p>
+          </li>
+          <li class="skill-card sk-magic" id="s-storm-gust">
+            <div class="sk-top"><strong>Storm Gust</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Conjures a blizzard in target area, dealing Water damage and inflicting <b class="kw kw-frozen">Chill</b>.</p>
+            <p class="sk-body">Summons a wintry storm at the targeted location, dealing repeated Water property damage with a chance to inflict the Chilled status each time.</p>
+          </li>
+          <li class="skill-card sk-magic" id="s-jupitel-thunder">
+            <div class="sk-top"><strong>Jupitel Thunder</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Fires a ball of Wind energy at a target, applying Wind Vulnerability.</p>
+            <p class="sk-body">Fires a ball of lightning at a target, knocking them back and inflicting the Wind Vulnerability status for ten seconds. <b class="kw kw-sleep">Sleeping</b> enemies take additional damage.</p>
+          </li>
+          <li class="skill-card sk-magic" id="s-lord-of-vermillion">
+            <div class="sk-top"><strong>Lord of Vermillion</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Summons a barrage of lightning at a target area, inflicting <b class="kw kw-sleep">Sleep</b>.</p>
+            <p class="sk-body">Summons a barrage of lightning bolts that does significant damage and possibly inflicts the <b class="kw kw-sleep">Sleep</b> status on all targets over a huge area.</p>
+          </li>
+          <li class="skill-card sk-magic" id="s-earth-spike">
+            <div class="sk-top"><strong>Earth Spike</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Erupts a stone out of the ground, dealing Earth damage and bonus damage against <b class="kw kw-bleed">Bleeding</b> targets.</p>
+            <p class="sk-body">Deals Earth property damage to a single target, which is increased if the target is <b class="kw kw-bleed">Bleeding</b>.</p>
+          </li>
+          <li class="skill-card sk-magic" id="s-heaven-s-drive">
+            <div class="sk-top"><strong>Heaven's Drive</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Causes the ground to explode, dealing Earth damage and inflicting <b class="kw kw-bleed">Internal Bleeding</b>.</p>
+            <p class="sk-body">Deals Earth property damage to targets over a small area, with a high chance to inflict the <b class="kw kw-bleed">Bleeding</b> status. <b class="kw kw-bleed">Bleeding</b> inflicted by this skill scales with Dex instead of Str.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-force-pulse">
+            <div class="sk-top"><strong>Force Pulse</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Uses the caster's MATK to deal Physical damage bolts.</p>
+            <p class="sk-body">Deals Neutral Physical damage to a single target, which is increased if the target is <b class="kw kw-vuln">Vulnerable</b>. This skill takes its damage from the user's Magic Attack, but is only reduced by Physical Defense.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-gravitational-collapse">
+            <div class="sk-top"><strong>Gravitational Collapse</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Distorts gravity in an area, dealing Physical damage and applying <b class="kw kw-vuln">Vulnerable</b>.</p>
+            <p class="sk-body">Deals Neutral Physical damage to targets over a small area, attempting to inflict the <b class="kw kw-vuln">Vulnerable</b> status with each hit. Enemies within the area of effect are slowed, though this does not count as the <b class="kw kw-slow">Slow</b> status effect. This skill takes its damage from the user's Magic Attack, but is only reduced by Physical Defense.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Utility Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-support" id="s-rapid-incantation">
+            <div class="sk-top"><strong>Rapid Incantation</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Dramatically speeds up the Fixed Cast Time of all spells for a short duration.</p>
+            <p class="sk-body">For five seconds, all spells cast by the user have their Variable Cast Time halved.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-energy-coat">
+            <div class="sk-top"><strong>Energy Coat</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Deals a portion of incoming damage to the user's SP instead of HP.</p>
+            <p class="sk-body">The user creates a magic forcefield around themselves, reducing the damage of all incoming attacks by a percentage based on the amount of SP they have remaining. Each hit taken under this status drains a percentage of the user's Max SP.</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

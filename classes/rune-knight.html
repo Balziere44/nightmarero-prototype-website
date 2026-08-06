@@ -176,28 +176,95 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-vuln">Vulnerable</span><span class="kw-stun">Stun</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Rune Research</strong><p>Research into the nature and use of Rune Magic. Increases the user's Int and enhances the effectiveness of all Rune Knight skills. Has no effect on the creation of Rune Stones, or their effectiveness after creation.</p></li>
-        <li class="skill"><strong>Rune Inscription</strong><p>Study into the creation of Rune Stones, single-use items that can be slotted into equipment in the same manner as cards. Runes have a level from 1 to 5. The maximum level of Rune that can be created is based on the level of Rune Inscription learned. Created Runes can be used by any class, but gain additional effects based on the Rune Inscription level of the character equipping them.</p></li>
-        <li class="skill"><strong>Winter Razor</strong><p>Releases a blast of icy wind around the user, slicing apart nearby enemies. Attempts to inflict the <b class="kw kw-bleed">Bleeding</b> status on all enemies struck. Damage dealt by this skill is increased by the user's Int and is treated as <b class="kw kw-bleed">Bleeding</b> damage.</p></li>
-        <li class="skill"><strong>Ignition Break</strong><p>Creates a burst of mystical fire from the user's weapon, incinerating enemies in the area. This skill deals additional damage based on the user's Int and is treated as <b class="kw kw-burn">Burning</b> damage.</p></li>
-        <li class="skill"><strong><b class="kw kw-burn">Burning</b> Breath</strong><p>Unleashes a burst of flame to envelop the targeted location. Deals Physical Fire Property damage and attempts to inflict the <b class="kw kw-burn">Burning</b> status on all enemies in the area. This skill deals additional damage based on the user's Int.</p></li>
-        <li class="skill"><strong>Storm Blast</strong><p>Strikes the targeted enemy, then explodes outward, striking all enemies in an area around them.. If the original target is <b class="kw kw-bleed">Bleeding</b>, <b class="kw kw-burn">Burning</b>, or <b class="kw kw-vuln">Vulnerable</b>, spreads those statuses to all enemies struck by the blast. Deals additional damage based on the user's Int.</p></li>
-        <li class="skill"><strong>Crush Strike</strong><p>Delivers a crushing blow to the target, smashing through their defenses. Inflicts the <b class="kw kw-vuln">Vulnerable</b> status. If the target was already <b class="kw kw-vuln">Vulnerable</b>, additionally inflicts the <b class="kw kw-stun">Stun</b> Status. This skill deals additional damage based on the user's Int and <b class="kw kw-vuln">Vulnerable</b> Potency.</p></li>
-        <li class="skill"><strong>Bloodthirst</strong><p>For a short duration, all autoattacks from the user are treated as <b class="kw kw-bleed">Bleeding</b> damage and have a chance to autocast the Rend skill.</p></li>
-        <li class="skill"><strong>Refresh</strong><p>For ten seconds, reduces the Cooldown of the next skill cast by the user.</p></li>
-        <li class="skill"><strong><b class="kw kw-burn">Burning</b> Rage</strong><p>For a short duration, all Physical Skills cast by the user are treated as <b class="kw kw-burn">Burning</b> Damage. (This skill does not affect Ignition Break, as it is already <b class="kw kw-burn">Burning</b> Damage). The duration of this skill is increased by the user's Rune Research level.</p></li>
-        <li class="skill"><strong>Tenacity</strong><p>Rapidly regenerates the user's HP over a short duration.</p></li>
-        <li class="skill"><strong>Millennium Shield</strong><p>Creates a mystical shield around the user that blocks a certain amount of damage. The amount of HP the barrier has is influenced by the skill level and the user's Rune Research level.</p></li>
-      </ul>
+      <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Rune Stones</span></div>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-vuln">Vulnerable</span><span class="kw-stun">Stun</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-support" data-i18n="cls.t.support">Support</span><span class="sk-passive" data-i18n="cls.t.passive">Passive</span><span class="sk-utility" data-i18n="cls.t.utility">Utility</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Core Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-passive" id="s-rune-research">
+            <div class="sk-top"><strong>Rune Research</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Boosts the effectiveness of all Rune Knight skills.</p>
+            <p class="sk-body">Research into the nature and use of Rune Magic. Increases the user's Int and enhances the effectiveness of all Rune Knight skills. Has no effect on the creation of <b class="mech">Rune Stones</b>, or their effectiveness after creation.</p>
+          </li>
+          <li class="skill-card sk-utility" id="s-rune-inscription">
+            <div class="sk-top"><strong>Rune Inscription</strong><i class="sk-type">Crafting</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Enables crafting of slottable, single-use <b class="mech">Rune Stones</b>.</p>
+            <p class="sk-body">Study into the creation of <b class="mech">Rune Stones</b>, single-use items that can be slotted into equipment in the same manner as cards. Runes have a level from 1 to 5. The maximum level of Rune that can be created is based on the level of Rune Inscription learned.</p>
+            <p class="sk-body">Created Runes can be used by any class, but gain additional effects based on the Rune Inscription level of the character equipping them.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Attack Skills<span>5 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-physical" id="s-winter-razor">
+            <div class="sk-top"><strong>Winter Razor</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Icy AoE treated as <b class="kw kw-bleed">Bleeding</b> Damage.</p>
+            <p class="sk-body">Releases a blast of icy wind around the user, slicing apart nearby enemies. Attempts to inflict the <b class="kw kw-bleed">Bleeding</b> status on all enemies struck. Damage dealt by this skill is increased by the user's Int and is treated as <b class="kw kw-bleed">Bleeding</b> damage.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-ignition-break">
+            <div class="sk-top"><strong>Ignition Break</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Fiery AoE scaling with <b class="kw kw-burn">Burning</b> Damage bonuses.</p>
+            <p class="sk-body">Creates a burst of mystical fire from the user's weapon, incinerating enemies in the area. This skill deals additional damage based on the user's Int and is treated as <b class="kw kw-burn">Burning</b> damage.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-burning-breath">
+            <div class="sk-top"><strong>Burning Breath</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Ranged fire AoE that inflicts <b class="kw kw-burn">Burning</b>.</p>
+            <p class="sk-body">Unleashes a burst of flame to envelop the targeted location. Deals Physical Fire Property damage and attempts to inflict the <b class="kw kw-burn">Burning</b> status on all enemies in the area. This skill deals additional damage based on the user's Int.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-storm-blast">
+            <div class="sk-top"><strong>Storm Blast</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Explosive strike that spreads the target's statuses to nearby enemies.</p>
+            <p class="sk-body">Strikes the targeted enemy, then explodes outward, striking all enemies in an area around them.. If the original target is <b class="kw kw-bleed">Bleeding</b>, <b class="kw kw-burn">Burning</b>, or <b class="kw kw-vuln">Vulnerable</b>, spreads those statuses to all enemies struck by the blast. Deals additional damage based on the user's Int.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-crush-strike">
+            <div class="sk-top"><strong>Crush Strike</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Heavy blow that always inflicts <b class="kw kw-vuln">Vulnerable</b>.</p>
+            <p class="sk-body">Delivers a crushing blow to the target, smashing through their defenses. Inflicts the <b class="kw kw-vuln">Vulnerable</b> status. If the target was already <b class="kw kw-vuln">Vulnerable</b>, additionally inflicts the <b class="kw kw-stun">Stun</b> Status. This skill deals additional damage based on the user's Int and <b class="kw kw-vuln">Vulnerable</b> Potency.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Buff Skills<span>5 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-support" id="s-bloodthirst">
+            <div class="sk-top"><strong>Bloodthirst</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Autoattacks become <b class="kw kw-bleed">Bleeding</b> Damage and can autocast Rend.</p>
+            <p class="sk-body">For a short duration, all autoattacks from the user are treated as <b class="kw kw-bleed">Bleeding</b> damage and have a chance to autocast the Rend skill.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-refresh">
+            <div class="sk-top"><strong>Refresh</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Massively reduces the next skill's cooldown.</p>
+            <p class="sk-body">For ten seconds, reduces the Cooldown of the next skill cast by the user.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-burning-rage">
+            <div class="sk-top"><strong>Burning Rage</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Converts <b class="kw kw-burn">Burning</b> Damage bonuses into Physical skill damage.</p>
+            <p class="sk-body">For a short duration, all Physical Skills cast by the user are treated as <b class="kw kw-burn">Burning</b> Damage. (This skill does not affect Ignition Break, as it is already <b class="kw kw-burn">Burning</b> Damage). The duration of this skill is increased by the user's Rune Research level.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-ignition-break">Ignition Break</a><a href="#s-rune-research">Rune Research</a></p>
+          </li>
+          <li class="skill-card sk-support" id="s-tenacity">
+            <div class="sk-top"><strong>Tenacity</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Rapid self-heal over time.</p>
+            <p class="sk-body">Rapidly regenerates the user's HP over a short duration.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-millennium-shield">
+            <div class="sk-top"><strong>Millennium Shield</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Barrier that absorbs all non-Status damage.</p>
+            <p class="sk-body">Creates a mystical shield around the user that blocks a certain amount of damage. The amount of HP the barrier has is influenced by the skill level and the user's Rune Research level.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-rune-research">Rune Research</a></p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

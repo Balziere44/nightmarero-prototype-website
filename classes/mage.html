@@ -177,23 +177,56 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-poison">Poison</span><span class="kw-frozen">Frozen</span><span class="kw-stun">Stun</span><span class="kw-sleep">Sleep</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Magical Attunement</strong><p>Restores SP for the user while they are not moving, reduces the SP cost of all skills, and increases the effectiveness of consumables that restore SP.</p></li>
-        <li class="skill"><strong>Fire Bolt</strong><p>Deals heavy fire element damage to a single target, which is increased if the target is <b class="kw kw-burn">Burning</b>.</p></li>
-        <li class="skill"><strong>Fire Ball</strong><p>Does minor fire damage to an area, with a high chance of inflicting the <b class="kw kw-burn">Burning</b> status on all targets struck.</p></li>
-        <li class="skill"><strong><b class="kw kw-frozen">Cold</b> Bolt</strong><p>Deals heavy water element damage to a single target, which is increased if the target is Chilled.</p></li>
-        <li class="skill"><strong>Frost Blast</strong><p>Deals minor water element damage to an area, with a high chance of inflicting the Chilled status on all targets struck.</p></li>
-        <li class="skill"><strong>Lightning Bolt</strong><p>Deals heavy wind element damage to a single target, which is increased if the target is <b class="kw kw-sleep">Sleeping</b>.</p></li>
-        <li class="skill"><strong>Static Burst</strong><p>Deals minor wind element damage to an area, with a high chance of inflicting the <b class="kw kw-sleep">Sleep</b> status on all targets struck.</p></li>
-      </ul>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-poison">Poison</span><span class="kw-frozen">Frozen</span><span class="kw-stun">Stun</span><span class="kw-sleep">Sleep</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-magic" data-i18n="cls.t.magic">Magic</span><span class="sk-passive" data-i18n="cls.t.passive">Passive</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Skills<span>7 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-passive" id="s-magical-attunement">
+            <div class="sk-top"><strong>Magical Attunement</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Increases SP regen and lowers SP costs.</p>
+            <p class="sk-body">Restores SP for the user while they are not moving, reduces the SP cost of all skills, and increases the effectiveness of consumables that restore SP.</p>
+          </li>
+          <li class="skill-card sk-magic" id="s-lightning-bolt">
+            <div class="sk-top"><strong>Lightning Bolt</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Deals Lightning damage with bonus damage against [[Status Effects#<b class="kw kw-sleep">Sleep</b>|<b class="kw kw-sleep">Sleeping</b> targets.</p>
+            <p class="sk-body">Deals heavy wind element damage to a single target, which is increased if the target is <b class="kw kw-sleep">Sleeping</b>.</p>
+          </li>
+          <li class="skill-card sk-magic" id="s-static-burst">
+            <div class="sk-top"><strong>Static Burst</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Ground-targeted AoE Lightning damage with a chance to inflict <b class="kw kw-sleep">Sleep</b>.</p>
+            <p class="sk-body">Deals minor wind element damage to an area, with a high chance of inflicting the <b class="kw kw-sleep">Sleep</b> status on all targets struck.</p>
+          </li>
+          <li class="skill-card sk-magic" id="s-fire-bolt">
+            <div class="sk-top"><strong>Fire Bolt</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Deals Fire damage with bonus damage against <b class="kw kw-burn">Burning</b> targets.</p>
+            <p class="sk-body">Deals heavy fire element damage to a single target, which is increased if the target is <b class="kw kw-burn">Burning</b>.</p>
+          </li>
+          <li class="skill-card sk-magic" id="s-fire-ball">
+            <div class="sk-top"><strong>Fire Ball</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Enemy-targeted AoE Fire damage with a chance to inflict <b class="kw kw-burn">Burning</b>.</p>
+            <p class="sk-body">Does minor fire damage to an area, with a high chance of inflicting the <b class="kw kw-burn">Burning</b> status on all targets struck.</p>
+          </li>
+          <li class="skill-card sk-magic" id="s-cold-bolt">
+            <div class="sk-top"><strong>Cold Bolt</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Deals Water damage with bonus damage against Chilled targets.</p>
+            <p class="sk-body">Deals heavy water element damage to a single target, which is increased if the target is Chilled.</p>
+          </li>
+          <li class="skill-card sk-magic" id="s-frost-blast">
+            <div class="sk-top"><strong>Frost Blast</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Enemy-targeted AoE Water damage with a chance to inflict <b class="kw kw-frozen">Chill</b>.</p>
+            <p class="sk-body">Deals minor water element damage to an area, with a high chance of inflicting the Chilled status on all targets struck.</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

@@ -175,29 +175,96 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-poison">Poison</span><span class="kw-frozen">Frozen</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Hawk Rush</strong><p>Commands the falcon in a joint maneuver, ordering to to strike the target while granting the user a short boost boost to their Attack Speed. Whenever the user performs a basic attack with a bow, this skill has a chance to trigger at half damage.</p></li>
-        <li class="skill"><strong>Punishing Bolt</strong><p>The user fires an arrow to take advantage of the opponent's Statuses. If the target is suffering from any of <b class="kw kw-bleed">Bleeding</b>, <b class="kw kw-burn">Burning</b>, or <b class="kw kw-poison">Poison</b>, they are consumed to amplify the damage dealt.</p></li>
-        <li class="skill"><strong>Gale Storm</strong><p>The user fires a hail of enchanted arrows, raining them down on a wide area together with a vicious wind. Enemies struck have a chance of being <b class="kw kw-slow">Slowed</b>.</p></li>
-        <li class="skill"><strong>Advanced Trap Mastery</strong><p>Training in the advanced deployment of traps. Increases the duration of Ranger traps, and increases the range at which all traps can be placed.</p></li>
-        <li class="skill"><strong>Wind Trap</strong><p>The user sets a persistent trap that deals Wind property damage to all enemies around it at regular intervals. Enemies struck have a chance of being <b class="kw kw-slow">Slowed</b>. The damage of this trap is increased by the user's <b class="kw kw-slow">Slow</b> Potency.</p></li>
-        <li class="skill"><strong>Flame Trap</strong><p>The user sets a persistent trap that deals Fire property damage to all enemies around it at regular intervals. Has a chance of inflicting the <b class="kw kw-burn">Burning</b> status on all enemies struck. The damage dealt by this trap is treated as <b class="kw kw-burn">Burning</b> Damage.</p></li>
-        <li class="skill"><strong>Stone Trap</strong><p>The user sets a persistent trap that deals Earth property damage to all enemies around it at regular intervals. Has a chance of inflicting <b class="kw kw-bleed">Internal Bleeding</b> on all enemies struck. The damage dealt by this trap is treated as <b class="kw kw-bleed">Bleeding</b> Damage.</p></li>
-        <li class="skill"><strong>Venom Trap</strong><p>The user sets a persistent trap that deals <b class="kw kw-poison">Poison</b> property damage to all enemies around it at regular intervals. Has a chance to inflict the <b class="kw kw-poison">Poison</b> status on all enemies struck. The damage dealt by this trap is treated as <b class="kw kw-poison">Poison</b> damage.</p></li>
-        <li class="skill"><strong>Ritual Mastery</strong><p>Mastery in performing rituals to call on the aid of the spirits of nature. Each level reduces the cast time of Nature Rituals cast by the user. A Nature Ritual that is already active can be recast instantly.</p></li>
-        <li class="skill"><strong>Roaring Winds</strong><p>Performs a ritual to call on the spirits of spring, ushering in a tremendous windstorm. The user gains an aura that increases the Wind Damage dealt and reduces the Water Damage dealt to all allies and enemies within range. In addition, players in range gain increased Max ASPD. Only one Nature Ritual can be active at a time.</p></li>
-        <li class="skill"><strong>Blazing Heat</strong><p>Performs a ritual to call on the spirits of summer, ushering in intense heat. The user gains an aura that increases Fire Damage and reduces Earth Damage taken by all creatures within range. In addition, players in range gain increased Crit Rate. Only one Nature Ritual can be active at a time.</p></li>
-        <li class="skill"><strong>Eternal Decay</strong><p>Performs a ritual to call on the spirits of autumn, ushering in the collapse and decay of the natural world. The user gains an aura that increases the Earth damage and reduces the Wind damage taken by all creatures within its range. In addition, players in range gain increased <b class="kw kw-bleed">Bleeding</b>, <b class="kw kw-burn">Burning</b>, and <b class="kw kw-poison">Poison</b> damage. Only one Nature Ritual can be active at a time.</p></li>
-        <li class="skill"><strong>Glacial <b class="kw kw-frozen">Chill</b></strong><p>Performs a ritual to call on the spirits of winter, ushering in frigid calm and hibernation. The user gains an aura that increases the Water Damage and decreases the Fire Damage taken by all creatures within its range. In addition, players in range gain increased Defense and Magic Defense Pierce. Only one Nature Ritual can be active at a time.</p></li>
-      </ul>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-poison">Poison</span><span class="kw-frozen">Frozen</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-magic" data-i18n="cls.t.magic">Magic</span><span class="sk-summon" data-i18n="cls.t.summon">Summon</span><span class="sk-passive" data-i18n="cls.t.passive">Passive</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Marksman Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-physical" id="s-hawk-rush">
+            <div class="sk-top"><strong>Hawk Rush</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Falcon strike that auto-triggers on bow attacks.</p>
+            <p class="sk-body">Commands the falcon in a joint maneuver, ordering to to strike the target while granting the user a short boost boost to their Attack Speed. Whenever the user performs a basic attack with a bow, this skill has a chance to trigger at half damage.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-punishing-bolt">
+            <div class="sk-top"><strong>Punishing Bolt</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Consumes the target's damaging statuses for a huge single hit.</p>
+            <p class="sk-body">The user fires an arrow to take advantage of the opponent's Statuses. If the target is suffering from any of <b class="kw kw-bleed">Bleeding</b>, <b class="kw kw-burn">Burning</b>, or <b class="kw kw-poison">Poison</b>, they are consumed to amplify the damage dealt.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-gale-storm">
+            <div class="sk-top"><strong>Gale Storm</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Wide AoE arrow rain that inflicts <b class="kw kw-slow">Slow</b>.</p>
+            <p class="sk-body">The user fires a hail of enchanted arrows, raining them down on a wide area together with a vicious wind. Enemies struck have a chance of being <b class="kw kw-slow">Slowed</b>.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Trap Skills<span>5 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-passive" id="s-advanced-trap-mastery">
+            <div class="sk-top"><strong>Advanced Trap Mastery</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Extends trap duration and placement range.</p>
+            <p class="sk-body">Training in the advanced deployment of traps. Increases the duration of Ranger traps, and increases the range at which all traps can be placed.</p>
+          </li>
+          <li class="skill-card sk-summon" id="s-wind-trap">
+            <div class="sk-top"><strong>Wind Trap</strong><i class="sk-type">Trap</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">DoT trap that inflicts <b class="kw kw-slow">Slow</b>, scaling with <b class="kw kw-slow">Slow</b> Potency.</p>
+            <p class="sk-body">The user sets a persistent trap that deals Wind property damage to all enemies around it at regular intervals. Enemies struck have a chance of being <b class="kw kw-slow">Slowed</b>. The damage of this trap is increased by the user's <b class="kw kw-slow">Slow</b> Potency.</p>
+          </li>
+          <li class="skill-card sk-summon" id="s-flame-trap">
+            <div class="sk-top"><strong>Flame Trap</strong><i class="sk-type">Trap</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">DoT trap treated as <b class="kw kw-burn">Burning</b> Damage.</p>
+            <p class="sk-body">The user sets a persistent trap that deals Fire property damage to all enemies around it at regular intervals. Has a chance of inflicting the <b class="kw kw-burn">Burning</b> status on all enemies struck. The damage dealt by this trap is treated as <b class="kw kw-burn">Burning</b> Damage.</p>
+          </li>
+          <li class="skill-card sk-summon" id="s-stone-trap">
+            <div class="sk-top"><strong>Stone Trap</strong><i class="sk-type">Trap</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">DoT trap that inflicts <b class="kw kw-bleed">Internal Bleeding</b>.</p>
+            <p class="sk-body">The user sets a persistent trap that deals Earth property damage to all enemies around it at regular intervals. Has a chance of inflicting <b class="kw kw-bleed">Internal Bleeding</b> on all enemies struck. The damage dealt by this trap is treated as <b class="kw kw-bleed">Bleeding</b> Damage.</p>
+          </li>
+          <li class="skill-card sk-summon" id="s-venom-trap">
+            <div class="sk-top"><strong>Venom Trap</strong><i class="sk-type">Trap</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">DoT trap treated as <b class="kw kw-poison">Poison</b> Damage.</p>
+            <p class="sk-body">The user sets a persistent trap that deals <b class="kw kw-poison">Poison</b> property damage to all enemies around it at regular intervals. Has a chance to inflict the <b class="kw kw-poison">Poison</b> status on all enemies struck. The damage dealt by this trap is treated as <b class="kw kw-poison">Poison</b> damage.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Nature Rituals<span>5 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-passive" id="s-ritual-mastery">
+            <div class="sk-top"><strong>Ritual Mastery</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Reduces Ritual cast times and empowers their effects.</p>
+            <p class="sk-body">Mastery in performing rituals to call on the aid of the spirits of nature. Each level reduces the cast time of Nature Rituals cast by the user. A Nature Ritual that is already active can be recast instantly.</p>
+          </li>
+          <li class="skill-card sk-magic" id="s-roaring-winds">
+            <div class="sk-top"><strong>Roaring Winds</strong><i class="sk-type">Nature Ritual</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Wind up, Water down; raises Max ASPD.</p>
+            <p class="sk-body">Performs a ritual to call on the spirits of spring, ushering in a tremendous windstorm. The user gains an aura that increases the Wind Damage dealt and reduces the Water Damage dealt to all allies and enemies within range. In addition, players in range gain increased Max ASPD. Only one Nature Ritual can be active at a time.</p>
+          </li>
+          <li class="skill-card sk-magic" id="s-blazing-heat">
+            <div class="sk-top"><strong>Blazing Heat</strong><i class="sk-type">Nature Ritual</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Fire up, Earth down; raises Crit Rate.</p>
+            <p class="sk-body">Performs a ritual to call on the spirits of summer, ushering in intense heat. The user gains an aura that increases Fire Damage and reduces Earth Damage taken by all creatures within range. In addition, players in range gain increased Crit Rate. Only one Nature Ritual can be active at a time.</p>
+          </li>
+          <li class="skill-card sk-magic" id="s-eternal-decay">
+            <div class="sk-top"><strong>Eternal Decay</strong><i class="sk-type">Nature Ritual</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Earth up, Wind down; amplifies status damage taken.</p>
+            <p class="sk-body">Performs a ritual to call on the spirits of autumn, ushering in the collapse and decay of the natural world. The user gains an aura that increases the Earth damage and reduces the Wind damage taken by all creatures within its range. In addition, players in range gain increased <b class="kw kw-bleed">Bleeding</b>, <b class="kw kw-burn">Burning</b>, and <b class="kw kw-poison">Poison</b> damage. Only one Nature Ritual can be active at a time.</p>
+          </li>
+          <li class="skill-card sk-magic" id="s-glacial-chill">
+            <div class="sk-top"><strong>Glacial Chill</strong><i class="sk-type">Nature Ritual</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Water up, Fire down; grants Def/MDef Pierce.</p>
+            <p class="sk-body">Performs a ritual to call on the spirits of winter, ushering in frigid calm and hibernation. The user gains an aura that increases the Water Damage and decreases the Fire Damage taken by all creatures within its range. In addition, players in range gain increased Defense and Magic Defense Pierce. Only one Nature Ritual can be active at a time.</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

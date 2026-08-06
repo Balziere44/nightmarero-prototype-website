@@ -94,8 +94,10 @@ nothing on the site falls back to a placeholder.
 
 ## Regenerating the class pages
 
-The 55 class pages and `classes.html` are generated from
-`tools/classes.json`, which holds the text of the Class Overviews document.
+The 55 class pages and `classes.html` are generated from two sources:
+
+- `tools/classes.json`, the text of the Class Overviews document
+- `tools/data/wiki-classes.json`, the skill tables off the player wiki
 
 ```bash
 python tools/build_classes.py
@@ -104,6 +106,57 @@ python tools/build_sitemap.py
 
 `build_classes.py` also prints which classes are still missing artwork and
 writes that list to `tools/missing-art.txt`.
+
+### How a skill list gets built
+
+The document is prose. It names every skill and describes it well, but it runs
+four different kinds of line together and never says which is which:
+
+```
+Void Infusion: Converts all magic damage dealt...      a skill
+Ghost: The user's Magic Pierce is reduced to 0         an option of it
+Phantasmal Crush: Invokes forbidden magic...           a skill
+If Void Infusion: Ghost is active, cooldown halved     a rider on it
+```
+
+The wiki carries the part the document does not: which branch a skill sits in,
+whether it is physical or magical or supportive, and its level cap. So the
+wiki skill tables are treated as the authority on what counts as a skill.
+Anything in the document that is not on that list gets folded into the entry
+above it, as an option or as a conditional rider. That work lives in
+`tools/skills.py`.
+
+On top of that the build works out two more things per class:
+
+- **Mechanics.** Resources, stances and states that are referred to over and
+  over but are not skills: Void Spheres, Axe Stance, Extort, Rhythm Stacks.
+  Found by head noun, then required to turn up in two different skills or in
+  the class introduction. They get listed above the skill grid and marked
+  inline in the accent colour with a dotted underline, so they never look like
+  a status effect.
+- **Dependencies.** A skill whose text names another skill of the same class
+  gets a "Works with" link to it. Option labels are excluded on purpose: an
+  Axe Stance table listing "Counter Kick: Inflicts Vulnerable" is saying what
+  the stance does to that kick, not depending on it.
+
+Skill types are coloured by family. The wiki uses about seventy type labels;
+`TYPE_FAMILIES` in `tools/skills.py` folds them onto eight `--sk-*` colours,
+which are separate from the status codex so the two never compete on a card.
+
+To refresh the wiki side:
+
+```bash
+python tools/fetch_wiki.py
+```
+
+That is the only script besides `fetch_sheets.py` that touches the network.
+The JSON it writes is committed, so `build_classes.py` runs offline.
+
+If the wiki adds a skill the document has not caught up with, it simply does
+not appear. If the document has one the wiki has not listed, it still appears,
+under a "Mechanics" heading, without a type or level. Renames between the two
+are matched by similarity, which is how "Seismic Tremor" in the document finds
+"Seismic Tremors" on the wiki.
 
 ### When the class document changes
 
@@ -276,7 +329,7 @@ The colours live in one place, `:root` in `style.css`, as `--kw-bleed`,
 `--kw-burn` and so on, with darker values under `html[data-theme="light"]`.
 
 The terms themselves are defined in the `STATUS` list in
-`tools/build_classes.py`. Matching is case sensitive, so an ordinary lowercase
+`tools/status_codex.py`. Matching is case sensitive, so an ordinary lowercase
 "cold" or "slow" in a sentence is left alone. To add a status, add a row there
 with a new key, add `--kw-<key>` to both theme blocks in `style.css`, and
 re-run the build.

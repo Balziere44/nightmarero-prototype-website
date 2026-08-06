@@ -176,26 +176,95 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-bleed">Bleeding</span><span class="kw-blind">Blind</span><span class="kw-vuln">Vulnerable</span><span class="kw-stun">Stun</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Oratio</strong><p>Grace Skill. The user calls down a holy curse on all enemies around them, revealing them and increasing the damage they take from Holy Property attacks. Whenever an enemy under the Oratio Status takes Holy Property damage, they take an additional burst of damage.</p></li>
-        <li class="skill"><strong>Arbitrium</strong><p>Authority Skill. The user calls a divine light from heaven to scour the targeted enemy from existence, dealing Holy property Magic Damage and inflicting the Searing Light status.</p></li>
-        <li class="skill"><strong>Adoramus</strong><p>Unaligned Skill. The user calls on a purging light to cleanse the targeted area of all foes. Deals Holy Property Magic damage to all enemies in an area around the target. If the user is under the Grace Status, it is consumed to inflict <b class="kw kw-slow">Slow</b> and <b class="kw kw-blind">Blind</b> on all enemies affected. If the user is under the Authority Status, it is consumed to inflict <b class="kw kw-vuln">Vulnerable</b> and <b class="kw kw-vuln">Breach</b> on all enemies affected.</p></li>
-        <li class="skill"><strong>Grace Heal</strong><p>Grace Skill. Instantly recovers a large amount of HP for the targeted ally, while also granting them a barrier to protect them from further damage. The barrier's HP is equal to the amount of HP healed by this skill, including any overflow.</p></li>
-        <li class="skill"><strong>Argutus Vita</strong><p>Authority Skill. The user chants an inspiring prayer, bolstering the faith and confidence of their party. Increases the Atk and MAtk of all party members for the duration.</p></li>
-        <li class="skill"><strong>Lux Pacifica</strong><p>Unaligned skill. The user bestows a sheltering miracle on their party members. If the user is under the Grace Status, consumes it to apply a buff that heals the targets whenever they would take damage. If the user is under the Authority status, consumes it to apply a buff that heals the targets whenever they would deal damage. Whenever this skill grants healing, the original caster loses a small amount of SP. The effect ends early if the caster runs out of SP.</p></li>
-        <li class="skill"><strong>Expiatio</strong><p>Grace Skill. The user calls upon a blessing of war, increasing their Attack and <b class="kw kw-vuln">Vulnerable</b> Potency for the duration.</p></li>
-        <li class="skill"><strong>Petitio</strong><p>Authority Skill. The user delivers a punishing smite to the targeted enemy, inflicting Physical damage to them and all enemies in an area around them. <b class="kw kw-vuln">Vulnerable</b> enemies take increased damage. For a short duration after casting this skill, the Smite skill deals increased damage.</p></li>
-        <li class="skill"><strong>Gladius Sanctum</strong><p>Unaligned skill. The user calls down swords of divine light, tearing apart the targeted enemy. Deals Weapon Property Physical Damage to the target three times. If the user is under the Grace Status, it is consumed, and this skill inflicts the <b class="kw kw-stun">Stun</b> Status. If the user is under the Authority Status, it is consumed, and this skill inflicts the <b class="kw kw-bleed">Bleeding</b> Status.</p></li>
-        <li class="skill"><strong>Manus Dei</strong><p>The user makes a desperate plea for divine intervention, and is granted a miracle to turn the tides of battle. Any dead party members in the area are immediately resurrected, then all party members are healed to full HP and SP and gain the Aspersio and Assumptio statuses for an extended duration. If the user is under the Grace Status, the user takes half damage from all attacks while this skill is casting. If the user is under the Authority Status, all enemies in the area of effect are <b class="kw kw-slow">Slowed</b> and <b class="kw kw-blind">Blinded</b>. A player may only be affected by this skill once every five minutes, even from a different caster.</p></li>
-      </ul>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-blind">Blind</span><span class="kw-vuln">Vulnerable</span><span class="kw-stun">Stun</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-magic" data-i18n="cls.t.magic">Magic</span><span class="sk-support" data-i18n="cls.t.support">Support</span><span class="sk-debuff" data-i18n="cls.t.debuff">Debuff</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Offensive Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-support" id="s-oratio">
+            <div class="sk-top"><strong>Oratio</strong><i class="sk-type">Grace</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Curses enemies to take burst damage whenever struck by Holy attacks.</p>
+            <p class="sk-body">The user calls down a holy curse on all enemies around them, revealing them and increasing the damage they take from Holy Property attacks. Whenever an enemy under the Oratio Status takes Holy Property damage, they take an additional burst of damage.</p>
+          </li>
+          <li class="skill-card sk-debuff" id="s-arbitrium">
+            <div class="sk-top"><strong>Arbitrium</strong><i class="sk-type">Authority</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Single-target Holy nuke with Magic Pierce and Searing Light.</p>
+            <p class="sk-body">The user calls a divine light from heaven to scour the targeted enemy from existence, dealing Holy property Magic Damage and inflicting the Searing Light status.</p>
+          </li>
+          <li class="skill-card sk-debuff" id="s-adoramus">
+            <div class="sk-top"><strong>Adoramus</strong><i class="sk-type">Judgement</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Wide Holy AoE; consumes Grace or Authority for debuffs.</p>
+            <p class="sk-body">The user calls on a purging light to cleanse the targeted area of all foes. Deals Holy Property Magic damage to all enemies in an area around the target.</p>
+            <p class="sk-body">If the user is under the Grace Status, it is consumed to inflict <b class="kw kw-slow">Slow</b> and <b class="kw kw-blind">Blind</b> on all enemies affected.</p>
+            <p class="sk-body">If the user is under the Authority Status, it is consumed to inflict <b class="kw kw-vuln">Vulnerable</b> and <b class="kw kw-vuln">Breach</b> on all enemies affected.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Supportive Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-support" id="s-grace-heal">
+            <div class="sk-top"><strong>Grace Heal</strong><i class="sk-type">Grace</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Large single-target heal that leaves a protective barrier.</p>
+            <p class="sk-body">Instantly recovers a large amount of HP for the targeted ally, while also granting them a barrier to protect them from further damage. The barrier's HP is equal to the amount of HP healed by this skill, including any overflow.</p>
+          </li>
+          <li class="skill-card sk-debuff" id="s-argutus-vita">
+            <div class="sk-top"><strong>Argutus Vita</strong><i class="sk-type">Authority</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Party-wide Attack and Magic Attack buff.</p>
+            <p class="sk-body">The user chants an inspiring prayer, bolstering the faith and confidence of their party. Increases the Atk and MAtk of all party members for the duration.</p>
+          </li>
+          <li class="skill-card sk-debuff" id="s-lux-pacifica">
+            <div class="sk-top"><strong>Lux Pacifica</strong><i class="sk-type">Judgement</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Party blessing that heals on taking or dealing damage.</p>
+            <p class="sk-body">Unaligned skill. The user bestows a sheltering miracle on their party members. If the user is under the Grace Status, consumes it to apply a buff that heals the targets whenever they would take damage.</p>
+            <p class="sk-body">If the user is under the Authority status, consumes it to apply a buff that heals the targets whenever they would deal damage.</p>
+            <p class="sk-body">Whenever this skill grants healing, the original caster loses a small amount of SP. The effect ends early if the caster runs out of SP.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Physical Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-support" id="s-expiatio">
+            <div class="sk-top"><strong>Expiatio</strong><i class="sk-type">Grace</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Self buff granting Attack and <b class="kw kw-vuln">Vulnerable</b> Potency.</p>
+            <p class="sk-body">The user calls upon a blessing of war, increasing their Attack and <b class="kw kw-vuln">Vulnerable</b> Potency for the duration.</p>
+          </li>
+          <li class="skill-card sk-debuff" id="s-petitio">
+            <div class="sk-top"><strong>Petitio</strong><i class="sk-type">Authority</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Physical splash smite that also empowers Smite.</p>
+            <p class="sk-body">The user delivers a punishing smite to the targeted enemy, inflicting Physical damage to them and all enemies in an area around them. <b class="kw kw-vuln">Vulnerable</b> enemies take increased damage. For a short duration after casting this skill, the Smite skill deals increased damage.</p>
+          </li>
+          <li class="skill-card sk-debuff" id="s-gladius-sanctum">
+            <div class="sk-top"><strong>Gladius Sanctum</strong><i class="sk-type">Judgement</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Three-hit physical burst; consumes Grace or Authority for statuses.</p>
+            <p class="sk-body">Unaligned skill. The user calls down swords of divine light, tearing apart the targeted enemy. Deals Weapon Property Physical Damage to the target three times.</p>
+            <p class="sk-body">If the user is under the Grace Status, it is consumed, and this skill inflicts the <b class="kw kw-stun">Stun</b> Status.</p>
+            <p class="sk-body">If the user is under the Authority Status, it is consumed, and this skill inflicts the <b class="kw kw-bleed">Bleeding</b> Status.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Ultimate Skill</h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-magic" id="s-manus-dei">
+            <div class="sk-top"><strong>Manus Dei</strong><i class="sk-type">Miracle</i></div>
+            <p class="sk-short">Miracle: mass resurrection, full recovery, and party blessings.</p>
+            <p class="sk-body">The user makes a desperate plea for divine intervention, and is granted a miracle to turn the tides of battle. Any dead party members in the area are immediately resurrected, then all party members are healed to full HP and SP and gain the Aspersio and Assumptio statuses for an extended duration.</p>
+            <p class="sk-body">If the user is under the Grace Status, the user takes half damage from all attacks while this skill is casting.</p>
+            <p class="sk-body">If the user is under the Authority Status, all enemies in the area of effect are <b class="kw kw-slow">Slowed</b> and <b class="kw kw-blind">Blinded</b>.</p>
+            <p class="sk-body">A player may only be affected by this skill once every five minutes, even from a different caster.</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

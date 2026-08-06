@@ -158,9 +158,9 @@
         </div>
         <p class="muted">Night Watch is the alternative advancement option for Gunslingers. Similar to the Rebel, the Night Watch focuses on expanding the original options of the Gunslinger. While perfectly at home with the triple-wielding style of old, they also gain the ability to specialize in a single weapon type of their choosing.</p>
         <p class="muted">Revolver, Rifle, and Shotgun Specialization are skills that function effectively the same. While active, the weapon skills of their specified type gain benefits to account for their lack of ability to swap weapons, inflicting varied statuses even with a single gun type.</p>
-        <p class="muted">In addition to these enhancements to the original Gunslinger arsenal, the Night Watch gain a new weapon type unique to them: the Grenade Launcher. Like the Rebel's Gatling Gun, the Grenade Launcher occupies a special equipment slot separate from the user's weapon, allowing them to offer their bonuses consistently through any number of weapon swaps, and no matter which Weapon Specialization the user chooses to rely on.</p>
-        <p class="muted">Grenade Launcher skills have a number of unique characteristics. Chief among them is that they all have exceptionally low Cooldowns, their use being primarily limited by their ammo. The specialized grenades used for firing these destructive weapons does not come from shops, however, but from making use of the Night Watch's other weapon skills. Thus, even those members of the Night Watch who wish to focus entirely on using their Grenade Launchers will need to keep firing off a steady stream of other weapon skills to keep their Launchers fed. But once they get that rhythm down, they will be able to unleash exceptional levels of destruction across the battlefield.</p>
-        <p class="muted">Grenade Launchers also share the unique Mastery system of Gatling Guns in that their Weapon Mastery tracks every skill point invested in any Gatling Gun skill. Those members of the Night Watch who choose to focus their efforts on their new Grenade Launchers will find themselves dealing incredible amounts of damage with almost no down time.</p>
+        <p class="muted">In addition to these enhancements to the original Gunslinger arsenal, the Night Watch gain a new weapon type unique to them: the <b class="mech">Grenade</b> Launcher. Like the Rebel's Gatling Gun, the <b class="mech">Grenade</b> Launcher occupies a special equipment slot separate from the user's weapon, allowing them to offer their bonuses consistently through any number of weapon swaps, and no matter which Weapon Specialization the user chooses to rely on.</p>
+        <p class="muted"><b class="mech">Grenade</b> Launcher skills have a number of unique characteristics. Chief among them is that they all have exceptionally low Cooldowns, their use being primarily limited by their ammo. The specialized grenades used for firing these destructive weapons does not come from shops, however, but from making use of the Night Watch's other weapon skills. Thus, even those members of the Night Watch who wish to focus entirely on using their <b class="mech">Grenade</b> Launchers will need to keep firing off a steady stream of other weapon skills to keep their Launchers fed. But once they get that rhythm down, they will be able to unleash exceptional levels of destruction across the battlefield.</p>
+        <p class="muted"><b class="mech">Grenade</b> Launchers also share the unique Mastery system of Gatling Guns in that their Weapon Mastery tracks every skill point invested in any Gatling Gun skill. Those members of the Night Watch who choose to focus their efforts on their new <b class="mech">Grenade</b> Launchers will find themselves dealing incredible amounts of damage with almost no down time.</p>
       </div>
       <div class="portrait">
         <div class="sex-toggle" role="group" aria-label="Character art"><button type="button" data-src="../assets/img/classes/night-watch-male.webp" data-alt="Night Watch male" aria-pressed="true" data-i18n="cls.male">Male</button><button type="button" data-src="../assets/img/classes/night-watch-female.webp" data-alt="Night Watch female" aria-pressed="false" data-i18n="cls.female">Female</button></div>
@@ -176,36 +176,109 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-vuln">Vulnerable</span><span class="kw-stun">Stun</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Revolver Specialization</strong><p>Revolver Skill: The user alters their fighting style to specialize in the use of Revolvers. For the skill's duration, the user's <b class="kw kw-slow">Slow</b> Potency is increased and Revolver skills are enhanced. The status ends if the user changes their equipped weapon. This skill shares a cooldown with Rifle Specialization and Shotgun Specialization.</p></li>
-        <li class="skill"><strong>Quick Draw Bonus</strong><p>Inflicts <b class="kw kw-vuln">Vulnerable</b> and Crimson Marker</p></li>
-        <li class="skill"><strong>Rapid Shower Bonus</strong><p>Inflicts <b class="kw kw-bleed">Internal Bleeding</b> and Crimson Marker</p></li>
-        <li class="skill"><strong>Unload Bonus</strong><p>Gain (Skill Lv/3) Grenades instead of 1</p></li>
-        <li class="skill"><strong>Unload</strong><p>Revolver Skill. The user unloads their revolvers into the targeted enemy, dealing significant physical damage and attempting to inflict the <b class="kw kw-slow">Slow</b> Status. If the user is under Revolver Specialization, inflicts the Crimson Marker Status. Otherwise, consumes it to instantly refresh this skill's Cooldown. Using this skill immediately generates one Grenade.</p></li>
-        <li class="skill"><strong>Rifle Specialization</strong><p>Rifle Skill. The user alters their fighting style to specialize in the use of Rifles. For the skill's duration, the user's <b class="kw kw-vuln">Vulnerable</b> Potency is increased and Rifle skills are enhanced. The status ends if the user changes their equipped weapon. This skill shares a cooldown with Revolver Specialization and Shotgun Specialization.</p></li>
-        <li class="skill"><strong>Breaking Shot Bonus</strong><p>Inflicts <b class="kw kw-slow">Slow</b> and Crimson Marker</p></li>
-        <li class="skill"><strong>Snipe Bonus</strong><p>Inflicts <b class="kw kw-bleed">Internal Bleeding</b> and Crimson Marker</p></li>
-        <li class="skill"><strong>Hammer Round Bonus</strong><p>Gain (Skill Lv/3) Grenades instead of 1</p></li>
-        <li class="skill"><strong>Hammer Round</strong><p>Rifle Skill. The user fires a devastating blast from their rifle, dealing heavy damage and attempting to inflict the <b class="kw kw-vuln">Vulnerable</b> status to the target and all enemies in the area around them. If not under Rifle Specialization, this skill inflicts Crimson Marker. Otherwise, any target under the Crimson Marker status takes significantly increased damage. Using this skill immediately generates one Grenade.</p></li>
-        <li class="skill"><strong>Shotgun Specialization</strong><p>Shotgun Skill. The user alters their fighting style to specialize in the use of Shotguns. For the skill's duration, the user's <b class="kw kw-bleed">Bleeding</b> damage is increased and Shotgun skills are enhanced. The status ends if the user changes their equipped weapon. This skill shares a cooldown with Revolver Specialization and Rifle Specialization.</p></li>
-        <li class="skill"><strong>Scatter Shot Bonus</strong><p>Inflicts <b class="kw kw-vuln">Vulnerable</b> and Crimson Marker</p></li>
-        <li class="skill"><strong>Full Blast Bonus</strong><p>Inflicts <b class="kw kw-slow">Slow</b> and Crimson Marker</p></li>
-        <li class="skill"><strong>Slug Shot Bonus</strong><p>Generates (Skill Lv/3) Grenades instead of 1</p></li>
-        <li class="skill"><strong>Slug Shot</strong><p>Shotgun Skill. The user fires a heavy slug at the targeted enemy, dealing heavy damage and attempting to inflict the <b class="kw kw-bleed">Internal Bleeding</b> status. This skill's damage is treated as Half <b class="kw kw-bleed">Bleeding</b>. If the user is not under Shotgun Specialization, inflicts the Crimson Marker status. Otherwise, consumes it to <b class="kw kw-stun">Stun</b> the target. Using this skill immediately generates one Grenade.</p></li>
-        <li class="skill"><strong>Crimson Marker</strong><p>Passively increases the duration of all Crimson Markers applied by the user.</p></li>
-        <li class="skill"><strong>Ammunition Economy</strong><p>The user immediately generates a number of Grenades to be used with Grenade Launcher skills. This skill is not counted when calculating Grenade Launcher mastery.</p></li>
-        <li class="skill"><strong>Scorched Earth</strong><p>Grenade Launcher Skill. The user launches a wave of fire in the designated direction, scorching all enemies in its path. Deals physical damage repeatedly to all enemies in its path that is treated as <b class="kw kw-burn">Burning</b> damage. Any enemies struck have a chance of receiving the <b class="kw kw-bleed">Internal Bleeding</b> status. The chance is increased for enemies under the Crimson Marker status.</p></li>
-        <li class="skill"><strong>Chain Blast</strong><p>Grenade Launcher Skill. The user launches a multi-stage grenade at the target, which detonates three times in a progressively wider radius. Deals three hits of physical damage that is also treated as <b class="kw kw-burn">Burning</b> Damage. Enemies struck have a chance of being inflicted with the <b class="kw kw-vuln">Vulnerable</b> status. The chance is increased if the target is under Crimson Marker.</p></li>
-        <li class="skill"><strong>Heavy Salvo</strong><p>Grenade Launcher Skill. The user launches a salvo of grenades in a wide area, dealing heavy damage to all marked enemies on the screen. Deals heavy physical damage that is treated as <b class="kw kw-burn">Burning</b> Damage to all enemies in a wide area around the user that are under the Crimson Marker Status. Enemies struck have a chance of being inflicted with the <b class="kw kw-slow">Slow</b> Status.</p></li>
-      </ul>
+      <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Grenades</span></div>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-vuln">Vulnerable</span><span class="kw-stun">Stun</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-passive" data-i18n="cls.t.passive">Passive</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Revolver Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-physical" id="s-revolver-specialization">
+            <div class="sk-top"><strong>Revolver Specialization</strong><i class="sk-type">Revolver</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Revolver stance: <b class="kw kw-slow">Slow</b> Potency and enhanced Revolver skills.</p>
+            <p class="sk-body">The user alters their fighting style to specialize in the use of Revolvers. For the skill's duration, the user's <b class="kw kw-slow">Slow</b> Potency is increased and Revolver skills are enhanced. The status ends if the user changes their equipped weapon. This skill shares a cooldown with Rifle Specialization and Shotgun Specialization.</p>
+            <ul class="sk-riders"><li>Quick Draw Bonus: Inflicts <b class="kw kw-vuln">Vulnerable</b> and Crimson Marker</li><li>Rapid Shower Bonus: Inflicts <b class="kw kw-bleed">Internal Bleeding</b> and Crimson Marker</li><li>Unload Bonus: Gain (Skill Lv/3) <b class="mech">Grenades</b> instead of 1</li></ul>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-shotgun-specialization">Shotgun Specialization</a><a href="#s-rifle-specialization">Rifle Specialization</a><a href="#s-crimson-marker">Crimson Marker</a></p>
+          </li>
+          <li class="skill-card sk-physical" id="s-unload">
+            <div class="sk-top"><strong>Unload</strong><i class="sk-type">Revolver</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Revolver dump that interacts with Crimson Marker; generates a <b class="mech">Grenade</b>.</p>
+            <p class="sk-body">The user unloads their revolvers into the targeted enemy, dealing significant physical damage and attempting to inflict the <b class="kw kw-slow">Slow</b> Status. If the user is under Revolver Specialization, inflicts the Crimson Marker Status. Otherwise, consumes it to instantly refresh this skill's Cooldown. Using this skill immediately generates one <b class="mech">Grenade</b>.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-revolver-specialization">Revolver Specialization</a><a href="#s-crimson-marker">Crimson Marker</a></p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Rifle Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-physical" id="s-rifle-specialization">
+            <div class="sk-top"><strong>Rifle Specialization</strong><i class="sk-type">Rifle</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Rifle stance: <b class="kw kw-vuln">Vulnerable</b> Potency and enhanced Rifle skills.</p>
+            <p class="sk-body">The user alters their fighting style to specialize in the use of Rifles. For the skill's duration, the user's <b class="kw kw-vuln">Vulnerable</b> Potency is increased and Rifle skills are enhanced. The status ends if the user changes their equipped weapon. This skill shares a cooldown with Revolver Specialization and Shotgun Specialization.</p>
+            <ul class="sk-riders"><li>Breaking Shot Bonus: Inflicts <b class="kw kw-slow">Slow</b> and Crimson Marker</li><li>Snipe Bonus: Inflicts <b class="kw kw-bleed">Internal Bleeding</b> and Crimson Marker</li><li>Hammer Round Bonus: Gain (Skill Lv/3) <b class="mech">Grenades</b> instead of 1</li></ul>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-revolver-specialization">Revolver Specialization</a><a href="#s-shotgun-specialization">Shotgun Specialization</a><a href="#s-crimson-marker">Crimson Marker</a></p>
+          </li>
+          <li class="skill-card sk-physical" id="s-hammer-round">
+            <div class="sk-top"><strong>Hammer Round</strong><i class="sk-type">Rifle</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Explosive splash round; consumes Crimson Marker for bonus damage.</p>
+            <p class="sk-body">The user fires a devastating blast from their rifle, dealing heavy damage and attempting to inflict the <b class="kw kw-vuln">Vulnerable</b> status to the target and all enemies in the area around them. If not under Rifle Specialization, this skill inflicts Crimson Marker. Otherwise, any target under the Crimson Marker status takes significantly increased damage. Using this skill immediately generates one <b class="mech">Grenade</b>.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-rifle-specialization">Rifle Specialization</a><a href="#s-crimson-marker">Crimson Marker</a></p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Shotgun Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-physical" id="s-shotgun-specialization">
+            <div class="sk-top"><strong>Shotgun Specialization</strong><i class="sk-type">Shotgun</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Shotgun stance: <b class="kw kw-bleed">Bleeding</b> Damage and enhanced Shotgun skills.</p>
+            <p class="sk-body">The user alters their fighting style to specialize in the use of Shotguns. For the skill's duration, the user's <b class="kw kw-bleed">Bleeding</b> damage is increased and Shotgun skills are enhanced. The status ends if the user changes their equipped weapon. This skill shares a cooldown with Revolver Specialization and Rifle Specialization.</p>
+            <ul class="sk-riders"><li>Scatter Shot Bonus: Inflicts <b class="kw kw-vuln">Vulnerable</b> and Crimson Marker</li><li>Full Blast Bonus: Inflicts <b class="kw kw-slow">Slow</b> and Crimson Marker</li><li>Slug Shot Bonus: Generates (Skill Lv/3) <b class="mech">Grenades</b> instead of 1</li></ul>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-revolver-specialization">Revolver Specialization</a><a href="#s-rifle-specialization">Rifle Specialization</a><a href="#s-crimson-marker">Crimson Marker</a></p>
+          </li>
+          <li class="skill-card sk-physical" id="s-slug-shot">
+            <div class="sk-top"><strong>Slug Shot</strong><i class="sk-type">Shotgun</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Heavy slug; consumes Crimson Marker to <b class="kw kw-stun">Stun</b>.</p>
+            <p class="sk-body">The user fires a heavy slug at the targeted enemy, dealing heavy damage and attempting to inflict the <b class="kw kw-bleed">Internal Bleeding</b> status. This skill's damage is treated as Half <b class="kw kw-bleed">Bleeding</b>. If the user is not under Shotgun Specialization, inflicts the Crimson Marker status. Otherwise, consumes it to <b class="kw kw-stun">Stun</b> the target. Using this skill immediately generates one <b class="mech">Grenade</b>.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-shotgun-specialization">Shotgun Specialization</a><a href="#s-crimson-marker">Crimson Marker</a></p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Support Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-passive" id="s-crimson-marker">
+            <div class="sk-top"><strong>Crimson Marker</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Extends the duration of the user's Crimson Marker.</p>
+            <p class="sk-body">Passively increases the duration of all Crimson Markers applied by the user.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-ammunition-economy">
+            <div class="sk-top"><strong>Ammunition Economy</strong><i class="sk-type">Grenade Launcher</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Instantly generates <b class="mech">Grenades</b> for <b class="mech">Grenade</b> Launcher skills.</p>
+            <p class="sk-body">The user immediately generates a number of <b class="mech">Grenades</b> to be used with <b class="mech">Grenade</b> Launcher skills. This skill is not counted when calculating <b class="mech">Grenade</b> Launcher mastery.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Grenade Launcher Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-physical" id="s-scorched-earth">
+            <div class="sk-top"><strong>Scorched Earth</strong><i class="sk-type">Grenade Launcher</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Five-hit fire cone treated as <b class="kw kw-burn">Burning</b> Damage.</p>
+            <p class="sk-body">The user launches a wave of fire in the designated direction, scorching all enemies in its path. Deals physical damage repeatedly to all enemies in its path that is treated as <b class="kw kw-burn">Burning</b> damage. Any enemies struck have a chance of receiving the <b class="kw kw-bleed">Internal Bleeding</b> status. The chance is increased for enemies under the Crimson Marker status.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-crimson-marker">Crimson Marker</a></p>
+          </li>
+          <li class="skill-card sk-physical" id="s-chain-blast">
+            <div class="sk-top"><strong>Chain Blast</strong><i class="sk-type">Grenade Launcher</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Triple detonation in widening areas.</p>
+            <p class="sk-body">The user launches a multi-stage grenade at the target, which detonates three times in a progressively wider radius. Deals three hits of physical damage that is also treated as <b class="kw kw-burn">Burning</b> Damage. Enemies struck have a chance of being inflicted with the <b class="kw kw-vuln">Vulnerable</b> status. The chance is increased if the target is under Crimson Marker.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-crimson-marker">Crimson Marker</a></p>
+          </li>
+          <li class="skill-card sk-physical" id="s-heavy-salvo">
+            <div class="sk-top"><strong>Heavy Salvo</strong><i class="sk-type">Grenade Launcher</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Homing grenades striking only Marked enemies.</p>
+            <p class="sk-body">The user launches a salvo of grenades in a wide area, dealing heavy damage to all marked enemies on the screen. Deals heavy physical damage that is treated as <b class="kw kw-burn">Burning</b> Damage to all enemies in a wide area around the user that are under the Crimson Marker Status. Enemies struck have a chance of being inflicted with the <b class="kw kw-slow">Slow</b> Status.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-crimson-marker">Crimson Marker</a></p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

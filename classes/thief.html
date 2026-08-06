@@ -176,22 +176,51 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-poison">Poison</span><span class="kw-blind">Blind</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Dagger Mastery</strong><p>Increases the damage and Double Attack rate of Daggers.</p></li>
-        <li class="skill"><strong>Envenom</strong><p>Deals minor poison damage, with a chance to inflict the <b class="kw kw-poison">Poison</b> status.</p></li>
-        <li class="skill"><strong>Sand Attack</strong><p>Deals a fair amount of Neutral damage at a small range, with a chance to inflict the <b class="kw kw-blind">Blind</b> status.</p></li>
-        <li class="skill"><strong>Nimbleness</strong><p>Increases the base Flee and Movement Speed.</p></li>
-        <li class="skill"><strong>Hiding</strong><p>Hides under the ground to avoid all attacks for a brief time. Has a lengthy cooldown that can be reduced with higher skill levels.</p></li>
-        <li class="skill"><strong>Backslide</strong><p>Shifts the user backward instantly 7 cells. Has a lengthy cooldown that can be reduced with higher skill levels.</p></li>
-      </ul>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-poison">Poison</span><span class="kw-blind">Blind</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-passive" data-i18n="cls.t.passive">Passive</span><span class="sk-utility" data-i18n="cls.t.utility">Utility</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Skills<span>6 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-passive" id="s-dagger-mastery">
+            <div class="sk-top"><strong>Dagger Mastery</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Increases damage, Double Attack rate of Daggers</p>
+            <p class="sk-body">Increases the damage and Double Attack rate of Daggers.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-sand-attack">
+            <div class="sk-top"><strong>Sand Attack</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Damage and inflicts <b class="kw kw-blind">Blind</b></p>
+            <p class="sk-body">Deals a fair amount of Neutral damage at a small range, with a chance to inflict the <b class="kw kw-blind">Blind</b> status.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-envenom">
+            <div class="sk-top"><strong>Envenom</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short"><b class="kw kw-poison">Poison</b> element damage and inflicts <b class="kw kw-poison">Poison</b></p>
+            <p class="sk-body">Deals minor poison damage, with a chance to inflict the <b class="kw kw-poison">Poison</b> status.</p>
+          </li>
+          <li class="skill-card sk-passive" id="s-nimbleness">
+            <div class="sk-top"><strong>Nimbleness</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Increases Flee and Movement Speed</p>
+            <p class="sk-body">Increases the base Flee and Movement Speed.</p>
+          </li>
+          <li class="skill-card sk-utility" id="s-hiding">
+            <div class="sk-top"><strong>Hiding</strong><i class="sk-type">Utility</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Avoids most physical and magical attacks for a short duration</p>
+            <p class="sk-body">Hides under the ground to avoid all attacks for a brief time. Has a lengthy cooldown that can be reduced with higher skill levels.</p>
+          </li>
+          <li class="skill-card sk-utility" id="s-back-slide">
+            <div class="sk-top"><strong>Back Slide</strong><i class="sk-type">Utility</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Instantly moves backward a fixed distance</p>
+            <p class="sk-body">Shifts the user backward instantly 7 cells. Has a lengthy cooldown that can be reduced with higher skill levels.</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

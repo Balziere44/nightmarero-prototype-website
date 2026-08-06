@@ -159,7 +159,7 @@
         <p class="muted">Sura is the alternative advancement option for the Monk. While Champion sought to bring the Combo and Spirit sides of the Monk tree into harmony, the Sura doubles down on specialization, preferring to focus entirely on one side and drawing out its maximum potential.</p>
         <p class="muted">Naturally, this means each side of the Monk tree is expanded. Furious Thrust, Furious Barrage, and Furious Execution add to the Combo side of the tree, providing a new rotation that can be added alongside the Monk skills or woven between them to create a new rotation altogether. The same can be said for the Spirit skills, Zealous Hammer, Zealous Echo, and Zealous Rage, which add a persistent <b class="kw kw-burn">Burning</b> effect for the Sura to take advantage of in their combos.</p>
         <p class="muted">These trees are each capped with a built-in combo skill. Flash Combo rapidly executes all three Monk Combo skills, ignoring their cooldowns, while Last Exorcism does the same for the Monk's Spirit Skills.</p>
-        <p class="muted">In order to squeeze out even more damage from these skills, Sura skills also have the Stigmata mechanic. Each skill inflicts a set number of Stigmata stacks on the target, to a maximum of 10. For each stack, all Sura skills deal additional damage to that target. Together with some self buffs and passives that add additional interactions with these stacks, Suras are perfectly positioned to deal maximum damage to whatever crosses their path.</p>
+        <p class="muted">In order to squeeze out even more damage from these skills, Sura skills also have the <b class="mech">Stigmata</b> mechanic. Each skill inflicts a set number of <b class="mech">Stigmata</b> stacks on the target, to a maximum of 10. For each stack, all Sura skills deal additional damage to that target. Together with some self buffs and passives that add additional interactions with these stacks, Suras are perfectly positioned to deal maximum damage to whatever crosses their path.</p>
       </div>
       <div class="portrait">
         <div class="sex-toggle" role="group" aria-label="Character art"><button type="button" data-src="../assets/img/classes/sura-male.webp" data-alt="Sura male" aria-pressed="true" data-i18n="cls.male">Male</button><button type="button" data-src="../assets/img/classes/sura-female.webp" data-alt="Sura female" aria-pressed="false" data-i18n="cls.female">Female</button></div>
@@ -175,29 +175,99 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-burn">Burning</span><span class="kw-stun">Stun</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong><b class="kw kw-burn">Burning</b> Faith</strong><p>Passively increases the damage dealt by Sura skills against enemies with Stigmata Stacks. When activated, Monk Combo Skills also gain this benefit, and also inflict Stigmata stacks.</p></li>
-        <li class="skill"><strong>Resolute Faith</strong><p>Passively reduces the damage taken from enemies that have any Stigmata stacks. When activated, Monk Spirit skills are treated as Sura skills for Stigmata damage buffs, and also inflict Stigmata stacks.</p></li>
-        <li class="skill"><strong>Judge's Conviction</strong><p>The user channels their inner fury, preparing to turn it against all enemies in the area around them. Inflicts a number of Stigmata stacks on all enemies in the area around the user. All Sura skills deal increased damage for each Stigmata stack on a target.</p></li>
-        <li class="skill"><strong>Furious Thrust</strong><p>The user throws a quick jab, delivering tremendous force with the minimum motion possible. Deals physical damage to a single target and inflicts one stack of Stigmata. If the user is under the Discipline Status, this skill is guaranteed to Crit. If the user is under the Iron Fists Status, this skill additionally grants the user the Aspersio status.</p></li>
-        <li class="skill"><strong>Furious Barrage</strong><p>The user unleashes a rapid barrage of strikes against a single target, dealing significant damage and inflicting two stacks of Stigmata. If the user is under the Discipline Status, this skill is guaranteed to Crit. If the user is under the Iron Fists status, the cooldown of Furious Thrust is refreshed.</p></li>
-        <li class="skill"><strong>Furious Execution</strong><p>The user delivers a single crushing blow to an enemy, dealing exceptional physical damage to a single target and inflicting three stacks of Stigmata. If the user is under the Discipline Status, this skill is guaranteed to Crit. If the user is under the Iron Fists status, this skill splashes in a 5x5 area. This skill consumes the Discipline and Iron Fists statuses, but does not grant them.</p></li>
-        <li class="skill"><strong>Flash Combo</strong><p>The user unleashes a string of powerful Combo skills, dealing exceptional damage to a single target. Immediately casts Raging Trifecta, Raging Quadruple Blow, and Raging Thrust in quick succession, ignoring the internal cooldowns of the skills. The skills are cast at a level equal to the number of Stigmata stacks on the target, ignoring the learned level. If the target is at 10 stacks of Stigmata, Furious Guillotine is added to the end of the combo.</p></li>
-        <li class="skill"><strong>Furious Guillotine</strong><p>The user delivers a finishing blow to the target, dealing massive physical damage and inflicting the <b class="kw kw-stun">Stun</b> status. This skill does not benefit from the Iron Fists or Discipline statuses, and does not grant them. This skill cannot be learned, and can only be cast through Flash Combo.</p></li>
-        <li class="skill"><strong>Zealous Hammer</strong><p>The user slams a fist charged with burning spiritual energy into the target, dealing heavy damage to a single target and inflicting one stack of Stigmata. If the user is under the Iron Fists status, this skill also inflicts the <b class="kw kw-burn">Burning</b> status. If the user is under the Discipline status, this skill also grants the Aspersio status to the user.</p></li>
-        <li class="skill"><strong>Zealous Echo</strong><p>The user unleashes a concentrated wave of spiritual energy, striking all enemies in the area around them. Deals physical damage to all enemies around the user and inflicting two stacks of Stigmata. If the user is under the Iron Fists status, also inflicts the Intense <b class="kw kw-burn">Burning</b> status. If the user is under the Discipline status, the cooldown of Zealous Hammer is instantly refreshed.</p></li>
-        <li class="skill"><strong>Zealous Rage</strong><p>The user unleashes an explosive wave of spiritual energy, scorching all enemies around them with holy fire. Deals physical damage to all enemies around the user and inflicts three stacks of Stigmata. If the user is under the Iron Fists status, the skill also inflicts Intense <b class="kw kw-burn">Burning</b>. If the user is under the Discipline status, the Variable Cast Time of the skill is removed.</p></li>
-        <li class="skill"><strong>Last Exorcism</strong><p>The user unleashes a string of powerful Spirit skills, dealing exceptional damage to their target. Immediately casts Soul Piercer, Spiritual Lash, and Soul Quake in quick succession, ignoring the internal cooldowns of the skills. The skills are cast at a level equal to the number of Stigmata stacks on the target. If the target has 10 stacks of Stigmata, Zealous Pyre is added to the end of the combo.</p></li>
-        <li class="skill"><strong>Zealous Pyre</strong><p>The user focuses their spiritual might on the targeted enemy, creating a localized inferno to obliterate them and all nearby enemies. Deals massive physical damage and inflicts both <b class="kw kw-burn">Burning</b> and <b class="kw kw-burn">Severe Burning</b>. This skill does not benefit from the Iron Fists or Discipline statuses, and does not grant them. This skill cannot be learned, and can only be cast through Last Exorcism.</p></li>
-      </ul>
+      <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Discipline</span><span>Iron Fists</span><span>Stigmata</span></div>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-burn">Burning</span><span class="kw-stun">Stun</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-support" data-i18n="cls.t.support">Support</span><span class="sk-summon" data-i18n="cls.t.summon">Summon</span><span class="sk-utility" data-i18n="cls.t.utility">Utility</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Stigmata Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-utility" id="s-burning-faith">
+            <div class="sk-top"><strong>Burning Faith</strong><i class="sk-type">Combo</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short"><b class="mech">Stigmata</b> damage passive; active empowers the Monk Combo skills.</p>
+            <p class="sk-body">Passively increases the damage dealt by Sura skills against enemies with <b class="mech">Stigmata</b> Stacks. When activated, Monk Combo Skills also gain this benefit, and also inflict <b class="mech">Stigmata</b> stacks.</p>
+            <ul class="sk-options"><li><b>Resolute Faith</b>Passively reduces the damage taken from enemies that have any <b class="mech">Stigmata</b> stacks. When activated, Monk Spirit skills are treated as Sura skills for <b class="mech">Stigmata</b> damage buffs, and also inflict <b class="mech">Stigmata</b> stacks.</li></ul>
+          </li>
+          <li class="skill-card sk-support" id="s-judge-s-conviction">
+            <div class="sk-top"><strong>Judge's Conviction</strong><i class="sk-type">Debuff</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Applies <b class="mech">Stigmata</b> stacks to all nearby enemies.</p>
+            <p class="sk-body">The user channels their inner fury, preparing to turn it against all enemies in the area around them. Inflicts a number of <b class="mech">Stigmata</b> stacks on all enemies in the area around the user. All Sura skills deal increased damage for each <b class="mech">Stigmata</b> stack on a target.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Combo Skills<span>5 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-utility" id="s-furious-thrust">
+            <div class="sk-top"><strong>Furious Thrust</strong><i class="sk-type">Combo</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Quick jab that applies <b class="mech">Stigmata</b>.</p>
+            <p class="sk-body">The user throws a quick jab, delivering tremendous force with the minimum motion possible. Deals physical damage to a single target and inflicts one stack of <b class="mech">Stigmata</b>. If the user is under the <b class="mech">Discipline</b> Status, this skill is guaranteed to Crit. If the user is under the <b class="mech">Iron Fists</b> Status, this skill additionally grants the user the Aspersio status.</p>
+          </li>
+          <li class="skill-card sk-utility" id="s-furious-barrage">
+            <div class="sk-top"><strong>Furious Barrage</strong><i class="sk-type">Combo</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Rapid strikes; <b class="mech">Iron Fists</b> refreshes Furious Thrust.</p>
+            <p class="sk-body">The user unleashes a rapid barrage of strikes against a single target, dealing significant damage and inflicting two stacks of <b class="mech">Stigmata</b>. If the user is under the <b class="mech">Discipline</b> Status, this skill is guaranteed to Crit. If the user is under the <b class="mech">Iron Fists</b> status, the cooldown of Furious Thrust is refreshed.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-furious-thrust">Furious Thrust</a></p>
+          </li>
+          <li class="skill-card sk-utility" id="s-furious-execution">
+            <div class="sk-top"><strong>Furious Execution</strong><i class="sk-type">Combo Finisher</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Combo finisher applying 3 <b class="mech">Stigmata</b> stacks.</p>
+            <p class="sk-body">The user delivers a single crushing blow to an enemy, dealing exceptional physical damage to a single target and inflicting three stacks of <b class="mech">Stigmata</b>. If the user is under the <b class="mech">Discipline</b> Status, this skill is guaranteed to Crit. If the user is under the <b class="mech">Iron Fists</b> status, this skill splashes in a 5x5 area. This skill consumes the <b class="mech">Discipline</b> and <b class="mech">Iron Fists</b> statuses, but does not grant them.</p>
+          </li>
+          <li class="skill-card sk-utility" id="s-flash-combo">
+            <div class="sk-top"><strong>Flash Combo</strong><i class="sk-type">Combo</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Auto-casts the Monk Combo skills at <b class="mech">Stigmata</b>-based levels.</p>
+            <p class="sk-body">The user unleashes a string of powerful Combo skills, dealing exceptional damage to a single target. Immediately casts Raging Trifecta, Raging Quadruple Blow, and Raging Thrust in quick succession, ignoring the internal cooldowns of the skills. The skills are cast at a level equal to the number of <b class="mech">Stigmata</b> stacks on the target, ignoring the learned level. If the target is at 10 stacks of <b class="mech">Stigmata</b>, Furious Guillotine is added to the end of the combo.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-furious-guillotine">Furious Guillotine</a></p>
+          </li>
+          <li class="skill-card sk-physical" id="s-furious-guillotine">
+            <div class="sk-top"><strong>Furious Guillotine</strong><i class="sk-type">Finisher</i></div>
+            <p class="sk-short">Unlearnable finisher appended to Flash Combo at 10 stacks.</p>
+            <p class="sk-body">The user delivers a finishing blow to the target, dealing massive physical damage and inflicting the <b class="kw kw-stun">Stun</b> status. This skill does not benefit from the <b class="mech">Iron Fists</b> or <b class="mech">Discipline</b> statuses, and does not grant them. This skill cannot be learned, and can only be cast through Flash Combo.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-flash-combo">Flash Combo</a></p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Spirit Skills<span>5 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-summon" id="s-zealous-hammer">
+            <div class="sk-top"><strong>Zealous Hammer</strong><i class="sk-type">Spirit</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short"><b class="kw kw-burn">Burning</b> spirit strike that applies <b class="mech">Stigmata</b>.</p>
+            <p class="sk-body">The user slams a fist charged with burning spiritual energy into the target, dealing heavy damage to a single target and inflicting one stack of <b class="mech">Stigmata</b>. If the user is under the <b class="mech">Iron Fists</b> status, this skill also inflicts the <b class="kw kw-burn">Burning</b> status. If the user is under the <b class="mech">Discipline</b> status, this skill also grants the Aspersio status to the user.</p>
+          </li>
+          <li class="skill-card sk-summon" id="s-zealous-echo">
+            <div class="sk-top"><strong>Zealous Echo</strong><i class="sk-type">Spirit</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Point-blank spirit AoE; <b class="mech">Discipline</b> refreshes Zealous Hammer.</p>
+            <p class="sk-body">The user unleashes a concentrated wave of spiritual energy, striking all enemies in the area around them. Deals physical damage to all enemies around the user and inflicting two stacks of <b class="mech">Stigmata</b>. If the user is under the <b class="mech">Iron Fists</b> status, also inflicts the Intense <b class="kw kw-burn">Burning</b> status. If the user is under the <b class="mech">Discipline</b> status, the cooldown of Zealous Hammer is instantly refreshed.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-zealous-hammer">Zealous Hammer</a></p>
+          </li>
+          <li class="skill-card sk-summon" id="s-zealous-rage">
+            <div class="sk-top"><strong>Zealous Rage</strong><i class="sk-type">Spirit Finisher</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Spirit finisher applying 3 <b class="mech">Stigmata</b> stacks.</p>
+            <p class="sk-body">The user unleashes an explosive wave of spiritual energy, scorching all enemies around them with holy fire. Deals physical damage to all enemies around the user and inflicts three stacks of <b class="mech">Stigmata</b>. If the user is under the <b class="mech">Iron Fists</b> status, the skill also inflicts Intense <b class="kw kw-burn">Burning</b>. If the user is under the <b class="mech">Discipline</b> status, the Variable Cast Time of the skill is removed.</p>
+          </li>
+          <li class="skill-card sk-summon" id="s-last-exorcism">
+            <div class="sk-top"><strong>Last Exorcism</strong><i class="sk-type">Spirit</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Auto-casts the Monk Spirit skills at <b class="mech">Stigmata</b>-based levels.</p>
+            <p class="sk-body">The user unleashes a string of powerful Spirit skills, dealing exceptional damage to their target. Immediately casts Soul Piercer, Spiritual Lash, and Soul Quake in quick succession, ignoring the internal cooldowns of the skills. The skills are cast at a level equal to the number of <b class="mech">Stigmata</b> stacks on the target. If the target has 10 stacks of <b class="mech">Stigmata</b>, Zealous Pyre is added to the end of the combo.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-zealous-pyre">Zealous Pyre</a></p>
+          </li>
+          <li class="skill-card sk-physical" id="s-zealous-pyre">
+            <div class="sk-top"><strong>Zealous Pyre</strong><i class="sk-type">Finisher</i></div>
+            <p class="sk-short">Unlearnable inferno appended to Last Exorcism at 10 stacks.</p>
+            <p class="sk-body">The user focuses their spiritual might on the targeted enemy, creating a localized inferno to obliterate them and all nearby enemies. Deals massive physical damage and inflicts both <b class="kw kw-burn">Burning</b> and <b class="kw kw-burn">Severe Burning</b>. This skill does not benefit from the <b class="mech">Iron Fists</b> or <b class="mech">Discipline</b> statuses, and does not grant them. This skill cannot be learned, and can only be cast through Last Exorcism.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-last-exorcism">Last Exorcism</a></p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

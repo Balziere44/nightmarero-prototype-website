@@ -176,28 +176,97 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-burn">Burning</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Summon Ardor</strong><p>Summons Ardor, the spirit of indomitable fire, to aid in combat. While summoned, the user's Fire Property magic gains additional Magic Defense Pierce, but the user's Water Resistance is reduced. Only one Elemental Spirit can be summoned at a time.</p></li>
-        <li class="skill"><strong>Agni's Wrath</strong><p>The user calls on Agni, spirit of flame, to incinerate their foes. Deals a burst of Fire Property damage to the target and all enemies around them. The damage of this skill is increased by the user's bonuses to Summoned Entity damage, and triggers the user's Summoned Elemental to use its Offensive ability. This skill's Cooldown is halved if Ardor is present.</p></li>
-        <li class="skill"><strong>Agni's Heat</strong><p>The user calls on Agni, the spirit of flame, to infuse the targeted area with unnatural heat. For a short duration, all enemies that enter the targeted area take damage over time. The damage is based on the user's <b class="kw kw-burn">Burning</b> Damage, but does not count as the actual <b class="kw kw-burn">Burning</b> Status. The damage is further increased by the user's bonuses to Summoned Entity HP, and triggers the user's Summoned Elemental to use its Support Skill. This skill's Cooldown is halved if Ardor is present.</p></li>
-        <li class="skill"><strong>Summon Diluvio</strong><p>Summons Diluvio, the spirit of the endless ocean depths, to aid in combat. While summoned, the user's Water Property Magic gains additional Magic Defense Pierce, but the user's Wind Resistance is reduced. Only one Elemental Spirit can be summoned at a time.</p></li>
-        <li class="skill"><strong>Aqua's Breath</strong><p>Calls on Aqua, the spirit of water, to strike down their foes, creating a blast of frigid snow and ice to strike the targeted area. All enemies in the are take Water Property damage and have a chance to be Chilled. The damage of this skill is increased by the user's bonuses to Summoned Entity Damage, and triggers the user's Summoned Elemental to use its Offensive Skill. This skill's Cooldown is halved if Diluvio is present.</p></li>
-        <li class="skill"><strong>Aqua's Relief</strong><p>Calls on Aqua, the spirit of water, to grant relief to their allies. Causes a gentle healing rain to fall around the user, gradually healing all allies within it over time. The amount of healing is increased by the user's bonuses to Summoned Entity HP, and triggers the user's Summoned Elemental to use its Support Skill. This skill's Cooldown is halved if Diluvio is present.</p></li>
-        <li class="skill"><strong>Summon Procella</strong><p>Summons Procella, the spirit of storm and gale, to aid in combat. While summoned, the user's Wind Property Magic gains additional Magic Defense Pierce, but the user's Earth Resistance is reduced. Only one Elemental Spirit can be summoned at a time.</p></li>
-        <li class="skill"><strong>Ventus's Gale</strong><p>Calls on Ventus, the spirit of the wind, to unleash a violent tornado at their foes, dealing damage to all enemies in a straight line. The damage of this skill is increased by the user's bonuses to Summoned Entity Damage, and triggers the user's Summoned Elemental to use its Offensive Skill. This skill's cooldown is halved if Procella is present.</p></li>
-        <li class="skill"><strong>Ventus's Haste</strong><p>The user calls on Ventus, the spirit of the wind, to accelerate their party members. For a short duration, all party members have increased Attack Speed and reduced Variable Cast Time. It also triggers the user's Summoned Elemental to use its Support Skill. This skill's Cooldown is halved if Procella is present.</p></li>
-        <li class="skill"><strong>Summon Terra Motus</strong><p>Summons Terra Motus, the spirit of earth and stone, to aid in combat. While summoned, the user's Earth Property Magic gains additional Magic Defense Pierce, but the user's Fire Resistance is reduced. Only one Elemental Spirit can be summoned at a time.</p></li>
-        <li class="skill"><strong>Terra's Fangs</strong><p>Call on Terra, spirit of the earth, to create a tremor in the ground at the targeted location. All enemies in the area are struck for Earth Property damage. The damage of this skill is increased by the user's bonuses to Summoned Entity Damage, and it triggers the user's Summoned Elemental to use its Offensive Skill. This skill's Cooldown is halved if Terra Motus is present.</p></li>
-        <li class="skill"><strong>Terra's Shield</strong><p>Calls on Terra, spirit of the earth, to protect all of the user's party members. Each party member receives a shield that absorbs half of the damage they would take from all Physical and Magical damage. The shield ends after a set duration or after it has absorbed a certain amount of damage. The shield's HP is increased by the user's Barrier Potency and by the user's bonuses to Summoned Entity HP. It also triggers the user's Summoned Elemental to use its Support Skill. This skill's Cooldown is halved if Terra Motus is present.</p></li>
-      </ul>
+      <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Summoned Elemental</span></div>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-burn">Burning</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-magic" data-i18n="cls.t.magic">Magic</span><span class="sk-support" data-i18n="cls.t.support">Support</span><span class="sk-summon" data-i18n="cls.t.summon">Summon</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Fire Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-summon" id="s-summon-ardor">
+            <div class="sk-top"><strong>Summon Ardor</strong><i class="sk-type">Summon</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Summons the fire spirit: Fire MDef Pierce, reduced Water Resistance.</p>
+            <p class="sk-body">Summons Ardor, the spirit of indomitable fire, to aid in combat. While summoned, the user's Fire Property magic gains additional Magic Defense Pierce, but the user's Water Resistance is reduced. Only one Elemental Spirit can be summoned at a time.</p>
+          </li>
+          <li class="skill-card sk-magic" id="s-agni-s-wrath">
+            <div class="sk-top"><strong>Agni's Wrath</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Fire AoE that triggers the spirit's Attack Skill.</p>
+            <p class="sk-body">The user calls on Agni, spirit of flame, to incinerate their foes. Deals a burst of Fire Property damage to the target and all enemies around them. The damage of this skill is increased by the user's bonuses to Summoned Entity damage, and triggers the user's <b class="mech">Summoned Elemental</b> to use its Offensive ability. This skill's Cooldown is halved if Ardor is present.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-agni-s-heat">
+            <div class="sk-top"><strong>Agni's Heat</strong><i class="sk-type">Support</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short"><b class="kw kw-burn">Burning</b>-damage field that triggers the spirit's Support Skill.</p>
+            <p class="sk-body">The user calls on Agni, the spirit of flame, to infuse the targeted area with unnatural heat. For a short duration, all enemies that enter the targeted area take damage over time. The damage is based on the user's <b class="kw kw-burn">Burning</b> Damage, but does not count as the actual <b class="kw kw-burn">Burning</b> Status. The damage is further increased by the user's bonuses to Summoned Entity HP, and triggers the user's <b class="mech">Summoned Elemental</b> to use its Support Skill. This skill's Cooldown is halved if Ardor is present.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Water Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-summon" id="s-summon-diluvio">
+            <div class="sk-top"><strong>Summon Diluvio</strong><i class="sk-type">Summon</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Summons the water spirit: Water MDef Pierce, reduced Wind Resistance.</p>
+            <p class="sk-body">Summons Diluvio, the spirit of the endless ocean depths, to aid in combat. While summoned, the user's Water Property Magic gains additional Magic Defense Pierce, but the user's Wind Resistance is reduced. Only one Elemental Spirit can be summoned at a time.</p>
+          </li>
+          <li class="skill-card sk-magic" id="s-aqua-s-breath">
+            <div class="sk-top"><strong>Aqua's Breath</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Water AoE that triggers the spirit's Attack Skill.</p>
+            <p class="sk-body">Calls on Aqua, the spirit of water, to strike down their foes, creating a blast of frigid snow and ice to strike the targeted area. All enemies in the are take Water Property damage and have a chance to be Chilled. The damage of this skill is increased by the user's bonuses to Summoned Entity Damage, and triggers the user's <b class="mech">Summoned Elemental</b> to use its Offensive Skill. This skill's Cooldown is halved if Diluvio is present.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-aqua-s-relief">
+            <div class="sk-top"><strong>Aqua's Relief</strong><i class="sk-type">Support</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Healing rain that triggers the spirit's Support Skill.</p>
+            <p class="sk-body">Calls on Aqua, the spirit of water, to grant relief to their allies. Causes a gentle healing rain to fall around the user, gradually healing all allies within it over time. The amount of healing is increased by the user's bonuses to Summoned Entity HP, and triggers the user's <b class="mech">Summoned Elemental</b> to use its Support Skill. This skill's Cooldown is halved if Diluvio is present.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Wind Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-summon" id="s-summon-procella">
+            <div class="sk-top"><strong>Summon Procella</strong><i class="sk-type">Summon</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Summons the wind spirit: Wind MDef Pierce, reduced Earth Resistance.</p>
+            <p class="sk-body">Summons Procella, the spirit of storm and gale, to aid in combat. While summoned, the user's Wind Property Magic gains additional Magic Defense Pierce, but the user's Earth Resistance is reduced. Only one Elemental Spirit can be summoned at a time.</p>
+          </li>
+          <li class="skill-card sk-magic" id="s-ventus-s-gale">
+            <div class="sk-top"><strong>Ventus's Gale</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Line-piercing Wind attack that triggers the spirit's Attack Skill.</p>
+            <p class="sk-body">Calls on Ventus, the spirit of the wind, to unleash a violent tornado at their foes, dealing damage to all enemies in a straight line. The damage of this skill is increased by the user's bonuses to Summoned Entity Damage, and triggers the user's <b class="mech">Summoned Elemental</b> to use its Offensive Skill. This skill's cooldown is halved if Procella is present.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-ventus-s-haste">
+            <div class="sk-top"><strong>Ventus's Haste</strong><i class="sk-type">Support</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Party ASPD and cast-speed buff that triggers the spirit's Support Skill.</p>
+            <p class="sk-body">The user calls on Ventus, the spirit of the wind, to accelerate their party members. For a short duration, all party members have increased Attack Speed and reduced Variable Cast Time. It also triggers the user's <b class="mech">Summoned Elemental</b> to use its Support Skill. This skill's Cooldown is halved if Procella is present.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Earth Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-summon" id="s-summon-terra-motus">
+            <div class="sk-top"><strong>Summon Terra Motus</strong><i class="sk-type">Summon</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Summons the earth spirit: Earth MDef Pierce, reduced Fire Resistance.</p>
+            <p class="sk-body">Summons Terra Motus, the spirit of earth and stone, to aid in combat. While summoned, the user's Earth Property Magic gains additional Magic Defense Pierce, but the user's Fire Resistance is reduced. Only one Elemental Spirit can be summoned at a time.</p>
+          </li>
+          <li class="skill-card sk-magic" id="s-terra-s-fangs">
+            <div class="sk-top"><strong>Terra's Fangs</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Earth AoE that triggers the spirit's Attack Skill.</p>
+            <p class="sk-body">Call on Terra, spirit of the earth, to create a tremor in the ground at the targeted location. All enemies in the area are struck for Earth Property damage. The damage of this skill is increased by the user's bonuses to Summoned Entity Damage, and it triggers the user's <b class="mech">Summoned Elemental</b> to use its Offensive Skill. This skill's Cooldown is halved if Terra Motus is present.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-terra-s-shield">
+            <div class="sk-top"><strong>Terra's Shield</strong><i class="sk-type">Support</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Party damage-absorbing barrier that triggers the spirit's Support Skill.</p>
+            <p class="sk-body">Calls on Terra, spirit of the earth, to protect all of the user's party members. Each party member receives a shield that absorbs half of the damage they would take from all Physical and Magical damage. The shield ends after a set duration or after it has absorbed a certain amount of damage. The shield's HP is increased by the user's Barrier Potency and by the user's bonuses to Summoned Entity HP. It also triggers the user's <b class="mech">Summoned Elemental</b> to use its Support Skill. This skill's Cooldown is halved if Terra Motus is present.</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

@@ -176,26 +176,76 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-burn">Burning</span><span class="kw-vuln">Vulnerable</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Free Cast</strong><p>Enables the user to walk and attack at reduced speed while casting spells. The penalty to Movement and Attack Speed is reduced at higher levels of the skill.</p></li>
-        <li class="skill"><strong>Soul Siphon</strong><p>The user connects their soul to that of the targeted foe, directly siphoning their magical energy. The user regenerates a fixed amount of SP based on the Current HP of the target, and the target is inflicted with the <b class="kw kw-vuln">Breach</b> Status.</p></li>
-        <li class="skill"><strong>Time Shift</strong><p>The user uses their ultimate mastery over the inner workings of the world to shift time forward for their party. Immediately reduces the active Cooldowns of all party members by a certain amount based on skill level. This skill can never benefit from Cooldown Reduction or effects that reduce active Cooldowns.</p></li>
-        <li class="skill"><strong>Indulge</strong><p>The user consumes a portion of their HP, converting it into SP. The amount of HP consumed is determined by skill level.</p></li>
-        <li class="skill"><strong>Soul Infusion</strong><p>The user infuses a targeted ally with arcane magics, fuelling their skills for a short duration. For a set number of skills, the SP cost of the targeted ally's abilities are massively reduced.</p></li>
-        <li class="skill"><strong>Psychic Barrier</strong><p>The user creates a barrier of pure magical force, consuming a fixed percentage of their remaining SP to protect themselves and their party members from all damage for a short duration. The barrier's HP is based on the amount of SP consumed.</p></li>
-        <li class="skill"><strong>Soul Burn</strong><p>The user attacks the target with a burst of raw magical energy which ignites on contact. Deals Neutral property Magic damage. If the target is Breached, has a chance to inflict <b class="kw kw-burn">Severe Burning</b>. The damage of this skill is heavily influenced by the user's remaining SP.</p></li>
-        <li class="skill"><strong>Force Barrage</strong><p>The user unleashes a barrage of psychic energy, dealing Neutral property Magic damage to the targeted enemy and all other enemies in the area. The damage is increased against any targets suffering from the <b class="kw kw-vuln">Breach</b> status. The damage of this skill is heavily influenced by the user's remaining SP.</p></li>
-        <li class="skill"><strong>Psychic Storm</strong><p>The user unleashes a storm of raw magical energy at the targeted location, dealing persistent Neutral Property Magic damage over time to all enemies within. Each hit has a chance to inflict the <b class="kw kw-vuln">Breach</b> status. The damage of this skill is heavily influenced by the user's remaining SP.</p></li>
-        <li class="skill"><strong>Force Sigil</strong><p>The user inscribes an arcane sigil on the ground that channels incredible raw magic. For the duration, the sigil immobilizes the caster and all enemies within it, dealing constant Neutral Property Magic damage over time to all enemies. The damage dealt is heavily influenced by the user's remaining SP.</p></li>
-      </ul>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-burn">Burning</span><span class="kw-vuln">Vulnerable</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-magic" data-i18n="cls.t.magic">Magic</span><span class="sk-support" data-i18n="cls.t.support">Support</span><span class="sk-passive" data-i18n="cls.t.passive">Passive</span><span class="sk-utility" data-i18n="cls.t.utility">Utility</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Utility Skills<span>6 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-passive" id="s-free-cast">
+            <div class="sk-top"><strong>Free Cast</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Move and attack while casting, at reduced speed.</p>
+            <p class="sk-body">Enables the user to walk and attack at reduced speed while casting spells. The penalty to Movement and Attack Speed is reduced at higher levels of the skill.</p>
+          </li>
+          <li class="skill-card sk-utility" id="s-soul-siphon">
+            <div class="sk-top"><strong>Soul Siphon</strong><i class="sk-type">Utility</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Siphons SP from an enemy and inflicts <b class="kw kw-vuln">Breach</b>.</p>
+            <p class="sk-body">The user connects their soul to that of the targeted foe, directly siphoning their magical energy. The user regenerates a fixed amount of SP based on the Current HP of the target, and the target is inflicted with the <b class="kw kw-vuln">Breach</b> Status.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-time-shift">
+            <div class="sk-top"><strong>Time Shift</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Instantly reduces the whole party's active cooldowns.</p>
+            <p class="sk-body">The user uses their ultimate mastery over the inner workings of the world to shift time forward for their party. Immediately reduces the active Cooldowns of all party members by a certain amount based on skill level. This skill can never benefit from Cooldown Reduction or effects that reduce active Cooldowns.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-indulge">
+            <div class="sk-top"><strong>Indulge</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Converts Max HP into instant SP.</p>
+            <p class="sk-body">The user consumes a portion of their HP, converting it into SP. The amount of HP consumed is determined by skill level.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-soul-infusion">
+            <div class="sk-top"><strong>Soul Infusion</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Makes an ally's next several skill casts free.</p>
+            <p class="sk-body">The user infuses a targeted ally with arcane magics, fuelling their skills for a short duration. For a set number of skills, the SP cost of the targeted ally's abilities are massively reduced.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-psychic-barrier">
+            <div class="sk-top"><strong>Psychic Barrier</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Converts remaining SP into a party-wide barrier.</p>
+            <p class="sk-body">The user creates a barrier of pure magical force, consuming a fixed percentage of their remaining SP to protect themselves and their party members from all damage for a short duration. The barrier's HP is based on the amount of SP consumed.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Offensive Skills<span>4 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-magic" id="s-soul-burn">
+            <div class="sk-top"><strong>Soul Burn</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">SP-scaled bolt that can inflict <b class="kw kw-burn">Severe Burning</b> through <b class="kw kw-vuln">Breach</b>.</p>
+            <p class="sk-body">The user attacks the target with a burst of raw magical energy which ignites on contact. Deals Neutral property Magic damage. If the target is Breached, has a chance to inflict <b class="kw kw-burn">Severe Burning</b>. The damage of this skill is heavily influenced by the user's remaining SP.</p>
+          </li>
+          <li class="skill-card sk-magic" id="s-force-barrage">
+            <div class="sk-top"><strong>Force Barrage</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">SP-scaled AoE with bonus damage against Breached targets.</p>
+            <p class="sk-body">The user unleashes a barrage of psychic energy, dealing Neutral property Magic damage to the targeted enemy and all other enemies in the area. The damage is increased against any targets suffering from the <b class="kw kw-vuln">Breach</b> status. The damage of this skill is heavily influenced by the user's remaining SP.</p>
+          </li>
+          <li class="skill-card sk-magic" id="s-psychic-storm">
+            <div class="sk-top"><strong>Psychic Storm</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">SP-scaled DoT storm that inflicts <b class="kw kw-vuln">Breach</b>.</p>
+            <p class="sk-body">The user unleashes a storm of raw magical energy at the targeted location, dealing persistent Neutral Property Magic damage over time to all enemies within. Each hit has a chance to inflict the <b class="kw kw-vuln">Breach</b> status. The damage of this skill is heavily influenced by the user's remaining SP.</p>
+          </li>
+          <li class="skill-card sk-magic" id="s-force-sigil">
+            <div class="sk-top"><strong>Force Sigil</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">SP-scaled sigil that immobilizes enemies, and the user.</p>
+            <p class="sk-body">The user inscribes an arcane sigil on the ground that channels incredible raw magic. For the duration, the sigil immobilizes the caster and all enemies within it, dealing constant Neutral Property Magic damage over time to all enemies. The damage dealt is heavily influenced by the user's remaining SP.</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

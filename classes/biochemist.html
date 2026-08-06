@@ -157,7 +157,7 @@
           <span class="tag">Merchant line</span>
         </div>
         <p class="muted">Biochemist is the primary advancement option for Alchemists. They turn their insatiable curiosity for the workings of chemical matter toward the interaction of chemicals with each other and organic bodies.</p>
-        <p class="muted">Biochemist skills are divided into two trees, which much like the chemical compounds they work with, are very much intended to be mixed together. The first tree is the one that will be most familiar to Alchemists, the Chemical Skills. This new suite of skills leverage the user's bonuses to <b class="kw kw-burn">Burning</b> Damage and <b class="kw kw-vuln">Vulnerable</b> Potency to deal exceptional damage even over an area, and rather than generating or consuming Extort stacks, instead receive a reduction to their cooldowns for every Extort Stack the user maintains. The one exception is the ever feared Acid Demonstration, which consumes the user's Extort Stacks to deal an absurd amount of damage to a single target.</p>
+        <p class="muted">Biochemist skills are divided into two trees, which much like the chemical compounds they work with, are very much intended to be mixed together. The first tree is the one that will be most familiar to Alchemists, the Chemical Skills. This new suite of skills leverage the user's bonuses to <b class="kw kw-burn">Burning</b> Damage and <b class="kw kw-vuln">Vulnerable</b> Potency to deal exceptional damage even over an area, and rather than generating or consuming Extort stacks, instead receive a reduction to their cooldowns for every <b class="mech">Extort Stack</b> the user maintains. The one exception is the ever feared Acid Demonstration, which consumes the user's <b class="mech">Extort Stacks</b> to deal an absurd amount of damage to a single target.</p>
         <p class="muted">Opposite the Chemical skills are a new line of skills, known as Stimulants. These stimulants are powerful drugs concocted by the Biochemist to enhance their allies for combat, providing incredibly strong short term buffs, but at the cost of severe negative side effects. Some skills even turn these side effects to great use, inflicting them on enemies to make these drugs into effective weapons in and of themselves. These Stimulant skills also gain beneficial effects for the user maintaining a high Extort count, but unlike the Chemical Skills, these will actually generate Extort stacks for the user too...if the user is willing to invest enough skill points into them to unlock their full effects.</p>
         <p class="muted">Unlike Geneticists, Biochemists gain no skills that directly interact with homunculi created during their time as an Alchemist. They do, however, gain access to evolved versions of those homunculi, allowing them to grow up to level 150 along with their master. And unlike Geneticist homunculi, which must gradually gain their abilities over time, Biochemist homunculi mastered all of their abilities by level 99, so they are able to wield their full arsenal of skills right from the beginning.</p>
       </div>
@@ -175,28 +175,97 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-poison">Poison</span><span class="kw-vuln">Vulnerable</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Greater Aid Potion</strong><p>Throws a potion and scatters its contents over a wide area, healing all allies within its range. Uses the same Throwing Potions as the regular Aid Potion skill.</p></li>
-        <li class="skill"><strong>Incinerate</strong><p>Chemical Skill. Throws a combination of volatile chemicals that ignite to create a short-lived field of fire. Enemies within the field take Physical Fire Property damage rapidly over time, which is treated as <b class="kw kw-burn">Burning</b> Damage and scales with the user's Intelligence. For each Extort Stack the user has, the Cooldown of this skill is reduced.</p></li>
-        <li class="skill"><strong>Acidic Cloud</strong><p>Chemical Skill. Unleashes a cloud of acidic gas around the target, dealing Weapon Property Physical Damage to all enemies in an area around them. The damage of this skill is increased by the user's <b class="kw kw-vuln">Vulnerable</b> Potency and scales with the user's Intelligence. For each Extort Stack the user has, the Cooldown of this skill is reduced.</p></li>
-        <li class="skill"><strong>Alchemic Cannon</strong><p>Chemical Skill. Using intense alchemical reactions, the user fires a projectile at devastating speed toward the target, which explodes on contact from its sheer velocity. Deals damage to the target and all enemies around them, dealing additional damage to <b class="kw kw-vuln">Vulnerable</b> and <b class="kw kw-burn">Burning</b> targets, and scaling with the user's Intelligence. For each Extort Stack the user has, the Cooldown of this skill is reduced.</p></li>
-        <li class="skill"><strong>Acid Demonstration</strong><p>Chemical Skill. The user throws a combination of volatile chemicals that explode violently when they reach the target, doing massive Neutral Property damage to a single foe. This skill consumes all of the user's Extort Stacks, gaining benefits based on the number consumed. The damage is heavily influenced by the number of Extort Stacks consumed, and scales with the user's Intelligence. If the user has no Extort Stacks available, the skill will miss. 1 Extort: Inflicts <b class="kw kw-vuln">Vulnerable</b> for 10 Seconds 2 Extort: Damage is increased by <b class="kw kw-vuln">Vulnerable</b> Potency 3 Extort: Inflicts <b class="kw kw-burn">Burning</b> for 10 Seconds 4 Extort: Damage is treated as <b class="kw kw-burn">Burning</b> Damage 5 Extort: Extort Stacks are not consumed</p></li>
-        <li class="skill"><strong>Stimulant Research</strong><p>Research into the safe and effective use of various drugs and stimulants. Each level reduces the negative side effects of Stimulant Skills cast by the user on allies, and enhances the effectiveness of Stimulant skills used on enemies.</p></li>
-        <li class="skill"><strong>Crystal Clarity</strong><p>Stimulant Skill. Administers a drug to the target that helps clear their mind, improving the effectiveness and efficiency of their skill casting, but causes them to focus so intensely on offense that they neglect their own safety. Increases the target's Hit Rate and reduces all of their Fixed Cast Times, but also massively reduces their Defense and Magic Defense. If cast at level 3 or higher, the user generates one stack of Extort and the target's skills cannot be interrupted for the duration.</p></li>
-        <li class="skill"><strong>Frenzy</strong><p>Stimulant Skill. Administers a drug to the target that invokes a berserk madness in them, making their attacks remarkably vicious, but also putting an intense strain on their bodies. Massively increases the target's Defense Pierce and Magic Defense Pierce, but also reduces the target's Max HP and SP for the duration. If cast at level 3 or higher, the user generates one stack of Extort and the target's Movement Speed is increased for the duration.</p></li>
-        <li class="skill"><strong>White Ice</strong><p>Stimulant Skill. Administers a drug to the target that numbs their senses, making them extremely tolerant to pain, but also makes it difficult for them to wield their weapons and magic with the same dexterity as before. Reduces the damage the target takes from <b class="kw kw-bleed">Bleeding</b>, <b class="kw kw-burn">Burning</b>, and <b class="kw kw-poison">Poison</b>, at the cost of reducing their Crit Rate and increasing their Variable Cast Times. If cast at level 3 or higher, the user generates one stack of Extort and the target gains the Endure effect for the duration.</p></li>
-        <li class="skill"><strong>Moonveil</strong><p>Stimulant Skill. Administers a drug to the target that accelerates their senses, giving them the impression that time has slowed down around them. In this state, they are able to avoid incoming attacks with ease, but will have difficulty gauging their own strength properly. Boosts the target's Perfect Dodge for the duration, but also reduces their Attack and Magic Attack. If cast at level 3 or higher, the user generates one stack of Extort and the target's skills all have reduced cooldowns for the duration.</p></li>
-        <li class="skill"><strong>Death Drip</strong><p>Stimulant Skill. Administers a lethal neurotoxin to the target, dealing an instant burst of <b class="kw kw-poison">Poison</b> Property damage that ignores Defense and is treated as <b class="kw kw-poison">Poison</b> Status damage. If cast at level 3 or higher, the user generates one stack of Extort, and the target also receives the <b class="kw kw-poison">Deadly Poison</b> status.</p></li>
-        <li class="skill"><strong>Pyrelight</strong><p>Stimulant Skill. Administers a searing toxin to the target, burning them from the inside out. Inflicts significant damage to the target that is treated as <b class="kw kw-burn">Burning</b> Damage. If cast at level 3 or higher, the user generates one stack of Extort and also inflicts the <b class="kw kw-burn">Severe Burning</b> status on the target.</p></li>
-      </ul>
+      <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Extort Stacks</span></div>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-poison">Poison</span><span class="kw-vuln">Vulnerable</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-support" data-i18n="cls.t.support">Support</span><span class="sk-debuff" data-i18n="cls.t.debuff">Debuff</span><span class="sk-passive" data-i18n="cls.t.passive">Passive</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Core Skills</h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-support" id="s-greater-aid-potion">
+            <div class="sk-top"><strong>Greater Aid Potion</strong><i class="sk-type">Recovery</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">AoE version of Aid Potion using the same Throwable Potions.</p>
+            <p class="sk-body">Throws a potion and scatters its contents over a wide area, healing all allies within its range. Uses the same Throwing Potions as the regular Aid Potion skill.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Chemical Skills<span>4 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-debuff" id="s-incinerate">
+            <div class="sk-top"><strong>Incinerate</strong><i class="sk-type">Chemical</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Fire DoT field treated as <b class="kw kw-burn">Burning</b> damage; Extort reduces its cooldown.</p>
+            <p class="sk-body">Throws a combination of volatile chemicals that ignite to create a short-lived field of fire. Enemies within the field take Physical Fire Property damage rapidly over time, which is treated as <b class="kw kw-burn">Burning</b> Damage and scales with the user's Intelligence. For each <b class="mech">Extort Stack</b> the user has, the Cooldown of this skill is reduced.</p>
+          </li>
+          <li class="skill-card sk-debuff" id="s-acid-cloud">
+            <div class="sk-top"><strong>Acid Cloud</strong><i class="sk-type">Chemical</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Acid burst scaling with <b class="kw kw-vuln">Vulnerable</b> Potency; Extort reduces its cooldown.</p>
+            <p class="sk-body">Unleashes a cloud of acidic gas around the target, dealing Weapon Property Physical Damage to all enemies in an area around them. The damage of this skill is increased by the user's <b class="kw kw-vuln">Vulnerable</b> Potency and scales with the user's Intelligence. For each <b class="mech">Extort Stack</b> the user has, the Cooldown of this skill is reduced.</p>
+          </li>
+          <li class="skill-card sk-debuff" id="s-alchemic-cannon">
+            <div class="sk-top"><strong>Alchemic Cannon</strong><i class="sk-type">Chemical</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Explosive AoE with bonus damage against <b class="kw kw-vuln">Vulnerable</b> and <b class="kw kw-burn">Burning</b> enemies.</p>
+            <p class="sk-body">Using intense alchemical reactions, the user fires a projectile at devastating speed toward the target, which explodes on contact from its sheer velocity. Deals damage to the target and all enemies around them, dealing additional damage to <b class="kw kw-vuln">Vulnerable</b> and <b class="kw kw-burn">Burning</b> targets, and scaling with the user's Intelligence. For each <b class="mech">Extort Stack</b> the user has, the Cooldown of this skill is reduced.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-acid-demonstration">
+            <div class="sk-top"><strong>Acid Demonstration</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Consumes Extort for an absurd single-target burst.</p>
+            <p class="sk-body">The user throws a combination of volatile chemicals that explode violently when they reach the target, doing massive Neutral Property damage to a single foe. This skill consumes all of the user's <b class="mech">Extort Stacks</b>, gaining benefits based on the number consumed. The damage is heavily influenced by the number of <b class="mech">Extort Stacks</b> consumed, and scales with the user's Intelligence. If the user has no <b class="mech">Extort Stacks</b> available, the skill will miss.</p>
+            <p class="sk-body">1 Extort: Inflicts <b class="kw kw-vuln">Vulnerable</b> for 10 Seconds</p>
+            <p class="sk-body">2 Extort: Damage is increased by <b class="kw kw-vuln">Vulnerable</b> Potency</p>
+            <p class="sk-body">3 Extort: Inflicts <b class="kw kw-burn">Burning</b> for 10 Seconds</p>
+            <p class="sk-body">4 Extort: Damage is treated as <b class="kw kw-burn">Burning</b> Damage</p>
+            <p class="sk-body">5 Extort: <b class="mech">Extort Stacks</b> are not consumed</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Stimulant Skills<span>7 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-passive" id="s-stimulant-research">
+            <div class="sk-top"><strong>Stimulant Research</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Reduces the side effects of Stimulant skills.</p>
+            <p class="sk-body">Research into the safe and effective use of various drugs and stimulants. Each level reduces the negative side effects of Stimulant Skills cast by the user on allies, and enhances the effectiveness of Stimulant skills used on enemies.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-crystal-clarity">
+            <div class="sk-top"><strong>Crystal Clarity</strong><i class="sk-type">Stimulant</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Hit and FCT buff at the cost of defenses.</p>
+            <p class="sk-body">Administers a drug to the target that helps clear their mind, improving the effectiveness and efficiency of their skill casting, but causes them to focus so intensely on offense that they neglect their own safety. Increases the target's Hit Rate and reduces all of their Fixed Cast Times, but also massively reduces their Defense and Magic Defense. If cast at level 3 or higher, the user generates one stack of Extort and the target's skills cannot be interrupted for the duration.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-frenzy">
+            <div class="sk-top"><strong>Frenzy</strong><i class="sk-type">Stimulant</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Defense Pierce buff at the cost of Max HP/SP.</p>
+            <p class="sk-body">Administers a drug to the target that invokes a berserk madness in them, making their attacks remarkably vicious, but also putting an intense strain on their bodies. Massively increases the target's Defense Pierce and Magic Defense Pierce, but also reduces the target's Max HP and SP for the duration. If cast at level 3 or higher, the user generates one stack of Extort and the target's Movement Speed is increased for the duration.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-white-ice">
+            <div class="sk-top"><strong>White Ice</strong><i class="sk-type">Stimulant</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Status damage reduction at the cost of Crit and cast speed.</p>
+            <p class="sk-body">Administers a drug to the target that numbs their senses, making them extremely tolerant to pain, but also makes it difficult for them to wield their weapons and magic with the same dexterity as before. Reduces the damage the target takes from <b class="kw kw-bleed">Bleeding</b>, <b class="kw kw-burn">Burning</b>, and <b class="kw kw-poison">Poison</b>, at the cost of reducing their Crit Rate and increasing their Variable Cast Times. If cast at level 3 or higher, the user generates one stack of Extort and the target gains the Endure effect for the duration.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-moonveil">
+            <div class="sk-top"><strong>Moonveil</strong><i class="sk-type">Stimulant</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Perfect Dodge buff at the cost of Attack and Magic Attack.</p>
+            <p class="sk-body">Administers a drug to the target that accelerates their senses, giving them the impression that time has slowed down around them. In this state, they are able to avoid incoming attacks with ease, but will have difficulty gauging their own strength properly. Boosts the target's Perfect Dodge for the duration, but also reduces their Attack and Magic Attack. If cast at level 3 or higher, the user generates one stack of Extort and the target's skills all have reduced cooldowns for the duration.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-death-drip">
+            <div class="sk-top"><strong>Death Drip</strong><i class="sk-type">Stimulant</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short"><b class="kw kw-poison">Poison</b> burst injection that can inflict <b class="kw kw-poison">Deadly Poison</b>.</p>
+            <p class="sk-body">Administers a lethal neurotoxin to the target, dealing an instant burst of <b class="kw kw-poison">Poison</b> Property damage that ignores Defense and is treated as <b class="kw kw-poison">Poison</b> Status damage. If cast at level 3 or higher, the user generates one stack of Extort, and the target also receives the <b class="kw kw-poison">Deadly Poison</b> status.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-pyrelight">
+            <div class="sk-top"><strong>Pyrelight</strong><i class="sk-type">Stimulant</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Fire burst injection that can inflict <b class="kw kw-burn">Severe Burning</b>.</p>
+            <p class="sk-body">Administers a searing toxin to the target, burning them from the inside out. Inflicts significant damage to the target that is treated as <b class="kw kw-burn">Burning</b> Damage. If cast at level 3 or higher, the user generates one stack of Extort and also inflicts the <b class="kw kw-burn">Severe Burning</b> status on the target.</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

@@ -157,9 +157,9 @@
           <span class="tag">Archer line</span>
         </div>
         <p class="muted">Clown and Gypsy are the primary advancement option for Bards and Dancers. Unlike most third jobs, where the primary advancement option sticks close in theme and function to the original job, Clown and Gypsy both diverge quite significantly from the playstyle of Bard and Dancer. Content to rely on the supportive abilities of their 2nd job songs and dances, they turn their third job skill points towards more direct and focused intervention on the battlefield.</p>
-        <p class="muted">The first branch of skills for these classes will be more familiar to their 2nd job counterparts. Voluminous Volley and Ravaging Rainstorm provide a way to convert the user's Rhythm Level into physical damage, while Rhythmic Retort and Crushing Concerto do the same for magic damage.</p>
+        <p class="muted">The first branch of skills for these classes will be more familiar to their 2nd job counterparts. Voluminous Volley and Ravaging Rainstorm provide a way to convert the user's <b class="mech">Rhythm</b> Level into physical damage, while Rhythmic Retort and Crushing Concerto do the same for magic damage.</p>
         <p class="muted">The second branch of skills for these performers can itself be divided into two branches. These are the Tarot Card skills, divided evenly between supportive and offensive abilities.</p>
-        <p class="muted">The supportive Tarot Cards give the performer a variety of ways to enhance their allies. The Magician and Strength serve to increase their party members' magical and physical damage respectively. The High Priestess provides emergency healing, while the Lovers protects them from status effects. Finally, the ultimate culmination of this tree is the Wheel of Fortune, which consumes the user's Rhythm to reduce all of their currently active skill cooldowns.</p>
+        <p class="muted">The supportive Tarot Cards give the performer a variety of ways to enhance their allies. The Magician and Strength serve to increase their party members' magical and physical damage respectively. The High Priestess provides emergency healing, while the Lovers protects them from status effects. Finally, the ultimate culmination of this tree is the Wheel of Fortune, which consumes the user's <b class="mech">Rhythm</b> to reduce all of their currently active skill cooldowns.</p>
         <p class="muted">Standing opposed to these are the offensive Tarot Cards. The Fool and the Hanged Man provide disruptive effects to halt the enemy's movement and skill use, while the Tower and the Devil inflict direct damage and status effects. These offensive skills are crowned by Death, which inflicts damage based on the user's Max HP that pierces all defenses for an exceptional burst of damage when needed most.</p>
         <p class="muted">Unlike their previous classes, Clown and Gypsy gain access to an identical skill tree. Their only difference is the skills they inherit from their second job.</p>
       </div>
@@ -183,30 +183,108 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-poison">Poison</span><span class="kw-stun">Stun</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Voluminous Volley</strong><p>The user fires a volley of arrows at a distant target, hitting a number of times based on their Rhythm level for physical damage. If the user's Rhythm is at 0, the skill will miss.</p></li>
-        <li class="skill"><strong>Ravaging Rainstorm</strong><p>The user fires a volley of enchanted arrows to rain on a distant area, inflicting physical damage repeatedly to all targets within over time. The interval between hits is reduced by the user's Rhythm level, which is consumed on cast.</p></li>
-        <li class="skill"><strong>Rhythmic Retort</strong><p>The user fires a bolt of sound at a distance target, inflicting magic damage while altering their own Rhythm level. If the user's Rhythm level is below 3, it is increased by 1. If it's above 3, it is decreased by 1. If the user's rhythm level is exactly three, its duration is increased by 5 seconds.</p></li>
-        <li class="skill"><strong>Crushing Concerto</strong><p>Creates a powerful burst of sound, dealing devastating magical damage to all enemies in a small area. The amount of damage is based on the user's Rhythm level, which is consumed. If the user's Rhythm is 0, this skill will miss.</p></li>
-        <li class="skill"><strong>Tarot Card</strong><p>The Magician: Bestows the blessing of the Magician on the targeted ally, increasing all damage dealt by their magical attacks for a short time. The duration of the buff is based on the Rhythm level of the user when it was applied.</p></li>
-        <li class="skill"><strong>Tarot Card</strong><p>Strength: Bestows the blessing of Strength on the targeted ally, increasing all damage dealt by their Physical attacks for a short time. The duration of the buff is based on the Rhythm level of the user when it was applied.</p></li>
-        <li class="skill"><strong>Tarot Card</strong><p>The High Priestess: Bestows the blessing of the High Priestess on the targeted ally, causing them to heal a small amount of life the next few times they would take damage. The amount healed is based on the user's Rhythm Level when the buff was applied.</p></li>
-        <li class="skill"><strong>Tarot Card</strong><p>The Lovers: Bestows the blessing of the Lovers on the targeted ally, curing them of numerous negative Statuses and shielding them from those statuses for a short time. The duration of the protective effect is based on the user's Rhythm Level when the buff was applied.</p></li>
-        <li class="skill"><strong>Tarot Card</strong><p>Wheel of Fortune: Bestows the blessing of the Wheel of Fortune on the user. Consumes the user's Rhythm Level to reduce all currently active skill cooldowns by a large amount. This skill only affects the caster, it cannot be used on other allies.</p></li>
-        <li class="skill"><strong>Tarot Card</strong><p>The Fool: Bestows the curse of the Fool on the targeted enemy. For a short duration, skills cast by that enemy have a chance to fail. The failure chance is based on the user's Rhythm Level when the debuff was applied. The debuff will persist until either a skill fails, or the max duration is reached.</p></li>
-        <li class="skill"><strong>Tarot Card</strong><p>The Hanged Man: Bestows the curse of the Hanged Man on the targeted enemy, inflicting various disabling statuses based on the user's Rhythm Level. 1~2: <b class="kw kw-slow">Slow</b> 3~4: <b class="kw kw-slow">Immobilize</b> 5: <b class="kw kw-stun">Stun</b></p></li>
-        <li class="skill"><strong>Tarot Card</strong><p>The Tower: Inflicts Hybrid damage on the targeted enemy based on the user's Rhythm Level. The damage takes the property of the user's equipped arrow. If the user's Rhythm Level is zero, this skill will miss.</p></li>
-        <li class="skill"><strong>Tarot Card</strong><p>The Devil: Bestows the curse of the Devil on the targeted enemy. After a short delay, the target explodes, dealing hybrid damage and inflicting various status effects to all enemies in the area based on the user's Rhythm Level at the time the debuff was applied. 1~2: <b class="kw kw-burn">Severe Burning</b> 3~4: <b class="kw kw-poison">Deadly Poison</b> 5: <b class="kw kw-bleed">Internal Bleeding</b></p></li>
-        <li class="skill"><strong>Tarot Card</strong><p>Death: Consumes the user's Rhythm level to inflict direct damage on a single target proportional to the user's Max HP. The damage dealt by this skill is neither physical nor magical. The HP to Damage ratio of this skill is determined by the user's Rhythm Level.</p></li>
-      </ul>
+      <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Rhythm</span></div>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-poison">Poison</span><span class="kw-stun">Stun</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-magic" data-i18n="cls.t.magic">Magic</span><span class="sk-support" data-i18n="cls.t.support">Support</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Rhythm Skills<span>4 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-physical" id="s-voluminous-volley">
+            <div class="sk-top"><strong>Voluminous Volley</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Multi-hit volley scaling with <b class="mech">Rhythm</b>.</p>
+            <p class="sk-body">The user fires a volley of arrows at a distant target, hitting a number of times based on their <b class="mech">Rhythm</b> level for physical damage. If the user's <b class="mech">Rhythm</b> is at 0, the skill will miss.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-ravaging-rainstorm">
+            <div class="sk-top"><strong>Ravaging Rainstorm</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Consumes <b class="mech">Rhythm</b> to accelerate an arrow storm.</p>
+            <p class="sk-body">The user fires a volley of enchanted arrows to rain on a distant area, inflicting physical damage repeatedly to all targets within over time. The interval between hits is reduced by the user's <b class="mech">Rhythm</b> level, which is consumed on cast.</p>
+          </li>
+          <li class="skill-card sk-magic" id="s-rhythmic-retort">
+            <div class="sk-top"><strong>Rhythmic Retort</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Magic pulse that tunes the user's <b class="mech">Rhythm</b> toward three.</p>
+            <p class="sk-body">The user fires a bolt of sound at a distance target, inflicting magic damage while altering their own <b class="mech">Rhythm</b> level. If the user's <b class="mech">Rhythm</b> level is below 3, it is increased by 1. If it's above 3, it is decreased by 1. If the user's rhythm level is exactly three, its duration is increased by 5 seconds.</p>
+          </li>
+          <li class="skill-card sk-magic" id="s-crushing-concerto">
+            <div class="sk-top"><strong>Crushing Concerto</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Consumes <b class="mech">Rhythm</b> for a multi-hit sound wave.</p>
+            <p class="sk-body">Creates a powerful burst of sound, dealing devastating magical damage to all enemies in a small area. The amount of damage is based on the user's <b class="mech">Rhythm</b> level, which is consumed. If the user's <b class="mech">Rhythm</b> is 0, this skill will miss.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Supportive Tarot Cards<span>5 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-support" id="s-tarot-card-the-magician">
+            <div class="sk-top"><strong>Tarot Card: The Magician</strong><i class="sk-type">Support</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Adds flat MATK% to an ally's magic skills.</p>
+            <p class="sk-body">Bestows the blessing of the Magician on the targeted ally, increasing all damage dealt by their magical attacks for a short time. The duration of the buff is based on the <b class="mech">Rhythm</b> level of the user when it was applied.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-tarot-card-strength">
+            <div class="sk-top"><strong>Tarot Card: Strength</strong><i class="sk-type">Support</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Adds flat ATK% to an ally's physical skills.</p>
+            <p class="sk-body">Bestows the blessing of Strength on the targeted ally, increasing all damage dealt by their Physical attacks for a short time. The duration of the buff is based on the <b class="mech">Rhythm</b> level of the user when it was applied.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-tarot-card-the-high-priestess">
+            <div class="sk-top"><strong>Tarot Card: The High Priestess</strong><i class="sk-type">Support</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Auto-heals an ally the next few times they take damage.</p>
+            <p class="sk-body">Bestows the blessing of the High Priestess on the targeted ally, causing them to heal a small amount of life the next few times they would take damage. The amount healed is based on the user's <b class="mech">Rhythm</b> Level when the buff was applied.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-tarot-card-the-lovers">
+            <div class="sk-top"><strong>Tarot Card: The Lovers</strong><i class="sk-type">Support</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Cleanses statuses and grants temporary immunity.</p>
+            <p class="sk-body">Bestows the blessing of the Lovers on the targeted ally, curing them of numerous negative Statuses and shielding them from those statuses for a short time. The duration of the protective effect is based on the user's <b class="mech">Rhythm</b> Level when the buff was applied.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-tarot-card-wheel-of-fortune">
+            <div class="sk-top"><strong>Tarot Card: Wheel of Fortune</strong><i class="sk-type">Support</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Consumes <b class="mech">Rhythm</b> to reduce all of the user's active cooldowns.</p>
+            <p class="sk-body">Bestows the blessing of the Wheel of Fortune on the user. Consumes the user's <b class="mech">Rhythm</b> Level to reduce all currently active skill cooldowns by a large amount. This skill only affects the caster, it cannot be used on other allies.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Offensive Tarot Cards<span>5 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-physical" id="s-tarot-card-the-fool">
+            <div class="sk-top"><strong>Tarot Card: The Fool</strong><i class="sk-type">Offensive</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Curses an enemy's skills with a chance to fail.</p>
+            <p class="sk-body">Bestows the curse of the Fool on the targeted enemy. For a short duration, skills cast by that enemy have a chance to fail. The failure chance is based on the user's <b class="mech">Rhythm</b> Level when the debuff was applied. The debuff will persist until either a skill fails, or the max duration is reached.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-tarot-card-the-hanged-man">
+            <div class="sk-top"><strong>Tarot Card: The Hanged Man</strong><i class="sk-type">Offensive</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short"><b class="mech">Rhythm</b>-scaled disable: <b class="kw kw-slow">Slow</b>, <b class="kw kw-slow">Immobilize</b>, or <b class="kw kw-stun">Stun</b>.</p>
+            <p class="sk-body">Bestows the curse of the Hanged Man on the targeted enemy, inflicting various disabling statuses based on the user's <b class="mech">Rhythm</b> Level.</p>
+            <p class="sk-body">1~2: <b class="kw kw-slow">Slow</b></p>
+            <p class="sk-body">3~4: <b class="kw kw-slow">Immobilize</b></p>
+            <p class="sk-body">5: <b class="kw kw-stun">Stun</b></p>
+          </li>
+          <li class="skill-card sk-physical" id="s-tarot-card-the-tower">
+            <div class="sk-top"><strong>Tarot Card: The Tower</strong><i class="sk-type">Offensive</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Multi-hit arrow-property burst scaling with <b class="mech">Rhythm</b>.</p>
+            <p class="sk-body">Inflicts Hybrid damage on the targeted enemy based on the user's <b class="mech">Rhythm</b> Level. The damage takes the property of the user's equipped arrow. If the user's <b class="mech">Rhythm</b> Level is zero, this skill will miss.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-tarot-card-the-devil">
+            <div class="sk-top"><strong>Tarot Card: The Devil</strong><i class="sk-type">Offensive</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Delayed explosion with <b class="mech">Rhythm</b>-scaled severe statuses.</p>
+            <p class="sk-body">Bestows the curse of the Devil on the targeted enemy. After a short delay, the target explodes, dealing hybrid damage and inflicting various status effects to all enemies in the area based on the user's <b class="mech">Rhythm</b> Level at the time the debuff was applied.</p>
+            <p class="sk-body">1~2: <b class="kw kw-burn">Severe Burning</b></p>
+            <p class="sk-body">3~4: <b class="kw kw-poison">Deadly Poison</b></p>
+            <p class="sk-body">5: <b class="kw kw-bleed">Internal Bleeding</b></p>
+          </li>
+          <li class="skill-card sk-physical" id="s-tarot-card-death">
+            <div class="sk-top"><strong>Tarot Card: Death</strong><i class="sk-type">Offensive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Max-HP-based burst that pierces all defenses.</p>
+            <p class="sk-body">Consumes the user's <b class="mech">Rhythm</b> level to inflict direct damage on a single target proportional to the user's Max HP. The damage dealt by this skill is neither physical nor magical. The HP to Damage ratio of this skill is determined by the user's <b class="mech">Rhythm</b> Level.</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

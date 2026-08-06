@@ -176,27 +176,112 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-blind">Blind</span><span class="kw-vuln">Vulnerable</span><span class="kw-stun">Stun</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Castigating Aura</strong><p>Enchants the user's weapon with the Holy property, increases the user's Hit, and grants all Paladin skills additional effects based on damaging and disabling enemies. Does not stack with Providence.</p></li>
-        <li class="skill"><strong>Providence</strong><p>Enchants the user's armor with the Holy Property, increases their Perfect Dodge, and grants all Paladin skills additional effects focused on protecting and sustaining the user.</p></li>
-        <li class="skill"><strong>Sanctify</strong><p>Creates an area of consecrated ground that buffs the Atk, Matk, Def, and Mdef of all allies within, while periodically inflicting Holy Property damage on all enemies.</p></li>
-        <li class="skill"><strong>Banishing Strike</strong><p>Spear skill. Deals weapon-property physical damage to a single target, dealing additional damage to Demon, Undead, and Angel Race enemies. During Castigating Aura, the bonus damage is applied to all races instead, and the skill inflicts <b class="kw kw-bleed">Bleeding</b>. During Providence, the skill heals the user for a portion of the damage dealt, and the skill inflicts <b class="kw kw-blind">Blind</b>.</p></li>
-        <li class="skill"><strong>Overbrand</strong><p>Spear Skill. The user whirls their spear around, striking all enemies in the area and attempting to inflict <b class="kw kw-bleed">Bleeding</b> and <b class="kw kw-blind">Blind</b>. Enemies already suffering from these statuses take additional damage. During Castigating Aura, the Status Chance is increased. During Providence, the user gains the Endure effect for a short time.</p></li>
-        <li class="skill"><strong>Grand Banishment</strong><p>The user calls a massive spear from the heavens to obliterate the target, striking all enemies in the area around them for massive damage and inflicting Holy Weakness. During Castigating Aura, the skill's damage is doubled. During Providence, this skill stuns all enemies struck for two seconds.</p></li>
-        <li class="skill"><strong>Martyr's Reckoning</strong><p>The user sacrifices their own HP to deal massive damage to a single target. The base damage of the skill is the same as the user's Weapon property. The HP-based portion of the damage ignores Flee, Defense, and all elemental modifiers. During Castigating Aura, this skill also inflicts <b class="kw kw-bleed">Bleeding</b>, <b class="kw kw-vuln">Vulnerable</b>, and <b class="kw kw-blind">Blind</b>. During Providence, the HP Based portion of the damage is doubled.</p></li>
-        <li class="skill"><strong>Rapid Smiting</strong><p>Shield skill. Hurls the user's shield to strike a distant target multiple times. Damage is increased by the weight of the user's shield, and deals additional damage to <b class="kw kw-vuln">Vulnerable</b> enemies. During Castigating Aura, the damage is increased further by the user's <b class="kw kw-vuln">Vulnerable</b> Potency. During Providence, the target is briefly immobilized.</p></li>
-        <li class="skill"><strong>Ray of Judgement</strong><p>Shield Skill. The user fires a beam of holy light from their shield, dealing Weapon-property Ranged Physical damage. During Castigating Aura, this skill inflicts the <b class="kw kw-burn">Severe Burning</b> status. During Providence, this skill also inflicts the <b class="kw kw-slow">Slow</b> status.</p></li>
-        <li class="skill"><strong>Hesperus Lit</strong><p>Shield skill. The user delivers a crushing blow with their shield, empowered by the weight of divine judgement. Deals Weapon-property Melee Physical damage, which is increased if the target is <b class="kw kw-vuln">Vulnerable</b>. This skill also inflicts the <b class="kw kw-vuln">Vulnerable</b> Status, and deals additional damage based on the user's <b class="kw kw-vuln">Vulnerable</b> Potency. During Castigating Aura, this skill is guaranteed to be Critical. During Providence, this skill inflicts the <b class="kw kw-stun">Stun</b> Status for two seconds.</p></li>
-        <li class="skill"><strong>Gloria Domini</strong><p>The user calls down the wrath of God on a single target, dealing exceptional damage that ignores Defense and all elemental modifiers. During Castigating Aura, this skill inflicts the <b class="kw kw-vuln">Vulnerable</b>, <b class="kw kw-vuln">Breach</b>, and Holy Weakness Statuses. During Providence, this skill inflicts additional damage based on the user's Current HP.</p></li>
-      </ul>
+      <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Enchants</span></div>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-blind">Blind</span><span class="kw-vuln">Vulnerable</span><span class="kw-stun">Stun</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-support" data-i18n="cls.t.support">Support</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Auras &amp; Support<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-support" id="s-castigating-aura">
+            <div class="sk-top"><strong>Castigating Aura</strong><i class="sk-type">Aura</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Holy weapon endow; grants offensive effects to all Paladin skills.</p>
+            <p class="sk-body"><b class="mech">Enchants</b> the user's weapon with the Holy property, increases the user's Hit, and grants all Paladin skills additional effects based on damaging and disabling enemies. Does not stack with Providence.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-providence">Providence</a></p>
+          </li>
+          <li class="skill-card sk-support" id="s-providence">
+            <div class="sk-top"><strong>Providence</strong><i class="sk-type">Aura</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Holy armor endow; grants defensive effects to all Paladin skills.</p>
+            <p class="sk-body"><b class="mech">Enchants</b> the user's armor with the Holy Property, increases their Perfect Dodge, and grants all Paladin skills additional effects focused on protecting and sustaining the user.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-sanctify">
+            <div class="sk-top"><strong>Sanctify</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Consecrated ground that buffs allies and damages enemies.</p>
+            <p class="sk-body">Creates an area of consecrated ground that buffs the Atk, Matk, Def, and Mdef of all allies within, while periodically inflicting Holy Property damage on all enemies.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Spear Skills<span>4 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-physical" id="s-banishing-strike">
+            <div class="sk-top"><strong>Banishing Strike</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Holy strike, strongest against Demon, Undead, and Angel races.</p>
+            <p class="sk-body">Spear skill. Deals weapon-property physical damage to a single target, dealing additional damage to Demon, Undead, and Angel Race enemies.</p>
+            <p class="sk-body">During Castigating Aura, the bonus damage is applied to all races instead, and the skill inflicts <b class="kw kw-bleed">Bleeding</b>.</p>
+            <p class="sk-body">During Providence, the skill heals the user for a portion of the damage dealt, and the skill inflicts <b class="kw kw-blind">Blind</b>.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-castigating-aura">Castigating Aura</a><a href="#s-providence">Providence</a></p>
+          </li>
+          <li class="skill-card sk-physical" id="s-overbrand">
+            <div class="sk-top"><strong>Overbrand</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">AoE sweep with bonus damage against <b class="kw kw-bleed">Bleeding</b> or <b class="kw kw-blind">Blind</b> enemies.</p>
+            <p class="sk-body">The user whirls their spear around, striking all enemies in the area and attempting to inflict <b class="kw kw-bleed">Bleeding</b> and <b class="kw kw-blind">Blind</b>. Enemies already suffering from these statuses take additional damage.</p>
+            <p class="sk-body">During Castigating Aura, the Status Chance is increased.</p>
+            <p class="sk-body">During Providence, the user gains the Endure effect for a short time.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-castigating-aura">Castigating Aura</a><a href="#s-providence">Providence</a></p>
+          </li>
+          <li class="skill-card sk-physical" id="s-grand-banishment">
+            <div class="sk-top"><strong>Grand Banishment</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Ultimate: massive AoE with aura-based bonuses.</p>
+            <p class="sk-body">The user calls a massive spear from the heavens to obliterate the target, striking all enemies in the area around them for massive damage and inflicting Holy Weakness.</p>
+            <p class="sk-body">During Castigating Aura, the skill's damage is doubled.</p>
+            <p class="sk-body">During Providence, this skill stuns all enemies struck for two seconds.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-castigating-aura">Castigating Aura</a><a href="#s-providence">Providence</a></p>
+          </li>
+          <li class="skill-card sk-physical" id="s-martyr-s-reckoning">
+            <div class="sk-top"><strong>Martyr's Reckoning</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Ultimate: sacrifices HP for a huge single-target burst.</p>
+            <p class="sk-body">The user sacrifices their own HP to deal massive damage to a single target. The base damage of the skill is the same as the user's Weapon property. The HP-based portion of the damage ignores Flee, Defense, and all elemental modifiers.</p>
+            <p class="sk-body">During Castigating Aura, this skill also inflicts <b class="kw kw-bleed">Bleeding</b>, <b class="kw kw-vuln">Vulnerable</b>, and <b class="kw kw-blind">Blind</b>.</p>
+            <p class="sk-body">During Providence, the HP Based portion of the damage is doubled.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-castigating-aura">Castigating Aura</a><a href="#s-providence">Providence</a></p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Shield Skills<span>4 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-physical" id="s-rapid-smiting">
+            <div class="sk-top"><strong>Rapid Smiting</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Multi-hit shield throw.</p>
+            <p class="sk-body">Shield skill. Hurls the user's shield to strike a distant target multiple times. Damage is increased by the weight of the user's shield, and deals additional damage to <b class="kw kw-vuln">Vulnerable</b> enemies.</p>
+            <p class="sk-body">During Castigating Aura, the damage is increased further by the user's <b class="kw kw-vuln">Vulnerable</b> Potency.</p>
+            <p class="sk-body">During Providence, the target is briefly immobilized.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-castigating-aura">Castigating Aura</a><a href="#s-providence">Providence</a></p>
+          </li>
+          <li class="skill-card sk-physical" id="s-ray-of-judgement">
+            <div class="sk-top"><strong>Ray of Judgement</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Ranged holy beam with aura-based status effects.</p>
+            <p class="sk-body">The user fires a beam of holy light from their shield, dealing Weapon-property Ranged Physical damage.</p>
+            <p class="sk-body">During Castigating Aura, this skill inflicts the <b class="kw kw-burn">Severe Burning</b> status.</p>
+            <p class="sk-body">During Providence, this skill also inflicts the <b class="kw kw-slow">Slow</b> status.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-castigating-aura">Castigating Aura</a><a href="#s-providence">Providence</a></p>
+          </li>
+          <li class="skill-card sk-physical" id="s-hesperus-lit">
+            <div class="sk-top"><strong>Hesperus Lit</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Ultimate: heavy smite that inflicts extended <b class="kw kw-vuln">Vulnerable</b>.</p>
+            <p class="sk-body">Shield skill. The user delivers a crushing blow with their shield, empowered by the weight of divine judgement. Deals Weapon-property Melee Physical damage, which is increased if the target is <b class="kw kw-vuln">Vulnerable</b>. This skill also inflicts the <b class="kw kw-vuln">Vulnerable</b> Status, and deals additional damage based on the user's <b class="kw kw-vuln">Vulnerable</b> Potency.</p>
+            <p class="sk-body">During Castigating Aura, this skill is guaranteed to be Critical.</p>
+            <p class="sk-body">During Providence, this skill inflicts the <b class="kw kw-stun">Stun</b> Status for two seconds.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-castigating-aura">Castigating Aura</a><a href="#s-providence">Providence</a></p>
+          </li>
+          <li class="skill-card sk-physical" id="s-gloria-domini">
+            <div class="sk-top"><strong>Gloria Domini</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Ultimate: defense-ignoring burst that can convert HP to damage.</p>
+            <p class="sk-body">The user calls down the wrath of God on a single target, dealing exceptional damage that ignores Defense and all elemental modifiers.</p>
+            <p class="sk-body">During Castigating Aura, this skill inflicts the <b class="kw kw-vuln">Vulnerable</b>, <b class="kw kw-vuln">Breach</b>, and Holy Weakness Statuses.</p>
+            <p class="sk-body">During Providence, this skill inflicts additional damage based on the user's Current HP.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-castigating-aura">Castigating Aura</a><a href="#s-providence">Providence</a></p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

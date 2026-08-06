@@ -179,25 +179,71 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-bleed">Bleeding</span><span class="kw-vuln">Vulnerable</span><span class="kw-stun">Stun</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Firearms Mastery</strong><p>Mastery in using Revolvers, Rifles, and Shotguns. Increases the Attack and Hit Rate with all firearms.</p></li>
-        <li class="skill"><strong>Rapid Reload</strong><p>The user rapidly reloads their weapon, preparing to unleash mayhem once again. Instantly resets the cooldowns for a pair of skills based on which weapon is currently equipped.</p></li>
-        <li class="skill"><strong>Redeploy</strong><p>The user instantly repositions, teleporting to a targeted location to which they have line of sight. When cast, the Finisher skill of the currently equipped weapon has its Cooldown refreshed.</p></li>
-        <li class="skill"><strong>Quick Draw</strong><p>Revolver skill. The user snap fires at the target, attempting to ward off pursuit. Attempts to inflict the <b class="kw kw-slow">Slow</b> status. If the target is <b class="kw kw-bleed">Bleeding</b> or <b class="kw kw-vuln">Vulnerable</b>, this skill's cooldown is reduced.</p></li>
-        <li class="skill"><strong>Rapid Shower</strong><p>Revolver Finisher. Fire a barrage of shots at the targeted enemy, with a high chance to inflict the <b class="kw kw-slow">Slow</b> status. If the target is <b class="kw kw-bleed">Bleeding</b> or <b class="kw kw-vuln">Vulnerable</b>, this skill's cooldown is reduced.</p></li>
-        <li class="skill"><strong>Breaking Shot</strong><p>Rifle Skill. Aims and fires a piercing shot at a distant target, intended more to penetrate and damage their armor than to deal significant damage. Has a high chance to inflict the <b class="kw kw-vuln">Vulnerable</b> status. If the target is <b class="kw kw-slow">Slowed</b> or <b class="kw kw-bleed">Bleeding</b>, this skill deals additional damage.</p></li>
-        <li class="skill"><strong>Snipe</strong><p>Rifle Finisher. The user takes careful aim and fires a shot at the target's most vital point. Has a long fixed cast time, but does exceptionally high damage that ignores the target's Flee and bypasses skills like Guard, and has a high chance to inflict the <b class="kw kw-vuln">Vulnerable</b> status. The damage of this skill is increased if the target is <b class="kw kw-slow">Slowed</b> or <b class="kw kw-bleed">Bleeding</b>.</p></li>
-        <li class="skill"><strong>Scatter Shot</strong><p>Shotgun Skill. Sprays fire from the shotgun over a small area, hitting multiple enemies with a high chance to inflict the <b class="kw kw-bleed">Internal Bleeding</b> status. <b class="kw kw-slow">Slowed</b> and <b class="kw kw-vuln">Vulnerable</b> enemies have a chance of being <b class="kw kw-stun">Stunned</b>.</p></li>
-        <li class="skill"><strong>Full Blast</strong><p>Shotgun Finisher. Unloads everything in one massive blast, dealing extreme damage to enemies in front of the user. Both enemies struck by the blast and the user themselves are knocked back. Enemies struck have a high chance of being inflicted with the <b class="kw kw-bleed">Internal Bleeding</b> status, and enemies that are <b class="kw kw-slow">Slowed</b> or <b class="kw kw-vuln">Vulnerable</b> additionally have a chance of being <b class="kw kw-stun">Stunned</b>.</p></li>
-      </ul>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-vuln">Vulnerable</span><span class="kw-stun">Stun</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-passive" data-i18n="cls.t.passive">Passive</span><span class="sk-utility" data-i18n="cls.t.utility">Utility</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Core Gun Skills<span>6 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-physical" id="s-quick-draw">
+            <div class="sk-top"><strong>Quick Draw</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Revolver skill. Hits twice and inflicts <b class="kw kw-slow">Slow</b>.</p>
+            <p class="sk-body">Revolver skill. The user snap fires at the target, attempting to ward off pursuit. Attempts to inflict the <b class="kw kw-slow">Slow</b> status. If the target is <b class="kw kw-bleed">Bleeding</b> or <b class="kw kw-vuln">Vulnerable</b>, this skill's cooldown is reduced.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-rapid-shower">
+            <div class="sk-top"><strong>Rapid Shower</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Revolver finisher. Hits several times, increased damage on <b class="kw kw-vuln">Vulnerable</b> or <b class="kw kw-bleed">Bleeding</b> targets.</p>
+            <p class="sk-body">Revolver Finisher. Fire a barrage of shots at the targeted enemy, with a high chance to inflict the <b class="kw kw-slow">Slow</b> status. If the target is <b class="kw kw-bleed">Bleeding</b> or <b class="kw kw-vuln">Vulnerable</b>, this skill's cooldown is reduced.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-breaking-shot">
+            <div class="sk-top"><strong>Breaking Shot</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Rifle skill. Long range and inflicts <b class="kw kw-vuln">Vulnerable</b>.</p>
+            <p class="sk-body">Aims and fires a piercing shot at a distant target, intended more to penetrate and damage their armor than to deal significant damage. Has a high chance to inflict the <b class="kw kw-vuln">Vulnerable</b> status. If the target is <b class="kw kw-slow">Slowed</b> or <b class="kw kw-bleed">Bleeding</b>, this skill deals additional damage.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-snipe">
+            <div class="sk-top"><strong>Snipe</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Rifle finisher. Deals devastating damage. Increased damage on <b class="kw kw-slow">Slowed</b> or <b class="kw kw-bleed">Bleeding</b> targets.</p>
+            <p class="sk-body">Rifle Finisher. The user takes careful aim and fires a shot at the target's most vital point. Has a long fixed cast time, but does exceptionally high damage that ignores the target's Flee and bypasses skills like Guard, and has a high chance to inflict the <b class="kw kw-vuln">Vulnerable</b> status. The damage of this skill is increased if the target is <b class="kw kw-slow">Slowed</b> or <b class="kw kw-bleed">Bleeding</b>.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-scatter-shot">
+            <div class="sk-top"><strong>Scatter Shot</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Shotgun skill. AoE damage that inflicts <b class="kw kw-bleed">Internal Bleeding</b>.</p>
+            <p class="sk-body">Sprays fire from the shotgun over a small area, hitting multiple enemies with a high chance to inflict the <b class="kw kw-bleed">Internal Bleeding</b> status. <b class="kw kw-slow">Slowed</b> and <b class="kw kw-vuln">Vulnerable</b> enemies have a chance of being <b class="kw kw-stun">Stunned</b>.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-full-blast">
+            <div class="sk-top"><strong>Full Blast</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Shotgun finisher. AoE damage and knockback. Increased damage on <b class="kw kw-slow">Slowed</b> or <b class="kw kw-vuln">Vulnerable</b> targets.</p>
+            <p class="sk-body">Shotgun Finisher. Unloads everything in one massive blast, dealing extreme damage to enemies in front of the user. Both enemies struck by the blast and the user themselves are knocked back. Enemies struck have a high chance of being inflicted with the <b class="kw kw-bleed">Internal Bleeding</b> status, and enemies that are <b class="kw kw-slow">Slowed</b> or <b class="kw kw-vuln">Vulnerable</b> additionally have a chance of being <b class="kw kw-stun">Stunned</b>.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">General Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-passive" id="s-firearms-mastery">
+            <div class="sk-top"><strong>Firearms Mastery</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Increases damage and hit rate of all Guns.</p>
+            <p class="sk-body">Mastery in using Revolvers, Rifles, and Shotguns. Increases the Attack and Hit Rate with all firearms.</p>
+          </li>
+          <li class="skill-card sk-utility" id="s-redeploy">
+            <div class="sk-top"><strong>Redeploy</strong><i class="sk-type">Utility</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Instantly moves to target location, refreshes finisher skill of current weapon.</p>
+            <p class="sk-body">The user instantly repositions, teleporting to a targeted location to which they have line of sight. When cast, the Finisher skill of the currently equipped weapon has its Cooldown refreshed.</p>
+          </li>
+          <li class="skill-card sk-utility" id="s-rapid-reload">
+            <div class="sk-top"><strong>Rapid Reload</strong><i class="sk-type">Utility</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Instantly refreshes skill cooldowns usable by equipped weapon</p>
+            <p class="sk-body">The user rapidly reloads their weapon, preparing to unleash mayhem once again. Instantly resets the cooldowns for a pair of skills based on which weapon is currently equipped.</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

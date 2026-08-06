@@ -158,7 +158,7 @@
         </div>
         <p class="muted">Warlock is the alternative advancement option for Wizards. While their previous job provided them mastery over all of the natural elements, the Warlock is not satisfied with this, and so turns its efforts toward much darker magics. Though not without cost, the Warlock has managed to chain these supernatural forces down, bending them to their will, giving them unique access to Dark and Undead property magic, and they join Soul Linkers in gaining access to Ghost property magic.</p>
         <p class="muted">The Warlock skill tree is dominated by two primary skills: Void Infusion and Void Channeling. Void Infusion grants the user a buff that alters the property of all magic they use to the property of their choice, either Dark, Undead, or Ghost. This unique ability comes at a price though, saddling the Warlock with a significant weakness based on which property is chosen.</p>
-        <p class="muted">Void Channeling allows the user to convert their HP into magical power. By consuming a large amount of Max HP, they instantly generate a number of Void Spheres, a unique resource used to empower other Warlock skills.</p>
+        <p class="muted">Void Channeling allows the user to convert their HP into magical power. By consuming a large amount of Max HP, they instantly generate a number of <b class="mech">Void Spheres</b>, a unique resource used to empower other Warlock skills.</p>
         <p class="muted">These two skills work in conjunction with three minor branches of the skill tree. The first are the Phantasmal Skills, Ghost Property spells that operate around the use of the <b class="kw kw-vuln">Breach</b> status. And for good reason: setting the user's Void Infusion to Ghost property reduces their Magic Defense Pierce to zero, meaning <b class="kw kw-vuln">Breach</b> will be the only way for them to deal with high MDef enemies.</p>
         <p class="muted">The second branch are the Death skills, dealing Undead property damage while absorbing the target's HP to heal the user. As you might expect, this is also needed, as setting one's Void Infusion to Undead property causes them to lose HP over time.</p>
         <p class="muted">The final branch are the Abyssal skills, Dark property attacks that interact heavily with the <b class="kw kw-burn">Burning</b> status. In addition to being uniquely positioned to handle Holy property enemies, the Abyssal skills also boast the highest raw damage of any of the Warlock branches. These benefits come at the cost of enormous SP Costs, together with the Void Infusion drawback of reduced SP Regeneration. The Abyssal skills offset this demerit by generating SP for the user as they are used.</p>
@@ -177,38 +177,110 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-burn">Burning</span><span class="kw-vuln">Vulnerable</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Void Infusion</strong><p>Converts all magic damage dealt by the user to the specified element. Each element has its own associated demerit.</p></li>
-        <li class="skill"><strong>Ghost</strong><p>The user's Magic Pierce is reduced to 0</p></li>
-        <li class="skill"><strong>Undead</strong><p>The user loses 5% of their Max HP every 5 seconds</p></li>
-        <li class="skill"><strong>Dark: The user's SP Regen is halved</strong></li>
-        <li class="skill"><strong>Void Channeling</strong><p>The user consumes a portion of their Max HP to channel the power of the void, condensing it into spheres that can be used as a resource to empower other skills. The user can hold a maximum of five Void Spheres at once, regardless of whether they have learned this skill or not.</p></li>
-        <li class="skill"><strong>Phantasmal Burst</strong><p>Invokes forbidden magic to turn the target's soul against their own body, dealing Ghost property damage and inflicting the <b class="kw kw-vuln">Breach</b> status. Has a small chance to summon a Void Sphere when cast. If Void Infusion: Ghost is active, the chance is doubled.</p></li>
-        <li class="skill"><strong>Phantasmal Crush</strong><p>Invokes forbidden magic to deal damage directly to the souls of all enemies in a given area, attempting to inflict the <b class="kw kw-vuln">Breach</b> Status on them. Deals additional damage based on the number of Void Spheres the user has.</p></li>
-        <li class="skill"><strong>If Void Infusion</strong><p>Ghost is active, this skill's cooldown is halved.</p></li>
-        <li class="skill"><strong>Phantasmal Burden</strong><p>Puts a supernatural burden on the souls of the target and all enemies in the area around them. Consumes the user's remaining Void Spheres to deal Ghost Property damage over time to all enemies around the target. The damage of this skill is increased by the user's <b class="kw kw-vuln">Breach</b> Potency.</p></li>
-        <li class="skill"><strong>If Void Infusion</strong><p>Ghost is active, this skill's Fixed Cast Time is removed.</p></li>
-        <li class="skill"><strong>Death Eater</strong><p>The user channels necrotic energy to sap the life from the targeted enemy. Deals Undead Property Magic damage to a single target, then heals the user for an amount based on how much HP the target is missing. If the target is killed by the attack, heals for the maximum amount instead. Each cast has a small chance to summon a Void Sphere.</p></li>
-        <li class="skill"><strong>If Void Infusion</strong><p>Undead is active, the chance to summon a Void Sphere is doubled.</p></li>
-        <li class="skill"><strong>Death Circle</strong><p>The user infuses necrotic energies into the ground, creating a zone of desecrated land. Deals Undead property Magic damage to all enemies in the area over time for a short duration. This skill gains a small amount of lifesteal based on the user's number of remaining Void Spheres.</p></li>
-        <li class="skill"><strong>If Void Infusion</strong><p>Undead is active, this skill's cooldown is halved.</p></li>
-        <li class="skill"><strong>Grasping Death</strong><p>The user opens a gate to the netherworld, letting necrotic energies pour through into the world of the living. Consumes all of the user's Void Spheres to open a portal on all enemies within range, dealing Undead Property Magic damage to them over time. The user is healed for a small amount for each Void Sphere consumed.</p></li>
-        <li class="skill"><strong>If Void Infusion</strong><p>Death is active, this skill's Fixed Cast Time is removed.</p></li>
-        <li class="skill"><strong>Abyssal Flare</strong><p>Unleashes a burst of dark magic laced with fire, incinerating the target with corrupting energies. Deals Dark property Magic damage with a chance to inflict the <b class="kw kw-burn">Burning</b> status. If the target is already <b class="kw kw-burn">Burning</b>, the user restores a small amount of SP. Each cast has a small chance to summon a Void Sphere.</p></li>
-        <li class="skill"><strong>If Void Infusion</strong><p>Dark is active, the chance to summon a Void Sphere is doubled.</p></li>
-        <li class="skill"><strong>Abyssal Burst</strong><p>Unleashes a wave of corrupting energy around the user, dealing Dark Property Magic damage to all enemies in the area. Has a chance to inflict <b class="kw kw-burn">Burning</b> on each enemy struck. The user also restores a fixed amount of SP based on the number of Void Spheres they have remaining.</p></li>
-        <li class="skill"><strong>If Void Infusion</strong><p>Dark is active, this skill's cooldown is halved.</p></li>
-        <li class="skill"><strong>Abyssal Comet</strong><p>Drops a comet from the Abyss on the targeted enemy, consuming all of the user's remaining Void Spheres to deal massive Dark Property Magic damage to all enemies in a wide area and inflict the <b class="kw kw-burn">Burning</b> status. The user restores a percentage of their Max SP for each Void Sphere consumed.</p></li>
-        <li class="skill"><strong>If Void Infusion</strong><p>Dark is active, this skill's Fixed Cast Time is removed.</p></li>
-      </ul>
+      <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Void Spheres</span></div>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-burn">Burning</span><span class="kw-vuln">Vulnerable</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-magic" data-i18n="cls.t.magic">Magic</span><span class="sk-support" data-i18n="cls.t.support">Support</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Core Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-support" id="s-void-infusion">
+            <div class="sk-top"><strong>Void Infusion</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 3</i></div>
+            <p class="sk-short">Converts all magic to Ghost, Undead, or Dark property, at a price.</p>
+            <p class="sk-body">Converts all magic damage dealt by the user to the specified element. Each element has its own associated demerit.</p>
+            <ul class="sk-options"><li><b>Ghost</b>The user's Magic Pierce is reduced to 0</li><li><b>Undead</b>The user loses 5% of their Max HP every 5 seconds</li><li><b>Dark</b>The user's SP Regen is halved</li></ul>
+          </li>
+          <li class="skill-card sk-support" id="s-void-channeling">
+            <div class="sk-top"><strong>Void Channeling</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Converts Max HP into <b class="mech">Void Spheres</b>.</p>
+            <p class="sk-body">The user consumes a portion of their Max HP to channel the power of the void, condensing it into spheres that can be used as a resource to empower other skills. The user can hold a maximum of five <b class="mech">Void Spheres</b> at once, regardless of whether they have learned this skill or not.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Phantasmal Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-magic" id="s-phantasmal-burst">
+            <div class="sk-top"><strong>Phantasmal Burst</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Ghost bolt that inflicts <b class="kw kw-vuln">Breach</b> and can generate <b class="mech">Void Spheres</b>.</p>
+            <p class="sk-body">Invokes forbidden magic to turn the target's soul against their own body, dealing Ghost property damage and inflicting the <b class="kw kw-vuln">Breach</b> status. Has a small chance to summon a <b class="mech">Void Sphere</b> when cast. If Void Infusion: Ghost is active, the chance is doubled.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-void-infusion">Void Infusion</a></p>
+          </li>
+          <li class="skill-card sk-magic" id="s-phantasmal-crush">
+            <div class="sk-top"><strong>Phantasmal Crush</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Ghost AoE amplified by held <b class="mech">Void Spheres</b>.</p>
+            <p class="sk-body">Invokes forbidden magic to deal damage directly to the souls of all enemies in a given area, attempting to inflict the <b class="kw kw-vuln">Breach</b> Status on them. Deals additional damage based on the number of <b class="mech">Void Spheres</b> the user has.</p>
+            <ul class="sk-riders"><li>If Void Infusion: Ghost is active, this skill's cooldown is halved.</li></ul>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-void-infusion">Void Infusion</a></p>
+          </li>
+          <li class="skill-card sk-magic" id="s-phantasmal-burden">
+            <div class="sk-top"><strong>Phantasmal Burden</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Sphere-consuming Ghost DoT scaled by <b class="kw kw-vuln">Breach</b> Potency.</p>
+            <p class="sk-body">Puts a supernatural burden on the souls of the target and all enemies in the area around them. Consumes the user's remaining <b class="mech">Void Spheres</b> to deal Ghost Property damage over time to all enemies around the target. The damage of this skill is increased by the user's <b class="kw kw-vuln">Breach</b> Potency.</p>
+            <ul class="sk-riders"><li>If Void Infusion: Ghost is active, this skill's Fixed Cast Time is removed.</li></ul>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-void-infusion">Void Infusion</a></p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Death Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-magic" id="s-death-eater">
+            <div class="sk-top"><strong>Death Eater</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Undead bolt that heals the user.</p>
+            <p class="sk-body">The user channels necrotic energy to sap the life from the targeted enemy. Deals Undead Property Magic damage to a single target, then heals the user for an amount based on how much HP the target is missing. If the target is killed by the attack, heals for the maximum amount instead. Each cast has a small chance to summon a <b class="mech">Void Sphere</b>.</p>
+            <ul class="sk-riders"><li>If Void Infusion: Undead is active, the chance to summon a <b class="mech">Void Sphere</b> is doubled.</li></ul>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-void-infusion">Void Infusion</a></p>
+          </li>
+          <li class="skill-card sk-magic" id="s-death-circle">
+            <div class="sk-top"><strong>Death Circle</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Undead DoT zone with sphere-based life steal.</p>
+            <p class="sk-body">The user infuses necrotic energies into the ground, creating a zone of desecrated land. Deals Undead property Magic damage to all enemies in the area over time for a short duration. This skill gains a small amount of lifesteal based on the user's number of remaining <b class="mech">Void Spheres</b>.</p>
+            <ul class="sk-riders"><li>If Void Infusion: Undead is active, this skill's cooldown is halved.</li></ul>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-void-infusion">Void Infusion</a></p>
+          </li>
+          <li class="skill-card sk-magic" id="s-grasping-death">
+            <div class="sk-top"><strong>Grasping Death</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Sphere-consuming Undead AoE that heals per sphere.</p>
+            <p class="sk-body">The user opens a gate to the netherworld, letting necrotic energies pour through into the world of the living. Consumes all of the user's <b class="mech">Void Spheres</b> to open a portal on all enemies within range, dealing Undead Property Magic damage to them over time. The user is healed for a small amount for each <b class="mech">Void Sphere</b> consumed.</p>
+            <ul class="sk-riders"><li>If Void Infusion: Death is active, this skill's Fixed Cast Time is removed.</li></ul>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-void-infusion">Void Infusion</a></p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Abyssal Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-magic" id="s-abyssal-flare">
+            <div class="sk-top"><strong>Abyssal Flare</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Dark bolt that restores SP against <b class="kw kw-burn">Burning</b> targets.</p>
+            <p class="sk-body">Unleashes a burst of dark magic laced with fire, incinerating the target with corrupting energies. Deals Dark property Magic damage with a chance to inflict the <b class="kw kw-burn">Burning</b> status. If the target is already <b class="kw kw-burn">Burning</b>, the user restores a small amount of SP. Each cast has a small chance to summon a <b class="mech">Void Sphere</b>.</p>
+            <ul class="sk-riders"><li>If Void Infusion: Dark is active, the chance to summon a <b class="mech">Void Sphere</b> is doubled.</li></ul>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-void-infusion">Void Infusion</a></p>
+          </li>
+          <li class="skill-card sk-magic" id="s-abyssal-burst">
+            <div class="sk-top"><strong>Abyssal Burst</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Dark AoE that restores SP per held sphere.</p>
+            <p class="sk-body">Unleashes a wave of corrupting energy around the user, dealing Dark Property Magic damage to all enemies in the area. Has a chance to inflict <b class="kw kw-burn">Burning</b> on each enemy struck. The user also restores a fixed amount of SP based on the number of <b class="mech">Void Spheres</b> they have remaining.</p>
+            <ul class="sk-riders"><li>If Void Infusion: Dark is active, this skill's cooldown is halved.</li></ul>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-void-infusion">Void Infusion</a></p>
+          </li>
+          <li class="skill-card sk-magic" id="s-abyssal-comet">
+            <div class="sk-top"><strong>Abyssal Comet</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Sphere-consuming Dark nuke that refunds SP per sphere.</p>
+            <p class="sk-body">Drops a comet from the Abyss on the targeted enemy, consuming all of the user's remaining <b class="mech">Void Spheres</b> to deal massive Dark Property Magic damage to all enemies in a wide area and inflict the <b class="kw kw-burn">Burning</b> status. The user restores a percentage of their Max SP for each <b class="mech">Void Sphere</b> consumed.</p>
+            <ul class="sk-riders"><li>If Void Infusion: Dark is active, this skill's Fixed Cast Time is removed.</li></ul>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-void-infusion">Void Infusion</a></p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

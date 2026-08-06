@@ -174,22 +174,51 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Bow Mastery</strong><p>Increases the auto-attack range and Hit Rate of Bows. Notably, this skill does not increase the range of skills, and does not improve the damage of bows.</p></li>
-        <li class="skill"><strong>Double Strafe</strong><p>Deals two hits in rapid succession to a ranged target. This skill gains bonus Crit Rate when hitting a <b class="kw kw-slow">Slowed</b> target.</p></li>
-        <li class="skill"><strong>Arrow Shower</strong><p>Deals splash damage at a target location, knocking back any enemies struck.</p></li>
-        <li class="skill"><strong>Pin Down</strong><p>Fires an arrow at a target's legs, dealing minor damage and attempting to inflict the <b class="kw kw-slow">Slow</b> status.</p></li>
-        <li class="skill"><strong>Arrow Repel</strong><p>Fires a heavy arrow at the target, dealing minor damage and knocking them backwards.</p></li>
-        <li class="skill"><strong>Reposition</strong><p>Commands the party to move, greatly increasing their movement speed for a short duration and removing most movement impairing effects.</p></li>
-      </ul>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-passive" data-i18n="cls.t.passive">Passive</span><span class="sk-utility" data-i18n="cls.t.utility">Utility</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Skills<span>6 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-passive" id="s-bow-mastery">
+            <div class="sk-top"><strong>Bow Mastery</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Increases range and Hit of Bows.</p>
+            <p class="sk-body">Increases the auto-attack range and Hit Rate of Bows. Notably, this skill does not increase the range of skills, and does not improve the damage of bows.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-arrow-shower">
+            <div class="sk-top"><strong>Arrow Shower</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Ground target AoE that knocks back.</p>
+            <p class="sk-body">Deals splash damage at a target location, knocking back any enemies struck.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-double-strafe">
+            <div class="sk-top"><strong>Double Strafe</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Fires twice, has bonus Crit rate against <b class="kw kw-slow">Slowed</b> targets.</p>
+            <p class="sk-body">Deals two hits in rapid succession to a ranged target. This skill gains bonus Crit Rate when hitting a <b class="kw kw-slow">Slowed</b> target.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-pin-down">
+            <div class="sk-top"><strong>Pin Down</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Low damage, Inflicts <b class="kw kw-slow">Slow</b>.</p>
+            <p class="sk-body">Fires an arrow at a target's legs, dealing minor damage and attempting to inflict the <b class="kw kw-slow">Slow</b> status.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-arrow-repel">
+            <div class="sk-top"><strong>Arrow Repel</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Low damage and strong knockback.</p>
+            <p class="sk-body">Fires a heavy arrow at the target, dealing minor damage and knocking them backwards.</p>
+          </li>
+          <li class="skill-card sk-utility" id="s-reposition">
+            <div class="sk-top"><strong>Reposition</strong><i class="sk-type">Utility</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Massively increases the party's movespeed and removes <b class="kw kw-slow">Slow</b> effects.</p>
+            <p class="sk-body">Commands the party to move, greatly increasing their movement speed for a short duration and removing most movement impairing effects.</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

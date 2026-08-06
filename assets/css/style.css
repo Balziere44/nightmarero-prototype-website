@@ -87,6 +87,18 @@
   --kw-sleep: #949cff;
   --kw-slow: #9db0cc;
 
+  /* Skill types. Deliberately quieter than the codex above: these only
+     appear on the badge and the card edge, never inside a sentence. */
+  --sk-physical: #e8677a;
+  --sk-magic: #7f9dff;
+  --sk-support: #4fd3a0;
+  --sk-debuff: #c07df0;
+  --sk-passive: #9a93a8;
+  --sk-stance: #f0b429;
+  --sk-summon: #40c4c4;
+  --sk-utility: #8fa3bd;
+  --sk-other: #8b8494;
+
   --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.5);
   --shadow-md: 0 18px 45px rgba(0, 0, 0, 0.55);
   --shadow-glow: 0 0 0 1px rgba(232, 17, 43, 0.35), 0 14px 50px -12px var(--glow);
@@ -125,6 +137,16 @@ html[data-theme="light"] {
   --kw-stun: #4d7c0f;
   --kw-sleep: #4d54c9;
   --kw-slow: #4e6280;
+
+  --sk-physical: #c02f47;
+  --sk-magic: #3554c4;
+  --sk-support: #0d7a55;
+  --sk-debuff: #7b3ac4;
+  --sk-passive: #6a6275;
+  --sk-stance: #8a6100;
+  --sk-summon: #0b7676;
+  --sk-utility: #4a5f7a;
+  --sk-other: #5f5869;
 }
 
 /* The logo drives the header height, so both step down together. */
@@ -1512,27 +1534,241 @@ html[data-theme="light"] .site-footer { background: color-mix(in srgb, var(--bg)
 }
 .sex-toggle button[aria-pressed="true"] { color: var(--accent-ink); background: var(--accent); }
 
-/* skills */
-.skill-list { display: grid; gap: 0.55rem; }
+/* --------------------------------------------------------------------------
+   Skills
 
-.skill {
+   One branch of the tree per block, cards laid out in columns inside it.
+   A card carries its wiki type and level, the one line summary, the full
+   description, any options it splits into, and any conditional riders. The
+   colour on the card edge is the skill type, not a status: statuses stay
+   inline, in the codex colours, so the two never compete.
+   -------------------------------------------------------------------------- */
+
+.skill-branch { margin-bottom: 1.9rem; }
+.skill-branch:last-child { margin-bottom: 0; }
+
+.branch-title {
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
+  margin-bottom: 0.85rem;
+  font-family: var(--font-display);
+  font-size: 1.06rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.branch-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--surface-line-strong), transparent);
+}
+.branch-title span {
+  flex: none;
+  order: 3;
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.skill-grid {
   display: grid;
-  gap: 0.3rem;
-  padding: 1.05rem 1.25rem;
+  align-items: start;
+  gap: 0.6rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr));
+}
+
+.skill-card {
+  --sk: var(--sk-other);
+  display: grid;
+  gap: 0.45rem;
+  padding: 1rem 1.15rem;
   background: var(--bg-panel);
   border: 1px solid var(--surface-line);
-  border-inline-start: 2px solid var(--accent);
+  border-inline-start: 2px solid var(--sk);
   border-radius: var(--radius-sm);
   transition: border-color 0.25s var(--ease), transform 0.25s var(--ease);
 }
-.skill:hover { transform: translateX(3px); border-inline-start-color: var(--red-300); }
-.skill strong {
+.skill-card:hover { transform: translateY(-2px); border-color: color-mix(in srgb, var(--sk) 45%, transparent); }
+.skill-card:target { border-color: var(--sk); box-shadow: 0 0 0 1px color-mix(in srgb, var(--sk) 45%, transparent); }
+
+.sk-physical { --sk: var(--sk-physical); }
+.sk-magic { --sk: var(--sk-magic); }
+.sk-support { --sk: var(--sk-support); }
+.sk-debuff { --sk: var(--sk-debuff); }
+.sk-passive { --sk: var(--sk-passive); }
+.sk-stance { --sk: var(--sk-stance); }
+.sk-summon { --sk: var(--sk-summon); }
+.sk-utility { --sk: var(--sk-utility); }
+
+.sk-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4rem 0.55rem;
+}
+.sk-top strong {
+  flex: 1 1 auto;
+  min-width: 0;
   font-family: var(--font-display);
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: -0.01em;
 }
-.skill p { color: var(--text-muted); font-size: var(--step--1); line-height: 1.6; }
+
+.sk-type,
+.sk-lv {
+  flex: none;
+  padding: 0.14rem 0.48rem;
+  font-family: var(--font-mono);
+  font-style: normal;
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border-radius: 100px;
+}
+.sk-type {
+  color: var(--sk);
+  border: 1px solid color-mix(in srgb, var(--sk) 34%, transparent);
+  background: color-mix(in srgb, var(--sk) 9%, transparent);
+}
+.sk-lv { color: var(--text-dim); border: 1px solid var(--surface-line); }
+
+.sk-short {
+  font-size: 0.83rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+.sk-body {
+  font-size: var(--step--1);
+  line-height: 1.62;
+  color: var(--text-muted);
+}
+.sk-body + .sk-body { margin-top: -0.15rem; }
+
+/* the sub-entries a skill splits into: elements, levels, homunculi */
+.sk-options {
+  display: grid;
+  gap: 0.3rem;
+  padding: 0.6rem 0.75rem;
+  background: var(--bg-elevated);
+  border-radius: var(--radius-sm);
+}
+.sk-options li {
+  font-size: 0.79rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+.sk-options b {
+  margin-inline-end: 0.42rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* conditional riders: "If Void Infusion: Ghost is active, ..." */
+.sk-riders { display: grid; gap: 0.3rem; }
+.sk-riders li {
+  position: relative;
+  padding-inline-start: 1.05rem;
+  font-size: 0.79rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+.sk-riders li::before {
+  content: "\2192";
+  position: absolute;
+  inset-inline-start: 0;
+  top: 0;
+  color: var(--sk);
+  font-weight: 700;
+}
+
+.sk-needs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.63rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.sk-needs a {
+  padding: 0.12rem 0.45rem;
+  color: var(--accent-soft);
+  border: 1px solid color-mix(in srgb, var(--accent) 28%, transparent);
+  border-radius: 100px;
+  transition: background-color 0.2s var(--ease);
+}
+.sk-needs a:hover { background: color-mix(in srgb, var(--accent) 14%, transparent); }
+
+/* class mechanics: resources, stances and states that are not skills */
+.mech {
+  font-weight: 600;
+  color: var(--accent-soft);
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+.mech-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
+}
+.mech-strip > em {
+  font-family: var(--font-mono);
+  font-style: normal;
+  font-size: 0.63rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.mech-strip span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.26rem 0.62rem;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.05em;
+  color: var(--accent-soft);
+  border: 1px dashed color-mix(in srgb, var(--accent) 34%, transparent);
+  border-radius: 100px;
+}
+
+/* key for the type colours, sits under the status legend */
+.type-key {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.9rem;
+  margin-bottom: 1.2rem;
+}
+.type-key span {
+  --sk: var(--sk-other);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.38rem;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.type-key span::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: var(--sk);
+}
 
 .note {
   padding: 1.1rem 1.3rem;

@@ -176,22 +176,51 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-bleed">Bleeding</span><span class="kw-vuln">Vulnerable</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Sword Mastery</strong><p>Increases the damage of One-Handed Swords.</p></li>
-        <li class="skill"><strong>Slash</strong><p>Deals two quick hits, with a chance to inflict the <b class="kw kw-bleed">Bleed</b> status on enemies.</p></li>
-        <li class="skill"><strong>Lash Out</strong><p>Strike all enemies around the user. For each enemy in range, including those the attack misses, gain a small amount of HP.</p></li>
-        <li class="skill"><strong>Improved Constitution</strong><p>Increases the effects of healing items that restore HP, and restore a small amount of HP every 10 seconds the user isn't moving.</p></li>
-        <li class="skill"><strong>Provoke</strong><p>Attempts to grab the attention of a distant mob and inflict the <b class="kw kw-vuln">Vulnerable</b> status on them.</p></li>
-        <li class="skill"><strong>Endure</strong><p>For a few seconds, reduce all damage taken from all sources by 30%. The user will not flinch while taking damage when this skill is active.</p></li>
-      </ul>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-vuln">Vulnerable</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-passive" data-i18n="cls.t.passive">Passive</span><span class="sk-utility" data-i18n="cls.t.utility">Utility</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Skills<span>6 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-physical" id="s-slash">
+            <div class="sk-top"><strong>Slash</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Inflicts <b class="kw kw-bleed">Bleed</b></p>
+            <p class="sk-body">Deals two quick hits, with a chance to inflict the <b class="kw kw-bleed">Bleed</b> status on enemies.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-lash-out">
+            <div class="sk-top"><strong>Lash Out</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">AoE, heals self on hit</p>
+            <p class="sk-body">Strike all enemies around the user. For each enemy in range, including those the attack misses, gain a small amount of HP.</p>
+          </li>
+          <li class="skill-card sk-utility" id="s-endure">
+            <div class="sk-top"><strong>Endure</strong><i class="sk-type">Utility</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Reduces incoming damage</p>
+            <p class="sk-body">For a few seconds, reduce all damage taken from all sources by 30%. The user will not flinch while taking damage when this skill is active.</p>
+          </li>
+          <li class="skill-card sk-utility" id="s-provoke">
+            <div class="sk-top"><strong>Provoke</strong><i class="sk-type">Utility</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Inflicts <b class="kw kw-vuln">Vulnerable</b></p>
+            <p class="sk-body">Attempts to grab the attention of a distant mob and inflict the <b class="kw kw-vuln">Vulnerable</b> status on them.</p>
+          </li>
+          <li class="skill-card sk-passive" id="s-sword-mastery">
+            <div class="sk-top"><strong>Sword Mastery</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Increases damage of 1H/2H Swords</p>
+            <p class="sk-body">Increases the damage of One-Handed Swords.</p>
+          </li>
+          <li class="skill-card sk-passive" id="s-improved-constitution">
+            <div class="sk-top"><strong>Improved Constitution</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Increases natural HP regen</p>
+            <p class="sk-body">Increases the effects of healing items that restore HP, and restore a small amount of HP every 10 seconds the user isn't moving.</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

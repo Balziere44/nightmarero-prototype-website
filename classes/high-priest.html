@@ -176,26 +176,81 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-vuln">Vulnerable</span><span class="kw-stun">Stun</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Lux Divina</strong><p>The user is blessed by the divine light of Heaven, granting them unprecedented ability to call on miracles to aid their allies. If the user is under the Grace status, they gain the Authority status of the same level. If the user is already under the Authority status, the level of the Authority status is increased (to a maximum of 15).</p></li>
-        <li class="skill"><strong>Lux Aeterna</strong><p>The user is blessed by the eternal light of Heaven, granting them unprecedented ability to call down holy wrath on their foes. If the user is under the Authority status, they gain the Grace status of the same level. If the user is already under the Grace status, the level of the Grace status is increased (to a maximum of 15).</p></li>
-        <li class="skill"><strong>Coluceo Heal</strong><p>Grace Skill. The user casts a wide ranging blessing, mending the wounds of all party members simultaneously. Immediately heals all party members for an amount equal to a Heal skill of the same level. Each level of Divine Grace learned reduces this skill's Cooldown.</p></li>
-        <li class="skill"><strong>Gloria</strong><p>Grace Skill. The user sings a hymn of praise, lending divine strength to their allies' attacks. Increases the Crit Rate and ASPD Cap of all party members for a short duration.</p></li>
-        <li class="skill"><strong>Magnificat</strong><p>Grace Skill. The user sings a hymn of praise, granting divine edification to their party members. Reduces the SP Costs of all skills and grants ignore interrupt to all party members for a short duration.</p></li>
-        <li class="skill"><strong>Benedictio Sanctissimi Sacramenti</strong><p>Grace Skill. Performs a holy rite, massively improving the party's attack and defense. Grants all party members improved Defense Pierce, Magic Pierce, Hard Defense, and Hard Magic Defense.</p></li>
-        <li class="skill"><strong>Flamen</strong><p>Authority Skill. Summons a holy light to smite an enemy. Deals Holy property magic damage to a single enemy. Does increased damage to enemies afflicted with Searing Light.</p></li>
-        <li class="skill"><strong>Oleum Sanctum</strong><p>Authority Skill. Shatters a vial of sacred oil, creating a wave of purification that forces out all enemies in the area. Deals Holy property magic damage to all enemies in the area around the user and knocks them back. Has a chance to inflict Searing Light on all enemies struck.</p></li>
-        <li class="skill"><strong>Magnus Exorcismus</strong><p>Authority Skill. Creates an area of consecrated ground to exorcize the wicked. Places a persistent ground effect that deals Holy magic damage over time to all enemies that stand within it. Demon, Undead, and Angel Race monsters struck are additionally <b class="kw kw-stun">Stunned</b>, while all other enemies are <b class="kw kw-slow">Slowed</b>. Deals additional damage to enemies under Searing Light.</p></li>
-        <li class="skill"><strong>Epiclesis</strong><p>Authority Skill. Creates an illusory tree of divine light, filling the targeted area with holy energies that reject all of the caster's enemies for the duration. While the tree persists, all enemies in the area take Magic damage over time and are repeatedly inflicted with the <b class="kw kw-vuln">Vulnerable</b>, <b class="kw kw-vuln">Breach</b>, and <b class="kw kw-slow">Slow</b> statuses.</p></li>
-      </ul>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-vuln">Vulnerable</span><span class="kw-stun">Stun</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-support" data-i18n="cls.t.support">Support</span><span class="sk-debuff" data-i18n="cls.t.debuff">Debuff</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Utility Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-support" id="s-lux-divina">
+            <div class="sk-top"><strong>Lux Divina</strong><i class="sk-type">Grace</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Grants or raises the Authority status, up to level 15.</p>
+            <p class="sk-body">The user is blessed by the divine light of Heaven, granting them unprecedented ability to call on miracles to aid their allies. If the user is under the Grace status, they gain the Authority status of the same level. If the user is already under the Authority status, the level of the Authority status is increased (to a maximum of 15).</p>
+          </li>
+          <li class="skill-card sk-debuff" id="s-lux-aeterna">
+            <div class="sk-top"><strong>Lux Aeterna</strong><i class="sk-type">Authority</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Grants or raises the Grace status, up to level 15.</p>
+            <p class="sk-body">The user is blessed by the eternal light of Heaven, granting them unprecedented ability to call down holy wrath on their foes. If the user is under the Authority status, they gain the Grace status of the same level. If the user is already under the Grace status, the level of the Grace status is increased (to a maximum of 15).</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Grace Skills<span>4 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-support" id="s-coluceo-heal">
+            <div class="sk-top"><strong>Coluceo Heal</strong><i class="sk-type">Grace</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Instantly heals the entire party for a Heal-equivalent amount.</p>
+            <p class="sk-body">The user casts a wide ranging blessing, mending the wounds of all party members simultaneously. Immediately heals all party members for an amount equal to a Heal skill of the same level. Each level of Divine Grace learned reduces this skill's Cooldown.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-gloria">
+            <div class="sk-top"><strong>Gloria</strong><i class="sk-type">Grace</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Raises the party's Crit Rate and ASPD Limit.</p>
+            <p class="sk-body">The user sings a hymn of praise, lending divine strength to their allies' attacks. Increases the Crit Rate and ASPD Cap of all party members for a short duration.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-magnificat">
+            <div class="sk-top"><strong>Magnificat</strong><i class="sk-type">Grace</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Reduces party SP costs and prevents cast interruption.</p>
+            <p class="sk-body">The user sings a hymn of praise, granting divine edification to their party members. Reduces the SP Costs of all skills and grants ignore interrupt to all party members for a short duration.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-benedictio-sanctissimi-sacramenti">
+            <div class="sk-top"><strong>Benedictio Sanctissimi Sacramenti</strong><i class="sk-type">Grace</i></div>
+            <p class="sk-short">Ultimate Grace rite: party-wide Defense, Magic Defense, and Pierce.</p>
+            <p class="sk-body">Performs a holy rite, massively improving the party's attack and defense. Grants all party members improved Defense Pierce, Magic Pierce, Hard Defense, and Hard Magic Defense.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Authority Skills<span>4 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-debuff" id="s-flamen">
+            <div class="sk-top"><strong>Flamen</strong><i class="sk-type">Authority</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Single-target Holy nuke that splashes; stronger against Searing Light.</p>
+            <p class="sk-body">Summons a holy light to smite an enemy. Deals Holy property magic damage to a single enemy. Does increased damage to enemies afflicted with Searing Light.</p>
+          </li>
+          <li class="skill-card sk-debuff" id="s-oleum-sanctum">
+            <div class="sk-top"><strong>Oleum Sanctum</strong><i class="sk-type">Authority</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Point-blank Holy AoE with knockback that applies Searing Light.</p>
+            <p class="sk-body">Shatters a vial of sacred oil, creating a wave of purification that forces out all enemies in the area. Deals Holy property magic damage to all enemies in the area around the user and knocks them back. Has a chance to inflict Searing Light on all enemies struck.</p>
+          </li>
+          <li class="skill-card sk-debuff" id="s-magnus-exorcismus">
+            <div class="sk-top"><strong>Magnus Exorcismus</strong><i class="sk-type">Authority</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Consecrated ground dealing Holy damage over time.</p>
+            <p class="sk-body">Creates an area of consecrated ground to exorcize the wicked. Places a persistent ground effect that deals Holy magic damage over time to all enemies that stand within it. Demon, Undead, and Angel Race monsters struck are additionally <b class="kw kw-stun">Stunned</b>, while all other enemies are <b class="kw kw-slow">Slowed</b>. Deals additional damage to enemies under Searing Light.</p>
+          </li>
+          <li class="skill-card sk-debuff" id="s-epiclesis">
+            <div class="sk-top"><strong>Epiclesis</strong><i class="sk-type">Authority</i></div>
+            <p class="sk-short">Ultimate Authority rite: a holy tree that damages and debuffs.</p>
+            <p class="sk-body">Creates an illusory tree of divine light, filling the targeted area with holy energies that reject all of the caster's enemies for the duration. While the tree persists, all enemies in the area take Magic damage over time and are repeatedly inflicted with the <b class="kw kw-vuln">Vulnerable</b>, <b class="kw kw-vuln">Breach</b>, and <b class="kw kw-slow">Slow</b> statuses.</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

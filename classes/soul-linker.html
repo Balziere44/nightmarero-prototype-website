@@ -178,27 +178,86 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-vuln">Vulnerable</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Soul Harmony</strong><p>Mastery. Increases the user's Hit Rate and reduces the user's Variable Cast Time while wielding a Soul class weapon. Souls typically give additional Skills as a Mastery bonus.</p></li>
-        <li class="skill"><strong>Vicious Possession</strong><p>The user calls on the soul of a bloodthirsty warrior to inhabit their body, borrowing a portion of their strength. Converts a portion of the user's Magic Attack into Physical Attack, and increases the user's Crit Rate and Crit Damage based on their Int and Dex. Only one Possession can be active at a time.</p></li>
-        <li class="skill"><strong>Spectral Thrust</strong><p>The user unleashes a burst of spectral energy, striking and knocking away a targeted enemy. Deals Ghost property Physical damage with a chance to leave the target <b class="kw kw-vuln">Vulnerable</b>. Each level of Axe Kick learned increases the chance to inflict Vulnerability.</p></li>
-        <li class="skill"><strong>Spectral Claw</strong><p>The user summons a wraith from beyond the grave to lash out at the target, dealing Ghost property Physical damage to them and all enemies in the area, leaving an open wound that makes them more susceptible to Physical damage for a short duration. This skill deals additional damage to enemies that are <b class="kw kw-vuln">Vulnerable</b>. The Physical Vulnerability effect is increased for each level of Tornado Kick learned by the user.</p></li>
-        <li class="skill"><strong>Spectral Veil</strong><p>The user slips out of the realm of the living, making themselves immune to Physical damage for a single hit. If this skill ends because it blocked an attack, the user restores a portion of their Max HP based on the currently learned level of Counter Kick.</p></li>
-        <li class="skill"><strong>Spectral Toll</strong><p>The user pulls their own soul closer to the realm of the dead, turning themselves into a conduit that allows power from beyond the grave to flow back into the world of the living. Rapidly drains the user's HP for a short duration, restoring SP for a targeted ally at the same time. The amount of HP consumed is reduced by the level of Roundhouse Kick learned by the user.</p></li>
-        <li class="skill"><strong>Arcane Possession</strong><p>The user invites the soul of a powerful mystic to inhabit their body, drawing on a portion of their knowledge. Converts a portion of the user's Physical Attack into Magic Attack, and reduces the users Variable Cast Time and increases their SP Regen based on their Str and Vit. Only one Possession can be active at a time.</p></li>
-        <li class="skill"><strong>Soul Pressure</strong><p>Calls on a vengeful soul to suppress an enemy, dealing Ghost property Magic damage and attempting to <b class="kw kw-slow">Slow</b> them. <b class="kw kw-slow">Slow</b> chance is influenced by the user's learned level of Axe Kick.</p></li>
-        <li class="skill"><strong>Soul Convergence</strong><p>Summons a horde of vengeful souls to a targeted enemy, dealing Ghost property magic damage to them and to all enemies in the area around them. This skill deals additional damage to enemies that are <b class="kw kw-slow">Slowed</b>. Enemies struck by the attack are left vulnerable to Magic damage for a short duration. The strength of the Magic Damage Vulnerability is influenced by the learned level of Tornado Kick.</p></li>
-        <li class="skill"><strong>Soul Mirror</strong><p>Summons a protective spirit to shield the user from harmful magic, turning it back on its source. If this skill ends because it reflected an attack, the user regenerates a percentage of their Max SP based on the learned level of Counter Kick.</p></li>
-        <li class="skill"><strong>Soul Reshaping</strong><p>The user calls on a benign spirit that feeds off their SP to rapidly restore health to an ally over time. The amount of SP consumed by this skill is reduced by the learned level of Roundhouse Kick.</p></li>
-      </ul>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-vuln">Vulnerable</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-magic" data-i18n="cls.t.magic">Magic</span><span class="sk-support" data-i18n="cls.t.support">Support</span><span class="sk-summon" data-i18n="cls.t.summon">Summon</span><span class="sk-passive" data-i18n="cls.t.passive">Passive</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Core Skills</h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-passive" id="s-soul-harmony">
+            <div class="sk-top"><strong>Soul Harmony</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Boosts Hit and cast speed with Souls; unlocks all skills regardless of weapon requirements.</p>
+            <p class="sk-body">Mastery. Increases the user's Hit Rate and reduces the user's Variable Cast Time while wielding a Soul class weapon. Souls typically give additional Skills as a Mastery bonus.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Vicious Possession Skills<span>5 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-summon" id="s-vicious-possession">
+            <div class="sk-top"><strong>Vicious Possession</strong><i class="sk-type">Possession</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Converts MATK to ATK; Int and Dex grant Crit Rate and Crit Damage.</p>
+            <p class="sk-body">The user calls on the soul of a bloodthirsty warrior to inhabit their body, borrowing a portion of their strength. Converts a portion of the user's Magic Attack into Physical Attack, and increases the user's Crit Rate and Crit Damage based on their Int and Dex. Only one Possession can be active at a time.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-spectral-thrust">
+            <div class="sk-top"><strong>Spectral Thrust</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Ghost property strike with knockback and a <b class="kw kw-vuln">Vulnerable</b> chance.</p>
+            <p class="sk-body">The user unleashes a burst of spectral energy, striking and knocking away a targeted enemy. Deals Ghost property Physical damage with a chance to leave the target <b class="kw kw-vuln">Vulnerable</b>. Each level of Axe Kick learned increases the chance to inflict Vulnerability.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-spectral-claw">
+            <div class="sk-top"><strong>Spectral Claw</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Ghost property AoE that increases Physical damage taken by enemies struck.</p>
+            <p class="sk-body">The user summons a wraith from beyond the grave to lash out at the target, dealing Ghost property Physical damage to them and all enemies in the area, leaving an open wound that makes them more susceptible to Physical damage for a short duration. This skill deals additional damage to enemies that are <b class="kw kw-vuln">Vulnerable</b>. The Physical Vulnerability effect is increased for each level of Tornado Kick learned by the user.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-spectral-veil">
+            <div class="sk-top"><strong>Spectral Veil</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Blocks a single Physical hit; restores HP on a successful block.</p>
+            <p class="sk-body">The user slips out of the realm of the living, making themselves immune to Physical damage for a single hit. If this skill ends because it blocked an attack, the user restores a portion of their Max HP based on the currently learned level of Counter Kick.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-spectral-toll">
+            <div class="sk-top"><strong>Spectral Toll</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Drains own HP to restore an ally's SP over time.</p>
+            <p class="sk-body">The user pulls their own soul closer to the realm of the dead, turning themselves into a conduit that allows power from beyond the grave to flow back into the world of the living. Rapidly drains the user's HP for a short duration, restoring SP for a targeted ally at the same time. The amount of HP consumed is reduced by the level of Roundhouse Kick learned by the user.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Arcane Possession Skills<span>5 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-summon" id="s-arcane-possession">
+            <div class="sk-top"><strong>Arcane Possession</strong><i class="sk-type">Possession</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Converts ATK to MATK; Str and Vit grant cast speed and SP Regen.</p>
+            <p class="sk-body">The user invites the soul of a powerful mystic to inhabit their body, drawing on a portion of their knowledge. Converts a portion of the user's Physical Attack into Magic Attack, and reduces the users Variable Cast Time and increases their SP Regen based on their Str and Vit. Only one Possession can be active at a time.</p>
+          </li>
+          <li class="skill-card sk-magic" id="s-soul-pressure">
+            <div class="sk-top"><strong>Soul Pressure</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Ghost property magic strike with a <b class="kw kw-slow">Slow</b> chance.</p>
+            <p class="sk-body">Calls on a vengeful soul to suppress an enemy, dealing Ghost property Magic damage and attempting to <b class="kw kw-slow">Slow</b> them. <b class="kw kw-slow">Slow</b> chance is influenced by the user's learned level of Axe Kick.</p>
+          </li>
+          <li class="skill-card sk-magic" id="s-soul-convergence">
+            <div class="sk-top"><strong>Soul Convergence</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Ghost property magic AoE that increases Magic damage taken by enemies struck.</p>
+            <p class="sk-body">Summons a horde of vengeful souls to a targeted enemy, dealing Ghost property magic damage to them and to all enemies in the area around them. This skill deals additional damage to enemies that are <b class="kw kw-slow">Slowed</b>. Enemies struck by the attack are left vulnerable to Magic damage for a short duration. The strength of the Magic Damage Vulnerability is influenced by the learned level of Tornado Kick.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-soul-mirror">
+            <div class="sk-top"><strong>Soul Mirror</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Reflects a single Magic attack; restores SP on a successful reflect.</p>
+            <p class="sk-body">Summons a protective spirit to shield the user from harmful magic, turning it back on its source. If this skill ends because it reflected an attack, the user regenerates a percentage of their Max SP based on the learned level of Counter Kick.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-soul-reshaping">
+            <div class="sk-top"><strong>Soul Reshaping</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Drains own SP to rapidly restore an ally's HP over time.</p>
+            <p class="sk-body">The user calls on a benign spirit that feeds off their SP to rapidly restore health to an ally over time. The amount of SP consumed by this skill is reduced by the learned level of Roundhouse Kick.</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

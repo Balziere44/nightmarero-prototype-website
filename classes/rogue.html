@@ -176,26 +176,82 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-poison">Poison</span><span class="kw-blind">Blind</span><span class="kw-vuln">Vulnerable</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Predatory Instinct</strong><p>Stance. While active, gain bonus Dex, <b class="kw kw-blind">Blind</b> Potency, and <b class="kw kw-vuln">Vulnerable</b> Potency.</p></li>
-        <li class="skill"><strong>Disorient</strong><p>Slashes at a target and vanishes, putting the user in the Hiding state and attempting to inflict the <b class="kw kw-vuln">Vulnerable</b> status on the enemy. The chance is doubled if the target is <b class="kw kw-blind">Blind</b>.</p></li>
-        <li class="skill"><strong>Backstab</strong><p>Snaps behind the target to deliver a lethal blow. Deals additional damage to enemies suffering from the <b class="kw kw-blind">Blind</b> or <b class="kw kw-vuln">Vulnerable</b> statuses. This skill can be used from Hiding.</p></li>
-        <li class="skill"><strong>Ambush</strong><p>Leaps from Hiding to deal damage across a wide area, attempting to inflict the <b class="kw kw-blind">Blind</b> and <b class="kw kw-vuln">Vulnerable</b> statuses to all enemies struck. Has a very low cooldown, but requires the Hiding status to be cast.</p></li>
-        <li class="skill"><strong>Malicious Instinct</strong><p>Stance. While active, gain increased Luck, and <b class="kw kw-bleed">Bleeding</b>, <b class="kw kw-burn">Burning</b>, and <b class="kw kw-poison">Poison</b> damage are increased.</p></li>
-        <li class="skill"><strong>Intimidate</strong><p>Deals a swift blow that inflicts minor damage, but has a chance to inflict the <b class="kw kw-poison">Poison</b>, <b class="kw kw-bleed">Bleeding</b>, and <b class="kw kw-burn">Burning</b> statuses. The chance for each status is rolled separately.</p></li>
-        <li class="skill"><strong>Debilitate</strong><p>Deals a swift blow that inflicts minor damage, but has a chance to inflict the <b class="kw kw-blind">Blind</b>, <b class="kw kw-slow">Slow</b>, and <b class="kw kw-vuln">Vulnerable</b> statuses. The chance for each status is rolled separately.</p></li>
-        <li class="skill"><strong>Eliminate</strong><p>Delivers a swift and deadly blow to the target, inflicting heavy damage that is amplified for each negative status the target is suffering from.</p></li>
-        <li class="skill"><strong>Tunnel Drive</strong><p>Passive. Allows movement while hidden, and slightly increases the duration of Thief's Hiding skill.</p></li>
-        <li class="skill"><strong>Dramatic Exit</strong><p>The user backslides and enters Hiding, leaving behind a clone that explodes after a short duration to deal minor damage to all enemies in the area.</p></li>
-      </ul>
+      <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Poison Stance</span></div>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-poison">Poison</span><span class="kw-blind">Blind</span><span class="kw-vuln">Vulnerable</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-stance" data-i18n="cls.t.stance">Stance</span><span class="sk-passive" data-i18n="cls.t.passive">Passive</span><span class="sk-utility" data-i18n="cls.t.utility">Utility</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Predatory Skills<span>4 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-stance" id="s-predatory-instinct">
+            <div class="sk-top"><strong>Predatory Instinct</strong><i class="sk-type">Stance</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Enhances user's DEX as well as potency of <b class="kw kw-blind">Blind</b> and <b class="kw kw-vuln">Vulnerable</b>.</p>
+            <p class="sk-body">Stance. While active, gain bonus Dex, <b class="kw kw-blind">Blind</b> Potency, and <b class="kw kw-vuln">Vulnerable</b> Potency.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-disorient">
+            <div class="sk-top"><strong>Disorient</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Swift melee attack that applies <b class="kw kw-vuln">Vulnerable</b> and immediately Cloaks the rogue.</p>
+            <p class="sk-body">Slashes at a target and vanishes, putting the user in the Hiding state and attempting to inflict the <b class="kw kw-vuln">Vulnerable</b> status on the enemy. The chance is doubled if the target is <b class="kw kw-blind">Blind</b>.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-back-stab">
+            <div class="sk-top"><strong>Back Stab</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Jumps behind target and deals additional damage if target is <b class="kw kw-vuln">Vulnerable</b> and/or <b class="kw kw-blind">Blind</b>.</p>
+            <p class="sk-body">Snaps behind the target to deliver a lethal blow. Deals additional damage to enemies suffering from the <b class="kw kw-blind">Blind</b> or <b class="kw kw-vuln">Vulnerable</b> statuses. This skill can be used from Hiding.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-ambush">
+            <div class="sk-top"><strong>Ambush</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Attacks from Hiding to deal damage to a wide area and apply <b class="kw kw-vuln">Vulnerable</b>, <b class="kw kw-blind">Blind</b>.</p>
+            <p class="sk-body">Leaps from Hiding to deal damage across a wide area, attempting to inflict the <b class="kw kw-blind">Blind</b> and <b class="kw kw-vuln">Vulnerable</b> statuses to all enemies struck. Has a very low cooldown, but requires the Hiding status to be cast.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Malicious Skills<span>4 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-stance" id="s-malicious-instinct">
+            <div class="sk-top"><strong>Malicious Instinct</strong><i class="sk-type">Stance</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Enhances user's LUK as well as potency of <b class="kw kw-bleed">Bleed</b>, <b class="kw kw-burn">Burning</b>, and <b class="kw kw-poison">Poison</b></p>
+            <p class="sk-body">Stance. While active, gain increased Luck, and <b class="kw kw-bleed">Bleeding</b>, <b class="kw kw-burn">Burning</b>, and <b class="kw kw-poison">Poison</b> damage are increased.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-intimidate">
+            <div class="sk-top"><strong>Intimidate</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Melee attack that tries to apply <b class="kw kw-bleed">Bleed</b>, <b class="kw kw-burn">Burning</b>, and <b class="kw kw-poison">Poison</b></p>
+            <p class="sk-body">Deals a swift blow that inflicts minor damage, but has a chance to inflict the <b class="kw kw-poison">Poison</b>, <b class="kw kw-bleed">Bleeding</b>, and <b class="kw kw-burn">Burning</b> statuses. The chance for each status is rolled separately.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-debilitate">
+            <div class="sk-top"><strong>Debilitate</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Melee attack that tries to apply <b class="kw kw-blind">Blind</b>, <b class="kw kw-slow">Slow</b>, and <b class="kw kw-vuln">Vulnerable</b></p>
+            <p class="sk-body">Deals a swift blow that inflicts minor damage, but has a chance to inflict the <b class="kw kw-blind">Blind</b>, <b class="kw kw-slow">Slow</b>, and <b class="kw kw-vuln">Vulnerable</b> statuses. The chance for each status is rolled separately.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-eliminate">
+            <div class="sk-top"><strong>Eliminate</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Deals moderate physical damage, hits an additional time per Status Effect the target is suffering from.</p>
+            <p class="sk-body">Delivers a swift and deadly blow to the target, inflicting heavy damage that is amplified for each negative status the target is suffering from.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Utility Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-passive" id="s-tunnel-drive">
+            <div class="sk-top"><strong>Tunnel Drive</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Allows the user to move while Hiding and increases it's duration.</p>
+            <p class="sk-body">Allows movement while hidden, and slightly increases the duration of Thief's Hiding skill.</p>
+          </li>
+          <li class="skill-card sk-utility" id="s-dramatic-exit">
+            <div class="sk-top"><strong>Dramatic Exit</strong><i class="sk-type">Utility</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Instantly backslide into Hiding and leave behind an exploding clone.</p>
+            <p class="sk-body">The user backslides and enters Hiding, leaving behind a clone that explodes after a short duration to deal minor damage to all enemies in the area.</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

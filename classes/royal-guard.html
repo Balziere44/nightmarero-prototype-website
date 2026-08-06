@@ -158,7 +158,7 @@
         </div>
         <p class="muted">Royal Guard is the alternative advancement option for Crusaders. While Paladins focus on infusing the Crusader's playstyle with additional holy might, the Royal Guard instead opts to turn to sheer physical prowess to protect their allies and dispatch their foes.</p>
         <p class="muted">The Royal Guard Skill Tree divides into three branches. Most Royal Guards will likely choose to invest a little into all three, but dedicating themselves to a single one will unlock a very different playstyle than the others.</p>
-        <p class="muted">The first two are precisely what one would expect, Spear and Shield skills respectively. The Spear Skills continue to make use of <b class="kw kw-bleed">Bleeding</b>, <b class="kw kw-vuln">Vulnerable</b>, and <b class="kw kw-blind">Blind</b>, culminating in a powerful AoE that takes advantages of these statuses to deal immense damage and stun the enemies. In contrast, the Shield skills focus on the user themselves, granting protective Barriers for themselves while they deal damage, ending with the ability to convert the user's Barrier into offensive power for a single devastating blow.</p>
+        <p class="muted">The first two are precisely what one would expect, Spear and Shield skills respectively. The Spear Skills continue to make use of <b class="kw kw-bleed">Bleeding</b>, <b class="kw kw-vuln">Vulnerable</b>, and <b class="kw kw-blind">Blind</b>, culminating in a powerful AoE that takes advantages of these statuses to deal immense damage and stun the enemies. In contrast, the Shield skills focus on the user themselves, granting protective <b class="mech">Barriers</b> for themselves while they deal damage, ending with the ability to convert the user's <b class="mech">Barrier</b> into offensive power for a single devastating blow.</p>
         <p class="muted">Straddling the line between these two distinct trees are the Royal Guard's utility skills. Guardian Angel allows the Royal Guard to sacrifice their own HP to provide a powerful shield to all allies, while Assault Break gives all of their autoattacks a chance at inflicting double damage. A strange effect, you might think, until you read the next two skills: Guardian Stance and Assault Stance both grant the user a massive boost to Attack Speed, but entirely block the use of other skills. Once they come to an end, however, they trigger an explosive effect based on the damage taken or the damage dealt by the user during their time active. This gives Royal Guards a unique autoattack style build, if the user is wise about timing their stances correctly.</p>
       </div>
       <div class="portrait">
@@ -175,26 +175,84 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-bleed">Bleeding</span><span class="kw-blind">Blind</span><span class="kw-vuln">Vulnerable</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Radiant Sweep</strong><p>Spear Skill. The user delivers a whirling slash with their spear, attempting to blind enemies struck with holy light. All enemies struck have a chance of receiving the <b class="kw kw-blind">Blind</b> Status. The damage of this skill is enhanced by the user's Dexterity, and deals additional damage to <b class="kw kw-bleed">Bleeding</b> targets.</p></li>
-        <li class="skill"><strong>Impale</strong><p>Spear Skill. The user hurls a holy spear at a distant target, attempting to pin them in place. Deals Ranged Physical damage to a single target, attempting to inflict <b class="kw kw-bleed">Bleeding</b> and <b class="kw kw-slow">Slow</b>. If the target is <b class="kw kw-blind">Blind</b>, it also immobilizes the target for a short duration. The damage of this skill scales with the user's Dexterity and deals additional damage to <b class="kw kw-blind">Blinded</b> enemies.</p></li>
-        <li class="skill"><strong>Cannon Spear</strong><p>Spear Skill. The user launches their spear like a cannon, driving it through all enemies before them. Does massive damage that is increased against <b class="kw kw-blind">Blind</b>, <b class="kw kw-bleed">Bleeding</b>, and <b class="kw kw-vuln">Vulnerable</b> enemies. Any enemy struck that has at least two of these statuses is additionally stunned. Scales with the user's Dexterity.</p></li>
-        <li class="skill"><strong>Shield Press</strong><p>Shield Skill. The user slams their shield into an enemy, dealing damage and generating a protective Barrier around themselves with HP based on the amount of damage dealt. The damage of this skill scales with the user's Vitality.</p></li>
-        <li class="skill"><strong>Shield Shooting</strong><p>Shield Skill. The user hurls their shield at a distant target while taking a defensive stance to prepare for retaliation. Deals Ranged Physical damage to a single target, then creates a Barrier for the user with HP based on the damage dealt. The damage of this skill scales with the user's Vitality.</p></li>
-        <li class="skill"><strong>Burst Slash</strong><p>The user delivers a vengeful slash with their weapon, turning their defensive Barrier into offensive power. Deals massive damage to a single target which is increased if the target is <b class="kw kw-vuln">Vulnerable</b>. If the user has an active Barrier, it is consumed to deal additional damage. Additionally scales with the user's Vitality.</p></li>
-        <li class="skill"><strong>Guardian Angel</strong><p>The user expends their own life force to bestow a protective blessing on their party. Consumes half of the user's remaining HP to create a temporary Barrier that blocks damage for all party members. The amount of HP the Barrier has is based on the amount of HP consumed to activate this skill. When mastered, this skill also reduces the cooldown of Guardian Stance by 10 seconds.</p></li>
-        <li class="skill"><strong>Guardian Stance</strong><p>The user takes up a defensive stance, ready to block any damage they might receive. For a short duration, the user cannot cast any skills, but their ASPD Limit is increased and all damage they receive is reduced. When Guardian Stance ends, the user is healed for a portion of the damage they took while it was active.</p></li>
-        <li class="skill"><strong>Assault Break</strong><p>The user infuses their weapon with divine power, giving all of their autoattacks a chance to inflict double damage for the duration. When mastered, this skill reduces the cooldown of Assault Stance by 10 seconds.</p></li>
-        <li class="skill"><strong>Assault Stance</strong><p>The user takes up an offensive stance, focused on dealing exceptional damage at the cost of all else. For a short duration, the user cannot cast any skills, but their ASPD Limit and Crit Rate are significantly boosted. When Assault Stance ends, it triggers a burst attack that strikes all enemies around them for an amount of damage based on the damage they dealt while in Assault Stance.</p></li>
-      </ul>
+      <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Barrier</span></div>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-blind">Blind</span><span class="kw-vuln">Vulnerable</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-support" data-i18n="cls.t.support">Support</span><span class="sk-stance" data-i18n="cls.t.stance">Stance</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Spear Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-physical" id="s-radiant-sweep">
+            <div class="sk-top"><strong>Radiant Sweep</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">AoE sweep that inflicts <b class="kw kw-blind">Blind</b>.</p>
+            <p class="sk-body">The user delivers a whirling slash with their spear, attempting to blind enemies struck with holy light. All enemies struck have a chance of receiving the <b class="kw kw-blind">Blind</b> Status. The damage of this skill is enhanced by the user's Dexterity, and deals additional damage to <b class="kw kw-bleed">Bleeding</b> targets.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-impale">
+            <div class="sk-top"><strong>Impale</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Ranged spear throw that inflicts <b class="kw kw-bleed">Bleeding</b> and pins <b class="kw kw-blind">Blind</b> targets.</p>
+            <p class="sk-body">The user hurls a holy spear at a distant target, attempting to pin them in place. Deals Ranged Physical damage to a single target, attempting to inflict <b class="kw kw-bleed">Bleeding</b> and <b class="kw kw-slow">Slow</b>. If the target is <b class="kw kw-blind">Blind</b>, it also immobilizes the target for a short duration. The damage of this skill scales with the user's Dexterity and deals additional damage to <b class="kw kw-blind">Blinded</b> enemies.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-cannon-spear">
+            <div class="sk-top"><strong>Cannon Spear</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Line AoE amplified by <b class="kw kw-bleed">Bleeding</b>, <b class="kw kw-blind">Blind</b>, and <b class="kw kw-vuln">Vulnerable</b>.</p>
+            <p class="sk-body">The user launches their spear like a cannon, driving it through all enemies before them. Does massive damage that is increased against <b class="kw kw-blind">Blind</b>, <b class="kw kw-bleed">Bleeding</b>, and <b class="kw kw-vuln">Vulnerable</b> enemies. Any enemy struck that has at least two of these statuses is additionally stunned. Scales with the user's Dexterity.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Shield Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-physical" id="s-shield-press">
+            <div class="sk-top"><strong>Shield Press</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Shield slam that generates a protective <b class="mech">Barrier</b>.</p>
+            <p class="sk-body">The user slams their shield into an enemy, dealing damage and generating a protective <b class="mech">Barrier</b> around themselves with HP based on the amount of damage dealt. The damage of this skill scales with the user's Vitality.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-shield-shooting">
+            <div class="sk-top"><strong>Shield Shooting</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Ranged shield throw that generates a protective <b class="mech">Barrier</b>.</p>
+            <p class="sk-body">The user hurls their shield at a distant target while taking a defensive stance to prepare for retaliation. Deals Ranged Physical damage to a single target, then creates a <b class="mech">Barrier</b> for the user with HP based on the damage dealt. The damage of this skill scales with the user's Vitality.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-burst-slash">
+            <div class="sk-top"><strong>Burst Slash</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Devastating blow amplified by an active <b class="mech">Barrier</b>.</p>
+            <p class="sk-body">The user delivers a vengeful slash with their weapon, turning their defensive <b class="mech">Barrier</b> into offensive power. Deals massive damage to a single target which is increased if the target is <b class="kw kw-vuln">Vulnerable</b>. If the user has an active <b class="mech">Barrier</b>, it is consumed to deal additional damage. Additionally scales with the user's Vitality.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Utility Skills<span>4 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-support" id="s-guardian-angel">
+            <div class="sk-top"><strong>Guardian Angel</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Sacrifices HP to shield the whole party.</p>
+            <p class="sk-body">The user expends their own life force to bestow a protective blessing on their party. Consumes half of the user's remaining HP to create a temporary <b class="mech">Barrier</b> that blocks damage for all party members. The amount of HP the <b class="mech">Barrier</b> has is based on the amount of HP consumed to activate this skill. When mastered, this skill also reduces the cooldown of Guardian Stance by 10 seconds.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-guardian-stance">Guardian Stance</a></p>
+          </li>
+          <li class="skill-card sk-stance" id="s-guardian-stance">
+            <div class="sk-top"><strong>Guardian Stance</strong><i class="sk-type">Stance</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Damage-reduction stance that heals missing HP when it ends.</p>
+            <p class="sk-body">The user takes up a defensive stance, ready to block any damage they might receive. For a short duration, the user cannot cast any skills, but their ASPD Limit is increased and all damage they receive is reduced. When Guardian Stance ends, the user is healed for a portion of the damage they took while it was active.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-assault-break">
+            <div class="sk-top"><strong>Assault Break</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Autoattacks gain a chance to deal double damage.</p>
+            <p class="sk-body">The user infuses their weapon with divine power, giving all of their autoattacks a chance to inflict double damage for the duration. When mastered, this skill reduces the cooldown of Assault Stance by 10 seconds.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-assault-stance">Assault Stance</a></p>
+          </li>
+          <li class="skill-card sk-support" id="s-assault-stance">
+            <div class="sk-top"><strong>Assault Stance</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">ASPD stance that ends in a burst based on damage dealt.</p>
+            <p class="sk-body">The user takes up an offensive stance, focused on dealing exceptional damage at the cost of all else. For a short duration, the user cannot cast any skills, but their ASPD Limit and Crit Rate are significantly boosted. When Assault Stance ends, it triggers a burst attack that strikes all enemies around them for an amount of damage based on the damage they dealt while in Assault Stance.</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

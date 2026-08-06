@@ -175,26 +175,77 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-bleed">Bleeding</span><span class="kw-blind">Blind</span><span class="kw-vuln">Vulnerable</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Spear Mastery</strong><p>Passive. Mastery for One-Handed and Two-Handed spears. Increases damage and accuracy with spears. Spears typically gain additional <b class="kw kw-vuln">Vulnerable</b> Potency as a mastery bonus.</p></li>
-        <li class="skill"><strong>Brilliant Strike</strong><p>A plain damage skill that has a high chance to inflict the <b class="kw kw-blind">Blind</b> status. Not element locked.</p></li>
-        <li class="skill"><strong>Holy Cross</strong><p>Deals two consecutive hits of Holy property physical damage. <b class="kw kw-bleed">Bleeding</b> and <b class="kw kw-blind">Blinded</b> enemies take significantly increased damage.</p></li>
-        <li class="skill"><strong>Spear Flurry</strong><p>Increases the user's attack speed for a short duration. Also refreshes the cooldowns of Slash, Brilliant Strike, and Holy Cross when activated.</p></li>
-        <li class="skill"><strong>Faith</strong><p>Passive. Increases the user's Max HP, while also boosting their Defense and Magic Defense if a shield is equipped.</p></li>
-        <li class="skill"><strong>Shield Boomerang</strong><p>Ranged attack with a chance to inflict the <b class="kw kw-vuln">Vulnerable</b> status. Deals additional damage to enemies that are already <b class="kw kw-vuln">Vulnerable</b>. Damage is unaffected by shield weight.</p></li>
-        <li class="skill"><strong>Shield Slam</strong><p>Delivers a crushing blow to a nearby enemy. <b class="kw kw-vuln">Vulnerable</b> enemies take increased damage. Damage is unaffected by shield weight.</p></li>
-        <li class="skill"><strong>Guard</strong><p>Enters a defensive stance, blocking all physical damage for a short duration. Requires a shield.</p></li>
-        <li class="skill"><strong>Restoration</strong><p>Enchants the ground beneath the user's feet with holy energy, restoring life to allies over time. The healing amount is based on skill level, and scales up with the target's Max HP.</p></li>
-        <li class="skill"><strong>Grand Cross</strong><p>Deals Holy property PHYSICAL damage to all enemies in an area around the user. Each hit has a chance to inflict the <b class="kw kw-blind">Blind</b> and <b class="kw kw-vuln">Vulnerable</b> statuses. Gains no benefit from Int or Magic Attack.</p></li>
-      </ul>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-blind">Blind</span><span class="kw-vuln">Vulnerable</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-support" data-i18n="cls.t.support">Support</span><span class="sk-passive" data-i18n="cls.t.passive">Passive</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Shield Skills<span>5 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-passive" id="s-faith">
+            <div class="sk-top"><strong>Faith</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Increases Max HP. Also DEF, and MDEF while wearing a shield.</p>
+            <p class="sk-body">Increases the user's Max HP, while also boosting their Defense and Magic Defense if a shield is equipped.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-guard">
+            <div class="sk-top"><strong>Guard</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Block all physical attacks for a short duration.</p>
+            <p class="sk-body">Enters a defensive stance, blocking all physical damage for a short duration. Requires a shield.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-shield-boomerang">
+            <div class="sk-top"><strong>Shield Boomerang</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Ranged shield throw that applies <b class="kw kw-vuln">Vulnerable</b>.</p>
+            <p class="sk-body">Ranged attack with a chance to inflict the <b class="kw kw-vuln">Vulnerable</b> status. Deals additional damage to enemies that are already <b class="kw kw-vuln">Vulnerable</b>. Damage is unaffected by shield weight.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-shield-slam">
+            <div class="sk-top"><strong>Shield Slam</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Heavy shield bash that scales with user's VIT.</p>
+            <p class="sk-body">Delivers a crushing blow to a nearby enemy. <b class="kw kw-vuln">Vulnerable</b> enemies take increased damage. Damage is unaffected by shield weight.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-restoration">
+            <div class="sk-top"><strong>Restoration</strong><i class="sk-type">Recovery</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Creates a healing zone for allies.</p>
+            <p class="sk-body">Enchants the ground beneath the user's feet with holy energy, restoring life to allies over time. The healing amount is based on skill level, and scales up with the target's Max HP.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Spear Skills<span>5 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-passive" id="s-spear-mastery">
+            <div class="sk-top"><strong>Spear Mastery</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Increases damage and Hit rate of spears.</p>
+            <p class="sk-body">Mastery for One-Handed and Two-Handed spears. Increases damage and accuracy with spears. Spears typically gain additional <b class="kw kw-vuln">Vulnerable</b> Potency as a mastery bonus.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-spear-flurry">
+            <div class="sk-top"><strong>Spear Flurry</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Dramatically increases ASPD and spear skill cooldowns. Requires a spear.</p>
+            <p class="sk-body">Increases the user's attack speed for a short duration. Also refreshes the cooldowns of Slash, Brilliant Strike, and Holy Cross when activated.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-brilliant-strike">Brilliant Strike</a><a href="#s-holy-cross">Holy Cross</a></p>
+          </li>
+          <li class="skill-card sk-physical" id="s-brilliant-strike">
+            <div class="sk-top"><strong>Brilliant Strike</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Deals damage and applies <b class="kw kw-blind">Blind</b>.</p>
+            <p class="sk-body">A plain damage skill that has a high chance to inflict the <b class="kw kw-blind">Blind</b> status. Not element locked.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-holy-cross">
+            <div class="sk-top"><strong>Holy Cross</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Holy elemental double strike that scales with user's DEX.</p>
+            <p class="sk-body">Deals two consecutive hits of Holy property physical damage. <b class="kw kw-bleed">Bleeding</b> and <b class="kw kw-blind">Blinded</b> enemies take significantly increased damage.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-grand-cross">
+            <div class="sk-top"><strong>Grand Cross</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Sacrifices HP to deal massive AoE damage around the caster.</p>
+            <p class="sk-body">Deals Holy property PHYSICAL damage to all enemies in an area around the user. Each hit has a chance to inflict the <b class="kw kw-blind">Blind</b> and <b class="kw kw-vuln">Vulnerable</b> statuses. Gains no benefit from Int or Magic Attack.</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

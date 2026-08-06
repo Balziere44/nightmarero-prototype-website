@@ -175,26 +175,83 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-poison">Poison</span><span class="kw-vuln">Vulnerable</span><span class="kw-stun">Stun</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Marksman's Focus</strong><p>Self buff. Increases Hit and Crit Rate. Does not stack with Trapper's Focus.</p></li>
-        <li class="skill"><strong>Precision Shot</strong><p>Takes careful aim at a target before firing, dealing significant damage that is increased against <b class="kw kw-slow">Slowed</b> enemies.</p></li>
-        <li class="skill"><strong>Threefold Arrow</strong><p>Three part skill. Initially attempts to inflict <b class="kw kw-slow">Slow</b>. If the target is already <b class="kw kw-slow">Slowed</b>, instead attempts to inflict <b class="kw kw-vuln">Vulnerable</b>. If the target is already <b class="kw kw-vuln">Vulnerable</b>, instead attempts to inflict <b class="kw kw-stun">Stun</b>.</p></li>
-        <li class="skill"><strong>Trapper's Focus</strong><p>Self buff. Removes the Fixed Cast Time of Trap skills, and increases the duration of statuses they inflict. Does not stack with Marksman's Focus.</p></li>
-        <li class="skill"><strong>Toxic Mine</strong><p>Sets a trap that spews a cloud of poisonous gas when triggered. Deals damage scaling with the user's Agi, and inflicts the <b class="kw kw-poison">Poison</b> status on all enemies in a 5x5 area. This skill has an extremely long Fixed Cast Time.</p></li>
-        <li class="skill"><strong>Shrapnel Mine</strong><p>Sets a trap that explodes in a cloud of shrapnel when triggered. Deals damage scaling with the user's Dex, and inflicts the <b class="kw kw-bleed">Internal Bleeding</b> status on all enemies in a 5x5 area. This skill has an extremely long Fixed Cast Time.</p></li>
-        <li class="skill"><strong>Incendiary Mine</strong><p>Sets a trap that releases a cloud of burning gas when triggered. Deals damage scaling with the user's Int, and inflicts the <b class="kw kw-burn">Burning</b> status on all enemies in a 5x5 area. This skill has an extremely long Fixed Cast Time.</p></li>
-        <li class="skill"><strong>Falcon Mastery</strong><p>Passive. Allows the usage of a Falcon, and increases the damage of all Falcon-related skills.</p></li>
-        <li class="skill"><strong>Blitz Beat</strong><p>Commands the Falcon to attack enemies in a small area, dealing Defense-ignoring damage that has a chance to <b class="kw kw-slow">Slow</b>. Enemies suffering from <b class="kw kw-bleed">Bleeding</b>, <b class="kw kw-burn">Burning</b>, or <b class="kw kw-poison">Poison</b> have an increased chance of being <b class="kw kw-slow">Slowed</b>. This skill has a chance to be autocast with each non-skill attack made with a bow, ignoring its Cooldown.</p></li>
-        <li class="skill"><strong>Aggravating Assault</strong><p>Commands the Falcon to harass a single enemy, dealing heavy Defense-ignoring damage that is significantly increased if the target is <b class="kw kw-slow">Slowed</b>. If the target is suffering from any of the <b class="kw kw-bleed">Bleeding</b>, <b class="kw kw-burn">Burning</b>, or <b class="kw kw-poison">Poison</b> statuses, those statuses have their durations extended by a fixed amount.</p></li>
-      </ul>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-poison">Poison</span><span class="kw-vuln">Vulnerable</span><span class="kw-stun">Stun</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-support" data-i18n="cls.t.support">Support</span><span class="sk-summon" data-i18n="cls.t.summon">Summon</span><span class="sk-passive" data-i18n="cls.t.passive">Passive</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Marksmanship Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-support" id="s-marksman-s-focus">
+            <div class="sk-top"><strong>Marksman's Focus</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Greatly increases Hit and Crit Rate.</p>
+            <p class="sk-body">Self buff. Increases Hit and Crit Rate. Does not stack with Trapper's Focus.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-trapper-s-focus">Trapper's Focus</a></p>
+          </li>
+          <li class="skill-card sk-physical" id="s-precision-shot">
+            <div class="sk-top"><strong>Precision Shot</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Ranged attack with bonus damage against <b class="kw kw-slow">Slowed</b> targets.</p>
+            <p class="sk-body">Takes careful aim at a target before firing, dealing significant damage that is increased against <b class="kw kw-slow">Slowed</b> enemies.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-threefold-arrow">
+            <div class="sk-top"><strong>Threefold Arrow</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Three-stage attack applying <b class="kw kw-slow">Slow</b>, <b class="kw kw-vuln">Vulnerable</b>, or <b class="kw kw-stun">Stun</b>.</p>
+            <p class="sk-body">Three part skill. Initially attempts to inflict <b class="kw kw-slow">Slow</b>. If the target is already <b class="kw kw-slow">Slowed</b>, instead attempts to inflict <b class="kw kw-vuln">Vulnerable</b>. If the target is already <b class="kw kw-vuln">Vulnerable</b>, instead attempts to inflict <b class="kw kw-stun">Stun</b>.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Trap Skills<span>4 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-support" id="s-trapper-s-focus">
+            <div class="sk-top"><strong>Trapper's Focus</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Removes Trap Fixed Cast Times and extends their status durations.</p>
+            <p class="sk-body">Self buff. Removes the Fixed Cast Time of Trap skills, and increases the duration of statuses they inflict. Does not stack with Marksman's Focus.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-marksman-s-focus">Marksman's Focus</a></p>
+          </li>
+          <li class="skill-card sk-summon" id="s-toxic-mine">
+            <div class="sk-top"><strong>Toxic Mine</strong><i class="sk-type">Trap</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Trap dealing <b class="kw kw-poison">Poison</b> damage that inflicts <b class="kw kw-poison">Poison</b>.</p>
+            <p class="sk-body">Sets a trap that spews a cloud of poisonous gas when triggered. Deals damage scaling with the user's Agi, and inflicts the <b class="kw kw-poison">Poison</b> status on all enemies in a 5x5 area. This skill has an extremely long Fixed Cast Time.</p>
+          </li>
+          <li class="skill-card sk-summon" id="s-shrapnel-mine">
+            <div class="sk-top"><strong>Shrapnel Mine</strong><i class="sk-type">Trap</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Trap dealing Neutral damage that inflicts <b class="kw kw-bleed">Internal Bleeding</b>.</p>
+            <p class="sk-body">Sets a trap that explodes in a cloud of shrapnel when triggered. Deals damage scaling with the user's Dex, and inflicts the <b class="kw kw-bleed">Internal Bleeding</b> status on all enemies in a 5x5 area. This skill has an extremely long Fixed Cast Time.</p>
+          </li>
+          <li class="skill-card sk-summon" id="s-incendiary-mine">
+            <div class="sk-top"><strong>Incendiary Mine</strong><i class="sk-type">Trap</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Trap dealing Fire damage that inflicts <b class="kw kw-burn">Burning</b>.</p>
+            <p class="sk-body">Sets a trap that releases a cloud of burning gas when triggered. Deals damage scaling with the user's Int, and inflicts the <b class="kw kw-burn">Burning</b> status on all enemies in a 5x5 area. This skill has an extremely long Fixed Cast Time.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Falcon Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-passive" id="s-falconry-mastery">
+            <div class="sk-top"><strong>Falconry Mastery</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Enables Falcon rental and boosts Falcon skill damage.</p>
+            <p class="sk-body">Allows the usage of a Falcon, and increases the damage of all Falcon-related skills.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-blitz-beat">
+            <div class="sk-top"><strong>Blitz Beat</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Falcon AoE that inflicts <b class="kw kw-slow">Slow</b> and can autocast on attacks.</p>
+            <p class="sk-body">Commands the Falcon to attack enemies in a small area, dealing Defense-ignoring damage that has a chance to <b class="kw kw-slow">Slow</b>. Enemies suffering from <b class="kw kw-bleed">Bleeding</b>, <b class="kw kw-burn">Burning</b>, or <b class="kw kw-poison">Poison</b> have an increased chance of being <b class="kw kw-slow">Slowed</b>. This skill has a chance to be autocast with each non-skill attack made with a bow, ignoring its Cooldown.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-aggravating-assault">
+            <div class="sk-top"><strong>Aggravating Assault</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Heavy Falcon strike against <b class="kw kw-slow">Slowed</b> targets that extends DoT durations.</p>
+            <p class="sk-body">Commands the Falcon to harass a single enemy, dealing heavy Defense-ignoring damage that is significantly increased if the target is <b class="kw kw-slow">Slowed</b>. If the target is suffering from any of the <b class="kw kw-bleed">Bleeding</b>, <b class="kw kw-burn">Burning</b>, or <b class="kw kw-poison">Poison</b> statuses, those statuses have their durations extended by a fixed amount.</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

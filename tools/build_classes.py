@@ -20,6 +20,22 @@ import unicodedata
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from status_codex import STATUS, colorize, families_in
+from skills import build as build_skills, load_wiki, mark_mechanics, type_family
+
+WIKI_SKILLS = load_wiki()
+
+# The eight colour families the wiki's seventy type labels fold into, in the
+# order they show up in the key under the status legend.
+TYPE_KEY = [
+    ("physical", "Physical"),
+    ("magic", "Magic"),
+    ("support", "Support"),
+    ("debuff", "Debuff"),
+    ("summon", "Summon"),
+    ("stance", "Stance"),
+    ("passive", "Passive"),
+    ("utility", "Utility"),
+]
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "tools", "classes.json")
@@ -136,53 +152,6 @@ def has_art(slug):
         if os.path.exists(os.path.join(IMG_DIR, "%s-%s.webp" % (slug, sex))):
             out.append(sex)
     return out
-
-
-# --------------------------------------------------------------------------
-# Content parsing
-# --------------------------------------------------------------------------
-
-SKILL_RE = re.compile(r"^([A-Z][^:]{1,48}):\s*(.*)$")
-MARKER_RE = re.compile(r"(following skills|^skills:|skill points to spend)", re.I)
-
-
-def parse(blocks):
-    """Splits a class body into intro paragraphs and skill entries."""
-    texts = [tidy(b["x"]) for b in blocks]
-    texts = [t for t in texts if t]
-
-    start = None
-    for i, t in enumerate(texts):
-        if t.endswith(":") and MARKER_RE.search(t):
-            start = i + 1
-            break
-    if start is None:
-        for i, t in enumerate(texts):
-            m = SKILL_RE.match(t)
-            if m and len(m.group(2)) > 40:
-                start = i
-                break
-    if start is None:
-        start = len(texts)
-
-    intro = [t for t in texts[:start] if not (t.endswith(":") and MARKER_RE.search(t))]
-
-    skills = []
-    for i, t in enumerate(texts[start:]):
-        m = SKILL_RE.match(t)
-        if m:
-            name, rest = m.group(1).strip(), m.group(2).strip()
-            # "Command: Attack!" and "Shuriken:" are headings, not name/body pairs
-            if not rest or (len(rest) < 32 and not rest.endswith(".")):
-                skills.append({"name": t.rstrip(":").strip(), "body": []})
-            else:
-                skills.append({"name": name, "body": [rest]})
-        elif skills:
-            skills[-1]["body"].append(t)
-        else:
-            intro.append(t)
-
-    return intro, skills
 
 
 # --------------------------------------------------------------------------
@@ -448,6 +417,124 @@ def portrait_block(slug, name):
                        dim=art_dims("%s-%s" % (slug, first)))
 
 
+def rich(text, mechanics):
+    """Escape, colour the statuses, then mark the class mechanics."""
+    return mark_mechanics(colorize(esc(text)), mechanics)
+
+
+def skill_anchor(name):
+    return "s-" + slugify(name)
+
+
+def skill_card(skill, mechanics, by_name):
+    fam = type_family(skill["type"]) if skill["type"] else "other"
+    bits = ['          <li class="skill-card sk-%s" id="%s">'
+            % (fam, skill_anchor(skill["name"]))]
+
+    badges = ""
+    if skill["type"]:
+        badges += '<i class="sk-type">%s</i>' % esc(skill["type"])
+    if skill["max"] and skill["max"] not in ("0", "1", "-"):
+        badges += '<i class="sk-lv">Lv %s</i>' % esc(skill["max"])
+    bits.append('            <div class="sk-top"><strong>%s</strong>%s</div>'
+                % (esc(skill["name"]), badges))
+
+    if skill["short"]:
+        bits.append('            <p class="sk-short">%s</p>'
+                    % rich(skill["short"], mechanics))
+
+    for para in skill["body"]:
+        bits.append('            <p class="sk-body">%s</p>' % rich(para, mechanics))
+
+    if skill["options"]:
+        items = "".join(
+            "<li><b>%s</b>%s</li>" % (rich(o["label"], mechanics),
+                                      rich(o["text"], mechanics))
+            for o in skill["options"])
+        bits.append('            <ul class="sk-options">%s</ul>' % items)
+
+    if skill["riders"]:
+        items = "".join("<li>%s</li>" % rich(r, mechanics) for r in skill["riders"])
+        bits.append('            <ul class="sk-riders">%s</ul>' % items)
+
+    if skill["needs"]:
+        links = "".join('<a href="#%s">%s</a>' % (skill_anchor(n), esc(n))
+                        for n in skill["needs"] if n in by_name)
+        if links:
+            bits.append('            <p class="sk-needs">'
+                        '<span data-i18n="cls.needs">Works with</span>%s</p>' % links)
+
+    bits.append("          </li>")
+    return "\n".join(bits)
+
+
+def skills_section(tree):
+    """The whole skills block: legends first, then one grid per branch."""
+    skills = tree["skills"]
+    if not skills:
+        return ""
+
+    mechanics = tree["mechanics"]
+    by_name = set(s["name"] for s in skills)
+
+    # Only chip the statuses this class actually uses.
+    page_text = esc(" ".join(tree["intro"]) + " " + " ".join(
+        s["name"] + " " + s["short"] + " " + " ".join(s["body"] + s["riders"] +
+        [o["label"] + " " + o["text"] for o in s["options"]]) for s in skills))
+    chips = families_in(page_text)
+
+    legend = ""
+    if chips:
+        legend = ('      <div class="kw-legend" style="margin-bottom:0.75rem">%s'
+                  '<a href="../classes.html#codex" data-i18n="cls.legendMore">'
+                  'What these do</a></div>\n' %
+                  "".join('<span class="kw-%s">%s</span>' % (k, l)
+                          for k, l, _t, _d in chips))
+
+    strip = ""
+    if mechanics:
+        strip = ('      <div class="mech-strip">'
+                 '<em data-i18n="cls.mechanics">This class runs on</em>%s</div>\n'
+                 % "".join("<span>%s</span>" % esc(m) for m in mechanics))
+
+    used = []
+    for key, label in TYPE_KEY:
+        if any(type_family(s["type"]) == key for s in skills if s["type"]):
+            used.append('<span class="sk-%s" data-i18n="cls.t.%s">%s</span>'
+                        % (key, key, label))
+    key_row = ""
+    if len(used) > 1:
+        key_row = '      <div class="type-key">%s</div>\n' % "".join(used)
+
+    blocks = []
+    for group in tree["groups"]:
+        cards = "\n".join(skill_card(s, mechanics, by_name) for s in group["skills"])
+        # the count is only worth showing when there is more than one, which
+        # also keeps every language out of singular and plural trouble
+        count = ('<span>%d <span data-i18n="cls.skillWord">skills</span></span>'
+                 % len(group["skills"])) if len(group["skills"]) > 1 else ""
+        blocks.append("""      <div class="skill-branch">
+        <h3 class="branch-title">{label}{count}</h3>
+        <ul class="skill-grid">
+{cards}
+        </ul>
+      </div>""".format(label=esc(group["label"]), count=count, cards=cards))
+
+    return """
+  <section class="section-pad-sm" id="skills">
+    <div class="shell">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
+        <h2 data-i18n="cls.skillsTitle">Skills</h2>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
+      </div>
+{strip}{legend}{key}
+{blocks}
+    </div>
+  </section>
+""".format(strip=strip, legend=legend, key=key_row, blocks="\n".join(blocks))
+
+
 def path_map(reg, name):
     info = reg[name]
     chain = []
@@ -477,7 +564,8 @@ def path_map(reg, name):
 def class_page(reg, name, blocks):
     info = reg[name]
     slug = info["slug"]
-    intro, skills = parse(blocks)
+    tree = build_skills(name, blocks, WIKI_SKILLS)
+    intro = tree["intro"]
 
     tier = info["tier"]
     if info["family"] in ("Ninja", "Gunslinger"):
@@ -547,8 +635,9 @@ def class_page(reg, name, blocks):
   </section>
 """.format(name=esc(name), tier=tier, tierlabel=TIER_LABEL[tier], levels=esc(levels),
            family=esc(info["family"]),
-           intro="\n        ".join('<p class="muted">%s</p>' % colorize(esc(p))
-                                   for p in intro),
+           intro="\n        ".join(
+               '<p class="muted">%s</p>' % rich(p, tree["mechanics"])
+               for p in intro),
            portrait=portrait_block(slug, name)))
 
     # ---- path
@@ -562,40 +651,7 @@ def class_page(reg, name, blocks):
 """.format(pmap=path_map(reg, name)))
 
     # ---- skills
-    if skills:
-        rows = []
-        for s in skills:
-            body = " ".join(s["body"]).strip()
-            rows.append('        <li class="skill"><strong>%s</strong>%s</li>' % (
-                colorize(esc(s["name"])),
-                "<p>%s</p>" % colorize(esc(body)) if body else ""))
-
-        # Only chip the statuses this class actually uses.
-        page_text = esc(" ".join(intro) + " " +
-                        " ".join(s["name"] + " " + " ".join(s["body"]) for s in skills))
-        chips = families_in(page_text)
-        legend = ""
-        if chips:
-            legend = ('\n      <div class="kw-legend" style="margin-bottom:1.1rem">%s'
-                      '<a href="../classes.html#codex" data-i18n="cls.legendMore">'
-                      'What these do</a></div>' %
-                      "".join('<span class="kw-%s">%s</span>' % (k, l)
-                              for k, l, _t, _d in chips))
-
-        parts.append("""
-  <section class="section-pad-sm">
-    <div class="shell">
-      <div class="section-head">
-        <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
-        <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
-      </div>{legend}
-      <ul class="skill-list">
-{rows}
-      </ul>
-    </div>
-  </section>
-""".format(rows="\n".join(rows), legend=legend))
+    parts.append(skills_section(tree))
 
     # ---- pager
     prev, nxt = info["prev"], info["next"]
@@ -818,7 +874,8 @@ def write_brief(reg, order, data):
     out = []
     for name in order:
         info = reg[name]
-        intro, skills = parse(data.get(name, []))
+        tree = build_skills(name, data.get(name, []), WIKI_SKILLS)
+        intro, skills = tree["intro"], tree["skills"]
         slug = info["slug"]
         sexes = has_art(slug)
 
@@ -829,10 +886,13 @@ def write_brief(reg, order, data):
 
         picked = []
         for sk in skills:
-            body = " ".join(sk["body"]).strip()
-            if not body:
+            # the wiki one liner if there is one, otherwise the document's
+            # first sentence
+            text = sk["short"] or re.split(r"(?<=\.)\s+",
+                                           " ".join(sk["body"]).strip())[0]
+            if not text:
                 continue
-            picked.append({"name": sk["name"], "text": re.split(r"(?<=\.)\s+", body)[0]})
+            picked.append({"name": sk["name"], "text": text})
             if len(picked) == 5:
                 break
 

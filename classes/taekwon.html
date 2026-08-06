@@ -176,31 +176,80 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-bleed">Bleeding</span><span class="kw-blind">Blind</span><span class="kw-vuln">Vulnerable</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Martial Training</strong><p>Training in basic combat and physical fitness. Passively increases the user's Strength and Hit Rate, and increases the user's damage while unarmed.</p></li>
-        <li class="skill"><strong>Martial Endurance</strong><p>Training in endurance and perseverance. Passively increases the user's Vitality and increases the effectiveness of Healing Potions they use.</p></li>
-        <li class="skill"><strong>Martial Discipline</strong><p>Training in focus and discipline. Passively increases the user's Intelligence and increases the effectiveness of SP Potions they use.</p></li>
-        <li class="skill"><strong>Martial Precision</strong><p>Training in precise and accurate technique. Passively increases the user's Dexterity, Hit Rate, and Defense Pierce. Defense Pierce gained from this skill is treated as card-like pierce for stacking purposes.</p></li>
-        <li class="skill"><strong>Martial Agility</strong><p>Training in rapid and flexible movement. Passively increases the user's Agility, Flee, and Perfect Dodge.</p></li>
-        <li class="skill"><strong>Counter Kick</strong><p>Delivers a powerful kick to the enemy, ignoring the target's Flee and bypassing skills like Guard. Activating this skill triggers Counter Stance for 5 seconds, during which all Kick skills ignore the target's Flee and bypass skills like Guard. Counter Stance ends when any other Stance ends, or when Counter Kick is cast again.</p></li>
-        <li class="skill"><strong>Tornado Kick</strong><p>The user delivers a wide-reaching kick that strikes all enemies in an area around them. Activating this skill triggers Tornado Stance for 5 seconds, during which all Kick skills splash in an area around the target. Tornado Stance ends when any other Stance ends, or when Tornado Kick is cast again.</p></li>
-        <li class="skill"><strong>Axe Kick</strong><p>The user delivers a staggering blow to the top of the enemy's head, dealing significant damage that will leave the target briefly stunned. Activating this skill triggers Axe Stance, during which all Kick Skills inflict various status effects to their targets. Axe Stance ends when any other Stance ends, or when Axe Kick is cast again.</p></li>
-        <li class="skill"><strong>Counter Kick: Inflicts <b class="kw kw-vuln">Vulnerable</b></strong></li>
-        <li class="skill"><strong>Tornado Kick: Inflicts <b class="kw kw-blind">Blind</b></strong></li>
-        <li class="skill"><strong>Roundhouse Kick: Inflicts <b class="kw kw-slow">Slow</b></strong></li>
-        <li class="skill"><strong>Demolishing Kick: Inflicts <b class="kw kw-bleed">Bleeding</b></strong></li>
-        <li class="skill"><strong>Roundhouse Kick</strong><p>The user delivers a spinning roundhouse kick to an enemy, utilizing their momentum to keep attacking at a breakneck pace. Activating this skill triggers Roundhouse Stance for 5 seconds, during which the user's ASPD is increased. Roundhouse Stance ends when any other Stance ends, or when Roundhouse Kick is cast again.</p></li>
-        <li class="skill"><strong>Taekwon Mission</strong><p>Quest Skill. In exchange for permanently blocking the ability to change jobs, increases the Job Level cap of the user (by up to 50) and increases the damage of all Kick Skills except Demolishing Kick.</p></li>
-        <li class="skill"><strong>Demolishing Kick</strong><p>The user unleashes a kick with devastating force, dealing exceptional damage to an enemy based on the number of currently active Stances. All Stances immediately end upon casting this skill. This skill cannot be learned unless Taekwon Mission is unlocked.</p></li>
-      </ul>
+      <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Axe Stance</span><span>Counter Stance</span><span>Roundhouse Stance</span><span>Tornado Stance</span></div>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-blind">Blind</span><span class="kw-vuln">Vulnerable</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-passive" data-i18n="cls.t.passive">Passive</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Skills<span>11 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-passive" id="s-martial-training">
+            <div class="sk-top"><strong>Martial Training</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Increases STR, Hit, Unarmed Damage</p>
+            <p class="sk-body">Training in basic combat and physical fitness. Passively increases the user's Strength and Hit Rate, and increases the user's damage while unarmed.</p>
+          </li>
+          <li class="skill-card sk-passive" id="s-martial-endurance">
+            <div class="sk-top"><strong>Martial Endurance</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Increases VIT, healing potion recovery</p>
+            <p class="sk-body">Training in endurance and perseverance. Passively increases the user's Vitality and increases the effectiveness of Healing Potions they use.</p>
+          </li>
+          <li class="skill-card sk-passive" id="s-martial-discipline">
+            <div class="sk-top"><strong>Martial Discipline</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Increases INT, SP potion recovery</p>
+            <p class="sk-body">Training in focus and discipline. Passively increases the user's Intelligence and increases the effectiveness of SP Potions they use.</p>
+          </li>
+          <li class="skill-card sk-passive" id="s-martial-precision">
+            <div class="sk-top"><strong>Martial Precision</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Increases DEX, DEF pierce</p>
+            <p class="sk-body">Training in precise and accurate technique. Passively increases the user's Dexterity, Hit Rate, and Defense Pierce. Defense Pierce gained from this skill is treated as card-like pierce for stacking purposes.</p>
+          </li>
+          <li class="skill-card sk-passive" id="s-martial-agility">
+            <div class="sk-top"><strong>Martial Agility</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Increases AGI, flee</p>
+            <p class="sk-body">Training in rapid and flexible movement. Passively increases the user's Agility, Flee, and Perfect Dodge.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-counter-kick">
+            <div class="sk-top"><strong>Counter Kick</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Cannot miss or be guarded against, grants <b class="mech">Counter Stance</b> (all kicks cannot miss)</p>
+            <p class="sk-body">Delivers a powerful kick to the enemy, ignoring the target's Flee and bypassing skills like Guard. Activating this skill triggers <b class="mech">Counter Stance</b> for 5 seconds, during which all Kick skills ignore the target's Flee and bypass skills like Guard. <b class="mech">Counter Stance</b> ends when any other Stance ends, or when Counter Kick is cast again.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-axe-kick">
+            <div class="sk-top"><strong>Axe Kick</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Stuns, grants <b class="mech">Axe Stance</b> (all kicks apply debuffs)</p>
+            <p class="sk-body">The user delivers a staggering blow to the top of the enemy's head, dealing significant damage that will leave the target briefly stunned. Activating this skill triggers <b class="mech">Axe Stance</b>, during which all Kick Skills inflict various status effects to their targets. <b class="mech">Axe Stance</b> ends when any other Stance ends, or when Axe Kick is cast again.</p>
+            <ul class="sk-options"><li><b>Counter Kick</b>Inflicts <b class="kw kw-vuln">Vulnerable</b></li><li><b>Tornado Kick</b>Inflicts <b class="kw kw-blind">Blind</b></li><li><b>Roundhouse Kick</b>Inflicts <b class="kw kw-slow">Slow</b></li><li><b>Demolishing Kick</b>Inflicts <b class="kw kw-bleed">Bleeding</b></li></ul>
+          </li>
+          <li class="skill-card sk-physical" id="s-tornado-kick">
+            <div class="sk-top"><strong>Tornado Kick</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">AoE centered on user, grants <b class="mech">Tornado Stance</b> (all kicks become AoE)</p>
+            <p class="sk-body">The user delivers a wide-reaching kick that strikes all enemies in an area around them. Activating this skill triggers <b class="mech">Tornado Stance</b> for 5 seconds, during which all Kick skills splash in an area around the target. <b class="mech">Tornado Stance</b> ends when any other Stance ends, or when Tornado Kick is cast again.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-roundhouse-kick">
+            <div class="sk-top"><strong>Roundhouse Kick</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Dramatically increases ASPD, grants <b class="mech">Roundhouse Stance</b></p>
+            <p class="sk-body">The user delivers a spinning roundhouse kick to an enemy, utilizing their momentum to keep attacking at a breakneck pace. Activating this skill triggers <b class="mech">Roundhouse Stance</b> for 5 seconds, during which the user's ASPD is increased. <b class="mech">Roundhouse Stance</b> ends when any other Stance ends, or when Roundhouse Kick is cast again.</p>
+          </li>
+          <li class="skill-card sk-passive" id="s-taekwon-mission">
+            <div class="sk-top"><strong>Taekwon Mission</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Quest skill, when learned, massively increases Kick skill damage, locks user from advancing job</p>
+            <p class="sk-body">In exchange for permanently blocking the ability to change jobs, increases the Job Level cap of the user (by up to 50) and increases the damage of all Kick Skills except Demolishing Kick.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-demolishing-kick">Demolishing Kick</a></p>
+          </li>
+          <li class="skill-card sk-physical" id="s-demolishing-kick">
+            <div class="sk-top"><strong>Demolishing Kick</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Massive damage, with even greater damage per Stance active. Requires Taekwon Mission.</p>
+            <p class="sk-body">The user unleashes a kick with devastating force, dealing exceptional damage to an enemy based on the number of currently active Stances. All Stances immediately end upon casting this skill. This skill cannot be learned unless Taekwon Mission is unlocked.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-taekwon-mission">Taekwon Mission</a></p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

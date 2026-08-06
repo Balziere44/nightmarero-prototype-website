@@ -157,9 +157,9 @@
           <span class="tag">Merchant line</span>
         </div>
         <p class="muted">Mastersmith is the primary advancement option for the Blacksmith. It very much continues in the same vein as the Blacksmith before it: build lots of damage and hope the enemy dies before you do, relying almost entirely on gear to build up the survivability needed to make your way through each encounter while your skills deal the maximum damage possible, making those encounters as short as possible.</p>
-        <p class="muted">The Mastersmith tree builds out in the same way as the Blacksmith tree. There is a branch focused on autoattacks, a branch focused on building and spending Extort, and a branch focused on item crafting.</p>
+        <p class="muted">The Mastersmith tree builds out in the same way as the Blacksmith tree. There is a branch focused on autoattacks, a branch focused on building and spending <b class="mech">Extort</b>, and a branch focused on item crafting.</p>
         <p class="muted">The autoattack branch provides a number of short-term buffs to give a large boost to your attacks. These have nothing close to full uptime, so you will need to wait patiently for the opportunity to utilize them to their maximum effect.</p>
-        <p class="muted">The Extort branch gains three skills of ascending Cooldown - a short CD to replace the use of the Extort skill in your primary combo, a medium CD to add a large spike of damage and grant access to the <b class="kw kw-vuln">Vulnerable</b> status, and a very long CD to expend accumulated Extort stacks for massive damage.</p>
+        <p class="muted">The <b class="mech">Extort</b> branch gains three skills of ascending Cooldown - a short CD to replace the use of the <b class="mech">Extort</b> skill in your primary combo, a medium CD to add a large spike of damage and grant access to the <b class="kw kw-vuln">Vulnerable</b> status, and a very long CD to expend accumulated <b class="mech">Extort</b> stacks for massive damage.</p>
         <p class="muted">The crafting branch allows the Mastersmith to create permanent Weapon and Armor mods. These can be used by any class, replacing the Random Options they generated with more focused bonuses. While the bonuses offered by these modifiers affect all classes, they have enhanced effects for Mastersmiths who have the Weapon and Armor Modification skills.</p>
       </div>
       <div class="portrait">
@@ -176,25 +176,85 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-burn">Burning</span><span class="kw-vuln">Vulnerable</span><span class="kw-stun">Stun</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Meltdown</strong><p>The user superheats their weapon, passively increasing their <b class="kw kw-burn">Burning</b> Damage and giving their Whirling Axe procs a chance to inflict the <b class="kw kw-burn">Severe Burning</b> status. When activated, autoattacks and Whirling Axe procs will be treated as <b class="kw kw-burn">Burning</b> damage for a short duration.</p></li>
-        <li class="skill"><strong>Whirling Axe</strong><p>The user adopts a wild, whirling fighting style, passively giving their attacks a chance to splash in a 5x5 area around them. This splash will also deal additional damage to the original target of the attack. When activated, the trigger chance is massively increased for a short duration.</p></li>
-        <li class="skill"><strong>Berserk</strong><p>The user enters a battle frenzy, gaining massive Damage Reduction, Attack, and ASPD for the duration. While active, the user cannot use any skills or consumables. When the Frenzy status ends, the user's HP is reduced to 10% of their maximum, and their SP is reduced to zero. Triggering this skill automatically activates Meltdown and Whirling Axe at their learned levels, extends their duration to 10 seconds, and increases the user's ASPD cap to 190.</p></li>
-        <li class="skill"><strong>Overwhelm</strong><p>Slams into the enemy with tremendous force, generating a stack of Extort. If the enemy is <b class="kw kw-stun">Stunned</b> or <b class="kw kw-stun">Staggered</b>, they take additional damage.</p></li>
-        <li class="skill"><strong>Cleave</strong><p>Delivers a sundering blow to the enemy, shredding any protective abilities. Strips most defensive abilities from the target, then deals heavy physical damage that is increased if the target is <b class="kw kw-vuln">Vulnerable</b>. If the target is not <b class="kw kw-vuln">Vulnerable</b>, has a chance to inflict the <b class="kw kw-vuln">Vulnerable</b> status instead.</p></li>
-        <li class="skill"><strong>Power Swing</strong><p>Slams the user's weapon into the head of the enemy, dealing massive damage based on the user's Extort stacks. Gains bonus effects cumulatively based on the number of Extort stacks consumed. If the user has no Extort stacks, the skill will miss. Inflicts <b class="kw kw-vuln">Vulnerable</b> for 5 Seconds Refreshes the Cooldown of Overwhelm Inflicts <b class="kw kw-stun">Stun</b> for 2 Seconds Refreshes the Cooldown of Cleave Splashes in a 5x5 Area</p></li>
-        <li class="skill"><strong>Equipment Modification</strong><p>Increases the efficiency of Weapon and Armor Mods on the user's equipment. This only affects mods used by the owner of this skill. It does not influence the strength of mods crafted by the user but used by other players.</p></li>
-        <li class="skill"><strong>Weapon Modification</strong><p>Combines materials to create a Weapon Modification Device. The device can be used to replace the Random Options on any weapon. The level of this skill learned improves the efficiency of those mods for the user, but does not influence the success rate of crafting or the strength of the rolls received.</p></li>
-        <li class="skill"><strong>Armor Modification</strong><p>Combines materials to create an Armor Modification Device. The device can be used to replace the Random Options on any Armor (not garments or shoes). The level of this skill learned improves the efficiency of those mods for the user, but does not influence the success rate of crafting or the strength of the rolls received.</p></li>
-      </ul>
+      <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Extort</span></div>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-burn">Burning</span><span class="kw-vuln">Vulnerable</span><span class="kw-stun">Stun</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-support" data-i18n="cls.t.support">Support</span><span class="sk-passive" data-i18n="cls.t.passive">Passive</span><span class="sk-utility" data-i18n="cls.t.utility">Utility</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Autoattack Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-support" id="s-meltdown">
+            <div class="sk-top"><strong>Meltdown</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Boosts <b class="kw kw-burn">Burning</b> damage; active window converts attacks to half <b class="kw kw-burn">Burning</b> Damage.</p>
+            <p class="sk-body">The user superheats their weapon, passively increasing their <b class="kw kw-burn">Burning</b> Damage and giving their Whirling Axe procs a chance to inflict the <b class="kw kw-burn">Severe Burning</b> status. When activated, autoattacks and Whirling Axe procs will be treated as <b class="kw kw-burn">Burning</b> damage for a short duration.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-whirling-axe">Whirling Axe</a></p>
+          </li>
+          <li class="skill-card sk-support" id="s-whirling-axe">
+            <div class="sk-top"><strong>Whirling Axe</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Autoattacks gain a chance to splash in a 5x5 area.</p>
+            <p class="sk-body">The user adopts a wild, whirling fighting style, passively giving their attacks a chance to splash in a 5x5 area around them. This splash will also deal additional damage to the original target of the attack. When activated, the trigger chance is massively increased for a short duration.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-berserk">
+            <div class="sk-top"><strong>Berserk</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Massive ASPD and damage reduction</p>
+            <p class="sk-body">The user enters a battle frenzy, gaining massive Damage Reduction, Attack, and ASPD for the duration. While active, the user cannot use any skills or consumables. When the Frenzy status ends, the user's HP is reduced to 10% of their maximum, and their SP is reduced to zero. Triggering this skill automatically activates Meltdown and Whirling Axe at their learned levels, extends their duration to 10 seconds, and increases the user's ASPD cap to 190.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-whirling-axe">Whirling Axe</a><a href="#s-meltdown">Meltdown</a></p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Extort Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-physical" id="s-overwhelm">
+            <div class="sk-top"><strong>Overwhelm</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Short-cooldown slam that generates <b class="mech">Extort</b>.</p>
+            <p class="sk-body">Slams into the enemy with tremendous force, generating a stack of <b class="mech">Extort</b>. If the enemy is <b class="kw kw-stun">Stunned</b> or <b class="kw kw-stun">Staggered</b>, they take additional damage.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-cleave">
+            <div class="sk-top"><strong>Cleave</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Strips defensive statuses and inflicts <b class="kw kw-vuln">Vulnerable</b>.</p>
+            <p class="sk-body">Delivers a sundering blow to the enemy, shredding any protective abilities. Strips most defensive abilities from the target, then deals heavy physical damage that is increased if the target is <b class="kw kw-vuln">Vulnerable</b>. If the target is not <b class="kw kw-vuln">Vulnerable</b>, has a chance to inflict the <b class="kw kw-vuln">Vulnerable</b> status instead.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-power-swing">
+            <div class="sk-top"><strong>Power Swing</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Consumes all <b class="mech">Extort</b> for massive damage and escalating effects.</p>
+            <p class="sk-body">Slams the user's weapon into the head of the enemy, dealing massive damage based on the user's <b class="mech">Extort</b> stacks. Gains bonus effects cumulatively based on the number of <b class="mech">Extort</b> stacks consumed. If the user has no <b class="mech">Extort</b> stacks, the skill will miss.</p>
+            <p class="sk-body">Inflicts <b class="kw kw-vuln">Vulnerable</b> for 5 Seconds</p>
+            <p class="sk-body">Refreshes the Cooldown of Overwhelm</p>
+            <p class="sk-body">Inflicts <b class="kw kw-stun">Stun</b> for 2 Seconds</p>
+            <p class="sk-body">Refreshes the Cooldown of Cleave</p>
+            <p class="sk-body">Splashes in a 5x5 Area</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-overwhelm">Overwhelm</a><a href="#s-cleave">Cleave</a></p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Crafting Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-passive" id="s-equipment-modification">
+            <div class="sk-top"><strong>Equipment Modification</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Improves the user's Weapon and Armor Modifications.</p>
+            <p class="sk-body">Increases the efficiency of Weapon and Armor Mods on the user's equipment. This only affects mods used by the owner of this skill. It does not influence the strength of mods crafted by the user but used by other players.</p>
+          </li>
+          <li class="skill-card sk-utility" id="s-weapon-modification">
+            <div class="sk-top"><strong>Weapon Modification</strong><i class="sk-type">Crafting</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Crafts devices that replace weapon Random Options with focused bonuses.</p>
+            <p class="sk-body">Combines materials to create a Weapon Modification Device. The device can be used to replace the Random Options on any weapon. The level of this skill learned improves the efficiency of those mods for the user, but does not influence the success rate of crafting or the strength of the rolls received.</p>
+          </li>
+          <li class="skill-card sk-utility" id="s-armor-modification">
+            <div class="sk-top"><strong>Armor Modification</strong><i class="sk-type">Crafting</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Crafts devices that replace armor Random Options with focused bonuses.</p>
+            <p class="sk-body">Combines materials to create an Armor Modification Device. The device can be used to replace the Random Options on any Armor (not garments or shoes). The level of this skill learned improves the efficiency of those mods for the user, but does not influence the success rate of crafting or the strength of the rolls received.</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

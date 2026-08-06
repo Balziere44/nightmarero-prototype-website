@@ -176,27 +176,98 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-bleed">Bleeding</span><span class="kw-vuln">Vulnerable</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Bullet Time</strong><p>The user focuses all of their efforts on defense, enabling them to dodge incoming attacks with ease. Massively increases the user's Perfect Dodge, but reduces the user's movement speed for the duration. Does not stack with Gunslinger's Gambit.</p></li>
-        <li class="skill"><strong>Gunslinger's Gambit</strong><p>The user focuses all of their efforts on offense, discarding any pretense of self preservation. For a short duration, all of the user's skills have their Cooldowns reduced to 1 second. This status ends after a certain number of skills are cast, and the user is immobilized until the duration expires or all stacks have been consumed. Does not stack with Bullet Time.</p></li>
-        <li class="skill"><strong>Disengage</strong><p>Revolver Skill. The user fires a distracting shot with their pistols, creating an opening to remove themselves from a dangerous situation. Deals moderate physical damage to a single target, then the user immediately backslides. Has a chance to inflict the <b class="kw kw-slow">Slow</b> Status. If the target is already <b class="kw kw-slow">Slowed</b>, it instead inflicts the <b class="kw kw-bleed">Internal Bleeding</b> status. This skill does additional damage to <b class="kw kw-vuln">Vulnerable</b> enemies.</p></li>
-        <li class="skill"><strong>Rapid Blitz</strong><p>Revolver Skill. The user dashes behind an enemy, delivering a quick hail of bullets into their back. Teleports behind a target before dealing moderate physical damage to them, with a chance to inflict the <b class="kw kw-slow">Slow</b> status. If the target is already <b class="kw kw-slow">Slowed</b>, instead inflicts the <b class="kw kw-vuln">Vulnerable</b> status. This skill deals additional damage to <b class="kw kw-bleed">Bleeding</b> enemies.</p></li>
-        <li class="skill"><strong>Penetrating Shot</strong><p>Rifle Skill. The user fires a powerful round from their rifle, punching through the targeted enemy and any other enemies in a line behind them. Deals physical damage to all enemies in the targeted area with a chance to inflict the <b class="kw kw-vuln">Vulnerable</b> Status. Any enemy that is already <b class="kw kw-vuln">Vulnerable</b> is inflicted with the <b class="kw kw-bleed">Internal Bleeding</b> status instead. This skill gains bonus damage against <b class="kw kw-slow">Slowed</b> enemies.</p></li>
-        <li class="skill"><strong>Burst Fire</strong><p>Rifle Skill. The user fires a quick three round burst into the targeted enemy, dealing exceptional physical damage and inflicting the <b class="kw kw-vuln">Vulnerable</b> status. If the target is already suffering from the <b class="kw kw-vuln">Vulnerable</b> Status, it instead inflicts the <b class="kw kw-slow">Slow</b> status. This skill gains bonus damage against <b class="kw kw-bleed">Bleeding</b> enemies.</p></li>
-        <li class="skill"><strong>Blazing Shell</strong><p>Shotgun Skill. Unleashes a burst of flaming shrapnel to damage and disorient enemies in the targeted area. Deals splash damage to all enemies around the target, attempting to inflict the <b class="kw kw-bleed">Internal Bleeding</b> status. Enemies that are already <b class="kw kw-bleed">Bleeding</b> instead are inflicted with the <b class="kw kw-slow">Slow</b> status. Enemies that are <b class="kw kw-vuln">Vulnerable</b> take additional damage.</p></li>
-        <li class="skill"><strong>Shattering Blast</strong><p>Shotgun Skill. Fires an explosive shot at an enemy, tearing apart their defenses as well as their bodies. Deals physical damage to a single enemy, attempting to inflict the <b class="kw kw-bleed">Internal Bleeding</b> status. If the target is already <b class="kw kw-bleed">Bleeding</b>, instead inflicts the <b class="kw kw-vuln">Vulnerable</b> Status. Enemies that are <b class="kw kw-slow">Slowed</b> take additional damage.</p></li>
-        <li class="skill"><strong>Lead Barrage</strong><p>Gatling Gun Skill. The user fires a quick burst from their Gatling Gun, knocking back enemies around them. Deals moderate physical damage to all enemies in an area around the user, knocking them back and inflicting the <b class="kw kw-slow">Slow</b> Status.</p></li>
-        <li class="skill"><strong>Spray and Pray</strong><p>Gatling Gun Skill. The user unleashes a hail of gunfire with their Gatling Gun, saturating a wide area with fire. Rapidly fires at all enemies in the target area, hitting multiple times in quick succession but with a low accuracy rate. Each enemy within the targeted area can be struck by each volley, but the chance to hit each enemy is calculated separately. The chance to hit is increased by the level of the skill used. Each hit has a chance of inflicting the <b class="kw kw-bleed">Internal Bleeding</b> status.</p></li>
-        <li class="skill"><strong>Pyrrhic Rainstorm</strong><p>Gatling Gun Skill. The user unleashes a massive hail of gunfire at the targeted location, dealing heavy damage over time to all enemies that remain within it. Each hit has a chance to inflict the <b class="kw kw-vuln">Vulnerable</b> status.</p></li>
-      </ul>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-vuln">Vulnerable</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-support" data-i18n="cls.t.support">Support</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Support Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-support" id="s-bullet-time">
+            <div class="sk-top"><strong>Bullet Time</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Massive Perfect Dodge buff at the cost of Movement Speed.</p>
+            <p class="sk-body">The user focuses all of their efforts on defense, enabling them to dodge incoming attacks with ease. Massively increases the user's Perfect Dodge, but reduces the user's movement speed for the duration. Does not stack with Gunslinger's Gambit.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-gunslinger-s-gambit">Gunslinger's Gambit</a></p>
+          </li>
+          <li class="skill-card sk-support" id="s-gunslinger-s-gambit">
+            <div class="sk-top"><strong>Gunslinger's Gambit</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Reduces all cooldowns to 1 second while immobilized.</p>
+            <p class="sk-body">The user focuses all of their efforts on offense, discarding any pretense of self preservation. For a short duration, all of the user's skills have their Cooldowns reduced to 1 second. This status ends after a certain number of skills are cast, and the user is immobilized until the duration expires or all stacks have been consumed. Does not stack with Bullet Time.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-bullet-time">Bullet Time</a></p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Revolver Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-physical" id="s-disengage">
+            <div class="sk-top"><strong>Disengage</strong><i class="sk-type">Revolver</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Backsliding shot; upgrades <b class="kw kw-slow">Slow</b> to <b class="kw kw-bleed">Internal Bleeding</b>.</p>
+            <p class="sk-body">The user fires a distracting shot with their pistols, creating an opening to remove themselves from a dangerous situation. Deals moderate physical damage to a single target, then the user immediately backslides. Has a chance to inflict the <b class="kw kw-slow">Slow</b> Status. If the target is already <b class="kw kw-slow">Slowed</b>, it instead inflicts the <b class="kw kw-bleed">Internal Bleeding</b> status. This skill does additional damage to <b class="kw kw-vuln">Vulnerable</b> enemies.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-rapid-blitz">
+            <div class="sk-top"><strong>Rapid Blitz</strong><i class="sk-type">Revolver</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Teleports behind the target; upgrades <b class="kw kw-slow">Slow</b> to <b class="kw kw-vuln">Vulnerable</b>.</p>
+            <p class="sk-body">The user dashes behind an enemy, delivering a quick hail of bullets into their back. Teleports behind a target before dealing moderate physical damage to them, with a chance to inflict the <b class="kw kw-slow">Slow</b> status. If the target is already <b class="kw kw-slow">Slowed</b>, instead inflicts the <b class="kw kw-vuln">Vulnerable</b> status. This skill deals additional damage to <b class="kw kw-bleed">Bleeding</b> enemies.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Rifle Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-physical" id="s-penetrating-shot">
+            <div class="sk-top"><strong>Penetrating Shot</strong><i class="sk-type">Rifle</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Line pierce; upgrades <b class="kw kw-vuln">Vulnerable</b> to <b class="kw kw-bleed">Internal Bleeding</b>.</p>
+            <p class="sk-body">The user fires a powerful round from their rifle, punching through the targeted enemy and any other enemies in a line behind them. Deals physical damage to all enemies in the targeted area with a chance to inflict the <b class="kw kw-vuln">Vulnerable</b> Status. Any enemy that is already <b class="kw kw-vuln">Vulnerable</b> is inflicted with the <b class="kw kw-bleed">Internal Bleeding</b> status instead. This skill gains bonus damage against <b class="kw kw-slow">Slowed</b> enemies.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-burst-fire">
+            <div class="sk-top"><strong>Burst Fire</strong><i class="sk-type">Rifle</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Three-round burst; upgrades <b class="kw kw-vuln">Vulnerable</b> to <b class="kw kw-slow">Slow</b>.</p>
+            <p class="sk-body">The user fires a quick three round burst into the targeted enemy, dealing exceptional physical damage and inflicting the <b class="kw kw-vuln">Vulnerable</b> status. If the target is already suffering from the <b class="kw kw-vuln">Vulnerable</b> Status, it instead inflicts the <b class="kw kw-slow">Slow</b> status. This skill gains bonus damage against <b class="kw kw-bleed">Bleeding</b> enemies.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Shotgun Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-physical" id="s-blazing-shell">
+            <div class="sk-top"><strong>Blazing Shell</strong><i class="sk-type">Shotgun</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short"><b class="kw kw-burn">Burning</b> shrapnel AoE; upgrades <b class="kw kw-bleed">Internal Bleeding</b> to <b class="kw kw-slow">Slow</b>.</p>
+            <p class="sk-body">Unleashes a burst of flaming shrapnel to damage and disorient enemies in the targeted area. Deals splash damage to all enemies around the target, attempting to inflict the <b class="kw kw-bleed">Internal Bleeding</b> status. Enemies that are already <b class="kw kw-bleed">Bleeding</b> instead are inflicted with the <b class="kw kw-slow">Slow</b> status. Enemies that are <b class="kw kw-vuln">Vulnerable</b> take additional damage.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-shattering-blast">
+            <div class="sk-top"><strong>Shattering Blast</strong><i class="sk-type">Shotgun</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Explosive slug; upgrades <b class="kw kw-bleed">Internal Bleeding</b> to <b class="kw kw-vuln">Vulnerable</b>.</p>
+            <p class="sk-body">Fires an explosive shot at an enemy, tearing apart their defenses as well as their bodies. Deals physical damage to a single enemy, attempting to inflict the <b class="kw kw-bleed">Internal Bleeding</b> status. If the target is already <b class="kw kw-bleed">Bleeding</b>, instead inflicts the <b class="kw kw-vuln">Vulnerable</b> Status. Enemies that are <b class="kw kw-slow">Slowed</b> take additional damage.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Gatling Gun Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-physical" id="s-lead-barrage">
+            <div class="sk-top"><strong>Lead Barrage</strong><i class="sk-type">Gatling</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Spinning point-blank AoE with knockback and <b class="kw kw-slow">Slow</b>.</p>
+            <p class="sk-body">The user fires a quick burst from their Gatling Gun, knocking back enemies around them. Deals moderate physical damage to all enemies in an area around the user, knocking them back and inflicting the <b class="kw kw-slow">Slow</b> Status.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-spray-pray">
+            <div class="sk-top"><strong>Spray and Pray</strong><i class="sk-type">Gatling</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Ten-volley saturation fire with its own Hit chance.</p>
+            <p class="sk-body">The user unleashes a hail of gunfire with their Gatling Gun, saturating a wide area with fire. Rapidly fires at all enemies in the target area, hitting multiple times in quick succession but with a low accuracy rate. Each enemy within the targeted area can be struck by each volley, but the chance to hit each enemy is calculated separately. The chance to hit is increased by the level of the skill used. Each hit has a chance of inflicting the <b class="kw kw-bleed">Internal Bleeding</b> status.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-pyrrhic-rainstorm">
+            <div class="sk-top"><strong>Pyrrhic Rainstorm</strong><i class="sk-type">Gatling</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Sustained damage-over-time zone.</p>
+            <p class="sk-body">The user unleashes a massive hail of gunfire at the targeted location, dealing heavy damage over time to all enemies that remain within it. Each hit has a chance to inflict the <b class="kw kw-vuln">Vulnerable</b> status.</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

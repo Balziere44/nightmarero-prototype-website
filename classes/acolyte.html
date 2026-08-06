@@ -174,22 +174,55 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Heal</strong><p>Instantly recovers a large amount of HP for the target. Can alternatively be used to damage Undead property enemies. Has a considerable cooldown.</p></li>
-        <li class="skill"><strong>Blessing</strong><p>Increases the Hit, Flee, and Perfect Dodge of the target for a lengthy duration.</p></li>
-        <li class="skill"><strong>Piety</strong><p>Improves the users Max SP, SP Regeneration, and Healing Power.</p></li>
-        <li class="skill"><strong>Mace Mastery</strong><p>Increases the damage and Hit Rate of Maces.</p></li>
-        <li class="skill"><strong>Holy Light</strong><p>Deals Holy element magic damage to a single target, which is increased if the caster is under the Aspersio status.</p></li>
-        <li class="skill"><strong>Smite</strong><p>Deals physical damage according to the weapon's property to a single target. If under the Aspersio status, the target will explode after three seconds, doing the same damage again to the target and all enemies in the area around them.</p></li>
-        <li class="skill"><strong>Signum Crucis</strong><p>Does hybrid Physical and Magical damage that is Holy element to all enemies in an area around the caster. Also endows the user with the Aspersio effect for a short time.</p></li>
-      </ul>
+      <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-magic" data-i18n="cls.t.magic">Magic</span><span class="sk-support" data-i18n="cls.t.support">Support</span><span class="sk-passive" data-i18n="cls.t.passive">Passive</span><span class="sk-utility" data-i18n="cls.t.utility">Utility</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Skills<span>7 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-magic" id="s-signum-crucis">
+            <div class="sk-top"><strong>Signum Crucis</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Holy AoE damage and grants Aspersio, endowing weapon with Holy.</p>
+            <p class="sk-body">Does hybrid Physical and Magical damage that is Holy element to all enemies in an area around the caster. Also endows the user with the Aspersio effect for a short time.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-heal">
+            <div class="sk-top"><strong>Heal</strong><i class="sk-type">Recovery</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Restores target's HP, deals damage to Undead enemies.</p>
+            <p class="sk-body">Instantly recovers a large amount of HP for the target. Can alternatively be used to damage Undead property enemies. Has a considerable cooldown.</p>
+          </li>
+          <li class="skill-card sk-utility" id="s-blessing">
+            <div class="sk-top"><strong>Blessing</strong><i class="sk-type">Utility</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Increases target's Hit, Flee, and Perfect Dodge.</p>
+            <p class="sk-body">Increases the Hit, Flee, and Perfect Dodge of the target for a lengthy duration.</p>
+          </li>
+          <li class="skill-card sk-passive" id="s-mace-mastery">
+            <div class="sk-top"><strong>Mace Mastery</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Increases damage and hit rate of Maces.</p>
+            <p class="sk-body">Increases the damage and Hit Rate of Maces.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-smite">
+            <div class="sk-top"><strong>Smite</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Strong melee attack that also consumes Aspersio to add a delayed AoE explosion.</p>
+            <p class="sk-body">Deals physical damage according to the weapon's property to a single target. If under the Aspersio status, the target will explode after three seconds, doing the same damage again to the target and all enemies in the area around them.</p>
+          </li>
+          <li class="skill-card sk-passive" id="s-piety">
+            <div class="sk-top"><strong>Piety</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Improves max SP, SP Regen, and Healing Power.</p>
+            <p class="sk-body">Improves the users Max SP, SP Regeneration, and Healing Power.</p>
+          </li>
+          <li class="skill-card sk-magic" id="s-holy-light">
+            <div class="sk-top"><strong>Holy Light</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Magical attack that deals more damage under Aspersio.</p>
+            <p class="sk-body">Deals Holy element magic damage to a single target, which is increased if the caster is under the Aspersio status.</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

@@ -175,26 +175,99 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-blind">Blind</span><span class="kw-vuln">Vulnerable</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Sunrise</strong><p>Draws on the light of the sun, striking enemies with an attempt to inflict various statuses. Naturally attempts to inflict the <b class="kw kw-burn">Burning</b> Status. If the user is in the Rising Sun state, instead inflicts the <b class="kw kw-bleed">Internal Bleeding</b> Status. If in High Noon, instead the damage is treated as half burning, half bleeding damage. Will fail if the user is in Nightfall.</p></li>
-        <li class="skill"><strong>Brilliant Noon</strong><p>Calls down the wrath of the noonday sun to scorch their target. If the user has no Celestial State, the target's <b class="kw kw-burn">Burning</b> is enhanced. If they are in the Rising Sun state, the target's <b class="kw kw-bleed">Internal Bleeding</b> is enhanced. In High Noon, the skill is treated as half burning, half bleeding damage. Will fail if the user is in Nightfall.</p></li>
-        <li class="skill"><strong>Duskfall</strong><p>The user calls on the power of the setting sun to finish off their opponent. Deals significant damage to the target and refreshes the Cooldowns of Sunrise and Brilliant Noon, then shifts the user's Celestial State forward by one into Daylight. If the user has no state or is in Sunrise, it deals additional damage to <b class="kw kw-burn">Burning</b> and <b class="kw kw-bleed">Bleeding</b> enemies respectively. During High Noon, it deals additional damage to both, and the Cooldown refreshing effect is disabled. Will fail during Nightfall.</p></li>
-        <li class="skill"><strong>Moonrise</strong><p>Draws on the power of the moon to strike all nearby enemies. With no Celestial State, attempts to inflict the <b class="kw kw-blind">Blind</b> status. If in Rising Moon, attempts to inflict <b class="kw kw-vuln">Vulnerable</b>. In Midnight, deals additional damage based on the user's <b class="kw kw-blind">Blind</b> and <b class="kw kw-vuln">Vulnerable</b> Potency. Will fail if the user is in Daylight.</p></li>
-        <li class="skill"><strong>Dead of Night</strong><p>The user delivers a whirling kick, scattering enemies with the power of the moon. If the user has no Celestial State, refreshes the <b class="kw kw-blind">Blind</b> duration of all enemies struck. If the user is in Rising Moon, it refreshes the <b class="kw kw-vuln">Vulnerable</b> duration instead. In Midnight, this skill deals bonus damage based on the user's <b class="kw kw-blind">Blind</b> Potency and <b class="kw kw-vuln">Vulnerable</b> Potency. Will fail if the user is in Daylight.</p></li>
-        <li class="skill"><strong>Breaking Dawn</strong><p>Releases a burst of celestial energy to strike all enemies in the area and refresh the Cooldowns of Moonrise and Dead of Night. If the user has no Celestial State or is in Moonrise, deals additional damage to <b class="kw kw-blind">Blind</b> or <b class="kw kw-vuln">Vulnerable</b> enemies respectively. If in Midnight, deals additional damage to both, and the Cooldown refreshing effect is disabled. Will fail if used in Daylight.</p></li>
-        <li class="skill"><strong>Celestial Miracle</strong><p>The user enters a state of perfect harmony with the celestial lights, charging their attacks with their strength. Blocks the user from shifting their Celestial State, and causes all Sky Emperor skills to deal reduced damage based on the user's remaining SP. If Cosmic Union is active, its autocasts are replaced with Sky Emperor skills. The skills will autocast in the following order: Sunrise &gt; Brilliant Noon &gt; Duskfall &gt; Moonrise &gt; Dead of Night &gt; Breaking Dawn The skills will be cast at the same level learned by the user. Once Breaking Dawn has been cast, Cosmic Union returns to its original behavior.</p></li>
-        <li class="skill"><strong>Celestial Judgement</strong><p>The user calls down the wrath of the sky, raining destruction in a wide area around them. Enemies struck take massive damage. If used during Daylight, the state ends and all Daylight skills have their Cooldowns refreshed. If used during the Celestial Miracle state, the skill's SP Cost is removed and the autocast chain returns to Sunrise.</p></li>
-        <li class="skill"><strong>Celestial Blast</strong><p>The user infuses the energy of the sky into their hands and feet, inflicting a single devastating blow on the targeted enemy. If used during Nightfall, the state ends and all Nightfall skills have their Cooldowns refreshed. If used during the Celestial Miracle state, the skill's SP Cost is removed and the autocast chain returns to Sunrise.</p></li>
-        <li class="skill"><strong>Encroaching Darkness</strong><p>The user calls on the cosmic darkness of the universe, drowning out the light of the celestial bodies. Immediately ends the user's current Celestial State, then causes all attacks against the user to miss for a short time.</p></li>
-      </ul>
+      <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Celestial State</span></div>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-blind">Blind</span><span class="kw-vuln">Vulnerable</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Daylight Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-other" id="s-sunrise">
+            <div class="sk-top"><strong>Sunrise</strong><i class="sk-type">Daylight</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Splashing sun strike; inflicts <b class="kw kw-burn">Burning</b> or <b class="kw kw-bleed">Internal Bleeding</b> by state.</p>
+            <p class="sk-body">Draws on the light of the sun, striking enemies with an attempt to inflict various statuses. Naturally attempts to inflict the <b class="kw kw-burn">Burning</b> Status. If the user is in the Rising Sun state, instead inflicts the <b class="kw kw-bleed">Internal Bleeding</b> Status. If in High Noon, instead the damage is treated as half burning, half bleeding damage. Will fail if the user is in Nightfall.</p>
+          </li>
+          <li class="skill-card sk-other" id="s-brilliant-noon">
+            <div class="sk-top"><strong>Brilliant Noon</strong><i class="sk-type">Daylight</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Single-target strike that enhances the target's damaging statuses.</p>
+            <p class="sk-body">Calls down the wrath of the noonday sun to scorch their target. If the user has no <b class="mech">Celestial State</b>, the target's <b class="kw kw-burn">Burning</b> is enhanced. If they are in the Rising Sun state, the target's <b class="kw kw-bleed">Internal Bleeding</b> is enhanced. In High Noon, the skill is treated as half burning, half bleeding damage. Will fail if the user is in Nightfall.</p>
+          </li>
+          <li class="skill-card sk-other" id="s-duskfall">
+            <div class="sk-top"><strong>Duskfall</strong><i class="sk-type">Daylight</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Heavy strike that refreshes the Daylight skills and advances the <b class="mech">Celestial State</b>.</p>
+            <p class="sk-body">The user calls on the power of the setting sun to finish off their opponent. Deals significant damage to the target and refreshes the Cooldowns of Sunrise and Brilliant Noon, then shifts the user's <b class="mech">Celestial State</b> forward by one into Daylight. If the user has no state or is in Sunrise, it deals additional damage to <b class="kw kw-burn">Burning</b> and <b class="kw kw-bleed">Bleeding</b> enemies respectively. During High Noon, it deals additional damage to both, and the Cooldown refreshing effect is disabled. Will fail during Nightfall.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-brilliant-noon">Brilliant Noon</a><a href="#s-sunrise">Sunrise</a></p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Nightfall Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-other" id="s-moonrise">
+            <div class="sk-top"><strong>Moonrise</strong><i class="sk-type">Nightfall</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Point-blank moon AoE; inflicts <b class="kw kw-blind">Blind</b> or <b class="kw kw-vuln">Vulnerable</b> by state.</p>
+            <p class="sk-body">Draws on the power of the moon to strike all nearby enemies. With no <b class="mech">Celestial State</b>, attempts to inflict the <b class="kw kw-blind">Blind</b> status. If in Rising Moon, attempts to inflict <b class="kw kw-vuln">Vulnerable</b>. In Midnight, deals additional damage based on the user's <b class="kw kw-blind">Blind</b> and <b class="kw kw-vuln">Vulnerable</b> Potency. Will fail if the user is in Daylight.</p>
+          </li>
+          <li class="skill-card sk-other" id="s-dead-of-night">
+            <div class="sk-top"><strong>Dead of Night</strong><i class="sk-type">Nightfall</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Whirling AoE kick that refreshes status durations.</p>
+            <p class="sk-body">The user delivers a whirling kick, scattering enemies with the power of the moon. If the user has no <b class="mech">Celestial State</b>, refreshes the <b class="kw kw-blind">Blind</b> duration of all enemies struck. If the user is in Rising Moon, it refreshes the <b class="kw kw-vuln">Vulnerable</b> duration instead. In Midnight, this skill deals bonus damage based on the user's <b class="kw kw-blind">Blind</b> Potency and <b class="kw kw-vuln">Vulnerable</b> Potency. Will fail if the user is in Daylight.</p>
+          </li>
+          <li class="skill-card sk-other" id="s-breaking-dawn">
+            <div class="sk-top"><strong>Breaking Dawn</strong><i class="sk-type">Nightfall</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">AoE burst that refreshes the Nightfall skills and advances the <b class="mech">Celestial State</b>.</p>
+            <p class="sk-body">Releases a burst of celestial energy to strike all enemies in the area and refresh the Cooldowns of Moonrise and Dead of Night. If the user has no <b class="mech">Celestial State</b> or is in Moonrise, deals additional damage to <b class="kw kw-blind">Blind</b> or <b class="kw kw-vuln">Vulnerable</b> enemies respectively. If in Midnight, deals additional damage to both, and the Cooldown refreshing effect is disabled. Will fail if used in Daylight.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-dead-of-night">Dead of Night</a><a href="#s-moonrise">Moonrise</a></p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Celestial Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-magic" id="s-celestial-miracle">
+            <div class="sk-top"><strong>Celestial Miracle</strong><i class="sk-type">Celestial</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Harmony state that turns Cosmic Union autocasts into Sky Emperor skills.</p>
+            <p class="sk-body">The user enters a state of perfect harmony with the celestial lights, charging their attacks with their strength. Blocks the user from shifting their <b class="mech">Celestial State</b>, and causes all Sky Emperor skills to deal reduced damage based on the user's remaining SP.</p>
+            <p class="sk-body">Sunrise &gt; Brilliant Noon &gt; Duskfall &gt; Moonrise &gt; Dead of Night &gt; Breaking Dawn</p>
+            <p class="sk-body">The skills will be cast at the same level learned by the user.</p>
+            <p class="sk-body">Once Breaking Dawn has been cast, Cosmic Union returns to its original behavior.</p>
+            <ul class="sk-riders"><li>If Cosmic Union is active, its autocasts are replaced with Sky Emperor skills. The skills will autocast in the following order:</li></ul>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-brilliant-noon">Brilliant Noon</a><a href="#s-dead-of-night">Dead of Night</a><a href="#s-breaking-dawn">Breaking Dawn</a></p>
+          </li>
+          <li class="skill-card sk-magic" id="s-celestial-judgement">
+            <div class="sk-top"><strong>Celestial Judgement</strong><i class="sk-type">Celestial</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Daylight ultimate: rains repeated damage across a wide area.</p>
+            <p class="sk-body">The user calls down the wrath of the sky, raining destruction in a wide area around them. Enemies struck take massive damage.</p>
+            <p class="sk-body">If used during Daylight, the state ends and all Daylight skills have their Cooldowns refreshed.</p>
+            <p class="sk-body">If used during the Celestial Miracle state, the skill's SP Cost is removed and the autocast chain returns to Sunrise.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-celestial-miracle">Celestial Miracle</a><a href="#s-sunrise">Sunrise</a></p>
+          </li>
+          <li class="skill-card sk-magic" id="s-celestial-blast">
+            <div class="sk-top"><strong>Celestial Blast</strong><i class="sk-type">Celestial</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Nightfall ultimate: one devastating single-target blow.</p>
+            <p class="sk-body">The user infuses the energy of the sky into their hands and feet, inflicting a single devastating blow on the targeted enemy.</p>
+            <p class="sk-body">If used during Nightfall, the state ends and all Nightfall skills have their Cooldowns refreshed.</p>
+            <p class="sk-body">If used during the Celestial Miracle state, the skill's SP Cost is removed and the autocast chain returns to Sunrise.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-celestial-miracle">Celestial Miracle</a><a href="#s-sunrise">Sunrise</a></p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Capstone Skill</h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-magic" id="s-encroaching-darkness">
+            <div class="sk-top"><strong>Encroaching Darkness</strong><i class="sk-type">Celestial</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Purges the <b class="mech">Celestial State</b> to make all attacks against the user miss.</p>
+            <p class="sk-body">The user calls on the cosmic darkness of the universe, drowning out the light of the celestial bodies. Immediately ends the user's current <b class="mech">Celestial State</b>, then causes all attacks against the user to miss for a short time.</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

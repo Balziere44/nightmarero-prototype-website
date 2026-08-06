@@ -157,8 +157,8 @@
           <span class="tag">Thief line</span>
         </div>
         <p class="muted">Guillotine Cross is the alternative advancement option for Assassins. While Assassin Crosses eschew dependency on <b class="kw kw-poison">Poison</b> for their damage, preferring to rely entirely on combat skill, the Guillotine Cross has no such inhibitions. Their playstyle revolves around rapid and repeated application of the <b class="kw kw-poison">Poison</b> Status, both to debilitate enemies and set up their own skills for stronger combos.</p>
-        <p class="muted">The key skill to the entire Guillotine Cross kit is their new Blade Enchant, Fatal Blades. This Blade Enchant coats the user's weapon with a specialized toxin, altering the behavior of any <b class="kw kw-poison">Poison</b> Status they inflict.</p>
-        <p class="muted">Once the Guillotine Cross has chosen their toxin, they can turn their attention to one of two skill tree paths. The first is a set of weapon skills, taking advantage of the user's Blade Enchant and the enemy's <b class="kw kw-poison">Poison</b> status to deal exceptional physical damage. The tree culminates in Final Fang, a single target skill which consumes the targets <b class="kw kw-poison">Poison</b> and <b class="kw kw-poison">Deadly Poison</b> to deal incredible damage.</p>
+        <p class="muted">The key skill to the entire Guillotine Cross kit is their new <b class="mech">Blade Enchant</b>, Fatal Blades. This <b class="mech">Blade Enchant</b> coats the user's weapon with a specialized toxin, altering the behavior of any <b class="kw kw-poison">Poison</b> Status they inflict.</p>
+        <p class="muted">Once the Guillotine Cross has chosen their toxin, they can turn their attention to one of two skill tree paths. The first is a set of weapon skills, taking advantage of the user's <b class="mech">Blade Enchant</b> and the enemy's <b class="kw kw-poison">Poison</b> status to deal exceptional physical damage. The tree culminates in Final Fang, a single target skill which consumes the targets <b class="kw kw-poison">Poison</b> and <b class="kw kw-poison">Deadly Poison</b> to deal incredible damage.</p>
         <p class="muted">Alternatively, the Guillotine Cross can focus on Toxin skills, a set of ranged abilities that turn them into somewhat of a Ranged Caster. These skills excel at inflicting the <b class="kw kw-poison">Poison</b> Status to a wide range of enemies and amplifying that <b class="kw kw-poison">Poison</b> Status to deal more damage. The tree is capped off by Toxic Shock, a ranged physical attack that does minor damage, but if the target is Poisoned, causes them to explode and deal massive damage across a wide area.</p>
       </div>
       <div class="portrait">
@@ -175,33 +175,118 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-poison">Poison</span><span class="kw-blind">Blind</span><span class="kw-vuln">Vulnerable</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Fatal Blades</strong><p>Blade Enchant. Coats the user's weapon with a specialized toxin, modifying the <b class="kw kw-poison">Poison</b> status inflicted by them. Each level applies a different poison. The poisons required to activate this skill from level 2 onward must be crafted.</p></li>
-        <li class="skill"><strong>Level 1</strong><p>Increases the duration of <b class="kw kw-poison">Poison</b> inflicted</p></li>
-        <li class="skill"><strong>Level 2</strong><p><b class="kw kw-poison">Poison</b> also inflicts <b class="kw kw-blind">Blind</b>. <b class="kw kw-poison">Poison</b> damage is increased by <b class="kw kw-blind">Blind</b> Potency</p></li>
-        <li class="skill"><strong>Level 3</strong><p><b class="kw kw-poison">Poison</b> Damage is increased by a portion of the user's <b class="kw kw-bleed">Bleeding</b> and <b class="kw kw-burn">Burning</b> Damage.</p></li>
-        <li class="skill"><strong>Level 4</strong><p>Whenever <b class="kw kw-poison">Poison</b> ticks, it has a chance to spread to all allies of the victim in a short range.</p></li>
-        <li class="skill"><strong>Level 5</strong><p><b class="kw kw-poison">Poison</b> Damage ticks twice as fast. While any of the above are active, Assassin and Guillotine Cross Weapon skills gain Luck scaling, and all Assassin skills are enhanced.</p></li>
-        <li class="skill"><strong>Venom Eater</strong><p>Consumes any poison suffered by the target to heal the user. The amount of healing is based on the strength of the target's <b class="kw kw-poison">Poison</b>. If the target is suffering from both <b class="kw kw-poison">Poison</b> and <b class="kw kw-poison">Deadly Poison</b>, only <b class="kw kw-poison">Poison</b> will be consumed.</p></li>
-        <li class="skill"><strong>Toxic Shadow</strong><p>Toxin Skill. The user imbibes a powerful toxin that deals constant damage to them over time, but in exchange massively increases their physical abilities. The damage taken from this skill is treated as <b class="kw kw-poison">Poison</b> Damage, but is not increased by the user's <b class="kw kw-poison">Poison</b> Damage bonuses and cannot be cured or resisted. While active, the user gains a bonus to ASPD Limit, Movement Speed, and Attack, and all Toxin skills are enhanced.</p></li>
-        <li class="skill"><strong>Toxic Breath</strong><p>Toxin Skill. The user unleashes a blast of toxic air, dealing <b class="kw kw-poison">Poison</b> Property Physical Damage to all enemies in the targeted area. All enemies struck have a chance of being inflicted with the <b class="kw kw-poison">Poison</b> Status. During Toxic Shadow, this skill inflicts <b class="kw kw-poison">Deadly Poison</b> instead, and the chance is doubled.</p></li>
-        <li class="skill"><strong>Toxic Surge</strong><p>Toxin Skill. Amplifies the <b class="kw kw-poison">Poison</b> suffered by the target, refreshing its duration and increasing its damage. The target additionally takes a burst of <b class="kw kw-poison">Poison</b> property damage that is treated as <b class="kw kw-poison">Poison</b> Status Damage. A target's poison can only be enhanced by Toxic Surge once, no matter how many characters apply the effect. During Toxic Shadow, this skill can be used on non-Poisoned targets.</p></li>
-        <li class="skill"><strong>Toxic Cloud</strong><p>Toxin Skill. Creates a short-lived cloud of toxic gas that repeatedly damages enemies within its area. Enemies struck have a chance of being Poisoned. During Toxic Shadow, the damage dealt is treated as <b class="kw kw-poison">Poison</b> Status Damage, and the skill's damage interval is twice as fast.</p></li>
-        <li class="skill"><strong>Toxic Shock</strong><p>Toxin Skill. Deals a moderate amount of <b class="kw kw-poison">Poison</b> Property physical damage to a single target. If the target is suffering from <b class="kw kw-poison">Poison</b> or <b class="kw kw-poison">Deadly Poison</b>, instead it consumes the status to do massive <b class="kw kw-poison">Poison</b> Property damage to all enemies in an area around them. During Toxic Shadow, all enemies struck receive the <b class="kw kw-poison">Deadly Poison</b> status.</p></li>
-        <li class="skill"><strong>Thirsting Fangs</strong><p>Weapon Skill. Temporarily applies a second Guillotine Cross toxin to the user's weapon. This second poison stacks with both Fatal Blades and ordinary Assassin Blade Enchants. While active, all Blade Enchants are disabled (but not removed). Multiple copies of the same toxin (from Fatal Blades and this skill) do not stack.</p></li>
-        <li class="skill"><strong>Piercing Fang</strong><p>Weapon Skill. Deal a quick, piercing stab to a single target, attempting to inflict the <b class="kw kw-poison">Poison</b> status. If the target is already Poisoned, this skill ignores Defense. During Toxic Blades, this skill inflicts <b class="kw kw-poison">Deadly Poison</b> instead. During Flashing Blades, this skill additionally inflicts <b class="kw kw-vuln">Vulnerable</b>. During Rejuvenating Blades, this skill additionally inflicts <b class="kw kw-slow">Slow</b>. During Fatal Blades, the skill is guaranteed to be Critical against poisoned enemies.</p></li>
-        <li class="skill"><strong>Seeking Fang</strong><p>Weapon Skill. Lunge at a distant target, dealing significant damage. If it strikes a Poisoned enemy, this skill cannot miss. If it strikes an enemy with <b class="kw kw-poison">Deadly Poison</b>, it is guaranteed to Crit. During Toxic Blades, this skill additionally inflicts <b class="kw kw-poison">Poison</b>. During Flashing Blades, this skill's cooldown is halved. During Rejuvenating Blades, this skill increases the user's Movement Speed for a short time. During Fatal Blades, the skill is guaranteed to be Critical against poisoned enemies.</p></li>
-        <li class="skill"><strong>Hurricane Fang</strong><p>Weapon Skill. The user spins wildly with their weapon, tearing apart enemies in an area around them. During Toxic Blades, this skill's Cooldown is reduced for each Poisoned enemy it strikes. During Flashing Blades, this skill inflicts <b class="kw kw-blind">Blind</b>. During Rejuvenating Blades, this skill grants the user the Endure effect for a short time. During Fatal Blades, the skill is guaranteed to be Critical against poisoned enemies.</p></li>
-        <li class="skill"><strong>Final Fang</strong><p>Weapon Skill. Delivers a final, fatal blow to a single target, consuming their <b class="kw kw-poison">Poison</b> and <b class="kw kw-poison">Deadly Poison</b> Statuses to deal incredible damage. If the target is not suffering from <b class="kw kw-poison">Poison</b> or <b class="kw kw-poison">Deadly Poison</b>, the skill deals half damage. During Toxic Blades, the target's <b class="kw kw-poison">Poison</b> and <b class="kw kw-poison">Deadly Poison</b> are refreshed instead of consumed. During Flashing Blades, this skill ignores Defense. During Rejuvenating Blades, this skill grants the user the Hallucination Walk effect for a short time. During Fatal Blades, the skill is guaranteed to be Critical against poisoned enemies.</p></li>
-      </ul>
+      <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Blade Enchant</span><span>Flashing Blades</span><span>Rejuvenating Blades</span><span>Toxic Blades</span></div>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-poison">Poison</span><span class="kw-blind">Blind</span><span class="kw-vuln">Vulnerable</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-support" data-i18n="cls.t.support">Support</span><span class="sk-debuff" data-i18n="cls.t.debuff">Debuff</span><span class="sk-passive" data-i18n="cls.t.passive">Passive</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Core Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-passive" id="s-fatal-blades">
+            <div class="sk-top"><strong>Fatal Blades</strong><i class="sk-type">Blade Enchant</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short"><b class="kw kw-poison">Poison</b>-coating <b class="mech">Blade Enchant</b> that reshapes the user's <b class="kw kw-poison">Poison</b>.</p>
+            <p class="sk-body">Coats the user's weapon with a specialized toxin, modifying the <b class="kw kw-poison">Poison</b> status inflicted by them. Each level applies a different poison. The poisons required to activate this skill from level 2 onward must be crafted.</p>
+            <ul class="sk-options"><li><b>Level 1</b>Increases the duration of <b class="kw kw-poison">Poison</b> inflicted</li><li><b>Level 2</b><b class="kw kw-poison">Poison</b> also inflicts <b class="kw kw-blind">Blind</b>. <b class="kw kw-poison">Poison</b> damage is increased by <b class="kw kw-blind">Blind</b> Potency</li><li><b>Level 3</b><b class="kw kw-poison">Poison</b> Damage is increased by a portion of the user's <b class="kw kw-bleed">Bleeding</b> and <b class="kw kw-burn">Burning</b> Damage.</li><li><b>Level 4</b>Whenever <b class="kw kw-poison">Poison</b> ticks, it has a chance to spread to all allies of the victim in a short range.</li><li><b>Level 5</b><b class="kw kw-poison">Poison</b> Damage ticks twice as fast. While any of the above are active, Assassin and Guillotine Cross Weapon skills gain Luck scaling, and all Assassin skills are enhanced.</li></ul>
+          </li>
+          <li class="skill-card sk-support" id="s-venom-eater">
+            <div class="sk-top"><strong>Venom Eater</strong><i class="sk-type">Healing</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Consumes the target's <b class="kw kw-poison">Poison</b> to heal the user.</p>
+            <p class="sk-body">Consumes any poison suffered by the target to heal the user. The amount of healing is based on the strength of the target's <b class="kw kw-poison">Poison</b>. If the target is suffering from both <b class="kw kw-poison">Poison</b> and <b class="kw kw-poison">Deadly Poison</b>, only <b class="kw kw-poison">Poison</b> will be consumed.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Toxin Skills<span>5 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-debuff" id="s-toxic-shadow">
+            <div class="sk-top"><strong>Toxic Shadow</strong><i class="sk-type">Toxin</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Self-poisoning buff that empowers all Toxin skills.</p>
+            <p class="sk-body">The user imbibes a powerful toxin that deals constant damage to them over time, but in exchange massively increases their physical abilities. The damage taken from this skill is treated as <b class="kw kw-poison">Poison</b> Damage, but is not increased by the user's <b class="kw kw-poison">Poison</b> Damage bonuses and cannot be cured or resisted. While active, the user gains a bonus to ASPD Limit, Movement Speed, and Attack, and all Toxin skills are enhanced.</p>
+          </li>
+          <li class="skill-card sk-debuff" id="s-toxic-breath">
+            <div class="sk-top"><strong>Toxic Breath</strong><i class="sk-type">Toxin</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short"><b class="kw kw-poison">Poison</b> AoE breath.</p>
+            <p class="sk-body">The user unleashes a blast of toxic air, dealing <b class="kw kw-poison">Poison</b> Property Physical Damage to all enemies in the targeted area. All enemies struck have a chance of being inflicted with the <b class="kw kw-poison">Poison</b> Status. During Toxic Shadow, this skill inflicts <b class="kw kw-poison">Deadly Poison</b> instead, and the chance is doubled.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-toxic-shadow">Toxic Shadow</a></p>
+          </li>
+          <li class="skill-card sk-debuff" id="s-toxic-surge">
+            <div class="sk-top"><strong>Toxic Surge</strong><i class="sk-type">Toxin</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Amplifies a target's existing <b class="kw kw-poison">Poison</b>.</p>
+            <p class="sk-body">Amplifies the <b class="kw kw-poison">Poison</b> suffered by the target, refreshing its duration and increasing its damage. The target additionally takes a burst of <b class="kw kw-poison">Poison</b> property damage that is treated as <b class="kw kw-poison">Poison</b> Status Damage. A target's poison can only be enhanced by Toxic Surge once, no matter how many characters apply the effect. During Toxic Shadow, this skill can be used on non-Poisoned targets.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-toxic-shadow">Toxic Shadow</a></p>
+          </li>
+          <li class="skill-card sk-debuff" id="s-toxic-cloud">
+            <div class="sk-top"><strong>Toxic Cloud</strong><i class="sk-type">Toxin</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Lingering poison gas field.</p>
+            <p class="sk-body">Creates a short-lived cloud of toxic gas that repeatedly damages enemies within its area. Enemies struck have a chance of being Poisoned. During Toxic Shadow, the damage dealt is treated as <b class="kw kw-poison">Poison</b> Status Damage, and the skill's damage interval is twice as fast.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-toxic-shadow">Toxic Shadow</a></p>
+          </li>
+          <li class="skill-card sk-debuff" id="s-toxic-shock">
+            <div class="sk-top"><strong>Toxic Shock</strong><i class="sk-type">Toxin</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Detonates a Poisoned target for massive AoE damage.</p>
+            <p class="sk-body">Deals a moderate amount of <b class="kw kw-poison">Poison</b> Property physical damage to a single target. If the target is suffering from <b class="kw kw-poison">Poison</b> or <b class="kw kw-poison">Deadly Poison</b>, instead it consumes the status to do massive <b class="kw kw-poison">Poison</b> Property damage to all enemies in an area around them. During Toxic Shadow, all enemies struck receive the <b class="kw kw-poison">Deadly Poison</b> status.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-toxic-shadow">Toxic Shadow</a></p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Blade Skills<span>5 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-physical" id="s-thirsting-fangs">
+            <div class="sk-top"><strong>Thirsting Fangs</strong><i class="sk-type">Blade</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Stacks a second Guillotine Cross poison on the weapon.</p>
+            <p class="sk-body">Temporarily applies a second Guillotine Cross toxin to the user's weapon. This second poison stacks with both Fatal Blades and ordinary Assassin <b class="mech">Blade Enchants</b>. While active, all <b class="mech">Blade Enchants</b> are disabled (but not removed). Multiple copies of the same toxin (from Fatal Blades and this skill) do not stack.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-fatal-blades">Fatal Blades</a></p>
+          </li>
+          <li class="skill-card sk-physical" id="s-piercing-fang">
+            <div class="sk-top"><strong>Piercing Fang</strong><i class="sk-type">Blade</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Quick stab that inflicts <b class="kw kw-poison">Poison</b>.</p>
+            <p class="sk-body">Deal a quick, piercing stab to a single target, attempting to inflict the <b class="kw kw-poison">Poison</b> status. If the target is already Poisoned, this skill ignores Defense.</p>
+            <p class="sk-body">During <b class="mech">Toxic Blades</b>, this skill inflicts <b class="kw kw-poison">Deadly Poison</b> instead.</p>
+            <p class="sk-body">During <b class="mech">Flashing Blades</b>, this skill additionally inflicts <b class="kw kw-vuln">Vulnerable</b>.</p>
+            <p class="sk-body">During <b class="mech">Rejuvenating Blades</b>, this skill additionally inflicts <b class="kw kw-slow">Slow</b>.</p>
+            <p class="sk-body">During Fatal Blades, the skill is guaranteed to be Critical against poisoned enemies.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-fatal-blades">Fatal Blades</a></p>
+          </li>
+          <li class="skill-card sk-physical" id="s-seeking-fang">
+            <div class="sk-top"><strong>Seeking Fang</strong><i class="sk-type">Blade</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Long-range lunge with enchant-based effects.</p>
+            <p class="sk-body">Lunge at a distant target, dealing significant damage. If it strikes a Poisoned enemy, this skill cannot miss. If it strikes an enemy with <b class="kw kw-poison">Deadly Poison</b>, it is guaranteed to Crit.</p>
+            <p class="sk-body">During <b class="mech">Toxic Blades</b>, this skill additionally inflicts <b class="kw kw-poison">Poison</b>.</p>
+            <p class="sk-body">During <b class="mech">Flashing Blades</b>, this skill's cooldown is halved.</p>
+            <p class="sk-body">During <b class="mech">Rejuvenating Blades</b>, this skill increases the user's Movement Speed for a short time.</p>
+            <p class="sk-body">During Fatal Blades, the skill is guaranteed to be Critical against poisoned enemies.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-fatal-blades">Fatal Blades</a></p>
+          </li>
+          <li class="skill-card sk-physical" id="s-hurricane-fang">
+            <div class="sk-top"><strong>Hurricane Fang</strong><i class="sk-type">Blade</i><i class="sk-lv">Lv 5</i></div>
+            <p class="sk-short">Spinning AoE with enchant-based effects.</p>
+            <p class="sk-body">The user spins wildly with their weapon, tearing apart enemies in an area around them.</p>
+            <p class="sk-body">During <b class="mech">Toxic Blades</b>, this skill's Cooldown is reduced for each Poisoned enemy it strikes.</p>
+            <p class="sk-body">During <b class="mech">Flashing Blades</b>, this skill inflicts <b class="kw kw-blind">Blind</b>.</p>
+            <p class="sk-body">During <b class="mech">Rejuvenating Blades</b>, this skill grants the user the Endure effect for a short time.</p>
+            <p class="sk-body">During Fatal Blades, the skill is guaranteed to be Critical against poisoned enemies.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-fatal-blades">Fatal Blades</a></p>
+          </li>
+          <li class="skill-card sk-physical" id="s-final-fang">
+            <div class="sk-top"><strong>Final Fang</strong><i class="sk-type">Blade</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Consumes <b class="kw kw-poison">Poison</b> and <b class="kw kw-poison">Deadly Poison</b> for incredible damage.</p>
+            <p class="sk-body">Delivers a final, fatal blow to a single target, consuming their <b class="kw kw-poison">Poison</b> and <b class="kw kw-poison">Deadly Poison</b> Statuses to deal incredible damage. If the target is not suffering from <b class="kw kw-poison">Poison</b> or <b class="kw kw-poison">Deadly Poison</b>, the skill deals half damage.</p>
+            <p class="sk-body">During <b class="mech">Toxic Blades</b>, the target's <b class="kw kw-poison">Poison</b> and <b class="kw kw-poison">Deadly Poison</b> are refreshed instead of consumed.</p>
+            <p class="sk-body">During <b class="mech">Flashing Blades</b>, this skill ignores Defense.</p>
+            <p class="sk-body">During <b class="mech">Rejuvenating Blades</b>, this skill grants the user the Hallucination Walk effect for a short time.</p>
+            <p class="sk-body">During Fatal Blades, the skill is guaranteed to be Critical against poisoned enemies.</p>
+            <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-fatal-blades">Fatal Blades</a></p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

@@ -1,0 +1,4476 @@
+{
+ "Acolyte": [
+  {
+   "group": "Skills",
+   "skills": [
+    {
+     "desc": "Holy AoE damage and grants Aspersio, endowing weapon with Holy.",
+     "max": "10",
+     "name": "Signum Crucis",
+     "type": "Magical"
+    },
+    {
+     "desc": "Restores target's HP, deals damage to Undead enemies.",
+     "max": "10",
+     "name": "Heal",
+     "type": "Recovery"
+    },
+    {
+     "desc": "Increases target's Hit, Flee, and Perfect Dodge.",
+     "max": "10",
+     "name": "Blessing",
+     "type": "Utility"
+    },
+    {
+     "desc": "Increases damage and hit rate of Maces.",
+     "max": "10",
+     "name": "Mace Mastery",
+     "type": "Passive"
+    },
+    {
+     "desc": "Strong melee attack that also consumes Aspersio to add a delayed AoE explosion.",
+     "max": "10",
+     "name": "Smite",
+     "type": "Physical"
+    },
+    {
+     "desc": "Improves max SP, SP Regen, and Healing Power.",
+     "max": "10",
+     "name": "Piety",
+     "type": "Passive"
+    },
+    {
+     "desc": "Magical attack that deals more damage under Aspersio.",
+     "max": "10",
+     "name": "Holy Light",
+     "type": "Magical"
+    }
+   ]
+  }
+ ],
+ "Alchemist": [
+  {
+   "group": "Chemical Skills",
+   "skills": [
+    {
+     "desc": "Improves damage and status effect application of all Chemical skills.",
+     "max": "10",
+     "name": "Chemical Research",
+     "type": "Passive"
+    },
+    {
+     "desc": "Deals damage and can apply Vulnerable. Generates Extort.",
+     "max": "10",
+     "name": "Acid Terror",
+     "type": "Chemical"
+    },
+    {
+     "desc": "Fire AoE bomb that can cause Burning. Generates Extort.",
+     "max": "10",
+     "name": "Demonstration",
+     "type": "Chemical"
+    },
+    {
+     "desc": "Consumes Extort stacks for big AoE Neutral damage. Can cause Burning and Bleeding.",
+     "max": "10",
+     "name": "Conflagration",
+     "type": "Chemical"
+    }
+   ]
+  },
+  {
+   "group": "Enhancement Skills",
+   "skills": [
+    {
+     "desc": "Improves duration and effect of all Alchemical Enhancements.",
+     "max": "10",
+     "name": "Enhancement Research",
+     "type": "Passive"
+    },
+    {
+     "desc": "Coats an ally's armor in an agent that increases all defenses.",
+     "max": "10",
+     "name": "Energized Armor",
+     "type": "Enhancement"
+    },
+    {
+     "desc": "Synthesize an autonomous shield that passively blocks for an ally.",
+     "max": "10",
+     "name": "Synthetic Shield",
+     "type": "Enhancement"
+    },
+    {
+     "desc": "Coats an ally's weapon in an agent that dramatically improves offensive stats.",
+     "max": "10",
+     "name": "Alchemical Weapon",
+     "type": "Enhancement"
+    }
+   ]
+  },
+  {
+   "group": "Utility Skills",
+   "skills": [
+    {
+     "desc": "Enables Homunculus creation quests, passively improves summoned Homunculi.",
+     "max": "10",
+     "name": "Homunculus Research",
+     "type": "Passive"
+    },
+    {
+     "desc": "Tosses a specially created healing potion at an ally, can heal HP or SP.",
+     "max": "10",
+     "name": "Aid Potion",
+     "type": "Enhancement"
+    }
+   ]
+  },
+  {
+   "group": "Command Skills",
+   "skills": [
+    {
+     "desc": "Orders the Homunculus to move to the target cell.",
+     "max": "1",
+     "name": "Command: Move",
+     "type": "Command"
+    },
+    {
+     "desc": "Orders the Homunculus to use it's Attack skill, bypassing cooldown.",
+     "max": "1",
+     "name": "Command: Attack",
+     "type": "Command"
+    },
+    {
+     "desc": "Orders the Homunculus to use it's Defensive skill, bypassing cooldown.",
+     "max": "1",
+     "name": "Command: Defend",
+     "type": "Command"
+    },
+    {
+     "desc": "Orders the Homunculus to use it's Support skill, bypassing cooldown.",
+     "max": "1",
+     "name": "Command: Support",
+     "type": "Command"
+    },
+    {
+     "desc": "Orders the Homunculus to use it's Hiding skill, bypassing cooldown.",
+     "max": "1",
+     "name": "Command: Hide",
+     "type": "Command"
+    },
+    {
+     "desc": "Orders the Homunculus to use it's Ultimate skill, bypassing cooldown.",
+     "max": "1",
+     "name": "Command: Ultimate",
+     "type": "Command"
+    },
+    {
+     "desc": "Orders the Homunculus to the Alchemist's side.",
+     "max": "1",
+     "name": "Command: Return",
+     "type": "Command"
+    }
+   ]
+  }
+ ],
+ "Arch Bishop": [
+  {
+   "group": "Offensive Skills",
+   "skills": [
+    {
+     "desc": "Curses enemies to take burst damage whenever struck by Holy attacks.",
+     "max": "10",
+     "name": "Oratio",
+     "type": "Grace"
+    },
+    {
+     "desc": "Single-target Holy nuke with Magic Pierce and Searing Light.",
+     "max": "10",
+     "name": "Arbitrium",
+     "type": "Authority"
+    },
+    {
+     "desc": "Wide Holy AoE; consumes Grace or Authority for debuffs.",
+     "max": "10",
+     "name": "Adoramus",
+     "type": "Judgement"
+    }
+   ]
+  },
+  {
+   "group": "Supportive Skills",
+   "skills": [
+    {
+     "desc": "Large single-target heal that leaves a protective barrier.",
+     "max": "10",
+     "name": "Grace Heal",
+     "type": "Grace"
+    },
+    {
+     "desc": "Party-wide Attack and Magic Attack buff.",
+     "max": "10",
+     "name": "Argutus Vita",
+     "type": "Authority"
+    },
+    {
+     "desc": "Party blessing that heals on taking or dealing damage.",
+     "max": "10",
+     "name": "Lux Pacifica",
+     "type": "Judgement"
+    }
+   ]
+  },
+  {
+   "group": "Physical Skills",
+   "skills": [
+    {
+     "desc": "Self buff granting Attack and Vulnerable Potency.",
+     "max": "10",
+     "name": "Expiatio",
+     "type": "Grace"
+    },
+    {
+     "desc": "Physical splash smite that also empowers Smite.",
+     "max": "10",
+     "name": "Petitio",
+     "type": "Authority"
+    },
+    {
+     "desc": "Three-hit physical burst; consumes Grace or Authority for statuses.",
+     "max": "10",
+     "name": "Gladius Sanctum",
+     "type": "Judgement"
+    }
+   ]
+  },
+  {
+   "group": "Ultimate Skill",
+   "skills": [
+    {
+     "desc": "Miracle: mass resurrection, full recovery, and party blessings.",
+     "max": "1",
+     "name": "Manus Dei",
+     "type": "Miracle"
+    }
+   ]
+  }
+ ],
+ "Archer": [
+  {
+   "group": "Skills",
+   "skills": [
+    {
+     "desc": "Increases range and Hit of Bows.",
+     "max": "10",
+     "name": "Bow Mastery",
+     "type": "Passive"
+    },
+    {
+     "desc": "Ground target AoE that knocks back.",
+     "max": "10",
+     "name": "Arrow Shower",
+     "type": "Physical"
+    },
+    {
+     "desc": "Fires twice, has bonus Crit rate against Slowed targets.",
+     "max": "10",
+     "name": "Double Strafe",
+     "type": "Physical"
+    },
+    {
+     "desc": "Low damage, Inflicts Slow.",
+     "max": "10",
+     "name": "Pin Down",
+     "type": "Physical"
+    },
+    {
+     "desc": "Low damage and strong knockback.",
+     "max": "10",
+     "name": "Arrow Repel",
+     "type": "Physical"
+    },
+    {
+     "desc": "Massively increases the party's movespeed and removes Slow effects.",
+     "max": "10",
+     "name": "Reposition",
+     "type": "Utility"
+    }
+   ]
+  }
+ ],
+ "Assassin": [
+  {
+   "group": "Blade Enchants",
+   "skills": [
+    {
+     "desc": "Causes all attacks to heal the user, adds VIT scaling to Assassin skills.",
+     "max": "5",
+     "name": "Rejuvenating Blades",
+     "type": "Enchant"
+    },
+    {
+     "desc": "Improves damage of Poison applied by the user, adds AGI scaling to Assassin skills.",
+     "max": "5",
+     "name": "Toxic Blades",
+     "type": "Enchant"
+    },
+    {
+     "desc": "Improves critical rate, adds DEX scaling to Assassin skills.",
+     "max": "5",
+     "name": "Flashing Blades",
+     "type": "Enchant"
+    }
+   ]
+  },
+  {
+   "group": "Katar Skills",
+   "skills": [
+    {
+     "desc": "Improves damage and Hit rate of Katars.",
+     "max": "10",
+     "name": "Katar Mastery",
+     "type": "Passive"
+    },
+    {
+     "desc": "Long range splash attack that applies statuses based on current Blade Enchant.",
+     "max": "10",
+     "name": "Grimtooth",
+     "type": "Physical"
+    },
+    {
+     "desc": "Deals massive multi-hit damage to a single foe with bonus effects based on current Blade Enchant.",
+     "max": "10",
+     "name": "Sonic Blow",
+     "type": "Physical"
+    }
+   ]
+  },
+  {
+   "group": "Dagger Skills",
+   "skills": [
+    {
+     "desc": "Restores ASPD and damage lost from dual wielding daggers.",
+     "max": "10",
+     "name": "Dual Wield Mastery",
+     "type": "Passive"
+    },
+    {
+     "desc": "Slashes at all nearby enemies, dealing status effects based on current Blade Enchant.",
+     "max": "10",
+     "name": "Rolling Cutter",
+     "type": "Physical"
+    },
+    {
+     "desc": "Leaps to a distant enemy and deals a lethal flurry of blows.",
+     "max": "10",
+     "name": "Cross Impact",
+     "type": "Physical"
+    }
+   ]
+  },
+  {
+   "group": "Elusive Skills",
+   "skills": [
+    {
+     "desc": "Fade into the shadows and become untargetable, increasing movement speed.",
+     "max": "10",
+     "name": "Cloaking",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Gain perfect immunity to autoattacks for a short duration.",
+     "max": "10",
+     "name": "Hallucination Walk",
+     "type": "Physical"
+    }
+   ]
+  }
+ ],
+ "Assassin Cross": [
+  {
+   "group": "General Skills",
+   "skills": [
+    {
+     "desc": "HP-threshold Blade Enchant that adds Luck scaling to Assassin skills.",
+     "max": "5",
+     "name": "Peerless Blades",
+     "type": "Blade Enchant"
+    },
+    {
+     "desc": "Grants invisibility and empowers the next attack.",
+     "max": "5",
+     "name": "Deadly Shadow",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Consumes the active Blade Enchant for a deadly enchant-flavored projectile.",
+     "max": "10",
+     "name": "Soul Destroyer",
+     "type": "Physical"
+    }
+   ]
+  },
+  {
+   "group": "Dagger Skills",
+   "skills": [
+    {
+     "desc": "Blocks a Physical attack and grants the Counter State.",
+     "max": "10",
+     "name": "Weapon Blocking",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Precision strike that inflicts Vulnerable.",
+     "max": "10",
+     "name": "Rupture",
+     "type": "Physical"
+    },
+    {
+     "desc": "AoE counter that repeats in the Counter State.",
+     "max": "10",
+     "name": "Counter Slash",
+     "type": "Physical"
+    },
+    {
+     "desc": "Ranged blade throw that can proactively trigger the Counter State.",
+     "max": "10",
+     "name": "Savage Blade",
+     "type": "Physical"
+    }
+   ]
+  },
+  {
+   "group": "Katar Skills",
+   "skills": [
+    {
+     "desc": "Massive ASPD, Max ASPD, and Movement Speed buff.",
+     "max": "10",
+     "name": "Sonic Acceleration",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Rending strike with enchant-based statuses.",
+     "max": "10",
+     "name": "Dark Claw",
+     "type": "Physical"
+    },
+    {
+     "desc": "Gap-closing lunge with enchant-based statuses.",
+     "max": "10",
+     "name": "Phantom Claw",
+     "type": "Physical"
+    },
+    {
+     "desc": "Massive AoE that inflicts Bleeding and Vulnerable.",
+     "max": "10",
+     "name": "Meteoric Claw",
+     "type": "Physical"
+    }
+   ]
+  }
+ ],
+ "Bard and Dancer": [
+  {
+   "group": "Bard Skills",
+   "skills": [
+    {
+     "desc": "Increases damage and Hit with Instruments; extends Rhythm duration.",
+     "max": "10",
+     "name": "Musical Mastery",
+     "type": "Passive"
+    },
+    {
+     "desc": "Party AoE heal over time. Odd Rhythm.",
+     "max": "5",
+     "name": "Restorative Refrain",
+     "type": "Song"
+    },
+    {
+     "desc": "Reduces party Variable Cast Time. Even Rhythm.",
+     "max": "5",
+     "name": "Quickening Chorus",
+     "type": "Song"
+    },
+    {
+     "desc": "Inflicts Blind on approaching enemies. Odd Rhythm.",
+     "max": "5",
+     "name": "Darkening Dirge",
+     "type": "Song"
+    },
+    {
+     "desc": "Inflicts Vulnerable and Breach on approaching enemies. Even Rhythm.",
+     "max": "5",
+     "name": "Enervating Elegy",
+     "type": "Song"
+    }
+   ]
+  },
+  {
+   "group": "Dancer Skills",
+   "skills": [
+    {
+     "desc": "Increases damage and Hit with Whips; extends Rhythm duration.",
+     "max": "10",
+     "name": "Dancing Dexterity",
+     "type": "Passive"
+    },
+    {
+     "desc": "Party AoE SP restoration over time. Odd Rhythm.",
+     "max": "5",
+     "name": "Noetic Number",
+     "type": "Dance"
+    },
+    {
+     "desc": "Massively increases party Crit Rate. Even Rhythm.",
+     "max": "5",
+     "name": "Savage Stride",
+     "type": "Dance"
+    },
+    {
+     "desc": "Inflicts Slow on approaching enemies. Odd Rhythm.",
+     "max": "5",
+     "name": "Wearying Waltz",
+     "type": "Dance"
+    },
+    {
+     "desc": "Increases damage taken by nearby enemies. Even Rhythm.",
+     "max": "5",
+     "name": "Sinister Saunter",
+     "type": "Dance"
+    }
+   ]
+  },
+  {
+   "group": "Shared Skills",
+   "skills": [
+    {
+     "desc": "Ranged attack that scales with and extends Rhythm.",
+     "max": "10",
+     "name": "Synchronic Strike",
+     "type": "Physical"
+    },
+    {
+     "desc": "Magic attack that scales with and extends Rhythm.",
+     "max": "10",
+     "name": "Vicious Verse",
+     "type": "Magical"
+    },
+    {
+     "desc": "Finale: consumes Rhythm for massive offense and defense buffs.",
+     "max": "10",
+     "name": "Hero's Hymn",
+     "type": "Performance"
+    },
+    {
+     "desc": "Finale: consumes Rhythm for Movement Speed, Flee, and Perfect Dodge buffs.",
+     "max": "10",
+     "name": "Ardent Anthem",
+     "type": "Performance"
+    },
+    {
+     "desc": "Finale: consumes Rhythm for a massive Hybrid damage AoE.",
+     "max": "10",
+     "name": "Devastating Descant",
+     "type": "Performance"
+    }
+   ]
+  }
+ ],
+ "Biochemist": [
+  {
+   "group": "Core Skills",
+   "skills": [
+    {
+     "desc": "AoE version of Aid Potion using the same Throwable Potions.",
+     "max": "5",
+     "name": "Greater Aid Potion",
+     "type": "Recovery"
+    }
+   ]
+  },
+  {
+   "group": "Chemical Skills",
+   "skills": [
+    {
+     "desc": "Fire DoT field treated as Burning damage; Extort reduces its cooldown.",
+     "max": "5",
+     "name": "Incinerate",
+     "type": "Chemical"
+    },
+    {
+     "desc": "Acid burst scaling with Vulnerable Potency; Extort reduces its cooldown.",
+     "max": "5",
+     "name": "Acid Cloud",
+     "type": "Chemical"
+    },
+    {
+     "desc": "Explosive AoE with bonus damage against Vulnerable and Burning enemies.",
+     "max": "5",
+     "name": "Alchemic Cannon",
+     "type": "Chemical"
+    },
+    {
+     "desc": "Consumes Extort for an absurd single-target burst.",
+     "max": "10",
+     "name": "Acid Demonstration",
+     "type": "Physical"
+    }
+   ]
+  },
+  {
+   "group": "Stimulant Skills",
+   "skills": [
+    {
+     "desc": "Reduces the side effects of Stimulant skills.",
+     "max": "10",
+     "name": "Stimulant Research",
+     "type": "Passive"
+    },
+    {
+     "desc": "Hit and FCT buff at the cost of defenses.",
+     "max": "5",
+     "name": "Crystal Clarity",
+     "type": "Stimulant"
+    },
+    {
+     "desc": "Defense Pierce buff at the cost of Max HP/SP.",
+     "max": "5",
+     "name": "Frenzy",
+     "type": "Stimulant"
+    },
+    {
+     "desc": "Status damage reduction at the cost of Crit and cast speed.",
+     "max": "5",
+     "name": "White Ice",
+     "type": "Stimulant"
+    },
+    {
+     "desc": "Perfect Dodge buff at the cost of Attack and Magic Attack.",
+     "max": "5",
+     "name": "Moonveil",
+     "type": "Stimulant"
+    },
+    {
+     "desc": "Poison burst injection that can inflict Deadly Poison.",
+     "max": "5",
+     "name": "Death Drip",
+     "type": "Stimulant"
+    },
+    {
+     "desc": "Fire burst injection that can inflict Severe Burning.",
+     "max": "5",
+     "name": "Pyrelight",
+     "type": "Stimulant"
+    }
+   ]
+  }
+ ],
+ "Blacksmith": [
+  {
+   "group": "Buff Skills",
+   "skills": [
+    {
+     "desc": "Increases own critical damage for a long duration.",
+     "max": "10",
+     "name": "Weapon Perfection",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Increases own ASPD and Hit rate for a long duration.",
+     "max": "10",
+     "name": "Adrenaline Rush",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Increases own ATK and DEF Pierce for a long duration.",
+     "max": "10",
+     "name": "Power Thrust",
+     "type": "Supportive"
+    }
+   ]
+  },
+  {
+   "group": "Extortion Skills",
+   "skills": [
+    {
+     "desc": "Charges a distant enemy and generates an Extort stack.",
+     "max": "10",
+     "name": "Rush Down",
+     "type": "Physical"
+    },
+    {
+     "desc": "Slams a giant hammer, dealing AoE damage and [[Status Effects#Stun|Stun].",
+     "max": "10",
+     "name": "Hammer Fall",
+     "type": "Offensive"
+    },
+    {
+     "desc": "Spends all Extort stacks for big AoE damage that is guaranteed to Crit.",
+     "max": "10",
+     "name": "Axe Tornado",
+     "type": "Physical"
+    }
+   ]
+  },
+  {
+   "group": "Support Skills",
+   "skills": [
+    {
+     "desc": "Increases own Neutral resistance and potion effectiveness.",
+     "max": "10",
+     "name": "Steel Heart",
+     "type": "Passive"
+    },
+    {
+     "desc": "Immediately generates 5 Extort stacks and guarantees Crits for a short duration.",
+     "max": "10",
+     "name": "Maximize Power",
+     "type": "Utility"
+    },
+    {
+     "desc": "Improves the duration and effects of Weapon Reinforcement and Armor Reinforcement.",
+     "max": "10",
+     "name": "Equipment Maintenance",
+     "type": "Passive"
+    },
+    {
+     "desc": "Use materials created in quests to buff party weapons.",
+     "max": "5",
+     "name": "Weapon Reinforcement",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Use materials created in quests to buff party armor.",
+     "max": "5",
+     "name": "Armor Reinforcement",
+     "type": "Supportive"
+    }
+   ]
+  }
+ ],
+ "Champion": [
+  {
+   "group": "Support Skills",
+   "skills": [
+    {
+     "desc": "Grants both Iron Fists and Discipline at double level.",
+     "max": "5",
+     "name": "Zen",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Consumes the stances to restore HP or SP.",
+     "max": "5",
+     "name": "Unburden",
+     "type": "Supportive"
+    }
+   ]
+  },
+  {
+   "group": "Combo Skills",
+   "skills": [
+    {
+     "desc": "Single-target barrage of blows.",
+     "max": "5",
+     "name": "Raging Barrage",
+     "type": "Combo"
+    },
+    {
+     "desc": "Point-blank AoE combo strike.",
+     "max": "5",
+     "name": "Raging Windmill",
+     "type": "Combo"
+    },
+    {
+     "desc": "Combo finisher: one crushing blow that consumes the stances.",
+     "max": "10",
+     "name": "Falling Mountain",
+     "type": "Combo Finisher"
+    }
+   ]
+  },
+  {
+   "group": "Spirit Skills",
+   "skills": [
+    {
+     "desc": "Ranged ground explosion of spiritual energy.",
+     "max": "5",
+     "name": "Spiritual Rupture",
+     "type": "Spirit"
+    },
+    {
+     "desc": "Teleports to a distant target and strikes.",
+     "max": "5",
+     "name": "Spiritual Pursuit",
+     "type": "Spirit"
+    },
+    {
+     "desc": "Spirit finisher: a massive self-centered blast.",
+     "max": "10",
+     "name": "Soul Explosion",
+     "type": "Spirit Finisher"
+    }
+   ]
+  },
+  {
+   "group": "Ultimate Skills",
+   "skills": [
+    {
+     "desc": "Consumes all remaining SP for heavy damage reduction.",
+     "max": "10",
+     "name": "Unbreakable Resolve",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Consumes all remaining SP for unbelievable single-target damage.",
+     "max": "10",
+     "name": "Guillotine Fist",
+     "type": "Physical Melee"
+    }
+   ]
+  }
+ ],
+ "Clown/Gypsy": [
+  {
+   "group": "Rhythm Skills",
+   "skills": [
+    {
+     "desc": "Multi-hit volley scaling with Rhythm.",
+     "max": "10",
+     "name": "Voluminous Volley",
+     "type": "Physical"
+    },
+    {
+     "desc": "Consumes Rhythm to accelerate an arrow storm.",
+     "max": "10",
+     "name": "Ravaging Rainstorm",
+     "type": "Physical"
+    },
+    {
+     "desc": "Magic pulse that tunes the user's Rhythm toward three.",
+     "max": "10",
+     "name": "Rhythmic Retort",
+     "type": "Magical"
+    },
+    {
+     "desc": "Consumes Rhythm for a multi-hit sound wave.",
+     "max": "10",
+     "name": "Crushing Concerto",
+     "type": "Magical"
+    }
+   ]
+  },
+  {
+   "group": "Supportive Tarot Cards",
+   "skills": [
+    {
+     "desc": "Adds flat MATK% to an ally's magic skills.",
+     "max": "5",
+     "name": "Tarot Card: The Magician",
+     "type": "Support"
+    },
+    {
+     "desc": "Adds flat ATK% to an ally's physical skills.",
+     "max": "5",
+     "name": "Tarot Card: Strength",
+     "type": "Support"
+    },
+    {
+     "desc": "Auto-heals an ally the next few times they take damage.",
+     "max": "5",
+     "name": "Tarot Card: The High Priestess",
+     "type": "Support"
+    },
+    {
+     "desc": "Cleanses statuses and grants temporary immunity.",
+     "max": "5",
+     "name": "Tarot Card: The Lovers",
+     "type": "Support"
+    },
+    {
+     "desc": "Consumes Rhythm to reduce all of the user's active cooldowns.",
+     "max": "10",
+     "name": "Tarot Card: Wheel of Fortune",
+     "type": "Support"
+    }
+   ]
+  },
+  {
+   "group": "Offensive Tarot Cards",
+   "skills": [
+    {
+     "desc": "Curses an enemy's skills with a chance to fail.",
+     "max": "5",
+     "name": "Tarot Card: The Fool",
+     "type": "Offensive"
+    },
+    {
+     "desc": "Rhythm-scaled disable: Slow, Immobilize, or Stun.",
+     "max": "5",
+     "name": "Tarot Card: The Hanged Man",
+     "type": "Offensive"
+    },
+    {
+     "desc": "Multi-hit arrow-property burst scaling with Rhythm.",
+     "max": "5",
+     "name": "Tarot Card: The Tower",
+     "type": "Offensive"
+    },
+    {
+     "desc": "Delayed explosion with Rhythm-scaled severe statuses.",
+     "max": "5",
+     "name": "Tarot Card: The Devil",
+     "type": "Offensive"
+    },
+    {
+     "desc": "Max-HP-based burst that pierces all defenses.",
+     "max": "10",
+     "name": "Tarot Card: Death",
+     "type": "Offensive"
+    }
+   ]
+  }
+ ],
+ "Crusader": [
+  {
+   "group": "Shield Skills",
+   "skills": [
+    {
+     "desc": "Increases Max HP. Also DEF, and MDEF while wearing a shield.",
+     "max": "10",
+     "name": "Faith",
+     "type": "Passive"
+    },
+    {
+     "desc": "Block all physical attacks for a short duration.",
+     "max": "10",
+     "name": "Guard",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Ranged shield throw that applies Vulnerable.",
+     "max": "10",
+     "name": "Shield Boomerang",
+     "type": "Physical"
+    },
+    {
+     "desc": "Heavy shield bash that scales with user's VIT.",
+     "max": "10",
+     "name": "Shield Slam",
+     "type": "Physical"
+    },
+    {
+     "desc": "Creates a healing zone for allies.",
+     "max": "10",
+     "name": "Restoration",
+     "type": "Recovery"
+    }
+   ]
+  },
+  {
+   "group": "Spear Skills",
+   "skills": [
+    {
+     "desc": "Increases damage and Hit rate of spears.",
+     "max": "10",
+     "name": "Spear Mastery",
+     "type": "Passive"
+    },
+    {
+     "desc": "Dramatically increases ASPD and spear skill cooldowns. Requires a spear.",
+     "max": "10",
+     "name": "Spear Flurry",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Deals damage and applies Blind.",
+     "max": "10",
+     "name": "Brilliant Strike",
+     "type": "Physical"
+    },
+    {
+     "desc": "Holy elemental double strike that scales with user's DEX.",
+     "max": "10",
+     "name": "Holy Cross",
+     "type": "Physical"
+    },
+    {
+     "desc": "Sacrifices HP to deal massive AoE damage around the caster.",
+     "max": "10",
+     "name": "Grand Cross",
+     "type": "Physical"
+    }
+   ]
+  }
+ ],
+ "Geneticist": [
+  {
+   "group": "Fauna Skills",
+   "skills": [
+    {
+     "desc": "Boosts Homunculi stats and all Fauna skills.",
+     "max": "10",
+     "name": "Fauna Specialization",
+     "type": "Passive"
+    },
+    {
+     "desc": "Sacrifices HP to heal allies. Eira-themed.",
+     "max": "5",
+     "name": "Gift of Life",
+     "type": "Fauna"
+    },
+    {
+     "desc": "Cleanses and shields against statuses. Bayeri-themed.",
+     "max": "5",
+     "name": "Gift of Light",
+     "type": "Fauna"
+    },
+    {
+     "desc": "Poison pool that inflicts Slow. Sera-themed.",
+     "max": "5",
+     "name": "Gift of Venom",
+     "type": "Fauna"
+    },
+    {
+     "desc": "Fire burst that inflicts Burning. Dieter-themed.",
+     "max": "5",
+     "name": "Gift of Flame",
+     "type": "Fauna"
+    },
+    {
+     "desc": "Massive Crit buff for the user and summons. Eleanor-themed.",
+     "max": "5",
+     "name": "Gift of Strength",
+     "type": "Fauna"
+    }
+   ]
+  },
+  {
+   "group": "Flora Skills",
+   "skills": [
+    {
+     "desc": "Boosts summoned Plants and all Flora skills.",
+     "max": "10",
+     "name": "Flora Specialization",
+     "type": "Passive"
+    },
+    {
+     "desc": "Multi-hit AoE with summon-based status effects.",
+     "max": "5",
+     "name": "Explosive Growth",
+     "type": "Flora"
+    },
+    {
+     "desc": "AoE howl with summon-based status effects.",
+     "max": "5",
+     "name": "Mandragora Howl",
+     "type": "Flora"
+    },
+    {
+     "desc": "Summons a melee Wooden Warrior that halves Acid Terror's cooldown.",
+     "max": "5",
+     "name": "Summon Warrior",
+     "type": "Flora"
+    },
+    {
+     "desc": "Summons a supportive Forest Sprite that halves Demonstration's cooldown.",
+     "max": "5",
+     "name": "Summon Fairy",
+     "type": "Flora"
+    },
+    {
+     "desc": "Summons a Cursed Tree that empowers other Flora summons.",
+     "max": "5",
+     "name": "Summon Infernal Tree",
+     "type": "Flora"
+    }
+   ]
+  }
+ ],
+ "Guillotine Cross": [
+  {
+   "group": "Core Skills",
+   "skills": [
+    {
+     "desc": "Poison-coating Blade Enchant that reshapes the user's Poison.",
+     "max": "5",
+     "name": "Fatal Blades",
+     "type": "Blade Enchant"
+    },
+    {
+     "desc": "Consumes the target's Poison to heal the user.",
+     "max": "5",
+     "name": "Venom Eater",
+     "type": "Healing"
+    }
+   ]
+  },
+  {
+   "group": "Toxin Skills",
+   "skills": [
+    {
+     "desc": "Self-poisoning buff that empowers all Toxin skills.",
+     "max": "5",
+     "name": "Toxic Shadow",
+     "type": "Toxin"
+    },
+    {
+     "desc": "Poison AoE breath.",
+     "max": "5",
+     "name": "Toxic Breath",
+     "type": "Toxin"
+    },
+    {
+     "desc": "Amplifies a target's existing Poison.",
+     "max": "5",
+     "name": "Toxic Surge",
+     "type": "Toxin"
+    },
+    {
+     "desc": "Lingering poison gas field.",
+     "max": "5",
+     "name": "Toxic Cloud",
+     "type": "Toxin"
+    },
+    {
+     "desc": "Detonates a Poisoned target for massive AoE damage.",
+     "max": "10",
+     "name": "Toxic Shock",
+     "type": "Toxin"
+    }
+   ]
+  },
+  {
+   "group": "Blade Skills",
+   "skills": [
+    {
+     "desc": "Stacks a second Guillotine Cross poison on the weapon.",
+     "max": "5",
+     "name": "Thirsting Fangs",
+     "type": "Blade"
+    },
+    {
+     "desc": "Quick stab that inflicts Poison.",
+     "max": "5",
+     "name": "Piercing Fang",
+     "type": "Blade"
+    },
+    {
+     "desc": "Long-range lunge with enchant-based effects.",
+     "max": "5",
+     "name": "Seeking Fang",
+     "type": "Blade"
+    },
+    {
+     "desc": "Spinning AoE with enchant-based effects.",
+     "max": "5",
+     "name": "Hurricane Fang",
+     "type": "Blade"
+    },
+    {
+     "desc": "Consumes Poison and Deadly Poison for incredible damage.",
+     "max": "10",
+     "name": "Final Fang",
+     "type": "Blade"
+    }
+   ]
+  }
+ ],
+ "Gunslinger": [
+  {
+   "group": "Core Gun Skills",
+   "skills": [
+    {
+     "desc": "Revolver skill. Hits twice and inflicts Slow.",
+     "max": "5",
+     "name": "Quick Draw",
+     "type": "Physical"
+    },
+    {
+     "desc": "Revolver finisher. Hits several times, increased damage on Vulnerable or Bleeding targets.",
+     "max": "5",
+     "name": "Rapid Shower",
+     "type": "Physical"
+    },
+    {
+     "desc": "Rifle skill. Long range and inflicts Vulnerable.",
+     "max": "5",
+     "name": "Breaking Shot",
+     "type": "Physical"
+    },
+    {
+     "desc": "Rifle finisher. Deals devastating damage. Increased damage on Slowed or Bleeding targets.",
+     "max": "5",
+     "name": "Snipe",
+     "type": "Physical"
+    },
+    {
+     "desc": "Shotgun skill. AoE damage that inflicts Internal Bleeding.",
+     "max": "5",
+     "name": "Scatter Shot",
+     "type": "Physical"
+    },
+    {
+     "desc": "Shotgun finisher. AoE damage and knockback. Increased damage on Slowed or Vulnerable targets.",
+     "max": "5",
+     "name": "Full Blast",
+     "type": "Physical"
+    }
+   ]
+  },
+  {
+   "group": "General Skills",
+   "skills": [
+    {
+     "desc": "Increases damage and hit rate of all Guns.",
+     "max": "10",
+     "name": "Firearms Mastery",
+     "type": "Passive"
+    },
+    {
+     "desc": "Instantly moves to target location, refreshes finisher skill of current weapon.",
+     "max": "10",
+     "name": "Redeploy",
+     "type": "Utility"
+    },
+    {
+     "desc": "Instantly refreshes skill cooldowns usable by equipped weapon",
+     "max": "10",
+     "name": "Rapid Reload",
+     "type": "Utility"
+    }
+   ]
+  }
+ ],
+ "High Priest": [
+  {
+   "group": "Utility Skills",
+   "skills": [
+    {
+     "desc": "Grants or raises the Authority status, up to level 15.",
+     "max": "5",
+     "name": "Lux Divina",
+     "type": "Grace"
+    },
+    {
+     "desc": "Grants or raises the Grace status, up to level 15.",
+     "max": "5",
+     "name": "Lux Aeterna",
+     "type": "Authority"
+    }
+   ]
+  },
+  {
+   "group": "Grace Skills",
+   "skills": [
+    {
+     "desc": "Instantly heals the entire party for a Heal-equivalent amount.",
+     "max": "10",
+     "name": "Coluceo Heal",
+     "type": "Grace"
+    },
+    {
+     "desc": "Raises the party's Crit Rate and ASPD Limit.",
+     "max": "10",
+     "name": "Gloria",
+     "type": "Grace"
+    },
+    {
+     "desc": "Reduces party SP costs and prevents cast interruption.",
+     "max": "10",
+     "name": "Magnificat",
+     "type": "Grace"
+    },
+    {
+     "desc": "Ultimate Grace rite: party-wide Defense, Magic Defense, and Pierce.",
+     "max": "1",
+     "name": "Benedictio Sanctissimi Sacramenti",
+     "type": "Grace"
+    }
+   ]
+  },
+  {
+   "group": "Authority Skills",
+   "skills": [
+    {
+     "desc": "Single-target Holy nuke that splashes; stronger against Searing Light.",
+     "max": "10",
+     "name": "Flamen",
+     "type": "Authority"
+    },
+    {
+     "desc": "Point-blank Holy AoE with knockback that applies Searing Light.",
+     "max": "10",
+     "name": "Oleum Sanctum",
+     "type": "Authority"
+    },
+    {
+     "desc": "Consecrated ground dealing Holy damage over time.",
+     "max": "10",
+     "name": "Magnus Exorcismus",
+     "type": "Authority"
+    },
+    {
+     "desc": "Ultimate Authority rite: a holy tree that damages and debuffs.",
+     "max": "1",
+     "name": "Epiclesis",
+     "type": "Authority"
+    }
+   ]
+  }
+ ],
+ "High Wizard": [
+  {
+   "group": "Fire Skills",
+   "skills": [
+    {
+     "desc": "Line-piercing Fire bolt with Burning synergy.",
+     "max": "5",
+     "name": "Crimson Arrow",
+     "type": "Magical"
+    },
+    {
+     "desc": "Massive Fire AoE that grants Fire Affinity.",
+     "max": "10",
+     "name": "Volcanic Burst",
+     "type": "Magical"
+    }
+   ]
+  },
+  {
+   "group": "Water Skills",
+   "skills": [
+    {
+     "desc": "Ice spikes with Chilled synergy.",
+     "max": "5",
+     "name": "Frozen Grip",
+     "type": "Magical"
+    },
+    {
+     "desc": "Massive self-centered Water AoE that grants Water Affinity.",
+     "max": "10",
+     "name": "Frost Nova",
+     "type": "Magical"
+    }
+   ]
+  },
+  {
+   "group": "Wind Skills",
+   "skills": [
+    {
+     "desc": "Bouncing lightning with Sleep synergy.",
+     "max": "5",
+     "name": "Chain Lightning",
+     "type": "Magical"
+    },
+    {
+     "desc": "Lightning DoT field that grants Wind Affinity.",
+     "max": "10",
+     "name": "Static Storm",
+     "type": "Magical"
+    }
+   ]
+  },
+  {
+   "group": "Earth Skills",
+   "skills": [
+    {
+     "desc": "Falling boulder that inflicts Internal Bleeding.",
+     "max": "5",
+     "name": "Stone Crush",
+     "type": "Magical"
+    },
+    {
+     "desc": "Earth DoT field that grants Earth Affinity.",
+     "max": "10",
+     "name": "Seismic Tremors",
+     "type": "Magical"
+    }
+   ]
+  },
+  {
+   "group": "Arcane Skills",
+   "skills": [
+    {
+     "desc": "Massively amplifies one cast; consumes Affinities for lasting buffs.",
+     "max": "5",
+     "name": "Mystical Amplification",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Four-wave elemental nuke, unified by any active Affinity.",
+     "max": "10",
+     "name": "Elemental Annihilation",
+     "type": "Magical"
+    }
+   ]
+  }
+ ],
+ "Hunter": [
+  {
+   "group": "Marksmanship Skills",
+   "skills": [
+    {
+     "desc": "Greatly increases Hit and Crit Rate.",
+     "max": "10",
+     "name": "Marksman's Focus",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Ranged attack with bonus damage against Slowed targets.",
+     "max": "10",
+     "name": "Precision Shot",
+     "type": "Physical"
+    },
+    {
+     "desc": "Three-stage attack applying Slow, Vulnerable, or Stun.",
+     "max": "10",
+     "name": "Threefold Arrow",
+     "type": "Physical"
+    }
+   ]
+  },
+  {
+   "group": "Trap Skills",
+   "skills": [
+    {
+     "desc": "Removes Trap Fixed Cast Times and extends their status durations.",
+     "max": "10",
+     "name": "Trapper's Focus",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Trap dealing Poison damage that inflicts Poison.",
+     "max": "10",
+     "name": "Toxic Mine",
+     "type": "Trap"
+    },
+    {
+     "desc": "Trap dealing Neutral damage that inflicts Internal Bleeding.",
+     "max": "10",
+     "name": "Shrapnel Mine",
+     "type": "Trap"
+    },
+    {
+     "desc": "Trap dealing Fire damage that inflicts Burning.",
+     "max": "10",
+     "name": "Incendiary Mine",
+     "type": "Trap"
+    }
+   ]
+  },
+  {
+   "group": "Falcon Skills",
+   "skills": [
+    {
+     "desc": "Enables Falcon rental and boosts Falcon skill damage.",
+     "max": "10",
+     "name": "Falconry Mastery",
+     "type": "Passive"
+    },
+    {
+     "desc": "Falcon AoE that inflicts Slow and can autocast on attacks.",
+     "max": "10",
+     "name": "Blitz Beat",
+     "type": "Physical"
+    },
+    {
+     "desc": "Heavy Falcon strike against Slowed targets that extends DoT durations.",
+     "max": "10",
+     "name": "Aggravating Assault",
+     "type": "Physical"
+    }
+   ]
+  }
+ ],
+ "Kagemusha": [
+  {
+   "group": "Melee Skills",
+   "skills": [
+    {
+     "desc": "Perfectly evades the next skill; a successful read buffs Str and refreshes Crushing Steel.",
+     "max": "10",
+     "name": "Mikiri",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Lightning-fast strike; alone under First Art, refreshes the Ninja dagger skills.",
+     "max": "5",
+     "name": "Fulminant Steel",
+     "type": "Dagger"
+    },
+    {
+     "desc": "Slashing AoE that can heal per enemy struck.",
+     "max": "5",
+     "name": "Ravenous Steel",
+     "type": "Dagger"
+    },
+    {
+     "desc": "Massive splash blow that can Stun everything it hits.",
+     "max": "10",
+     "name": "Crushing Steel",
+     "type": "Dagger"
+    }
+   ]
+  },
+  {
+   "group": "Ranged Skills",
+   "skills": [
+    {
+     "desc": "Dex buff that teleports the user back to the cast location when it ends.",
+     "max": "10",
+     "name": "Shifting Shadow",
+     "type": "Throwing"
+    },
+    {
+     "desc": "Projectile volley around the user; effects vary by Throwing Weapon.",
+     "max": "5",
+     "name": "Whirling Shadow",
+     "type": "Throwing"
+    },
+    {
+     "desc": "Targeted projectile volley; effects vary by Throwing Weapon.",
+     "max": "5",
+     "name": "Fluttering Shadow",
+     "type": "Throwing"
+    },
+    {
+     "desc": "Explosive projectile that debuffs or resets the Ranged kit.",
+     "max": "10",
+     "name": "Dragon's Shadow",
+     "type": "Throwing"
+    }
+   ]
+  },
+  {
+   "group": "Magic Skills",
+   "skills": [
+    {
+     "desc": "Long buff granting Int and Fixed Cast Time reduction.",
+     "max": "10",
+     "name": "Serenity",
+     "type": "Elite Ninja Art"
+    },
+    {
+     "desc": "Fire meteor; can inflict Severe Burning or Water weakness.",
+     "max": "5",
+     "name": "Falling Star",
+     "type": "Elite Ninja Art"
+    },
+    {
+     "desc": "Water blast; can inflict Chill or Wind weakness.",
+     "max": "5",
+     "name": "Monsoon Edge",
+     "type": "Elite Ninja Art"
+    },
+    {
+     "desc": "Wind slash; can inflict Bleeding or Earth weakness.",
+     "max": "5",
+     "name": "Reaping Gale",
+     "type": "Elite Ninja Art"
+    },
+    {
+     "desc": "Earth tremor; can inflict Vulnerable or Fire weakness.",
+     "max": "5",
+     "name": "Giant's Footfall",
+     "type": "Elite Ninja Art"
+    }
+   ]
+  }
+ ],
+ "Knight": [
+  {
+   "group": "Sword Skills",
+   "skills": [
+    {
+     "desc": "Increases damage and Hit with 2H swords.",
+     "max": "10",
+     "name": "Two-Handed Sword Mastery",
+     "type": "Passive"
+    },
+    {
+     "desc": "Dramatically increases offensive stats for a shot duration.",
+     "max": "10",
+     "name": "Quicken",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Deals damage and applies Bleed or Vulnerable",
+     "max": "10",
+     "name": "Rend",
+     "type": "Physical"
+    },
+    {
+     "desc": "AoE Damage and refreshes Bleeding duration.",
+     "max": "10",
+     "name": "Devastating Blow",
+     "type": "Physical"
+    }
+   ]
+  },
+  {
+   "group": "Spear Skills",
+   "skills": [
+    {
+     "desc": "Increases damage and Hit with spears.",
+     "max": "10",
+     "name": "Spear Mastery",
+     "type": "Passive"
+    },
+    {
+     "desc": "Defense-piercing attack.",
+     "max": "10",
+     "name": "Pierce",
+     "type": "Physical"
+    },
+    {
+     "desc": "Long range stab that applies Vulnerable.",
+     "max": "10",
+     "name": "Spear Stab",
+     "type": "Physical"
+    },
+    {
+     "desc": "AoE Damage and refreshes Vulnerable duration.",
+     "max": "10",
+     "name": "Brandish Spear",
+     "type": "Physical"
+    }
+   ]
+  },
+  {
+   "group": "2H Weapon Skills",
+   "skills": [
+    {
+     "desc": "Passively increases defense while not wearing a shield.",
+     "max": "10",
+     "name": "Armor Mastery",
+     "type": "Passive"
+    },
+    {
+     "desc": "Blocks all physical attacks for a short duration.",
+     "max": "10",
+     "name": "Deflect",
+     "type": "Supportive"
+    }
+   ]
+  }
+ ],
+ "Lord Knight": [
+  {
+   "group": "Stances",
+   "skills": [
+    {
+     "desc": "Offensive stance: adds Hit and Agility scaling to all skills.",
+     "max": "5",
+     "name": "Vanguard Stance",
+     "type": "Stance"
+    },
+    {
+     "desc": "Defensive stance: adds damage reduction and Vitality scaling to all skills.",
+     "max": "5",
+     "name": "Warden Stance",
+     "type": "Stance"
+    }
+   ]
+  },
+  {
+   "group": "General Skills",
+   "skills": [
+    {
+     "desc": "Ranged shockwave with weapon- and stance-based status effects.",
+     "max": "10",
+     "name": "Sonic Wave",
+     "type": "Physical"
+    },
+    {
+     "desc": "Gap-closing strike with weapon- and stance-based effects.",
+     "max": "10",
+     "name": "Shattering Strike",
+     "type": "Physical"
+    }
+   ]
+  },
+  {
+   "group": "Sword Skills",
+   "skills": [
+    {
+     "desc": "AoE slash that always inflicts Bleeding.",
+     "max": "10",
+     "name": "Flourish",
+     "type": "Physical"
+    },
+    {
+     "desc": "Single-target flurry with bonus damage against Bleeding enemies.",
+     "max": "10",
+     "name": "Storm Slash",
+     "type": "Physical"
+    },
+    {
+     "desc": "Consumes the target's Bleeding for a massive damage burst.",
+     "max": "10",
+     "name": "Execute",
+     "type": "Physical"
+    }
+   ]
+  },
+  {
+   "group": "Spear Skills",
+   "skills": [
+    {
+     "desc": "Ranged jab that inflicts Vulnerable.",
+     "max": "10",
+     "name": "Phantom Thrust",
+     "type": "Physical"
+    },
+    {
+     "desc": "Piercing strike scaling with Vulnerable Potency.",
+     "max": "10",
+     "name": "Clashing Spiral",
+     "type": "Physical"
+    },
+    {
+     "desc": "AoE stab flurry with heavy bonus damage against Vulnerable enemies.",
+     "max": "10",
+     "name": "Gatling Pierce",
+     "type": "Physical"
+    }
+   ]
+  }
+ ],
+ "Maboroshi": [
+  {
+   "group": "Mirage Skills",
+   "skills": [
+    {
+     "desc": "Dash strike that leaves a Mirage; can grant First Art.",
+     "max": "5",
+     "name": "Deadly Mirage",
+     "type": "Dagger"
+    },
+    {
+     "desc": "Dash escape into Cloaking that leaves a Mirage.",
+     "max": "5",
+     "name": "Fading Mirage",
+     "type": "Throwing"
+    },
+    {
+     "desc": "Illusion that makes a skill attack miss, generating Mirages.",
+     "max": "5",
+     "name": "Treacherous Mirage",
+     "type": "Elite Ninja Art"
+    },
+    {
+     "desc": "Summons all three Mirages at once.",
+     "max": "5",
+     "name": "Stalking Mirage",
+     "type": "Mirage"
+    }
+   ]
+  },
+  {
+   "group": "Melee Skills",
+   "skills": [
+    {
+     "desc": "Shadow-blade AoE that triggers Mirage casts by Art pair.",
+     "max": "10",
+     "name": "Prowling Steel",
+     "type": "Dagger"
+    },
+    {
+     "desc": "Applies Death Mark, making all Physical attacks against the target Crit.",
+     "max": "10",
+     "name": "Fatal Steel",
+     "type": "Dagger"
+    }
+   ]
+  },
+  {
+   "group": "Ranged Skills",
+   "skills": [
+    {
+     "desc": "Piercing throw whose cooldown depends on the Throwing Weapon.",
+     "max": "10",
+     "name": "Piercing Shadow",
+     "type": "Throwing"
+    },
+    {
+     "desc": "Ricocheting giant shuriken that consumes all Ninja Arts.",
+     "max": "10",
+     "name": "Refracting Shadow",
+     "type": "Throwing"
+    }
+   ]
+  },
+  {
+   "group": "Magic Skills",
+   "skills": [
+    {
+     "desc": "Fire cone; Third Art makes Mirages cast Blazing Dragon.",
+     "max": "5",
+     "name": "Blazing Howl",
+     "type": "Elite Ninja Art"
+    },
+    {
+     "desc": "Water blast; Third Art makes Mirages cast Winter's Grasp.",
+     "max": "5",
+     "name": "Frigid Wind",
+     "type": "Elite Ninja Art"
+    },
+    {
+     "desc": "Wind lightning barrage; Third Art makes Mirages cast Thunderous Surge.",
+     "max": "5",
+     "name": "Voltaic Call",
+     "type": "Elite Ninja Art"
+    },
+    {
+     "desc": "Earth dragon in a line; Third Art makes Mirages cast Seismic Collapse.",
+     "max": "5",
+     "name": "Raging Earth",
+     "type": "Elite Ninja Art"
+    }
+   ]
+  }
+ ],
+ "Mage": [
+  {
+   "group": "Skills",
+   "skills": [
+    {
+     "desc": "Increases SP regen and lowers SP costs.",
+     "max": "10",
+     "name": "Magical Attunement",
+     "type": "Passive"
+    },
+    {
+     "desc": "Deals Lightning damage with bonus damage against [[Status Effects#Sleep|Sleeping targets.",
+     "max": "10",
+     "name": "Lightning Bolt",
+     "type": "Magical"
+    },
+    {
+     "desc": "Ground-targeted AoE Lightning damage with a chance to inflict Sleep.",
+     "max": "10",
+     "name": "Static Burst",
+     "type": "Magical"
+    },
+    {
+     "desc": "Deals Fire damage with bonus damage against Burning targets.",
+     "max": "10",
+     "name": "Fire Bolt",
+     "type": "Magical"
+    },
+    {
+     "desc": "Enemy-targeted AoE Fire damage with a chance to inflict Burning.",
+     "max": "10",
+     "name": "Fire Ball",
+     "type": "Magical"
+    },
+    {
+     "desc": "Deals Water damage with bonus damage against Chilled targets.",
+     "max": "10",
+     "name": "Cold Bolt",
+     "type": "Magical"
+    },
+    {
+     "desc": "Enemy-targeted AoE Water damage with a chance to inflict Chill.",
+     "max": "10",
+     "name": "Frost Blast",
+     "type": "Magical"
+    }
+   ]
+  }
+ ],
+ "Mastersmith": [
+  {
+   "group": "Autoattack Skills",
+   "skills": [
+    {
+     "desc": "Boosts Burning damage; active window converts attacks to half Burning Damage.",
+     "max": "10",
+     "name": "Meltdown",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Autoattacks gain a chance to splash in a 5x5 area.",
+     "max": "10",
+     "name": "Whirling Axe",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Massive ASPD and damage reduction",
+     "max": "10",
+     "name": "Berserk",
+     "type": "Supportive"
+    }
+   ]
+  },
+  {
+   "group": "Extort Skills",
+   "skills": [
+    {
+     "desc": "Short-cooldown slam that generates Extort.",
+     "max": "10",
+     "name": "Overwhelm",
+     "type": "Physical"
+    },
+    {
+     "desc": "Strips defensive statuses and inflicts Vulnerable.",
+     "max": "10",
+     "name": "Cleave",
+     "type": "Physical"
+    },
+    {
+     "desc": "Consumes all Extort for massive damage and escalating effects.",
+     "max": "10",
+     "name": "Power Swing",
+     "type": "Physical"
+    }
+   ]
+  },
+  {
+   "group": "Crafting Skills",
+   "skills": [
+    {
+     "desc": "Improves the user's Weapon and Armor Modifications.",
+     "max": "10",
+     "name": "Equipment Modification",
+     "type": "Passive"
+    },
+    {
+     "desc": "Crafts devices that replace weapon Random Options with focused bonuses.",
+     "max": "10",
+     "name": "Weapon Modification",
+     "type": "Crafting"
+    },
+    {
+     "desc": "Crafts devices that replace armor Random Options with focused bonuses.",
+     "max": "10",
+     "name": "Armor Modification",
+     "type": "Crafting"
+    }
+   ]
+  }
+ ],
+ "Mechanic": [
+  {
+   "group": "Madogear Skills",
+   "skills": [
+    {
+     "desc": "Boosts Madogear skills and waives their Extort costs while suited.",
+     "max": "10",
+     "name": "Madogear Construction",
+     "type": "Passive"
+    },
+    {
+     "desc": "Massive AoE crush.",
+     "max": "10",
+     "name": "Machine Slam",
+     "type": "Madogear"
+    },
+    {
+     "desc": "Ranged cannon blast, strongest against Stunned targets.",
+     "max": "10",
+     "name": "Arm Cannon",
+     "type": "Madogear"
+    },
+    {
+     "desc": "Extort-fueled defensive Barrier.",
+     "max": "10",
+     "name": "Active Shielding",
+     "type": "Madogear"
+    },
+    {
+     "desc": "Refreshes and empowers Madogear skills at the cost of self-Burning.",
+     "max": "10",
+     "name": "Overdrive",
+     "type": "Madogear"
+    }
+   ]
+  },
+  {
+   "group": "Drone Skills",
+   "skills": [
+    {
+     "desc": "Boosts Drones and waives Drone skill Extort costs outside a Madogear.",
+     "max": "10",
+     "name": "Drone Construction",
+     "type": "Passive"
+    },
+    {
+     "desc": "Melee drone that inflicts Severe Burning; grants ASPD.",
+     "max": "10",
+     "name": "Deploy Combat Drone",
+     "type": "Drone"
+    },
+    {
+     "desc": "Ranged drone that inflicts Blind; grants Defense Pierce.",
+     "max": "10",
+     "name": "Deploy Support Drone",
+     "type": "Drone"
+    },
+    {
+     "desc": "Sends drones berserk and buffs allies' offense.",
+     "max": "10",
+     "name": "Attack Protocol",
+     "type": "Drone"
+    },
+    {
+     "desc": "Puts drones on defense and shields allies.",
+     "max": "10",
+     "name": "Defense Protocol",
+     "type": "Drone"
+    }
+   ]
+  }
+ ],
+ "Merchant": [
+  {
+   "group": "Skills",
+   "skills": [
+    {
+     "desc": "Can Crit, can Stun, deals additional damage to Stunned.",
+     "max": "10",
+     "name": "Crush",
+     "type": "Physical"
+    },
+    {
+     "desc": "Ranged attack that can Stun",
+     "max": "10",
+     "name": "Axe Boomerang",
+     "type": "Physical"
+    },
+    {
+     "desc": "Increases damage of 1H and 2H Axes",
+     "max": "10",
+     "name": "Axe Mastery",
+     "type": "Passive"
+    },
+    {
+     "desc": "Deals damage and generates Extort stacks",
+     "max": "10",
+     "name": "Extort",
+     "type": "Physical"
+    },
+    {
+     "desc": "Consumes Extort stacks to deal massive damage",
+     "max": "10",
+     "name": "Mammonite",
+     "type": "Physical"
+    },
+    {
+     "desc": "Consumes Extort stacks to buff party Crit and ASPD",
+     "max": "10",
+     "name": "Crazy Uproar",
+     "type": "Utility"
+    }
+   ]
+  }
+ ],
+ "Minstrel/Wanderer": [
+  {
+   "group": "Core Skills",
+   "skills": [
+    {
+     "desc": "Instantly sets the user's Rhythm level.",
+     "max": "5",
+     "name": "Improvised Interlude",
+     "type": "Rhythm"
+    },
+    {
+     "desc": "Mass-applies Melodic Mark to enemies and Hypnotic Harmony to allies.",
+     "max": "5",
+     "name": "Desperate Dynamic",
+     "type": "Buff/Debuff"
+    }
+   ]
+  },
+  {
+   "group": "Melodic Mark Skills",
+   "skills": [
+    {
+     "desc": "Curses a target to be struck by the user's note skills.",
+     "max": "5",
+     "name": "Melodic Mark",
+     "type": "Physical"
+    },
+    {
+     "desc": "Detonates all Marks for Physical damage and Internal Bleeding.",
+     "max": "10",
+     "name": "Sonorant Spike",
+     "type": "Physical"
+    },
+    {
+     "desc": "Detonates all Marks for Magic damage and Burning.",
+     "max": "10",
+     "name": "Ruinous Rhapsody",
+     "type": "Magical"
+    },
+    {
+     "desc": "Consumes all Rhythm to detonate every Mark for enormous Hybrid damage.",
+     "max": "10",
+     "name": "Furious Finale",
+     "type": "Finale"
+    }
+   ]
+  },
+  {
+   "group": "Hypnotic Harmony Skills",
+   "skills": [
+    {
+     "desc": "Blesses an ally with Rhythm-scaled stats and marks them for chorus buffs.",
+     "max": "5",
+     "name": "Hypnotic Harmony",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Chorus: Str/Vit, Defense Pierce, and Crit Damage per Rhythm consumed.",
+     "max": "10",
+     "name": "Woeful Warcry",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Chorus: Int/Dex, Magic Pierce, and cast speed per Rhythm consumed.",
+     "max": "10",
+     "name": "Cryptic Cadence",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Chorus: Agi/Luk, Max ASPD, and Cooldown Reduction per Rhythm consumed.",
+     "max": "10",
+     "name": "Eternal Echo",
+     "type": "Supportive"
+    }
+   ]
+  }
+ ],
+ "Monk": [
+  {
+   "group": "Spirit Skills",
+   "skills": [
+    {
+     "desc": "Boosts Spirit skill damage; grants the Discipline status.",
+     "max": "10",
+     "name": "Spiritual Refinement",
+     "type": "Passive"
+    },
+    {
+     "desc": "Armor-piercing strike that gains damage from the target's Defense.",
+     "max": "10",
+     "name": "Soul Piercer",
+     "type": "Spirit"
+    },
+    {
+     "desc": "Long-range spiritual projectile.",
+     "max": "10",
+     "name": "Spiritual Lash",
+     "type": "Spirit"
+    },
+    {
+     "desc": "Finisher: AoE blast that consumes Discipline and Iron Fists.",
+     "max": "10",
+     "name": "Soul Quake",
+     "type": "Spirit"
+    }
+   ]
+  },
+  {
+   "group": "Combo Skills",
+   "skills": [
+    {
+     "desc": "Boosts Fist damage, ASPD, and Hit; grants the Iron Fists status.",
+     "max": "10",
+     "name": "Fist Mastery",
+     "type": "Passive"
+    },
+    {
+     "desc": "Swift three-hit strike.",
+     "max": "10",
+     "name": "Raging Trifecta",
+     "type": "Combo"
+    },
+    {
+     "desc": "Powerful four-hit strike.",
+     "max": "10",
+     "name": "Raging Quadruple Blow",
+     "type": "Combo"
+    },
+    {
+     "desc": "Finisher: single devastating blow that consumes Discipline and Iron Fists.",
+     "max": "10",
+     "name": "Raging Thrust",
+     "type": "Combo"
+    }
+   ]
+  },
+  {
+   "group": "Balance Skills",
+   "skills": [
+    {
+     "desc": "Stacking regen buff for alternating skill types.",
+     "max": "10",
+     "name": "Spiritual Cadence",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Stacking Crit buff for repeating skill types.",
+     "max": "10",
+     "name": "Fury",
+     "type": "Supportive"
+    }
+   ]
+  }
+ ],
+ "Night Watch": [
+  {
+   "group": "Revolver Skills",
+   "skills": [
+    {
+     "desc": "Revolver stance: Slow Potency and enhanced Revolver skills.",
+     "max": "10",
+     "name": "Revolver Specialization",
+     "type": "Revolver"
+    },
+    {
+     "desc": "Revolver dump that interacts with Crimson Marker; generates a Grenade.",
+     "max": "10",
+     "name": "Unload",
+     "type": "Revolver"
+    }
+   ]
+  },
+  {
+   "group": "Rifle Skills",
+   "skills": [
+    {
+     "desc": "Rifle stance: Vulnerable Potency and enhanced Rifle skills.",
+     "max": "10",
+     "name": "Rifle Specialization",
+     "type": "Rifle"
+    },
+    {
+     "desc": "Explosive splash round; consumes Crimson Marker for bonus damage.",
+     "max": "10",
+     "name": "Hammer Round",
+     "type": "Rifle"
+    }
+   ]
+  },
+  {
+   "group": "Shotgun Skills",
+   "skills": [
+    {
+     "desc": "Shotgun stance: Bleeding Damage and enhanced Shotgun skills.",
+     "max": "10",
+     "name": "Shotgun Specialization",
+     "type": "Shotgun"
+    },
+    {
+     "desc": "Heavy slug; consumes Crimson Marker to Stun.",
+     "max": "10",
+     "name": "Slug Shot",
+     "type": "Shotgun"
+    }
+   ]
+  },
+  {
+   "group": "Support Skills",
+   "skills": [
+    {
+     "desc": "Extends the duration of the user's Crimson Marker.",
+     "max": "10",
+     "name": "Crimson Marker",
+     "type": "Passive"
+    },
+    {
+     "desc": "Instantly generates Grenades for Grenade Launcher skills.",
+     "max": "5",
+     "name": "Ammunition Economy",
+     "type": "Grenade Launcher"
+    }
+   ]
+  },
+  {
+   "group": "Grenade Launcher Skills",
+   "skills": [
+    {
+     "desc": "Five-hit fire cone treated as Burning Damage.",
+     "max": "10",
+     "name": "Scorched Earth",
+     "type": "Grenade Launcher"
+    },
+    {
+     "desc": "Triple detonation in widening areas.",
+     "max": "10",
+     "name": "Chain Blast",
+     "type": "Grenade Launcher"
+    },
+    {
+     "desc": "Homing grenades striking only Marked enemies.",
+     "max": "10",
+     "name": "Heavy Salvo",
+     "type": "Grenade Launcher"
+    }
+   ]
+  }
+ ],
+ "Ninja": [
+  {
+   "group": "Dagger Skills",
+   "skills": [
+    {
+     "desc": "Increases damage, double attack chance, and hit rate of daggers.",
+     "max": "10",
+     "name": "Dagger Mastery",
+     "type": "Passive"
+    },
+    {
+     "desc": "Damage that ignores Flee, scales with INT and DEX.",
+     "max": "5",
+     "name": "Flashing Steel",
+     "type": "Physical"
+    },
+    {
+     "desc": "Ranged dash attack, scaled with INT and DEX.",
+     "max": "5",
+     "name": "Soaring Steel",
+     "type": "Physical"
+    }
+   ]
+  },
+  {
+   "group": "Throwing Skills",
+   "skills": [
+    {
+     "desc": "Increases skill levels of skills gained by equipping subweapons.",
+     "max": "10",
+     "name": "Throwing Mastery",
+     "type": "Passive"
+    },
+    {
+     "desc": "Ranged attack that also backslides user, scales with STR and INT.",
+     "max": "5",
+     "name": "Departing Shadow",
+     "type": "Physical"
+    },
+    {
+     "desc": "Copies the skill of the current equipped subweapon, ignoring it's cooldown.",
+     "max": "5",
+     "name": "Echoing Shadow",
+     "type": "Physical"
+    }
+   ]
+  },
+  {
+   "group": "Magic Skills",
+   "skills": [
+    {
+     "desc": "Increases SP regeneration, SP item healing, and lowers SP costs",
+     "max": "10",
+     "name": "Magical Attunement",
+     "type": "Passive"
+    },
+    {
+     "desc": "Deals Fire damage, scales with STR and DEX. Cast at level of Magical Attunement.",
+     "max": "1",
+     "name": "Flaming Petals",
+     "type": "Magical"
+    },
+    {
+     "desc": "Deals Water damage, scales with STR and DEX. Cast at level of Magical Attunement.",
+     "max": "1",
+     "name": "Freezing Spear",
+     "type": "Magical"
+    },
+    {
+     "desc": "Deals Wind damage, scales with STR and DEX. Cast at level of Magical Attunement.",
+     "max": "1",
+     "name": "Wind Blade",
+     "type": "Magical"
+    },
+    {
+     "desc": "Deals Earth damage, scales with STR and DEX. Cast at level of Magical Attunement.",
+     "max": "1",
+     "name": "Stone Lance",
+     "type": "Magical"
+    }
+   ]
+  },
+  {
+   "group": "Advanced Ninjutsu Skills",
+   "skills": [
+    {
+     "desc": "Increases damage of all Advanced Ninjutsu Arts.",
+     "max": "5",
+     "name": "Advanced Ninjutsu Mastery",
+     "type": "Passive"
+    },
+    {
+     "desc": "Deals AoE Fire damage around the user, scales with STR and DEX. Inflicts Burn.",
+     "max": "1",
+     "name": "Blazing Dragon",
+     "type": "Magical"
+    },
+    {
+     "desc": "Deals AoE Water damage around the user, scales with STR and DEX. Inflicts Chilled.",
+     "max": "1",
+     "name": "Winter's Grasp",
+     "type": "Magical"
+    },
+    {
+     "desc": "Deals AoE Wind damage around the user, scales with STR and DEX. Inflicts Sleep.",
+     "max": "1",
+     "name": "Thunderous Surge",
+     "type": "Magical"
+    },
+    {
+     "desc": "Deals AoE Earth damage around the user, scales with STR and DEX. Inflicts Vulnerable.",
+     "max": "1",
+     "name": "Seismic Collapse",
+     "type": "Magical"
+    }
+   ]
+  },
+  {
+   "group": "Subweapon Skills",
+   "skills": [
+    {
+     "desc": "Can hit multiple times if First Art and/or Third Art are active.",
+     "max": "10",
+     "name": "Throw Shuriken",
+     "type": "Physical"
+    },
+    {
+     "desc": "Applies statuses if First Art and/or Third Art are active.",
+     "max": "10",
+     "name": "Throw Kunai",
+     "type": "Physical"
+    },
+    {
+     "desc": "Hits in AoE around the target if First Art and/or Third Art are active.",
+     "max": "10",
+     "name": "Throw Huuma Shuriken",
+     "type": "Physical"
+    }
+   ]
+  }
+ ],
+ "Paladin": [
+  {
+   "group": "Auras & Support",
+   "skills": [
+    {
+     "desc": "Holy weapon endow; grants offensive effects to all Paladin skills.",
+     "max": "5",
+     "name": "Castigating Aura",
+     "type": "Aura"
+    },
+    {
+     "desc": "Holy armor endow; grants defensive effects to all Paladin skills.",
+     "max": "5",
+     "name": "Providence",
+     "type": "Aura"
+    },
+    {
+     "desc": "Consecrated ground that buffs allies and damages enemies.",
+     "max": "5",
+     "name": "Sanctify",
+     "type": "Supportive"
+    }
+   ]
+  },
+  {
+   "group": "Spear Skills",
+   "skills": [
+    {
+     "desc": "Holy strike, strongest against Demon, Undead, and Angel races.",
+     "max": "5",
+     "name": "Banishing Strike",
+     "type": "Physical"
+    },
+    {
+     "desc": "AoE sweep with bonus damage against Bleeding or Blind enemies.",
+     "max": "5",
+     "name": "Overbrand",
+     "type": "Physical"
+    },
+    {
+     "desc": "Ultimate: massive AoE with aura-based bonuses.",
+     "max": "10",
+     "name": "Grand Banishment",
+     "type": "Physical"
+    },
+    {
+     "desc": "Ultimate: sacrifices HP for a huge single-target burst.",
+     "max": "10",
+     "name": "Martyr's Reckoning",
+     "type": "Physical"
+    }
+   ]
+  },
+  {
+   "group": "Shield Skills",
+   "skills": [
+    {
+     "desc": "Multi-hit shield throw.",
+     "max": "5",
+     "name": "Rapid Smiting",
+     "type": "Physical"
+    },
+    {
+     "desc": "Ranged holy beam with aura-based status effects.",
+     "max": "5",
+     "name": "Ray of Judgement",
+     "type": "Physical"
+    },
+    {
+     "desc": "Ultimate: heavy smite that inflicts extended Vulnerable.",
+     "max": "10",
+     "name": "Hesperus Lit",
+     "type": "Physical"
+    },
+    {
+     "desc": "Ultimate: defense-ignoring burst that can convert HP to damage.",
+     "max": "10",
+     "name": "Gloria Domini",
+     "type": "Physical"
+    }
+   ]
+  }
+ ],
+ "Priest": [
+  {
+   "group": "Grace Skills",
+   "skills": [
+    {
+     "desc": "Empowers Grace skills; links Grace casts to Authority skill levels.",
+     "max": "10",
+     "name": "Divine Grace",
+     "type": "Passive"
+    },
+    {
+     "desc": "Endows party weapons with the Holy property.",
+     "max": "10",
+     "name": "Aspersio",
+     "type": "Grace"
+    },
+    {
+     "desc": "Party AoE heal over time.",
+     "max": "10",
+     "name": "Renovatio",
+     "type": "Grace"
+    },
+    {
+     "desc": "Cleanses damaging statuses from the party and grants brief immunity.",
+     "max": "10",
+     "name": "Impositio Manus",
+     "type": "Grace"
+    },
+    {
+     "desc": "Boosts Healing Power and autocasts Smite on attacks.",
+     "max": "10",
+     "name": "Offertorium",
+     "type": "Grace"
+    },
+    {
+     "desc": "Halves all damage taken by an ally for a short duration.",
+     "max": "10",
+     "name": "Kyrie Eleison",
+     "type": "Grace"
+    }
+   ]
+  },
+  {
+   "group": "Authority Skills",
+   "skills": [
+    {
+     "desc": "Empowers Authority skills; links Authority casts to Grace skill levels.",
+     "max": "10",
+     "name": "Divine Authority",
+     "type": "Passive"
+    },
+    {
+     "desc": "Burst damage, strongest against Angel, Demon, and Undead races.",
+     "max": "10",
+     "name": "Banishing Light",
+     "type": "Authority"
+    },
+    {
+     "desc": "Holy damage over time, enhanced against Dark, Undead, and Ghost property.",
+     "max": "10",
+     "name": "Searing Light",
+     "type": "Authority"
+    },
+    {
+     "desc": "AoE Holy damage that inflicts Holy Vulnerability.",
+     "max": "10",
+     "name": "Purifying Light",
+     "type": "Authority"
+    },
+    {
+     "desc": "Weapon-property strike with a chance to inflict Vulnerable.",
+     "max": "10",
+     "name": "Austere Light",
+     "type": "Authority"
+    },
+    {
+     "desc": "Doubles damage the target takes for a set number of hits.",
+     "max": "10",
+     "name": "Divine Judgment",
+     "type": "Authority"
+    }
+   ]
+  }
+ ],
+ "Ranger": [
+  {
+   "group": "Marksman Skills",
+   "skills": [
+    {
+     "desc": "Falcon strike that auto-triggers on bow attacks.",
+     "max": "10",
+     "name": "Hawk Rush",
+     "type": "Physical"
+    },
+    {
+     "desc": "Consumes the target's damaging statuses for a huge single hit.",
+     "max": "10",
+     "name": "Punishing Bolt",
+     "type": "Physical"
+    },
+    {
+     "desc": "Wide AoE arrow rain that inflicts Slow.",
+     "max": "10",
+     "name": "Gale Storm",
+     "type": "Physical"
+    }
+   ]
+  },
+  {
+   "group": "Trap Skills",
+   "skills": [
+    {
+     "desc": "Extends trap duration and placement range.",
+     "max": "10",
+     "name": "Advanced Trap Mastery",
+     "type": "Passive"
+    },
+    {
+     "desc": "DoT trap that inflicts Slow, scaling with Slow Potency.",
+     "max": "5",
+     "name": "Wind Trap",
+     "type": "Trap"
+    },
+    {
+     "desc": "DoT trap treated as Burning Damage.",
+     "max": "5",
+     "name": "Flame Trap",
+     "type": "Trap"
+    },
+    {
+     "desc": "DoT trap that inflicts Internal Bleeding.",
+     "max": "5",
+     "name": "Stone Trap",
+     "type": "Trap"
+    },
+    {
+     "desc": "DoT trap treated as Poison Damage.",
+     "max": "5",
+     "name": "Venom Trap",
+     "type": "Trap"
+    }
+   ]
+  },
+  {
+   "group": "Nature Rituals",
+   "skills": [
+    {
+     "desc": "Reduces Ritual cast times and empowers their effects.",
+     "max": "10",
+     "name": "Ritual Mastery",
+     "type": "Passive"
+    },
+    {
+     "desc": "Wind up, Water down; raises Max ASPD.",
+     "max": "5",
+     "name": "Roaring Winds",
+     "type": "Nature Ritual"
+    },
+    {
+     "desc": "Fire up, Earth down; raises Crit Rate.",
+     "max": "5",
+     "name": "Blazing Heat",
+     "type": "Nature Ritual"
+    },
+    {
+     "desc": "Earth up, Wind down; amplifies status damage taken.",
+     "max": "5",
+     "name": "Eternal Decay",
+     "type": "Nature Ritual"
+    },
+    {
+     "desc": "Water up, Fire down; grants Def/MDef Pierce.",
+     "max": "5",
+     "name": "Glacial Chill",
+     "type": "Nature Ritual"
+    }
+   ]
+  }
+ ],
+ "Rebel": [
+  {
+   "group": "Support Skills",
+   "skills": [
+    {
+     "desc": "Massive Perfect Dodge buff at the cost of Movement Speed.",
+     "max": "5",
+     "name": "Bullet Time",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Reduces all cooldowns to 1 second while immobilized.",
+     "max": "5",
+     "name": "Gunslinger's Gambit",
+     "type": "Supportive"
+    }
+   ]
+  },
+  {
+   "group": "Revolver Skills",
+   "skills": [
+    {
+     "desc": "Backsliding shot; upgrades Slow to Internal Bleeding.",
+     "max": "5",
+     "name": "Disengage",
+     "type": "Revolver"
+    },
+    {
+     "desc": "Teleports behind the target; upgrades Slow to Vulnerable.",
+     "max": "10",
+     "name": "Rapid Blitz",
+     "type": "Revolver"
+    }
+   ]
+  },
+  {
+   "group": "Rifle Skills",
+   "skills": [
+    {
+     "desc": "Line pierce; upgrades Vulnerable to Internal Bleeding.",
+     "max": "5",
+     "name": "Penetrating Shot",
+     "type": "Rifle"
+    },
+    {
+     "desc": "Three-round burst; upgrades Vulnerable to Slow.",
+     "max": "10",
+     "name": "Burst Fire",
+     "type": "Rifle"
+    }
+   ]
+  },
+  {
+   "group": "Shotgun Skills",
+   "skills": [
+    {
+     "desc": "Burning shrapnel AoE; upgrades Internal Bleeding to Slow.",
+     "max": "5",
+     "name": "Blazing Shell",
+     "type": "Shotgun"
+    },
+    {
+     "desc": "Explosive slug; upgrades Internal Bleeding to Vulnerable.",
+     "max": "10",
+     "name": "Shattering Blast",
+     "type": "Shotgun"
+    }
+   ]
+  },
+  {
+   "group": "Gatling Gun Skills",
+   "skills": [
+    {
+     "desc": "Spinning point-blank AoE with knockback and Slow.",
+     "max": "10",
+     "name": "Lead Barrage",
+     "type": "Gatling"
+    },
+    {
+     "desc": "Ten-volley saturation fire with its own Hit chance.",
+     "max": "10",
+     "name": "Spray and Pray",
+     "type": "Gatling"
+    },
+    {
+     "desc": "Sustained damage-over-time zone.",
+     "max": "10",
+     "name": "Pyrrhic Rainstorm",
+     "type": "Gatling"
+    }
+   ]
+  }
+ ],
+ "Rogue": [
+  {
+   "group": "Predatory Skills",
+   "skills": [
+    {
+     "desc": "Enhances user's DEX as well as potency of Blind and Vulnerable.",
+     "max": "10",
+     "name": "Predatory Instinct",
+     "type": "Stance"
+    },
+    {
+     "desc": "Swift melee attack that applies Vulnerable and immediately Cloaks the rogue.",
+     "max": "10",
+     "name": "Disorient",
+     "type": "Physical"
+    },
+    {
+     "desc": "Jumps behind target and deals additional damage if target is Vulnerable and/or Blind.",
+     "max": "10",
+     "name": "Back Stab",
+     "type": "Physical"
+    },
+    {
+     "desc": "Attacks from Hiding to deal damage to a wide area and apply Vulnerable, Blind.",
+     "max": "10",
+     "name": "Ambush",
+     "type": "Physical"
+    }
+   ]
+  },
+  {
+   "group": "Malicious Skills",
+   "skills": [
+    {
+     "desc": "Enhances user's LUK as well as potency of Bleed, Burning, and Poison",
+     "max": "10",
+     "name": "Malicious Instinct",
+     "type": "Stance"
+    },
+    {
+     "desc": "Melee attack that tries to apply Bleed, Burning, and Poison",
+     "max": "10",
+     "name": "Intimidate",
+     "type": "Physical"
+    },
+    {
+     "desc": "Melee attack that tries to apply Blind, Slow, and Vulnerable",
+     "max": "10",
+     "name": "Debilitate",
+     "type": "Physical"
+    },
+    {
+     "desc": "Deals moderate physical damage, hits an additional time per Status Effect the target is suffering from.",
+     "max": "10",
+     "name": "Eliminate",
+     "type": "Physical"
+    }
+   ]
+  },
+  {
+   "group": "Utility Skills",
+   "skills": [
+    {
+     "desc": "Allows the user to move while Hiding and increases it's duration.",
+     "max": "5",
+     "name": "Tunnel Drive",
+     "type": "Passive"
+    },
+    {
+     "desc": "Instantly backslide into Hiding and leave behind an exploding clone.",
+     "max": "5",
+     "name": "Dramatic Exit",
+     "type": "Utility"
+    }
+   ]
+  }
+ ],
+ "Royal Guard": [
+  {
+   "group": "Spear Skills",
+   "skills": [
+    {
+     "desc": "AoE sweep that inflicts Blind.",
+     "max": "10",
+     "name": "Radiant Sweep",
+     "type": "Physical"
+    },
+    {
+     "desc": "Ranged spear throw that inflicts Bleeding and pins Blind targets.",
+     "max": "10",
+     "name": "Impale",
+     "type": "Physical"
+    },
+    {
+     "desc": "Line AoE amplified by Bleeding, Blind, and Vulnerable.",
+     "max": "10",
+     "name": "Cannon Spear",
+     "type": "Physical"
+    }
+   ]
+  },
+  {
+   "group": "Shield Skills",
+   "skills": [
+    {
+     "desc": "Shield slam that generates a protective Barrier.",
+     "max": "10",
+     "name": "Shield Press",
+     "type": "Physical"
+    },
+    {
+     "desc": "Ranged shield throw that generates a protective Barrier.",
+     "max": "10",
+     "name": "Shield Shooting",
+     "type": "Physical"
+    },
+    {
+     "desc": "Devastating blow amplified by an active Barrier.",
+     "max": "10",
+     "name": "Burst Slash",
+     "type": "Physical"
+    }
+   ]
+  },
+  {
+   "group": "Utility Skills",
+   "skills": [
+    {
+     "desc": "Sacrifices HP to shield the whole party.",
+     "max": "5",
+     "name": "Guardian Angel",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Damage-reduction stance that heals missing HP when it ends.",
+     "max": "5",
+     "name": "Guardian Stance",
+     "type": "Stance"
+    },
+    {
+     "desc": "Autoattacks gain a chance to deal double damage.",
+     "max": "5",
+     "name": "Assault Break",
+     "type": "Supportive"
+    },
+    {
+     "desc": "ASPD stance that ends in a burst based on damage dealt.",
+     "max": "5",
+     "name": "Assault Stance",
+     "type": "Supportive"
+    }
+   ]
+  }
+ ],
+ "Rune Knight": [
+  {
+   "group": "Core Skills",
+   "skills": [
+    {
+     "desc": "Boosts the effectiveness of all Rune Knight skills.",
+     "max": "10",
+     "name": "Rune Research",
+     "type": "Passive"
+    },
+    {
+     "desc": "Enables crafting of slottable, single-use Rune Stones.",
+     "max": "10",
+     "name": "Rune Inscription",
+     "type": "Crafting"
+    }
+   ]
+  },
+  {
+   "group": "Attack Skills",
+   "skills": [
+    {
+     "desc": "Icy AoE treated as Bleeding Damage.",
+     "max": "5",
+     "name": "Winter Razor",
+     "type": "Physical"
+    },
+    {
+     "desc": "Fiery AoE scaling with Burning Damage bonuses.",
+     "max": "5",
+     "name": "Ignition Break",
+     "type": "Physical"
+    },
+    {
+     "desc": "Ranged fire AoE that inflicts Burning.",
+     "max": "5",
+     "name": "Burning Breath",
+     "type": "Physical"
+    },
+    {
+     "desc": "Explosive strike that spreads the target's statuses to nearby enemies.",
+     "max": "5",
+     "name": "Storm Blast",
+     "type": "Physical"
+    },
+    {
+     "desc": "Heavy blow that always inflicts Vulnerable.",
+     "max": "5",
+     "name": "Crush Strike",
+     "type": "Physical"
+    }
+   ]
+  },
+  {
+   "group": "Buff Skills",
+   "skills": [
+    {
+     "desc": "Autoattacks become Bleeding Damage and can autocast Rend.",
+     "max": "5",
+     "name": "Bloodthirst",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Massively reduces the next skill's cooldown.",
+     "max": "5",
+     "name": "Refresh",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Converts Burning Damage bonuses into Physical skill damage.",
+     "max": "5",
+     "name": "Burning Rage",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Rapid self-heal over time.",
+     "max": "5",
+     "name": "Tenacity",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Barrier that absorbs all non-Status damage.",
+     "max": "5",
+     "name": "Millennium Shield",
+     "type": "Supportive"
+    }
+   ]
+  }
+ ],
+ "Sage": [
+  {
+   "group": "Elemental Skills",
+   "skills": [
+    {
+     "desc": "Improves damage caused by and resistance to Fire, Water, Wind, and Earth damage.",
+     "max": "10",
+     "name": "Elemental Mastery",
+     "type": "Passive"
+    },
+    {
+     "desc": "Increases the party's movement speed and Flee.",
+     "max": "10",
+     "name": "Tailwind",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Summons a violent, persistent gale that does Wind damage over time to an area.",
+     "max": "5",
+     "name": "Whirlwind",
+     "type": "Magical"
+    },
+    {
+     "desc": "Flash-freezes an area, Chilling or Freezing already chilled enemies.",
+     "max": "10",
+     "name": "Chilling Frost",
+     "type": "Magical"
+    },
+    {
+     "desc": "Summons a persistent torrent of water, that does Water damage over time to an area.",
+     "max": "5",
+     "name": "Deluge",
+     "type": "Magical"
+    },
+    {
+     "desc": "Creates a wall of intense flame that prevents movement through it and inflicts Burn on contact.",
+     "max": "10",
+     "name": "Fire Wall",
+     "type": "Magical"
+    },
+    {
+     "desc": "Summons a raging inferno that does Fire damage over time to an area.",
+     "max": "5",
+     "name": "Inferno",
+     "type": "Magical"
+    }
+   ]
+  },
+  {
+   "group": "Utility Skills",
+   "skills": [
+    {
+     "desc": "Instantly teleports the user to a targeted cell in sight.",
+     "max": "5",
+     "name": "Transposition Spell",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Casts a counter-spell that consumes incoming magic.",
+     "max": "5",
+     "name": "Spell Eater",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Enchants the ground with a field that massively reduces incoming magical damage.",
+     "max": "10",
+     "name": "Antimagic Field",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Endows the target's weapon, changing the elemental property of their attacks and enhancing magic of that element.",
+     "max": "5",
+     "name": "Endow Weapon",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Endows the target's armor with an element, increasing resistance to that element while reducing resistance to the opposite element.",
+     "max": "5",
+     "name": "Endow Armor",
+     "type": "Magical"
+    }
+   ]
+  }
+ ],
+ "Scholar": [
+  {
+   "group": "Utility Skills",
+   "skills": [
+    {
+     "desc": "Move and attack while casting, at reduced speed.",
+     "max": "5",
+     "name": "Free Cast",
+     "type": "Passive"
+    },
+    {
+     "desc": "Siphons SP from an enemy and inflicts Breach.",
+     "max": "5",
+     "name": "Soul Siphon",
+     "type": "Utility"
+    },
+    {
+     "desc": "Instantly reduces the whole party's active cooldowns.",
+     "max": "10",
+     "name": "Time Shift",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Converts Max HP into instant SP.",
+     "max": "5",
+     "name": "Indulge",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Makes an ally's next several skill casts free.",
+     "max": "5",
+     "name": "Soul Infusion",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Converts remaining SP into a party-wide barrier.",
+     "max": "10",
+     "name": "Psychic Barrier",
+     "type": "Supportive"
+    }
+   ]
+  },
+  {
+   "group": "Offensive Skills",
+   "skills": [
+    {
+     "desc": "SP-scaled bolt that can inflict Severe Burning through Breach.",
+     "max": "10",
+     "name": "Soul Burn",
+     "type": "Magical"
+    },
+    {
+     "desc": "SP-scaled AoE with bonus damage against Breached targets.",
+     "max": "10",
+     "name": "Force Barrage",
+     "type": "Magical"
+    },
+    {
+     "desc": "SP-scaled DoT storm that inflicts Breach.",
+     "max": "10",
+     "name": "Psychic Storm",
+     "type": "Magical"
+    },
+    {
+     "desc": "SP-scaled sigil that immobilizes enemies, and the user.",
+     "max": "10",
+     "name": "Force Sigil",
+     "type": "Magical"
+    }
+   ]
+  }
+ ],
+ "Shadow Chaser": [
+  {
+   "group": "Strike Skills",
+   "skills": [
+    {
+     "desc": "Bleeding strike that also Bleeds the user.",
+     "max": "10",
+     "name": "Needle Burst",
+     "type": "Physical"
+    },
+    {
+     "desc": "Burning strike that also Burns the user.",
+     "max": "10",
+     "name": "Scalding Blade",
+     "type": "Physical"
+    },
+    {
+     "desc": "Poison strike that also Poisons the user.",
+     "max": "10",
+     "name": "Plague Touch",
+     "type": "Physical"
+    },
+    {
+     "desc": "Consumes the user's own statuses to amplify and spread them.",
+     "max": "10",
+     "name": "Malicious Reprisal",
+     "type": "Physical"
+    }
+   ]
+  },
+  {
+   "group": "Mark Skills",
+   "skills": [
+    {
+     "desc": "Inflicts or detonates Bleeding over an area.",
+     "max": "10",
+     "name": "Bloodletter's Mark",
+     "type": "Debuff"
+    },
+    {
+     "desc": "Inflicts or detonates Burning over an area.",
+     "max": "10",
+     "name": "Arsonist's Mark",
+     "type": "Debuff"
+    },
+    {
+     "desc": "Inflicts or detonates Poison over an area.",
+     "max": "10",
+     "name": "Noxious Mark",
+     "type": "Debuff"
+    },
+    {
+     "desc": "Storm of random negative statuses over an area.",
+     "max": "10",
+     "name": "Maelstrom",
+     "type": "Debuff"
+    }
+   ]
+  },
+  {
+   "group": "Utility Skills",
+   "skills": [
+    {
+     "desc": "Cleanses the user's damaging statuses, healing per status removed.",
+     "max": "5",
+     "name": "Chaser's Respite",
+     "type": "Support"
+    },
+    {
+     "desc": "Maximizes status application for Rogue and Shadow Chaser skills.",
+     "max": "5",
+     "name": "Chaser's Instinct",
+     "type": "Buff"
+    }
+   ]
+  }
+ ],
+ "Sky Emperor": [
+  {
+   "group": "Daylight Skills",
+   "skills": [
+    {
+     "desc": "Splashing sun strike; inflicts Burning or Internal Bleeding by state.",
+     "max": "10",
+     "name": "Sunrise",
+     "type": "Daylight"
+    },
+    {
+     "desc": "Single-target strike that enhances the target's damaging statuses.",
+     "max": "10",
+     "name": "Brilliant Noon",
+     "type": "Daylight"
+    },
+    {
+     "desc": "Heavy strike that refreshes the Daylight skills and advances the Celestial State.",
+     "max": "10",
+     "name": "Duskfall",
+     "type": "Daylight"
+    }
+   ]
+  },
+  {
+   "group": "Nightfall Skills",
+   "skills": [
+    {
+     "desc": "Point-blank moon AoE; inflicts Blind or Vulnerable by state.",
+     "max": "10",
+     "name": "Moonrise",
+     "type": "Nightfall"
+    },
+    {
+     "desc": "Whirling AoE kick that refreshes status durations.",
+     "max": "10",
+     "name": "Dead of Night",
+     "type": "Nightfall"
+    },
+    {
+     "desc": "AoE burst that refreshes the Nightfall skills and advances the Celestial State.",
+     "max": "10",
+     "name": "Breaking Dawn",
+     "type": "Nightfall"
+    }
+   ]
+  },
+  {
+   "group": "Celestial Skills",
+   "skills": [
+    {
+     "desc": "Harmony state that turns Cosmic Union autocasts into Sky Emperor skills.",
+     "max": "5",
+     "name": "Celestial Miracle",
+     "type": "Celestial"
+    },
+    {
+     "desc": "Daylight ultimate: rains repeated damage across a wide area.",
+     "max": "10",
+     "name": "Celestial Judgement",
+     "type": "Celestial"
+    },
+    {
+     "desc": "Nightfall ultimate: one devastating single-target blow.",
+     "max": "10",
+     "name": "Celestial Blast",
+     "type": "Celestial"
+    }
+   ]
+  },
+  {
+   "group": "Capstone Skill",
+   "skills": [
+    {
+     "desc": "Purges the Celestial State to make all attacks against the user miss.",
+     "max": "5",
+     "name": "Encroaching Darkness",
+     "type": "Celestial"
+    }
+   ]
+  }
+ ],
+ "Sniper": [
+  {
+   "group": "Utility Skills",
+   "skills": [
+    {
+     "desc": "Massive damage reduction per Preparation Counter.",
+     "max": "5",
+     "name": "Sniper's Resolve",
+     "type": "Defensive"
+    },
+    {
+     "desc": "Repositions without sacrificing Preparation Counters.",
+     "max": "5",
+     "name": "Tactical Retreat",
+     "type": "Movement"
+    },
+    {
+     "desc": "Marks one enemy for maximum damage dealt and minimum taken.",
+     "max": "5",
+     "name": "Called Shot",
+     "type": "Debuff"
+    }
+   ]
+  },
+  {
+   "group": "Opener Skills",
+   "skills": [
+    {
+     "desc": "Generates Preparation; inflicts Blind.",
+     "max": "10",
+     "name": "Shrouding Shot",
+     "type": "Physical"
+    },
+    {
+     "desc": "Generates Preparation; knocks the target back.",
+     "max": "10",
+     "name": "Hammer Shot",
+     "type": "Physical"
+    },
+    {
+     "desc": "Generates Preparation; inflicts Internal Bleeding.",
+     "max": "10",
+     "name": "Razor Shot",
+     "type": "Physical"
+    },
+    {
+     "desc": "Generates Preparation; inflicts Vulnerable.",
+     "max": "10",
+     "name": "Piercing Shot",
+     "type": "Physical"
+    }
+   ]
+  },
+  {
+   "group": "Finisher Skills",
+   "skills": [
+    {
+     "desc": "Preparation-fueled AoE that Slows and exposes all targets.",
+     "max": "10",
+     "name": "Arrow Storm",
+     "type": "Physical"
+    },
+    {
+     "desc": "Preparation-fueled AoE that can Stun.",
+     "max": "10",
+     "name": "Heaven's Arrow",
+     "type": "Physical"
+    },
+    {
+     "desc": "Preparation-fueled AoE that Burns and Blinds.",
+     "max": "10",
+     "name": "Explosive Barrage",
+     "type": "Physical"
+    },
+    {
+     "desc": "Preparation-fueled AoE that can put enemies to Sleep.",
+     "max": "10",
+     "name": "Numbing Volley",
+     "type": "Physical"
+    }
+   ]
+  }
+ ],
+ "Sorcerer": [
+  {
+   "group": "Fire Skills",
+   "skills": [
+    {
+     "desc": "Summons the fire spirit: Fire MDef Pierce, reduced Water Resistance.",
+     "max": "5",
+     "name": "Summon Ardor",
+     "type": "Summon"
+    },
+    {
+     "desc": "Fire AoE that triggers the spirit's Attack Skill.",
+     "max": "10",
+     "name": "Agni's Wrath",
+     "type": "Magical"
+    },
+    {
+     "desc": "Burning-damage field that triggers the spirit's Support Skill.",
+     "max": "10",
+     "name": "Agni's Heat",
+     "type": "Support"
+    }
+   ]
+  },
+  {
+   "group": "Water Skills",
+   "skills": [
+    {
+     "desc": "Summons the water spirit: Water MDef Pierce, reduced Wind Resistance.",
+     "max": "5",
+     "name": "Summon Diluvio",
+     "type": "Summon"
+    },
+    {
+     "desc": "Water AoE that triggers the spirit's Attack Skill.",
+     "max": "10",
+     "name": "Aqua's Breath",
+     "type": "Magical"
+    },
+    {
+     "desc": "Healing rain that triggers the spirit's Support Skill.",
+     "max": "10",
+     "name": "Aqua's Relief",
+     "type": "Support"
+    }
+   ]
+  },
+  {
+   "group": "Wind Skills",
+   "skills": [
+    {
+     "desc": "Summons the wind spirit: Wind MDef Pierce, reduced Earth Resistance.",
+     "max": "5",
+     "name": "Summon Procella",
+     "type": "Summon"
+    },
+    {
+     "desc": "Line-piercing Wind attack that triggers the spirit's Attack Skill.",
+     "max": "10",
+     "name": "Ventus's Gale",
+     "type": "Magical"
+    },
+    {
+     "desc": "Party ASPD and cast-speed buff that triggers the spirit's Support Skill.",
+     "max": "10",
+     "name": "Ventus's Haste",
+     "type": "Support"
+    }
+   ]
+  },
+  {
+   "group": "Earth Skills",
+   "skills": [
+    {
+     "desc": "Summons the earth spirit: Earth MDef Pierce, reduced Fire Resistance.",
+     "max": "5",
+     "name": "Summon Terra Motus",
+     "type": "Summon"
+    },
+    {
+     "desc": "Earth AoE that triggers the spirit's Attack Skill.",
+     "max": "10",
+     "name": "Terra's Fangs",
+     "type": "Magical"
+    },
+    {
+     "desc": "Party damage-absorbing barrier that triggers the spirit's Support Skill.",
+     "max": "10",
+     "name": "Terra's Shield",
+     "type": "Support"
+    }
+   ]
+  }
+ ],
+ "Soul Ascetic": [
+  {
+   "group": "Ritual Skills",
+   "skills": [
+    {
+     "desc": "Instantly gains AP; buffs Crit Rate and reduces Fixed Cast Times.",
+     "max": "5",
+     "name": "Ritual of Invocation",
+     "type": "Ritual"
+    },
+    {
+     "desc": "Instantly drains AP; buffs Attack Speed and reduces SP costs.",
+     "max": "5",
+     "name": "Ritual of Binding",
+     "type": "Ritual"
+    }
+   ]
+  },
+  {
+   "group": "Talisman Skills",
+   "skills": [
+    {
+     "desc": "Grants an ally a Barrier that strengthens near 100 AP.",
+     "max": "10",
+     "name": "Talisman of Protection",
+     "type": "Talisman"
+    },
+    {
+     "desc": "Boosts an ally's Vulnerable and Breach Potency.",
+     "max": "10",
+     "name": "Talisman of War",
+     "type": "Talisman"
+    }
+   ]
+  },
+  {
+   "group": "Magical Curse Skills",
+   "skills": [
+    {
+     "desc": "Ghost magic strike that inflicts Breach.",
+     "max": "5",
+     "name": "Curse of Absorption",
+     "type": "Magical"
+    },
+    {
+     "desc": "Ghost magic damage over time; can inflict Slow.",
+     "max": "5",
+     "name": "Curse of Doom",
+     "type": "Magical"
+    },
+    {
+     "desc": "Huge Ghost magic AoE that can Slow or Sleep enemies.",
+     "max": "10",
+     "name": "Curse of Sealing",
+     "type": "Magical"
+    }
+   ]
+  },
+  {
+   "group": "Physical Curse Skills",
+   "skills": [
+    {
+     "desc": "Ghost physical strike that inflicts Vulnerable.",
+     "max": "5",
+     "name": "Curse of Destruction",
+     "type": "Physical Ranged"
+    },
+    {
+     "desc": "Ghost physical strike that inflicts Blind.",
+     "max": "5",
+     "name": "Curse of Brilliance",
+     "type": "Physical Ranged"
+    },
+    {
+     "desc": "Huge Ghost physical AoE that can Blind or Stun enemies.",
+     "max": "10",
+     "name": "Curse of Annihilation",
+     "type": "Physical Ranged"
+    }
+   ]
+  }
+ ],
+ "Soul Linker": [
+  {
+   "group": "Core Skills",
+   "skills": [
+    {
+     "desc": "Boosts Hit and cast speed with Souls; unlocks all skills regardless of weapon requirements.",
+     "max": "10",
+     "name": "Soul Harmony",
+     "type": "Passive"
+    }
+   ]
+  },
+  {
+   "group": "Vicious Possession Skills",
+   "skills": [
+    {
+     "desc": "Converts MATK to ATK; Int and Dex grant Crit Rate and Crit Damage.",
+     "max": "10",
+     "name": "Vicious Possession",
+     "type": "Possession"
+    },
+    {
+     "desc": "Ghost property strike with knockback and a Vulnerable chance.",
+     "max": "10",
+     "name": "Spectral Thrust",
+     "type": "Physical"
+    },
+    {
+     "desc": "Ghost property AoE that increases Physical damage taken by enemies struck.",
+     "max": "10",
+     "name": "Spectral Claw",
+     "type": "Physical"
+    },
+    {
+     "desc": "Blocks a single Physical hit; restores HP on a successful block.",
+     "max": "10",
+     "name": "Spectral Veil",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Drains own HP to restore an ally's SP over time.",
+     "max": "10",
+     "name": "Spectral Toll",
+     "type": "Supportive"
+    }
+   ]
+  },
+  {
+   "group": "Arcane Possession Skills",
+   "skills": [
+    {
+     "desc": "Converts ATK to MATK; Str and Vit grant cast speed and SP Regen.",
+     "max": "10",
+     "name": "Arcane Possession",
+     "type": "Possession"
+    },
+    {
+     "desc": "Ghost property magic strike with a Slow chance.",
+     "max": "10",
+     "name": "Soul Pressure",
+     "type": "Magical"
+    },
+    {
+     "desc": "Ghost property magic AoE that increases Magic damage taken by enemies struck.",
+     "max": "10",
+     "name": "Soul Convergence",
+     "type": "Magical"
+    },
+    {
+     "desc": "Reflects a single Magic attack; restores SP on a successful reflect.",
+     "max": "10",
+     "name": "Soul Mirror",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Drains own SP to rapidly restore an ally's HP over time.",
+     "max": "10",
+     "name": "Soul Reshaping",
+     "type": "Supportive"
+    }
+   ]
+  }
+ ],
+ "Soul Reaper": [
+  {
+   "group": "Mechanics",
+   "skills": [
+    {
+     "desc": "Explains the Spirit mechanic: generation, the 10-Spirit cap, and the Max HP upkeep cost.",
+     "max": "0",
+     "name": "Evil Spirit Mastery",
+     "type": "Informational"
+    }
+   ]
+  },
+  {
+   "group": "Spirit Skills",
+   "skills": [
+    {
+     "desc": "Single-target Ghost magic that inflicts Breach; generates 1 Spirit.",
+     "max": "10",
+     "name": "Spiteful Spirit",
+     "type": "Magical"
+    },
+    {
+     "desc": "Ghost magic AoE that inflicts Slow; generates 3 Spirits.",
+     "max": "10",
+     "name": "Tormented Spirit",
+     "type": "Magical"
+    },
+    {
+     "desc": "Huge Ghost magic blast; stronger against debuffed enemies; generates 6 Spirits.",
+     "max": "10",
+     "name": "Doomed Spirit",
+     "type": "Magical"
+    }
+   ]
+  },
+  {
+   "group": "Shade Skills",
+   "skills": [
+    {
+     "desc": "Single-target Ghost strike that inflicts Vulnerable; generates 1 Spirit.",
+     "max": "10",
+     "name": "Spiteful Shade",
+     "type": "Physical"
+    },
+    {
+     "desc": "Ghost strike AoE that inflicts Blind; generates 3 Spirits.",
+     "max": "10",
+     "name": "Tormented Shade",
+     "type": "Physical"
+    },
+    {
+     "desc": "Massive Ghost AoE; stronger against debuffed enemies; generates 6 Spirits.",
+     "max": "10",
+     "name": "Doomed Shade",
+     "type": "Physical Ranged"
+    }
+   ]
+  },
+  {
+   "group": "Soul Skills",
+   "skills": [
+    {
+     "desc": "Consumes all Spirits for an Atk/Matk buff.",
+     "max": "10",
+     "name": "Soul Eater",
+     "type": "Spirit"
+    },
+    {
+     "desc": "Consumes all Spirits to heal an ally.",
+     "max": "10",
+     "name": "Soul Sacrifice",
+     "type": "Spirit"
+    },
+    {
+     "desc": "Consumes all Spirits to grant the party a Barrier.",
+     "max": "10",
+     "name": "Soul Division",
+     "type": "Spirit"
+    },
+    {
+     "desc": "Consumes all Spirits to reduce the user's active cooldowns.",
+     "max": "10",
+     "name": "Soul Binding",
+     "type": "Spirit"
+    }
+   ]
+  }
+ ],
+ "Stalker": [
+  {
+   "group": "Utility Skills",
+   "skills": [
+    {
+     "desc": "Halves all skill cooldowns; ends early if the user takes skill damage.",
+     "max": "5",
+     "name": "Stalker's Instinct",
+     "type": "Buff"
+    },
+    {
+     "desc": "Blocks a Physical skill with level-based rewards.",
+     "max": "5",
+     "name": "Lightning Reflexes",
+     "type": "Supportive"
+    }
+   ]
+  },
+  {
+   "group": "Predatory Skills",
+   "skills": [
+    {
+     "desc": "Cycles Blind, Vulnerable, and Bleeding.",
+     "max": "10",
+     "name": "Deft Stab",
+     "type": "Physical"
+    },
+    {
+     "desc": "Gap-closing surprise attack that inflicts Blind.",
+     "max": "10",
+     "name": "Blindside",
+     "type": "Physical"
+    },
+    {
+     "desc": "AoE from Hiding that briefly enables free Ambush casts.",
+     "max": "10",
+     "name": "Breakout",
+     "type": "Physical"
+    },
+    {
+     "desc": "Ultimate: debuffs healthy targets, executes weakened ones.",
+     "max": "10",
+     "name": "Fate Sealer",
+     "type": "Physical"
+    }
+   ]
+  },
+  {
+   "group": "Malicious Skills",
+   "skills": [
+    {
+     "desc": "Bouncing knife that always inflicts Bleeding.",
+     "max": "10",
+     "name": "Ricochet Knife",
+     "type": "Physical"
+    },
+    {
+     "desc": "AoE lash that always inflicts Poison.",
+     "max": "10",
+     "name": "Scorpion Lash",
+     "type": "Physical"
+    },
+    {
+     "desc": "AoE blast that always inflicts Burning.",
+     "max": "10",
+     "name": "Fire Cracker",
+     "type": "Physical"
+    },
+    {
+     "desc": "Ultimate: amplified by each damaging status on the target.",
+     "max": "10",
+     "name": "Annihilate",
+     "type": "Physical"
+    }
+   ]
+  }
+ ],
+ "Star Emperor": [
+  {
+   "group": "Solar Skills",
+   "skills": [
+    {
+     "desc": "Focused strike that detonates Burning for five ticks at once.",
+     "max": "10",
+     "name": "Solar Flash",
+     "type": "Physical Melee"
+    },
+    {
+     "desc": "Self-centered blast with a chance to inflict Burning.",
+     "max": "10",
+     "name": "Solar Prominence",
+     "type": "Physical Melee"
+    }
+   ]
+  },
+  {
+   "group": "Lunar Skills",
+   "skills": [
+    {
+     "desc": "Lifestealing strike that grants Cloaking.",
+     "max": "10",
+     "name": "Lunar Eclipse",
+     "type": "Physical Melee"
+    },
+    {
+     "desc": "Devastating lifestealing strike; double damage from Cloaking.",
+     "max": "10",
+     "name": "Lunar Advent",
+     "type": "Physical Melee"
+    }
+   ]
+  },
+  {
+   "group": "Stellar Skills",
+   "skills": [
+    {
+     "desc": "Quick strike that Marks the target, reducing their Defense.",
+     "max": "10",
+     "name": "Stellar Flicker",
+     "type": "Physical Melee"
+    },
+    {
+     "desc": "Meteor barrage that Marks all enemies around the user.",
+     "max": "10",
+     "name": "Stellar Tempest",
+     "type": "Physical Melee"
+    }
+   ]
+  },
+  {
+   "group": "Umbral Skills",
+   "skills": [
+    {
+     "desc": "High-crit shadow lash striking all nearby enemies.",
+     "max": "10",
+     "name": "Umbral Lash",
+     "type": "Physical Ranged"
+    },
+    {
+     "desc": "Shadow wave that strikes and Blinds nearby enemies.",
+     "max": "10",
+     "name": "Umbral Howl",
+     "type": "Physical Melee"
+    }
+   ]
+  },
+  {
+   "group": "Cosmic Skills",
+   "skills": [
+    {
+     "desc": "Massive all-stat buff; Star Emperor skills briefly cost no SP.",
+     "max": "10",
+     "name": "Cosmic Revelation",
+     "type": "Buff"
+    },
+    {
+     "desc": "Alignment-neutral blast that gains every active Alignment bonus.",
+     "max": "10",
+     "name": "Cosmic Nova",
+     "type": "Physical Melee"
+    }
+   ]
+  }
+ ],
+ "Star Gladiator": [
+  {
+   "group": "Core Skills",
+   "skills": [
+    {
+     "desc": "Increases damage and Hit with Books; passively raises Luk.",
+     "max": "10",
+     "name": "Cosmic Insight",
+     "type": "Passive"
+    },
+    {
+     "desc": "Toggle: autocasts skills at Level 1 with all Alignment bonuses, and locks Max SP to 1.",
+     "max": "10",
+     "name": "Cosmic Union",
+     "type": "Alignment"
+    }
+   ]
+  },
+  {
+   "group": "Solar Skills",
+   "skills": [
+    {
+     "desc": "Boosts Burning damage dealt and Burn/Chill resistance.",
+     "max": "10",
+     "name": "Solar Heat",
+     "type": "Alignment"
+    },
+    {
+     "desc": "Blazing kick with a high chance to inflict Burning.",
+     "max": "10",
+     "name": "Solar Pulse",
+     "type": "Physical"
+    }
+   ]
+  },
+  {
+   "group": "Lunar Skills",
+   "skills": [
+    {
+     "desc": "Reduces status damage taken and resists Bleeding/Vulnerable.",
+     "max": "10",
+     "name": "Lunar Protection",
+     "type": "Alignment"
+    },
+    {
+     "desc": "Heavy blow that cleanses statuses and restores HP under Lunar Protection.",
+     "max": "10",
+     "name": "Lunar Glow",
+     "type": "Physical"
+    }
+   ]
+  },
+  {
+   "group": "Stellar Skills",
+   "skills": [
+    {
+     "desc": "Grants Hit and card-like Defense Pierce.",
+     "max": "10",
+     "name": "Stellar Blessing",
+     "type": "Alignment"
+    },
+    {
+     "desc": "Leaping strike that repeats against nearby enemies under Stellar Blessing.",
+     "max": "10",
+     "name": "Stellar Barrage",
+     "type": "Physical"
+    }
+   ]
+  },
+  {
+   "group": "Umbral Skills",
+   "skills": [
+    {
+     "desc": "Boosts Crit Rate and Crit Damage.",
+     "max": "10",
+     "name": "Umbral Veil",
+     "type": "Alignment"
+    },
+    {
+     "desc": "Ground-targeted AoE, guaranteed to Crit under Umbral Veil.",
+     "max": "10",
+     "name": "Umbral Blade",
+     "type": "Physical"
+    }
+   ]
+  }
+ ],
+ "Sura": [
+  {
+   "group": "Stigmata Skills",
+   "skills": [
+    {
+     "desc": "Stigmata damage passive; active empowers the Monk Combo skills.",
+     "max": "10",
+     "name": "Burning Faith",
+     "type": "Combo"
+    },
+    {
+     "desc": "Stigmata defense passive; active empowers the Monk Spirit skills.",
+     "max": "10",
+     "name": "Indomitable Faith",
+     "type": "Spirit"
+    },
+    {
+     "desc": "Applies Stigmata stacks to all nearby enemies.",
+     "max": "10",
+     "name": "Judge's Conviction",
+     "type": "Debuff"
+    }
+   ]
+  },
+  {
+   "group": "Combo Skills",
+   "skills": [
+    {
+     "desc": "Quick jab that applies Stigmata.",
+     "max": "10",
+     "name": "Furious Thrust",
+     "type": "Combo"
+    },
+    {
+     "desc": "Rapid strikes; Iron Fists refreshes Furious Thrust.",
+     "max": "10",
+     "name": "Furious Barrage",
+     "type": "Combo"
+    },
+    {
+     "desc": "Combo finisher applying 3 Stigmata stacks.",
+     "max": "10",
+     "name": "Furious Execution",
+     "type": "Combo Finisher"
+    },
+    {
+     "desc": "Auto-casts the Monk Combo skills at Stigmata-based levels.",
+     "max": "5",
+     "name": "Flash Combo",
+     "type": "Combo"
+    },
+    {
+     "desc": "Unlearnable finisher appended to Flash Combo at 10 stacks.",
+     "max": "0",
+     "name": "Furious Guillotine",
+     "type": "Finisher"
+    }
+   ]
+  },
+  {
+   "group": "Spirit Skills",
+   "skills": [
+    {
+     "desc": "Burning spirit strike that applies Stigmata.",
+     "max": "10",
+     "name": "Zealous Hammer",
+     "type": "Spirit"
+    },
+    {
+     "desc": "Point-blank spirit AoE; Discipline refreshes Zealous Hammer.",
+     "max": "10",
+     "name": "Zealous Echo",
+     "type": "Spirit"
+    },
+    {
+     "desc": "Spirit finisher applying 3 Stigmata stacks.",
+     "max": "10",
+     "name": "Zealous Rage",
+     "type": "Spirit Finisher"
+    },
+    {
+     "desc": "Auto-casts the Monk Spirit skills at Stigmata-based levels.",
+     "max": "5",
+     "name": "Last Exorcism",
+     "type": "Spirit"
+    },
+    {
+     "desc": "Unlearnable inferno appended to Last Exorcism at 10 stacks.",
+     "max": "0",
+     "name": "Zealous Pyre",
+     "type": "Finisher"
+    }
+   ]
+  }
+ ],
+ "Swordsman": [
+  {
+   "group": "Skills",
+   "skills": [
+    {
+     "desc": "Inflicts Bleed",
+     "max": "10",
+     "name": "Slash",
+     "type": "Physical"
+    },
+    {
+     "desc": "AoE, heals self on hit",
+     "max": "10",
+     "name": "Lash Out",
+     "type": "Physical"
+    },
+    {
+     "desc": "Reduces incoming damage",
+     "max": "10",
+     "name": "Endure",
+     "type": "Utility"
+    },
+    {
+     "desc": "Inflicts Vulnerable",
+     "max": "10",
+     "name": "Provoke",
+     "type": "Utility"
+    },
+    {
+     "desc": "Increases damage of 1H/2H Swords",
+     "max": "10",
+     "name": "Sword Mastery",
+     "type": "Passive"
+    },
+    {
+     "desc": "Increases natural HP regen",
+     "max": "10",
+     "name": "Improved Constitution",
+     "type": "Passive"
+    }
+   ]
+  }
+ ],
+ "Taekwon": [
+  {
+   "group": "Skills",
+   "skills": [
+    {
+     "desc": "Increases STR, Hit, Unarmed Damage",
+     "max": "10",
+     "name": "Martial Training",
+     "type": "Passive"
+    },
+    {
+     "desc": "Increases VIT, healing potion recovery",
+     "max": "10",
+     "name": "Martial Endurance",
+     "type": "Passive"
+    },
+    {
+     "desc": "Increases INT, SP potion recovery",
+     "max": "10",
+     "name": "Martial Discipline",
+     "type": "Passive"
+    },
+    {
+     "desc": "Increases DEX, DEF pierce",
+     "max": "10",
+     "name": "Martial Precision",
+     "type": "Passive"
+    },
+    {
+     "desc": "Increases AGI, flee",
+     "max": "10",
+     "name": "Martial Agility",
+     "type": "Passive"
+    },
+    {
+     "desc": "Cannot miss or be guarded against, grants Counter Stance (all kicks cannot miss)",
+     "max": "10",
+     "name": "Counter Kick",
+     "type": "Physical"
+    },
+    {
+     "desc": "Stuns, grants Axe Stance (all kicks apply debuffs)",
+     "max": "10",
+     "name": "Axe Kick",
+     "type": "Physical"
+    },
+    {
+     "desc": "AoE centered on user, grants Tornado Stance (all kicks become AoE)",
+     "max": "10",
+     "name": "Tornado Kick",
+     "type": "Physical"
+    },
+    {
+     "desc": "Dramatically increases ASPD, grants Roundhouse Stance",
+     "max": "10",
+     "name": "Roundhouse Kick",
+     "type": "Physical"
+    },
+    {
+     "desc": "Quest skill, when learned, massively increases Kick skill damage, locks user from advancing job",
+     "max": "10",
+     "name": "Taekwon Mission",
+     "type": "Passive"
+    },
+    {
+     "desc": "Massive damage, with even greater damage per Stance active. Requires Taekwon Mission.",
+     "max": "10",
+     "name": "Demolishing Kick",
+     "type": "Physical"
+    }
+   ]
+  }
+ ],
+ "Thief": [
+  {
+   "group": "Skills",
+   "skills": [
+    {
+     "desc": "Increases damage, Double Attack rate of Daggers",
+     "max": "10",
+     "name": "Dagger Mastery",
+     "type": "Passive"
+    },
+    {
+     "desc": "Damage and inflicts Blind",
+     "max": "10",
+     "name": "Sand Attack",
+     "type": "Physical"
+    },
+    {
+     "desc": "Poison element damage and inflicts Poison",
+     "max": "10",
+     "name": "Envenom",
+     "type": "Physical"
+    },
+    {
+     "desc": "Increases Flee and Movement Speed",
+     "max": "10",
+     "name": "Nimbleness",
+     "type": "Passive"
+    },
+    {
+     "desc": "Avoids most physical and magical attacks for a short duration",
+     "max": "10",
+     "name": "Hiding",
+     "type": "Utility"
+    },
+    {
+     "desc": "Instantly moves backward a fixed distance",
+     "max": "10",
+     "name": "Back Slide",
+     "type": "Utility"
+    }
+   ]
+  }
+ ],
+ "Warlock": [
+  {
+   "group": "Core Skills",
+   "skills": [
+    {
+     "desc": "Converts all magic to Ghost, Undead, or Dark property, at a price.",
+     "max": "3",
+     "name": "Void Infusion",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Converts Max HP into Void Spheres.",
+     "max": "5",
+     "name": "Void Channeling",
+     "type": "Supportive"
+    }
+   ]
+  },
+  {
+   "group": "Phantasmal Skills",
+   "skills": [
+    {
+     "desc": "Ghost bolt that inflicts Breach and can generate Void Spheres.",
+     "max": "10",
+     "name": "Phantasmal Burst",
+     "type": "Magical"
+    },
+    {
+     "desc": "Ghost AoE amplified by held Void Spheres.",
+     "max": "10",
+     "name": "Phantasmal Crush",
+     "type": "Magical"
+    },
+    {
+     "desc": "Sphere-consuming Ghost DoT scaled by Breach Potency.",
+     "max": "10",
+     "name": "Phantasmal Burden",
+     "type": "Magical"
+    }
+   ]
+  },
+  {
+   "group": "Death Skills",
+   "skills": [
+    {
+     "desc": "Undead bolt that heals the user.",
+     "max": "10",
+     "name": "Death Eater",
+     "type": "Magical"
+    },
+    {
+     "desc": "Undead DoT zone with sphere-based life steal.",
+     "max": "10",
+     "name": "Death Circle",
+     "type": "Magical"
+    },
+    {
+     "desc": "Sphere-consuming Undead AoE that heals per sphere.",
+     "max": "10",
+     "name": "Grasping Death",
+     "type": "Magical"
+    }
+   ]
+  },
+  {
+   "group": "Abyssal Skills",
+   "skills": [
+    {
+     "desc": "Dark bolt that restores SP against Burning targets.",
+     "max": "10",
+     "name": "Abyssal Flare",
+     "type": "Magical"
+    },
+    {
+     "desc": "Dark AoE that restores SP per held sphere.",
+     "max": "10",
+     "name": "Abyssal Burst",
+     "type": "Magical"
+    },
+    {
+     "desc": "Sphere-consuming Dark nuke that refunds SP per sphere.",
+     "max": "10",
+     "name": "Abyssal Comet",
+     "type": "Magical"
+    }
+   ]
+  }
+ ],
+ "Wizard": [
+  {
+   "group": "Elemental Skills",
+   "skills": [
+    {
+     "desc": "Deals constant Fire damage over time in an area around the caster, applying Fire Vulnerability.",
+     "max": "10",
+     "name": "Cloak of Flame",
+     "type": "Utility"
+    },
+    {
+     "desc": "Deals massive Fire area damage, inflicting Burning.",
+     "max": "10",
+     "name": "Crimson Rock",
+     "type": "Magical"
+    },
+    {
+     "desc": "Blasts the target area with Water damage, inflicting Chill and Water Vulnerability.",
+     "max": "10",
+     "name": "Freezing Breath",
+     "type": "Magical"
+    },
+    {
+     "desc": "Conjures a blizzard in target area, dealing Water damage and inflicting Chill.",
+     "max": "10",
+     "name": "Storm Gust",
+     "type": "Magical"
+    },
+    {
+     "desc": "Fires a ball of Wind energy at a target, applying Wind Vulnerability.",
+     "max": "10",
+     "name": "Jupitel Thunder",
+     "type": "Magical"
+    },
+    {
+     "desc": "Summons a barrage of lightning at a target area, inflicting Sleep.",
+     "max": "10",
+     "name": "Lord of Vermillion",
+     "type": "Magical"
+    },
+    {
+     "desc": "Erupts a stone out of the ground, dealing Earth damage and bonus damage against Bleeding targets.",
+     "max": "10",
+     "name": "Earth Spike",
+     "type": "Magical"
+    },
+    {
+     "desc": "Causes the ground to explode, dealing Earth damage and inflicting Internal Bleeding.",
+     "max": "10",
+     "name": "Heaven's Drive",
+     "type": "Magical"
+    },
+    {
+     "desc": "Uses the caster's MATK to deal Physical damage bolts.",
+     "max": "10",
+     "name": "Force Pulse",
+     "type": "Physical"
+    },
+    {
+     "desc": "Distorts gravity in an area, dealing Physical damage and applying Vulnerable.",
+     "max": "10",
+     "name": "Gravitational Collapse",
+     "type": "Physical"
+    }
+   ]
+  },
+  {
+   "group": "Utility Skills",
+   "skills": [
+    {
+     "desc": "Dramatically speeds up the Fixed Cast Time of all spells for a short duration.",
+     "max": "5",
+     "name": "Rapid Incantation",
+     "type": "Supportive"
+    },
+    {
+     "desc": "Deals a portion of incoming damage to the user's SP instead of HP.",
+     "max": "5",
+     "name": "Energy Coat",
+     "type": "Supportive"
+    }
+   ]
+  }
+ ]
+}

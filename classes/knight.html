@@ -174,26 +174,81 @@
     </div>
   </section>
 
-  <section class="section-pad-sm">
+  <section class="section-pad-sm" id="skills">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Skill names and effects are kept in English because that is how they appear in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
-      <div class="kw-legend" style="margin-bottom:1.1rem"><span class="kw-bleed">Bleeding</span><span class="kw-vuln">Vulnerable</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
-      <ul class="skill-list">
-        <li class="skill"><strong>Two-Handed Sword Mastery</strong><p>Passive. Mastery for Two-handed swords. Damage and Accuracy with Two-Handed Swords. Two-Handed Swords typically gain bonus Crit Rate as a mastery bonus.</p></li>
-        <li class="skill"><strong>Rend</strong><p>Sword Skill. Simple follow-up skill to Slash. Deals additional damage to enemies that are <b class="kw kw-bleed">Bleeding</b> or <b class="kw kw-vuln">Vulnerable</b>. Inflicts <b class="kw kw-bleed">Bleeding</b> if the enemy is already <b class="kw kw-vuln">Vulnerable</b>, or <b class="kw kw-vuln">Vulnerable</b> if the enemy is already <b class="kw kw-bleed">Bleeding</b>.</p></li>
-        <li class="skill"><strong>Devastating Blow</strong><p>Sword Finisher skill. Strikes all enemies in a small area, dealing additional hits to <b class="kw kw-bleed">Bleeding</b> targets and refreshing the duration of their <b class="kw kw-bleed">Bleeding</b> effects.</p></li>
-        <li class="skill"><strong>Quicken</strong><p>Sword skill. Maximizes the user's Attack Speed and increases their Hit and Crit Rate for five seconds, but blocks the usage of skills while active.</p></li>
-        <li class="skill"><strong>Spear Mastery</strong><p>Passive. Mastery for spears. Increases damage and accuracy with spears, both one- and two-handed. Spears typically gain bonus <b class="kw kw-vuln">Vulnerable</b> Potency as a mastery bonus.</p></li>
-        <li class="skill"><strong>Pierce</strong><p>Spear attack with bonus Defense Pierce. Enemies suffering from <b class="kw kw-bleed">Bleeding</b> or <b class="kw kw-vuln">Vulnerable</b> statuses take extra hits.</p></li>
-        <li class="skill"><strong>Spear Stab</strong><p>Targets a distant enemy (4 cells range), then hits all enemies between them and the caster (including the target). Has a chance to inflict the <b class="kw kw-vuln">Vulnerable</b> status, and deals additional damage to targets that are already <b class="kw kw-vuln">Vulnerable</b>.</p></li>
-        <li class="skill"><strong>Brandish Spear</strong><p>Performs a large AoE in front of the user, dealing heavy damage. <b class="kw kw-vuln">Vulnerable</b> targets have their <b class="kw kw-vuln">Vulnerable</b> duration refreshed and take additional damage.</p></li>
-        <li class="skill"><strong>Armor Mastery</strong><p>Passive. Improves the physical defenses of the user when not wearing a shield.</p></li>
-        <li class="skill"><strong>Deflect</strong><p>The user takes a defensive stance, blocking all physical attacks for a short duration. Requires a Two-Handed Sword or Two-Handed Spear.</p></li>
-      </ul>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-vuln">Vulnerable</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-support" data-i18n="cls.t.support">Support</span><span class="sk-passive" data-i18n="cls.t.passive">Passive</span></div>
+
+      <div class="skill-branch">
+        <h3 class="branch-title">Sword Skills<span>4 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-passive" id="s-two-handed-sword-mastery">
+            <div class="sk-top"><strong>Two-Handed Sword Mastery</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Increases damage and Hit with 2H swords.</p>
+            <p class="sk-body">Mastery for Two-handed swords. Damage and Accuracy with Two-Handed Swords. Two-Handed Swords typically gain bonus Crit Rate as a mastery bonus.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-quicken">
+            <div class="sk-top"><strong>Quicken</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Dramatically increases offensive stats for a shot duration.</p>
+            <p class="sk-body">Sword skill. Maximizes the user's Attack Speed and increases their Hit and Crit Rate for five seconds, but blocks the usage of skills while active.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-rend">
+            <div class="sk-top"><strong>Rend</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Deals damage and applies <b class="kw kw-bleed">Bleed</b> or <b class="kw kw-vuln">Vulnerable</b></p>
+            <p class="sk-body">Simple follow-up skill to Slash. Deals additional damage to enemies that are <b class="kw kw-bleed">Bleeding</b> or <b class="kw kw-vuln">Vulnerable</b>. Inflicts <b class="kw kw-bleed">Bleeding</b> if the enemy is already <b class="kw kw-vuln">Vulnerable</b>, or <b class="kw kw-vuln">Vulnerable</b> if the enemy is already <b class="kw kw-bleed">Bleeding</b>.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-devastating-blow">
+            <div class="sk-top"><strong>Devastating Blow</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">AoE Damage and refreshes <b class="kw kw-bleed">Bleeding</b> duration.</p>
+            <p class="sk-body">Sword Finisher skill. Strikes all enemies in a small area, dealing additional hits to <b class="kw kw-bleed">Bleeding</b> targets and refreshing the duration of their <b class="kw kw-bleed">Bleeding</b> effects.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">Spear Skills<span>4 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-passive" id="s-spear-mastery">
+            <div class="sk-top"><strong>Spear Mastery</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Increases damage and Hit with spears.</p>
+            <p class="sk-body">Mastery for spears. Increases damage and accuracy with spears, both one- and two-handed. Spears typically gain bonus <b class="kw kw-vuln">Vulnerable</b> Potency as a mastery bonus.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-pierce">
+            <div class="sk-top"><strong>Pierce</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Defense-piercing attack.</p>
+            <p class="sk-body">Spear attack with bonus Defense Pierce. Enemies suffering from <b class="kw kw-bleed">Bleeding</b> or <b class="kw kw-vuln">Vulnerable</b> statuses take extra hits.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-spear-stab">
+            <div class="sk-top"><strong>Spear Stab</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Long range stab that applies <b class="kw kw-vuln">Vulnerable</b>.</p>
+            <p class="sk-body">Targets a distant enemy (4 cells range), then hits all enemies between them and the caster (including the target). Has a chance to inflict the <b class="kw kw-vuln">Vulnerable</b> status, and deals additional damage to targets that are already <b class="kw kw-vuln">Vulnerable</b>.</p>
+          </li>
+          <li class="skill-card sk-physical" id="s-brandish-spear">
+            <div class="sk-top"><strong>Brandish Spear</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">AoE Damage and refreshes <b class="kw kw-vuln">Vulnerable</b> duration.</p>
+            <p class="sk-body">Performs a large AoE in front of the user, dealing heavy damage. <b class="kw kw-vuln">Vulnerable</b> targets have their <b class="kw kw-vuln">Vulnerable</b> duration refreshed and take additional damage.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-branch">
+        <h3 class="branch-title">2H Weapon Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
+        <ul class="skill-grid">
+          <li class="skill-card sk-passive" id="s-armor-mastery">
+            <div class="sk-top"><strong>Armor Mastery</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Passively increases defense while not wearing a shield.</p>
+            <p class="sk-body">Improves the physical defenses of the user when not wearing a shield.</p>
+          </li>
+          <li class="skill-card sk-support" id="s-deflect">
+            <div class="sk-top"><strong>Deflect</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <p class="sk-short">Blocks all physical attacks for a short duration.</p>
+            <p class="sk-body">The user takes a defensive stance, blocking all physical attacks for a short duration. Requires a Two-Handed Sword or Two-Handed Spear.</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 
