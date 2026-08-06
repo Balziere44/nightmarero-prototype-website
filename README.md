@@ -12,6 +12,10 @@ static host and it works.
 .
 ├── index.html               landing page
 ├── classes.html             class hub, filter + search over all 55
+├── quiz.html                class personality test
+├── database.html            items and cards
+├── mvps.html                boss altars, summon lists and drops
+├── quests.html              spoiler quest walkthroughs
 ├── download.html            client download and install help
 ├── classes/                 55 generated class pages
 ├── assets/
@@ -276,6 +280,65 @@ Two things to know about the source data:
 Category names differ slightly between the two gear docs (`GATLINGS` versus
 `GATLING GUNS`). `CATEGORY_ALIASES` in `build_database.py` folds those
 together so the filter does not list near-duplicates.
+
+## MVP altars
+
+`mvps.html` lists every summonable boss: the map its altar is on, the two item
+lists that open it, its drops, and the card it leaves behind.
+
+```bash
+python tools/fetch_mvps.py       # the CSV tabs
+python tools/fetch_mvp_art.py    # the pictures, with their anchor cells
+python tools/build_mvps.py
+```
+
+The source sheet is a two column visual grid rather than a table, so
+`build_mvps.py` reads it as a grid: it finds cells starting with `MVP:`, works
+out which half of the page they are on, and takes everything under them until
+the next boss on that side.
+
+Three things about the source are worth knowing:
+
+- **The pictures are floating images**, so the CSV export cannot see them.
+  `fetch_mvp_art.py` downloads the workbook as xlsx instead, where every
+  drawing carries the row and column it is anchored to, and writes those
+  coordinates to `tools/data/mvp-art.json`. That is how each minimap and each
+  drop table screenshot ends up filed under the right boss.
+- **The drop tables only exist as screenshots.** They are transcribed by hand
+  into `tools/data/mvp-drops.json` so the page can show real, searchable text.
+  The screenshot stays in the card as well, so the transcription can be
+  checked against it. 31 of the 43 bosses have one; the rest are blank in the
+  sheet.
+- **Champion items are marked by cell colour**, which the CSV export loses.
+  The build recognises them by name instead, against the champion drop tab,
+  and marks them gold. `ITEM_ALIASES` in `build_mvps.py` covers the handful of
+  names that are spelled differently on the two tabs.
+
+MVP cards go into the item database rather than living here, under their own
+`MVP Card` category, so one search covers every card on the server.
+
+## Quests
+
+`quests.html` collects the quests that have no NPC pointing at them. Everything
+sits behind a reveal button, and the choice is remembered in `localStorage`,
+because a fair number of players would rather work these out themselves.
+
+```bash
+python tools/build_quests.py
+```
+
+Each quest is one tab in the sheet: a column of steps with screenshots dropped
+between them. Screenshots are attached to the step above them, using the same
+anchor rows as the MVP page.
+
+The sheet is written in Portuguese. `tools/data/quest-text.json` holds the
+English for each line, keyed by the original, and anything without a
+translation falls through unchanged, so a new line shows up untranslated
+rather than disappearing. `TABLES` in `build_quests.py` marks the two tabs
+that hold a reference table instead of a step list.
+
+The potion recipes come from a player made wiki rather than from Twilight, and
+are labelled as such on the page along with the date they were last touched.
 
 ## The class personality test
 

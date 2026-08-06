@@ -53,6 +53,31 @@
     });
   }
 
+  /* ------------------------------------------------- 3b. nav dropdown */
+
+  /* Hover already opens it in CSS. This is for keyboard and touch, where
+     there is no hover to work with. */
+  var dropBtns = $$('.nav-drop-btn');
+  if (dropBtns.length) {
+    var closeDrops = function (except) {
+      dropBtns.forEach(function (b) {
+        if (b !== except) b.setAttribute('aria-expanded', 'false');
+      });
+    };
+    dropBtns.forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var open = btn.getAttribute('aria-expanded') === 'true';
+        closeDrops(btn);
+        btn.setAttribute('aria-expanded', String(!open));
+      });
+    });
+    document.addEventListener('click', function () { closeDrops(null); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeDrops(null);
+    });
+  }
+
   /* --------------------------------------------------------- 4. countdown */
 
   /* Friday 7 August 2026, 20:00 Brasilia time (UTC-3) = 23:00 UTC. */

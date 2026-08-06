@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quest walkthroughs, spoilers included | Nightmare RO</title>
+<meta name="description" content="Step by step routes for the hidden quests on Nightmare RO: challenge dungeon keys, the Fallen Hero chain, Celine Kimi, relic gear enchants and potion crafting.">
+<link rel="canonical" href="https://nightmarero.pages.dev/quests.html">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#07060a" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4f1ee" media="(prefers-color-scheme: light)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Nightmare RO">
+<meta property="og:url" content="https://nightmarero.pages.dev/quests.html">
+<meta property="og:title" content="Quest walkthroughs, spoilers included | Nightmare RO">
+<meta property="og:description" content="Step by step routes for the hidden quests on Nightmare RO: challenge dungeon keys, the Fallen Hero chain, Celine Kimi, relic gear enchants and potion crafting.">
+<meta property="og:image" content="https://nightmarero.pages.dev/assets/social/og-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Quest walkthroughs, spoilers included | Nightmare RO">
+<meta name="twitter:description" content="Step by step routes for the hidden quests on Nightmare RO: challenge dungeon keys, the Fallen Hero chain, Celine Kimi, relic gear enchants and potion crafting.">
+<meta name="twitter:image" content="https://nightmarero.pages.dev/assets/social/og-cover.jpg">
+<link rel="icon" href="assets/img/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/img/icon-180.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>
+(function () {
+  try {
+    var t = localStorage.getItem('nm-theme');
+    if (!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    document.documentElement.dataset.theme = t;
+  } catch (e) {}
+})();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nightmarero.pages.dev/" },
+    { "@type": "ListItem", "position": 2, "name": "Database", "item": "https://nightmarero.pages.dev/database.html" },
+    { "@type": "ListItem", "position": 3, "name": "Quests", "item": "https://nightmarero.pages.dev/quests.html" }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+<svg width="0" height="0" aria-hidden="true" style="position:absolute">
+  <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.3A8.6 8.6 0 0 1 9.7 3.5a8.6 8.6 0 1 0 10.8 10.8Z"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.7 3.9 6.1 3.9 9s-1.3 6.3-3.9 9c-2.6-2.7-3.9-6.1-3.9-9S9.4 5.7 12 3Z"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-discord" viewBox="0 0 24 24" fill="currentColor"><path d="M19.3 5.3A16.9 16.9 0 0 0 15.1 4l-.3.6a12.6 12.6 0 0 1 3.7 1.9 15.5 15.5 0 0 0-12.9 0 12.6 12.6 0 0 1 3.7-1.9L9 4a16.9 16.9 0 0 0-4.2 1.3C2.1 9.3 1.4 13.2 1.7 17a17 17 0 0 0 5.2 2.6l1.1-1.7a11 11 0 0 1-1.8-.9l.4-.3a12.1 12.1 0 0 0 10.4 0l.4.3a11 11 0 0 1-1.8.9l1.1 1.7A17 17 0 0 0 22 17c.4-4.4-.7-8.3-2.7-11.7ZM8.4 14.7c-1 0-1.9-.9-1.9-2.1s.8-2.1 1.9-2.1 1.9 1 1.9 2.1-.8 2.1-1.9 2.1Zm7.2 0c-1 0-1.9-.9-1.9-2.1s.8-2.1 1.9-2.1 1.9 1 1.9 2.1-.8 2.1-1.9 2.1Z"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7.5 10.5 12 15l4.5-4.5M4 17v2.5a1.5 1.5 0 0 0 1.5 1.5h13a1.5 1.5 0 0 0 1.5-1.5V17"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4.5A1.5 1.5 0 0 1 5.5 3H19v15H5.5A1.5 1.5 0 0 0 4 19.5Z"/><path d="M4 19.5A1.5 1.5 0 0 1 5.5 21H19v-3"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12.5 5.5 19 12l-6.5 6.5"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="11" cy="11" r="6.4"/><path d="m16 16 4.5 4.5"/></symbol>
+  <symbol id="i-image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="15" rx="2"/><circle cx="8.5" cy="10" r="1.6"/><path d="m4 17 5-4.5 4 3.5 3-2.5 4 3.5"/></symbol>
+</svg>
+<header class="site-header" id="siteHeader">
+  <div class="shell header-inner">
+    <a class="brand" href="index.html" aria-label="Nightmare RO, home">
+      <img src="assets/img/logo.webp" alt="Nightmare RO" width="180" height="38" fetchpriority="high">
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html#server" data-i18n="nav.server">The server</a>
+      <a href="classes.html" data-i18n="nav.classes">Classes</a>
+      <a href="quiz.html" data-i18n="nav.quiz">Class test</a>
+      <div class="nav-drop">
+        <button class="nav-drop-btn -on" type="button" aria-expanded="false" aria-haspopup="true" data-i18n="nav.database">Database</button>
+        <div class="nav-drop-menu" role="menu">
+          <a href="database.html" role="menuitem" data-i18n="nav.items">Items and cards</a>
+          <a href="mvps.html" role="menuitem" data-i18n="nav.mvps">MVPs and altars</a>
+          <a href="quests.html" role="menuitem" aria-current="page" data-i18n="nav.quests">Quests</a>
+        </div>
+      </div>
+      <a href="https://wiki.nightmareofragnarok.com/" target="_blank" rel="noopener" data-i18n="nav.wiki">Wiki</a>
+      <a href="download.html" data-i18n="nav.download">Download</a>
+    </nav>
+    <div class="header-tools">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch theme" title="Switch theme">
+        <svg class="i-sun" aria-hidden="true"><use href="#i-sun"></use></svg>
+        <svg class="i-moon" aria-hidden="true"><use href="#i-moon"></use></svg>
+      </button>
+      <div class="lang">
+        <button class="lang-btn" id="langBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Change language">
+          <svg aria-hidden="true"><use href="#i-globe"></use></svg>
+          <span class="lang-code" id="langCode">EN</span>
+        </button>
+        <div class="lang-menu" id="langMenu" role="menu" aria-labelledby="langBtn"></div>
+      </div>
+      <a class="btn -primary -sm header-cta" href="https://nightmareofragnarok.com/?module=account&amp;action=create" target="_blank" rel="noopener" data-i18n="cta.register">Create account</a>
+      <button class="icon-btn burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false">
+        <svg aria-hidden="true"><use href="#i-menu"></use></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="shell">
+    <div class="drawer-top">
+      <img src="assets/img/logo.webp" alt="Nightmare RO" width="150" height="32">
+      <button class="icon-btn" id="drawerClose" type="button" aria-label="Close menu">
+        <svg aria-hidden="true"><use href="#i-close"></use></svg>
+      </button>
+    </div>
+    <nav aria-label="Mobile">
+      <a href="index.html#server" data-i18n="nav.server">The server</a>
+      <a href="index.html#features" data-i18n="nav.features">Features</a>
+      <a href="classes.html" data-i18n="nav.classes">Classes</a>
+      <a href="quiz.html" data-i18n="nav.quiz">Class test</a>
+      <span class="drawer-group" data-i18n="nav.database">Database</span>
+      <a class="-sub" href="database.html" data-i18n="nav.items">Items and cards</a>
+      <a class="-sub" href="mvps.html" data-i18n="nav.mvps">MVPs and altars</a>
+      <a class="-sub" href="quests.html" data-i18n="nav.quests">Quests</a>
+      <a href="https://wiki.nightmareofragnarok.com/" target="_blank" rel="noopener" data-i18n="nav.wiki">Wiki</a>
+      <a href="download.html" data-i18n="nav.download">Download</a>
+      <a href="index.html#start" data-i18n="nav.start">Get started</a>
+      <a href="index.html#faq" data-i18n="nav.faq">FAQ</a>
+    </nav>
+    <div class="drawer-actions">
+      <a class="btn -primary -block" href="https://nightmareofragnarok.com/?module=account&amp;action=create" target="_blank" rel="noopener" data-i18n="cta.register">Create account</a>
+      <a class="btn -ghost -block" href="https://discord.gg/gHgFtmvudD" target="_blank" rel="noopener">
+        <svg aria-hidden="true"><use href="#i-discord"></use></svg><span data-i18n="cta.discord">Join the Discord</span>
+      </a>
+    </div>
+  </div>
+</div>
+<main id="main">
+  <section class="page-head">
+    <div class="shell">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><ol>
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="database.html" data-i18n="nav.database">Database</a></li>
+        <li data-i18n="nav.quests">Quests</li>
+      </ol></nav>
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="q.eyebrow">Spoilers</p>
+        <h1 data-i18n="q.title">The answers, for when you want them</h1>
+        <p class="lede" data-i18n="q.lede">Half the fun here is not knowing. Several of these quests have no NPC pointing at them and no log entry, and working one out with friends is the point. So nothing below is open until you say so.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad-sm">
+    <div class="shell">
+      <div class="q-gate" id="questGate">
+        <div class="q-gate-inner">
+          <h2 data-i18n="q.gateTitle">This page spoils things</h2>
+          <p data-i18n="q.gateText">Routes, passwords, item counts and endings. Once you open it, you cannot unread it.</p>
+          <button class="btn -primary -lg" type="button" id="questReveal" data-i18n="q.gateBtn">Show me anyway</button>
+          <button class="btn -ghost" type="button" id="questHide" hidden data-i18n="q.gateHide">Hide it again</button>
+        </div>
+      </div>
+
+      <div class="q-body" id="questBody" hidden>
+      <details class="q-quest" id="q-lighthalzen-dungeon-entrance">
+        <summary>
+          <span class="q-title">Lighthalzen dungeon entrance</span>
+          <span class="q-blurb">Two ways in, neither of them signposted.</span>
+        </summary>
+        <ol class="q-steps">
+          <li class="q-step">
+            <span class="q-n">1</span>
+            <div>
+              <p>Go to lhz_fild02. Just left of the entrance there is another portal on the railway tracks.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-lighthalzen-entrance-image151.webp" alt="" width="720" height="525" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-lighthalzen-entrance-image129.webp" alt="" width="126" height="125" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">2</span>
+            <div>
+              <p>Find the sewer pipe in the Lighthalzen slums.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-lighthalzen-entrance-image145.webp" alt="" width="351" height="290" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+        </ol>
+      </details>
+      <details class="q-quest" id="q-amatsu-field-dungeon">
+        <summary>
+          <span class="q-title">Amatsu field and dungeon</span>
+          <span class="q-blurb">Getting to Amatsu at all, then getting under it.</span>
+        </summary>
+        <ol class="q-steps">
+          <li class="q-step">
+            
+            <div>
+              <p>To reach the Amatsu field you have to enter a house and take the hidden corridor. It is the same route as the official Ninja job quest.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-amatsu-image19.webp" alt="" width="128" height="123" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-amatsu-image2.webp" alt="" width="778" height="531" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-amatsu-image98.webp" alt="" width="583" height="536" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            
+            <div>
+              <p>To open the dungeon, stand still in the middle of the Amatsu bridge for 30 seconds.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-amatsu-image6.webp" alt="" width="124" height="125" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-amatsu-image40.webp" alt="" width="276" height="176" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-amatsu-image10.webp" alt="" width="767" height="588" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-amatsu-image54.webp" alt="" width="275" height="117" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+        </ol>
+      </details>
+      <details class="q-quest" id="q-relic-gear-options">
+        <summary>
+          <span class="q-title">Relic gear options</span>
+          <span class="q-blurb">Where each of the three enchant slots is unlocked.</span>
+        </summary>
+        <ol class="q-steps">
+          <li class="q-step">
+            <span class="q-n">1</span>
+            <div>
+              <p>The first enchant option is unlocked in cmd_fild09.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-relic-gear-options-image59.webp" alt="" width="891" height="670" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-relic-gear-options-image4.webp" alt="" width="124" height="124" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            
+            <div>
+              
+              <div class="table-wrap"><table class="mvp-table"><thead><tr><th>Options</th><th>First line</th><th>Second line</th><th>Third line</th></tr></thead><tbody><tr><td>Weapon</td><td>ATK / MATK</td><td>Def and Mdef pierce</td><td>Crit and fixed cast time</td></tr><tr><td>Shield</td><td>Def</td><td>Mdef</td><td>Damage reduction from all sizes</td></tr></tbody></table></div>
+              
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">2</span>
+            <div>
+              <p>The second enchant option is unlocked in hu_fild06.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-relic-gear-options-image51.webp" alt="" width="883" height="597" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-relic-gear-options-image72.webp" alt="" width="127" height="128" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">3</span>
+            <div>
+              <p>The third enchant option is unlocked in ra_fild10.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-relic-gear-options-image43.webp" alt="" width="578" height="510" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-relic-gear-options-image26.webp" alt="" width="126" height="125" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+        </ol>
+      </details>
+      <details class="q-quest" id="q-fallen-hero">
+        <summary>
+          <span class="q-title">Fallen Hero</span>
+          <span class="q-blurb">The gate quest. Several other quests will not talk to you until this one is done.</span>
+        </summary>
+        <ol class="q-steps">
+          <li class="q-step">
+            
+            <div>
+              <p>You need three pieces of Lord of the Dead gear: the armour, the cloak and the spear.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-fallen-hero-image46.webp" alt="" width="564" height="374" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-fallen-hero-image44.webp" alt="" width="124" height="99" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-fallen-hero-image41.webp" alt="" width="526" height="353" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-fallen-hero-image60.webp" alt="" width="126" height="95" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-fallen-hero-image57.webp" alt="" width="549" height="347" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-fallen-hero-image30.webp" alt="" width="130" height="95" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-fallen-hero-image8.webp" alt="" width="407" height="309" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-fallen-hero-image48.webp" alt="" width="126" height="96" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+        </ol>
+      </details>
+      <details class="q-quest" id="q-true-hero-shadow-gloves">
+        <summary>
+          <span class="q-title">True Hero Shadow Gloves</span>
+          <span class="q-blurb">A long errand through Veins and Hugel for one piece of shadow gear.</span>
+        </summary>
+        <ol class="q-steps">
+          <li class="q-step">
+            <span class="q-n">1</span>
+            <div>
+              <p>Go into the orphanage in Veins.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-true-hero-shadow-gloves-image9.webp" alt="" width="125" height="127" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-true-hero-shadow-gloves-image20.webp" alt="" width="726" height="588" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">2</span>
+            <div>
+              <p>Talk to the child downstairs and go through every dialogue option she has.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-true-hero-shadow-gloves-image62.webp" alt="" width="769" height="633" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">3</span>
+            <div>
+              <p>Head outside, talk to the Old Lady and ask about Leela.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-true-hero-shadow-gloves-image11.webp" alt="" width="808" height="563" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            
+            <div>
+              <p>After that conversation, pick the second option.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-true-hero-shadow-gloves-image147.webp" alt="" width="274" height="118" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">4</span>
+            <div>
+              <p>Go back and talk to Leela again.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-true-hero-shadow-gloves-image33.webp" alt="" width="280" height="113" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-true-hero-shadow-gloves-image38.webp" alt="" width="281" height="296" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-true-hero-shadow-gloves-image1.webp" alt="" width="275" height="292" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-true-hero-shadow-gloves-image21.webp" alt="" width="276" height="293" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-true-hero-shadow-gloves-image27.webp" alt="" width="276" height="290" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">5</span>
+            <div>
+              <p>Once those conversations are done, travel to Hugel and find her grandfather.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-true-hero-shadow-gloves-image67.webp" alt="" width="128" height="127" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-true-hero-shadow-gloves-image64.webp" alt="" width="835" height="617" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">6</span>
+            <div>
+              <p>Find Leela again and talk to her.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-true-hero-shadow-gloves-image13.webp" alt="" width="278" height="291" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">7</span>
+            <div>
+              <p>Look for Garlindolf.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-true-hero-shadow-gloves-image15.webp" alt="" width="278" height="293" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">8</span>
+            <div>
+              <p>Go to the Black Market, find the Smuggler at blk_mrkt 73,39 and choose &quot;I need a person smuggled&quot;.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-true-hero-shadow-gloves-image17.webp" alt="" width="887" height="564" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">9</span>
+            <div>
+              <p>Talk to Garlindolf again.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-true-hero-shadow-gloves-image22.webp" alt="" width="132" height="152" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">10</span>
+            <div>
+              <p>Talk to the Smuggler again and pay him 25 Mysterious Card.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-true-hero-shadow-gloves-image120.webp" alt="" width="159" height="254" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-true-hero-shadow-gloves-image56.webp" alt="" width="280" height="173" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">11</span>
+            <div>
+              <p>Go to Veins and find the Shady Individual.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-true-hero-shadow-gloves-image16.webp" alt="" width="128" height="127" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-true-hero-shadow-gloves-image36.webp" alt="" width="590" height="499" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">12</span>
+            <div>
+              <p>Talk to Leela again.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-true-hero-shadow-gloves-image5.webp" alt="" width="123" height="204" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">13</span>
+            <div>
+              <p>Talk to the Old Lady and distract her.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-true-hero-shadow-gloves-image7.webp" alt="" width="555" height="378" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            
+            <div>
+              <p>Go through all three dialogue options with the old lady.</p>
+              
+              
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">14</span>
+            <div>
+              <p>Talk to the Shady Individual again.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-true-hero-shadow-gloves-image36.webp" alt="" width="590" height="499" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-true-hero-shadow-gloves-image16.webp" alt="" width="128" height="127" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-true-hero-shadow-gloves-image16.webp" alt="" width="128" height="127" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">15</span>
+            <div>
+              <p>Go to the Black Market and talk to the Smuggler.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-true-hero-shadow-gloves-image126.webp" alt="" width="900" height="565" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">16</span>
+            <div>
+              <p>Finally, go to Hugel and talk to Garlindolf.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-true-hero-shadow-gloves-image25.webp" alt="" width="786" height="593" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            
+            <div>
+              <p>He hands over the True Hero Shadow Gloves.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-true-hero-shadow-gloves-image24.webp" alt="" width="270" height="443" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+        </ol>
+      </details>
+      <details class="q-quest" id="q-niflheim-challenge-dungeon">
+        <summary>
+          <span class="q-title">Niflheim challenge dungeon</span>
+          <span class="q-blurb">The witch, the piano and two endings you can both take.</span>
+        </summary>
+        <ol class="q-steps">
+          <li class="q-step">
+            
+            <div>
+              <p>Witch of Niflheim. You have to finish the Fallen Hero quest first.</p>
+              
+              
+            </div>
+          </li>
+          <li class="q-step">
+            
+            <div>
+              <p>You need an Eye of Dullahan to get into the witch's mansion. Any monster can drop it, and champions seem to drop it more often.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-niflheim-challenge-image3.webp" alt="" width="275" height="174" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-niflheim-challenge-image28.webp" alt="" width="276" height="364" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-niflheim-challenge-image68.webp" alt="" width="272" height="171" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            
+            <div>
+              <p>Once you have the accessory and are inside the mansion.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-niflheim-challenge-image111.webp" alt="" width="120" height="93" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-niflheim-challenge-image39.webp" alt="" width="860" height="627" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            
+            <div>
+              <p>She will not open the quest dialogue until Fallen Hero is finished.</p>
+              
+              
+            </div>
+          </li>
+          <li class="q-step">
+            
+            <div>
+              <p>After that, talk to Kirkena. She asks for a book from the opera house and the remaining seven piano keys.</p>
+              
+              
+            </div>
+          </li>
+          <li class="q-step">
+            
+            <div>
+              <p>Talk to the piano on the second floor of the mansion.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-niflheim-challenge-image52.webp" alt="" width="538" height="409" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-niflheim-challenge-image42.webp" alt="" width="272" height="328" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-niflheim-challenge-image32.webp" alt="" width="535" height="374" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            
+            <div>
+              <p>The piano keys only appear while the Eye of Dullahan is equipped.</p>
+              
+              
+            </div>
+          </li>
+          <li class="q-step">
+            
+            <div>
+              <p>Niflheim</p>
+              
+              
+            </div>
+          </li>
+          <li class="q-step">
+            
+            <div>
+              <p>The witch's mansion</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-niflheim-challenge-image50.webp" alt="" width="261" height="244" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-niflheim-challenge-image12.webp" alt="" width="398" height="302" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-niflheim-challenge-image35.webp" alt="" width="883" height="822" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-niflheim-challenge-image18.webp" alt="" width="120" height="94" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-niflheim-challenge-image102.webp" alt="" width="126" height="98" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            
+            <div>
+              <p>nif_fild02</p>
+              
+              
+            </div>
+          </li>
+          <li class="q-step">
+            
+            <div>
+              <p>nif_fild01</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-niflheim-challenge-image63.webp" alt="" width="407" height="317" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-niflheim-challenge-image81.webp" alt="" width="127" height="120" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-niflheim-challenge-image79.webp" alt="" width="421" height="310" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-niflheim-challenge-image31.webp" alt="" width="127" height="126" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            
+            <div>
+              <p>Opera house, first floor</p>
+              
+              
+            </div>
+          </li>
+          <li class="q-step">
+            
+            <div>
+              <p>Opera house, second floor</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-niflheim-challenge-image95.webp" alt="" width="675" height="518" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-niflheim-challenge-image14.webp" alt="" width="124" height="123" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-niflheim-challenge-image76.webp" alt="" width="386" height="365" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-niflheim-challenge-image125.webp" alt="" width="126" height="126" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            
+            <div>
+              <p>Kill the boss in the Niflheim challenge dungeon and Kirkena opens up again, asking you to go back to the Fallen Hero. That unlocks his instance.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-niflheim-challenge-image70.webp" alt="" width="786" height="452" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            
+            <div>
+              <p>Tell him he chose right and Eternal Regret is summoned.</p>
+              
+              
+            </div>
+          </li>
+          <li class="q-step">
+            
+            <div>
+              <p>Tell him he chose wrong and Avenger of Tartaros is summoned.</p>
+              
+              
+            </div>
+          </li>
+          <li class="q-step">
+            
+            <div>
+              <p>Bring ghost resistance.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-niflheim-challenge-image84.webp" alt="" width="262" height="224" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-niflheim-challenge-image37.webp" alt="" width="256" height="241" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-niflheim-challenge-image23.webp" alt="" width="273" height="259" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-niflheim-challenge-image49.webp" alt="" width="275" height="259" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            
+            <div>
+              <p>Once you have taken both choices, a third one appears: break the curse for good.</p>
+              
+              
+            </div>
+          </li>
+          <li class="q-step">
+            
+            <div>
+              <p>Pick that and both bosses are summoned at once.</p>
+              
+              
+            </div>
+          </li>
+        </ol>
+      </details>
+      <details class="q-quest" id="q-kiel-challenge-dungeon">
+        <summary>
+          <span class="q-title">Kiel challenge dungeon</span>
+          <span class="q-blurb">A door, a password, and a robot factory.</span>
+        </summary>
+        <ol class="q-steps">
+          <li class="q-step">
+            <span class="q-n">1</span>
+            <div>
+              <p>Click the second door from the left on the first floor of the Kiel Factory.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-kiel-challenge-image97.webp" alt="" width="755" height="526" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-kiel-challenge-image75.webp" alt="" width="126" height="127" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">2</span>
+            <div>
+              <p>Enter the password ALLYSIA.</p>
+              
+              
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">3</span>
+            <div>
+              <p>Enter the Secret Robot Factory, which is the Kiel challenge dungeon.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-kiel-challenge-image29.webp" alt="" width="277" height="176" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">4</span>
+            <div>
+              <p>The challenge dungeon boss.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-kiel-challenge-image140.webp" alt="" width="276" height="176" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+        </ol>
+      </details>
+      <details class="q-quest" id="q-thor-challenge-dungeon">
+        <summary>
+          <span class="q-title">Thor challenge dungeon</span>
+          <span class="q-blurb">Buying your way past a metal gate.</span>
+        </summary>
+        <ol class="q-steps">
+          <li class="q-step">
+            <span class="q-n">1</span>
+            <div>
+              <p>Interact with the metal gate at spot 3 in thor_v03.</p>
+              
+              
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">2</span>
+            <div>
+              <p>Talk to Rafeek in the Veins workshop.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-thor-challenge-image146.webp" alt="" width="447" height="326" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">3</span>
+            <div>
+              <p>Go to the Black Market, ask the Information Dealer about the metal gate in Thor and pay 100 Mysterious Card.</p>
+              
+              
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">4</span>
+            <div>
+              <p>Talk to Rafeek again.</p>
+              
+              
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">5</span>
+            <div>
+              <p>Talk to the Smuggler in the Black Market. He asks for a few items.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-thor-challenge-image34.webp" alt="" width="279" height="174" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">6</span>
+            <div>
+              <p>Talk to Rafeek once more and he hands over the key to the gate in thor_v03, which opens the Thor challenge dungeon.</p>
+              
+              
+            </div>
+          </li>
+        </ol>
+      </details>
+      <details class="q-quest" id="q-black-ops">
+        <summary>
+          <span class="q-title">Black Ops</span>
+          <span class="q-blurb">Collect the relics, hand in the intel, follow it to Aldebaran.</span>
+        </summary>
+        <ol class="q-steps">
+          <li class="q-step">
+            
+            <div>
+              <p>Black Ops</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-black-ops-image103.webp" alt="" width="721" height="621" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-black-ops-image168.webp" alt="" width="125" height="123" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            
+            <div>
+              <p>Farm the relics.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-black-ops-image80.webp" alt="" width="272" height="275" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-black-ops-image91.webp" alt="" width="274" height="277" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-black-ops-image77.webp" alt="" width="273" height="273" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-black-ops-image110.webp" alt="" width="672" height="458" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-black-ops-image73.webp" alt="" width="125" height="124" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-black-ops-image58.webp" alt="" width="748" height="609" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-black-ops-image47.webp" alt="" width="124" height="124" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-black-ops-image134.webp" alt="" width="900" height="606" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-black-ops-image101.webp" alt="" width="123" height="125" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-black-ops-image88.webp" alt="" width="727" height="629" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-black-ops-image45.webp" alt="" width="123" height="118" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            
+            <div>
+              <p>Hand the intel to the Intelligence Officer. Once it is all in, pick the option to go back over the clues and he sends you to investigate Aldebaran.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-black-ops-image83.webp" alt="" width="125" height="125" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-black-ops-image69.webp" alt="" width="744" height="705" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            
+            <div>
+              <p>After the ship, talk to the Steel Wings Officer.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-black-ops-image55.webp" alt="" width="641" height="483" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-black-ops-image99.webp" alt="" width="126" height="125" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-black-ops-image166.webp" alt="" width="529" height="397" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-black-ops-image65.webp" alt="" width="126" height="126" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+        </ol>
+      </details>
+      <details class="q-quest" id="q-celine-kimi">
+        <summary>
+          <span class="q-title">Celine Kimi</span>
+          <span class="q-blurb">The longest one here. Lutie, Juno, Prontera and back again.</span>
+        </summary>
+        <ol class="q-steps">
+          <li class="q-step">
+            
+            <div>
+              <p>Thanks to Habib for the help with this one.</p>
+              
+              
+            </div>
+          </li>
+          <li class="q-step">
+            
+            <div>
+              <p>Reward</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-celine-kimi-image108.webp" alt="" width="276" height="464" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-celine-kimi-image144.webp" alt="" width="362" height="358" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-celine-kimi-image90.webp" alt="" width="276" height="444" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">1</span>
+            <div>
+              <p>Farm Innocence Reward Chests from the Lutie Nightmare boss until an Old Brooch drops.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-celine-kimi-image119.webp" alt="" width="275" height="256" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-celine-kimi-image164.webp" alt="" width="273" height="436" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-celine-kimi-image172.webp" alt="" width="276" height="313" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">2</span>
+            <div>
+              <p>With the Old Brooch in hand, start a fresh instance but do not talk to the Seal.</p>
+              
+              
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">3</span>
+            <div>
+              <p>Head right and use High Jump at the spot in the picture.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-celine-kimi-image85.webp" alt="" width="587" height="511" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-celine-kimi-image135.webp" alt="" width="275" height="439" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-celine-kimi-image127.webp" alt="" width="273" height="449" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">4</span>
+            <div>
+              <p>Keep going right, then south, and turn left at the end of the map.</p>
+              
+              
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">5</span>
+            <div>
+              <p>You will find a child next to a pile of presents. Talk to her.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-celine-kimi-image165.webp" alt="" width="643" height="601" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">6</span>
+            <div>
+              <p>Give her the Old Brooch and you get a Broken Heart.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-celine-kimi-image53.webp" alt="" width="277" height="278" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">7</span>
+            <div>
+              <p>Talk to the Artisan in Lutie.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-celine-kimi-image61.webp" alt="" width="108" height="125" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-celine-kimi-image131.webp" alt="" width="256" height="260" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-celine-kimi-image155.webp" alt="" width="874" height="669" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">8</span>
+            <div>
+              <p>Go to Juno and ask the Sages about the Broken Heart.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-celine-kimi-image121.webp" alt="" width="141" height="129" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-celine-kimi-image132.webp" alt="" width="767" height="606" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">9</span>
+            <div>
+              <p>Talk to the sage right inside the entrance. He asks you to bring him some items.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-celine-kimi-image113.webp" alt="" width="381" height="403" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            
+            <div>
+              <p>Bring him</p>
+              
+              
+            </div>
+          </li>
+          <li class="q-step">
+            
+            <div>
+              <p>10x Convex Mirror (Consegue nas caixas de MvP das Nightmare Dungeon);
+5x Crystallized Darkness (Dropa do Dark Illusion);
+25x Blue Herbs;
+25x White Herbs;
+100x Bloody Coins (Dropa da Nightmare Horror Toy Factory).</p>
+              
+              
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">10</span>
+            <div>
+              <p>Go to the Prontera church.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-celine-kimi-image128.webp" alt="" width="101" height="125" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-celine-kimi-image117.webp" alt="" width="825" height="633" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">11</span>
+            <div>
+              <p>Talk to the High Priest next to the altar.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-celine-kimi-image87.webp" alt="" width="256" height="282" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">12</span>
+            <div>
+              <p>Go back to Lutie and talk to the Artisan again.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-celine-kimi-image66.webp" alt="" width="134" height="250" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">13</span>
+            <div>
+              <p>Talk to the Snowman.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-celine-kimi-image78.webp" alt="" width="121" height="151" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">14</span>
+            <div>
+              <p>Go to the second floor of the Toy Factory and talk to the duck.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-celine-kimi-image170.webp" alt="" width="129" height="126" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-celine-kimi-image116.webp" alt="" width="455" height="440" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">15</span>
+            <div>
+              <p>Talk to the child who appears next to the duck.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-celine-kimi-image106.webp" alt="" width="128" height="157" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">16</span>
+            <div>
+              <p>Talk to the Snowman again.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-celine-kimi-image71.webp" alt="" width="103" height="166" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">17</span>
+            <div>
+              <p>Go to the Alchemist Guild in Aldebaran.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-celine-kimi-image74.webp" alt="" width="125" height="128" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">18</span>
+            <div>
+              <p>Talk to the Alchemist Guildsman.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-celine-kimi-image161.webp" alt="" width="271" height="118" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-celine-kimi-image96.webp" alt="" width="155" height="258" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">19</span>
+            <div>
+              <p>Farm 25 Lost Letter, the champion relic in the Nightmare Horror Toy Factory.</p>
+              
+              
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">20</span>
+            <div>
+              <p>Talk to the girl on the second floor of the Toy Factory again.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-celine-kimi-image106.webp" alt="" width="128" height="157" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">21</span>
+            <div>
+              <p>Talk to the Snowman again.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-celine-kimi-image71.webp" alt="" width="103" height="166" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">22</span>
+            <div>
+              <p>Talk to the Artisan.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-celine-kimi-image66.webp" alt="" width="134" height="250" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">23</span>
+            <div>
+              <p>Talk to the Robot on the first floor of the Toy Factory.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-celine-kimi-image82.webp" alt="" width="130" height="125" loading="lazy" decoding="async"><img src="assets/img/mvp/quest-celine-kimi-image153.webp" alt="" width="446" height="501" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">24</span>
+            <div>
+              <p>Talk to the Marionette.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-celine-kimi-image114.webp" alt="" width="188" height="214" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">25</span>
+            <div>
+              <p>The girl appears. Talk to her.</p>
+              
+              
+            </div>
+          </li>
+          <li class="q-step">
+            
+            <div>
+              <p>25.1</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-celine-kimi-image92.webp" alt="" width="271" height="296" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            
+            <div>
+              <p>25.2</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-celine-kimi-image89.webp" alt="" width="276" height="291" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            
+            <div>
+              <p>25.3</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-celine-kimi-image94.webp" alt="" width="280" height="293" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            
+            <div>
+              <p>25.4</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-celine-kimi-image86.webp" alt="" width="277" height="291" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">26</span>
+            <div>
+              <p>Talk to the Artisan.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-celine-kimi-image66.webp" alt="" width="134" height="250" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            
+            <div>
+              <p>He asks you to collect a last set of items.</p>
+              
+              
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">5</span>
+            <div>
+              <p>Time Crystal, from Failed Foresight.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-celine-kimi-image109.webp" alt="" width="282" height="172" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">10</span>
+            <div>
+              <p>Elunium, from bosses.</p>
+              
+              
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">10</span>
+            <div>
+              <p>Oridecon, from bosses.</p>
+              
+              
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">20</span>
+            <div>
+              <p>Strong Runestone, from champion monsters at level 130 and up.</p>
+              
+              
+            </div>
+          </li>
+          <li class="q-step">
+            <span class="q-n">50</span>
+            <div>
+              <p>Mastela Fruit, from Succubus and Incubus.</p>
+              
+              
+            </div>
+          </li>
+          <li class="q-step">
+            
+            <div>
+              <p>You receive Perfect Love and access to the Kimi shop.</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-celine-kimi-image171.webp" alt="" width="276" height="466" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+        </ol>
+      </details>
+      <details class="q-quest" id="q-endless-desert">
+        <summary>
+          <span class="q-title">Endless Desert</span>
+          <span class="q-blurb">The map that loops. Here is the route table.</span>
+        </summary>
+        <ol class="q-steps">
+          <li class="q-step">
+            
+            <div>
+              
+              <div class="table-wrap"><table class="mvp-table"><tbody><tr><td>From 843, go west until you reach 544.</td><td>Avatar of Agony</td><td>moc_fild648 and 753</td></tr><tr><td>From 544, go east until you reach 198.</td><td>Avatar of Sorrow</td><td>moc_fild339 and 198</td></tr><tr><td>From 198, go north until you reach 696.</td><td>Avatar of Hatred</td><td>moc_fild454 and 912</td></tr><tr><td>From 696, go east to 999.</td><td>Avatar of Despair</td><td>moc_fild308 and 648</td></tr></tbody></table></div>
+              
+            </div>
+          </li>
+          <li class="q-step">
+            
+            <div>
+              <p>Endless Desert, the moc_fild maps</p>
+              
+              <div class="q-shots"><img src="assets/img/mvp/quest-endless-desert-image142.webp" alt="" width="279" height="172" loading="lazy" decoding="async"></div>
+            </div>
+          </li>
+          <li class="q-step">
+            
+            <div>
+              
+              <div class="table-wrap"><table class="mvp-table"><thead><tr><th></th><th>From</th><th>West</th><th>East</th><th>North</th><th>South</th></tr></thead><tbody><tr><td></td><td>544</td><td>201</td><td>198</td><td>339</td><td>114</td></tr><tr><td></td><td>198</td><td>582</td><td>843</td><td>114</td><td>201</td></tr><tr><td>Layer 1</td><td>582</td><td>544</td><td>114</td><td>201</td><td>843</td></tr><tr><td>Layer 2</td><td>114</td><td>201</td><td>843</td><td>178</td><td>582</td></tr><tr><td>Layer 3</td><td>201</td><td>843</td><td>312</td><td>582</td><td>114</td></tr><tr><td>Layer 4</td><td>312</td><td>843</td><td>648</td><td>582</td><td>339</td></tr><tr><td>Layer 5</td><td>843</td><td>201</td><td>582</td><td>114</td><td>18</td></tr><tr><td></td><td>178</td><td>843</td><td>582</td><td>198</td><td>753</td></tr><tr><td></td><td>753</td><td></td><td>454</td><td>696</td><td></td></tr><tr><td></td><td>696</td><td></td><td>999</td><td>648</td><td>198</td></tr><tr><td></td><td>18</td><td>648</td><td>114</td><td>198</td><td>582</td></tr><tr><td></td><td>648</td><td>843</td><td>582</td><td>201</td><td>114</td></tr><tr><td></td><td>339</td><td></td><td></td><td>308</td><td>696</td></tr><tr><td></td><td>308</td><td></td><td></td><td></td><td>18</td></tr><tr><td></td><td>454</td><td>582</td><td></td><td></td><td></td></tr><tr><td></td><td>999</td><td>696</td><td>-</td><td>-</td><td>-</td></tr></tbody></table></div>
+              
+            </div>
+          </li>
+        </ol>
+      </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad-sm" id="potions">
+    <div class="shell">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="q.potionEyebrow">Potion crafting</p>
+        <h2 data-i18n="q.potionTitle">Everything upgrades from the tier below</h2>
+        <p class="lede" data-i18n="q.potionLede">Potions are crafted and upgraded at the Alchemist Guild in Aldebaran. Each tier eats one of the tier under it, so the ladder starts at the Red Potion and works up.</p>
+      </div>
+      <p class="note" data-i18n="q.potionWarn">This part comes from a player made wiki rather than from Twilight, and it was last touched in October 2024. Treat the amounts as a guide and check in game before you go farming.</p>
+        <h3 class="q-potion-head">Health potions</h3>
+        <div class="table-wrap">
+          <table class="mvp-table">
+            <thead><tr>
+              <th data-i18n="q.thPotion">Potion</th>
+              <th data-i18n="q.thNeeds">Needs</th>
+              <th data-i18n="q.thEffect">Effect</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td><b>Red Potion</b></td>
+              <td><span class="q-mat">Bought, not crafted</span></td>
+              <td class="dim">Heals 100 to 200 HP</td>
+            </tr>            <tr>
+              <td><b>Orange Potion</b></td>
+              <td><span class="q-mat">1 Red Potion</span><span class="q-mat">15 Red Herb</span><span class="q-mat">5 Yellow Herb</span><span class="q-mat">15 Stem</span></td>
+              <td class="dim">Heals 400 to 600 HP</td>
+            </tr>            <tr>
+              <td><b>Yellow Potion</b></td>
+              <td><span class="q-mat">1 Orange Potion</span><span class="q-mat">25 Yellow Herb</span><span class="q-mat">30 Mantis Scythe</span><span class="q-mat">30 Moth Dust</span></td>
+              <td class="dim">Heals 1000 to 2000 HP</td>
+            </tr>            <tr>
+              <td><b>White Potion</b></td>
+              <td><span class="q-mat">1 Yellow Potion</span><span class="q-mat">30 White Herb</span><span class="q-mat">1 Burning Shard</span><span class="q-mat">1 Enchanted Key</span><span class="q-mat">1 Pyroxene</span></td>
+              <td class="dim">Heals 3000 to 6000 HP</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3 class="q-potion-head">Spirit potions</h3>
+        <div class="table-wrap">
+          <table class="mvp-table">
+            <thead><tr>
+              <th data-i18n="q.thPotion">Potion</th>
+              <th data-i18n="q.thNeeds">Needs</th>
+              <th data-i18n="q.thEffect">Effect</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td><b>Grape Juice</b></td>
+              <td><span class="q-mat">25 Grape</span><span class="q-mat">10 Ant Jaw</span><span class="q-mat">10 Golden Hair</span></td>
+              <td class="dim">Heals 50 to 100 SP</td>
+            </tr>            <tr>
+              <td><b>Blue Potion</b></td>
+              <td><span class="q-mat">1 Grape Juice</span><span class="q-mat">25 Blue Herb</span><span class="q-mat">25 Grave Dust</span><span class="q-mat">25 Blazing Stone</span><span class="q-mat">25 Broken Urn</span></td>
+              <td class="dim">Heals 400 to 600 SP</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3 class="q-potion-head">Attack speed potions</h3>
+        <div class="table-wrap">
+          <table class="mvp-table">
+            <thead><tr>
+              <th data-i18n="q.thPotion">Potion</th>
+              <th data-i18n="q.thNeeds">Needs</th>
+              <th data-i18n="q.thEffect">Effect</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td><b>Concentration Potion</b></td>
+              <td><span class="q-mat">25 Mushroom Spore</span><span class="q-mat">1 Gnome's Moustache</span><span class="q-mat">1 Memento</span></td>
+              <td class="dim"></td>
+            </tr>            <tr>
+              <td><b>Awakening Potion</b></td>
+              <td><span class="q-mat">1 Concentration Potion</span><span class="q-mat">25 Mushroom Spore</span><span class="q-mat">25 Poison Spore</span><span class="q-mat">1 Detrimindexta</span><span class="q-mat">1 Ancient Tooth</span><span class="q-mat">1 Cultish Mask</span></td>
+              <td class="dim"></td>
+            </tr>            <tr>
+              <td><b>Berserk Potion</b></td>
+              <td><span class="q-mat">Base level 100</span><span class="q-mat">1 Awakening Potion</span><span class="q-mat">50 Mushroom Spore</span><span class="q-mat">50 Poison Spore</span><span class="q-mat">10 Detrimindexta</span><span class="q-mat">10 Karvodailnirol</span></td>
+              <td class="dim"></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3 class="q-potion-head">Other</h3>
+        <div class="table-wrap">
+          <table class="mvp-table">
+            <thead><tr>
+              <th data-i18n="q.thPotion">Potion</th>
+              <th data-i18n="q.thNeeds">Needs</th>
+              <th data-i18n="q.thEffect">Effect</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td><b>Green Potion</b></td>
+              <td><span class="q-mat">25 Green Herb</span><span class="q-mat">25 Stem</span><span class="q-mat">25 Scell</span><span class="q-mat">25 Nine Tail</span></td>
+              <td class="dim"></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      <p class="dim" style="margin-top:1rem">
+        <span data-i18n="q.potionSource">Source</span>
+        <a href="https://twilight-senai.tiddlyhost.com/?page=potions" target="_blank" rel="noopener">twilight-senai.tiddlyhost.com</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="section-pad-sm" id="taekwon">
+    <div class="shell">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="q.tkEyebrow">Taekwon mission</p>
+        <h2 data-i18n="q.tkTitle">Five rounds of boss hunting</h2>
+        <p class="lede" data-i18n="q.tkLede">The Taekwon Mission skill raises the job level cap, and it costs you the ability to change jobs ever again. These are the five rounds it asks for.</p>
+      </div>
+      <ol class="q-steps"><li><span class="q-n">1</span><div><p>Kill Moonlight Flower &amp; Dracula</p></div></li><li><span class="q-n">2</span><div><p>Kill Goblin King &amp; Osiris</p></div></li><li><span class="q-n">3</span><div><p>Kill Pharaoh &amp; Kraken</p></div></li><li><span class="q-n">4</span><div><p>Kill Captain Sweety &amp; Pyuriel</p></div></li><li><span class="q-n">5</span><div><p>Kill Rogue Prototype, Faceworm Queen &amp; RSX-0806</p></div></li></ol>
+    </div>
+  </section>
+
+  <section class="section-pad-sm">
+    <div class="shell">
+      <div class="cta-band">
+        <div class="inner">
+          <h2 data-i18n="band.title">Come find out what changed</h2>
+          <p class="lede text-center" data-i18n="band.lede">Make an account now, grab the client, and be there when the servers go up.</p>
+          <div class="hero-actions">
+            <a class="btn -primary -lg" href="https://nightmareofragnarok.com/?module=account&amp;action=create" target="_blank" rel="noopener" data-i18n="cta.registerFree">Create a free account</a>
+            <a class="btn -ghost -lg" href="mvps.html" data-i18n="nav.mvps">MVPs and altars</a>
+            <a class="btn -ghost -lg" href="database.html" data-i18n="nav.items">Items and cards</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-grid">
+      <div>
+        <img src="assets/img/logo.webp" alt="Nightmare RO" width="170" height="36" loading="lazy">
+        <p class="dim" style="margin-top:1rem;max-width:34ch" data-i18n="footer.blurb">A fully custom private server. Rebuilt, rebalanced and still being worked on.</p>
+      </div>
+      <div>
+        <h4 data-i18n="footer.play">Play</h4>
+        <ul>
+          <li><a href="https://nightmareofragnarok.com/?module=account&amp;action=create" target="_blank" rel="noopener" data-i18n="cta.register">Create account</a></li>
+          <li><a href="download.html" data-i18n="nav.download">Download</a></li>
+          <li><a href="classes.html" data-i18n="nav.classes">Classes</a></li>
+          <li><a href="quiz.html" data-i18n="nav.quiz">Class test</a></li>
+          <li><a href="database.html" data-i18n="nav.database">Database</a></li>
+          <li><a href="index.html#faq" data-i18n="nav.faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer.community">Community</h4>
+        <ul>
+          <li><a href="https://discord.gg/gHgFtmvudD" target="_blank" rel="noopener">Discord</a></li>
+          <li><a href="https://wiki.nightmareofragnarok.com/" target="_blank" rel="noopener" data-i18n="footer.wiki">Player wiki</a></li>
+          <li><a href="https://nightmareofragnarok.com/" target="_blank" rel="noopener" data-i18n="footer.panel">Control panel</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer.references">References</h4>
+        <ul>
+          <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vT3yuB3St__9v202ZUU9pUZm4PX88tph379Dr2eMR3TFNfZ0GUVD0tvuBl99Ma8GHp5e2pLzLG6Bmds/pubhtml" target="_blank" rel="noopener" data-i18n="footer.gear">Gear reference</a></li>
+          <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRaVCw9eEP3D-VlpBCryCcXy84FkDTm2RU-whdMIAZ8HuYhRvlsQrKqBiUUQlcLHq6gUqq6PXeUKB_5/pubhtml" target="_blank" rel="noopener" data-i18n="footer.cards">Card reference</a></li>
+          <li><a href="https://docs.google.com/document/d/e/2PACX-1vSlu9yEhoRVn5ob2yCJ8f_lOEQLq476hibjolBnnpDko-VXRWiB88o7aumdASXs0WwC0a1aTgH2QcjP/pub" target="_blank" rel="noopener" data-i18n="footer.overview">Full server overview</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer.legal">Nightmare RO is a free, non-commercial fan project. Not affiliated with any commercial game publisher.</span>
+      <span>&copy; <span id="year">2026</span> Nightmare RO</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/i18n.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/quests.js" defer></script>
+</body>
+</html>

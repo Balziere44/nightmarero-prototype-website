@@ -220,21 +220,63 @@ def head(prefix, title, description, canonical, extra_ld="", og_image="assets/so
            p=prefix, ld=extra_ld, sprite=SPRITE, ogimg=og_image)
 
 
+DB_PAGES = [
+    ("database.html", "nav.items", "Items and cards"),
+    ("mvps.html", "nav.mvps", "MVPs and altars"),
+    ("quests.html", "nav.quests", "Quests"),
+]
+
+
+def nav_desktop(prefix, active):
+    """The database entry is a dropdown, since it has three pages under it."""
+    inside = any(page == active for page, _k, _l in DB_PAGES)
+    items = "".join(
+        '\n          <a href="{p}{page}" role="menuitem"{cur} data-i18n="{k}">{l}</a>'
+        .format(p=prefix, page=page, k=key, l=label,
+                cur=' aria-current="page"' if page == active else "")
+        for page, key, label in DB_PAGES)
+
+    return """      <a href="{p}index.html#server" data-i18n="nav.server">The server</a>
+      <a href="{p}classes.html"{c_classes} data-i18n="nav.classes">Classes</a>
+      <a href="{p}quiz.html"{c_quiz} data-i18n="nav.quiz">Class test</a>
+      <div class="nav-drop">
+        <button class="nav-drop-btn{open}" type="button" aria-expanded="false" aria-haspopup="true" data-i18n="nav.database">Database</button>
+        <div class="nav-drop-menu" role="menu">{items}
+        </div>
+      </div>
+      <a href="https://wiki.nightmareofragnarok.com/" target="_blank" rel="noopener" data-i18n="nav.wiki">Wiki</a>
+      <a href="{p}download.html"{c_dl} data-i18n="nav.download">Download</a>""".format(
+        p=prefix, items=items,
+        open=" -on" if inside else "",
+        c_classes=' aria-current="page"' if active == "classes.html" else "",
+        c_quiz=' aria-current="page"' if active == "quiz.html" else "",
+        c_dl=' aria-current="page"' if active == "download.html" else "")
+
+
+def nav_drawer(prefix):
+    subs = "".join(
+        '\n      <a class="-sub" href="{p}{page}" data-i18n="{k}">{l}</a>'
+        .format(p=prefix, page=page, k=key, l=label)
+        for page, key, label in DB_PAGES)
+    return """      <a href="{p}index.html#server" data-i18n="nav.server">The server</a>
+      <a href="{p}index.html#features" data-i18n="nav.features">Features</a>
+      <a href="{p}classes.html" data-i18n="nav.classes">Classes</a>
+      <a href="{p}quiz.html" data-i18n="nav.quiz">Class test</a>
+      <span class="drawer-group" data-i18n="nav.database">Database</span>{subs}
+      <a href="https://wiki.nightmareofragnarok.com/" target="_blank" rel="noopener" data-i18n="nav.wiki">Wiki</a>
+      <a href="{p}download.html" data-i18n="nav.download">Download</a>
+      <a href="{p}index.html#start" data-i18n="nav.start">Get started</a>
+      <a href="{p}index.html#faq" data-i18n="nav.faq">FAQ</a>""".format(p=prefix, subs=subs)
+
+
 def header(prefix, active):
-    def cur(name):
-        return ' aria-current="page"' if name == active else ""
     return """<header class="site-header" id="siteHeader">
   <div class="shell header-inner">
     <a class="brand" href="{p}index.html" aria-label="Nightmare RO, home">
       <img src="{p}assets/img/logo.webp" alt="Nightmare RO" width="180" height="38" fetchpriority="high">
     </a>
     <nav class="nav" aria-label="Main">
-      <a href="{p}index.html#server" data-i18n="nav.server">The server</a>
-      <a href="{p}classes.html" {c_classes} data-i18n="nav.classes">Classes</a>
-      <a href="{p}quiz.html" data-i18n="nav.quiz">Class test</a>
-      <a href="{p}database.html" data-i18n="nav.database">Database</a>
-      <a href="https://wiki.nightmareofragnarok.com/" target="_blank" rel="noopener" data-i18n="nav.wiki">Wiki</a>
-      <a href="{p}download.html" {c_dl} data-i18n="nav.download">Download</a>
+{navmain}
     </nav>
     <div class="header-tools">
       <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch theme" title="Switch theme">
@@ -265,15 +307,7 @@ def header(prefix, active):
       </button>
     </div>
     <nav aria-label="Mobile">
-      <a href="{p}index.html#server" data-i18n="nav.server">The server</a>
-      <a href="{p}index.html#features" data-i18n="nav.features">Features</a>
-      <a href="{p}classes.html" data-i18n="nav.classes">Classes</a>
-      <a href="{p}quiz.html" data-i18n="nav.quiz">Class test</a>
-      <a href="{p}database.html" data-i18n="nav.database">Database</a>
-      <a href="https://wiki.nightmareofragnarok.com/" target="_blank" rel="noopener" data-i18n="nav.wiki">Wiki</a>
-      <a href="{p}download.html" data-i18n="nav.download">Download</a>
-      <a href="{p}index.html#start" data-i18n="nav.start">Get started</a>
-      <a href="{p}index.html#faq" data-i18n="nav.faq">FAQ</a>
+{navdrawer}
     </nav>
     <div class="drawer-actions">
       <a class="btn -primary -block" href="{reg}" target="_blank" rel="noopener" data-i18n="cta.register">Create account</a>
@@ -284,7 +318,8 @@ def header(prefix, active):
   </div>
 </div>
 """.format(p=prefix, reg=REGISTER, dc=DISCORD, wiki=WIKI,
-           c_classes=cur("classes"), c_dl=cur("download"))
+           navmain=nav_desktop(prefix, active),
+           navdrawer=nav_drawer(prefix))
 
 
 def footer(prefix):
@@ -603,7 +638,7 @@ def class_page(reg, name, blocks):
 
     title = "%s | Nightmare RO class guide" % name
     parts = [head("../", title, desc, "classes/%s.html" % slug, ld),
-             header("../", "classes"),
+             header("../", "classes.html"),
              '<main id="main">']
 
     # ---- hero
@@ -743,7 +778,7 @@ def classes_index(reg):
     parts = [head("", "All 55 Classes | Nightmare RO",
                   "Every playable class on Nightmare RO. Nine starting classes, fourteen second tier and thirty two third tier classes, each with a fully rewritten skill set.",
                   "classes.html", ld),
-             header("", "classes"),
+             header("", "classes.html"),
              """<main id="main">
   <section class="page-head">
     <div class="shell">

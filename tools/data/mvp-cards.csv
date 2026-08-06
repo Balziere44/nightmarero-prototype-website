@@ -1,0 +1,58 @@
+Name,Effect,Equipment
+Nightmare Pitaya,"All stats +1, Triples the effect of other pitaya cards equipped.",Accessory
+Turtle General,"All stats +2, Enables use of Recall Party lv1 and Max Bulwark Lv10",Acessory
+Lady Tanee,SP Consumption -30%,Acessory
+Guardian Serpent,"Reduce damage from Poison  elemental attacks,status by 50%. Increase resistance to Poison status by 50%",Armor
+Eddga,Immunity to Burning. Adds a chance to autocast Heat Wave when taking damage.,Armor
+Muspellkoll,Adds a chance to autocast Ignition Lv2 when taking damage,Armor
+Orc Necromancer,"Reduce damage taken from Dark,Undead,Ghost by 50%. Increases damage taken from Holy property
+attacks by 50%. Natural HP Regeneration Disabled.",Armor
+Orc Lord,"Max HP +30%, All SP Costs +50%.",Armor
+Drake,"Enables use of Extort lv10 and Mammonite Lv1.
+Merchant class Bonus: Mammonite has a 50% chance to not consume Extort stacks.",Armor
+Phreeoni,"Flee +50, Hard defense - 50",Garment
+Pharaoh,"Dark,Undead,Ghost and Holy resistance +30%. Fire,Water,Wind and Earth resistance -30%",Garment
+Dracula,"Adds a chance to Autocast Vampire's Gift Lv1 when taking physical damage
+Combo: Dracula card + Ancient Cape: Vampire's Gift has a high chance to inflict Bleeding status.",Garment
+Faceworm Queen,Poison status damage inflicted +40%. Burning and Bleeding damage inflicted -40%.,Garment
+Bloody Knight,Bleeding damage +40%. Burning and Poison damage -40%.,Garment
+Curse of Change,"If base str ≤30, neutral resist -10%; str ≥70, atk+10%. 
+If base int ≤30, non-neutral resist -10%; int ≥70, +10% matk.
+If base dex ≤30, movement speed -15%, dex ≥70, +10% ranged damage.
+",Garment
+Moonlight Flower,"All stats +10, all base and job EXP lost on death.",Headgear
+Lord of the Dead,"For every 10% of missing HP, Physical Damage Dealt +4%",Headgear
+Mistress,Reduces the Cooldown of Heal and Aid Potion by 3 seconds,Headgear
+Kraken,Ignore 50% of the Magic Defense of all monster/ Max SP -50%,Headgear
+Goblin King,"Potion efectiveness +100%. Bleeding,Burning and Poison damage taken +100%.",Headgear
+Baphomet,Crit Damage +30%. Crit Rate -30,Headgear
+Maya,Variable Cast Time -50%,Headgear
+Morroc's Shadow,Add a 5% chance to autocast Earthquake Lv2 when attacking (This card's effect does not stack),Headgear
+Kublin,Increases the potency of Vulnerable inflicted by the user by 40%,Headgear
+Pyuriel,"Magic Attack +15%, casting cannot be interrupted. Each skill cast consumes 5% of the user MAX HP",Headgear
+Herald of Dusk,Matk +1% for every 100 Max SP. -20% Max HP,Headgear
+False Snake God,"Ignore 100% of the defense and Magic defense of Poison property Monsters. Physical and Magical
+damage to non-poison monster -50%.",Headgear
+Golden Thief Bug,Adds a 30% chance to reflect Magical Attacks,Shield
+Ancient Wootan Defender,"Enables use of Guard lv10, if Guard lv10 is already learned, reduces cooldown of Guard by 10 seconds",Shield
+Face of Horror,"Physical and Magical damage dealt to Nightmare monster +25%. Physical and Magical damage taken
+from Nightmare monster -25%.",Shield
+Ragged Golem,"Damage received from All races -30%. While HP is above 50%, drains 5% of Max HP every second.",Shield
+Captain Sweety,For every 10 Base levels:Ranged damage + 1%/-1% HP,Shoes
+Osiris,Regen 1% Max HP/Drains 1% Max SP,Shoes
+Tao Gunka,"Magic attack +10%, Magic Damage received +10%.",Shoes
+Dark Lord,"Fixed Cast Time -0,5s ; Variable Cast Time -30%; -10% Max HP/SP; -10% Mov. Speed
+Combo: Dark Lord + Dark Illusion: +20% Max HP/SP; +20% Mov. Speed",Shoes
+Final Defense Drone,Increase the Crit Rate of Summoned Entities by 50,Shoes
+Rogue Prototype,Atk +2% per refine,Weapon
+Kobold Warchief,"If a Two-handed Sword,Spear or Axe is equipped: ASPD +6",Weapon
+Doppelganger,"Physical attacks have a 5% chance to inflish Poison and Blind statuses. Magic attacks have 10% chance to
+inflict Burn and Chill statuses",Weapon
+RSX-0806,"Physical attacks have a 50% chance to inflict the Vulnerable Status for 5 seconds.
+Magical attacks have a 50% chance to inflict Breach Status for 5 seconds.",Weapon
+Vesper,Enchants weapon with the Wind property. Wind Magic Damage +30%,Weapon
+Ifrit,Enchants weapon with the Fire property. Fire property Magic Damage +30%,Weapon
+Ktullanux,Enchants weapon with the Water property. Water property Magic Damage +30%.,Weapon
+Zealotus,Physical and Magical damage agaisnt Slowed/Vulnerable enemies +15%.,Weapon
+Atroce,Critical Hits gain 5% Additional Defense Pierce per Refine,Weapon
+Stormy Knight,Magical attacks have a 30% chance to autocast Static Burst lv10,Weapon

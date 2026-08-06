@@ -603,6 +603,88 @@ html[data-theme="light"] .btn.-primary:hover { --btn-bg: var(--red-500); }
 }
 .nav a:hover::after, .nav a[aria-current="page"]::after { scale: 1 1; }
 
+/* The database entry opens onto its three pages. Hover opens it with the
+   mouse, the button handles keyboard and touch. */
+.nav-drop { position: relative; }
+
+.nav-drop-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.5rem 0.85rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+  transition: color 0.2s var(--ease);
+}
+.nav-drop-btn::before {
+  content: "";
+  order: 2;
+  width: 0;
+  height: 0;
+  border: 3.5px solid transparent;
+  border-top-color: currentColor;
+  translate: 0 2px;
+  transition: rotate 0.25s var(--ease);
+}
+.nav-drop-btn:hover,
+.nav-drop-btn.-on,
+.nav-drop-btn[aria-expanded="true"] { color: var(--text); }
+.nav-drop-btn[aria-expanded="true"]::before { rotate: 180deg; }
+.nav-drop-btn.-on::after {
+  content: "";
+  position: absolute;
+  left: 0.85rem;
+  right: 1.6rem;
+  bottom: 0.15rem;
+  height: 1px;
+  background: var(--accent);
+}
+
+.nav-drop-menu {
+  position: absolute;
+  top: calc(100% + 0.45rem);
+  inset-inline-start: 0;
+  min-width: 13rem;
+  display: grid;
+  gap: 1px;
+  padding: 0.35rem;
+  background: var(--bg-elevated);
+  backdrop-filter: blur(18px);
+  border: 1px solid var(--surface-line-strong);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  visibility: hidden;
+  translate: 0 -6px;
+  transition: opacity 0.2s var(--ease), translate 0.2s var(--ease), visibility 0.2s;
+  z-index: 30;
+}
+.nav-drop:hover .nav-drop-menu,
+.nav-drop:focus-within .nav-drop-menu,
+.nav-drop-btn[aria-expanded="true"] + .nav-drop-menu {
+  opacity: 1;
+  visibility: visible;
+  translate: 0 0;
+}
+
+.nav-drop-menu a {
+  padding: 0.55rem 0.7rem;
+  font-size: 0.86rem;
+  white-space: nowrap;
+  border-radius: calc(var(--radius-sm) - 2px);
+}
+.nav-drop-menu a:hover { background: color-mix(in srgb, var(--accent) 14%, transparent); }
+.nav-drop-menu a::after { content: none; }
+.nav-drop-menu a[aria-current="page"] { color: var(--accent-soft); }
+
+/* the background of the menu needs to be opaque enough to read over the page */
+html[data-theme="light"] .nav-drop-menu { background: color-mix(in srgb, var(--bg) 94%, #fff); }
+html[data-theme="dark"] .nav-drop-menu { background: color-mix(in srgb, #0e0c13 92%, transparent); }
+
 .header-tools {
   display: flex;
   align-items: center;
@@ -735,6 +817,21 @@ html[data-theme="light"] .icon-btn .i-sun { display: none; }
   color: var(--text);
   border-bottom: 1px solid var(--surface-line);
 }
+.drawer nav a.-sub {
+  padding-inline-start: 1.5rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+.drawer nav .drawer-group {
+  padding: 0.95rem 0.6rem 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
 .drawer .drawer-actions { display: grid; gap: 0.6rem; margin-top: var(--gap-md); }
 
 /* --------------------------------------------------------------------------
@@ -2388,6 +2485,336 @@ html[data-theme="light"] .site-footer { background: color-mix(in srgb, var(--bg)
   flex-wrap: wrap;
   gap: 0.6rem;
   justify-content: center;
+}
+
+/* --------------------------------------------------------------------------
+   20e. MVP altars
+
+   One card per boss. The two ways of opening an altar sit side by side, so
+   the choice is the first thing you see: farm the map, or hunt champions.
+   -------------------------------------------------------------------------- */
+
+.mvp-grid {
+  display: grid;
+  align-items: start;
+  gap: 0.7rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+}
+
+.mvp-card {
+  display: grid;
+  gap: 0.85rem;
+  padding: 1.1rem 1.2rem;
+  background: var(--bg-panel);
+  border: 1px solid var(--surface-line);
+  border-radius: var(--radius-sm);
+  transition: border-color 0.25s var(--ease), transform 0.25s var(--ease);
+}
+.mvp-card:hover { transform: translateY(-2px); border-color: var(--surface-line-strong); }
+.mvp-card:target { border-color: var(--accent); }
+
+.mvp-head { display: flex; align-items: center; gap: 0.85rem; }
+.mvp-head h3 {
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.mvp-thumb {
+  flex: none;
+  width: 62px;
+  height: 62px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--surface-line);
+}
+
+.mvp-map {
+  display: inline-block;
+  margin-top: 0.25rem;
+  padding: 0.1rem 0.45rem;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.05em;
+  color: var(--text-dim);
+  background: var(--bg-elevated);
+  border-radius: 4px;
+}
+
+.mvp-paths {
+  display: grid;
+  gap: 0.55rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
+}
+
+.mvp-path {
+  --path: var(--sk-utility);
+  padding: 0.6rem 0.7rem;
+  background: var(--bg-elevated);
+  border-inline-start: 2px solid var(--path);
+  border-radius: var(--radius-sm);
+}
+.mvp-path.-champ { --path: var(--sk-stance); }
+.mvp-path h4 {
+  margin-bottom: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--path);
+}
+
+.mvp-items { display: grid; gap: 0.22rem; }
+.mvp-items li {
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+.mvp-items b {
+  margin-inline-end: 0.3rem;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--text);
+}
+.mvp-items em {
+  display: block;
+  font-style: normal;
+  font-size: 0.68rem;
+  color: var(--text-dim);
+}
+/* an item only champion monsters carry */
+.mvp-items li.-champ span { color: var(--sk-stance); font-weight: 600; }
+.mvp-items li.-champ em::before {
+  content: "\2605\00a0";
+  color: var(--sk-stance);
+}
+
+.mvp-more { border-top: 1px solid var(--surface-line); padding-top: 0.7rem; }
+.mvp-more summary {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  cursor: pointer;
+}
+.mvp-more summary:hover { color: var(--accent-soft); }
+.mvp-more-body { display: grid; gap: 0.75rem; margin-top: 0.8rem; }
+
+.mvp-drops { display: grid; gap: 0.18rem; }
+.mvp-drops li {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: space-between;
+  font-size: 0.79rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+.mvp-drops b {
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--sk-support);
+}
+
+.mvp-exp {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.mvp-exp b { color: var(--text); }
+
+.mvp-card-note {
+  padding: 0.65rem 0.75rem;
+  background: color-mix(in srgb, var(--kw-poison) 8%, transparent);
+  border: 1px solid color-mix(in srgb, var(--kw-poison) 26%, transparent);
+  border-radius: var(--radius-sm);
+}
+.mvp-card-note b { font-family: var(--font-display); color: var(--kw-poison); }
+.mvp-card-note p {
+  margin-top: 0.3rem;
+  font-size: 0.79rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+.mvp-slot {
+  margin-inline-start: 0.45rem;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.mvp-gallery,
+.mvp-sheet-shots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.mvp-gallery img {
+  max-width: 100%;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--surface-line);
+}
+.mvp-sheet-shots img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--surface-line);
+  background: var(--bg-elevated);
+}
+
+.mvp-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+.mvp-table th {
+  padding: 0.6rem 0.7rem;
+  text-align: start;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  border-bottom: 1px solid var(--surface-line-strong);
+  white-space: nowrap;
+}
+.mvp-table td {
+  padding: 0.6rem 0.7rem;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--surface-line);
+  vertical-align: top;
+}
+.mvp-table tr:hover td { background: var(--bg-elevated); }
+
+/* --------------------------------------------------------------------------
+   20f. Quests
+
+   Everything sits behind a gate, because half of these quests are meant to be
+   found rather than looked up.
+   -------------------------------------------------------------------------- */
+
+.q-gate {
+  padding: clamp(1.6rem, 5vw, 2.8rem);
+  text-align: center;
+  background: var(--bg-panel);
+  border: 1px dashed var(--surface-line-strong);
+  border-radius: var(--radius-md);
+}
+.q-gate[data-open="true"] { padding: 1rem; }
+.q-gate[data-open="true"] h2,
+.q-gate[data-open="true"] p { display: none; }
+
+.q-gate h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 3.5vw, 1.9rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.q-gate p {
+  max-width: 46ch;
+  margin: 0.7rem auto 1.4rem;
+  color: var(--text-muted);
+  font-size: var(--step--1);
+  line-height: 1.65;
+}
+
+.q-body { display: grid; gap: 0.6rem; margin-top: 1.4rem; }
+
+.q-quest {
+  background: var(--bg-panel);
+  border: 1px solid var(--surface-line);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+.q-quest[open] { border-color: var(--surface-line-strong); }
+
+.q-quest > summary {
+  display: grid;
+  gap: 0.2rem;
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.2s var(--ease);
+}
+.q-quest > summary:hover { background: var(--bg-elevated); }
+.q-title {
+  font-family: var(--font-display);
+  font-size: 1.06rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.q-blurb { font-size: 0.82rem; color: var(--text-muted); }
+
+.q-steps {
+  display: grid;
+  gap: 0.9rem;
+  padding: 0.4rem 1.2rem 1.4rem;
+  list-style: none;
+}
+.q-steps > li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.75rem;
+  align-items: start;
+}
+.q-steps > li:only-child,
+.q-steps > li > div { min-width: 0; }
+.q-steps p {
+  font-size: var(--step--1);
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.q-n {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.55rem;
+  height: 1.55rem;
+  padding: 0 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--accent-soft);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+  border-radius: 100px;
+}
+.q-steps > li:not(:has(.q-n)) { grid-template-columns: 1fr; }
+
+.q-shots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+}
+.q-shots img {
+  max-width: min(100%, 420px);
+  height: auto;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--surface-line);
+}
+
+.q-potion-head {
+  margin: 1.6rem 0 0.6rem;
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  font-weight: 700;
+}
+.q-mat {
+  display: block;
+  font-size: 0.8rem;
+  line-height: 1.5;
 }
 
 /* --------------------------------------------------------------------------

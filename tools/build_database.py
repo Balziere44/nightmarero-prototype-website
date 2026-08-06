@@ -165,6 +165,36 @@ def parse_cards(path, slot):
     return items
 
 
+# The MVP card sheet writes the slot out in words, with a typo or two.
+MVP_CARD_SLOT = {
+    "weapon": "weapon", "headgear": "headgear", "armor": "armor",
+    "garment": "garment", "shoes": "shoes", "shield": "shield",
+    "accessory": "accessory", "acessory": "accessory",
+}
+
+
+def parse_mvp_cards(path):
+    """Boss cards. Same shape as an ordinary card, but they come from the MVP
+    sheet and get their own category so the filter can single them out."""
+    items = []
+    for row in read(path):
+        cells = (list(row) + [""] * 3)[:3]
+        name = clean(cells[0])
+        if not name or name.lower() == "name":
+            continue
+        slot = MVP_CARD_SLOT.get(clean(cells[2]).lower(), "any")
+        items.append({
+            "name": name,
+            "kind": "card",
+            "slot": slot,
+            "cat": "MVP Card",
+            "effect": split_lines(cells[1]),
+            "affix": "",
+            "source": "mvp-card",
+        })
+    return items
+
+
 def main():
     items = []
 
@@ -192,6 +222,14 @@ def main():
         got = parse_cards(path, slot)
         items.extend(got)
         print("  %-32s %4d cartas" % (fname, len(got)))
+
+    mvp_cards = os.path.join(SRC, "mvp-cards.csv")
+    if os.path.exists(mvp_cards):
+        got = parse_mvp_cards(mvp_cards)
+        items.extend(got)
+        print("  %-32s %4d cartas de MVP" % ("mvp-cards.csv", len(got)))
+    else:
+        print("  faltando: mvp-cards.csv")
 
     # de-duplicate on name + slot + source, keeping the first
     seen, unique = set(), []

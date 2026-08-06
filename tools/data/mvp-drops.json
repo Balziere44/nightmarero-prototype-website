@@ -1,0 +1,161 @@
+{
+ "_note": "Transcribed by hand from the drop table screenshots in the MVP sheet, which the CSV export cannot see. Each entry lists the boss drops, the MVP bonus experience, and the MVP reward items. A slot count in brackets means the item has that many card slots. Re-check against assets/img/mvp/locations-*.webp if the sheet is updated.",
+ "_source": "https://docs.google.com/spreadsheets/d/1ojSow2JMglSDcvXii3Sppoa9Nx9mWAcVtC3c_OzApzk",
+ "bosses": {
+  "Guardian Serpent": {
+   "drops": [["Snakeskin Whip [2]", "35.00%"], ["Great Serpent's Fang [2]", "35.00%"], ["Giant Snake Skin [1]", "35.00%"], ["Miniature Guardian [1]", "35.00%"], ["Necklace [1]", "15.00%"], ["Rosary [1]", "15.00%"], ["Guardian's Bell", "1.00%"], ["Guardian Serpent Card", "5.00%"]],
+   "exp": null,
+   "mvpItems": []
+  },
+  "Phreeoni": {
+   "drops": [["Poison Knife [2]", "35.00%"], ["Desert Leather Robe [1]", "35.00%"], ["Desert Leather Cloak [1]", "35.00%"], ["Desert Leather Shoes [1]", "35.00%"], ["Clip [1]", "15.00%"], ["Nile Rose [1]", "15.00%"], ["Tongue", "1.00%"], ["Phreeoni Card", "5.00%"]],
+   "exp": "4000",
+   "mvpItems": [["Phracon", "50.00%"], ["Iron", "50.00%"]]
+  },
+  "Lady Tanee": {
+   "drops": [["Tanee's Branch [2]", "35.00%"], ["Umbala Guitar [2]", "35.00%"], ["Jungle Arch [2]", "35.00%"], ["Banana Hat [1]", "35.00%"], ["Brooch [1]", "15.00%"], ["Earring [1]", "15.00%"], ["Tropical Banana", "1.00%"], ["Lady Tanee Card", "5.00%"]],
+   "exp": "75000",
+   "mvpItems": [["Steel", "50.00%"], ["Emveretarcon", "50.00%"]]
+  },
+  "Ancient Wootan Defender": {
+   "drops": [["Colossal Axe [2]", "35.00%"], ["Primal Fist [2]", "35.00%"], ["Gaia Plate [1]", "35.00%"], ["Colossal Shield [1]", "35.00%"], ["Umbalian Rose [1]", "35.00%"], ["Amulet of Savagery [1]", "15.00%"], ["Wootan Defender's Shield Piece", "1.00%"], ["Ancient Wootan Defender Card", "5.00%"]],
+   "exp": "50000",
+   "mvpItems": [["Emveretarcon", "50.00%"], ["Steel", "50.00%"]]
+  },
+  "Dracula": {
+   "drops": [["Vampiric Rapier [2]", "35.00%"], ["Long Mace [2]", "35.00%"], ["Ballista [0]", "35.00%"], ["Ancient Cape [1]", "35.00%"], ["Bloodstone Ring [1]", "15.00%"], ["Ancient Magic Scroll", "1.00%"], ["Dracula Card", "5.00%"]],
+   "exp": "10000",
+   "mvpItems": [["Iron", "50.00%"], ["Phracon", "50.00%"]]
+  },
+  "Eddga": {
+   "drops": [["Phoenix Cloak [1]", "35.00%"], ["White Tiger Armor [1]", "35.00%"], ["Burning Bow [2]", "35.00%"], ["Pipe [0]", "35.00%"], ["Clip [1]", "15.00%"], ["Nile Rose [1]", "15.00%"], ["Tiger's Footsink", "1.00%"], ["Eddga Card", "5.00%"]],
+   "exp": "5000",
+   "mvpItems": [["Phracon", "50.00%"], ["Iron", "50.00%"]]
+  },
+  "Kobold Warchief": {
+   "drops": [["Broad Sword [2]", "35.00%"], ["Kobold Glaive [2]", "35.00%"], ["Buster [2]", "35.00%"], ["Puppy Headband [1]", "35.00%"], ["Brooch [1]", "15.00%"], ["Glove [1]", "15.00%"], ["Rough Elunium", "1.00%"], ["Kobold Warchief Card", "5.00%"]],
+   "exp": "25000",
+   "mvpItems": [["Emveretarcon", "50.00%"], ["Steel", "50.00%"]]
+  },
+  "Golden Thief Bug": {
+   "drops": [["Golden Blade [2]", "35.00%"], ["Golden Mace [2]", "35.00%"], ["Golden Gear [1]", "35.00%"], ["Golden Axe [2]", "35.00%"], ["Gold Lux [3]", "35.00%"], ["Golden Buckler [1]", "35.00%"], ["Shiny Coin [1]", "15.00%"], ["Gold", "1.00%"], ["Golden Thief Bug Card", "5.00%"]],
+   "exp": "10000",
+   "mvpItems": [["Iron", "50.00%"], ["Phracon", "50.00%"]]
+  },
+  "Moonlight Flower": {
+   "drops": [["Moonlight Bow [2]", "35.00%"], ["Moonlight Dagger [2]", "35.00%"], ["Moonlight Staff [2]", "35.00%"], ["Fox Ear Bell Ribbon [1]", "35.00%"], ["Moonsilver Ring [1]", "15.00%"], ["Fox Emblem", "1.00%"], ["Moonlight Flower Card", "5.00%"]],
+   "exp": "15000",
+   "mvpItems": [["Iron", "50.00%"], ["Phracon", "50.00%"]]
+  },
+  "Mistress": {
+   "drops": [["Gungnir [2]", "35.00%"], ["Red Square Bag [2]", "35.00%"], ["Guardian's Rod [2]", "35.00%"], ["Crown of Mistress [1]", "35.00%"], ["Magician Hat [1]", "35.00%"], ["Clip [1]", "15.00%"], ["Nile Rose [1]", "15.00%"], ["Young Twig", "1.00%"], ["Mistress Card", "5.00%"]],
+   "exp": "15000",
+   "mvpItems": [["Phracon", "50.00%"], ["Iron", "50.00%"]]
+  },
+  "Tao Gunka": {
+   "drops": [["Comodo Trumpet [2]", "35.00%"], ["Blade Whip [2]", "35.00%"], ["Jeweled Sword [2]", "35.00%"], ["Dance Shoes [1]", "35.00%"], ["Jeweled Crown [1]", "35.00%"], ["Jeweled Pendant [1]", "15.00%"], ["Rare Gemstone", "1.00%"], ["Tao Gunka Card", "5.00%"]],
+   "exp": "25000",
+   "mvpItems": [["Emveretarcon", "50.00%"], ["Steel", "50.00%"]]
+  },
+  "Doppelganger": {
+   "drops": [["Practice Sword [4]", "35.00%"], ["Practice Axe [4]", "35.00%"], ["Practice Knife [4]", "35.00%"], ["Practice Rod [4]", "35.00%"], ["Practice Bow [4]", "35.00%"], ["Practice Club [4]", "35.00%"], ["Clip [1]", "15.00%"], ["Nile Rose [1]", "15.00%"], ["Cursed Ruby", "1.00%"], ["Doppelganger Card", "5.00%"]],
+   "exp": "5000",
+   "mvpItems": [["Phracon", "50.00%"], ["Iron", "50.00%"]]
+  },
+  "Muspellskoll": {
+   "drops": [["Burning Brand [2]", "35.00%"], ["Katar of Raging Blaze [2]", "35.00%"], ["Eye of the Volcano [2]", "35.00%"], ["Pyromancer Soul [2]", "35.00%"], ["Inferno Shield [1]", "35.00%"], ["Blazing Mask [1]", "35.00%"], ["Magma's Heart [1]", "15.00%"], ["Burning Heart", "1.00%"], ["Muspellskoll Card", "5.00%"]],
+   "exp": "100000",
+   "mvpItems": [["Steel", "50.00%"], ["Emveretarcon", "50.00%"]]
+  },
+  "Orc Necromancer": {
+   "drops": [["Wand of Occult [2]", "35.00%"], ["Ritual Dagger [2]", "17.50%"], ["Ritual Dagger [2]", "17.50%"], ["Living Bone Armor [1]", "35.00%"], ["Grave Cloak [1]", "35.00%"], ["Necromancer's Hood [1]", "35.00%"], ["Skull Ring [1]", "15.00%"], ["Torn Magic Book", "1.00%"], ["Orc Necromancer Card", "5.00%"]],
+   "exp": "25000",
+   "mvpItems": [["Steel", "50.00%"], ["Emveretarcon", "50.00%"]]
+  },
+  "Orc Lord": {
+   "drops": [["Orcish Sword [2]", "35.00%"], ["Orcish Axe [2]", "35.00%"], ["Orc Archer Bow [2]", "35.00%"], ["Orc Helm [1]", "35.00%"], ["Ring [1]", "15.00%"], ["Necklace [1]", "15.00%"], ["Orcish Emblem", "1.00%"], ["Orc Lord Card", "5.00%"]],
+   "exp": "25000",
+   "mvpItems": [["Emveretarcon", "50.00%"], ["Steel", "50.00%"]]
+  },
+  "Osiris": {
+   "drops": [["Royal Lance [2]", "35.00%"], ["Quadrille [2]", "17.50%"], ["Quadrille [2]", "17.50%"], ["Chakram [2]", "35.00%"], ["Pharaonic Greaves [1]", "35.00%"], ["Crown [1]", "35.00%"], ["Mummified Hand [1]", "15.00%"], ["Pristine Bandage", "1.00%"], ["Osiris Card", "5.00%"]],
+   "exp": "24000",
+   "mvpItems": [["Emveretarcon", "50.00%"], ["Steel", "50.00%"]]
+  },
+  "Captain Sweety": {
+   "drops": [["Sweety's Handgun [2]", "35.00%"], ["St. Darmain's Aegis [1]", "35.00%"], ["Assault Armor [1]", "35.00%"], ["Gangster Scarf [2]", "35.00%"], ["Glove [1]", "15.00%"], ["Earring [1]", "15.00%"], ["Encrypted Orders IV", "1.00%"], ["Captain Sweety Card", "5.00%"]],
+   "exp": "25000",
+   "mvpItems": [["Emveretarcon", "50.00%"], ["Steel", "50.00%"]]
+  },
+  "Drake": {
+   "drops": [["Cutlass [2]", "35.00%"], ["Antique Revolver [2]", "35.00%"], ["Captain's Overcoat [1]", "35.00%"], ["Marauder Boots [1]", "35.00%"], ["Corsair [1]", "35.00%"], ["Pirate Glove [1]", "15.00%"], ["Treasure Chest", "1.00%"], ["Drake Card", "5.00%"]],
+   "exp": "15000",
+   "mvpItems": [["Phracon", "50.00%"], ["Iron", "50.00%"]]
+  },
+  "Kraken": {
+   "drops": [["Dofle Axe [2]", "35.00%"], ["Sea Witch's Foot [2]", "35.00%"], ["Deep Sea Plate [1]", "35.00%"], ["Depthwalker Shoes [1]", "35.00%"], ["Deep Sea Rose [0]", "35.00%"], ["Diamond of the Deep [1]", "15.00%"], ["Kraken's Leg", "1.00%"], ["Kraken Card", "5.00%"]],
+   "exp": "50000",
+   "mvpItems": [["Steel", "50.00%"], ["Emveretarcon", "50.00%"]]
+  },
+  "Nightmare Pitaya": {
+   "drops": [["Intrepid Shadow Coffer", "50.00%"], ["Intrepid Shadow Coffer", "50.00%"], ["Corrupted Chain Mail [1]", "35.00%"], ["Corrupted Muffler [1]", "35.00%"], ["Corrupted Shoes [1]", "35.00%"], ["Nightmare Shard", "25.00%"], ["Nightmare Pitaya Tail", "1.00%"], ["Nightmare Pitaya Card", "5.00%"]],
+   "exp": "70000",
+   "mvpItems": [["Emveretarcon", "50.00%"], ["Steel", "50.00%"]]
+  },
+  "Goblin King": {
+   "drops": [["War Axe [2]", "35.00%"], ["Stone Blade [2]", "35.00%"], ["Goblin Knife [2]", "35.00%"], ["Goblin King Mask [0]", "35.00%"], ["Ring [1]", "15.00%"], ["Glove [1]", "15.00%"], ["Rough Oridecon", "1.00%"], ["Goblin King Card", "5.00%"]],
+   "exp": "20000",
+   "mvpItems": [["Emveretarcon", "50.00%"], ["Steel", "50.00%"]]
+  },
+  "Faceworm Queen": {
+   "drops": [["Faceworm Queen Leg [2]", "35.00%"], ["Venom Lance [2]", "35.00%"], ["Scorpion Claw [2]", "35.00%"], ["Faceworm Scale Armor [1]", "35.00%"], ["Ancient Serpent Crown [1]", "35.00%"], ["Brooch [1]", "15.00%"], ["Glove [1]", "15.00%"], ["Pristine Faceworm Skin [0]", "1.00%"], ["Faceworm Queen Card", "5.00%"]],
+   "exp": "100000",
+   "mvpItems": [["Emveretarcon", "50.00%"], ["Steel", "50.00%"]]
+  },
+  "Face of Horror": {
+   "drops": [["Nightmare Coffer", "100.00%"], ["Nightmare Coffer", "75.00%"], ["Nightmare Coffer", "50.00%"], ["Nightmare Coffer", "25.00%"], ["Intrepid Shadow Coffer", "100.00%"], ["Intrepid Shadow Coffer", "75.00%"], ["Intrepid Shadow Coffer", "50.00%"], ["Intrepid Shadow Coffer", "25.00%"], ["Cursed Baphomet Doll", "1.00%"], ["Face of Horror Card", "5.00%"]],
+   "exp": "300000",
+   "mvpItems": [["Elunium", "50.00%"], ["Oridecon", "50.00%"]]
+  },
+  "Vesper": {
+   "drops": [["Plasma Axe [2]", "35.00%"], ["Staff of Juperos [2]", "35.00%"], ["Juperos Mail [1]", "35.00%"], ["Juperos Wing [1]", "35.00%"], ["Juperos Boots [1]", "35.00%"], ["Vesper Core [1]", "15.00%"], ["Robotic Core Fragment", "1.00%"], ["Vesper Card", "5.00%"]],
+   "exp": "250000",
+   "mvpItems": [["Elunium", "50.00%"], ["Oridecon", "50.00%"]]
+  },
+  "Rogue Prototype": {
+   "drops": [["Battle Hook [2]", "35.00%"], ["War Mace [2]", "35.00%"], ["Berserker Soul [2]", "35.00%"], ["Final Destiny [2]", "35.00%"], ["Skull Helm [1]", "35.00%"], ["Ring [1]", "35.00%"], ["Earring [1]", "15.00%"], ["Prototype Energy Core", "1.00%"], ["Rogue Prototype Card", "5.00%"]],
+   "exp": "0",
+   "mvpItems": [["Steel", "50.00%"], ["Emveretarcon", "50.00%"]]
+  },
+  "Baphomet": {
+   "drops": [["Crescent Scythe [2]", "35.00%"], ["Executioner [2]", "35.00%"], ["Devil's Grimoire [2]", "35.00%"], ["Demon Slayer [2]", "35.00%"], ["Majestic Goat [2]", "35.00%"], ["Black Rosary [1]", "15.00%"], ["Fragment of the Present", "1.00%"], ["Baphomet Card", "5.00%"]],
+   "exp": "75000",
+   "mvpItems": [["Emveretarcon", "50.00%"], ["Steel", "50.00%"]]
+  },
+  "Maya": {
+   "drops": [["Dea Staff [2]", "35.00%"], ["Firestarter [2]", "35.00%"], ["Sandwalker Shoes [1]", "35.00%"], ["Insect Wing Manteau [1]", "35.00%"], ["Tiara [0]", "35.00%"], ["Armlet of Obedience [1]", "15.00%"], ["Mother's Nightmare", "1.00%"], ["Maya Card", "5.00%"]],
+   "exp": "7500",
+   "mvpItems": [["Iron", "50.00%"], ["Phracon", "50.00%"]]
+  },
+  "Kublin": {
+   "drops": [["Tomahawk [2]", "35.00%"], ["Ancient Dagger [2]", "35.00%"], ["Ebon Armor [1]", "35.00%"], ["Ebon Boots [1]", "35.00%"], ["Elven Ears [0]", "35.00%"], ["Cursed Lantern [1]", "15.00%"], ["Hoe", "1.00%"], ["Kublin Card", "5.00%"]],
+   "exp": "8750",
+   "mvpItems": [["Phracon", "50.00%"], ["Iron", "50.00%"]]
+  },
+  "Pharaoh": {
+   "drops": [["Pharaoh's Scepter [2]", "35.00%"], ["Book of the Sun [2]", "35.00%"], ["Ancient Bow [2]", "35.00%"], ["Sacred Vestments [1]", "35.00%"], ["Pharaoh's Headdress [1]", "35.00%"], ["Celebrant's Mitten [1]", "15.00%"], ["Pharaoh's Mask", "1.00%"], ["Pharaoh Card", "5.00%"]],
+   "exp": "25000",
+   "mvpItems": [["Emveretarcon", "50.00%"], ["Steel", "50.00%"]]
+  },
+  "RSX": {
+   "drops": [["Mining Saber [2]", "35.00%"], ["Metal Detector [2]", "35.00%"], ["Jewel Detector [2]", "35.00%"], ["Gemmed Shield [1]", "35.00%"], ["Lifespring Mail [1]", "35.00%"], ["Safety Helmet [1]", "35.00%"], ["Mining Gloves [1]", "15.00%"], ["Cogwheel", "1.00%"], ["RSX-0806 Card", "5.00%"]],
+   "exp": "100000",
+   "mvpItems": [["Steel", "50.00%"], ["Emveretarcon", "50.00%"]]
+  },
+  "Stormy Knight": {
+   "drops": [["Zephyrus [2]", "100.00%"], ["Schweizersabel [2]", "100.00%"], ["Shock Fist [2]", "100.00%"], ["Book of Storms [2]", "100.00%"], ["Reindeer Hat [1]", "100.00%"], ["Storm Ring [1]", "90.00%"], ["Santa Bag", "6.00%"], ["Stormy Knight Card", "30.00%"]],
+   "exp": "87500",
+   "mvpItems": [["Emveretarcon", "50.00%"], ["Steel", "50.00%"]]
+  }
+ }
+}

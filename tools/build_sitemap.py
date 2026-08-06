@@ -13,7 +13,10 @@ TODAY = datetime.date.today().isoformat()
 
 PRIORITY = {"index.html": ("1.0", "weekly"),
             "classes.html": ("0.9", "weekly"),
-            "download.html": ("0.9", "monthly")}
+            "download.html": ("0.9", "monthly"),
+            "database.html": ("0.8", "weekly"),
+            "mvps.html": ("0.8", "weekly"),
+            "quests.html": ("0.8", "monthly")}
 
 
 def main():

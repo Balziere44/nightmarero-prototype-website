@@ -1,0 +1,2549 @@
+[
+ {
+  "sheet": "locations",
+  "row": 5,
+  "col": 10,
+  "file": "assets/img/mvp/locations-image25.webp",
+  "w": 123,
+  "h": 121,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 8,
+  "col": 2,
+  "file": "assets/img/mvp/locations-image32.webp",
+  "w": 576,
+  "h": 58,
+  "kind": "drops"
+ },
+ {
+  "sheet": "locations",
+  "row": 9,
+  "col": 12,
+  "file": "assets/img/mvp/locations-image24.webp",
+  "w": 580,
+  "h": 67,
+  "kind": "drops"
+ },
+ {
+  "sheet": "locations",
+  "row": 16,
+  "col": 0,
+  "file": "assets/img/mvp/locations-image1.webp",
+  "w": 130,
+  "h": 124,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 16,
+  "col": 9,
+  "file": "assets/img/mvp/locations-image11.webp",
+  "w": 100,
+  "h": 100,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 18,
+  "col": 12,
+  "file": "assets/img/mvp/locations-image3.webp",
+  "w": 549,
+  "h": 66,
+  "kind": "drops"
+ },
+ {
+  "sheet": "locations",
+  "row": 19,
+  "col": 1,
+  "file": "assets/img/mvp/locations-image30.webp",
+  "w": 522,
+  "h": 65,
+  "kind": "drops"
+ },
+ {
+  "sheet": "locations",
+  "row": 27,
+  "col": 0,
+  "file": "assets/img/mvp/locations-image31.webp",
+  "w": 131,
+  "h": 107,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 27,
+  "col": 10,
+  "file": "assets/img/mvp/locations-image46.webp",
+  "w": 342,
+  "h": 376,
+  "kind": "wide"
+ },
+ {
+  "sheet": "locations",
+  "row": 31,
+  "col": 1,
+  "file": "assets/img/mvp/locations-image29.webp",
+  "w": 128,
+  "h": 124,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 31,
+  "col": 1,
+  "file": "assets/img/mvp/locations-image16.webp",
+  "w": 531,
+  "h": 71,
+  "kind": "drops"
+ },
+ {
+  "sheet": "locations",
+  "row": 31,
+  "col": 12,
+  "file": "assets/img/mvp/locations-image26.webp",
+  "w": 528,
+  "h": 91,
+  "kind": "drops"
+ },
+ {
+  "sheet": "locations",
+  "row": 39,
+  "col": 0,
+  "file": "assets/img/mvp/locations-image6.webp",
+  "w": 130,
+  "h": 123,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 40,
+  "col": 10,
+  "file": "assets/img/mvp/locations-image28.webp",
+  "w": 96,
+  "h": 95,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 42,
+  "col": 2,
+  "file": "assets/img/mvp/locations-image27.webp",
+  "w": 467,
+  "h": 89,
+  "kind": "drops"
+ },
+ {
+  "sheet": "locations",
+  "row": 44,
+  "col": 11,
+  "file": "assets/img/mvp/locations-image64.webp",
+  "w": 521,
+  "h": 98,
+  "kind": "drops"
+ },
+ {
+  "sheet": "locations",
+  "row": 51,
+  "col": 0,
+  "file": "assets/img/mvp/locations-image9.webp",
+  "w": 109,
+  "h": 114,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 52,
+  "col": 9,
+  "file": "assets/img/mvp/locations-image40.webp",
+  "w": 133,
+  "h": 132,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 56,
+  "col": 1,
+  "file": "assets/img/mvp/locations-image12.webp",
+  "w": 559,
+  "h": 97,
+  "kind": "drops"
+ },
+ {
+  "sheet": "locations",
+  "row": 58,
+  "col": 12,
+  "file": "assets/img/mvp/locations-image18.webp",
+  "w": 514,
+  "h": 94,
+  "kind": "drops"
+ },
+ {
+  "sheet": "locations",
+  "row": 64,
+  "col": 0,
+  "file": "assets/img/mvp/locations-image19.webp",
+  "w": 135,
+  "h": 134,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 67,
+  "col": 10,
+  "file": "assets/img/mvp/locations-image69.webp",
+  "w": 130,
+  "h": 132,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 70,
+  "col": 1,
+  "file": "assets/img/mvp/locations-image13.webp",
+  "w": 540,
+  "h": 88,
+  "kind": "drops"
+ },
+ {
+  "sheet": "locations",
+  "row": 72,
+  "col": 12,
+  "file": "assets/img/mvp/locations-image15.webp",
+  "w": 513,
+  "h": 104,
+  "kind": "drops"
+ },
+ {
+  "sheet": "locations",
+  "row": 79,
+  "col": 0,
+  "file": "assets/img/mvp/locations-image8.webp",
+  "w": 128,
+  "h": 129,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 81,
+  "col": 2,
+  "file": "assets/img/mvp/locations-image33.webp",
+  "w": 573,
+  "h": 87,
+  "kind": "drops"
+ },
+ {
+  "sheet": "locations",
+  "row": 81,
+  "col": 9,
+  "file": "assets/img/mvp/locations-image36.webp",
+  "w": 137,
+  "h": 135,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 85,
+  "col": 11,
+  "file": "assets/img/mvp/locations-image20.webp",
+  "w": 579,
+  "h": 97,
+  "kind": "drops"
+ },
+ {
+  "sheet": "locations",
+  "row": 90,
+  "col": 0,
+  "file": "assets/img/mvp/locations-image17.webp",
+  "w": 129,
+  "h": 127,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 92,
+  "col": 2,
+  "file": "assets/img/mvp/locations-image22.webp",
+  "w": 505,
+  "h": 91,
+  "kind": "drops"
+ },
+ {
+  "sheet": "locations",
+  "row": 94,
+  "col": 10,
+  "file": "assets/img/mvp/locations-image21.webp",
+  "w": 128,
+  "h": 126,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 97,
+  "col": 12,
+  "file": "assets/img/mvp/locations-image49.webp",
+  "w": 482,
+  "h": 91,
+  "kind": "drops"
+ },
+ {
+  "sheet": "locations",
+  "row": 100,
+  "col": 0,
+  "file": "assets/img/mvp/locations-image39.webp",
+  "w": 160,
+  "h": 151,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 103,
+  "col": 2,
+  "file": "assets/img/mvp/locations-image23.webp",
+  "w": 565,
+  "h": 89,
+  "kind": "drops"
+ },
+ {
+  "sheet": "locations",
+  "row": 105,
+  "col": 10,
+  "file": "assets/img/mvp/locations-image53.webp",
+  "w": 161,
+  "h": 142,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 108,
+  "col": 12,
+  "file": "assets/img/mvp/locations-image34.webp",
+  "w": 521,
+  "h": 91,
+  "kind": "drops"
+ },
+ {
+  "sheet": "locations",
+  "row": 108,
+  "col": 12,
+  "file": "assets/img/mvp/locations-image34.webp",
+  "w": 521,
+  "h": 91,
+  "kind": "drops"
+ },
+ {
+  "sheet": "locations",
+  "row": 110,
+  "col": 0,
+  "file": "assets/img/mvp/locations-image35.webp",
+  "w": 125,
+  "h": 126,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 113,
+  "col": 2,
+  "file": "assets/img/mvp/locations-image38.webp",
+  "w": 578,
+  "h": 102,
+  "kind": "drops"
+ },
+ {
+  "sheet": "locations",
+  "row": 117,
+  "col": 10,
+  "file": "assets/img/mvp/locations-image37.webp",
+  "w": 131,
+  "h": 131,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 120,
+  "col": 12,
+  "file": "assets/img/mvp/locations-image80.webp",
+  "w": 581,
+  "h": 109,
+  "kind": "drops"
+ },
+ {
+  "sheet": "locations",
+  "row": 123,
+  "col": 0,
+  "file": "assets/img/mvp/locations-image47.webp",
+  "w": 129,
+  "h": 129,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 126,
+  "col": 2,
+  "file": "assets/img/mvp/locations-image42.webp",
+  "w": 461,
+  "h": 90,
+  "kind": "drops"
+ },
+ {
+  "sheet": "locations",
+  "row": 129,
+  "col": 10,
+  "file": "assets/img/mvp/locations-image57.webp",
+  "w": 129,
+  "h": 128,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 131,
+  "col": 12,
+  "file": "assets/img/mvp/locations-image44.webp",
+  "w": 567,
+  "h": 87,
+  "kind": "drops"
+ },
+ {
+  "sheet": "locations",
+  "row": 135,
+  "col": 0,
+  "file": "assets/img/mvp/locations-image45.webp",
+  "w": 132,
+  "h": 127,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 137,
+  "col": 2,
+  "file": "assets/img/mvp/locations-image43.webp",
+  "w": 584,
+  "h": 116,
+  "kind": "drops"
+ },
+ {
+  "sheet": "locations",
+  "row": 140,
+  "col": 10,
+  "file": "assets/img/mvp/locations-image52.webp",
+  "w": 129,
+  "h": 126,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 144,
+  "col": 12,
+  "file": "assets/img/mvp/locations-image50.webp",
+  "w": 502,
+  "h": 89,
+  "kind": "drops"
+ },
+ {
+  "sheet": "locations",
+  "row": 147,
+  "col": 0,
+  "file": "assets/img/mvp/locations-image56.webp",
+  "w": 131,
+  "h": 127,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 151,
+  "col": 2,
+  "file": "assets/img/mvp/locations-image51.webp",
+  "w": 513,
+  "h": 89,
+  "kind": "drops"
+ },
+ {
+  "sheet": "locations",
+  "row": 153,
+  "col": 10,
+  "file": "assets/img/mvp/locations-image55.webp",
+  "w": 123,
+  "h": 135,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 155,
+  "col": 12,
+  "file": "assets/img/mvp/locations-image58.webp",
+  "w": 516,
+  "h": 90,
+  "kind": "drops"
+ },
+ {
+  "sheet": "locations",
+  "row": 160,
+  "col": 0,
+  "file": "assets/img/mvp/locations-image63.webp",
+  "w": 124,
+  "h": 118,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 162,
+  "col": 2,
+  "file": "assets/img/mvp/locations-image48.webp",
+  "w": 538,
+  "h": 90,
+  "kind": "drops"
+ },
+ {
+  "sheet": "locations",
+  "row": 164,
+  "col": 10,
+  "file": "assets/img/mvp/locations-image72.webp",
+  "w": 132,
+  "h": 112,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 166,
+  "col": 12,
+  "file": "assets/img/mvp/locations-image60.webp",
+  "w": 495,
+  "h": 86,
+  "kind": "drops"
+ },
+ {
+  "sheet": "locations",
+  "row": 172,
+  "col": 0,
+  "file": "assets/img/mvp/locations-image59.webp",
+  "w": 126,
+  "h": 132,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 174,
+  "col": 1,
+  "file": "assets/img/mvp/locations-image61.webp",
+  "w": 581,
+  "h": 101,
+  "kind": "drops"
+ },
+ {
+  "sheet": "locations",
+  "row": 177,
+  "col": 10,
+  "file": "assets/img/mvp/locations-image54.webp",
+  "w": 192,
+  "h": 193,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 181,
+  "col": 12,
+  "file": "assets/img/mvp/locations-image62.webp",
+  "w": 529,
+  "h": 91,
+  "kind": "drops"
+ },
+ {
+  "sheet": "locations",
+  "row": 184,
+  "col": 0,
+  "file": "assets/img/mvp/locations-image66.webp",
+  "w": 113,
+  "h": 112,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 196,
+  "col": 0,
+  "file": "assets/img/mvp/locations-image67.webp",
+  "w": 126,
+  "h": 123,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 196,
+  "col": 10,
+  "file": "assets/img/mvp/locations-image145.webp",
+  "w": 125,
+  "h": 123,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 208,
+  "col": 0,
+  "file": "assets/img/mvp/locations-image92.webp",
+  "w": 125,
+  "h": 125,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 208,
+  "col": 10,
+  "file": "assets/img/mvp/locations-image84.webp",
+  "w": 126,
+  "h": 128,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 211,
+  "col": 12,
+  "file": "assets/img/mvp/locations-image81.webp",
+  "w": 353,
+  "h": 137,
+  "kind": "drops"
+ },
+ {
+  "sheet": "locations",
+  "row": 214,
+  "col": 0,
+  "file": "assets/img/mvp/locations-image68.webp",
+  "w": 125,
+  "h": 123,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 224,
+  "col": 10,
+  "file": "assets/img/mvp/locations-image91.webp",
+  "w": 127,
+  "h": 126,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 225,
+  "col": 0,
+  "file": "assets/img/mvp/locations-image83.webp",
+  "w": 125,
+  "h": 122,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 237,
+  "col": 0,
+  "file": "assets/img/mvp/locations-image94.webp",
+  "w": 127,
+  "h": 126,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 237,
+  "col": 10,
+  "file": "assets/img/mvp/locations-image96.webp",
+  "w": 127,
+  "h": 124,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 249,
+  "col": 0,
+  "file": "assets/img/mvp/locations-image99.webp",
+  "w": 130,
+  "h": 114,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 261,
+  "col": 0,
+  "file": "assets/img/mvp/locations-image106.webp",
+  "w": 124,
+  "h": 124,
+  "kind": "tile"
+ },
+ {
+  "sheet": "locations",
+  "row": 261,
+  "col": 10,
+  "file": "assets/img/mvp/locations-image105.webp",
+  "w": 128,
+  "h": 126,
+  "kind": "tile"
+ },
+ {
+  "sheet": "nightmare",
+  "row": 2,
+  "col": 0,
+  "file": "assets/img/mvp/nightmare-image4.webp",
+  "w": 126,
+  "h": 91,
+  "kind": "tile"
+ },
+ {
+  "sheet": "nightmare",
+  "row": 2,
+  "col": 1,
+  "file": "assets/img/mvp/nightmare-image14.webp",
+  "w": 129,
+  "h": 125,
+  "kind": "tile"
+ },
+ {
+  "sheet": "nightmare",
+  "row": 15,
+  "col": 0,
+  "file": "assets/img/mvp/nightmare-image5.webp",
+  "w": 122,
+  "h": 121,
+  "kind": "tile"
+ },
+ {
+  "sheet": "nightmare",
+  "row": 15,
+  "col": 1,
+  "file": "assets/img/mvp/nightmare-image2.webp",
+  "w": 128,
+  "h": 125,
+  "kind": "tile"
+ },
+ {
+  "sheet": "nightmare",
+  "row": 25,
+  "col": 0,
+  "file": "assets/img/mvp/nightmare-image10.webp",
+  "w": 128,
+  "h": 126,
+  "kind": "tile"
+ },
+ {
+  "sheet": "nightmare",
+  "row": 25,
+  "col": 1,
+  "file": "assets/img/mvp/nightmare-image7.webp",
+  "w": 130,
+  "h": 128,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-amatsu",
+  "row": 0,
+  "col": 3,
+  "file": "assets/img/mvp/quest-amatsu-image19.webp",
+  "w": 128,
+  "h": 123,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-amatsu",
+  "row": 0,
+  "col": 5,
+  "file": "assets/img/mvp/quest-amatsu-image2.webp",
+  "w": 778,
+  "h": 531,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-amatsu",
+  "row": 1,
+  "col": 0,
+  "file": "assets/img/mvp/quest-amatsu-image98.webp",
+  "w": 583,
+  "h": 536,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-amatsu",
+  "row": 25,
+  "col": 3,
+  "file": "assets/img/mvp/quest-amatsu-image6.webp",
+  "w": 124,
+  "h": 125,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-amatsu",
+  "row": 25,
+  "col": 5,
+  "file": "assets/img/mvp/quest-amatsu-image40.webp",
+  "w": 276,
+  "h": 176,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-amatsu",
+  "row": 26,
+  "col": 0,
+  "file": "assets/img/mvp/quest-amatsu-image10.webp",
+  "w": 767,
+  "h": 588,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-amatsu",
+  "row": 34,
+  "col": 5,
+  "file": "assets/img/mvp/quest-amatsu-image54.webp",
+  "w": 275,
+  "h": 117,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-black-ops",
+  "row": 0,
+  "col": 0,
+  "file": "assets/img/mvp/quest-black-ops-image103.webp",
+  "w": 721,
+  "h": 621,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-black-ops",
+  "row": 0,
+  "col": 3,
+  "file": "assets/img/mvp/quest-black-ops-image168.webp",
+  "w": 125,
+  "h": 123,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-black-ops",
+  "row": 2,
+  "col": 5,
+  "file": "assets/img/mvp/quest-black-ops-image80.webp",
+  "w": 272,
+  "h": 275,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-black-ops",
+  "row": 2,
+  "col": 8,
+  "file": "assets/img/mvp/quest-black-ops-image91.webp",
+  "w": 274,
+  "h": 277,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-black-ops",
+  "row": 3,
+  "col": 11,
+  "file": "assets/img/mvp/quest-black-ops-image77.webp",
+  "w": 273,
+  "h": 273,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-black-ops",
+  "row": 22,
+  "col": 5,
+  "file": "assets/img/mvp/quest-black-ops-image110.webp",
+  "w": 672,
+  "h": 458,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-black-ops",
+  "row": 22,
+  "col": 10,
+  "file": "assets/img/mvp/quest-black-ops-image73.webp",
+  "w": 125,
+  "h": 124,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-black-ops",
+  "row": 23,
+  "col": 0,
+  "file": "assets/img/mvp/quest-black-ops-image58.webp",
+  "w": 748,
+  "h": 609,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-black-ops",
+  "row": 23,
+  "col": 3,
+  "file": "assets/img/mvp/quest-black-ops-image47.webp",
+  "w": 124,
+  "h": 124,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-black-ops",
+  "row": 43,
+  "col": 0,
+  "file": "assets/img/mvp/quest-black-ops-image134.webp",
+  "w": 900,
+  "h": 606,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-black-ops",
+  "row": 43,
+  "col": 3,
+  "file": "assets/img/mvp/quest-black-ops-image101.webp",
+  "w": 123,
+  "h": 125,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-black-ops",
+  "row": 43,
+  "col": 5,
+  "file": "assets/img/mvp/quest-black-ops-image88.webp",
+  "w": 727,
+  "h": 629,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-black-ops",
+  "row": 43,
+  "col": 10,
+  "file": "assets/img/mvp/quest-black-ops-image45.webp",
+  "w": 123,
+  "h": 118,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-black-ops",
+  "row": 63,
+  "col": 3,
+  "file": "assets/img/mvp/quest-black-ops-image83.webp",
+  "w": 125,
+  "h": 125,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-black-ops",
+  "row": 64,
+  "col": 0,
+  "file": "assets/img/mvp/quest-black-ops-image69.webp",
+  "w": 744,
+  "h": 705,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-black-ops",
+  "row": 89,
+  "col": 0,
+  "file": "assets/img/mvp/quest-black-ops-image55.webp",
+  "w": 641,
+  "h": 483,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-black-ops",
+  "row": 89,
+  "col": 5,
+  "file": "assets/img/mvp/quest-black-ops-image99.webp",
+  "w": 126,
+  "h": 125,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-black-ops",
+  "row": 112,
+  "col": 0,
+  "file": "assets/img/mvp/quest-black-ops-image166.webp",
+  "w": 529,
+  "h": 397,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-black-ops",
+  "row": 112,
+  "col": 5,
+  "file": "assets/img/mvp/quest-black-ops-image65.webp",
+  "w": 126,
+  "h": 126,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 1,
+  "col": 8,
+  "file": "assets/img/mvp/quest-celine-kimi-image108.webp",
+  "w": 276,
+  "h": 464,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 1,
+  "col": 11,
+  "file": "assets/img/mvp/quest-celine-kimi-image144.webp",
+  "w": 362,
+  "h": 358,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 1,
+  "col": 15,
+  "file": "assets/img/mvp/quest-celine-kimi-image90.webp",
+  "w": 276,
+  "h": 444,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 2,
+  "col": 2,
+  "file": "assets/img/mvp/quest-celine-kimi-image119.webp",
+  "w": 275,
+  "h": 256,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 2,
+  "col": 18,
+  "file": "assets/img/mvp/quest-celine-kimi-image164.webp",
+  "w": 273,
+  "h": 436,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 3,
+  "col": 0,
+  "file": "assets/img/mvp/quest-celine-kimi-image172.webp",
+  "w": 276,
+  "h": 313,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 21,
+  "col": 0,
+  "file": "assets/img/mvp/quest-celine-kimi-image85.webp",
+  "w": 587,
+  "h": 511,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 22,
+  "col": 15,
+  "file": "assets/img/mvp/quest-celine-kimi-image135.webp",
+  "w": 275,
+  "h": 439,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 22,
+  "col": 18,
+  "file": "assets/img/mvp/quest-celine-kimi-image127.webp",
+  "w": 273,
+  "h": 449,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 48,
+  "col": 0,
+  "file": "assets/img/mvp/quest-celine-kimi-image165.webp",
+  "w": 643,
+  "h": 601,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 72,
+  "col": 0,
+  "file": "assets/img/mvp/quest-celine-kimi-image53.webp",
+  "w": 277,
+  "h": 278,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 86,
+  "col": 3,
+  "file": "assets/img/mvp/quest-celine-kimi-image61.webp",
+  "w": 108,
+  "h": 125,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 86,
+  "col": 5,
+  "file": "assets/img/mvp/quest-celine-kimi-image131.webp",
+  "w": 256,
+  "h": 260,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 87,
+  "col": 0,
+  "file": "assets/img/mvp/quest-celine-kimi-image155.webp",
+  "w": 874,
+  "h": 669,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 107,
+  "col": 3,
+  "file": "assets/img/mvp/quest-celine-kimi-image121.webp",
+  "w": 141,
+  "h": 129,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 108,
+  "col": 0,
+  "file": "assets/img/mvp/quest-celine-kimi-image132.webp",
+  "w": 767,
+  "h": 606,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 129,
+  "col": 0,
+  "file": "assets/img/mvp/quest-celine-kimi-image113.webp",
+  "w": 381,
+  "h": 403,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 152,
+  "col": 4,
+  "file": "assets/img/mvp/quest-celine-kimi-image128.webp",
+  "w": 101,
+  "h": 125,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 153,
+  "col": 0,
+  "file": "assets/img/mvp/quest-celine-kimi-image117.webp",
+  "w": 825,
+  "h": 633,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 173,
+  "col": 0,
+  "file": "assets/img/mvp/quest-celine-kimi-image87.webp",
+  "w": 256,
+  "h": 282,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 188,
+  "col": 0,
+  "file": "assets/img/mvp/quest-celine-kimi-image66.webp",
+  "w": 134,
+  "h": 250,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 201,
+  "col": 0,
+  "file": "assets/img/mvp/quest-celine-kimi-image78.webp",
+  "w": 121,
+  "h": 151,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 211,
+  "col": 3,
+  "file": "assets/img/mvp/quest-celine-kimi-image170.webp",
+  "w": 129,
+  "h": 126,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 212,
+  "col": 0,
+  "file": "assets/img/mvp/quest-celine-kimi-image116.webp",
+  "w": 455,
+  "h": 440,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 234,
+  "col": 0,
+  "file": "assets/img/mvp/quest-celine-kimi-image106.webp",
+  "w": 128,
+  "h": 157,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 242,
+  "col": 0,
+  "file": "assets/img/mvp/quest-celine-kimi-image71.webp",
+  "w": 103,
+  "h": 166,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 252,
+  "col": 0,
+  "file": "assets/img/mvp/quest-celine-kimi-image74.webp",
+  "w": 125,
+  "h": 128,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 259,
+  "col": 1,
+  "file": "assets/img/mvp/quest-celine-kimi-image161.webp",
+  "w": 271,
+  "h": 118,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 260,
+  "col": 0,
+  "file": "assets/img/mvp/quest-celine-kimi-image96.webp",
+  "w": 155,
+  "h": 258,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 275,
+  "col": 0,
+  "file": "assets/img/mvp/quest-celine-kimi-image106.webp",
+  "w": 128,
+  "h": 157,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 283,
+  "col": 0,
+  "file": "assets/img/mvp/quest-celine-kimi-image71.webp",
+  "w": 103,
+  "h": 166,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 294,
+  "col": 0,
+  "file": "assets/img/mvp/quest-celine-kimi-image66.webp",
+  "w": 134,
+  "h": 250,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 307,
+  "col": 3,
+  "file": "assets/img/mvp/quest-celine-kimi-image82.webp",
+  "w": 130,
+  "h": 125,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 308,
+  "col": 0,
+  "file": "assets/img/mvp/quest-celine-kimi-image153.webp",
+  "w": 446,
+  "h": 501,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 334,
+  "col": 0,
+  "file": "assets/img/mvp/quest-celine-kimi-image114.webp",
+  "w": 188,
+  "h": 214,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 347,
+  "col": 0,
+  "file": "assets/img/mvp/quest-celine-kimi-image92.webp",
+  "w": 271,
+  "h": 296,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 362,
+  "col": 0,
+  "file": "assets/img/mvp/quest-celine-kimi-image89.webp",
+  "w": 276,
+  "h": 291,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 377,
+  "col": 0,
+  "file": "assets/img/mvp/quest-celine-kimi-image94.webp",
+  "w": 280,
+  "h": 293,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 393,
+  "col": 0,
+  "file": "assets/img/mvp/quest-celine-kimi-image86.webp",
+  "w": 277,
+  "h": 291,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 409,
+  "col": 0,
+  "file": "assets/img/mvp/quest-celine-kimi-image66.webp",
+  "w": 134,
+  "h": 250,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 423,
+  "col": 3,
+  "file": "assets/img/mvp/quest-celine-kimi-image109.webp",
+  "w": 282,
+  "h": 172,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-celine-kimi",
+  "row": 433,
+  "col": 0,
+  "file": "assets/img/mvp/quest-celine-kimi-image171.webp",
+  "w": 276,
+  "h": 466,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-endless-desert",
+  "row": 0,
+  "col": 0,
+  "file": "assets/img/mvp/quest-endless-desert-image142.webp",
+  "w": 279,
+  "h": 172,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-fallen-hero",
+  "row": 1,
+  "col": 0,
+  "file": "assets/img/mvp/quest-fallen-hero-image46.webp",
+  "w": 564,
+  "h": 374,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-fallen-hero",
+  "row": 1,
+  "col": 4,
+  "file": "assets/img/mvp/quest-fallen-hero-image44.webp",
+  "w": 124,
+  "h": 99,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-fallen-hero",
+  "row": 1,
+  "col": 5,
+  "file": "assets/img/mvp/quest-fallen-hero-image41.webp",
+  "w": 526,
+  "h": 353,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-fallen-hero",
+  "row": 1,
+  "col": 10,
+  "file": "assets/img/mvp/quest-fallen-hero-image60.webp",
+  "w": 126,
+  "h": 95,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-fallen-hero",
+  "row": 20,
+  "col": 0,
+  "file": "assets/img/mvp/quest-fallen-hero-image57.webp",
+  "w": 549,
+  "h": 347,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-fallen-hero",
+  "row": 20,
+  "col": 4,
+  "file": "assets/img/mvp/quest-fallen-hero-image30.webp",
+  "w": 130,
+  "h": 95,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-fallen-hero",
+  "row": 20,
+  "col": 5,
+  "file": "assets/img/mvp/quest-fallen-hero-image8.webp",
+  "w": 407,
+  "h": 309,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-fallen-hero",
+  "row": 20,
+  "col": 10,
+  "file": "assets/img/mvp/quest-fallen-hero-image48.webp",
+  "w": 126,
+  "h": 96,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-kiel-challenge",
+  "row": 0,
+  "col": 0,
+  "file": "assets/img/mvp/quest-kiel-challenge-image97.webp",
+  "w": 755,
+  "h": 526,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-kiel-challenge",
+  "row": 0,
+  "col": 3,
+  "file": "assets/img/mvp/quest-kiel-challenge-image75.webp",
+  "w": 126,
+  "h": 127,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-kiel-challenge",
+  "row": 21,
+  "col": 0,
+  "file": "assets/img/mvp/quest-kiel-challenge-image29.webp",
+  "w": 277,
+  "h": 176,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-kiel-challenge",
+  "row": 31,
+  "col": 0,
+  "file": "assets/img/mvp/quest-kiel-challenge-image140.webp",
+  "w": 276,
+  "h": 176,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-lighthalzen-entrance",
+  "row": 4,
+  "col": 0,
+  "file": "assets/img/mvp/quest-lighthalzen-entrance-image151.webp",
+  "w": 720,
+  "h": 525,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-lighthalzen-entrance",
+  "row": 4,
+  "col": 3,
+  "file": "assets/img/mvp/quest-lighthalzen-entrance-image129.webp",
+  "w": 126,
+  "h": 125,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-lighthalzen-entrance",
+  "row": 25,
+  "col": 0,
+  "file": "assets/img/mvp/quest-lighthalzen-entrance-image145.webp",
+  "w": 351,
+  "h": 290,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-niflheim-challenge",
+  "row": 2,
+  "col": 0,
+  "file": "assets/img/mvp/quest-niflheim-challenge-image3.webp",
+  "w": 275,
+  "h": 174,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-niflheim-challenge",
+  "row": 2,
+  "col": 2,
+  "file": "assets/img/mvp/quest-niflheim-challenge-image28.webp",
+  "w": 276,
+  "h": 364,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-niflheim-challenge",
+  "row": 11,
+  "col": 0,
+  "file": "assets/img/mvp/quest-niflheim-challenge-image68.webp",
+  "w": 272,
+  "h": 171,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-niflheim-challenge",
+  "row": 21,
+  "col": 3,
+  "file": "assets/img/mvp/quest-niflheim-challenge-image111.webp",
+  "w": 120,
+  "h": 93,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-niflheim-challenge",
+  "row": 22,
+  "col": 0,
+  "file": "assets/img/mvp/quest-niflheim-challenge-image39.webp",
+  "w": 860,
+  "h": 627,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-niflheim-challenge",
+  "row": 43,
+  "col": 0,
+  "file": "assets/img/mvp/quest-niflheim-challenge-image52.webp",
+  "w": 538,
+  "h": 409,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-niflheim-challenge",
+  "row": 43,
+  "col": 5,
+  "file": "assets/img/mvp/quest-niflheim-challenge-image42.webp",
+  "w": 272,
+  "h": 328,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-niflheim-challenge",
+  "row": 43,
+  "col": 10,
+  "file": "assets/img/mvp/quest-niflheim-challenge-image32.webp",
+  "w": 535,
+  "h": 374,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-niflheim-challenge",
+  "row": 66,
+  "col": 0,
+  "file": "assets/img/mvp/quest-niflheim-challenge-image50.webp",
+  "w": 261,
+  "h": 244,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-niflheim-challenge",
+  "row": 66,
+  "col": 2,
+  "file": "assets/img/mvp/quest-niflheim-challenge-image12.webp",
+  "w": 398,
+  "h": 302,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-niflheim-challenge",
+  "row": 66,
+  "col": 6,
+  "file": "assets/img/mvp/quest-niflheim-challenge-image35.webp",
+  "w": 883,
+  "h": 822,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-niflheim-challenge",
+  "row": 67,
+  "col": 0,
+  "file": "assets/img/mvp/quest-niflheim-challenge-image18.webp",
+  "w": 120,
+  "h": 94,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-niflheim-challenge",
+  "row": 67,
+  "col": 2,
+  "file": "assets/img/mvp/quest-niflheim-challenge-image102.webp",
+  "w": 126,
+  "h": 98,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-niflheim-challenge",
+  "row": 80,
+  "col": 0,
+  "file": "assets/img/mvp/quest-niflheim-challenge-image63.webp",
+  "w": 407,
+  "h": 317,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-niflheim-challenge",
+  "row": 80,
+  "col": 2,
+  "file": "assets/img/mvp/quest-niflheim-challenge-image81.webp",
+  "w": 127,
+  "h": 120,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-niflheim-challenge",
+  "row": 80,
+  "col": 4,
+  "file": "assets/img/mvp/quest-niflheim-challenge-image79.webp",
+  "w": 421,
+  "h": 310,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-niflheim-challenge",
+  "row": 80,
+  "col": 7,
+  "file": "assets/img/mvp/quest-niflheim-challenge-image31.webp",
+  "w": 127,
+  "h": 126,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-niflheim-challenge",
+  "row": 97,
+  "col": 0,
+  "file": "assets/img/mvp/quest-niflheim-challenge-image95.webp",
+  "w": 675,
+  "h": 518,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-niflheim-challenge",
+  "row": 97,
+  "col": 2,
+  "file": "assets/img/mvp/quest-niflheim-challenge-image14.webp",
+  "w": 124,
+  "h": 123,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-niflheim-challenge",
+  "row": 97,
+  "col": 4,
+  "file": "assets/img/mvp/quest-niflheim-challenge-image76.webp",
+  "w": 386,
+  "h": 365,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-niflheim-challenge",
+  "row": 97,
+  "col": 7,
+  "file": "assets/img/mvp/quest-niflheim-challenge-image125.webp",
+  "w": 126,
+  "h": 126,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-niflheim-challenge",
+  "row": 123,
+  "col": 0,
+  "file": "assets/img/mvp/quest-niflheim-challenge-image70.webp",
+  "w": 786,
+  "h": 452,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-niflheim-challenge",
+  "row": 147,
+  "col": 0,
+  "file": "assets/img/mvp/quest-niflheim-challenge-image84.webp",
+  "w": 262,
+  "h": 224,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-niflheim-challenge",
+  "row": 147,
+  "col": 4,
+  "file": "assets/img/mvp/quest-niflheim-challenge-image37.webp",
+  "w": 256,
+  "h": 241,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-niflheim-challenge",
+  "row": 158,
+  "col": 0,
+  "file": "assets/img/mvp/quest-niflheim-challenge-image23.webp",
+  "w": 273,
+  "h": 259,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-niflheim-challenge",
+  "row": 159,
+  "col": 4,
+  "file": "assets/img/mvp/quest-niflheim-challenge-image49.webp",
+  "w": 275,
+  "h": 259,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-relic-gear-options",
+  "row": 1,
+  "col": 0,
+  "file": "assets/img/mvp/quest-relic-gear-options-image59.webp",
+  "w": 891,
+  "h": 670,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-relic-gear-options",
+  "row": 1,
+  "col": 3,
+  "file": "assets/img/mvp/quest-relic-gear-options-image4.webp",
+  "w": 124,
+  "h": 124,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-relic-gear-options",
+  "row": 22,
+  "col": 0,
+  "file": "assets/img/mvp/quest-relic-gear-options-image51.webp",
+  "w": 883,
+  "h": 597,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-relic-gear-options",
+  "row": 27,
+  "col": 3,
+  "file": "assets/img/mvp/quest-relic-gear-options-image72.webp",
+  "w": 127,
+  "h": 128,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-relic-gear-options",
+  "row": 42,
+  "col": 0,
+  "file": "assets/img/mvp/quest-relic-gear-options-image43.webp",
+  "w": 578,
+  "h": 510,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-relic-gear-options",
+  "row": 42,
+  "col": 4,
+  "file": "assets/img/mvp/quest-relic-gear-options-image26.webp",
+  "w": 126,
+  "h": 125,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-thor-challenge",
+  "row": 3,
+  "col": 0,
+  "file": "assets/img/mvp/quest-thor-challenge-image146.webp",
+  "w": 447,
+  "h": 326,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-thor-challenge",
+  "row": 22,
+  "col": 0,
+  "file": "assets/img/mvp/quest-thor-challenge-image34.webp",
+  "w": 279,
+  "h": 174,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-true-hero-shadow-gloves",
+  "row": 0,
+  "col": 3,
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image9.webp",
+  "w": 125,
+  "h": 127,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-true-hero-shadow-gloves",
+  "row": 1,
+  "col": 0,
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image20.webp",
+  "w": 726,
+  "h": 588,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-true-hero-shadow-gloves",
+  "row": 23,
+  "col": 0,
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image62.webp",
+  "w": 769,
+  "h": 633,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-true-hero-shadow-gloves",
+  "row": 45,
+  "col": 0,
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image11.webp",
+  "w": 808,
+  "h": 563,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-true-hero-shadow-gloves",
+  "row": 63,
+  "col": 0,
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image147.webp",
+  "w": 274,
+  "h": 118,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-true-hero-shadow-gloves",
+  "row": 70,
+  "col": 0,
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image33.webp",
+  "w": 280,
+  "h": 113,
+  "kind": "drops"
+ },
+ {
+  "sheet": "quest-true-hero-shadow-gloves",
+  "row": 76,
+  "col": 0,
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image38.webp",
+  "w": 281,
+  "h": 296,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-true-hero-shadow-gloves",
+  "row": 90,
+  "col": 0,
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image1.webp",
+  "w": 275,
+  "h": 292,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-true-hero-shadow-gloves",
+  "row": 104,
+  "col": 0,
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image21.webp",
+  "w": 276,
+  "h": 293,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-true-hero-shadow-gloves",
+  "row": 117,
+  "col": 0,
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image27.webp",
+  "w": 276,
+  "h": 290,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-true-hero-shadow-gloves",
+  "row": 133,
+  "col": 3,
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image67.webp",
+  "w": 128,
+  "h": 127,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-true-hero-shadow-gloves",
+  "row": 134,
+  "col": 0,
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image64.webp",
+  "w": 835,
+  "h": 617,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-true-hero-shadow-gloves",
+  "row": 154,
+  "col": 0,
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image13.webp",
+  "w": 278,
+  "h": 291,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-true-hero-shadow-gloves",
+  "row": 170,
+  "col": 0,
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image15.webp",
+  "w": 278,
+  "h": 293,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-true-hero-shadow-gloves",
+  "row": 186,
+  "col": 0,
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image17.webp",
+  "w": 887,
+  "h": 564,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-true-hero-shadow-gloves",
+  "row": 203,
+  "col": 0,
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image22.webp",
+  "w": 132,
+  "h": 152,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-true-hero-shadow-gloves",
+  "row": 211,
+  "col": 0,
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image120.webp",
+  "w": 159,
+  "h": 254,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-true-hero-shadow-gloves",
+  "row": 212,
+  "col": 1,
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image56.webp",
+  "w": 280,
+  "h": 173,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-true-hero-shadow-gloves",
+  "row": 223,
+  "col": 4,
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image16.webp",
+  "w": 128,
+  "h": 127,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-true-hero-shadow-gloves",
+  "row": 224,
+  "col": 0,
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image36.webp",
+  "w": 590,
+  "h": 499,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-true-hero-shadow-gloves",
+  "row": 249,
+  "col": 0,
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image5.webp",
+  "w": 123,
+  "h": 204,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-true-hero-shadow-gloves",
+  "row": 261,
+  "col": 0,
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image7.webp",
+  "w": 555,
+  "h": 378,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-true-hero-shadow-gloves",
+  "row": 284,
+  "col": 0,
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image36.webp",
+  "w": 590,
+  "h": 499,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-true-hero-shadow-gloves",
+  "row": 284,
+  "col": 4,
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image16.webp",
+  "w": 128,
+  "h": 127,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-true-hero-shadow-gloves",
+  "row": 288,
+  "col": 4,
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image16.webp",
+  "w": 128,
+  "h": 127,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-true-hero-shadow-gloves",
+  "row": 310,
+  "col": 0,
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image126.webp",
+  "w": 900,
+  "h": 565,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-true-hero-shadow-gloves",
+  "row": 327,
+  "col": 0,
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image25.webp",
+  "w": 786,
+  "h": 593,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-true-hero-shadow-gloves",
+  "row": 347,
+  "col": 0,
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image24.webp",
+  "w": 270,
+  "h": 443,
+  "kind": "wide"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 0,
+  "col": 0,
+  "file": "assets/img/mvp/relic-gears-image78.webp",
+  "w": 123,
+  "h": 125,
+  "kind": "tile"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 0,
+  "col": 3,
+  "file": "assets/img/mvp/relic-gears-image75.webp",
+  "w": 127,
+  "h": 125,
+  "kind": "tile"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 0,
+  "col": 6,
+  "file": "assets/img/mvp/relic-gears-image71.webp",
+  "w": 124,
+  "h": 126,
+  "kind": "tile"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 0,
+  "col": 10,
+  "file": "assets/img/mvp/relic-gears-image112.webp",
+  "w": 97,
+  "h": 125,
+  "kind": "tile"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 6,
+  "col": 0,
+  "file": "assets/img/mvp/relic-gears-image65.webp",
+  "w": 147,
+  "h": 61,
+  "kind": "drops"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 6,
+  "col": 2,
+  "file": "assets/img/mvp/relic-gears-image73.webp",
+  "w": 155,
+  "h": 61,
+  "kind": "drops"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 6,
+  "col": 5,
+  "file": "assets/img/mvp/relic-gears-image76.webp",
+  "w": 180,
+  "h": 127,
+  "kind": "tile"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 6,
+  "col": 10,
+  "file": "assets/img/mvp/relic-gears-image149.webp",
+  "w": 95,
+  "h": 63,
+  "kind": "tile"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 9,
+  "col": 0,
+  "file": "assets/img/mvp/relic-gears-image100.webp",
+  "w": 274,
+  "h": 441,
+  "kind": "wide"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 9,
+  "col": 2,
+  "file": "assets/img/mvp/relic-gears-image70.webp",
+  "w": 274,
+  "h": 442,
+  "kind": "wide"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 9,
+  "col": 10,
+  "file": "assets/img/mvp/relic-gears-image77.webp",
+  "w": 275,
+  "h": 443,
+  "kind": "wide"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 12,
+  "col": 5,
+  "file": "assets/img/mvp/relic-gears-image89.webp",
+  "w": 273,
+  "h": 443,
+  "kind": "wide"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 12,
+  "col": 7,
+  "file": "assets/img/mvp/relic-gears-image74.webp",
+  "w": 275,
+  "h": 444,
+  "kind": "wide"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 29,
+  "col": 2,
+  "file": "assets/img/mvp/relic-gears-image88.webp",
+  "w": 139,
+  "h": 134,
+  "kind": "tile"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 30,
+  "col": 0,
+  "file": "assets/img/mvp/relic-gears-image97.webp",
+  "w": 134,
+  "h": 120,
+  "kind": "tile"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 30,
+  "col": 6,
+  "file": "assets/img/mvp/relic-gears-image107.webp",
+  "w": 131,
+  "h": 121,
+  "kind": "tile"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 30,
+  "col": 9,
+  "file": "assets/img/mvp/relic-gears-image95.webp",
+  "w": 110,
+  "h": 120,
+  "kind": "tile"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 35,
+  "col": 0,
+  "file": "assets/img/mvp/relic-gears-image79.webp",
+  "w": 123,
+  "h": 62,
+  "kind": "tile"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 36,
+  "col": 3,
+  "file": "assets/img/mvp/relic-gears-image86.webp",
+  "w": 122,
+  "h": 60,
+  "kind": "tile"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 36,
+  "col": 6,
+  "file": "assets/img/mvp/relic-gears-image93.webp",
+  "w": 124,
+  "h": 60,
+  "kind": "tile"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 36,
+  "col": 9,
+  "file": "assets/img/mvp/relic-gears-image101.webp",
+  "w": 151,
+  "h": 67,
+  "kind": "tile"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 38,
+  "col": 2,
+  "file": "assets/img/mvp/relic-gears-image90.webp",
+  "w": 275,
+  "h": 435,
+  "kind": "wide"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 38,
+  "col": 5,
+  "file": "assets/img/mvp/relic-gears-image102.webp",
+  "w": 272,
+  "h": 444,
+  "kind": "wide"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 38,
+  "col": 8,
+  "file": "assets/img/mvp/relic-gears-image140.webp",
+  "w": 271,
+  "h": 442,
+  "kind": "wide"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 39,
+  "col": 0,
+  "file": "assets/img/mvp/relic-gears-image85.webp",
+  "w": 274,
+  "h": 445,
+  "kind": "wide"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 57,
+  "col": 5,
+  "file": "assets/img/mvp/relic-gears-image122.webp",
+  "w": 131,
+  "h": 130,
+  "kind": "tile"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 58,
+  "col": 0,
+  "file": "assets/img/mvp/relic-gears-image104.webp",
+  "w": 128,
+  "h": 126,
+  "kind": "tile"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 58,
+  "col": 3,
+  "file": "assets/img/mvp/relic-gears-image110.webp",
+  "w": 129,
+  "h": 127,
+  "kind": "tile"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 58,
+  "col": 9,
+  "file": "assets/img/mvp/relic-gears-image146.webp",
+  "w": 138,
+  "h": 129,
+  "kind": "tile"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 64,
+  "col": 0,
+  "file": "assets/img/mvp/relic-gears-image113.webp",
+  "w": 113,
+  "h": 62,
+  "kind": "tile"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 64,
+  "col": 2,
+  "file": "assets/img/mvp/relic-gears-image109.webp",
+  "w": 121,
+  "h": 62,
+  "kind": "tile"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 64,
+  "col": 5,
+  "file": "assets/img/mvp/relic-gears-image120.webp",
+  "w": 114,
+  "h": 59,
+  "kind": "tile"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 64,
+  "col": 8,
+  "file": "assets/img/mvp/relic-gears-image125.webp",
+  "w": 161,
+  "h": 61,
+  "kind": "drops"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 67,
+  "col": 0,
+  "file": "assets/img/mvp/relic-gears-image132.webp",
+  "w": 273,
+  "h": 444,
+  "kind": "wide"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 67,
+  "col": 2,
+  "file": "assets/img/mvp/relic-gears-image111.webp",
+  "w": 276,
+  "h": 419,
+  "kind": "wide"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 67,
+  "col": 5,
+  "file": "assets/img/mvp/relic-gears-image121.webp",
+  "w": 273,
+  "h": 441,
+  "kind": "wide"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 67,
+  "col": 8,
+  "file": "assets/img/mvp/relic-gears-image148.webp",
+  "w": 273,
+  "h": 442,
+  "kind": "wide"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 85,
+  "col": 0,
+  "file": "assets/img/mvp/relic-gears-image137.webp",
+  "w": 140,
+  "h": 139,
+  "kind": "tile"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 85,
+  "col": 2,
+  "file": "assets/img/mvp/relic-gears-image123.webp",
+  "w": 128,
+  "h": 125,
+  "kind": "tile"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 85,
+  "col": 6,
+  "file": "assets/img/mvp/relic-gears-image135.webp",
+  "w": 110,
+  "h": 125,
+  "kind": "tile"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 85,
+  "col": 9,
+  "file": "assets/img/mvp/relic-gears-image147.webp",
+  "w": 128,
+  "h": 128,
+  "kind": "tile"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 91,
+  "col": 2,
+  "file": "assets/img/mvp/relic-gears-image124.webp",
+  "w": 149,
+  "h": 61,
+  "kind": "drops"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 91,
+  "col": 5,
+  "file": "assets/img/mvp/relic-gears-image138.webp",
+  "w": 205,
+  "h": 59,
+  "kind": "drops"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 91,
+  "col": 8,
+  "file": "assets/img/mvp/relic-gears-image133.webp",
+  "w": 147,
+  "h": 62,
+  "kind": "tile"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 92,
+  "col": 0,
+  "file": "assets/img/mvp/relic-gears-image119.webp",
+  "w": 112,
+  "h": 59,
+  "kind": "tile"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 94,
+  "col": 0,
+  "file": "assets/img/mvp/relic-gears-image117.webp",
+  "w": 274,
+  "h": 445,
+  "kind": "wide"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 94,
+  "col": 2,
+  "file": "assets/img/mvp/relic-gears-image127.webp",
+  "w": 276,
+  "h": 442,
+  "kind": "wide"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 94,
+  "col": 5,
+  "file": "assets/img/mvp/relic-gears-image131.webp",
+  "w": 276,
+  "h": 444,
+  "kind": "wide"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 94,
+  "col": 8,
+  "file": "assets/img/mvp/relic-gears-image128.webp",
+  "w": 270,
+  "h": 404,
+  "kind": "wide"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 110,
+  "col": 0,
+  "file": "assets/img/mvp/relic-gears-image144.webp",
+  "w": 123,
+  "h": 125,
+  "kind": "tile"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 111,
+  "col": 3,
+  "file": "assets/img/mvp/relic-gears-image143.webp",
+  "w": 124,
+  "h": 123,
+  "kind": "tile"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 117,
+  "col": 2,
+  "file": "assets/img/mvp/relic-gears-image141.webp",
+  "w": 131,
+  "h": 60,
+  "kind": "tile"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 118,
+  "col": 0,
+  "file": "assets/img/mvp/relic-gears-image130.webp",
+  "w": 151,
+  "h": 130,
+  "kind": "tile"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 120,
+  "col": 2,
+  "file": "assets/img/mvp/relic-gears-image136.webp",
+  "w": 271,
+  "h": 444,
+  "kind": "wide"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 124,
+  "col": 0,
+  "file": "assets/img/mvp/relic-gears-image134.webp",
+  "w": 255,
+  "h": 403,
+  "kind": "wide"
+ },
+ {
+  "sheet": "relic-gears",
+  "row": 140,
+  "col": 0,
+  "file": "assets/img/mvp/relic-gears-image129.webp",
+  "w": 254,
+  "h": 396,
+  "kind": "wide"
+ }
+]
