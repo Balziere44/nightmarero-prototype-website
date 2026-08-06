@@ -249,6 +249,22 @@ straight into the element.
 Skill names and skill descriptions on the class pages stay in English on
 purpose, because that is how they appear in game.
 
+### Check the locale files after editing them
+
+Each locale file is one JavaScript object literal, so a missing comma or a bare
+apostrophe inside a value (`l'arbre`) makes the browser throw on the whole file.
+Nothing looks broken: the page just stays in English while the switcher still
+shows the flag you picked. Use a typographic apostrophe (`l’arbre`) in French
+and Italian, and run the checker before committing:
+
+```bash
+python tools/check_i18n.py
+```
+
+It parses every locale the way a browser would and reports malformed lines,
+duplicate keys, and keys the pages ask for that a locale does not have. It
+exits non zero when something is wrong.
+
 ---
 
 ## The item database

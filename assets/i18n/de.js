@@ -285,7 +285,7 @@ window.NM_I18N_REGISTER('de', {
   'dl.q4': 'Darf ich mehrere Clients starten?',
   'dl.a4': 'Ja. Ein Verkaufsstand und ein zweiter Charakter sind hier normal, zumal es kein PvP gibt, in dem man das ausnutzen könnte.',
   'dl.helpTitle': 'Irgendwo hängen geblieben?',
-  'dl.helpLede': 'Im Discord bekommst du am schnellsten eine Antwort, und die Person, die den Server gebaut hat, liest mit.'
+  'dl.helpLede': 'Im Discord bekommst du am schnellsten eine Antwort, und die Person, die den Server gebaut hat, liest mit.',
 
   /* MVP altars and quests */
   'nav.items': 'Items und Karten',

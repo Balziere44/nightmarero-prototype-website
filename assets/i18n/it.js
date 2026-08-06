@@ -231,7 +231,7 @@ window.NM_I18N_REGISTER('it', {
   'cls.path': 'Dove si colloca',
   'cls.skillsEyebrow': 'Elenco abilità',
   'cls.skillsTitle': 'Abilità',
-  'cls.skillsNote': 'Raggruppate come le raggruppa l'albero. Nomi, tipi e livelli massimi vengono dalla wiki dei giocatori, quindi corrispondono a quello che vedi in gioco.',
+  'cls.skillsNote': 'Raggruppate come le raggruppa l’albero. Nomi, tipi e livelli massimi vengono dalla wiki dei giocatori, quindi corrispondono a quello che vedi in gioco.',
   'cls.mechanics': 'Questa classe ruota attorno a',
   'cls.needs': 'Funziona con',
   'cls.skillWord': 'skills',
@@ -285,7 +285,7 @@ window.NM_I18N_REGISTER('it', {
   'dl.q4': 'Posso avviare più client?',
   'dl.a4': 'Sì. Vendere e avere un secondo personaggio qui sono cose normali, tanto più che non c’è PvP di cui approfittare.',
   'dl.helpTitle': 'Bloccato su qualcosa?',
-  'dl.helpLede': 'Il Discord è il posto più veloce per avere una risposta, e chi ha costruito il server lo legge.'
+  'dl.helpLede': 'Il Discord è il posto più veloce per avere una risposta, e chi ha costruito il server lo legge.',
 
   /* MVP altars and quests */
   'nav.items': 'Oggetti e carte',

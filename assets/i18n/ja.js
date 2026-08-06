@@ -285,7 +285,7 @@ window.NM_I18N_REGISTER('ja', {
   'dl.q4': '多重起動はできますか？',
   'dl.a4': 'できます。露店や2キャラ目の運用はここでは普通のことです。悪用されるようなPvPもありません。',
   'dl.helpTitle': '行き詰まっていますか？',
-  'dl.helpLede': '答えが早いのはDiscordです。サーバーを作った本人も目を通しています。'
+  'dl.helpLede': '答えが早いのはDiscordです。サーバーを作った本人も目を通しています。',
 
   /* MVP altars and quests */
   'nav.items': 'アイテムとカード',

@@ -285,7 +285,7 @@ window.NM_I18N_REGISTER('pt', {
   'dl.q4': 'Posso rodar mais de um cliente?',
   'dl.a4': 'Pode. Vender e ter um segundo personagem é normal aqui, ainda mais porque não existe PvP para abusar disso.',
   'dl.helpTitle': 'Travou em alguma coisa?',
-  'dl.helpLede': 'O Discord é o lugar mais rápido para conseguir resposta, e quem construiu o servidor lê tudo.'
+  'dl.helpLede': 'O Discord é o lugar mais rápido para conseguir resposta, e quem construiu o servidor lê tudo.',
 
   /* MVP altars and quests */
   'nav.items': 'Itens e cartas',
