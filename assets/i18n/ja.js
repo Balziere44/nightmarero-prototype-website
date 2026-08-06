@@ -337,4 +337,8 @@ window.NM_I18N_REGISTER('ja', {
   'q.tkEyebrow': 'テコンミッション',
   'q.tkTitle': 'ボス狩り5ラウンド',
   'q.tkLede': 'Taekwon Missionはジョブレベル上限を引き上げる代わりに、転職の権利を永久に失わせます。要求される5ラウンドは以下の通りです。',
+  'mvp.relicLevel': 'レベル',
+  'mvp.relicNote': 'これらはすべてアイテムデータベースのRelic Gearカテゴリにも入っています。スクロールより検索が早ければそちらへ。',
+  'mvp.relicLink': 'データベースを開く',
+  'q.jump': '移動先',
 });

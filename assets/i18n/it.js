@@ -337,4 +337,8 @@ window.NM_I18N_REGISTER('it', {
   'q.tkEyebrow': 'Missione Taekwon',
   'q.tkTitle': 'Cinque round di caccia ai boss',
   'q.tkLede': 'La skill Taekwon Mission alza il limite di job level e in cambio ti toglie per sempre la possibilità di cambiare classe. Questi sono i cinque round che chiede.',
+  'mvp.relicLevel': 'Livello',
+  'mvp.relicNote': 'Ci sono tutti anche nel database degli oggetti, nella categoria Relic Gear, se preferisci cercare invece di scorrere.',
+  'mvp.relicLink': 'Apri il database',
+  'q.jump': 'Vai a',
 });

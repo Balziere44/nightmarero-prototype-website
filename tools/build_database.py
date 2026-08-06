@@ -195,6 +195,36 @@ def parse_mvp_cards(path):
     return items
 
 
+def parse_relics(path):
+    """Relic gear only exists in the sheet as tooltip screenshots, so it is
+    transcribed into tools/data/relic-gear.json instead. Everything about the
+    shape here matches ordinary gear so one search covers both."""
+    try:
+        data = json.load(io.open(path, encoding="utf-8"))
+    except (IOError, ValueError):
+        return []
+
+    items = []
+    for it in data.get("items", []):
+        effect = list(it.get("mastery", [])) + list(it.get("effect", []))
+        if it.get("classes"):
+            effect.append("Usable by %s" % it["classes"])
+        items.append({
+            "name": it["name"],
+            "kind": "gear",
+            "slot": it["slot"],
+            "cat": "Relic Gear",
+            "slots": 0,
+            "stat": it.get("stat", ""),
+            "statLabel": ("ATK/MATK" if it["slot"] == "weapon" else "DEF/MDEF"),
+            "effect": effect,
+            "level": it.get("level", 0),
+            "drops": it.get("type", ""),
+            "source": "relic",
+        })
+    return items
+
+
 def main():
     items = []
 
@@ -222,6 +252,10 @@ def main():
         got = parse_cards(path, slot)
         items.extend(got)
         print("  %-32s %4d cartas" % (fname, len(got)))
+
+    relics = parse_relics(os.path.join(SRC, "relic-gear.json"))
+    items.extend(relics)
+    print("  %-32s %4d relíquias" % ("relic-gear.json", len(relics)))
 
     mvp_cards = os.path.join(SRC, "mvp-cards.csv")
     if os.path.exists(mvp_cards):

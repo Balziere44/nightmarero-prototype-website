@@ -337,4 +337,8 @@ window.NM_I18N_REGISTER('de', {
   'q.tkEyebrow': 'Taekwon-Mission',
   'q.tkTitle': 'Fünf Runden Bossjagd',
   'q.tkLede': 'Die Fähigkeit Taekwon Mission hebt die Jobstufengrenze an und kostet dich dauerhaft die Möglichkeit, die Klasse zu wechseln. Das sind die fünf Runden, die sie verlangt.',
+  'mvp.relicLevel': 'Stufe',
+  'mvp.relicNote': 'Alle stehen auch in der Item-Datenbank unter der Kategorie Relic Gear, falls du lieber suchst als scrollst.',
+  'mvp.relicLink': 'Datenbank öffnen',
+  'q.jump': 'Springe zu',
 });

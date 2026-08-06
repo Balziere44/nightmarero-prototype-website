@@ -314,8 +314,15 @@ Three things about the source are worth knowing:
   and marks them gold. `ITEM_ALIASES` in `build_mvps.py` covers the handful of
   names that are spelled differently on the two tabs.
 
-MVP cards go into the item database rather than living here, under their own
-`MVP Card` category, so one search covers every card on the server.
+Two things live in the item database rather than only here, so one search
+covers them: MVP cards under an `MVP Card` category, and relic gear under
+`Relic Gear`.
+
+Relic gear only exists in the sheet as tooltip screenshots. Those are
+transcribed into `tools/data/relic-gear.json`, and the screenshots are
+deliberately not shipped: the page renders the transcription instead, and
+`fetch_mvp_art.py` skips that tab. `build_database.py` reads the same file, so
+adding an entry there puts it on both the MVP page and in the database.
 
 ## Quests
 
@@ -329,7 +336,8 @@ python tools/build_quests.py
 
 Each quest is one tab in the sheet: a column of steps with screenshots dropped
 between them. Screenshots are attached to the step above them, using the same
-anchor rows as the MVP page.
+anchor rows as the MVP page. The jump buttons at the top are generated from
+`QUESTS`, so adding a quest there adds its button too.
 
 The sheet is written in Portuguese. `tools/data/quest-text.json` holds the
 English for each line, keyed by the original, and anything without a

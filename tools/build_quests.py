@@ -314,13 +314,20 @@ def build():
     art = load_json("mvp-art.json", [])
     phrases = load_json("quest-text.json", {})
 
-    sections, count = [], 0
+    sections, count, jumps = [], 0, []
     for stem, title, blurb in QUESTS:
         steps = build_steps(stem, art, phrases)
         if not steps:
             continue
         sections.append(quest_section(stem, title, blurb, steps))
+        jumps.append('<a class="q-jump" href="#q-%s">%s</a>'
+                     % (slugify(title), esc(title)))
         count += 1
+
+    jumps.append('<a class="q-jump -aside" href="#potions" '
+                 'data-i18n="q.potionEyebrow">Potion crafting</a>')
+    jumps.append('<a class="q-jump -aside" href="#taekwon" '
+                 'data-i18n="q.tkEyebrow">Taekwon mission</a>')
 
     ld = """<script type="application/ld+json">
 {{
@@ -359,6 +366,11 @@ def build():
 
   <section class="section-pad-sm">
     <div class="shell">
+      <nav class="q-jumps" aria-label="Jump to a quest">
+        <span class="q-jumps-label" data-i18n="q.jump">Jump to</span>
+{jumps}
+      </nav>
+
       <div class="q-gate" id="questGate">
         <div class="q-gate-inner">
           <h2 data-i18n="q.gateTitle">This page spoils things</h2>
@@ -369,7 +381,7 @@ def build():
       </div>
 
       <div class="q-body" id="questBody" hidden>
-""",
+""".format(jumps="\n".join("        " + j for j in jumps)),
     ]
 
     parts.append("\n".join(sections))

@@ -66,7 +66,11 @@ MAX_SIDE = 900
 SKIP_TABS = ("quest-spare-1", "quest-spare-12", "quest-spare-14",
              # the spoiler quest tab duplicates pictures the per quest tabs
              # already carry, and only its text is used
-             "spoiler-quest")
+             "spoiler-quest",
+             # relic gear was tooltip screenshots. It is transcribed into
+             # tools/data/relic-gear.json instead, so the pictures are not
+             # needed on the site
+             "relic-gears")
 
 
 def slug(text):

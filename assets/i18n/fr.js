@@ -337,4 +337,8 @@ window.NM_I18N_REGISTER('fr', {
   'q.tkEyebrow': 'Mission Taekwon',
   'q.tkTitle': 'Cinq tours de chasse aux boss',
   'q.tkLede': 'La compétence Taekwon Mission relève le plafond de niveau de métier, au prix de la possibilité de changer de classe pour toujours. Voici les cinq tours qu\'elle demande.',
+  'mvp.relicLevel': 'Niveau',
+  'mvp.relicNote': 'Tous figurent aussi dans la base d\'objets, catégorie Relic Gear, si vous préférez chercher plutôt que faire défiler.',
+  'mvp.relicLink': 'Ouvrir la base',
+  'q.jump': 'Aller à',
 });

@@ -2654,8 +2654,7 @@ html[data-theme="light"] .site-footer { background: color-mix(in srgb, var(--bg)
   color: var(--text-dim);
 }
 
-.mvp-gallery,
-.mvp-sheet-shots {
+.mvp-gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
@@ -2665,12 +2664,77 @@ html[data-theme="light"] .site-footer { background: color-mix(in srgb, var(--bg)
   border-radius: var(--radius-sm);
   border: 1px solid var(--surface-line);
 }
-.mvp-sheet-shots img {
-  max-width: 100%;
-  height: auto;
-  border-radius: var(--radius-sm);
+
+/* relic gear, transcribed off the tooltips */
+.relic-grid {
+  display: grid;
+  align-items: start;
+  gap: 0.6rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+}
+
+.relic-card {
+  display: grid;
+  gap: 0.55rem;
+  padding: 1rem 1.15rem;
+  background: var(--bg-panel);
   border: 1px solid var(--surface-line);
-  background: var(--bg-elevated);
+  border-inline-start: 2px solid var(--sk-stance);
+  border-radius: var(--radius-sm);
+  transition: border-color 0.25s var(--ease), transform 0.25s var(--ease);
+}
+.relic-card:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--sk-stance) 45%, transparent);
+}
+
+.relic-top { display: grid; gap: 0.12rem; }
+.relic-top strong {
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.relic-type {
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sk-stance);
+}
+
+.relic-badges { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+.relic-badges:empty { display: none; }
+
+.relic-lines { display: grid; gap: 0.28rem; }
+.relic-lines li {
+  position: relative;
+  padding-inline-start: 0.85rem;
+  font-size: 0.81rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+.relic-lines li::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0.1rem;
+  top: 0.6em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--surface-line-strong);
+}
+.relic-lines li.-mastery { color: var(--text); }
+.relic-lines li.-mastery::before { background: var(--sk-stance); }
+
+.relic-foot {
+  padding-top: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  border-top: 1px solid var(--surface-line);
 }
 
 .mvp-table {
@@ -2704,6 +2768,41 @@ html[data-theme="light"] .site-footer { background: color-mix(in srgb, var(--bg)
    Everything sits behind a gate, because half of these quests are meant to be
    found rather than looked up.
    -------------------------------------------------------------------------- */
+
+.q-jumps {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 1.2rem;
+}
+.q-jumps-label {
+  margin-inline-end: 0.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.63rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.q-jump {
+  padding: 0.34rem 0.75rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  background: var(--bg-elevated);
+  border: 1px solid var(--surface-line);
+  border-radius: 100px;
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease),
+              background-color 0.2s var(--ease);
+}
+.q-jump:hover {
+  color: var(--text);
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+}
+/* the two that are not spoiler quests */
+.q-jump.-aside { color: var(--text-dim); border-style: dashed; }
+.q-jump.-aside:hover { color: var(--text-muted); }
 
 .q-gate {
   padding: clamp(1.6rem, 5vw, 2.8rem);

@@ -337,4 +337,8 @@ window.NM_I18N_REGISTER('pt', {
   'q.tkEyebrow': 'Missão Taekwon',
   'q.tkTitle': 'Cinco rodadas de caça a chefe',
   'q.tkLede': 'A skill Taekwon Mission aumenta o limite de job level e cobra a sua capacidade de mudar de classe para sempre. Estas são as cinco rodadas que ela pede.',
+  'mvp.relicLevel': 'Nível',
+  'mvp.relicNote': 'Todos eles também estão na database de itens, na categoria Relic Gear, se você preferir buscar em vez de rolar.',
+  'mvp.relicLink': 'Abrir a database',
+  'q.jump': 'Ir para',
 });

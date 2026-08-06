@@ -28,6 +28,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from build_classes import (esc, head, header, footer, slugify,
                            SITE, REGISTER, DISCORD, WIKI)
+from status_codex import colorize
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "tools", "data")
@@ -402,24 +403,70 @@ def champion_rows(champions, bosses):
     return "\n".join(rows)
 
 
-def relic_section(art):
-    shots = [a for a in art if a["sheet"] == "relic-gears"]
-    if not shots:
+def relic_section():
+    """Relic gear, transcribed off the tooltip screenshots in the sheet. The
+    same entries go into the item database, so this is the readable overview
+    and the database is where you search."""
+    try:
+        data = json.load(io.open(os.path.join(SRC, "relic-gear.json"),
+                                 encoding="utf-8"))
+    except (IOError, ValueError):
         return ""
+
+    cards = []
+    for it in data.get("items", []):
+        stat = it.get("stat", "")
+        label = "ATK/MATK" if it["slot"] == "weapon" else "DEF/MDEF"
+        badges = ""
+        if stat:
+            badges += '<i class="sk-lv">%s %s</i>' % (esc(label), esc(stat))
+        if it.get("level"):
+            badges += ('<i class="sk-lv"><span data-i18n="mvp.relicLevel">'
+                       'Level</span> %d</i>' % it["level"])
+
+        bits = []
+        for line in it.get("mastery", []):
+            bits.append('<li class="-mastery">%s</li>' % colorize(esc(line)))
+        for line in it.get("effect", []):
+            bits.append("<li>%s</li>" % colorize(esc(line)))
+
+        foot = []
+        if it.get("classes"):
+            foot.append(esc(it["classes"]))
+        if it.get("weight"):
+            foot.append("Weight %d" % it["weight"])
+
+        cards.append("""        <article class="relic-card">
+          <div class="relic-top">
+            <strong>{name}</strong>
+            <span class="relic-type">{type}</span>
+          </div>
+          <div class="relic-badges">{badges}</div>
+          <ul class="relic-lines">{bits}</ul>
+          {foot}
+        </article>""".format(
+            name=esc(it["name"]), type=esc(it.get("type", "")), badges=badges,
+            bits="".join(bits),
+            foot=('<p class="relic-foot">%s</p>' % ", ".join(foot)) if foot else ""))
+
     return """
   <section class="section-pad-sm" id="relics">
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="mvp.relicEyebrow">Relic gear</p>
         <h2 data-i18n="mvp.relicTitle">What the altars are for</h2>
-        <p class="lede" data-i18n="mvp.relicLede">Relic pieces come off these bosses and take three enchant options each. The sheet keeps this part as screenshots, so it is copied here as it stands.</p>
+        <p class="lede" data-i18n="mvp.relicLede">Relic pieces come off these bosses and take three enchant options each, unlocked one map at a time. These {n} are the ones written up so far.</p>
       </div>
-      <div class="mvp-sheet-shots">{shots}</div>
+      <div class="relic-grid">
+{cards}
+      </div>
+      <p class="note" style="margin-top:1.1rem">
+        <span data-i18n="mvp.relicNote">Every one of these is in the item database too, under the Relic Gear category, if you would rather search than scroll.</span>
+        <a href="database.html?item=Assassin+Dagger" style="color:var(--accent-soft);text-decoration:underline;text-underline-offset:3px" data-i18n="mvp.relicLink">Open the database</a>
+      </p>
     </div>
   </section>
-""".format(shots="".join(
-        '<img src="%s" alt="" width="%d" height="%d" loading="lazy" decoding="async">'
-        % (a["file"], a["w"], a["h"]) for a in shots))
+""".format(cards="\n".join(cards), n=len(cards))
 
 
 def build():
@@ -536,7 +583,7 @@ def build():
   </section>
 """.format(rows=champion_rows(champions, bosses)))
 
-    parts.append(relic_section(art))
+    parts.append(relic_section())
 
     parts.append("""
   <section class="section-pad-sm">

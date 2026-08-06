@@ -1,0 +1,342 @@
+{
+ "_note": "Transcribed by hand from the item tooltips on the Relic Gears tab of the MVP sheet, which only exist there as screenshots. A few tooltips are cut off at the bottom in the source, so the flavour text can end mid sentence. The screenshots are deliberately not shipped with the site; re-check against the sheet if it is updated.",
+ "_source": "https://docs.google.com/spreadsheets/d/1ojSow2JMglSDcvXii3Sppoa9Nx9mWAcVtC3c_OzApzk",
+ "items": [
+  {
+   "name": "Assassin Dagger",
+   "type": "Relic Dagger",
+   "slot": "weapon",
+   "stat": "42/42",
+   "mastery": [
+    "Dagger mastery: Bleeding Damage +3%",
+    "Magical Attunement mastery: Burning Damage +3%"
+   ],
+   "effect": [
+    "Envenom and Flashing Steel have a chance to inflict Bleeding",
+    "Chance: 50% + 10% per skill level",
+    "Poison Duration on Envenom -10s"
+   ],
+   "level": 0,
+   "weight": 0,
+   "classes": "",
+   "flavour": "A dagger used by an ancient sect of assassins."
+  },
+  {
+   "name": "Guardian Claymore",
+   "type": "Relic Two-Handed Sword",
+   "slot": "weapon",
+   "stat": "90/00",
+   "mastery": [
+    "Two-Handed Sword mastery: Crit +3"
+   ],
+   "effect": [
+    "Bleeding Damage +30%",
+    "Damage taken from Bleeding enemies -30%"
+   ],
+   "level": 0,
+   "weight": 0,
+   "classes": "",
+   "flavour": "A large sword wielded by particularly aggressive guardians of an ancient king."
+  },
+  {
+   "name": "Brocca",
+   "type": "Relic One-Handed Spear",
+   "slot": "weapon",
+   "stat": "65/00",
+   "mastery": [
+    "Spear mastery: Crit +3"
+   ],
+   "effect": [
+    "Vulnerable Potency +30%"
+   ],
+   "level": 70,
+   "weight": 0,
+   "classes": "Swordsman classes",
+   "flavour": "A primitive, simplistic spear developed by the Wootans for hunting the tough monsters of the Umbala Jungle."
+  },
+  {
+   "name": "Sea Breeze Ukulele",
+   "type": "Relic Instrument",
+   "slot": "weapon",
+   "stat": "80/80",
+   "mastery": [
+    "Musical Mastery: SP Consumption -3%"
+   ],
+   "effect": [
+    "Synchronic Strike and Vicious Verse Damage +30%",
+    "SP Cost of Heroic Hymn, Ardent Anthem and Devastating Descant +1000%",
+    "Removes the effects of Heroic Hymn and Ardent Anthem on equip",
+    "Silences the user for 10 seconds on unequip"
+   ],
+   "level": 0,
+   "weight": 0,
+   "classes": "",
+   "flavour": "An old, well-seasoned instrument."
+  },
+  {
+   "name": "Floral Microphone",
+   "type": "Relic Whip",
+   "slot": "weapon",
+   "stat": "80/80",
+   "mastery": [
+    "Dancing Dexterity mastery: SP Consumption -3%"
+   ],
+   "effect": [
+    "Synchronic Strike and Vicious Verse Damage +30%",
+    "SP Cost of Heroic Hymn, Ardent Anthem and Devastating Descant +1000%",
+    "Removes the effects of Heroic Hymn and Ardent Anthem on equip",
+    "Silences the user for 10 seconds on unequip"
+   ],
+   "level": 0,
+   "weight": 0,
+   "classes": "",
+   "flavour": "A surprisingly modern piece of kit."
+  },
+  {
+   "name": "Focus Staff",
+   "type": "Relic Staff",
+   "slot": "weapon",
+   "stat": "10/40",
+   "mastery": [
+    "Magical Attunement mastery: Variable Cast Time -3%"
+   ],
+   "effect": [
+    "Fixed Cast Time -0.5s"
+   ],
+   "level": 30,
+   "weight": 70,
+   "classes": "Mage and Acolyte classes",
+   "flavour": "A staff set with a powerful magical gem that draws the user's mind into itself, allowing unprecedented speed and precision in uttering their incantations."
+  },
+  {
+   "name": "Stardust Blade",
+   "type": "Relic Sword",
+   "slot": "weapon",
+   "stat": "30/00",
+   "mastery": [
+    "Sword mastery: ASPD +1"
+   ],
+   "effect": [
+    "Lash Out inflicts the Stun Status for 1 second instead of knocking back"
+   ],
+   "level": 30,
+   "weight": 60,
+   "classes": "Swordsman classes",
+   "flavour": "A glittering blade rumoured to be forged out of an otherworldly metal. Its shine seems to captivate enemies with each swing."
+  },
+  {
+   "name": "Cinquedea",
+   "type": "Relic Dagger",
+   "slot": "weapon",
+   "stat": "26/26",
+   "mastery": [
+    "Dagger mastery: Flee +3",
+    "Magical Attunement mastery: SP Recovery +4%"
+   ],
+   "effect": [
+    "Enables use of Rolling Cutter Lv1"
+   ],
+   "level": 30,
+   "weight": 0,
+   "classes": "Swordman, Mage, Merchant, Thief and Acolyte classes",
+   "flavour": "A wide-bladed dagger designed to be used for cutting and slashing rather than stabbing or piercing."
+  },
+  {
+   "name": "Book of Tides",
+   "type": "Relic Book",
+   "slot": "weapon",
+   "stat": "55/00",
+   "mastery": [
+    "Cosmic Insight mastery: Vit +0.5"
+   ],
+   "effect": [
+    "Enables Lash Out at the same level as the learned level of Lunar Protection",
+    "Enables Mass Entrap at the same level as the learned level of Lunar Glow"
+   ],
+   "level": 0,
+   "weight": 0,
+   "classes": "",
+   "flavour": "A book detailing ancient wisdom of the ocean, written by the civilization that sunk beneath the waves in what is now known as Byalan."
+  },
+  {
+   "name": "Dress Sword",
+   "type": "Relic One-Handed Sword",
+   "slot": "weapon",
+   "stat": "60/00",
+   "mastery": [
+    "Sword mastery: Hard Defense +5"
+   ],
+   "effect": [
+    "Casting Provoke autocasts it again on all targets within range"
+   ],
+   "level": 90,
+   "weight": 0,
+   "classes": "Swordsman classes",
+   "flavour": "A dress sword used by an ancient military commander. Though it likely saw little combat, it gives the wearer a distinct aura of majesty."
+  },
+  {
+   "name": "Bloody Axe",
+   "type": "Relic Axe",
+   "slot": "weapon",
+   "stat": "45/00",
+   "mastery": [
+    "Axe mastery: Crit Rate +3"
+   ],
+   "effect": [
+    "Mammonite inflicts the Bleeding Status"
+   ],
+   "level": 30,
+   "weight": 80,
+   "classes": "Merchant classes",
+   "flavour": "A heavy axe, just barely wieldable with one hand, that always seems to be dripping with blood."
+  },
+  {
+   "name": "Doom Slayer",
+   "type": "Relic Two-Handed Axe",
+   "slot": "weapon",
+   "stat": "90/00",
+   "mastery": [
+    "Axe mastery: Crit Damage +3%"
+   ],
+   "effect": [
+    "For each level of Equipment Maintenance, Weapon Maintenance and Armor Maintenance: Crit Rate +2 and ASPD -1"
+   ],
+   "level": 0,
+   "weight": 0,
+   "classes": "",
+   "flavour": "An absolutely massive two-handed axe plundered from Orc Dungeon."
+  },
+  {
+   "name": "Crossbow",
+   "type": "Relic Bow",
+   "slot": "weapon",
+   "stat": "30/00",
+   "mastery": [
+    "Bow mastery: Ranged Damage +2%"
+   ],
+   "effect": [
+    "Double Strafe knocks enemies back 3 cells"
+   ],
+   "level": 30,
+   "weight": 90,
+   "classes": "Archer classes",
+   "flavour": "A sturdy crossbow that packs a remarkable amount of stopping power, though its impact is perhaps not as focused as it could be."
+  },
+  {
+   "name": "Loki's Nail",
+   "type": "Relic Katar",
+   "slot": "weapon",
+   "stat": "75/00",
+   "mastery": [
+    "Katar mastery: Crit Damage +3%"
+   ],
+   "effect": [
+    "For each level of Flashing Blades learned, Grimtooth and Sonic Blow have a 20% chance to inflict the Bleeding Status",
+    "For each level of Toxic Blades learned, Bleeding Damage +5%",
+    "For each level of Rejuvenating Blades learned, Bleeding Duration +1 second"
+   ],
+   "level": 0,
+   "weight": 0,
+   "classes": "",
+   "flavour": "An ancient, vicious katar."
+  },
+  {
+   "name": "Void's Burden",
+   "type": "Relic Two-Handed Sword",
+   "slot": "weapon",
+   "stat": "130/00",
+   "mastery": [
+    "Two-Handed Sword mastery: Crit +3"
+   ],
+   "effect": [
+    "For each refine: ASPD +1, Crit Damage +3%, Critical Hits gain 3% Defense Pierce, All Stats -1, Potion Effectiveness -5% and SP Regen -5%"
+   ],
+   "level": 0,
+   "weight": 0,
+   "classes": "",
+   "flavour": "A two-handed sword found in the depths of Niflheim that emanates what you can only describe as an absence."
+  },
+  {
+   "name": "Desert Twilight",
+   "type": "Relic Dagger",
+   "slot": "weapon",
+   "stat": "58/00",
+   "mastery": [
+    "Dagger mastery: Flee +3"
+   ],
+   "effect": [
+    "Main hand: Damage to Vulnerable enemies +3% per Refine",
+    "Off hand: Blind Potency +20",
+    "Combo with Sandstorm: Desert Blades Level +1 for every 2 Refines on the set"
+   ],
+   "level": 0,
+   "weight": 0,
+   "classes": "",
+   "flavour": ""
+  },
+  {
+   "name": "Sandstorm",
+   "type": "Relic Dagger",
+   "slot": "weapon",
+   "stat": "58/00",
+   "mastery": [
+    "Dagger mastery: Flee +3"
+   ],
+   "effect": [
+    "Main hand: Damage to Blind enemies +3% per Refine",
+    "Off hand: Vulnerable Potency +20%",
+    "Combo with Desert Twilight: Desert Blades Level +1 for every 2 Refines on the set"
+   ],
+   "level": 0,
+   "weight": 0,
+   "classes": "",
+   "flavour": ""
+  },
+  {
+   "name": "Black Forest Boots",
+   "type": "Relic Shoes",
+   "slot": "shoes",
+   "stat": "20/05",
+   "mastery": [],
+   "effect": [
+    "Physical Attacks and Skills have a 30% chance to inflict Slow",
+    "Magical Attacks have a 30% chance to inflict Chill",
+    "Max HP/SP -10%"
+   ],
+   "level": 90,
+   "weight": 40,
+   "classes": "",
+   "flavour": "Traditional boots once worn by troops of the Schwarzwald Republic. They were masters of making the terrain of the battlefield fight for them."
+  },
+  {
+   "name": "Novice Breastplate",
+   "type": "Relic Armor",
+   "slot": "armor",
+   "stat": "20/00",
+   "mastery": [],
+   "effect": [
+    "Max HP +100",
+    "Max SP +25",
+    "Combo with Novice Hat, Manteau and Shoes: EXP Gain +20%"
+   ],
+   "level": 0,
+   "weight": 50,
+   "classes": "",
+   "flavour": "A sturdy breastplate once used by a novice adventurer."
+  },
+  {
+   "name": "Jungle Boar Hide",
+   "type": "Relic Garment",
+   "slot": "garment",
+   "stat": "20/10",
+   "mastery": [],
+   "effect": [
+    "Damage taken from Bleeding, Burning and Poison -30%"
+   ],
+   "level": 70,
+   "weight": 50,
+   "classes": "",
+   "flavour": "A cloak fashioned from the hide of a massive jungle boar. Exceptionally rare considering that the jungle boars have been extinct for ages."
+  }
+ ]
+}
