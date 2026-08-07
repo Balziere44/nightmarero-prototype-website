@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>New player guide | Nightmare RO</title>
-<meta name="description" content="Where to start on Nightmare RO: a levelling route from level 1 to 99, which monsters and cards each stop is worth, and which boss altars sit close enough to be worth the detour.">
+<meta name="description" content="Where to start on Nightmare RO: every field and dungeon sorted by level, a route from 1 to 99 with the cards each stop drops, and where each job change begins.">
 <link rel="canonical" href="https://nightmarero.pages.dev/guide.html">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="theme-color" content="#07060a" media="(prefers-color-scheme: dark)">
@@ -13,11 +13,11 @@
 <meta property="og:site_name" content="Nightmare RO">
 <meta property="og:url" content="https://nightmarero.pages.dev/guide.html">
 <meta property="og:title" content="New player guide | Nightmare RO">
-<meta property="og:description" content="Where to start on Nightmare RO: a levelling route from level 1 to 99, which monsters and cards each stop is worth, and which boss altars sit close enough to be worth the detour.">
+<meta property="og:description" content="Where to start on Nightmare RO: every field and dungeon sorted by level, a route from 1 to 99 with the cards each stop drops, and where each job change begins.">
 <meta property="og:image" content="https://nightmarero.pages.dev/assets/social/og-cover.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="New player guide | Nightmare RO">
-<meta name="twitter:description" content="Where to start on Nightmare RO: a levelling route from level 1 to 99, which monsters and cards each stop is worth, and which boss altars sit close enough to be worth the detour.">
+<meta name="twitter:description" content="Where to start on Nightmare RO: every field and dungeon sorted by level, a route from 1 to 99 with the cards each stop drops, and where each job change begins.">
 <meta name="twitter:image" content="https://nightmarero.pages.dev/assets/social/og-cover.jpg">
 <link rel="icon" href="assets/img/icon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="assets/img/icon-180.png">
@@ -71,7 +71,14 @@
       <img src="assets/img/logo.webp" alt="Nightmare RO" width="180" height="38" fetchpriority="high">
     </a>
     <nav class="nav" aria-label="Main">
-      <a href="index.html#server" data-i18n="nav.server">The server</a>
+      <div class="nav-drop">
+        <button class="nav-drop-btn" type="button" aria-expanded="false" aria-haspopup="true" data-i18n="nav.game">The game</button>
+        <div class="nav-drop-menu" role="menu">
+          <a href="index.html#server" role="menuitem" data-i18n="nav.server">The server</a>
+          <a href="mechanics.html" role="menuitem" data-i18n="nav.mech">How it works</a>
+          <a href="endgame.html" role="menuitem" data-i18n="nav.endgame">End game</a>
+        </div>
+      </div>
       <div class="nav-drop">
         <button class="nav-drop-btn -on" type="button" aria-expanded="false" aria-haspopup="true" data-i18n="nav.guide">New players</button>
         <div class="nav-drop-menu" role="menu">
@@ -120,7 +127,10 @@
       </button>
     </div>
     <nav aria-label="Mobile">
-      <a href="index.html#server" data-i18n="nav.server">The server</a>
+      <span class="drawer-group" data-i18n="nav.game">The game</span>
+      <a class="-sub" href="index.html#server" data-i18n="nav.server">The server</a>
+      <a class="-sub" href="mechanics.html" data-i18n="nav.mech">How it works</a>
+      <a class="-sub" href="endgame.html" data-i18n="nav.endgame">End game</a>
       <a href="index.html#features" data-i18n="nav.features">Features</a>
       <span class="drawer-group" data-i18n="nav.guide">New players</span>
       <a class="-sub" href="guide.html" data-i18n="nav.route">Levelling route</a>
@@ -155,9 +165,94 @@
         <h1 data-i18n="g.title">Where to start when everything is new</h1>
         <p class="lede" data-i18n="g.lede">Every class, skill, item and monster on this server was remade, so what you remember from anywhere else is a rough guide at best. This page collects routes and advice from people who have already walked it.</p>
       </div>
+      <nav class="q-jumps" aria-label="Jump to a section">
+        <span class="q-jumps-label" data-i18n="q.jump">Jump to</span>
+        <a class="q-jump" href="#map" data-i18n="g.jMap">Reading the map</a>
+        <a class="q-jump" href="#where" data-i18n="g.jWhere">Where to hunt</a>
+        <a class="q-jump" href="#leveling" data-i18n="g.jRoute">The full route</a>
+        <a class="q-jump" href="#jobs" data-i18n="g.jJobs">Job change</a>
+      </nav>
     </div>
   </section>
 
+
+  <section class="section-pad-sm" id="map">
+    <div class="shell">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="g.mapEyebrow">Before anything else</p>
+        <h2 data-i18n="g.mapTitle">The map already knows where you should be</h2>
+        <p class="lede" data-i18n="g.mapLede">Every field and every dungeon floor has a level printed on it. You just have to turn it on, and once you have, you rarely need a guide at all.</p>
+      </div>
+      <div class="map-keys">
+        <div class="map-key">
+          <kbd>Ctrl</kbd><span class="map-plus">+</span><kbd>'</kbd>
+          <p data-i18n="g.mapK1">Opens the world map, wherever you are standing.</p>
+        </div>
+        <div class="map-key">
+          <kbd>Tab</kbd>
+          <p data-i18n="g.mapK2">Then this switches the level numbers on, one per map.</p>
+        </div>
+      </div>
+      <div class="map-rule">
+        <h3 data-i18n="g.mapRuleTitle">Then pick a map at your level or a little above</h3>
+        <p data-i18n="g.mapRule1">Hunting above your level pays more. Three levels above the monster and you are already earning a bonus, and it keeps climbing to ten levels above.</p>
+        <p data-i18n="g.mapRule2">Never let the gap reach 15 in either direction. Fifteen levels above the monster pays you nothing at all, and fifteen below cuts what you earn by 90%. Both ends of that are a wasted evening.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad-sm" id="where">
+    <div class="shell">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="g.whEyebrow">Quick reference</p>
+        <h2 data-i18n="g.whTitle">Fields and dungeons, by level</h2>
+        <p class="lede" data-i18n="g.whLede">The whole world on one screen. Find your level, pick anything in the box, go. The longer route below says what is worth picking up once you are there.</p>
+      </div>
+      <div class="wh-legend">
+        <span class="wh-chip wh-field" data-i18n="g.whField">Field</span>
+        <span class="wh-chip wh-dungeon" data-i18n="g.whDungeon">Dungeon</span>
+      </div>
+      <div class="wh-grid">
+        <article class="wh-band">
+          <h3><span class="lv-band">1 to 15</span></h3>
+          <ul class="wh-list"><li class="wh-field"><span class="wh-name">Fields south and east of Prontera</span><span class="wh-lv">5</span></li><li class="wh-field"><span class="wh-name">Fields around Payon and Alberta</span><span class="wh-lv">5 to 15</span></li><li class="wh-field"><span class="wh-name">Fields west of Prontera</span><span class="wh-lv">5 to 10</span></li><li class="wh-field"><span class="wh-name">Fields around Morroc</span><span class="wh-lv">5 to 10</span></li></ul>
+        </article>
+        <article class="wh-band">
+          <h3><span class="lv-band">15 to 30</span></h3>
+          <ul class="wh-list"><li class="wh-field"><span class="wh-name">Fields north and west of Prontera</span><span class="wh-lv">15 to 25</span></li><li class="wh-dungeon"><span class="wh-name">Ant Hell</span><span class="wh-lv">20 to 40</span></li><li class="wh-dungeon"><span class="wh-name">Prontera Culvert</span><span class="wh-lv">20 to 40</span></li><li class="wh-dungeon"><span class="wh-name">Payon Cave</span><span class="wh-lv">20 to 45</span></li><li class="wh-field"><span class="wh-name">Fields east of Payon</span><span class="wh-lv">15 to 25</span></li></ul>
+        </article>
+        <article class="wh-band">
+          <h3><span class="lv-band">30 to 45</span></h3>
+          <ul class="wh-list"><li class="wh-dungeon"><span class="wh-name">Geffen Dungeon</span><span class="wh-lv">30 to 45</span></li><li class="wh-dungeon"><span class="wh-name">Mjolnir Dead Pit</span><span class="wh-lv">30 to 40</span></li><li class="wh-field"><span class="wh-name">Fields between Prontera and Aldebaran</span><span class="wh-lv">25 to 45</span></li><li class="wh-dungeon"><span class="wh-name">Sunken Ship</span><span class="wh-lv">40 to 45</span></li><li class="wh-dungeon"><span class="wh-name">Byalan Island</span><span class="wh-lv">40 to 70</span></li></ul>
+        </article>
+        <article class="wh-band">
+          <h3><span class="lv-band">45 to 60</span></h3>
+          <ul class="wh-list"><li class="wh-dungeon"><span class="wh-name">Sphinx</span><span class="wh-lv">50 to 60</span></li><li class="wh-dungeon"><span class="wh-name">Pyramid</span><span class="wh-lv">50 to 60</span></li><li class="wh-field"><span class="wh-name">Fields between Comodo and Morroc</span><span class="wh-lv">45 to 60</span></li><li class="wh-field"><span class="wh-name">Field south of Aldebaran</span><span class="wh-lv">50</span></li><li class="wh-dungeon"><span class="wh-name">Beach Cave North and East</span><span class="wh-lv">55</span></li></ul>
+        </article>
+        <article class="wh-band">
+          <h3><span class="lv-band">60 to 75</span></h3>
+          <ul class="wh-list"><li class="wh-dungeon"><span class="wh-name">Orc Dungeon</span><span class="wh-lv">65 to 70</span></li><li class="wh-dungeon"><span class="wh-name">Beach Cave West</span><span class="wh-lv">60</span></li><li class="wh-dungeon"><span class="wh-name">Clock Tower</span><span class="wh-lv">70 to 80</span></li><li class="wh-dungeon"><span class="wh-name">Labyrinth Forest</span><span class="wh-lv">70 to 75</span></li><li class="wh-field"><span class="wh-name">Fields around Umbala and Comodo</span><span class="wh-lv">65 to 75</span></li></ul>
+        </article>
+        <article class="wh-band">
+          <h3><span class="lv-band">75 to 90</span></h3>
+          <ul class="wh-list"><li class="wh-dungeon"><span class="wh-name">Magma Caverns</span><span class="wh-lv">75 to 85</span></li><li class="wh-dungeon"><span class="wh-name">Magma Dungeon</span><span class="wh-lv">80 to 85</span></li><li class="wh-dungeon"><span class="wh-name">Capitolina Catacombs</span><span class="wh-lv">75 to 85</span></li><li class="wh-dungeon"><span class="wh-name">Pyramid, the deep floors</span><span class="wh-lv">75 to 85</span></li><li class="wh-dungeon"><span class="wh-name">Umbala Dungeon</span><span class="wh-lv">80</span></li><li class="wh-dungeon"><span class="wh-name">Einbech Mine</span><span class="wh-lv">85 to 90</span></li><li class="wh-field"><span class="wh-name">Fields around Einbroch and Lighthalzen</span><span class="wh-lv">70 to 85</span></li></ul>
+        </article>
+        <article class="wh-band">
+          <h3><span class="lv-band">90 to 105</span></h3>
+          <ul class="wh-list"><li class="wh-dungeon"><span class="wh-name">Juperos Ruins</span><span class="wh-lv">90 to 95</span></li><li class="wh-dungeon"><span class="wh-name">Turtle Island</span><span class="wh-lv">100 to 105</span></li><li class="wh-dungeon"><span class="wh-name">Bio Laboratory</span><span class="wh-lv">105 to 110</span></li><li class="wh-field"><span class="wh-name">Fields around Yuno and Hugel</span><span class="wh-lv">80 to 85</span></li><li class="wh-field"><span class="wh-name">Fields around Rachel</span><span class="wh-lv">95 to 100</span></li></ul>
+        </article>
+        <article class="wh-band">
+          <h3><span class="lv-band">105 to 125</span></h3>
+          <ul class="wh-list"><li class="wh-dungeon"><span class="wh-name">Thor Volcano</span><span class="wh-lv">110 to 115</span></li><li class="wh-dungeon"><span class="wh-name">Ice Dungeon</span><span class="wh-lv">110 to 115</span></li><li class="wh-dungeon"><span class="wh-name">Endless Desert</span><span class="wh-lv">110 to 115</span></li><li class="wh-dungeon"><span class="wh-name">Abyss Lake</span><span class="wh-lv">110 to 115</span></li><li class="wh-dungeon"><span class="wh-name">Glast Heim and Old Glast Heim</span><span class="wh-lv">110 to 120</span></li><li class="wh-dungeon"><span class="wh-name">Clock Tower, the lower floors</span><span class="wh-lv">110 to 120</span></li><li class="wh-field"><span class="wh-name">Fields around Veins</span><span class="wh-lv">115</span></li></ul>
+        </article>
+        <article class="wh-band">
+          <h3><span class="lv-band">125 to 150</span></h3>
+          <ul class="wh-list"><li class="wh-dungeon"><span class="wh-name">Rachel Sanctuary</span><span class="wh-lv">125 to 135</span></li><li class="wh-dungeon"><span class="wh-name">Nameless Island</span><span class="wh-lv">125 to 135</span></li><li class="wh-dungeon"><span class="wh-name">Abyss Lake, the deep floors</span><span class="wh-lv">125 to 135</span></li><li class="wh-dungeon"><span class="wh-name">Kiel Robot Factory</span><span class="wh-lv">135 to 140</span></li><li class="wh-dungeon"><span class="wh-name">Geffenia</span><span class="wh-lv">140 to 145</span></li><li class="wh-field"><span class="wh-name">Odin Temple</span><span class="wh-lv">140 to 145</span></li></ul>
+        </article>
+      </div>
+      <p class="note" data-i18n="g.whNote">Dungeon levels are the ones printed on the world map, and a dungeon usually climbs across its floors, so the top floor is the low end of the range. Field levels are what the maps around that town read.</p>
+    </div>
+  </section>
 
   <section class="section-pad-sm" id="leveling">
     <div class="shell">
@@ -329,9 +424,23 @@
     </div>
   </section>
 
+  <section class="section-pad-sm" id="jobs">
+    <div class="shell">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="g.jbEyebrow">Job change</p>
+        <h2 data-i18n="g.jbTitle">Where each job change starts</h2>
+        <p class="lede" data-i18n="g.jbLede">You get your first job inside the tutorial at level 1. The choice that matters comes at job level 50, and nobody tells you where to go for it.</p>
+      </div>
+        <h3 class="mech-sub">First job</h3>
+        <div class="table-wrap"><table class="mvp-table"><tbody><tr><td><b>Knight</b></td><td>Prontera Chivalry, the top left corner of town</td></tr><tr><td><b>Crusader</b></td><td>Prontera Church, the left room</td></tr><tr><td><b>Blacksmith</b></td><td>The Blacksmith's Guild, bottom right of Geffen</td></tr><tr><td><b>Alchemist</b></td><td>The Alchemist's Guild, bottom left of Aldebaran</td></tr><tr><td><b>Assassin</b></td><td>The Assassin's Guild, on Morroc field 16</td></tr><tr><td><b>Rogue</b></td><td>The Old Thief's Guild, in the first basement of the Morroc pyramid</td></tr><tr><td><b>Hunter</b></td><td>The Old Archer's Guild, top right of Payon's archer village</td></tr><tr><td><b>Bard and Dancer</b></td><td>The Comodo stage, in the middle of town. Take the NPC in the Morroc ruins past St. Darmain's Fortress, then run</td></tr><tr><td><b>Wizard</b></td><td>The top level of Geffen Tower</td></tr><tr><td><b>Sage</b></td><td>Sage Castle in Juno. The NPC on the middle floor of Geffen Tower will warp a Mage there, and you should let it</td></tr><tr><td><b>Priest</b></td><td>Prontera Church, the right room</td></tr><tr><td><b>Monk</b></td><td>Capitolina Abbey, inside the building at the bottom right. Someone is enjoying the flowers by the entrance</td></tr></tbody></table></div>
+        <h3 class="mech-sub">Expanded</h3>
+        <div class="table-wrap"><table class="mvp-table"><tbody><tr><td><b>Star Gladiator</b></td><td>Geffen field 5</td></tr><tr><td><b>Soul Linker</b></td><td>Capitolina Abbey, outdoors</td></tr></tbody></table></div>
+    </div>
+  </section>
+
   <section class="section-pad-sm">
     <div class="shell">
-      <p class="note" data-i18n="g.wip">This page is a start rather than a finished guide. More routes, starting builds and a proper map of where to go at each level are on the way. If you want to write one, the Discord is the place.</p>
+      <p class="note" data-i18n="g.wip">This page will keep growing. More routes, starting builds and class by class advice are on the way. If you want to write one, the Discord is the place.</p>
 
 
 

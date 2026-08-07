@@ -71,7 +71,14 @@
       <img src="assets/img/logo.webp" alt="Nightmare RO" width="180" height="38" fetchpriority="high">
     </a>
     <nav class="nav" aria-label="Main">
-      <a href="index.html#server" data-i18n="nav.server">The server</a>
+      <div class="nav-drop">
+        <button class="nav-drop-btn" type="button" aria-expanded="false" aria-haspopup="true" data-i18n="nav.game">The game</button>
+        <div class="nav-drop-menu" role="menu">
+          <a href="index.html#server" role="menuitem" data-i18n="nav.server">The server</a>
+          <a href="mechanics.html" role="menuitem" data-i18n="nav.mech">How it works</a>
+          <a href="endgame.html" role="menuitem" data-i18n="nav.endgame">End game</a>
+        </div>
+      </div>
       <div class="nav-drop">
         <button class="nav-drop-btn" type="button" aria-expanded="false" aria-haspopup="true" data-i18n="nav.guide">New players</button>
         <div class="nav-drop-menu" role="menu">
@@ -120,7 +127,10 @@
       </button>
     </div>
     <nav aria-label="Mobile">
-      <a href="index.html#server" data-i18n="nav.server">The server</a>
+      <span class="drawer-group" data-i18n="nav.game">The game</span>
+      <a class="-sub" href="index.html#server" data-i18n="nav.server">The server</a>
+      <a class="-sub" href="mechanics.html" data-i18n="nav.mech">How it works</a>
+      <a class="-sub" href="endgame.html" data-i18n="nav.endgame">End game</a>
       <a href="index.html#features" data-i18n="nav.features">Features</a>
       <span class="drawer-group" data-i18n="nav.guide">New players</span>
       <a class="-sub" href="guide.html" data-i18n="nav.route">Levelling route</a>

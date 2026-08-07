@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How the server works | Nightmare RO</title>
+<meta name="description" content="How combat works on Nightmare RO: the experience curve, every stat breakpoint, the crit and cast formulas, the rewritten element table, refining and commands.">
+<link rel="canonical" href="https://nightmarero.pages.dev/mechanics.html">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#07060a" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4f1ee" media="(prefers-color-scheme: light)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Nightmare RO">
+<meta property="og:url" content="https://nightmarero.pages.dev/mechanics.html">
+<meta property="og:title" content="How the server works | Nightmare RO">
+<meta property="og:description" content="How combat works on Nightmare RO: the experience curve, every stat breakpoint, the crit and cast formulas, the rewritten element table, refining and commands.">
+<meta property="og:image" content="https://nightmarero.pages.dev/assets/social/og-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How the server works | Nightmare RO">
+<meta name="twitter:description" content="How combat works on Nightmare RO: the experience curve, every stat breakpoint, the crit and cast formulas, the rewritten element table, refining and commands.">
+<meta name="twitter:image" content="https://nightmarero.pages.dev/assets/social/og-cover.jpg">
+<link rel="icon" href="assets/img/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/img/icon-180.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
+<!-- The webfonts are on someone else's server, so they are loaded out of the
+     critical path: the page paints in the fallback face and swaps when they
+     arrive, instead of holding first paint on a third party round trip. -->
+<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"></noscript>
+<script>
+(function () {
+  try {
+    var t = localStorage.getItem('nm-theme');
+    if (!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    document.documentElement.dataset.theme = t;
+  } catch (e) {}
+})();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nightmarero.pages.dev/" },
+    { "@type": "ListItem", "position": 2, "name": "How it works", "item": "https://nightmarero.pages.dev/mechanics.html" }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+<svg width="0" height="0" aria-hidden="true" style="position:absolute">
+  <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.3A8.6 8.6 0 0 1 9.7 3.5a8.6 8.6 0 1 0 10.8 10.8Z"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.7 3.9 6.1 3.9 9s-1.3 6.3-3.9 9c-2.6-2.7-3.9-6.1-3.9-9S9.4 5.7 12 3Z"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-discord" viewBox="0 0 24 24" fill="currentColor"><path d="M19.3 5.3A16.9 16.9 0 0 0 15.1 4l-.3.6a12.6 12.6 0 0 1 3.7 1.9 15.5 15.5 0 0 0-12.9 0 12.6 12.6 0 0 1 3.7-1.9L9 4a16.9 16.9 0 0 0-4.2 1.3C2.1 9.3 1.4 13.2 1.7 17a17 17 0 0 0 5.2 2.6l1.1-1.7a11 11 0 0 1-1.8-.9l.4-.3a12.1 12.1 0 0 0 10.4 0l.4.3a11 11 0 0 1-1.8.9l1.1 1.7A17 17 0 0 0 22 17c.4-4.4-.7-8.3-2.7-11.7ZM8.4 14.7c-1 0-1.9-.9-1.9-2.1s.8-2.1 1.9-2.1 1.9 1 1.9 2.1-.8 2.1-1.9 2.1Zm7.2 0c-1 0-1.9-.9-1.9-2.1s.8-2.1 1.9-2.1 1.9 1 1.9 2.1-.8 2.1-1.9 2.1Z"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7.5 10.5 12 15l4.5-4.5M4 17v2.5a1.5 1.5 0 0 0 1.5 1.5h13a1.5 1.5 0 0 0 1.5-1.5V17"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4.5A1.5 1.5 0 0 1 5.5 3H19v15H5.5A1.5 1.5 0 0 0 4 19.5Z"/><path d="M4 19.5A1.5 1.5 0 0 1 5.5 21H19v-3"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12.5 5.5 19 12l-6.5 6.5"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="11" cy="11" r="6.4"/><path d="m16 16 4.5 4.5"/></symbol>
+  <symbol id="i-image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="15" rx="2"/><circle cx="8.5" cy="10" r="1.6"/><path d="m4 17 5-4.5 4 3.5 3-2.5 4 3.5"/></symbol>
+</svg>
+<header class="site-header" id="siteHeader">
+  <div class="shell header-inner">
+    <a class="brand" href="index.html" aria-label="Nightmare RO, home">
+      <img src="assets/img/logo.webp" alt="Nightmare RO" width="180" height="38" fetchpriority="high">
+    </a>
+    <nav class="nav" aria-label="Main">
+      <div class="nav-drop">
+        <button class="nav-drop-btn -on" type="button" aria-expanded="false" aria-haspopup="true" data-i18n="nav.game">The game</button>
+        <div class="nav-drop-menu" role="menu">
+          <a href="index.html#server" role="menuitem" data-i18n="nav.server">The server</a>
+          <a href="mechanics.html" role="menuitem" aria-current="page" data-i18n="nav.mech">How it works</a>
+          <a href="endgame.html" role="menuitem" data-i18n="nav.endgame">End game</a>
+        </div>
+      </div>
+      <div class="nav-drop">
+        <button class="nav-drop-btn" type="button" aria-expanded="false" aria-haspopup="true" data-i18n="nav.guide">New players</button>
+        <div class="nav-drop-menu" role="menu">
+          <a href="guide.html" role="menuitem" data-i18n="nav.route">Levelling route</a>
+          <a href="quiz.html" role="menuitem" data-i18n="nav.quiz">Class test</a>
+        </div>
+      </div>
+      <a href="classes.html" data-i18n="nav.classes">Classes</a>
+      <div class="nav-drop">
+        <button class="nav-drop-btn" type="button" aria-expanded="false" aria-haspopup="true" data-i18n="nav.database">Database</button>
+        <div class="nav-drop-menu" role="menu">
+          <a href="database.html" role="menuitem" data-i18n="nav.items">Items and cards</a>
+          <a href="mvps.html" role="menuitem" data-i18n="nav.mvps">MVPs and altars</a>
+          <a href="quests.html" role="menuitem" data-i18n="nav.quests">Quests</a>
+        </div>
+      </div>
+      <a href="https://wiki.nightmareofragnarok.com/" target="_blank" rel="noopener" data-i18n="nav.wiki">Wiki</a>
+      <a href="download.html" data-i18n="nav.download">Download</a>
+    </nav>
+    <div class="header-tools">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch theme" title="Switch theme">
+        <svg class="i-sun" aria-hidden="true"><use href="#i-sun"></use></svg>
+        <svg class="i-moon" aria-hidden="true"><use href="#i-moon"></use></svg>
+      </button>
+      <div class="lang">
+        <button class="lang-btn" id="langBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Change language">
+          <svg aria-hidden="true"><use href="#i-globe"></use></svg>
+          <span class="lang-code" id="langCode">EN</span>
+        </button>
+        <div class="lang-menu" id="langMenu" role="menu" aria-labelledby="langBtn"></div>
+      </div>
+      <a class="btn -primary -sm header-cta" href="https://nightmareofragnarok.com/?module=account&amp;action=create" target="_blank" rel="noopener" data-i18n="cta.register">Create account</a>
+      <button class="icon-btn burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false">
+        <svg aria-hidden="true"><use href="#i-menu"></use></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="shell">
+    <div class="drawer-top">
+      <img src="assets/img/logo.webp" alt="Nightmare RO" width="150" height="32">
+      <button class="icon-btn" id="drawerClose" type="button" aria-label="Close menu">
+        <svg aria-hidden="true"><use href="#i-close"></use></svg>
+      </button>
+    </div>
+    <nav aria-label="Mobile">
+      <span class="drawer-group" data-i18n="nav.game">The game</span>
+      <a class="-sub" href="index.html#server" data-i18n="nav.server">The server</a>
+      <a class="-sub" href="mechanics.html" data-i18n="nav.mech">How it works</a>
+      <a class="-sub" href="endgame.html" data-i18n="nav.endgame">End game</a>
+      <a href="index.html#features" data-i18n="nav.features">Features</a>
+      <span class="drawer-group" data-i18n="nav.guide">New players</span>
+      <a class="-sub" href="guide.html" data-i18n="nav.route">Levelling route</a>
+      <a class="-sub" href="quiz.html" data-i18n="nav.quiz">Class test</a>
+      <a href="classes.html" data-i18n="nav.classes">Classes</a>
+      <span class="drawer-group" data-i18n="nav.database">Database</span>
+      <a class="-sub" href="database.html" data-i18n="nav.items">Items and cards</a>
+      <a class="-sub" href="mvps.html" data-i18n="nav.mvps">MVPs and altars</a>
+      <a class="-sub" href="quests.html" data-i18n="nav.quests">Quests</a>
+      <a href="https://wiki.nightmareofragnarok.com/" target="_blank" rel="noopener" data-i18n="nav.wiki">Wiki</a>
+      <a href="download.html" data-i18n="nav.download">Download</a>
+      <a href="index.html#start" data-i18n="nav.start">Get started</a>
+      <a href="index.html#faq" data-i18n="nav.faq">FAQ</a>
+    </nav>
+    <div class="drawer-actions">
+      <a class="btn -primary -block" href="https://nightmareofragnarok.com/?module=account&amp;action=create" target="_blank" rel="noopener" data-i18n="cta.register">Create account</a>
+      <a class="btn -ghost -block" href="https://discord.gg/gHgFtmvudD" target="_blank" rel="noopener">
+        <svg aria-hidden="true"><use href="#i-discord"></use></svg><span data-i18n="cta.discord">Join the Discord</span>
+      </a>
+    </div>
+  </div>
+</div>
+<main id="main">
+  <section class="page-head">
+    <div class="shell">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><ol>
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li data-i18n="nav.mech">How it works</li>
+      </ol></nav>
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="m.eyebrow">The rules</p>
+        <h1 data-i18n="m.title">How the server actually works</h1>
+        <p class="lede" data-i18n="m.lede">Everything below is different enough from the game you remember that guessing will cost you levels. It is worth twenty minutes before you pick a build.</p>
+      </div>
+    </div>
+  </section>
+  <section class="section-pad-sm"><div class="shell">
+      <nav class="q-jumps" aria-label="Jump to a section">
+        <span class="q-jumps-label" data-i18n="q.jump">Jump to</span>
+        <a class="q-jump" href="#levels" data-i18n="m.jLevels">Levels and experience</a>
+        <a class="q-jump" href="#stats" data-i18n="m.jStats">Stats and breakpoints</a>
+        <a class="q-jump" href="#combat" data-i18n="m.jCombat">Combat maths</a>
+        <a class="q-jump" href="#elements" data-i18n="m.jElements">Element table</a>
+        <a class="q-jump" href="#status" data-i18n="m.jStatus">Status effects</a>
+        <a class="q-jump" href="#potions" data-i18n="m.jPotions">Potions and catalysts</a>
+        <a class="q-jump" href="#novice" data-i18n="m.jNovice">Skills everyone has</a>
+        <a class="q-jump" href="#refine" data-i18n="m.jRefine">Refining</a>
+        <a class="q-jump" href="#warps" data-i18n="m.jWarps">Warps</a>
+        <a class="q-jump" href="#commands" data-i18n="m.jCommands">Commands</a>
+      </nav>
+  </div></section>
+
+  <section class="section-pad-sm mech-sec" id="levels">
+    <div class="shell">
+      <h2 class="mech-title" data-i18n="m.lvTitle">Levels and experience</h2>
+      <p class="lede" data-i18n="m.lvLede">The tables were rewritten from scratch, so nobody can quote you a rate. What follows is the shape of the curve instead.</p>
+<dl class="rows"><div class="row"><dt>Max level</dt><dd><strong>150 base, 50 job.</strong> Jobs come in three tiers: first job carries you from 1 to 50, second from 51 to 99, third from 100 to 150. Each tier has its own fifty job levels, so fifty skill points to spend before you move on.</dd></div><div class="row"><dt>Ninja and Gunslinger</dt><dd>The exceptions. They stay on their first job until 99 and then go straight to their final one. They still collect both sets of fifty skill points.</dd></div><div class="row"><dt>Per kill</dt><dd>About <strong>5% of a level at base 50</strong>, <strong>1% at 100</strong>, <strong>0.1% at 149</strong>. Monsters here take much longer to kill than you are used to, so read those numbers with that in mind.</dd></div><div class="row"><dt>Parties</dt><dd><strong>Five players.</strong> Experience only splits evenly if the lowest and highest member are within 15 levels of each other.</dd></div></dl><h3 class="mech-sub" data-i18n="m.lvGapTitle">What the level gap costs you</h3><div class="table-wrap"><table class="mvp-table"><thead><tr><th>Your level against the monster</th><th>Experience</th></tr></thead><tbody><tr><td>15 or more levels above the monster</td><td>Nothing at all</td></tr><tr><td>10 levels above</td><td>Half</td></tr><tr><td>6 levels above</td><td>90%</td></tr><tr><td>Up to 5 levels above</td><td>Full experience</td></tr><tr><td>3 to 10 levels below</td><td>5% more, rising to 40% more at ten</td></tr><tr><td>10 to 15 levels below</td><td>Tapering back down, 15% more at fifteen</td></tr><tr><td>16 or more levels below</td><td>90% less</td></tr></tbody></table></div><p class="note" data-i18n="m.lvGapNote">So the sweet spot is monsters a few levels above you, not below. Fighting something ten levels higher pays 40% more, and grinding something fifteen levels lower pays nothing.</p>
+    </div>
+  </section>
+
+  <section class="section-pad-sm mech-sec" id="stats">
+    <div class="shell">
+      <h2 class="mech-title" data-i18n="m.stTitle">Stats and breakpoints</h2>
+      <p class="lede" data-i18n="m.stLede">Each stat still does what you expect, and then gives you something extra at every tenth and every twenty fifth point. Several of those bonuses depend on what you are holding.</p>
+      <div class="st-grid">
+        <article class="st-card">
+          <div class="st-head">
+            <span class="st-abbr">Str</span>
+            <h3>Strength</h3>
+          </div>
+          <p class="st-does">Physical attack with melee weapons, and carry weight.</p>
+          <h4 class="st-when">Melee weapon</h4><ul class="st-list"><li><span class="st-step">Every 10</span><span>Weapon attack +5%</span></li><li><span class="st-step">Every 25</span><span>Melee damage +3%</span></li></ul>
+          <h4 class="st-when">Bow, instrument, whip or gun</h4><ul class="st-list"><li><span class="st-step">Every 10</span><span>Defence pierce +3%</span></li><li><span class="st-step">Every 25</span><span>Max HP +3%</span></li></ul>
+        </article>
+        <article class="st-card">
+          <div class="st-head">
+            <span class="st-abbr">Agi</span>
+            <h3>Agility</h3>
+          </div>
+          <p class="st-does">Flee and attack speed.</p>
+          <ul class="st-list"><li><span class="st-step">Every 10</span><span>Perfect dodge +1</span></li><li><span class="st-step">Every 25</span><span>All skill cooldowns -5%</span></li></ul>
+        </article>
+        <article class="st-card">
+          <div class="st-head">
+            <span class="st-abbr">Vit</span>
+            <h3>Vitality</h3>
+          </div>
+          <p class="st-does">Max HP, HP regeneration and carry weight.</p>
+          <ul class="st-list"><li><span class="st-step">Every 10</span><span>Status damage taken -2%</span></li><li><span class="st-step">Every 25</span><span>Potion cooldown -0.5s</span></li></ul>
+        </article>
+        <article class="st-card">
+          <div class="st-head">
+            <span class="st-abbr">Int</span>
+            <h3>Intelligence</h3>
+          </div>
+          <p class="st-does">Magic attack, max SP and SP regeneration.</p>
+          <h4 class="st-when">Staff, mace, dagger, instrument or whip</h4><ul class="st-list"><li><span class="st-step">Every 10</span><span>Weapon magic attack +5%</span></li><li><span class="st-step">Every 25</span><span>Magic damage +3%</span></li></ul>
+          <h4 class="st-when">Any other weapon</h4><ul class="st-list"><li><span class="st-step">Every 10</span><span>Fixed cast time -0.1s</span></li><li><span class="st-step">Every 25</span><span>SP consumption -10%</span></li></ul>
+        </article>
+        <article class="st-card">
+          <div class="st-head">
+            <span class="st-abbr">Dex</span>
+            <h3>Dexterity</h3>
+          </div>
+          <p class="st-does">Physical attack with ranged weapons, hit rate, and cast time.</p>
+          <h4 class="st-when">Bow, instrument, whip or gun</h4><ul class="st-list"><li><span class="st-step">Every 10</span><span>Weapon attack +5%</span></li><li><span class="st-step">Every 25</span><span>Ranged damage +3%</span></li></ul>
+          <h4 class="st-when">Any other weapon</h4><ul class="st-list"><li><span class="st-step">Every 10</span><span>Defence pierce +3%</span></li><li><span class="st-step">Every 25</span><span>Movement speed +3%</span></li></ul>
+        </article>
+        <article class="st-card">
+          <div class="st-head">
+            <span class="st-abbr">Luk</span>
+            <h3>Luck</h3>
+          </div>
+          <p class="st-does">Critical rate and perfect dodge.</p>
+          <ul class="st-list"><li><span class="st-step">Every 10</span><span>Outgoing status duration +3%</span></li><li><span class="st-step">Every 25</span><span>5% chance to resist most negative statuses</span></li></ul>
+        </article>
+      </div>
+<p class="note" data-i18n="m.stNote">Bonus stats count. If you have 77 Strength and 23 from gear and buffs, the game reads 100 for every breakpoint above. The Luck resistance roll does not cover statuses you inflict on yourself, item or homunculus cooldowns, Threefold Arrow or Quick Draw charges, Convex Mirrors, or Death Sentence.</p>
+    </div>
+  </section>
+
+  <section class="section-pad-sm mech-sec" id="combat">
+    <div class="shell">
+      <h2 class="mech-title" data-i18n="m.cbTitle">Combat maths</h2>
+      <p class="lede" data-i18n="m.cbLede">Most formulas match renewal. These are the ones that do not, and they are the ones that decide how a build feels.</p>
+<dl class="rows"><div class="row"><dt>Critical hits</dt><dd><strong>Every physical skill and attack can crit.</strong> Rate is still 1 + (Luk / 3) + (base level / 100). The damage bonus dropped from 40% to 20%, crits no longer skip flee or defence, and monsters have no crit shield, so their Luck does not reduce your rate.</dd></div><div class="row"><dt>Cast time</dt><dd>Split into fixed and variable. Variable reduction is <strong>sqrt((Dex &times; 2) / 600) &times; 100</strong>, which means 300 Dex for a full 100%, which nobody reaches. Reduction from gear adds to reduction from stats instead of multiplying, so 40% from stats and 60% from gear leaves nothing. Fixed cast only bends to gear and to the Intelligence breakpoints.</dd></div><div class="row"><dt>Attack speed</dt><dd><strong>ASPD = base ASPD + (Agi / 5)</strong>, where the base comes from your class and weapon type. There is a soft cap at 185 that gear and buffs can push through, and a hard cap at 190 that nothing can.</dd></div><div class="row"><dt>Status resistance</dt><dd>Outside the Luck breakpoints, <strong>no stat resists anything</strong>. Two thousand Vitality still gets stunned. Gear is the only other answer.</dd></div><div class="row"><dt>Elements and cards</dt><dd>Weapon element applies to your <strong>whole attack</strong>, not just the weapon part of it. Damage bonuses against a race, element or size work the same way.</dd></div><div class="row"><dt>Movement and regen</dt><dd>Base movement went from 150ms per cell to <strong>120ms</strong>. HP and SP regeneration are five times what you remember.</dd></div></dl>
+    </div>
+  </section>
+
+  <section class="section-pad-sm mech-sec" id="elements">
+    <div class="shell">
+      <h2 class="mech-title" data-i18n="m.elTitle">Element table</h2>
+      <p class="lede" data-i18n="m.elLede">This table has moved a long way from the one you know, and Undead in particular is now worth carrying. Read your attack element down the left, your target across the top. The four numbers are the four levels of the target's element.</p>
+      <div class="el-legend">
+        <span class="el-v -up">10/25/35/50</span>
+        <span class="el-legend-t" data-i18n="m.elUp">you deal that much more</span>
+        <span class="el-v -down">10/25/35/50</span>
+        <span class="el-legend-t" data-i18n="m.elDown">you deal that much less</span>
+      </div>
+      <div class="table-wrap">
+        <table class="el-table">
+          <thead><tr><th class="el-corner"><span data-i18n="m.elAxis">Attacker down, defender across</span></th><th class="el-h el-neutral"><span>Neutral</span></th><th class="el-h el-fire"><span>Fire</span></th><th class="el-h el-water"><span>Water</span></th><th class="el-h el-wind"><span>Wind</span></th><th class="el-h el-earth"><span>Earth</span></th><th class="el-h el-poison"><span>Poison</span></th><th class="el-h el-undead"><span>Undead</span></th><th class="el-h el-ghost"><span>Ghost</span></th><th class="el-h el-dark"><span>Dark</span></th><th class="el-h el-holy"><span>Holy</span></th></tr></thead>
+          <tbody><tr><th class="el-h el-neutral el-row"><span>Neutral</span></th><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-v -down">10/20/30/50</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-v -down">10/25/50/75</span></td></tr><tr><th class="el-h el-fire el-row"><span>Fire</span></th><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-v -down">15/25/50/75</span></td><td class="el-c"><span class="el-v -down">0/10/25/50</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-v -up">10/25/35/50</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-v -up">10/25/35/50</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-v -down">10/25/50/75</span></td></tr><tr><th class="el-h el-water el-row"><span>Water</span></th><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-v -up">10/25/35/50</span></td><td class="el-c"><span class="el-v -down">15/25/50/75</span></td><td class="el-c"><span class="el-v -down">0/10/25/50</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-v -down">10/25/50/75</span></td></tr><tr><th class="el-h el-wind el-row"><span>Wind</span></th><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-v -up">10/25/35/50</span></td><td class="el-c"><span class="el-v -down">15/25/50/75</span></td><td class="el-c"><span class="el-v -down">0/10/25/50</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-v -down">10/25/50/75</span></td></tr><tr><th class="el-h el-earth el-row"><span>Earth</span></th><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-v -down">0/10/25/50</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-v -up">10/25/35/50</span></td><td class="el-c"><span class="el-v -down">15/25/50/75</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-v -down">10/25/50/75</span></td></tr><tr><th class="el-h el-poison el-row"><span>Poison</span></th><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-v -up">5/10/15/20</span></td><td class="el-c"><span class="el-v -up">5/10/15/20</span></td><td class="el-c"><span class="el-v -up">5/10/15/20</span></td><td class="el-c"><span class="el-v -up">5/10/15/20</span></td><td class="el-c"><span class="el-v -down">15/25/50/75</span></td><td class="el-c"><span class="el-v -down">0/10/25/50</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-v -down">10/25/50/75</span></td></tr><tr><th class="el-h el-undead el-row"><span>Undead</span></th><td class="el-c"><span class="el-v -up">5/10/15/20</span></td><td class="el-c"><span class="el-v -down">0/10/25/50</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-v -up">5/10/15/20</span></td><td class="el-c"><span class="el-v -down">15/25/50/75</span></td><td class="el-c"><span class="el-v -down">0/10/25/50</span></td><td class="el-c"><span class="el-v -up">5/10/15/20</span></td><td class="el-c"><span class="el-v -down">10/25/50/75</span></td></tr><tr><th class="el-h el-ghost el-row"><span>Ghost</span></th><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-v -up">10/25/35/50</span></td><td class="el-c"><span class="el-v -up">5/10/15/20</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-v -down">10/25/50/75</span></td></tr><tr><th class="el-h el-dark el-row"><span>Dark</span></th><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-v -down">0/10/25/50</span></td><td class="el-c"><span class="el-none">&middot;</span></td><td class="el-c"><span class="el-v -down">15/25/50/75</span></td><td class="el-c"><span class="el-v -up">10/25/35/50</span></td></tr><tr><th class="el-h el-holy el-row"><span>Holy</span></th><td class="el-c"><span class="el-v -up">5/10/15/20</span></td><td class="el-c"><span class="el-v -up">5/10/15/20</span></td><td class="el-c"><span class="el-v -up">5/10/15/20</span></td><td class="el-c"><span class="el-v -up">5/10/15/20</span></td><td class="el-c"><span class="el-v -up">5/10/15/20</span></td><td class="el-c"><span class="el-v -up">5/10/15/20</span></td><td class="el-c"><span class="el-v -up">10/25/35/50</span></td><td class="el-c"><span class="el-v -up">10/25/35/50</span></td><td class="el-c"><span class="el-v -up">10/25/35/50</span></td><td class="el-c"><span class="el-v -down">10/25/50/75</span></td></tr></tbody>
+        </table>
+      </div>
+<p class="note" data-i18n="m.elNote">Holy beats everything and is beaten by nothing except itself, which is why holy monsters are the wall they are. Poison is a small edge against most things and a wall against Undead. Neutral has no answer to Ghost.</p>
+    </div>
+  </section>
+
+  <section class="section-pad-sm mech-sec" id="status">
+    <div class="shell">
+      <h2 class="mech-title" data-i18n="m.sfTitle">Status effects</h2>
+      <p class="lede" data-i18n="m.sfLede">Statuses are a pillar of combat here rather than a nuisance. Most last five seconds or less and hit far harder than they used to, and a lot of skills change behaviour depending on what is already on the target.</p>
+      <ul class="codex">
+        <li class="kw-bleed">
+          <i class="swatch" aria-hidden="true"></i>
+          <div>
+            <b>Bleeding</b>
+            <span data-i18n="codex.d1">Damage every second, scaled off the applier's Strength and level. Internal Bleeding works the same but scales off Dexterity.</span>
+            <em>Internal Bleeding, Bleeding, Bleed</em>
+          </div>
+        </li>
+        <li class="kw-burn">
+          <i class="swatch" aria-hidden="true"></i>
+          <div>
+            <b>Burning</b>
+            <span data-i18n="codex.d2">Damage every second, scaled off Intelligence. Severe Burning scales off Vitality instead.</span>
+            <em>Severe Burning, Burning</em>
+          </div>
+        </li>
+        <li class="kw-poison">
+          <i class="swatch" aria-hidden="true"></i>
+          <div>
+            <b>Poison</b>
+            <span data-i18n="codex.d3">Damage every second, scaled off Agility. Deadly Poison scales off Luck instead.</span>
+            <em>Deadly Poison, Poison</em>
+          </div>
+        </li>
+        <li class="kw-blind">
+          <i class="swatch" aria-hidden="true"></i>
+          <div>
+            <b>Blind</b>
+            <span data-i18n="codex.d4">Cuts the target's Hit and Flee by a flat 30, and shrinks how much of the screen a player can see.</span>
+            <em>Blinded, Blind</em>
+          </div>
+        </li>
+        <li class="kw-vuln">
+          <i class="swatch" aria-hidden="true"></i>
+          <div>
+            <b>Vulnerable</b>
+            <span data-i18n="codex.d5">Strips 40% of the target's hard and soft defence. No attack bonus, unlike the Provoke you remember.</span>
+            <em>Vulnerable, Breach</em>
+          </div>
+        </li>
+        <li class="kw-frozen">
+          <i class="swatch" aria-hidden="true"></i>
+          <div>
+            <b>Frozen</b>
+            <span data-i18n="codex.d6">Cancels casting and locks the target until it takes damage. Chill slows movement and attack speed, Cold is the follow up during the resist window.</span>
+            <em>Freeze, Frozen, Chill</em>
+          </div>
+        </li>
+        <li class="kw-stun">
+          <i class="swatch" aria-hidden="true"></i>
+          <div>
+            <b>Stun</b>
+            <span data-i18n="codex.d7">Cancels casting and stops the target acting. Monsters resist for 30 seconds afterwards and take Stagger instead.</span>
+            <em>Staggered, Stagger, Stunned</em>
+          </div>
+        </li>
+        <li class="kw-sleep">
+          <i class="swatch" aria-hidden="true"></i>
+          <div>
+            <b>Sleep</b>
+            <span data-i18n="codex.d8">Cancels casting and stops the target acting until it takes damage. Monsters take Dazed during the resist window.</span>
+            <em>Sleeping, Dazed, Sleep</em>
+          </div>
+        </li>
+        <li class="kw-slow">
+          <i class="swatch" aria-hidden="true"></i>
+          <div>
+            <b>Slow</b>
+            <span data-i18n="codex.d9">Movement speed down. Atrophy hits attack speed instead, and Slowcast stretches fixed cast time.</span>
+            <em>Immobilized, Immobilize, Slowcast</em>
+          </div>
+        </li></ul>
+<p class="note" data-i18n="m.sfNote">Two rules follow from that. No stat gives you any resistance, so the only defences are the Luck breakpoints and gear. And champions and bosses have no immunity at all, so everything you carry works on them.</p>
+    </div>
+  </section>
+
+  <section class="section-pad-sm mech-sec" id="potions">
+    <div class="shell">
+      <h2 class="mech-title" data-i18n="m.poTitle">Potions and catalysts</h2>
+      <p class="lede" data-i18n="m.poLede">Your potion is a piece of equipment, not a stack of items. It is never consumed, it sits on a ten second cooldown, and you upgrade it as you go.</p>
+<dl class="rows"><div class="row"><dt>Healing</dt><dd><strong>Red, then Orange, Yellow, White.</strong> Around level 30 the Red one stops keeping up. Gather the herbs and materials and commission the upgrade from the Alchemists in Aldebaran, or from any starting town tool shop for the Red one.</dd></div><div class="row"><dt>SP</dt><dd><strong>Grape Juice, then Blue Potion.</strong></dd></div><div class="row"><dt>Attack speed</dt><dd><strong>Concentration, Awakening, Berserk.</strong> Every class restriction on these has been removed.</dd></div><div class="row"><dt>Status</dt><dd>A Green Potion, for when the pressure gets silly.</dd></div><div class="row"><dt>Catalysts</dt><dd>Most class consumables are gone. The ones that stayed became catalysts that are <strong>not used up</strong>: endow stones, arrows, maintenance kits, poisons and the rest. Short quests or crafting get you them.</dd></div></dl><p class="mech-link"><a class="btn -ghost" href="quests.html#potions" data-i18n="m.poLink">The potion crafting recipes</a></p>
+    </div>
+  </section>
+
+  <section class="section-pad-sm mech-sec" id="novice">
+    <div class="shell">
+      <h2 class="mech-title" data-i18n="m.nvTitle">Skills everyone has</h2>
+      <p class="lede" data-i18n="m.nvLede">The novice stage is skipped, since the tutorial hands you your first job at level 1. The novice skills stayed, and several of them matter for the whole game.</p>
+<div class="table-wrap"><table class="mvp-table"><thead><tr><th>Skill</th><th>What it does</th></tr></thead><tbody><tr><td><b>Basic Skill</b></td><td>Explains the common status effects as you meet them.</td></tr><tr><td><b>Sense</b></td><td>Prints everything about a monster into the chat window. This is the whole reason the old monster info command is gone.</td></tr><tr><td><b>Mobile Storage</b></td><td>Your cart, once you have bought a licence.</td></tr><tr><td><b>Vending</b></td><td>Opens a shop out of that cart. Needs the same licence.</td></tr><tr><td><b>Teleport</b></td><td>Random spot on the map, or back to your save point. Long cooldown.</td></tr><tr><td><b>Area Loot</b></td><td>Picks up everything within four cells, and respects loot priority.</td></tr></tbody></table></div><h3 class="mech-sub" data-i18n="m.nvQuestTitle">The three you have to earn</h3><div class="table-wrap"><table class="mvp-table"><thead><tr><th>Skill</th><th>What it does</th></tr></thead><tbody><tr><td><b>Resurrection</b></td><td>Revives a downed player and spends one Holy Water out of their inventory. You get three every time you respawn or talk to a Kafra.</td></tr><tr><td><b>Warp Portal</b></td><td>Memo a spot, open a portal to it, spend a Blue Gemstone.</td></tr><tr><td><b>High Jump</b></td><td>Jumps to where you point, through anything in the way.</td></tr></tbody></table></div><p class="note" data-i18n="m.nvNote">All three need a quest to learn and more quests to raise past level 1. Where each one starts is written in its skill description, in your skill tree.</p>
+    </div>
+  </section>
+
+  <section class="section-pad-sm mech-sec" id="refine">
+    <div class="shell">
+      <h2 class="mech-title" data-i18n="m.rfTitle">Refining</h2>
+      <p class="lede" data-i18n="m.rfLede">The one part of this server that is kinder than the game you remember. Gear never breaks and never drops a level. The only thing at risk is your wallet.</p>
+<dl class="rows"><div class="row"><dt>The odds</dt><dd>Maximum is <strong>+10</strong>, and success is <strong>100% minus 10% per current refine</strong>. So +0 to +1 always works, +4 to +5 is a coin flip and a bit, and +9 to +10 is one in ten.</dd></div><div class="row"><dt>One weapon level</dt><dd>Every weapon in the game refines with the same ores. Armour, shields, garments, shoes and headgear share one ladder too.</dd></div><div class="row"><dt>Where the ores come from</dt><dd>Mostly from killing bosses, banded by the boss's own level.</dd></div></dl><h3 class="mech-sub" data-i18n="m.rfWeapon">Weapons</h3><div class="table-wrap"><table class="mvp-table"><thead><tr><th>Refine</th><th>Ore</th><th>Per step</th></tr></thead><tbody><tr><td>+0 to +3</td><td>Phracon or better</td><td>+2 attack and magic attack each</td></tr><tr><td>+4 to +6</td><td>Emveretarcon or better</td><td>+4 each</td></tr><tr><td>+7 to +9</td><td>Oridecon or better</td><td>+6 each</td></tr><tr><td>+10</td><td>Enriched Oridecon</td><td>+10, for +46 in total</td></tr></tbody></table></div><h3 class="mech-sub" data-i18n="m.rfArmour">Armour</h3><div class="table-wrap"><table class="mvp-table"><thead><tr><th>Refine</th><th>Ore</th><th>Per step</th></tr></thead><tbody><tr><td>+0 to +3</td><td>Iron or better</td><td>+1 defence each</td></tr><tr><td>+4 to +6</td><td>Steel or better</td><td>+2 each</td></tr><tr><td>+7 to +9</td><td>Elunium or better</td><td>+3 each</td></tr><tr><td>+10</td><td>Enriched Elunium</td><td>+5, for +23 in total</td></tr></tbody></table></div><h3 class="mech-sub" data-i18n="m.rfOres">Which boss drops what</h3><div class="table-wrap"><table class="mvp-table"><thead><tr><th>Boss</th><th>Drops</th></tr></thead><tbody><tr><td>Boss level 1 to 50</td><td>Phracon and Iron</td></tr><tr><td>51 to 100</td><td>Emveretarcon and Steel</td></tr><tr><td>101 to 150</td><td>Oridecon and Elunium</td></tr><tr><td>Over 150</td><td>Enriched Oridecon and Enriched Elunium</td></tr></tbody></table></div>
+    </div>
+  </section>
+
+  <section class="section-pad-sm mech-sec" id="warps">
+    <div class="shell">
+      <h2 class="mech-title" data-i18n="m.wpTitle">Warps</h2>
+      <p class="lede" data-i18n="m.wpLede">The Kafra teleport service works, with one condition attached.</p>
+<ul class="guide-notes"><li>You cannot warp to a town until you have <b>walked there once</b> and spoken to its Kafra.</li><li><b>Prontera, Izlude, Morroc, Geffen, Payon and Alberta</b> are open from your first login, and warping between those six is free.</li><li>Everything else costs zeny once you have unlocked it.</li><li>Unlocks are <b>account wide</b>, so your second character starts with everything the first one opened.</li></ul>
+    </div>
+  </section>
+
+  <section class="section-pad-sm mech-sec" id="commands">
+    <div class="shell">
+      <h2 class="mech-title" data-i18n="m.cmTitle">Commands</h2>
+      <p class="lede" data-i18n="m.cmLede">The short list of what @ commands do here.</p>
+<div class="table-wrap"><table class="mvp-table"><thead><tr><th>Command</th><th>What it does</th></tr></thead><tbody><tr><td><code class="cmd">@showexp</code></td><td>Prints experience gained and lost into the chat log.</td></tr><tr><td><code class="cmd">@showzeny</code></td><td>The same for zeny.</td></tr><tr><td><code class="cmd">@whereis</code></td><td>Where a named monster spawns. The in game navigation window does the same job.</td></tr><tr><td><code class="cmd">@refresh</code></td><td>Redraws the screen when your position goes out of sync.</td></tr><tr><td><code class="cmd">@noks</code></td><td>Stops other players touching what you are fighting. It works on bosses here, which is unusual.</td></tr><tr><td><code class="cmd">@autotrade</code></td><td>Closes the client without closing your shop, so you can vend while logged out.</td></tr><tr><td><code class="cmd">@prep</code></td><td>Toggles the safety catch on the Sniper preparation mechanic. Nothing to anyone else.</td></tr><tr><td><code class="cmd">@casttime</code></td><td>Your current fixed and variable cast reduction, buffs and gear included.</td></tr><tr><td><code class="cmd">@autoswap</code></td><td>Registers weapons to swap to. Cast a skill your current weapon cannot use and the game finds one that can and equips it.</td></tr></tbody></table></div><h3 class="mech-sub" data-i18n="m.cmGone">Gone on purpose</h3><div class="table-wrap"><table class="mvp-table"><thead><tr><th>Command</th><th>Why</th></tr></thead><tbody><tr><td><code class="cmd">@whodrops</code></td><td>Its answers were incomplete and wrong.</td></tr><tr><td><code class="cmd">@mobinfo</code></td><td>The Sense skill replaced it.</td></tr><tr><td><code class="cmd">@iteminfo</code></td><td>Too much leftover junk in the files for it to be useful.</td></tr><tr><td><code class="cmd">@autoloot</code></td><td>Pick your own items up.</td></tr></tbody></table></div>
+    </div>
+  </section>
+
+  <section class="section-pad-sm">
+    <div class="shell">
+      <div class="cta-band">
+        <div class="inner">
+          <h2 data-i18n="band.title">Come find out what changed</h2>
+          <p class="lede text-center" data-i18n="band.lede">Make an account, grab the client, and come and see what changed.</p>
+          <div class="hero-actions">
+            <a class="btn -primary -lg" href="https://nightmareofragnarok.com/?module=account&amp;action=create" target="_blank" rel="noopener" data-i18n="cta.registerFree">Create a free account</a>
+            <a class="btn -ghost -lg" href="guide.html" data-i18n="nav.route">Levelling route</a>
+            <a class="btn -ghost -lg" href="endgame.html" data-i18n="nav.endgame">End game</a>
+            <a class="btn -ghost -lg" href="classes.html" data-i18n="nav.classes">Classes</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-grid">
+      <div>
+        <img src="assets/img/logo.webp" alt="Nightmare RO" width="170" height="36" loading="lazy">
+        <p class="dim" style="margin-top:1rem;max-width:34ch" data-i18n="footer.blurb">A fully custom private server. Rebuilt, rebalanced and still being worked on.</p>
+      </div>
+      <div>
+        <h4 data-i18n="footer.play">Play</h4>
+        <ul>
+          <li><a href="https://nightmareofragnarok.com/?module=account&amp;action=create" target="_blank" rel="noopener" data-i18n="cta.register">Create account</a></li>
+          <li><a href="download.html" data-i18n="nav.download">Download</a></li>
+          <li><a href="classes.html" data-i18n="nav.classes">Classes</a></li>
+          <li><a href="quiz.html" data-i18n="nav.quiz">Class test</a></li>
+          <li><a href="database.html" data-i18n="nav.database">Database</a></li>
+          <li><a href="index.html#faq" data-i18n="nav.faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer.community">Community</h4>
+        <ul>
+          <li><a href="https://discord.gg/gHgFtmvudD" target="_blank" rel="noopener">Discord</a></li>
+          <li><a href="https://wiki.nightmareofragnarok.com/" target="_blank" rel="noopener" data-i18n="footer.wiki">Player wiki</a></li>
+          <li><a href="https://nightmareofragnarok.com/" target="_blank" rel="noopener" data-i18n="footer.panel">Control panel</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer.references">References</h4>
+        <ul>
+          <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vT3yuB3St__9v202ZUU9pUZm4PX88tph379Dr2eMR3TFNfZ0GUVD0tvuBl99Ma8GHp5e2pLzLG6Bmds/pubhtml" target="_blank" rel="noopener" data-i18n="footer.gear">Gear reference</a></li>
+          <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRaVCw9eEP3D-VlpBCryCcXy84FkDTm2RU-whdMIAZ8HuYhRvlsQrKqBiUUQlcLHq6gUqq6PXeUKB_5/pubhtml" target="_blank" rel="noopener" data-i18n="footer.cards">Card reference</a></li>
+          <li><a href="https://docs.google.com/document/d/e/2PACX-1vSlu9yEhoRVn5ob2yCJ8f_lOEQLq476hibjolBnnpDko-VXRWiB88o7aumdASXs0WwC0a1aTgH2QcjP/pub" target="_blank" rel="noopener" data-i18n="footer.overview">Full server overview</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer.legal">Nightmare RO is a free, non-commercial fan project. Not affiliated with any commercial game publisher.</span>
+      <span>&copy; <span id="year">2026</span> Nightmare RO</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/i18n.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

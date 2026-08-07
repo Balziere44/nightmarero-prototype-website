@@ -3358,6 +3358,355 @@ html[data-theme="light"] .site-footer { background: color-mix(in srgb, var(--bg)
 :root[data-launch="live"] [data-when="live"] { display: revert; }
 :root[data-launch="live"] [data-when="pre"] { display: none; }
 
+
+/* --------------------------------------------------------------------------
+   20l. The mechanics and end game pages
+
+   Both are long reference pages, so the shared furniture lives here: the
+   section titles, the sub headings inside a section, and the command chips.
+   -------------------------------------------------------------------------- */
+
+.mech-sec { scroll-margin-top: calc(var(--header-h) + 1rem); }
+.mech-sec + .mech-sec { border-top: 1px solid var(--surface-line); }
+.mech-title {
+  font-family: var(--font-display);
+  font-size: var(--step-2);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.4rem;
+}
+.mech-sec .lede { margin-bottom: 1.3rem; }
+.mech-sub {
+  margin: 1.8rem 0 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.mech-sec .rows { margin-bottom: 0.5rem; }
+.mech-sec .note { margin-top: 1rem; }
+.mech-link { margin-top: 1.2rem; }
+
+code.cmd {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--accent-soft);
+  white-space: nowrap;
+}
+
+/* ---- stat breakpoint cards ---- */
+
+.st-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 285px), 1fr));
+  gap: 0.9rem;
+}
+.st-card {
+  padding: 1.1rem 1.2rem 1.2rem;
+  border: 1px solid var(--surface-line);
+  border-radius: var(--radius);
+  background: var(--bg-panel);
+}
+.st-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+.st-abbr {
+  padding: 0.16rem 0.55rem;
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+  border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.st-head h3 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+.st-does {
+  margin-bottom: 0.8rem;
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+.st-when {
+  margin: 0.9rem 0 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent-soft);
+}
+.st-list {
+  display: grid;
+  gap: 0.35rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.st-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+.st-step {
+  flex: none;
+  min-width: 4.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+/* ---- element table ----
+
+   Each element gets its own hue so a row or a column can be found without
+   reading it. The numbers on top of that are only ever green for more damage
+   and red for less, which is how the server owner draws the same chart.
+   -------------------------------------------------------------------------- */
+
+:root {
+  --el-neutral: #a49dae;
+  --el-fire: #ff5a33;
+  --el-water: #3fa9f5;
+  --el-wind: #45d39a;
+  --el-earth: #c98f3f;
+  --el-poison: #a35ce0;
+  --el-undead: #7fa653;
+  --el-ghost: #cbd7ff;
+  --el-dark: #8b6fa8;
+  --el-holy: #ffd76a;
+  --el-up: #4fd3a0;
+  --el-down: #e8677a;
+}
+html[data-theme="light"] {
+  --el-neutral: #4a4454;
+  --el-fire: #b02f0c;
+  --el-water: #0a6486;
+  --el-wind: #0e6a4c;
+  --el-earth: #7a4e12;
+  --el-poison: #5f2a9e;
+  --el-undead: #3f5c22;
+  --el-ghost: #414f85;
+  --el-dark: #4a3268;
+  --el-holy: #7a5a00;
+  --el-up: #0f6244;
+  --el-down: #a5162f;
+}
+
+.el-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: 0.9rem;
+}
+.el-legend-t {
+  margin-inline-end: 0.7rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.el-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.78rem;
+}
+.el-table th,
+.el-table td {
+  padding: 0.34rem 0.34rem;
+  border: 1px solid var(--surface-line);
+  text-align: center;
+  white-space: nowrap;
+}
+.el-corner {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  text-align: start;
+}
+.el-h {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--el);
+  background: color-mix(in srgb, var(--el) 12%, transparent);
+}
+.el-row { text-align: start; }
+.el-neutral { --el: var(--el-neutral); }
+.el-fire { --el: var(--el-fire); }
+.el-water { --el: var(--el-water); }
+.el-wind { --el: var(--el-wind); }
+.el-earth { --el: var(--el-earth); }
+.el-poison { --el: var(--el-poison); }
+.el-undead { --el: var(--el-undead); }
+.el-ghost { --el: var(--el-ghost); }
+.el-dark { --el: var(--el-dark); }
+.el-holy { --el: var(--el-holy); }
+
+.el-c { color: var(--text-muted); }
+.el-none { color: var(--text-dim); }
+.el-v {
+  display: inline-block;
+  padding: 0.14rem 0.28rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 500;
+}
+.el-v.-up {
+  color: var(--el-up);
+  background: color-mix(in srgb, var(--el-up) 16%, transparent);
+  border: 1px solid color-mix(in srgb, var(--el-up) 38%, transparent);
+}
+.el-v.-down {
+  color: var(--el-down);
+  background: color-mix(in srgb, var(--el-down) 16%, transparent);
+  border: 1px solid color-mix(in srgb, var(--el-down) 38%, transparent);
+}
+
+/* --------------------------------------------------------------------------
+   20m. Reading the world map, and where to hunt
+
+   Both sit on the new player guide. The key caps are the two presses that
+   turn the level numbers on, and the bands below are the whole world sorted
+   by the level you are.
+   -------------------------------------------------------------------------- */
+
+.map-keys {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+.map-key {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--surface-line);
+  border-radius: var(--radius);
+  background: var(--bg-panel);
+}
+.map-key p {
+  flex: 1 1 100%;
+  margin: 0.5rem 0 0;
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+.map-key kbd {
+  padding: 0.28rem 0.65rem;
+  border: 1px solid var(--surface-line-strong);
+  border-bottom-width: 3px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-elevated);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text);
+}
+.map-plus { color: var(--text-dim); }
+
+.map-rule {
+  padding: 1.1rem 1.2rem;
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--accent) 7%, transparent);
+}
+.map-rule h3 {
+  margin-bottom: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+.map-rule p {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+.map-rule p:last-child { margin-bottom: 0; }
+
+.wh-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+.wh-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.24rem 0.65rem;
+  border-radius: 100px;
+  border: 1px solid var(--surface-line-strong);
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.wh-chip::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+}
+.wh-field::before { background: var(--el-wind); }
+.wh-dungeon::before { background: var(--el-poison); }
+
+.wh-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr));
+  gap: 0.8rem;
+  align-items: start;
+}
+.wh-band {
+  padding: 1rem 1.1rem 1.1rem;
+  border: 1px solid var(--surface-line);
+  border-radius: var(--radius);
+  background: var(--bg-panel);
+}
+.wh-band h3 { margin-bottom: 0.6rem; }
+.wh-list {
+  display: grid;
+  gap: 0.3rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.wh-list li {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.6rem;
+  padding: 0.35rem 0 0.35rem 0.6rem;
+  border-left: 3px solid var(--surface-line-strong);
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+li.wh-field { border-left-color: var(--el-wind); }
+li.wh-dungeon { border-left-color: var(--el-poison); }
+.wh-name { color: var(--text); }
+.wh-lv {
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--text-dim);
+}
+
 /* --------------------------------------------------------------------------
    21. Reveal on scroll
    -------------------------------------------------------------------------- */

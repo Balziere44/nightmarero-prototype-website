@@ -47,6 +47,116 @@ ITEMS = os.path.join(ROOT, "assets", "data", "items.json")
 GUIDES = []
 
 # --------------------------------------------------------------------------
+# Where to hunt, at a glance
+# --------------------------------------------------------------------------
+#
+# Read off the levelled world map the server owner posted, because the levels
+# baked into the client's own map are wrong and there is no patcher to fix
+# them. Dungeon numbers are the ones printed on that map. Field numbers are
+# the tile levels around the town named.
+#
+# (band, [(place, level, what it is)])
+
+WHERE = [
+    ("1 to 15", [
+        ("Fields south and east of Prontera", "5", "field"),
+        ("Fields around Payon and Alberta", "5 to 15", "field"),
+        ("Fields west of Prontera", "5 to 10", "field"),
+        ("Fields around Morroc", "5 to 10", "field"),
+    ]),
+    ("15 to 30", [
+        ("Fields north and west of Prontera", "15 to 25", "field"),
+        ("Ant Hell", "20 to 40", "dungeon"),
+        ("Prontera Culvert", "20 to 40", "dungeon"),
+        ("Payon Cave", "20 to 45", "dungeon"),
+        ("Fields east of Payon", "15 to 25", "field"),
+    ]),
+    ("30 to 45", [
+        ("Geffen Dungeon", "30 to 45", "dungeon"),
+        ("Mjolnir Dead Pit", "30 to 40", "dungeon"),
+        ("Fields between Prontera and Aldebaran", "25 to 45", "field"),
+        ("Sunken Ship", "40 to 45", "dungeon"),
+        ("Byalan Island", "40 to 70", "dungeon"),
+    ]),
+    ("45 to 60", [
+        ("Sphinx", "50 to 60", "dungeon"),
+        ("Pyramid", "50 to 60", "dungeon"),
+        ("Fields between Comodo and Morroc", "45 to 60", "field"),
+        ("Field south of Aldebaran", "50", "field"),
+        ("Beach Cave North and East", "55", "dungeon"),
+    ]),
+    ("60 to 75", [
+        ("Orc Dungeon", "65 to 70", "dungeon"),
+        ("Beach Cave West", "60", "dungeon"),
+        ("Clock Tower", "70 to 80", "dungeon"),
+        ("Labyrinth Forest", "70 to 75", "dungeon"),
+        ("Fields around Umbala and Comodo", "65 to 75", "field"),
+    ]),
+    ("75 to 90", [
+        ("Magma Caverns", "75 to 85", "dungeon"),
+        ("Magma Dungeon", "80 to 85", "dungeon"),
+        ("Capitolina Catacombs", "75 to 85", "dungeon"),
+        ("Pyramid, the deep floors", "75 to 85", "dungeon"),
+        ("Umbala Dungeon", "80", "dungeon"),
+        ("Einbech Mine", "85 to 90", "dungeon"),
+        ("Fields around Einbroch and Lighthalzen", "70 to 85", "field"),
+    ]),
+    ("90 to 105", [
+        ("Juperos Ruins", "90 to 95", "dungeon"),
+        ("Turtle Island", "100 to 105", "dungeon"),
+        ("Bio Laboratory", "105 to 110", "dungeon"),
+        ("Fields around Yuno and Hugel", "80 to 85", "field"),
+        ("Fields around Rachel", "95 to 100", "field"),
+    ]),
+    ("105 to 125", [
+        ("Thor Volcano", "110 to 115", "dungeon"),
+        ("Ice Dungeon", "110 to 115", "dungeon"),
+        ("Endless Desert", "110 to 115", "dungeon"),
+        ("Abyss Lake", "110 to 115", "dungeon"),
+        ("Glast Heim and Old Glast Heim", "110 to 120", "dungeon"),
+        ("Clock Tower, the lower floors", "110 to 120", "dungeon"),
+        ("Fields around Veins", "115", "field"),
+    ]),
+    ("125 to 150", [
+        ("Rachel Sanctuary", "125 to 135", "dungeon"),
+        ("Nameless Island", "125 to 135", "dungeon"),
+        ("Abyss Lake, the deep floors", "125 to 135", "dungeon"),
+        ("Kiel Robot Factory", "135 to 140", "dungeon"),
+        ("Geffenia", "140 to 145", "dungeon"),
+        ("Odin Temple", "140 to 145", "field"),
+    ]),
+]
+
+# Where each job change starts, from the server owner's own list. Third job
+# changes are not here: by then you know where you are going.
+JOBS = [
+    ("First job", [
+        ("Knight", "Prontera Chivalry, the top left corner of town"),
+        ("Crusader", "Prontera Church, the left room"),
+        ("Blacksmith", "The Blacksmith's Guild, bottom right of Geffen"),
+        ("Alchemist", "The Alchemist's Guild, bottom left of Aldebaran"),
+        ("Assassin", "The Assassin's Guild, on Morroc field 16"),
+        ("Rogue", "The Old Thief's Guild, in the first basement of the "
+                  "Morroc pyramid"),
+        ("Hunter", "The Old Archer's Guild, top right of Payon's archer "
+                   "village"),
+        ("Bard and Dancer",
+         "The Comodo stage, in the middle of town. Take the NPC in the Morroc "
+         "ruins past St. Darmain's Fortress, then run"),
+        ("Wizard", "The top level of Geffen Tower"),
+        ("Sage", "Sage Castle in Juno. The NPC on the middle floor of Geffen "
+                 "Tower will warp a Mage there, and you should let it"),
+        ("Priest", "Prontera Church, the right room"),
+        ("Monk", "Capitolina Abbey, inside the building at the bottom right. "
+                 "Someone is enjoying the flowers by the entrance"),
+    ]),
+    ("Expanded", [
+        ("Star Gladiator", "Geffen field 5"),
+        ("Soul Linker", "Capitolina Abbey, outdoors"),
+    ]),
+]
+
+# --------------------------------------------------------------------------
 # The levelling route
 # --------------------------------------------------------------------------
 #
@@ -359,6 +469,98 @@ def leveling_section(items):
 """.format(jumps=jumps, stops=stops)
 
 
+def map_section():
+    """How to read levels off the world map, and the rule that decides where
+    you should be standing."""
+    return """
+  <section class="section-pad-sm" id="map">
+    <div class="shell">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="g.mapEyebrow">Before anything else</p>
+        <h2 data-i18n="g.mapTitle">The map already knows where you should be</h2>
+        <p class="lede" data-i18n="g.mapLede">Every field and every dungeon floor has a level printed on it. You just have to turn it on, and once you have, you rarely need a guide at all.</p>
+      </div>
+      <div class="map-keys">
+        <div class="map-key">
+          <kbd>Ctrl</kbd><span class="map-plus">+</span><kbd>'</kbd>
+          <p data-i18n="g.mapK1">Opens the world map, wherever you are standing.</p>
+        </div>
+        <div class="map-key">
+          <kbd>Tab</kbd>
+          <p data-i18n="g.mapK2">Then this switches the level numbers on, one per map.</p>
+        </div>
+      </div>
+      <div class="map-rule">
+        <h3 data-i18n="g.mapRuleTitle">Then pick a map at your level or a little above</h3>
+        <p data-i18n="g.mapRule1">Hunting above your level pays more. Three levels above the monster and you are already earning a bonus, and it keeps climbing to ten levels above.</p>
+        <p data-i18n="g.mapRule2">Never let the gap reach 15 in either direction. Fifteen levels above the monster pays you nothing at all, and fifteen below cuts what you earn by 90%. Both ends of that are a wasted evening.</p>
+      </div>
+    </div>
+  </section>
+"""
+
+
+def where_section():
+    """The short version of the route: every band, and the places that fit it."""
+    bands = []
+    for band, places in WHERE:
+        items = "".join(
+            '<li class="wh-%s"><span class="wh-name">%s</span>'
+            '<span class="wh-lv">%s</span></li>'
+            % (kind, esc(name), esc(level)) for name, level, kind in places)
+        bands.append(
+            '        <article class="wh-band">\n'
+            '          <h3><span class="lv-band">%s</span></h3>\n'
+            '          <ul class="wh-list">%s</ul>\n'
+            "        </article>" % (esc(band), items))
+
+    return """
+  <section class="section-pad-sm" id="where">
+    <div class="shell">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="g.whEyebrow">Quick reference</p>
+        <h2 data-i18n="g.whTitle">Fields and dungeons, by level</h2>
+        <p class="lede" data-i18n="g.whLede">The whole world on one screen. Find your level, pick anything in the box, go. The longer route below says what is worth picking up once you are there.</p>
+      </div>
+      <div class="wh-legend">
+        <span class="wh-chip wh-field" data-i18n="g.whField">Field</span>
+        <span class="wh-chip wh-dungeon" data-i18n="g.whDungeon">Dungeon</span>
+      </div>
+      <div class="wh-grid">
+{bands}
+      </div>
+      <p class="note" data-i18n="g.whNote">Dungeon levels are the ones printed on the world map, and a dungeon usually climbs across its floors, so the top floor is the low end of the range. Field levels are what the maps around that town read.</p>
+    </div>
+  </section>
+""".format(bands="\n".join(bands))
+
+
+def jobs_section():
+    """Where each job change starts."""
+    groups = []
+    for title, pairs in JOBS:
+        items = "".join(
+            "<tr><td><b>%s</b></td><td>%s</td></tr>" % (esc(job), esc(where))
+            for job, where in pairs)
+        groups.append(
+            '        <h3 class="mech-sub">%s</h3>\n'
+            '        <div class="table-wrap"><table class="mvp-table">'
+            "<tbody>%s</tbody></table></div>" % (esc(title), items))
+
+    return """
+  <section class="section-pad-sm" id="jobs">
+    <div class="shell">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="g.jbEyebrow">Job change</p>
+        <h2 data-i18n="g.jbTitle">Where each job change starts</h2>
+        <p class="lede" data-i18n="g.jbLede">You get your first job inside the tutorial at level 1. The choice that matters comes at job level 50, and nobody tells you where to go for it.</p>
+      </div>
+{groups}
+    </div>
+  </section>
+""".format(groups="\n".join(groups))
+
+
 def steps_block(title, lines):
     items = "".join(
         '<li class="q-step"><span class="q-n">%d</span><div><p>%s</p></div></li>'
@@ -424,9 +626,9 @@ def build():
 
     parts = [
         head("", "New player guide | Nightmare RO",
-             "Where to start on Nightmare RO: a levelling route from level 1 "
-             "to 99, which monsters and cards each stop is worth, and which "
-             "boss altars sit close enough to be worth the detour.",
+             "Where to start on Nightmare RO: every field and dungeon sorted "
+             "by level, a route from 1 to 99 with the cards each stop drops, "
+             "and where each job change begins.",
              "guide.html", ld),
         header("", "guide.html"),
         """<main id="main">
@@ -441,15 +643,25 @@ def build():
         <h1 data-i18n="g.title">Where to start when everything is new</h1>
         <p class="lede" data-i18n="g.lede">Every class, skill, item and monster on this server was remade, so what you remember from anywhere else is a rough guide at best. This page collects routes and advice from people who have already walked it.</p>
       </div>
+      <nav class="q-jumps" aria-label="Jump to a section">
+        <span class="q-jumps-label" data-i18n="q.jump">Jump to</span>
+        <a class="q-jump" href="#map" data-i18n="g.jMap">Reading the map</a>
+        <a class="q-jump" href="#where" data-i18n="g.jWhere">Where to hunt</a>
+        <a class="q-jump" href="#leveling" data-i18n="g.jRoute">The full route</a>
+        <a class="q-jump" href="#jobs" data-i18n="g.jJobs">Job change</a>
+      </nav>
     </div>
   </section>
 
 """,
+        map_section(),
+        where_section(),
         leveling_section(items),
+        jobs_section(),
         """
   <section class="section-pad-sm">
     <div class="shell">
-      <p class="note" data-i18n="g.wip">This page is a start rather than a finished guide. More routes, starting builds and a proper map of where to go at each level are on the way. If you want to write one, the Discord is the place.</p>
+      <p class="note" data-i18n="g.wip">This page will keep growing. More routes, starting builds and class by class advice are on the way. If you want to write one, the Discord is the place.</p>
 
 """,
         cards,

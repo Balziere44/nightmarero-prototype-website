@@ -224,9 +224,14 @@ def head(prefix, title, description, canonical, extra_ld="", og_image="assets/so
            p=prefix, ld=extra_ld, sprite=SPRITE, ogimg=og_image)
 
 
-# The two nav entries that open onto more than one page. Both the desktop
+# The nav entries that open onto more than one page. Both the desktop
 # dropdowns and the drawer groups are generated from these, so a page added
 # here shows up in both without touching the markup.
+GAME_PAGES = [
+    ("index.html#server", "nav.server", "The server"),
+    ("mechanics.html", "nav.mech", "How it works"),
+    ("endgame.html", "nav.endgame", "End game"),
+]
 NEW_PAGES = [
     ("guide.html", "nav.route", "Levelling route"),
     ("quiz.html", "nav.quiz", "Class test"),
@@ -236,7 +241,8 @@ DB_PAGES = [
     ("mvps.html", "nav.mvps", "MVPs and altars"),
     ("quests.html", "nav.quests", "Quests"),
 ]
-DROPS = [("nav.guide", "New players", NEW_PAGES),
+DROPS = [("nav.game", "The game", GAME_PAGES),
+         ("nav.guide", "New players", NEW_PAGES),
          ("nav.database", "Database", DB_PAGES)]
 
 
@@ -259,13 +265,14 @@ def nav_desktop(prefix, active):
     drops = {key: nav_drop(prefix, active, key, label, pages)
              for key, label, pages in DROPS}
 
-    return """      <a href="{p}index.html#server" data-i18n="nav.server">The server</a>
+    return """{game}
 {new}
       <a href="{p}classes.html"{c_classes} data-i18n="nav.classes">Classes</a>
 {db}
       <a href="https://wiki.nightmareofragnarok.com/" target="_blank" rel="noopener" data-i18n="nav.wiki">Wiki</a>
       <a href="{p}download.html"{c_dl} data-i18n="nav.download">Download</a>""".format(
-        p=prefix, new=drops["nav.guide"], db=drops["nav.database"],
+        p=prefix, game=drops["nav.game"], new=drops["nav.guide"],
+        db=drops["nav.database"],
         c_classes=' aria-current="page"' if active == "classes.html" else "",
         c_dl=' aria-current="page"' if active == "download.html" else "")
 
@@ -281,7 +288,7 @@ def drawer_group(prefix, key, label, pages):
 def nav_drawer(prefix):
     groups = {key: drawer_group(prefix, key, label, pages)
               for key, label, pages in DROPS}
-    return """      <a href="{p}index.html#server" data-i18n="nav.server">The server</a>
+    return """{game}
       <a href="{p}index.html#features" data-i18n="nav.features">Features</a>
 {new}
       <a href="{p}classes.html" data-i18n="nav.classes">Classes</a>
@@ -290,7 +297,8 @@ def nav_drawer(prefix):
       <a href="{p}download.html" data-i18n="nav.download">Download</a>
       <a href="{p}index.html#start" data-i18n="nav.start">Get started</a>
       <a href="{p}index.html#faq" data-i18n="nav.faq">FAQ</a>""".format(
-        p=prefix, new=groups["nav.guide"], db=groups["nav.database"])
+        p=prefix, game=groups["nav.game"], new=groups["nav.guide"],
+        db=groups["nav.database"])
 
 
 def header(prefix, active):

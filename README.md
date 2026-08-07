@@ -11,7 +11,9 @@ static host and it works.
 ```
 .
 ├── index.html               landing page
-├── guide.html               new player guide, still a placeholder
+├── guide.html               new player guide, route and where to hunt
+├── mechanics.html           how combat works: stats, elements, formulas
+├── endgame.html             champions, bosses, nightmare and challenge
 ├── classes.html             class hub, filter + search over all 55
 ├── quiz.html                class personality test
 ├── database.html            items and cards
@@ -387,10 +389,11 @@ are labelled as such on the page along with the date they were last touched.
 
 ## The navigation
 
-Two entries open onto more than one page: New players (the levelling route and
-the class test) and Database (items, MVPs, quests). Both the desktop dropdowns
-and the drawer groups come from `NEW_PAGES` and `DB_PAGES` in
-`tools/build_classes.py`.
+Three entries open onto more than one page: The game (the server spec on the
+home page, the mechanics page and the end game page), New players (the
+levelling route and the class test) and Database (items, MVPs, quests). Both
+the desktop dropdowns and the drawer groups come from `GAME_PAGES`,
+`NEW_PAGES` and `DB_PAGES` in `tools/build_classes.py`.
 
 The generated pages take their header from `header()`. `index.html`,
 `database.html`, `quiz.html` and `download.html` are hand written and carry
@@ -433,11 +436,63 @@ Monster lists only claim what the sheets tie to a map: a monster named by an
 altar, by the champion tab, or by the route itself. They are not full spawn
 lists, and the page says so.
 
+The page opens with two shorter sections that sit above the route.
+
+`WHERE` is the quick reference: every level band and the fields and dungeons
+that fit it. Dungeon levels are the ones printed on the levelled world map the
+server owner posted, because the levels baked into the client are wrong and
+there is no patcher to correct them. Field levels are the tile numbers around
+the town named. Each entry is `(place, level, "field" or "dungeon")`, and the
+kind only decides which colour the left edge gets.
+
+Above that, the page tells players to press `Ctrl` and `'` for the world map
+and then `Tab` for the level numbers, and repeats the rule that decides where
+they should be standing: at or a little above their own level, and never 15
+levels apart in either direction, because 15 above the monster pays nothing
+and 15 below costs 90%.
+
+`JOBS` is where each job change starts, from the server owner's own list.
+Third job changes are not in it.
+
 `GUIDES` is the older free form section, kept for prose guides. An entry is a
 title, a credit, a blurb, an intro and a list of blocks, where a block is a
 numbered route (`steps`), a fork with a card per branch (`split`), or a plain
 list (`notes`). Credit the author in the `credit` field; it renders under the
 title.
+
+---
+
+## How the server works, and the end game
+
+`mechanics.html` and `endgame.html` both come out of one script:
+
+```bash
+python tools/build_mechanics.py
+```
+
+`mechanics.html` is the rules of combat: the experience curve and what a level
+gap costs, what every stat gives at each tenth and twenty fifth point, the
+crit, cast and attack speed formulas, the element table, the status effects,
+the potion and refine ladders, warps and commands.
+
+`endgame.html` is what waits after the route: champions, summoned bosses, the
+Roaming Archaeologist, guilds and raids, the Nightmare dungeons with Depth,
+Resistance and Agony, the Challenge dungeons, and the three reputation lines.
+
+Everything on both pages comes from the Server Overview document the server
+owner keeps, plus the stat breakpoint and element table posts in the Discord
+server information channel. When that document changes, edit the data lists at
+the top of the script rather than the markup: `STATS`, `ELEMENT_TABLE`,
+`NOVICE`, `COMMANDS`, `REFINE_WEAPON`, `REFINE_ARMOUR`, `ORES`, `EXP_GAP`.
+
+The element table is `ELEMENT_TABLE[attacker][defender] = (direction, values)`,
+where direction is `up` for more damage dealt and `down` for less, and the four
+values are the four levels of the defender's element. Every element also has
+its own colour, `--el-<name>` in both theme blocks in `style.css`, so a row or
+a column can be found without reading it.
+
+The status effect cards reuse the codex markup and the `codex.d1` to `codex.d9`
+keys from the class index, so those descriptions are already translated.
 
 ---
 
