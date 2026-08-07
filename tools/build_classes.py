@@ -237,6 +237,7 @@ def nav_desktop(prefix, active):
         for page, key, label in DB_PAGES)
 
     return """      <a href="{p}index.html#server" data-i18n="nav.server">The server</a>
+      <a href="{p}guide.html"{c_guide} data-i18n="nav.guide">New players</a>
       <a href="{p}classes.html"{c_classes} data-i18n="nav.classes">Classes</a>
       <a href="{p}quiz.html"{c_quiz} data-i18n="nav.quiz">Class test</a>
       <div class="nav-drop">
@@ -248,6 +249,7 @@ def nav_desktop(prefix, active):
       <a href="{p}download.html"{c_dl} data-i18n="nav.download">Download</a>""".format(
         p=prefix, items=items,
         open=" -on" if inside else "",
+        c_guide=' aria-current="page"' if active == "guide.html" else "",
         c_classes=' aria-current="page"' if active == "classes.html" else "",
         c_quiz=' aria-current="page"' if active == "quiz.html" else "",
         c_dl=' aria-current="page"' if active == "download.html" else "")
@@ -260,6 +262,7 @@ def nav_drawer(prefix):
         for page, key, label in DB_PAGES)
     return """      <a href="{p}index.html#server" data-i18n="nav.server">The server</a>
       <a href="{p}index.html#features" data-i18n="nav.features">Features</a>
+      <a href="{p}guide.html" data-i18n="nav.guide">New players</a>
       <a href="{p}classes.html" data-i18n="nav.classes">Classes</a>
       <a href="{p}quiz.html" data-i18n="nav.quiz">Class test</a>
       <span class="drawer-group" data-i18n="nav.database">Database</span>{subs}

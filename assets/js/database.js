@@ -41,12 +41,20 @@
     return (table && table[key]) || fallback;
   }
 
-  var SLOT_KEYS = ['weapon', 'armor', 'shield', 'garment', 'shoes', 'headgear', 'accessory', 'any'];
+  var SLOT_KEYS = ['weapon', 'armor', 'shield', 'garment', 'shoes', 'headgear',
+    'accessory', 'shadow-armor', 'shadow-gloves', 'shadow-shoes',
+    'shadow-pendant', 'any'];
+  /* Shadow gear equips in a second window, so it has slots of its own that
+     sit alongside the ordinary ones rather than competing with them. */
   var SLOT_FALLBACK = {
     weapon: 'Weapon', armor: 'Armour', shield: 'Shield', garment: 'Garment',
-    shoes: 'Shoes', headgear: 'Headgear', accessory: 'Accessory', any: 'Fits any slot'
+    shoes: 'Shoes', headgear: 'Headgear', accessory: 'Accessory', any: 'Fits any slot',
+    'shadow-armor': 'Shadow armour', 'shadow-gloves': 'Shadow gloves',
+    'shadow-shoes': 'Shadow shoes', 'shadow-pendant': 'Shadow pendant'
   };
-  var SOURCE_FALLBACK = { core: 'World drop', mvp: 'Boss drop', card: 'Card' };
+  var SOURCE_FALLBACK = {
+    core: 'World drop', mvp: 'Boss drop', card: 'Card', shadow: 'Shadow gear'
+  };
 
   function slotLabel(s) { return t('db.s.' + s, SLOT_FALLBACK[s] || s); }
   function sourceLabel(s) { return t('db.src.' + s, SOURCE_FALLBACK[s] || s); }
@@ -93,7 +101,7 @@
 
     els.source.innerHTML = '';
     els.source.appendChild(option('', t('db.anySource', 'Any source')));
-    ['core', 'mvp', 'card'].forEach(function (s) {
+    ['core', 'mvp', 'card', 'shadow'].forEach(function (s) {
       if (all.some(function (i) { return i.source === s; })) {
         els.source.appendChild(option(s, sourceLabel(s)));
       }

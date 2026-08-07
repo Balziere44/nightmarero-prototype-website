@@ -225,6 +225,77 @@ def parse_relics(path):
     return items
 
 
+# Shadow gear equips in a second equipment window, so a Shadow Armor and an
+# ordinary Armor are worn at the same time and need slots of their own.
+SHADOW_PIECES = {
+    "armor": "shadow-armor",
+    "gloves": "shadow-gloves",
+    "shoes": "shadow-shoes",
+    "pendant": "shadow-pendant",
+}
+TIER_RE = re.compile(r"^Tier\s+(\d+)$", re.I)
+
+
+def parse_shadow(path):
+    """The Shadow Gear tab, which is laid out as sets rather than as a table.
+
+    A tier heading, then for each set a name on its own row, its four pieces,
+    and one or two set bonus rows that apply to all four. The tail of the tab
+    repeats an unfinished set over and over, so a set name already seen in the
+    same tier is skipped.
+    """
+    items, seen = [], set()
+    tier, name, current, skip = 0, None, [], False
+
+    for row in read(path):
+        if not row or not any(c.strip() for c in row):
+            continue
+        first = clean(row[0])
+        rest = clean(" ".join(row[1:]))
+
+        found = TIER_RE.match(first)
+        if found:
+            tier, name, current, skip = int(found.group(1)), None, [], False
+            continue
+
+        if not rest:                       # a set name sits on its own row
+            name, current = first, []
+            skip = (tier, name) in seen
+            seen.add((tier, name))
+            continue
+        if name is None or skip:
+            continue
+
+        if first.lower().startswith("set bonus"):
+            which = first.split(":", 1)[1].strip() if ":" in first else ""
+            label = "Set bonus (%s)" % which if which else "Set bonus"
+            for it in current:
+                it["effect"].append("%s: %s" % (label, rest))
+            continue
+
+        slot = SHADOW_PIECES.get(first.lower())
+        if not slot:
+            continue
+
+        item = {
+            "name": "%s Shadow %s" % (name, first),
+            "kind": "gear",
+            "slot": slot,
+            "cat": "Shadow Gear",
+            "slots": None,
+            "stat": str(tier),
+            "statLabel": "Tier",
+            "effect": split_lines(rest),
+            "level": None,
+            "drops": "",
+            "source": "shadow",
+        }
+        items.append(item)
+        current.append(item)
+
+    return items
+
+
 def main():
     items = []
 
@@ -252,6 +323,12 @@ def main():
         got = parse_cards(path, slot)
         items.extend(got)
         print("  %-32s %4d cartas" % (fname, len(got)))
+
+    shadow = os.path.join(SRC, "gear__shadow-gear.csv")
+    if os.path.exists(shadow):
+        got = parse_shadow(shadow)
+        items.extend(got)
+        print("  %-32s %4d sombras" % ("gear__shadow-gear.csv", len(got)))
 
     relics = parse_relics(os.path.join(SRC, "relic-gear.json"))
     items.extend(relics)

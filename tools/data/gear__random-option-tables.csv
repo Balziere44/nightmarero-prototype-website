@@ -5,7 +5,7 @@
 ,Str +1,Atk +1~5%,Damage to [Size] +1~5%,,Str +1,Max HP +1~3%,Small Resistance +1~6%,,Str +1,HP Regen +1~10%,Def Pierce +1~10%
 ,Agi +1,Hit +1~10,,,Agi +1,Max SP +1~3%,Medium Resistance +1~6%,,Agi +1,SP Regen +1~10%,MDef Pierce +1~10%
 ,Int +1,Crit +1~5,,,Int +1,Hard Defense +1~10,Large Resistance +1~6%,,Int +1,Crit Rate +1~5,Bleed/Poison/Burn Damage Taken -1~10%
-,Vit +1,Crit Damage +1~5%,Slot 4 (2h Weapons Only),,Vit +1,,All Size Resistance +1~3%,,Vit +1,VCT -1~10%,Movement Speed +1~5%
+,Vit +1,Crit Damage +1~5%,Slot 4 (2h Weapons Only),,Vit +1,,All Size Resistance +1~3%,,Vit +1,VCT -1~5%,Movement Speed +1~5%
 ,Dex +1,ASPD +1,Damage Taken from [Size] -1~5%,,Dex +1,MVP Armors drop at one Level Tier above their Requirements,,,Dex +1,MVP Shoes drop at one Level Tier above their Requirements,
 ,Luk +1,Bleeding Damage +1~10%,Damage Taken from All Sizes -1~3%,,Luk +1,,,,Luk +1,,
 ,,Poison Damage +1~10%,,,,,,,,,
@@ -16,7 +16,7 @@
 ,Str +1~2,Atk +1~8%,Damage to [Size] +1~10%,,Str +1~2,Max HP +1~6%,Small Resistance +1~8%,,Str +1~2,HP Regen +1~20%,Def Pierce +1~15%
 ,Agi +1~2,Hit +1~15,,,Agi +1~2,Max SP +1~6%,Medium Resistance +1~8%,,Agi +1~2,SP Regen +1~20%,MDef Pierce +1~15%
 ,Int +1~2,Crit +1~8,,,Int +1~2,Hard Defense +1~20,Large Resistance +1~8%,,Int +1~2,Crit Rate +1~8,Bleed/Poison/Burn Damage Taken -1~15%
-,Vit +1~2,Crit Damage +1~10%,Slot 4 (2h Weapons Only),,Vit +1~2,,All Size Resistance +1~4%,,Vit +1~2,VCT -1~15%,Movement Speed +1~8%
+,Vit +1~2,Crit Damage +1~10%,Slot 4 (2h Weapons Only),,Vit +1~2,,All Size Resistance +1~4%,,Vit +1~2,VCT -1~8%,Movement Speed +1~8%
 ,Dex +1~2,ASPD +1~2,Damage Taken from [Size] -1~10%,,Dex +1~2,MVP Armors and Shields drop at one Level Tier above their Requirements,,,Dex +1~2,MVP Shoes drop at one Level Tier above their Requirements,
 ,Luk +1~2,Bleeding Damage +1~15%,Damage Taken from All Sizes -1~5%,,Luk +1~2,,,,Luk +1~2,,
 ,,Poison Damage +1~15%,,,,,,,,,
@@ -27,7 +27,7 @@
 ,Str +1~3,Atk +1~10%,Damage to [Size] +1~15%,,Str +1~3,Max HP +1~10%,Small Resistance +1~10%,,Str +1~3,HP Regen +1~30%,Def Pierce +1~20%
 ,Agi +1~3,Hit +1~20,,,Agi +1~3,Max SP +1~10%,Medium Resistance +1~10%,,Agi +1~3,SP Regen +1~30%,MDef Pierce +1~20%
 ,Int +1~3,Crit +1~10,,,Int +1~3,Hard Defense +1~30,Large Resistance +1~10%,,Int +1~3,Crit Rate +1~10,Bleed/Poison/Burn Damage Taken -1~20%
-,Vit +1~3,Crit Damage +1~15%,Slot 4 (2h Weapons Only),,Vit +1~3,,All Size Resistance +1~5%,,Vit +1~3,VCT -1~20%,Movement Speed +1~10%
+,Vit +1~3,Crit Damage +1~15%,Slot 4 (2h Weapons Only),,Vit +1~3,,All Size Resistance +1~5%,,Vit +1~3,VCT -1~10%,Movement Speed +1~10%
 ,Dex +1~3,ASPD +1~3,Damage Taken from [Size] -1~15%,,Dex +1~3,MVP Armors and Shields drop at one Level Tier above their Requirements,,,Dex +1~3,MVP Shoes drop at one Level Tier above their Requirements,
 ,Luk +1~3,Bleeding Damage +1~20%,Damage Taken from All Sizes -1~10%,,Luk +1~3,,,,Luk +1~3,,
 ,,Poison Damage +1~20%,,,,,,,,,
@@ -38,7 +38,7 @@
 ,Str +3,Atk +6~10%,Damage to [Size] +9~15%,,Str +3,Max HP +6~10%,Small Resistance +6~10%,,Str +3,HP Regen +21~30%,Def Pierce +11~20%
 ,Agi +3,Hit +11~20,,,Agi +3,Max SP +6~10%,Medium Resistance +6~10%,,Agi +3,SP Regen +21~30%,MDef Pierce +11~20%
 ,Int +3,Crit +6~10,,,Int +3,Hard Defense +21~30,Large Resistance +6~10%,,Int +3,Crit Rate +6~10,Bleed/Poison/Burn Damage Taken -11~20%
-,Vit +3,Crit Damage +11~15%,Slot 4 (2h Weapons Only),,Vit +3,,All Size Resistance +3~5%,,Vit +3,VCT -11~20%,Movement Speed +6~10%
+,Vit +3,Crit Damage +11~15%,Slot 4 (2h Weapons Only),,Vit +3,,All Size Resistance +3~5%,,Vit +3,VCT -6~10%,Movement Speed +6~10%
 ,Dex +3,ASPD +3~3,Damage Taken from [Size] -9~15%,,Dex +3,This tier only exists for 110~150 MVP Gear,,,Dex +3,This tier only exists for 110~150 MVP Gear,
 ,Luk +3,Bleeding Damage +11~20%,Damage Taken from All Sizes -6~10%,,Luk +3,,,,Luk +3,,
 ,,Poison Damage +11~20%,,,,,,,,,
@@ -49,7 +49,7 @@
 ,Slot 1,Slot 2,Slot 3,,Slot 1,Slot 2,Slot 3,,Slot 1,Slot 2,
 ,Str +1,Matk +1~5%,Magic Damage to [Size] +1~5%,,Str +1,Flee +1~10,[Element] Resistance +1~10%,,Str +1~3,Bleed Resist +21~50%,Stun Resist +21~50%
 ,Agi +1,FCT -0.1s,,,Agi +1,Perfect Dodge +1~5,Neutral Resistance +1~5%,,Agi +1~3,Burn Resist +21~50%,Sleep Resist +21~50%
-,Int +1,VCT -1~10%,,,Int +1,Hard MDef +1~5,,,Int +1~3,Poison Resist +21~50%,Vulnerable Resist +21~50%
+,Int +1,VCT -1~5%,,,Int +1,Hard MDef +1~5,,,Int +1~3,Poison Resist +21~50%,Vulnerable Resist +21~50%
 ,Vit +1,SP Consumption -1~10%,,,Vit +1,,,,Vit +1~3,Blind Resist +21~50%,Slow Resist +21~50%
 ,Dex +1,Burning Damage +1~10%,,,Dex +1,MVP Garments drop at one Level Tier above their Requirements,,,Dex +1~3,Chill Resist +21~50%,Curse Resist +21~50%
 ,Luk +1,,,,Luk +1,,,,Luk +1~3,Confusion Resistance +21~50%,
@@ -59,7 +59,7 @@
 ,Slot 1,Slot 2,Slot 3,,Slot 1,Slot 2,Slot 3,,,,
 ,Str +1~2,Matk +1~10%,Magic Damage to [Size] +1~10%,,Str +1~2,Flee +1~15,[Element] Resistance +1~20%,,,,
 ,Agi +1~2,FCT -0.1s~-0.15s,,,Agi +1~2,Perfect Dodge +1~8,Neutral Resistance +1~10%,,,,
-,Int +1~2,VCT -1~15%,,,Int +1~2,Hard MDef +1~10,,,,,
+,Int +1~2,VCT -1~8%,,,Int +1~2,Hard MDef +1~10,,,,,
 ,Vit +1~2,SP Consumption -1~15%,,,Vit +1~2,,,,,,
 ,Dex +1~2,Burning Damage +1~15%,,,Dex +1~2,MVP Garments drop at one Level Tier above their Requirements,,,,,
 ,Luk +1~2,,,,Luk +1~2,,,,,,
@@ -69,7 +69,7 @@
 ,Slot 1,Slot 2,Slot 3,,Slot 1,Slot 2,Slot 3,,,,
 ,Str +1~3,Matk +1~15%,Magic Damage to [Size] +1~15%,,Str +1~3,Flee +1~20,[Element] Resistance +1~30%,,,,
 ,Agi +1~3,FCT -0.1s~-0.2s,,,Agi +1~3,Perfect Dodge +1~10,Neutral Resistance +1~15%,,,,
-,Int +1~3,VCT -1~20%,,,Int +1~3,Hard MDef +1~15,,,,,
+,Int +1~3,VCT -1~10%,,,Int +1~3,Hard MDef +1~15,,,,,
 ,Vit +1~3,SP Consumption -1~20%,,,Vit +1~3,,,,,,
 ,Dex +1~3,Burning Damage +1~20%,,,Dex +1~3,MVP Garments drop at one Level Tier above their Requirements,,,,,
 ,Luk +1~3,,,,Luk +1~3,,,,,,
@@ -79,7 +79,7 @@
 ,Slot 1,Slot 2,Slot 3,,Slot 1,Slot 2,Slot 3,,,,
 ,Str +3,Matk +11~15%,Magic Damage to [Size] +11~15%,,Str +3,Flee +11~20,[Element] Resistance +21~30%,,,,
 ,Agi +3,FCT -0.2s,,,Agi +3,Perfect Dodge +6~10,Neutral Resistance +9~15%,,,,
-,Int +3,VCT -11~20%,,,Int +3,Hard MDef +11~15,,,,,
+,Int +3,VCT -6~10%,,,Int +3,Hard MDef +11~15,,,,,
 ,Vit +3,SP Consumption -11~20%,,,Vit +3,,,,,,
 ,Dex +3,Burning Damage +11~20%,,,Dex +3,This tier only exists for 110~150 MVP Gear,,,,,
 ,Luk +3,,,,Luk +3,,,,,,
@@ -90,7 +90,7 @@
 ,Slot 1,Slot 2,Slot 3,,,,,,,,
 ,Str +1,Atk +1~5%,Matk +1~5%,,,,,,,,
 ,Agi +1,Hit +1~10,FCT -0.1s,,,,,,,,
-,Int +1,Crit +1~5,VCT -1~10%,,,,,,,,
+,Int +1,Crit +1~5,VCT -1~5%,,,,,,,,
 ,Vit +1,Crit Damage +1~10%,SP Consumption -1~10%,,,,,,,,
 ,Dex +1,,,,,,,,,,
 ,Luk +1,,,,,,,,,,
@@ -100,7 +100,7 @@
 ,Slot 1,Slot 2,Slot 3,,,,,,,,
 ,Str +1~2,Atk +1~10%,Matk +1~10%,,,,,,,,
 ,Agi +1~2,Hit +1~15,FCT -0.1~0.15s,,,,,,,,
-,Int +1~2,Crit +1~10,VCT -1~15%,,,,,,,,
+,Int +1~2,Crit +1~10,VCT -1~8%,,,,,,,,
 ,Vit +1~2,Crit Damage +1~20%,SP Consumption -1~15%,,,,,,,,
 ,Dex +1~2,,,,,,,,,,
 ,Luk +1~2,,,,,,,,,,
@@ -120,7 +120,7 @@
 ,Slot 1,Slot 2,Slot 3,,,,,,,,
 ,Str +3,Atk +11~15%,Matk +11~15%,,,,,,,,
 ,Agi +3,Hit +11~20,FCT -0.2s,,,,,,,,
-,Int +3,Crit +11~15,VCT -11~20%,,,,,,,,
+,Int +3,Crit +11~15,VCT -6~10%,,,,,,,,
 ,Vit +3,Crit Damage +16~30%,SP Consumption -11~20%,,,,,,,,
 ,Dex +3,,,,,,,,,,
 ,Luk +3,,,,,,,,,,

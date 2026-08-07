@@ -3,33 +3,29 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>Item Database | Nightmare RO Equipment, Weapons and Cards</title>
-<meta name="description" content="Search every weapon, armour, shield, headgear, accessory and card on Nightmare RO. Filter by slot, category, level and where it drops.">
-<link rel="canonical" href="https://nightmarero.pages.dev/database.html">
-<meta name="robots" content="index, follow, max-image-preview:large">
+<title>New player guide | Nightmare RO</title>
+<meta name="description" content="Where to start on Nightmare RO: a levelling route from the first job to level fifty, which cards are worth stopping for, and where to go next.">
+<link rel="canonical" href="https://nightmarero.pages.dev/guide.html">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="theme-color" content="#07060a" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#f4f1ee" media="(prefers-color-scheme: light)">
-
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:site_name" content="Nightmare RO">
-<meta property="og:url" content="https://nightmarero.pages.dev/database.html">
-<meta property="og:title" content="Item Database | Nightmare RO">
-<meta property="og:description" content="Every weapon, armour and card on the server, searchable by slot, category, level and drop source.">
+<meta property="og:url" content="https://nightmarero.pages.dev/guide.html">
+<meta property="og:title" content="New player guide | Nightmare RO">
+<meta property="og:description" content="Where to start on Nightmare RO: a levelling route from the first job to level fifty, which cards are worth stopping for, and where to go next.">
 <meta property="og:image" content="https://nightmarero.pages.dev/assets/social/og-cover.jpg">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="New player guide | Nightmare RO">
+<meta name="twitter:description" content="Where to start on Nightmare RO: a levelling route from the first job to level fifty, which cards are worth stopping for, and where to go next.">
 <meta name="twitter:image" content="https://nightmarero.pages.dev/assets/social/og-cover.jpg">
-
 <link rel="icon" href="assets/img/icon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="assets/img/icon-180.png">
 <link rel="manifest" href="site.webmanifest">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="fetch" href="assets/data/items.json" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
-
 <script>
 (function () {
   try {
@@ -39,22 +35,19 @@
   } catch (e) {}
 })();
 </script>
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nightmarero.pages.dev/" },
-    { "@type": "ListItem", "position": 2, "name": "Database", "item": "https://nightmarero.pages.dev/database.html" }
+    { "@type": "ListItem", "position": 2, "name": "New players", "item": "https://nightmarero.pages.dev/guide.html" }
   ]
 }
 </script>
 </head>
-
 <body>
 <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
-
 <svg width="0" height="0" aria-hidden="true" style="position:absolute">
   <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7"/></symbol>
   <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.3A8.6 8.6 0 0 1 9.7 3.5a8.6 8.6 0 1 0 10.8 10.8Z"/></symbol>
@@ -62,11 +55,12 @@
   <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
   <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
   <symbol id="i-discord" viewBox="0 0 24 24" fill="currentColor"><path d="M19.3 5.3A16.9 16.9 0 0 0 15.1 4l-.3.6a12.6 12.6 0 0 1 3.7 1.9 15.5 15.5 0 0 0-12.9 0 12.6 12.6 0 0 1 3.7-1.9L9 4a16.9 16.9 0 0 0-4.2 1.3C2.1 9.3 1.4 13.2 1.7 17a17 17 0 0 0 5.2 2.6l1.1-1.7a11 11 0 0 1-1.8-.9l.4-.3a12.1 12.1 0 0 0 10.4 0l.4.3a11 11 0 0 1-1.8.9l1.1 1.7A17 17 0 0 0 22 17c.4-4.4-.7-8.3-2.7-11.7ZM8.4 14.7c-1 0-1.9-.9-1.9-2.1s.8-2.1 1.9-2.1 1.9 1 1.9 2.1-.8 2.1-1.9 2.1Zm7.2 0c-1 0-1.9-.9-1.9-2.1s.8-2.1 1.9-2.1 1.9 1 1.9 2.1-.8 2.1-1.9 2.1Z"/></symbol>
-  <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="11" cy="11" r="6.4"/><path d="m16 16 4.5 4.5"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7.5 10.5 12 15l4.5-4.5M4 17v2.5a1.5 1.5 0 0 0 1.5 1.5h13a1.5 1.5 0 0 0 1.5-1.5V17"/></symbol>
   <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4.5A1.5 1.5 0 0 1 5.5 3H19v15H5.5A1.5 1.5 0 0 0 4 19.5Z"/><path d="M4 19.5A1.5 1.5 0 0 1 5.5 21H19v-3"/></symbol>
   <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12.5 5.5 19 12l-6.5 6.5"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="11" cy="11" r="6.4"/><path d="m16 16 4.5 4.5"/></symbol>
+  <symbol id="i-image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="15" rx="2"/><circle cx="8.5" cy="10" r="1.6"/><path d="m4 17 5-4.5 4 3.5 3-2.5 4 3.5"/></symbol>
 </svg>
-
 <header class="site-header" id="siteHeader">
   <div class="shell header-inner">
     <a class="brand" href="index.html" aria-label="Nightmare RO, home">
@@ -74,13 +68,13 @@
     </a>
     <nav class="nav" aria-label="Main">
       <a href="index.html#server" data-i18n="nav.server">The server</a>
-      <a href="guide.html" data-i18n="nav.guide">New players</a>
+      <a href="guide.html" aria-current="page" data-i18n="nav.guide">New players</a>
       <a href="classes.html" data-i18n="nav.classes">Classes</a>
       <a href="quiz.html" data-i18n="nav.quiz">Class test</a>
       <div class="nav-drop">
-        <button class="nav-drop-btn -on" type="button" aria-expanded="false" aria-haspopup="true" data-i18n="nav.database">Database</button>
+        <button class="nav-drop-btn" type="button" aria-expanded="false" aria-haspopup="true" data-i18n="nav.database">Database</button>
         <div class="nav-drop-menu" role="menu">
-          <a href="database.html" role="menuitem" aria-current="page" data-i18n="nav.items">Items and cards</a>
+          <a href="database.html" role="menuitem" data-i18n="nav.items">Items and cards</a>
           <a href="mvps.html" role="menuitem" data-i18n="nav.mvps">MVPs and altars</a>
           <a href="quests.html" role="menuitem" data-i18n="nav.quests">Quests</a>
         </div>
@@ -139,117 +133,57 @@
     </div>
   </div>
 </div>
-
 <main id="main">
-
   <section class="page-head">
     <div class="shell">
       <nav class="breadcrumb" aria-label="Breadcrumb"><ol>
         <li><a href="index.html" data-i18n="nav.home">Home</a></li>
-        <li data-i18n="nav.database">Database</li>
+        <li data-i18n="nav.guide">New players</li>
       </ol></nav>
       <div class="section-head">
-        <p class="eyebrow" data-i18n="db.eyebrow">Item database</p>
-        <h1 data-i18n="db.title">Every piece of gear and every card</h1>
+        <p class="eyebrow" data-i18n="g.eyebrow">First time here</p>
+        <h1 data-i18n="g.title">Where to start when everything is new</h1>
+        <p class="lede" data-i18n="g.lede">Every class, skill, item and monster on this server was remade, so what you remember from anywhere else is a rough guide at best. This page collects routes and advice from people who have already walked it.</p>
       </div>
-
-      <h2 class="db-rates-head" data-i18n="db.ratesTitle">What the drop rates look like</h2>
-      <ul class="db-rates">
-        <li><b>100%</b><span data-i18n="db.rate1">Trash loot, off every mob in the game</span></li>
-        <li><b>1 to 5%</b><span data-i18n="db.rate2">Gear off ordinary mobs, nudged up a little below level 50</span></li>
-        <li><b>10 to 50%</b><span data-i18n="db.rate3">Gear off Champions and MVPs</span></li>
-        <li><b>1%</b><span data-i18n="db.rate4">Cards off ordinary mobs</span></li>
-        <li><b>5%</b><span data-i18n="db.rate5">Cards off Champions and MVPs</span></li>
-      </ul>
-      <p class="note" data-i18n="db.ratesNote">There is no level based drop penalty, so an item never gets rarer because you out levelled the map it comes from.</p>
     </div>
   </section>
 
   <section class="section-pad-sm">
     <div class="shell">
-      <div class="db-layout">
+      <p class="note" data-i18n="g.wip">This page is a start rather than a finished guide. More routes, starting builds and a proper map of where to go at each level are on the way. If you want to write one, the Discord is the place.</p>
 
-        <aside class="db-filters" aria-label="Filters">
-          <div class="db-field">
-            <label for="qName" data-i18n="db.byName">Name</label>
-            <div class="search-field">
-              <svg aria-hidden="true"><use href="#i-search"></use></svg>
-              <input id="qName" type="search" autocomplete="off" placeholder="Item name"
-                     data-i18n-attr="placeholder:db.phName">
-            </div>
-          </div>
+      <article class="guide-card -empty">
+        <h2 data-i18n="g.soonTitle">Nothing here yet</h2>
+        <p data-i18n="g.soonText">The first routes are being written. Until they land, the pages below already answer most of what a new character needs to decide.</p>
+      </article>
 
-          <div class="db-field">
-            <label for="qEffect" data-i18n="db.byEffect">Effect</label>
-            <div class="search-field">
-              <svg aria-hidden="true"><use href="#i-search"></use></svg>
-              <input id="qEffect" type="search" autocomplete="off" placeholder="e.g. Bleeding, ASPD, Max HP"
-                     data-i18n-attr="placeholder:db.phEffect">
-            </div>
-          </div>
-
-          <div class="db-field">
-            <span class="db-label" data-i18n="db.kind">Kind</span>
-            <div class="filter-bar" role="group">
-              <button class="chip" type="button" data-kind="all" aria-pressed="true" data-i18n="db.all">All</button>
-              <button class="chip" type="button" data-kind="gear" aria-pressed="false" data-i18n="db.gear">Equipment</button>
-              <button class="chip" type="button" data-kind="card" aria-pressed="false" data-i18n="db.cards">Cards</button>
-            </div>
-          </div>
-
-          <div class="db-field">
-            <label for="fSlot" data-i18n="db.slot">Equip slot</label>
-            <select id="fSlot"></select>
-          </div>
-
-          <div class="db-field">
-            <label for="fCat" data-i18n="db.category">Category</label>
-            <select id="fCat"></select>
-          </div>
-
-          <div class="db-field">
-            <label for="fSource" data-i18n="db.source">Source</label>
-            <select id="fSource"></select>
-          </div>
-
-          <div class="db-field">
-            <span class="db-label" data-i18n="db.levelRange">Level range</span>
-            <div class="db-range">
-              <input id="lvMin" type="number" min="1" max="175" inputmode="numeric" placeholder="1"
-                     aria-label="Minimum level">
-              <span aria-hidden="true">to</span>
-              <input id="lvMax" type="number" min="1" max="175" inputmode="numeric" placeholder="175"
-                     aria-label="Maximum level">
-            </div>
-          </div>
-
-          <div class="db-field">
-            <label for="fSort" data-i18n="db.sort">Sort by</label>
-            <select id="fSort"></select>
-          </div>
-
-          <button class="btn -ghost -sm -block" id="dbReset" type="button" data-i18n="db.reset">Clear filters</button>
-        </aside>
-
-        <div class="db-results">
-          <div class="db-status">
-            <p id="dbCount" class="dim" aria-live="polite"><span data-i18n="db.loading">Loading the database…</span></p>
-          </div>
-
-          <ul class="db-grid" id="dbGrid"></ul>
-
-          <p class="empty-state" id="dbEmpty" hidden data-i18n="db.empty">Nothing matched those filters.</p>
-          <div id="dbSentinel" aria-hidden="true"></div>
-          <button class="btn -ghost -block mt-lg" id="dbMore" type="button" hidden>Show more</button>
+      <div class="guide-next">
+        <h3 data-i18n="g.nextTitle">Where to go from here</h3>
+        <div class="hero-actions">
+          <a class="btn -ghost" href="quiz.html" data-i18n="nav.quiz">Class test</a>
+          <a class="btn -ghost" href="classes.html" data-i18n="nav.classes">Classes</a>
+          <a class="btn -ghost" href="database.html" data-i18n="nav.items">Items and cards</a>
+          <a class="btn -ghost" href="mvps.html" data-i18n="nav.mvps">MVPs and altars</a>
         </div>
-
       </div>
     </div>
   </section>
 
-
+  <section class="section-pad-sm">
+    <div class="shell">
+      <div class="cta-band">
+        <div class="inner">
+          <h2 data-i18n="band.title">Come find out what changed</h2>
+          <p class="lede text-center" data-i18n="band.lede">Make an account now, grab the client, and be there when the servers go up.</p>
+          <div class="hero-actions">
+            <a class="btn -primary -lg" href="https://nightmareofragnarok.com/?module=account&amp;action=create" target="_blank" rel="noopener" data-i18n="cta.registerFree">Create a free account</a>
+            <a class="btn -ghost -lg" href="download.html" data-i18n="nav.download">Download</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
-
 <footer class="site-footer">
   <div class="shell">
     <div class="footer-grid">
@@ -263,7 +197,9 @@
           <li><a href="https://nightmareofragnarok.com/?module=account&amp;action=create" target="_blank" rel="noopener" data-i18n="cta.register">Create account</a></li>
           <li><a href="download.html" data-i18n="nav.download">Download</a></li>
           <li><a href="classes.html" data-i18n="nav.classes">Classes</a></li>
+          <li><a href="quiz.html" data-i18n="nav.quiz">Class test</a></li>
           <li><a href="database.html" data-i18n="nav.database">Database</a></li>
+          <li><a href="index.html#faq" data-i18n="nav.faq">FAQ</a></li>
         </ul>
       </div>
       <div>
@@ -290,24 +226,7 @@
   </div>
 </footer>
 
-<div class="db-modal" id="dbModal" hidden role="dialog" aria-modal="true" aria-labelledby="dbModalTitle">
-  <div class="db-modal-card">
-    <button class="icon-btn db-modal-x" id="dbModalClose" type="button" aria-label="Close">
-      <svg aria-hidden="true"><use href="#i-close"></use></svg>
-    </button>
-    <div id="dbModalBody"></div>
-    <div class="db-modal-actions">
-      <button class="btn -primary -sm" id="dbShare" type="button">
-        <svg aria-hidden="true"><use href="#i-discord"></use></svg>
-        <span data-i18n="db.shareDiscord">Copy for Discord</span>
-      </button>
-      <button class="btn -ghost -sm" id="dbShareLink" type="button" data-i18n="db.copyLink">Copy link</button>
-    </div>
-  </div>
-</div>
-
 <script src="assets/js/i18n.js" defer></script>
 <script src="assets/js/main.js" defer></script>
-<script src="assets/js/database.js" defer></script>
 </body>
 </html>

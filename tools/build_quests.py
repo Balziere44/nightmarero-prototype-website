@@ -67,6 +67,27 @@ TABLES = {
     "quest-relic-gear-options": [(1, 3, True)],
 }
 
+# Endless Desert map layers.
+#
+# The sheet marks the layer of every moc_fild map with a cell colour, and the
+# CSV export throws colour away. The column of "Layer 1" to "Layer 5" labels
+# sitting on the left of that table is the legend for those colours, not a
+# label for the row it happens to line up with, which is what an earlier build
+# of this page read it as. The mapping below is the fill colour of each map
+# cell in xl/worksheets/sheet11.xml of the xlsx export:
+#
+#   B6D7A8 layer 1   76A5AF layer 2   FFD966 layer 3
+#   F6B26B layer 4   E06666 layer 5
+DESERT_LAYERS = {
+    "582": 1, "114": 1, "201": 1, "843": 1,
+    "544": 2, "312": 2, "178": 2, "18": 2,
+    "198": 3, "753": 3, "648": 3, "339": 3,
+    "696": 4, "308": 4, "454": 4,
+    "999": 5,
+}
+DESERT_HEAD = [("q.dFrom", "From"), ("q.dWest", "West"), ("q.dEast", "East"),
+               ("q.dNorth", "North"), ("q.dSouth", "South")]
+
 
 def read_csv(name):
     path = os.path.join(SRC, name + ".csv")
@@ -120,6 +141,46 @@ def table_html(rows, first, last, has_head, phrases):
             "</tbody></table></div>" % (head_html, rows_html))
 
 
+def desert_map(value):
+    """One map number, coloured by the layer it belongs to."""
+    number = re.sub(r"\.0$", "", value.strip())
+    if not number or number == "-":
+        # a dot rather than a word, so it needs no translation
+        return '<span class="desert-none">&middot;</span>'
+    layer = DESERT_LAYERS.get(number)
+    if not layer:
+        return '<span class="desert-map">%s</span>' % esc(number)
+    return ('<span class="desert-map -t%d" title="Layer %d">%s</span>'
+            % (layer, layer, esc(number)))
+
+
+def desert_table(rows, first, last):
+    """The Endless Desert route table, with every map tagged by its layer.
+
+    Columns 4 to 8 hold where you are and where each exit takes you. The first
+    column of the block is the colour legend, so it is dropped here and drawn
+    as a proper legend above the table."""
+    body = []
+    for row in rows[first + 1:last + 1]:
+        cells = [row[c] if c < len(row) else "" for c in range(4, 9)]
+        if not any(c.strip() for c in cells):
+            continue
+        body.append("<tr>%s</tr>" % "".join(
+            "<td>%s</td>" % desert_map(c) for c in cells))
+
+    head_html = "<thead><tr>%s</tr></thead>" % "".join(
+        '<th data-i18n="%s">%s</th>' % (key, label) for key, label in DESERT_HEAD)
+
+    legend = "".join(
+        '<span class="desert-map -t{n}"><span data-i18n="q.dLayer">Layer</span> {n}</span>'
+        .format(n=n) for n in range(1, 6))
+
+    return ("""<p class="dim" data-i18n="q.dNote">Every map is coloured by its layer, the way the sheet colours them. Deeper layers hit harder.</p>
+<div class="desert-legend">{legend}</div>
+<div class="table-wrap"><table class="mvp-table desert-table">{head}<tbody>{body}</tbody></table></div>"""
+            .format(legend=legend, head=head_html, body="".join(body)))
+
+
 def build_steps(stem, art, phrases):
     rows = read_csv(stem)
     if not rows:
@@ -153,8 +214,12 @@ def build_steps(stem, art, phrases):
                              steps[0]["shots"])
 
     for first, last, has_head in TABLES.get(stem, []):
+        if stem == "quest-endless-desert" and first == 8:
+            html = desert_table(rows, first, last)
+        else:
+            html = table_html(rows, first, last, has_head, phrases)
         steps.append({"row": first, "n": "", "text": "", "shots": [],
-                      "table": table_html(rows, first, last, has_head, phrases)})
+                      "table": html})
 
     steps.sort(key=lambda s: s["row"])
     return steps
@@ -360,6 +425,7 @@ def build():
         <p class="eyebrow" data-i18n="q.eyebrow">Spoilers</p>
         <h1 data-i18n="q.title">The answers, for when you want them</h1>
         <p class="lede" data-i18n="q.lede">Half the fun here is not knowing. Several of these quests have no NPC pointing at them and no log entry, and working one out with friends is the point. So nothing below is open until you say so.</p>
+        <p class="guide-credit"><span data-i18n="q.credit">Found and worked out by</span> <b>Leo, of guild [SENAI]</b></p>
       </div>
     </div>
   </section>

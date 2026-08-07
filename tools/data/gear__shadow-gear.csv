@@ -1,0 +1,215 @@
+Tier 1,
+,
+,
+Intrepid,
+Armor,Reduce Damage Taken from Nightmares by 5% + 1% per Refine
+Gloves,"Physical Damage to Nightmares +5%, +1% per Refine"
+Shoes,"Magic Damage to Nightmares +5%, +1% per Refine"
+Pendant,"Def/Mdef Pierce against Nightmares +10%, +2% per Refine"
+Set Bonus,"All Stats +1. If Total Refine Rate is 10 oor higher, Resistance Pierce +10. If Total Refine Rate is 30 or higher, Additional Resistance Pierce +10"
+,
+Tier 2,
+,
+,
+Brutal,
+Armor,"Res Pierce +5, Melee Damage Taken -2% per Refine"
+Gloves,"Res Pierce +5, Melee Damage +2% per Refine"
+Shoes,"Res Pierce +5, Crit Rate +3 per Refine"
+Pendant,"Res Pierce +5, Crit Damage +3% per Refine"
+Set Bonus,Res Pierce +1 per Refine on the set
+,
+Sharpshooter,
+Armor,"Res Pierce +5, Ranged Damage Taken -2% per Refine"
+Gloves,"Res Pierce +5, Ranged Damage +2% per Refine"
+Shoes,"Res Pierce +5, Movement Speed +1% per Refine"
+Pendant,"Res Pierce +5, Defense Pierce +5% per Refine"
+Set Bonus,Res Pierce +1 per Refine on the set
+,
+Mystic,
+Armor,"Res Pierce +5, Magic Damage Taken -2% per Refine"
+Gloves,"Res Pierce +5, All Element Magic Damage +2% per Refine"
+Shoes,"Res Pierce +5, Variable Cast Time -3% per Refine"
+Pendant,"Res Pierce +5, Magic Defense Pierce +5% per Refine"
+Set Bonus,Res Pierce +1 per Refine on the set
+,
+Tier 3,
+,
+,
+Swordbearer,
+Armor,"Res Pierce +10, Agony Res +5, Melee Damage Taken -3% per Refine, Damage from Nightmares -1% per Refine"
+Gloves,"Res Pierce +10, Agony Res +5, Physical Damage to Nightmares +3% per Refine, Damage Taken from Nightmares -1% per Refine"
+Shoes,"Res Pierce +10, Agony Res +5, Crit Damage +3% per Refine, Bleed/Burn/Poison Damage Taken -1% per Refine"
+Pendant,"Res Pierce +10, Agony Res +5, Bleeding/Vulnerable Potency +3% per Refine, Bleed/Burn/Poison Damage Taken -1% per Refine"
+Set Bonus: Any Blues,"Res Pierce +2 per Total Refine, Agony Res +1 per four Total Refines"
+Set Bonus: All Same,"All Stats +1, Damage Taken from Nightmares -5%"
+,
+Titanic,
+Armor,"Res Pierce +10, Agony Res +5, Max HP +3% per Refine, Summon HP +3% per Refine"
+Gloves,"Res Pierce +10, Agony Res +5, Physical Damage to Nightmares +3% per Refine, Summon Damage +3% per Refine"
+Shoes,"Res Pierce +10, Agony Res +5, Crit Damage +3% per Refine, Summon Damage +3% per Refine"
+Pendant,"Res Pierce +10, Agony Res +5, Stun Duration +0.1s per Refine, Summon HP +3% per Refine"
+Set Bonus: Any Blues,"Res Pierce +2 per Total Refine, Agony Res +1 per four Total Refines"
+Set Bonus: All Same,"All Stats +1, Damage Taken from Nightmares -5%"
+,
+Pillager,
+Armor,"Res Pierce +10, Agony Res +5, Ranged Damage Taken -3% per Refine, Flee +3 per Refine"
+Gloves,"Res Pierce +10, Agony Res +5, Physical Damage to Nightmares +3% per Refine, All Skill Cooldowns -1% per Refine"
+Shoes,"Res Pierce +10, Agony Res +5, Crit Damage +3% per Refine, Flee +3 per Refine"
+Pendant,"Res Pierce +10, Agony Res +5, Poison/Blind Potency +3%/3 per Refine, All Skill Cooldowns -1% per Refine"
+Set Bonus: Any Blues,"Res Pierce +2 per Total Refine, Agony Res +1 per four Total Refines"
+Set Bonus: All Same,"All Stats +1, Damage Taken from Nightmares -5%"
+,
+Artillerist,
+Armor,"Res Pierce +10, Agony Res +5, Ranged Damage Taken  -3% per Refine, FCT -0.05s per Refine"
+Gloves,"Res Pierce +10, Agony Res +5, Ranged Damage +3% per Refine, All element Magic Damage +1.5% per Refine, Max SP +2% per Refine"
+Shoes,"Res Pierce +10, Agony Res +5, Crit Damage +3% per Refine, All Element Magic Damage +1.5% per Refine, FCT -0.05s per Refine"
+Pendant,"Res Pierce +10, Agony Res +5, Slow Potency +5 per Refine, Slow Duration +0.5s per Refine, Max SP +2% per Refine"
+Set Bonus: Any Blues,"Res Pierce +2 per Total Refine, Agony Res +1 per four Total Refines"
+Set Bonus: All Same,"All Stats +1, Damage Taken from Nightmares -5%"
+,
+Spellweaver,
+Armor,"Res Pierce +10, Agony Res +5, Magic Damage Taken -3% per Refine, SP Regen +3% per Refine"
+Gloves,"Res Pierce +10, Agony Res +5, All Element Magic Damage +3% per Refine, FCT -0.1s per Refine"
+Shoes,"Res Pierce +10, Agony Res +5, Flat Mdef Pierce +3 per Refine, SP Regen +3% per Refine"
+Pendant,"Res Pierce +10, Agony Res +5, Burning/Breach Potency +3% per Refine, FCT -0.1s per Refine"
+Set Bonus: Any Blues,"Res Pierce +2 per Total Refine, Agony Res +1 per four Total Refines"
+Set Bonus: All Same,"All Stats +1, Damage Taken from Nightmares -5%"
+,
+Devoted,
+Armor,"Res Pierce +10, Agony Res +5, Max HP +3% per Refine, Heal CD -0.1s per Refine"
+Gloves,"Res Pierce +10, Agony Res +5, Physical and Magical Damage to Nightmares +3% per Refine, SP Regen +3% per Refine"
+Shoes,"Res Pierce +10, Agony Res +5, Crit Damage +3% per Refine, Flat MDef Pierce +3 per Refine, SP Regen +3% per Refine"
+Pendant,"Res Pierce +10, Agony Res +5, Searing Light Damage +3% per Refine, Def Pierce +3% per Refine, Heal CD -0.1s per Refine"
+Set Bonus: Any Blues,"Res Pierce +2 per Total Refine, Agony Res +1 per four Total Refines"
+Set Bonus: All Same,"All Stats +1, Damage Taken from Nightmares -5%"
+,
+Tier 4,
+,
+,
+Cavalier,
+Armor,"Res Pierce +20, Agony Res +10, Melee Damage Taken -3% per Refine, Max HP +1.5% per Refine"
+Gloves,"Res Pierce +20, Agony Res +10, Physical Damage +5% per Refine, Max HP +1.5% per Refine"
+Shoes,"Res Pierce +20, Agony Res +10, Crit Damage +5% per Refine, Bleed/Vulnerable Potency +3% per Refine"
+Pendant,"Res Pierce +20, Agony Res +10, Devastating Blow/Brandish Spear CD -0.5s per Refine, Bleed/Vulnerable Potency +3% per Refine"
+Set Bonus: Any Gold,"Res Pierce +3 per Total Set Refine, Agony Res +1 per Total Set Refine"
+Set Bonus: All Same,"All Stats +1, Damage Taken from Nightmares -10%"
+,
+Cavalier,
+Armor,"Res Pierce +20, Agony Res +10, "
+Gloves,"Res Pierce +20, Agony Res +10, "
+Shoes,"Res Pierce +20, Agony Res +10, "
+Pendant,"Res Pierce +20, Agony Res +10, "
+Set Bonus: Any Gold,"Res Pierce +3 per Total Set Refine, Agony Res +1 per Total Set Refine"
+Set Bonus: All Same,"All Stats +1, Damage Taken from Nightmares -10%"
+,
+Cavalier,
+Armor,"Res Pierce +20, Agony Res +10, "
+Gloves,"Res Pierce +20, Agony Res +10, "
+Shoes,"Res Pierce +20, Agony Res +10, "
+Pendant,"Res Pierce +20, Agony Res +10, "
+Set Bonus: Any Gold,"Res Pierce +3 per Total Set Refine, Agony Res +1 per Total Set Refine"
+Set Bonus: All Same,"All Stats +1, Damage Taken from Nightmares -10%"
+,
+Cavalier,
+Armor,"Res Pierce +20, Agony Res +10, "
+Gloves,"Res Pierce +20, Agony Res +10, "
+Shoes,"Res Pierce +20, Agony Res +10, "
+Pendant,"Res Pierce +20, Agony Res +10, "
+Set Bonus: Any Gold,"Res Pierce +3 per Total Set Refine, Agony Res +1 per Total Set Refine"
+Set Bonus: All Same,"All Stats +1, Damage Taken from Nightmares -10%"
+,
+Cavalier,
+Armor,"Res Pierce +20, Agony Res +10, "
+Gloves,"Res Pierce +20, Agony Res +10, "
+Shoes,"Res Pierce +20, Agony Res +10, "
+Pendant,"Res Pierce +20, Agony Res +10, "
+Set Bonus: Any Gold,"Res Pierce +3 per Total Set Refine, Agony Res +1 per Total Set Refine"
+Set Bonus: All Same,"All Stats +1, Damage Taken from Nightmares -10%"
+,
+Cavalier,
+Armor,"Res Pierce +20, Agony Res +10, "
+Gloves,"Res Pierce +20, Agony Res +10, "
+Shoes,"Res Pierce +20, Agony Res +10, "
+Pendant,"Res Pierce +20, Agony Res +10, "
+Set Bonus: Any Gold,"Res Pierce +3 per Total Set Refine, Agony Res +1 per Total Set Refine"
+Set Bonus: All Same,"All Stats +1, Damage Taken from Nightmares -10%"
+,
+Cavalier,
+Armor,"Res Pierce +20, Agony Res +10, "
+Gloves,"Res Pierce +20, Agony Res +10, "
+Shoes,"Res Pierce +20, Agony Res +10, "
+Pendant,"Res Pierce +20, Agony Res +10, "
+Set Bonus: Any Gold,"Res Pierce +3 per Total Set Refine, Agony Res +1 per Total Set Refine"
+Set Bonus: All Same,"All Stats +1, Damage Taken from Nightmares -10%"
+,
+Cavalier,
+Armor,"Res Pierce +20, Agony Res +10, "
+Gloves,"Res Pierce +20, Agony Res +10, "
+Shoes,"Res Pierce +20, Agony Res +10, "
+Pendant,"Res Pierce +20, Agony Res +10, "
+Set Bonus: Any Gold,"Res Pierce +3 per Total Set Refine, Agony Res +1 per Total Set Refine"
+Set Bonus: All Same,"All Stats +1, Damage Taken from Nightmares -10%"
+,
+Cavalier,
+Armor,"Res Pierce +20, Agony Res +10, "
+Gloves,"Res Pierce +20, Agony Res +10, "
+Shoes,"Res Pierce +20, Agony Res +10, "
+Pendant,"Res Pierce +20, Agony Res +10, "
+Set Bonus: Any Gold,"Res Pierce +3 per Total Set Refine, Agony Res +1 per Total Set Refine"
+Set Bonus: All Same,"All Stats +1, Damage Taken from Nightmares -10%"
+,
+Cavalier,
+Armor,"Res Pierce +20, Agony Res +10, "
+Gloves,"Res Pierce +20, Agony Res +10, "
+Shoes,"Res Pierce +20, Agony Res +10, "
+Pendant,"Res Pierce +20, Agony Res +10, "
+Set Bonus: Any Gold,"Res Pierce +3 per Total Set Refine, Agony Res +1 per Total Set Refine"
+Set Bonus: All Same,"All Stats +1, Damage Taken from Nightmares -10%"
+,
+Cavalier,
+Armor,"Res Pierce +20, Agony Res +10, "
+Gloves,"Res Pierce +20, Agony Res +10, "
+Shoes,"Res Pierce +20, Agony Res +10, "
+Pendant,"Res Pierce +20, Agony Res +10, "
+Set Bonus: Any Gold,"Res Pierce +3 per Total Set Refine, Agony Res +1 per Total Set Refine"
+Set Bonus: All Same,"All Stats +1, Damage Taken from Nightmares -10%"
+,
+Cavalier,
+Armor,"Res Pierce +20, Agony Res +10, "
+Gloves,"Res Pierce +20, Agony Res +10, "
+Shoes,"Res Pierce +20, Agony Res +10, "
+Pendant,"Res Pierce +20, Agony Res +10, "
+Set Bonus: Any Gold,"Res Pierce +3 per Total Set Refine, Agony Res +1 per Total Set Refine"
+Set Bonus: All Same,"All Stats +1, Damage Taken from Nightmares -10%"
+,
+Cavalier,
+Armor,"Res Pierce +20, Agony Res +10, "
+Gloves,"Res Pierce +20, Agony Res +10, "
+Shoes,"Res Pierce +20, Agony Res +10, "
+Pendant,"Res Pierce +20, Agony Res +10, "
+Set Bonus: Any Gold,"Res Pierce +3 per Total Set Refine, Agony Res +1 per Total Set Refine"
+Set Bonus: All Same,"All Stats +1, Damage Taken from Nightmares -10%"
+,
+Cavalier,
+Armor,"Res Pierce +20, Agony Res +10, "
+Gloves,"Res Pierce +20, Agony Res +10, "
+Shoes,"Res Pierce +20, Agony Res +10, "
+Pendant,"Res Pierce +20, Agony Res +10, "
+Set Bonus: Any Gold,"Res Pierce +3 per Total Set Refine, Agony Res +1 per Total Set Refine"
+Set Bonus: All Same,"All Stats +1, Damage Taken from Nightmares -10%"
+,
+Cavalier,
+Armor,"Res Pierce +20, Agony Res +10, "
+Gloves,"Res Pierce +20, Agony Res +10, "
+Shoes,"Res Pierce +20, Agony Res +10, "
+Pendant,"Res Pierce +20, Agony Res +10, "
+Set Bonus: Any Gold,"Res Pierce +3 per Total Set Refine, Agony Res +1 per Total Set Refine"
+Set Bonus: All Same,"All Stats +1, Damage Taken from Nightmares -10%"
+,
+Cavalier,
+Armor,"Res Pierce +20, Agony Res +10, "
+Gloves,"Res Pierce +20, Agony Res +10, "
+Shoes,"Res Pierce +20, Agony Res +10, "
+Pendant,"Res Pierce +20, Agony Res +10, "
+Set Bonus: Any Gold,"Res Pierce +3 per Total Set Refine, Agony Res +1 per Total Set Refine"
+Set Bonus: All Same,"All Stats +1, Damage Taken from Nightmares -10%"

@@ -11,6 +11,7 @@ static host and it works.
 ```
 .
 ├── index.html               landing page
+├── guide.html               new player guide, still a placeholder
 ├── classes.html             class hub, filter + search over all 55
 ├── quiz.html                class personality test
 ├── database.html            items and cards
@@ -284,14 +285,26 @@ python tools/build_database.py   # rebuild assets/data/items.json
 `fetch_sheets.py` is the only script that needs the network. The CSVs are
 committed, so anyone can rebuild the JSON offline.
 
-Two things to know about the source data:
+Three things to know about the source data:
 
-- **Shadow Gear and Shadow Enchants are empty tabs** in the gear sheet, so
-  none of it is in the database yet. It will appear on its own once Twilight
-  fills those tabs in and the two commands above are re-run.
+- **Shadow gear is laid out as sets, not as a table.** A tier heading, a set
+  name on its own row, then its Armor, Gloves, Shoes and Pendant, then one or
+  two set bonus rows that apply to all four. `parse_shadow()` reads that shape
+  and gives each piece its own slot (`shadow-armor` and so on), because shadow
+  gear equips in a second window and is worn alongside ordinary gear rather
+  than instead of it. The tail of the tab repeats an unfinished set over and
+  over, so a set name already seen in the same tier is skipped.
+- **Shadow Enchants is still an empty tab**, so none of it is in the database
+  yet. It will appear once Twilight fills it in and the two commands above are
+  re-run.
 - **The sheets mark champion drops with a green cell fill.** Colour does not
   survive the CSV export, so that distinction is not in the database. If it
   matters later, the champion names would need their own column.
+
+The drop rate rules on `database.html` are not in any sheet. They come from
+Twilight directly and are written into the page: trash loot at 100%, gear off
+ordinary mobs at 1 to 5%, gear off Champions and MVPs at 10 to 50%, cards at
+1% and 5%, and no level based penalty.
 
 Category names differ slightly between the two gear docs (`GATLINGS` versus
 `GATLING GUNS`). `CATEGORY_ALIASES` in `build_database.py` folds those
@@ -355,6 +368,14 @@ between them. Screenshots are attached to the step above them, using the same
 anchor rows as the MVP page. The jump buttons at the top are generated from
 `QUESTS`, so adding a quest there adds its button too.
 
+The Endless Desert route table is a special case. The sheet marks the layer of
+every moc_fild map with a cell colour, and the CSV export drops colour, so the
+column of "Layer 1" to "Layer 5" labels next to the table is a legend rather
+than a label for the row it lines up with. `DESERT_LAYERS` in
+`build_quests.py` holds the map to layer mapping read out of the xlsx fills,
+and `desert_table()` renders the legend properly and colours each map by its
+own layer.
+
 The sheet is written in Portuguese. `tools/data/quest-text.json` holds the
 English for each line, keyed by the original, and anything without a
 translation falls through unchanged, so a new line shows up untranslated
@@ -363,6 +384,28 @@ that hold a reference table instead of a step list.
 
 The potion recipes come from a player made wiki rather than from Twilight, and
 are labelled as such on the page along with the date they were last touched.
+
+## The new player guide
+
+`guide.html` is the page for people who have never played here. It is a shell
+waiting for content: right now it shows a placeholder and points at the pages
+that already answer most early questions.
+
+```bash
+python tools/build_guide.py
+```
+
+To put a guide on it, append an entry to `GUIDES` in `tools/build_guide.py` and
+rebuild. A guide is a title, a credit, a blurb, an intro and a list of blocks,
+where a block is a numbered route (`steps`), a fork with a card per branch
+(`split`), or a plain list (`notes`). The placeholder disappears as soon as
+there is one entry.
+
+Guides are prose someone wrote rather than data anyone exports, which is why
+they live in the script instead of in a sheet. Credit the author in the
+`credit` field; it is rendered under the title.
+
+---
 
 ## The class personality test
 

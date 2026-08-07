@@ -577,7 +577,9 @@ html[data-theme="light"] .btn.-primary:hover { --btn-bg: var(--red-500); }
   align-items: center;
   gap: 0.15rem;
 }
-@media (min-width: 1000px) { .nav { display: flex; } }
+/* Seven entries, and German and French are the widest. Below this the
+   burger takes over. */
+@media (min-width: 1120px) { .nav { display: flex; } }
 
 .nav a {
   position: relative;
@@ -785,7 +787,7 @@ html[data-theme="light"] .icon-btn .i-sun { display: none; }
 
 /* --- mobile drawer --- */
 .burger { display: grid; }
-@media (min-width: 1000px) { .burger { display: none; } }
+@media (min-width: 1120px) { .burger { display: none; } }
 
 .drawer {
   position: fixed;
@@ -2229,6 +2231,7 @@ html[data-theme="light"] .site-footer { background: color-mix(in srgb, var(--bg)
 }
 .db-source.-mvp { color: var(--accent-soft); }
 .db-source.-card { color: var(--kw-poison); }
+.db-source.-shadow { color: var(--sk-magic); }
 
 /* ---- item panel ---- */
 
@@ -2914,6 +2917,168 @@ html[data-theme="light"] .site-footer { background: color-mix(in srgb, var(--bg)
   display: block;
   font-size: 0.8rem;
   line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   20g. Endless Desert layers
+
+   The sheet colours every map by the layer it sits on, so the table does the
+   same rather than printing a layer number next to each one.
+   -------------------------------------------------------------------------- */
+
+.desert-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.6rem 0 0.9rem;
+}
+.desert-map {
+  display: inline-block;
+  min-width: 3.2rem;
+  padding: 0.18rem 0.5rem;
+  border: 1px solid var(--surface-line);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-align: center;
+  white-space: nowrap;
+}
+.desert-legend .desert-map {
+  min-width: 0;
+  font-family: inherit;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+}
+.desert-map.-t1 { background: color-mix(in srgb, #6cc48c 22%, transparent); border-color: color-mix(in srgb, #6cc48c 45%, transparent); }
+.desert-map.-t2 { background: color-mix(in srgb, #45a3b0 24%, transparent); border-color: color-mix(in srgb, #45a3b0 48%, transparent); }
+.desert-map.-t3 { background: color-mix(in srgb, #e0b13a 24%, transparent); border-color: color-mix(in srgb, #e0b13a 48%, transparent); }
+.desert-map.-t4 { background: color-mix(in srgb, #e08a3a 26%, transparent); border-color: color-mix(in srgb, #e08a3a 50%, transparent); }
+.desert-map.-t5 { background: color-mix(in srgb, #e0555b 28%, transparent); border-color: color-mix(in srgb, #e0555b 55%, transparent); }
+.desert-none { color: var(--text-dim); }
+.desert-table td { text-align: center; }
+.desert-table td:first-child { text-align: left; }
+
+/* --------------------------------------------------------------------------
+   20h. Drop rates, on the database page
+   -------------------------------------------------------------------------- */
+
+.db-rates-head {
+  margin: 1.6rem 0 0.7rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+}
+.db-rates {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+  gap: 0.6rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.db-rates li {
+  padding: 0.7rem 0.85rem;
+  border: 1px solid var(--surface-line);
+  border-radius: var(--radius-sm);
+  background: var(--surface-1);
+}
+.db-rates b {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+  color: var(--accent-soft);
+}
+.db-rates span {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--text-dim);
+}
+
+/* --------------------------------------------------------------------------
+   20i. New player guide
+   -------------------------------------------------------------------------- */
+
+.guide-card {
+  padding: 1.4rem 1.5rem 1.6rem;
+  border: 1px solid var(--surface-line);
+  border-radius: var(--radius-md);
+  background: var(--surface-1);
+}
+.guide-card + .guide-card { margin-top: 1.2rem; }
+.guide-card.-empty {
+  border-style: dashed;
+  background: none;
+  text-align: center;
+  padding: 2.2rem 1.5rem;
+}
+.guide-card.-empty h2 {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+.guide-card.-empty p {
+  max-width: 52ch;
+  margin: 0 auto;
+  color: var(--text-dim);
+}
+.guide-card-head { margin-bottom: 1rem; }
+.guide-card-head h2 {
+  font-size: clamp(1.2rem, 2.4vw, 1.55rem);
+  margin-bottom: 0.35rem;
+}
+.guide-credit {
+  margin: 0 0 0.5rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.guide-credit b { color: var(--accent-soft); }
+.guide-head {
+  margin: 1.5rem 0 0.6rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+}
+.guide-branches {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 0.8rem;
+  align-items: start;
+}
+.guide-branch {
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--surface-line);
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+}
+.guide-branch h4 {
+  margin-bottom: 0.45rem;
+  font-size: 0.9rem;
+  color: var(--accent-soft);
+}
+.guide-branch p {
+  margin: 0 0 0.45rem;
+  font-size: 0.87rem;
+  line-height: 1.55;
+}
+.guide-branch p:last-child { margin-bottom: 0; }
+.guide-notes {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+.guide-notes li {
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+.guide-next { margin-top: 1.6rem; }
+.guide-next h3 {
+  margin-bottom: 0.7rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 /* --------------------------------------------------------------------------
