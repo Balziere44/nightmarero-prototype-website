@@ -486,4 +486,9 @@ window.NM_I18N_REGISTER('fr', {
   'g.jbEyebrow': 'Changement',
   'g.jbTitle': 'Où commence chaque changement de classe',
   'g.jbLede': 'Vous obtenez votre première classe dans le tutoriel, au niveau 1. Le choix qui compte arrive au job 50, et personne ne vous dit où aller.',
+  'egg.tag': 'Fiche du prisonnier',
+  'egg.p1': 'Oui, le peuple chat est dans le jeu. Il est aussi dans une cellule, derrière une porte fermée, sur une carte où personne ne peut se téléporter.',
+  'egg.p2': 'C’est exactement là où il doit être.',
+  'egg.foot': 'Rien à voir ici. Circulez.',
+  'egg.btn': 'Bruh',
 });

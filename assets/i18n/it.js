@@ -486,4 +486,9 @@ window.NM_I18N_REGISTER('it', {
   'g.jbEyebrow': 'Cambio',
   'g.jbTitle': 'Dove comincia ogni cambio classe',
   'g.jbLede': 'La prima classe la prendi nel tutorial, al livello 1. La scelta che conta arriva al job 50, e nessuno ti dice dove andare.',
+  'egg.tag': 'Scheda del prigioniero',
+  'egg.p1': 'Sì, il popolo gatto è nel gioco. È anche in una cella, dietro una porta chiusa a chiave, su una mappa dove nessuno può warpare.',
+  'egg.p2': 'È esattamente dove deve stare.',
+  'egg.foot': 'Qui non c’è niente da vedere. Circolare.',
+  'egg.btn': 'Bruh',
 });

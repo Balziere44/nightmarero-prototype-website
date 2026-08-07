@@ -3730,6 +3730,102 @@ li.wh-dungeon { border-left-color: var(--el-poison); }
   color: var(--text-dim);
 }
 
+
+/* --------------------------------------------------------------------------
+   20n. The doram
+
+   Typing the word builds this from main.js, so it exists on every page
+   without a line of markup anywhere. The bars are drawn rather than drawn
+   on: a repeating gradient over the card, with the text sitting above it.
+   -------------------------------------------------------------------------- */
+
+.egg-back {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  padding: 1.2rem;
+  background: color-mix(in srgb, var(--ink-000) 82%, transparent);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  animation: eggFade 0.2s var(--ease);
+}
+@keyframes eggFade { from { opacity: 0; } to { opacity: 1; } }
+
+.egg-card {
+  position: relative;
+  width: min(100%, 460px);
+  border: 1px solid var(--surface-line-strong);
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--bg) 96%, transparent);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  animation: eggIn 0.28s var(--ease);
+}
+@keyframes eggIn {
+  from { opacity: 0; transform: translateY(14px) scale(0.97); }
+  to { opacity: 1; transform: none; }
+}
+
+.egg-bars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--text) 22%, transparent) 0 7px,
+    transparent 7px 58px);
+  mask-image: linear-gradient(180deg, #000 0 78%, transparent 100%);
+  -webkit-mask-image: linear-gradient(180deg, #000 0 78%, transparent 100%);
+}
+
+.egg-body {
+  position: relative;
+  padding: 1.7rem 1.6rem 1.5rem;
+  text-align: center;
+}
+
+.egg-tag {
+  margin-bottom: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.63rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-soft);
+}
+.egg-card h2 {
+  margin-bottom: 0.8rem;
+  font-family: var(--font-display);
+  font-size: var(--step-3);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.egg-p {
+  margin: 0 auto 0.7rem;
+  max-width: 34ch;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+.egg-p.-strong {
+  font-weight: 600;
+  color: var(--text);
+}
+.egg-foot {
+  margin: 1.1rem 0 1.3rem;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.egg-btn { min-width: 8rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  .egg-back, .egg-card { animation: none; }
+}
+
 /* --------------------------------------------------------------------------
    21. Reveal on scroll
    -------------------------------------------------------------------------- */

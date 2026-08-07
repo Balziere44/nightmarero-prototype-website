@@ -568,6 +568,22 @@ Each class page shows chips only for the statuses that class actually
 mentions, so a Crusader page shows Bleeding, Blind and Vulnerable and nothing
 else.
 
+## The doram
+
+Doram is in the game and Doram is in a cell. Typing `thereisnohope` anywhere
+on the site, with nothing focused, opens a small dialog that admits it. There
+is no link to it and no hint of it, which is the whole point.
+
+It lives in section 8 of `assets/js/main.js` and builds its own markup, so it
+works on all 65 pages without a line of HTML anywhere. Keystrokes are only
+counted while no field has focus, so typing into the database search or the
+class filter never sets it off. Its five strings are `egg.tag`, `egg.p1`,
+`egg.p2`, `egg.foot` and `egg.btn` in the locale files, read at the moment the
+dialog opens, so it speaks whatever language the visitor picked. The button
+says Bruh in all six.
+
+---
+
 ## Naming
 
 The site deliberately never uses the name of the game this server is based on,

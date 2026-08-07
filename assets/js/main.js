@@ -276,7 +276,82 @@
     });
   });
 
-  /* -------------------------------------------------------------- 8. misc */
+  /* ------------------------------------------------------- 8. the doram */
+
+  /* Doram is in the game and Doram is in a cell. Type the word and the site
+     admits it. Nothing links here and nothing hints at it, which is the
+     point. Keystrokes are only counted when nothing is focused, so typing
+     into the database search never sets it off. */
+
+  (function () {
+    var CODE = 'thereisnohope';
+    var typed = '';
+    var open = null;
+
+    var t = function (key, fallback) {
+      var table = window.NM_I18N_TABLE || {};
+      return table[key] || fallback;
+    };
+
+    function close() {
+      if (!open) return;
+      var back = open.back, focus = open.focus;
+      open = null;
+      document.removeEventListener('keydown', onKey, true);
+      back.remove();
+      if (focus && focus.focus) focus.focus();
+    }
+
+    function onKey(e) {
+      if (e.key === 'Escape') { e.stopPropagation(); close(); }
+    }
+
+    function reveal() {
+      if (open) return;
+      var focus = document.activeElement;
+
+      var back = document.createElement('div');
+      back.className = 'egg-back';
+      back.innerHTML =
+        '<div class="egg-card" role="dialog" aria-modal="true" aria-labelledby="eggTitle">' +
+          '<div class="egg-bars" aria-hidden="true"></div>' +
+          '<div class="egg-body">' +
+            '<p class="egg-tag">' + t('egg.tag', 'Prisoner record') + '</p>' +
+            '<h2 id="eggTitle">Doram</h2>' +
+            '<p class="egg-p">' + t('egg.p1', 'Yes, the cat people are in the game. They are also in a cell, behind a locked door, on a map nobody can warp to.') + '</p>' +
+            '<p class="egg-p -strong">' + t('egg.p2', 'That is exactly where they should be.') + '</p>' +
+            '<p class="egg-foot">' + t('egg.foot', 'Nothing to see here. Move along.') + '</p>' +
+            '<button class="btn -primary egg-btn" type="button">' + t('egg.btn', 'Bruh') + '</button>' +
+          '</div>' +
+        '</div>';
+
+      back.addEventListener('click', function (e) {
+        if (e.target === back || e.target.closest('.egg-btn')) close();
+      });
+
+      document.body.appendChild(back);
+      open = { back: back, focus: focus };
+      document.addEventListener('keydown', onKey, true);
+      back.querySelector('.egg-btn').focus();
+    }
+
+    document.addEventListener('keydown', function (e) {
+      if (open || e.ctrlKey || e.metaKey || e.altKey) return;
+
+      var el = e.target;
+      if (el && (el.isContentEditable ||
+                 /^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName))) {
+        typed = '';
+        return;
+      }
+
+      if (e.key.length !== 1) return;
+      typed = (typed + e.key.toLowerCase()).slice(-CODE.length);
+      if (typed === CODE) { typed = ''; reveal(); }
+    });
+  })();
+
+  /* -------------------------------------------------------------- 9. misc */
 
   var year = $('#year');
   if (year) year.textContent = String(new Date().getFullYear());

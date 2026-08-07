@@ -486,4 +486,9 @@ window.NM_I18N_REGISTER('pt', {
   'g.jbEyebrow': 'Transição',
   'g.jbTitle': 'Onde começa cada mudança de classe',
   'g.jbLede': 'Você ganha a primeira classe dentro do tutorial, no nível 1. A escolha que importa vem no job 50, e ninguém te diz para onde ir.',
+  'egg.tag': 'Ficha do prisioneiro',
+  'egg.p1': 'Sim, o povo gato está no jogo. E também está numa cela, atrás de uma porta trancada, num mapa para onde ninguém consegue warpar.',
+  'egg.p2': 'É exatamente onde ele deve estar.',
+  'egg.foot': 'Não há nada para ver aqui. Circulando.',
+  'egg.btn': 'Bruh',
 });

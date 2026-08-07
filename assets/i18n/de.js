@@ -486,4 +486,9 @@ window.NM_I18N_REGISTER('de', {
   'g.jbEyebrow': 'Wechsel',
   'g.jbTitle': 'Wo jeder Jobwechsel beginnt',
   'g.jbLede': 'Deinen ersten Job bekommst du im Tutorial auf Level 1. Die Wahl, die zählt, kommt auf Joblevel 50, und niemand sagt dir, wohin.',
+  'egg.tag': 'Gefangenenakte',
+  'egg.p1': 'Ja, das Katzenvolk ist im Spiel. Es sitzt auch in einer Zelle, hinter einer verschlossenen Tür, auf einer Karte, zu der niemand warpen kann.',
+  'egg.p2': 'Genau da, wo es hingehört.',
+  'egg.foot': 'Hier gibt es nichts zu sehen. Weitergehen.',
+  'egg.btn': 'Bruh',
 });
