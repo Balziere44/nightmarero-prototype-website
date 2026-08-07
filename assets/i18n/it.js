@@ -378,4 +378,8 @@ window.NM_I18N_REGISTER('it', {
   'g.lvBosses': 'Altari vicini',
   'g.lvWho': 'A chi conviene questa tappa',
   'nav.route': 'Percorso di livello',
+  'mvp.credit': 'Altari, tabelle di drop ed equipaggiamento reliquia documentati da',
+  'cls.videosEyebrow': 'Dalla community',
+  'cls.videosTitle': 'Guardala in azione',
+  'cls.noVideos': 'Ancora nessun video per questa classe. Registra la tua gameplay e postala sul Discord.',
 });

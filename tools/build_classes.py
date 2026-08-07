@@ -616,6 +616,54 @@ def path_map(reg, name):
     return '<div class="path-map">%s</div>' % "".join(parts)
 
 
+DISCORD_VIDEOS = "https://discord.gg/gHgFtmvudD"
+
+
+def load_videos():
+    """Community videos, keyed by class slug. See tools/data/class-videos.json."""
+    path = os.path.join(ROOT, "tools", "data", "class-videos.json")
+    try:
+        return json.load(io.open(path, encoding="utf-8")).get("videos", {})
+    except (IOError, ValueError):
+        return {}
+
+
+CLASS_VIDEOS = load_videos()
+
+
+def videos_section(slug):
+    """Players record their fights and post them in Discord. Each card is a
+    thumbnail and a play button rather than an embed, because 5 embedded
+    players would cost more than the rest of the page put together. The iframe
+    is only created once someone actually clicks."""
+    clips = CLASS_VIDEOS.get(slug, [])
+
+    if not clips:
+        body = """      <p class="vid-empty" data-i18n="cls.noVideos">No videos for this class yet. Record your gameplay and post it in the Discord.</p>
+      <p><a class="btn -ghost" href="{dc}" target="_blank" rel="noopener" data-i18n="cta.discord">Join the Discord</a></p>""".format(dc=DISCORD_VIDEOS)
+    else:
+        cards = "".join("""
+        <button class="vid-card" type="button" data-video="{vid}" aria-label="Play: {t}">
+          <img src="https://i.ytimg.com/vi/{vid}/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async">
+          <span class="vid-play" aria-hidden="true"></span>
+          <span class="vid-meta"><span class="vid-title">{t}</span><span class="vid-by">{by}</span></span>
+        </button>""".format(vid=esc(c["id"]), t=esc(c["title"]), by=esc(c.get("by", "")))
+            for c in clips)
+        body = '      <div class="vid-grid">%s\n      </div>' % cards
+
+    return """
+  <section class="section-pad-sm" id="videos">
+    <div class="shell">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="cls.videosEyebrow">From the players</p>
+        <h2 data-i18n="cls.videosTitle">See it played</h2>
+      </div>
+{body}
+    </div>
+  </section>
+""".format(body=body)
+
+
 def class_page(reg, name, blocks):
     info = reg[name]
     slug = info["slug"]
@@ -707,6 +755,9 @@ def class_page(reg, name, blocks):
 
     # ---- skills
     parts.append(skills_section(tree))
+
+    # ---- community videos
+    parts.append(videos_section(info["slug"]))
 
     # ---- pager
     prev, nxt = info["prev"], info["next"]

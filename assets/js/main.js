@@ -78,6 +78,32 @@
     });
   }
 
+  /* ---------------------------------------------- 3c. community videos
+
+     The class pages ship a thumbnail and a play button, not an embed. The
+     player is only built when someone asks for it, so a page with five clips
+     on it still loads like a page with none. */
+
+  var vidGrid = document.querySelector('.vid-grid');
+  if (vidGrid) {
+    vidGrid.addEventListener('click', function (e) {
+      var card = e.target.closest('.vid-card');
+      if (!card) return;
+      var id = card.dataset.video;
+      var frame = document.createElement('iframe');
+      frame.src = 'https://www.youtube-nocookie.com/embed/' + id +
+                  '?autoplay=1&rel=0';
+      frame.title = card.getAttribute('aria-label') || 'Video';
+      frame.allow = 'accelerometer; autoplay; encrypted-media; picture-in-picture';
+      frame.allowFullscreen = true;
+      frame.loading = 'lazy';
+      var slot = document.createElement('div');
+      slot.className = 'vid-frame';
+      slot.appendChild(frame);
+      card.replaceWith(slot);
+    });
+  }
+
   /* --------------------------------------------------------- 4. countdown */
 
   /* Friday 7 August 2026, 20:00 Brasilia time (UTC-3) = 23:00 UTC. */

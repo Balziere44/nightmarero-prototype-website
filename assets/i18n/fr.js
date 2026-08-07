@@ -378,4 +378,8 @@ window.NM_I18N_REGISTER('fr', {
   'g.lvBosses': 'Autels à portée',
   'g.lvWho': 'À qui profite cette étape',
   'nav.route': 'Itinéraire de niveau',
+  'mvp.credit': 'Autels, tables de butin et équipement relique documentés par',
+  'cls.videosEyebrow': 'Par les joueurs',
+  'cls.videosTitle': 'Voyez la classe en jeu',
+  'cls.noVideos': 'Pas encore de vidéo pour cette classe. Enregistrez votre gameplay et postez-la sur le Discord.',
 });

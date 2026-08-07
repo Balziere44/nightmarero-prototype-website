@@ -1,0 +1,96 @@
+{
+ "note": "Community videos from the Discord #player-videos channel. Each one is filed under the class its title names. Streams, playlists and dungeon tours with no class in the title are left out, and so is anything whose title names a character rather than a class. Add an entry here and rebuild the class pages.",
+ "source": "Discord, Nightmare RO, #player-videos",
+ "videos": {
+  "mechanic": [
+   {"id": "F5pmCA0BVgY", "title": "Mechanic vs the piano from Mario 64", "by": "Bovi"},
+   {"id": "fqOsuO1pe-0", "title": "Mechanic and drones on Final Defense Drone", "by": "Bovi"},
+   {"id": "M3fLSx7LxpQ", "title": "Mechanic Drone vs Valkyrie Randgris", "by": "Rex"},
+   {"id": "yKjV1_SnYk0", "title": "Mechanic Drone vs Herald of Dusk", "by": "Rex"},
+   {"id": "jHkpEH69dVY", "title": "Mechanic Drone vs Kiel D-01", "by": "Rex"}
+  ],
+  "ninja": [
+   {"id": "v_zM7WYBlhY", "title": "Piano ninja vs Verus MVP", "by": "TechnoViking"},
+   {"id": "OPKbe5XV2W8", "title": "Rework Ninja vs Valkyrie", "by": "Azel"}
+  ],
+  "sura": [
+   {"id": "ixwow23SFEI", "title": "Sura, combo build, vs Kiel", "by": "Matheus"},
+   {"id": "FOneyvTa0SI", "title": "Sura, spirit build, vs Kiel", "by": "Matheus"},
+   {"id": "rc-0hVW82mI", "title": "Sura vs Herald of Dusk", "by": "Matheus"},
+   {"id": "3qYAXlI5mpY", "title": "Sura vs Herald of Dusk, rematch", "by": "Matheus"}
+  ],
+  "taekwon": [
+   {"id": "UK2NMYAHJTE", "title": "Taekwon Ranker vs Death Witch", "by": "Fray"}
+  ],
+  "lord-knight": [
+   {"id": "-dfCGvL_mUc", "title": "Lord Knight vs Gloom Under Night", "by": "Matheus"}
+  ],
+  "night-watch": [
+   {"id": "6DRfO-x4HvQ", "title": "Night Watch raids Rachel Sanctuary", "by": "Bovi"},
+   {"id": "g4TWUp7XLNU", "title": "Night Watch vs Atroce", "by": "BetoLira"},
+   {"id": "Lj9wkrbfqaY", "title": "Sniper Night Watch vs Valkyrie", "by": "BetoLira"},
+   {"id": "LD-HigK4wCU", "title": "Pistol Night Watch vs Valkyrie", "by": "BetoLira"},
+   {"id": "koo-a9pU7Kk", "title": "Shotgun Night Watch vs Valkyrie", "by": "BetoLira"}
+  ],
+  "guillotine-cross": [
+   {"id": "FigfM1UCxqs", "title": "Guillotine Cross vs Verus MVP", "by": "TechnoViking"},
+   {"id": "OZiswWdl34U", "title": "Guillotine Cross vs Valkyrie Randgris", "by": "Matheus"},
+   {"id": "TSQzUxA9h2g", "title": "Guillotine Cross vs Thanatos", "by": "Matheus"}
+  ],
+  "sorcerer": [
+   {"id": "r9BU1L0Euus", "title": "Sorcerer vs Verus MVP", "by": "TechnoViking"}
+  ],
+  "sky-emperor": [
+   {"id": "pjEfitPjSzM", "title": "Sky Emperor, Moon, vs Valkyrie Randgris", "by": "Rex"},
+   {"id": "d2-qLxZlvNc", "title": "Sky Emperor, Sun, vs Valkyrie Randgris", "by": "Rex"},
+   {"id": "1xxih2tF7VU", "title": "Sky Emperor, Moon, vs Herald of Dusk", "by": "Rex"},
+   {"id": "ytZg2AFwOhI", "title": "Sky Emperor vs Herald of Dusk", "by": "Rex"},
+   {"id": "W4lBsCccXso", "title": "Sky Emperor, Sun, vs Valkyrie Randgris", "by": "Rex"}
+  ],
+  "rune-knight": [
+   {"id": "jihuSujMbq8", "title": "Rune Knight vs Herald of Dusk", "by": "Matheus"},
+   {"id": "iTQSx-mqL3w", "title": "Rune Knight vs Valkyrie Randgris", "by": "Matheus"}
+  ],
+  "royal-guard": [
+   {"id": "LRMo8s68ZEM", "title": "Royal Guard vs Valkyrie Randgris", "by": "Matheus"},
+   {"id": "uhHhAnxUqPQ", "title": "Royal Guard vs Valkyrie Randgris", "by": "Gaki"},
+   {"id": "K5QaK46ikKU", "title": "Royal Guard vs Kiel D-01", "by": "Gaki"}
+  ],
+  "minstrel-wanderer": [
+   {"id": "8S3xv6vV7yI", "title": "Wanderer vs Verus MVP", "by": "TechnoViking"},
+   {"id": "kBfsfkC3mrc", "title": "Wanderer vs Song of Despair", "by": "Bovi"},
+   {"id": "rTTPQH3Ngpk", "title": "Wanderer vs Ragged Golem", "by": "BetoLira"},
+   {"id": "YPLCvFWiAIw", "title": "Wanderer vs Verus", "by": "BetoLira"}
+  ],
+  "kagemusha": [
+   {"id": "Lfozj4q84W8", "title": "Kagerou vs Atroce", "by": "BetoLira"}
+  ],
+  "maboroshi": [
+   {"id": "uwwUMGw6mH0", "title": "Maboroshi vs Ragged Golem", "by": "BetoLira"}
+  ],
+  "warlock": [
+   {"id": "niM4F_ghHF4", "title": "Warlock vs Valkyrie Randgris", "by": "Rex"}
+  ],
+  "rebel": [
+   {"id": "CL_p3VwIT-w", "title": "Rebellion vs Atroce, after the changes", "by": "BetoLira"},
+   {"id": "7WW0SYi5aCI", "title": "Pistol Rebellion vs Atroce", "by": "BetoLira"}
+  ],
+  "champion": [
+   {"id": "Ve7CPNalYC0", "title": "Champion vs Herald of Dusk", "by": "Matheus"}
+  ],
+  "high-wizard": [
+   {"id": "BjEig9Jr6ck", "title": "High Wizard vs Gloom Under Night", "by": "Sleepy"},
+   {"id": "cuPxftfaoq8", "title": "High Wizard vs Final Defense Drone", "by": "Sleepy"}
+  ],
+  "soul-reaper": [
+   {"id": "mV_GDBMbETo", "title": "Soul Reaper in the ruins", "by": "Arthur L"},
+   {"id": "rN31MnCwoTY", "title": "Soul Reaper vs Verus MVP", "by": "TechnoViking"}
+  ],
+  "soul-ascetic": [
+   {"id": "H_iRimrndv0", "title": "Soul Ascetic vs Valkyrie Randgris", "by": "Rex"}
+  ],
+  "monk": [
+   {"id": "Kc_dhFLUIDA", "title": "Monk vs Baphomet", "by": "BetoLira"}
+  ]
+ }
+}

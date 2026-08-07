@@ -508,6 +508,7 @@ def build():
         <p class="eyebrow">{count} <span data-i18n="mvp.eyebrow">bosses</span></p>
         <h1 data-i18n="mvp.title">Bosses do not wander here. You call them</h1>
         <p class="lede" data-i18n="mvp.lede">Every boss sits behind an altar on one map. To open it you hand over one of two lists. Option 1 is usually a pile of ordinary drops from that map. Option 2 is a handful of items that only champion monsters carry, marked in gold below. Plenty of altars offer just one of the two.</p>
+        <p class="guide-credit"><span data-i18n="mvp.credit">Altars, drop tables and relic gear documented by</span> <b>guild [SENAI]</b></p>
       </div>
     </div>
   </section>

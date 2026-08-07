@@ -378,4 +378,8 @@ window.NM_I18N_REGISTER('ja', {
   'g.lvBosses': '近くの祭壇',
   'g.lvWho': 'このエリアが向いている人',
   'nav.route': 'レベリングルート',
+  'mvp.credit': '祭壇、ドロップ表、レリック装備の調査',
+  'cls.videosEyebrow': 'プレイヤーの動画',
+  'cls.videosTitle': '実際のプレイを見る',
+  'cls.noVideos': 'このクラスの動画はまだありません。プレイを録画してDiscordに投稿してください。',
 });

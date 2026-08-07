@@ -378,4 +378,8 @@ window.NM_I18N_REGISTER('pt', {
   'g.lvBosses': 'Altares por perto',
   'g.lvWho': 'Quem mais aproveita esta parada',
   'nav.route': 'Rota de level',
+  'mvp.credit': 'Altares, tabelas de drop e equipamento de relíquia documentados pela',
+  'cls.videosEyebrow': 'Da comunidade',
+  'cls.videosTitle': 'Veja em ação',
+  'cls.noVideos': 'Ainda não há vídeos desta classe. Grave sua gameplay e poste no Discord.',
 });

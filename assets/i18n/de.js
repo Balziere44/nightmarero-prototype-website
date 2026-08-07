@@ -378,4 +378,8 @@ window.NM_I18N_REGISTER('de', {
   'g.lvBosses': 'Altäre in Reichweite',
   'g.lvWho': 'Für wen sich die Station lohnt',
   'nav.route': 'Levelroute',
+  'mvp.credit': 'Altäre, Droptabellen und Relikt-Ausrüstung dokumentiert von',
+  'cls.videosEyebrow': 'Von den Spielern',
+  'cls.videosTitle': 'Sieh sie im Einsatz',
+  'cls.noVideos': 'Noch keine Videos zu dieser Klasse. Nimm dein Gameplay auf und poste es im Discord.',
 });

@@ -3204,6 +3204,98 @@ html[data-theme="light"] .site-footer { background: color-mix(in srgb, var(--bg)
 }
 
 /* --------------------------------------------------------------------------
+   20j. Community videos on the class pages
+
+   A card is a thumbnail with a play button. The real player replaces it on
+   click, so nothing from YouTube is requested until then.
+   -------------------------------------------------------------------------- */
+
+.vid-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap: 0.9rem;
+}
+.vid-card,
+.vid-frame {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid var(--surface-line);
+  border-radius: var(--radius-md);
+  background: var(--surface-2);
+  padding: 0;
+}
+.vid-card { cursor: pointer; text-align: left; }
+.vid-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: scale 0.4s var(--ease), opacity 0.3s var(--ease);
+}
+.vid-card:hover img { scale: 1.04; opacity: 0.85; }
+.vid-play {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--accent) 88%, transparent);
+  box-shadow: 0 4px 24px rgb(0 0 0 / 0.45);
+  transition: scale 0.25s var(--ease);
+}
+.vid-play::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0.55rem 0 0.55rem 0.95rem;
+  border-color: transparent transparent transparent #fff;
+  translate: 0.12rem 0;
+}
+.vid-card:hover .vid-play,
+.vid-card:focus-visible .vid-play { scale: 1.12; }
+.vid-meta {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  gap: 0.1rem;
+  padding: 1.6rem 0.85rem 0.7rem;
+  background: linear-gradient(to top, rgb(0 0 0 / 0.85), transparent);
+  color: #fff;
+}
+.vid-title {
+  font-size: 0.87rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+.vid-by {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  opacity: 0.75;
+}
+.vid-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.vid-empty {
+  padding: 1.6rem;
+  border: 1px dashed var(--surface-line);
+  border-radius: var(--radius-md);
+  text-align: center;
+  color: var(--text-muted);
+}
+.vid-empty + p { margin-top: 0.8rem; text-align: center; }
+
+/* --------------------------------------------------------------------------
    21. Reveal on scroll
    -------------------------------------------------------------------------- */
 
