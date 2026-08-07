@@ -377,4 +377,5 @@ window.NM_I18N_REGISTER('pt', {
   'g.lvGear': 'Equipamentos que caem aqui',
   'g.lvBosses': 'Altares por perto',
   'g.lvWho': 'Quem mais aproveita esta parada',
+  'nav.route': 'Rota de level',
 });

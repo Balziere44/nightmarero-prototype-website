@@ -377,4 +377,5 @@ window.NM_I18N_REGISTER('fr', {
   'g.lvGear': 'Équipement qui tombe ici',
   'g.lvBosses': 'Autels à portée',
   'g.lvWho': 'À qui profite cette étape',
+  'nav.route': 'Itinéraire de niveau',
 });

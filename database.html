@@ -74,9 +74,14 @@
     </a>
     <nav class="nav" aria-label="Main">
       <a href="index.html#server" data-i18n="nav.server">The server</a>
-      <a href="guide.html" data-i18n="nav.guide">New players</a>
+      <div class="nav-drop">
+        <button class="nav-drop-btn" type="button" aria-expanded="false" aria-haspopup="true" data-i18n="nav.guide">New players</button>
+        <div class="nav-drop-menu" role="menu">
+          <a href="guide.html" role="menuitem" data-i18n="nav.route">Levelling route</a>
+          <a href="quiz.html" role="menuitem" data-i18n="nav.quiz">Class test</a>
+        </div>
+      </div>
       <a href="classes.html" data-i18n="nav.classes">Classes</a>
-      <a href="quiz.html" data-i18n="nav.quiz">Class test</a>
       <div class="nav-drop">
         <button class="nav-drop-btn -on" type="button" aria-expanded="false" aria-haspopup="true" data-i18n="nav.database">Database</button>
         <div class="nav-drop-menu" role="menu">
@@ -119,9 +124,10 @@
     <nav aria-label="Mobile">
       <a href="index.html#server" data-i18n="nav.server">The server</a>
       <a href="index.html#features" data-i18n="nav.features">Features</a>
-      <a href="guide.html" data-i18n="nav.guide">New players</a>
+      <span class="drawer-group" data-i18n="nav.guide">New players</span>
+      <a class="-sub" href="guide.html" data-i18n="nav.route">Levelling route</a>
+      <a class="-sub" href="quiz.html" data-i18n="nav.quiz">Class test</a>
       <a href="classes.html" data-i18n="nav.classes">Classes</a>
-      <a href="quiz.html" data-i18n="nav.quiz">Class test</a>
       <span class="drawer-group" data-i18n="nav.database">Database</span>
       <a class="-sub" href="database.html" data-i18n="nav.items">Items and cards</a>
       <a class="-sub" href="mvps.html" data-i18n="nav.mvps">MVPs and altars</a>

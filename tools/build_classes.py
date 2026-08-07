@@ -220,56 +220,73 @@ def head(prefix, title, description, canonical, extra_ld="", og_image="assets/so
            p=prefix, ld=extra_ld, sprite=SPRITE, ogimg=og_image)
 
 
+# The two nav entries that open onto more than one page. Both the desktop
+# dropdowns and the drawer groups are generated from these, so a page added
+# here shows up in both without touching the markup.
+NEW_PAGES = [
+    ("guide.html", "nav.route", "Levelling route"),
+    ("quiz.html", "nav.quiz", "Class test"),
+]
 DB_PAGES = [
     ("database.html", "nav.items", "Items and cards"),
     ("mvps.html", "nav.mvps", "MVPs and altars"),
     ("quests.html", "nav.quests", "Quests"),
 ]
+DROPS = [("nav.guide", "New players", NEW_PAGES),
+         ("nav.database", "Database", DB_PAGES)]
+
+
+def nav_drop(prefix, active, key, label, pages):
+    inside = any(page == active for page, _k, _l in pages)
+    items = "".join(
+        '\n          <a href="{p}{page}" role="menuitem"{cur} data-i18n="{k}">{l}</a>'
+        .format(p=prefix, page=page, k=k, l=l,
+                cur=' aria-current="page"' if page == active else "")
+        for page, k, l in pages)
+    return """      <div class="nav-drop">
+        <button class="nav-drop-btn{open}" type="button" aria-expanded="false" aria-haspopup="true" data-i18n="{key}">{label}</button>
+        <div class="nav-drop-menu" role="menu">{items}
+        </div>
+      </div>""".format(open=" -on" if inside else "", key=key, label=label,
+                       items=items)
 
 
 def nav_desktop(prefix, active):
-    """The database entry is a dropdown, since it has three pages under it."""
-    inside = any(page == active for page, _k, _l in DB_PAGES)
-    items = "".join(
-        '\n          <a href="{p}{page}" role="menuitem"{cur} data-i18n="{k}">{l}</a>'
-        .format(p=prefix, page=page, k=key, l=label,
-                cur=' aria-current="page"' if page == active else "")
-        for page, key, label in DB_PAGES)
+    drops = {key: nav_drop(prefix, active, key, label, pages)
+             for key, label, pages in DROPS}
 
     return """      <a href="{p}index.html#server" data-i18n="nav.server">The server</a>
-      <a href="{p}guide.html"{c_guide} data-i18n="nav.guide">New players</a>
+{new}
       <a href="{p}classes.html"{c_classes} data-i18n="nav.classes">Classes</a>
-      <a href="{p}quiz.html"{c_quiz} data-i18n="nav.quiz">Class test</a>
-      <div class="nav-drop">
-        <button class="nav-drop-btn{open}" type="button" aria-expanded="false" aria-haspopup="true" data-i18n="nav.database">Database</button>
-        <div class="nav-drop-menu" role="menu">{items}
-        </div>
-      </div>
+{db}
       <a href="https://wiki.nightmareofragnarok.com/" target="_blank" rel="noopener" data-i18n="nav.wiki">Wiki</a>
       <a href="{p}download.html"{c_dl} data-i18n="nav.download">Download</a>""".format(
-        p=prefix, items=items,
-        open=" -on" if inside else "",
-        c_guide=' aria-current="page"' if active == "guide.html" else "",
+        p=prefix, new=drops["nav.guide"], db=drops["nav.database"],
         c_classes=' aria-current="page"' if active == "classes.html" else "",
-        c_quiz=' aria-current="page"' if active == "quiz.html" else "",
         c_dl=' aria-current="page"' if active == "download.html" else "")
 
 
-def nav_drawer(prefix):
+def drawer_group(prefix, key, label, pages):
     subs = "".join(
         '\n      <a class="-sub" href="{p}{page}" data-i18n="{k}">{l}</a>'
-        .format(p=prefix, page=page, k=key, l=label)
-        for page, key, label in DB_PAGES)
+        .format(p=prefix, page=page, k=k, l=l) for page, k, l in pages)
+    return ('      <span class="drawer-group" data-i18n="%s">%s</span>%s'
+            % (key, label, subs))
+
+
+def nav_drawer(prefix):
+    groups = {key: drawer_group(prefix, key, label, pages)
+              for key, label, pages in DROPS}
     return """      <a href="{p}index.html#server" data-i18n="nav.server">The server</a>
       <a href="{p}index.html#features" data-i18n="nav.features">Features</a>
-      <a href="{p}guide.html" data-i18n="nav.guide">New players</a>
+{new}
       <a href="{p}classes.html" data-i18n="nav.classes">Classes</a>
-      <a href="{p}quiz.html" data-i18n="nav.quiz">Class test</a>
-      <span class="drawer-group" data-i18n="nav.database">Database</span>{subs}
+{db}
       <a href="https://wiki.nightmareofragnarok.com/" target="_blank" rel="noopener" data-i18n="nav.wiki">Wiki</a>
       <a href="{p}download.html" data-i18n="nav.download">Download</a>
       <a href="{p}index.html#start" data-i18n="nav.start">Get started</a>
-      <a href="{p}index.html#faq" data-i18n="nav.faq">FAQ</a>""".format(p=prefix, subs=subs)
+      <a href="{p}index.html#faq" data-i18n="nav.faq">FAQ</a>""".format(
+        p=prefix, new=groups["nav.guide"], db=groups["nav.database"])
 
 
 def header(prefix, active):

@@ -385,6 +385,26 @@ that hold a reference table instead of a step list.
 The potion recipes come from a player made wiki rather than from Twilight, and
 are labelled as such on the page along with the date they were last touched.
 
+## The navigation
+
+Two entries open onto more than one page: New players (the levelling route and
+the class test) and Database (items, MVPs, quests). Both the desktop dropdowns
+and the drawer groups come from `NEW_PAGES` and `DB_PAGES` in
+`tools/build_classes.py`.
+
+The generated pages take their header from `header()`. `index.html`,
+`database.html`, `quiz.html` and `download.html` are hand written and carry
+their own copy, so after any nav change:
+
+```bash
+python tools/sync_nav.py       # paste the generated nav into the four copies
+python tools/build_classes.py  # then rebuild everything else
+```
+
+`sync_nav.py` is safe to re-run; it reports which pages it actually changed.
+
+---
+
 ## The new player guide
 
 `guide.html` is the page for people who have never played here. It carries the

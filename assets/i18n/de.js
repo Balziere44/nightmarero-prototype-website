@@ -377,4 +377,5 @@ window.NM_I18N_REGISTER('de', {
   'g.lvGear': 'Ausrüstung von hier',
   'g.lvBosses': 'Altäre in Reichweite',
   'g.lvWho': 'Für wen sich die Station lohnt',
+  'nav.route': 'Levelroute',
 });

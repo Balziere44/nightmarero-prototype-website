@@ -577,9 +577,7 @@ html[data-theme="light"] .btn.-primary:hover { --btn-bg: var(--red-500); }
   align-items: center;
   gap: 0.15rem;
 }
-/* Seven entries, and German and French are the widest. Below this the
-   burger takes over. */
-@media (min-width: 1120px) { .nav { display: flex; } }
+@media (min-width: 1000px) { .nav { display: flex; } }
 
 .nav a {
   position: relative;
@@ -787,7 +785,7 @@ html[data-theme="light"] .icon-btn .i-sun { display: none; }
 
 /* --- mobile drawer --- */
 .burger { display: grid; }
-@media (min-width: 1120px) { .burger { display: none; } }
+@media (min-width: 1000px) { .burger { display: none; } }
 
 .drawer {
   position: fixed;

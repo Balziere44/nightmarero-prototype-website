@@ -377,4 +377,5 @@ window.NM_I18N_REGISTER('ja', {
   'g.lvGear': 'ここで落ちる装備',
   'g.lvBosses': '近くの祭壇',
   'g.lvWho': 'このエリアが向いている人',
+  'nav.route': 'レベリングルート',
 });

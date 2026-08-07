@@ -377,4 +377,5 @@ window.NM_I18N_REGISTER('it', {
   'g.lvGear': 'Equipaggiamento che cade qui',
   'g.lvBosses': 'Altari vicini',
   'g.lvWho': 'A chi conviene questa tappa',
+  'nav.route': 'Percorso di livello',
 });
