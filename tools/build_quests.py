@@ -410,9 +410,11 @@ def build():
 
     parts = [
         head("", "Quest walkthroughs, spoilers included | Nightmare RO",
-             "Step by step routes for the hidden quests on Nightmare RO: "
-             "challenge dungeon keys, the Fallen Hero chain, Celine Kimi, "
-             "relic gear enchants and potion crafting.",
+             # no quest names here: this text shows up in search results, and
+             # the whole point of the page is that you choose to be spoiled
+             "Step by step routes for the quests on Nightmare RO that no NPC "
+             "points you at. Everything sits behind a spoiler gate, so you "
+             "only read what you ask for.",
              "quests.html", ld),
         header("", "quests.html"),
         """<main id="main">
