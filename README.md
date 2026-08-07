@@ -387,23 +387,37 @@ are labelled as such on the page along with the date they were last touched.
 
 ## The new player guide
 
-`guide.html` is the page for people who have never played here. It is a shell
-waiting for content: right now it shows a placeholder and points at the pages
-that already answer most early questions.
+`guide.html` is the page for people who have never played here. It carries the
+levelling route, one card per level band.
 
 ```bash
+python tools/build_database.py    # the guide reads assets/data/items.json
 python tools/build_guide.py
 ```
 
-To put a guide on it, append an entry to `GUIDES` in `tools/build_guide.py` and
-rebuild. A guide is a title, a credit, a blurb, an intro and a list of blocks,
-where a block is a numbered route (`steps`), a fork with a card per branch
-(`split`), or a plain list (`notes`). The placeholder disappears as soon as
-there is one entry.
+The route lives in `LEVELS` in `tools/build_guide.py`: level band, place, what
+to collect, which monsters the stop is about, which altars sit on those maps,
+and who gets the most out of it. Everything else is looked up rather than
+typed:
 
-Guides are prose someone wrote rather than data anyone exports, which is why
-they live in the script instead of in a sheet. Credit the author in the
-`credit` field; it is rendered under the title.
+- **cards** are matched on the monster name, because a card is named after the
+  monster that drops it
+- **gear** is matched against its own drop list
+- **altars** link straight to the boss on `mvps.html`
+
+So the guide cannot drift from the database. Rebuild after a sheet change and
+every card and stat on the page is current. A typo in a monster name quietly
+drops its card, so the build prints any stop whose monsters matched nothing.
+
+Monster lists only claim what the sheets tie to a map: a monster named by an
+altar, by the champion tab, or by the route itself. They are not full spawn
+lists, and the page says so.
+
+`GUIDES` is the older free form section, kept for prose guides. An entry is a
+title, a credit, a blurb, an intro and a list of blocks, where a block is a
+numbered route (`steps`), a fork with a card per branch (`split`), or a plain
+list (`notes`). Credit the author in the `credit` field; it renders under the
+title.
 
 ---
 

@@ -3073,6 +3073,130 @@ html[data-theme="light"] .site-footer { background: color-mix(in srgb, var(--bg)
   font-size: 0.9rem;
   line-height: 1.55;
 }
+/* ---- levelling route ---- */
+
+.lv-list {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+.lv-stop {
+  padding: 1.2rem 1.3rem 1.4rem;
+  border: 1px solid var(--surface-line);
+  border-radius: var(--radius-md);
+  background: var(--surface-1);
+  scroll-margin-top: calc(var(--header-h) + 1rem);
+}
+.lv-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+.lv-band {
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--accent) 18%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+.lv-top h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.lv-goal { margin-bottom: 0.7rem; }
+.lv-mobs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 0.4rem;
+}
+.lv-mob {
+  padding: 0.16rem 0.5rem;
+  border: 1px solid var(--surface-line);
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+.lv-head {
+  margin: 1.1rem 0 0.45rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.lv-gear {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.lv-gear li {
+  padding: 0.5rem 0.7rem;
+  border: 1px solid var(--surface-line);
+  border-radius: var(--radius-sm);
+  font-size: 0.83rem;
+  line-height: 1.5;
+}
+.lv-gear li .dim { font-size: 0.72rem; }
+.lv-gear li span:last-child {
+  display: block;
+  margin-top: 0.15rem;
+  color: var(--text-muted);
+}
+.lv-bosses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.lv-boss {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  padding: 0.45rem 0.75rem;
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+  border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+  font-size: 0.86rem;
+  font-weight: 600;
+  transition: background-color 0.2s var(--ease);
+}
+.lv-boss:hover { background: color-mix(in srgb, var(--accent) 20%, transparent); }
+.lv-map {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--text-dim);
+}
+.lv-who {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.lv-who span {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.lv-note {
+  margin-top: 0.6rem;
+  padding-left: 0.8rem;
+  border-left: 2px solid var(--surface-line);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
 .guide-next { margin-top: 1.6rem; }
 .guide-next h3 {
   margin-bottom: 0.7rem;
