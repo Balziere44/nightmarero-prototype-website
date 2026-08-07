@@ -24,9 +24,12 @@ STATUS = [
     ("blind", "Blind", ["Blinded", "Blind"],
      "Cuts the target's Hit and Flee by a flat 30, and shrinks how much of "
      "the screen a player can see."),
-    ("vuln", "Vulnerable", ["Vulnerable", "Breach"],
-     "Strips 40% of the target's hard and soft defence. No attack bonus, "
-     "unlike the Provoke you remember."),
+    ("vuln", "Vulnerable", ["Vulnerable"],
+     "Strips up to 40% of the target's hard and soft defence. No attack "
+     "bonus, unlike the Provoke you remember."),
+    ("breach", "Breach", ["Breached", "Breach"],
+     "The same idea aimed at magic defence instead. It is how a caster gets "
+     "through a high MDef enemy, and Breach Potency raises what it strips."),
     ("frozen", "Frozen", ["Frozen", "Freeze", "Chill", "Cold"],
      "Cancels casting and locks the target until it takes damage. Chill slows "
      "movement and attack speed, Cold is the follow up during the resist window."),

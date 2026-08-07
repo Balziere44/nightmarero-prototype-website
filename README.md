@@ -550,8 +550,19 @@ The colours live in one place, `:root` in `style.css`, as `--kw-bleed`,
 The terms themselves are defined in the `STATUS` list in
 `tools/status_codex.py`. Matching is case sensitive, so an ordinary lowercase
 "cold" or "slow" in a sentence is left alone. To add a status, add a row there
-with a new key, add `--kw-<key>` to both theme blocks in `style.css`, and
-re-run the build.
+with a new key, add `--kw-<key>` and a `.kw-<key>` rule to both theme blocks
+in `style.css`, add a `codex.<key>` line to all five locales, and re-run the
+build.
+
+The card descriptions are keyed by family name, `codex.bleed`, `codex.breach`
+and so on, not by position, so a new family can be inserted anywhere in the
+list without renumbering the others.
+
+Vulnerable and Breach are two families, not one. Vulnerable strips up to 40%
+of hard and soft defence, Breach does the same to magic defence, and the
+Scholar, Warlock and Soul Reaper trees are built around Breach specifically.
+The longest term wins when they overlap, so "Internal Bleeding" is never
+matched as "Bleeding".
 
 Each class page shows chips only for the statuses that class actually
 mentions, so a Crusader page shows Bleeding, Blind and Vulnerable and nothing

@@ -381,14 +381,14 @@ def status_cards():
           <i class="swatch" aria-hidden="true"></i>
           <div>
             <b>{label}</b>
-            <span data-i18n="codex.d{n}">{desc}</span>
+            <span data-i18n="codex.{key}">{desc}</span>
             <em>{terms}</em>
           </div>
         </li>""".format(
-            key=key, label=esc(label), n=i + 1, desc=esc(desc),
+            key=key, label=esc(label), desc=esc(desc),
             terms=esc(", ".join(sorted(set(terms),
                                        key=lambda w: (-len(w), w))[:3])))
-        for i, (key, label, terms, desc) in enumerate(STATUS))
+        for key, label, terms, desc in STATUS)
 
 
 def build_mechanics():

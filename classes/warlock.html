@@ -199,7 +199,7 @@
         <p class="muted">Warlock is the alternative advancement option for Wizards. While their previous job provided them mastery over all of the natural elements, the Warlock is not satisfied with this, and so turns its efforts toward much darker magics. Though not without cost, the Warlock has managed to chain these supernatural forces down, bending them to their will, giving them unique access to Dark and Undead property magic, and they join Soul Linkers in gaining access to Ghost property magic.</p>
         <p class="muted">The Warlock skill tree is dominated by two primary skills: Void Infusion and Void Channeling. Void Infusion grants the user a buff that alters the property of all magic they use to the property of their choice, either Dark, Undead, or Ghost. This unique ability comes at a price though, saddling the Warlock with a significant weakness based on which property is chosen.</p>
         <p class="muted">Void Channeling allows the user to convert their HP into magical power. By consuming a large amount of Max HP, they instantly generate a number of <b class="mech">Void Spheres</b>, a unique resource used to empower other Warlock skills.</p>
-        <p class="muted">These two skills work in conjunction with three minor branches of the skill tree. The first are the Phantasmal Skills, Ghost Property spells that operate around the use of the <b class="kw kw-vuln">Breach</b> status. And for good reason: setting the user's Void Infusion to Ghost property reduces their Magic Defense Pierce to zero, meaning <b class="kw kw-vuln">Breach</b> will be the only way for them to deal with high MDef enemies.</p>
+        <p class="muted">These two skills work in conjunction with three minor branches of the skill tree. The first are the Phantasmal Skills, Ghost Property spells that operate around the use of the <b class="kw kw-breach">Breach</b> status. And for good reason: setting the user's Void Infusion to Ghost property reduces their Magic Defense Pierce to zero, meaning <b class="kw kw-breach">Breach</b> will be the only way for them to deal with high MDef enemies.</p>
         <p class="muted">The second branch are the Death skills, dealing Undead property damage while absorbing the target's HP to heal the user. As you might expect, this is also needed, as setting one's Void Infusion to Undead property causes them to lose HP over time.</p>
         <p class="muted">The final branch are the Abyssal skills, Dark property attacks that interact heavily with the <b class="kw kw-burn">Burning</b> status. In addition to being uniquely positioned to handle Holy property enemies, the Abyssal skills also boast the highest raw damage of any of the Warlock branches. These benefits come at the cost of enormous SP Costs, together with the Void Infusion drawback of reduced SP Regeneration. The Abyssal skills offset this demerit by generating SP for the user as they are used.</p>
       </div>
@@ -225,7 +225,7 @@
         <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
       </div>
       <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Void Spheres</span></div>
-      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-burn">Burning</span><span class="kw-vuln">Vulnerable</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
+      <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-burn">Burning</span><span class="kw-breach">Breach</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
       <div class="type-key"><span class="sk-magic" data-i18n="cls.t.magic">Magic</span><span class="sk-support" data-i18n="cls.t.support">Support</span></div>
 
       <div class="skill-branch">
@@ -249,21 +249,21 @@
         <ul class="skill-grid">
           <li class="skill-card sk-magic" id="s-phantasmal-burst">
             <div class="sk-top"><strong>Phantasmal Burst</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
-            <p class="sk-short">Ghost bolt that inflicts <b class="kw kw-vuln">Breach</b> and can generate <b class="mech">Void Spheres</b>.</p>
-            <p class="sk-body">Invokes forbidden magic to turn the target's soul against their own body, dealing Ghost property damage and inflicting the <b class="kw kw-vuln">Breach</b> status. Has a small chance to summon a <b class="mech">Void Sphere</b> when cast. If Void Infusion: Ghost is active, the chance is doubled.</p>
+            <p class="sk-short">Ghost bolt that inflicts <b class="kw kw-breach">Breach</b> and can generate <b class="mech">Void Spheres</b>.</p>
+            <p class="sk-body">Invokes forbidden magic to turn the target's soul against their own body, dealing Ghost property damage and inflicting the <b class="kw kw-breach">Breach</b> status. Has a small chance to summon a <b class="mech">Void Sphere</b> when cast. If Void Infusion: Ghost is active, the chance is doubled.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-void-infusion">Void Infusion</a></p>
           </li>
           <li class="skill-card sk-magic" id="s-phantasmal-crush">
             <div class="sk-top"><strong>Phantasmal Crush</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Ghost AoE amplified by held <b class="mech">Void Spheres</b>.</p>
-            <p class="sk-body">Invokes forbidden magic to deal damage directly to the souls of all enemies in a given area, attempting to inflict the <b class="kw kw-vuln">Breach</b> Status on them. Deals additional damage based on the number of <b class="mech">Void Spheres</b> the user has.</p>
+            <p class="sk-body">Invokes forbidden magic to deal damage directly to the souls of all enemies in a given area, attempting to inflict the <b class="kw kw-breach">Breach</b> Status on them. Deals additional damage based on the number of <b class="mech">Void Spheres</b> the user has.</p>
             <ul class="sk-riders"><li>If Void Infusion: Ghost is active, this skill's cooldown is halved.</li></ul>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-void-infusion">Void Infusion</a></p>
           </li>
           <li class="skill-card sk-magic" id="s-phantasmal-burden">
             <div class="sk-top"><strong>Phantasmal Burden</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
-            <p class="sk-short">Sphere-consuming Ghost DoT scaled by <b class="kw kw-vuln">Breach</b> Potency.</p>
-            <p class="sk-body">Puts a supernatural burden on the souls of the target and all enemies in the area around them. Consumes the user's remaining <b class="mech">Void Spheres</b> to deal Ghost Property damage over time to all enemies around the target. The damage of this skill is increased by the user's <b class="kw kw-vuln">Breach</b> Potency.</p>
+            <p class="sk-short">Sphere-consuming Ghost DoT scaled by <b class="kw kw-breach">Breach</b> Potency.</p>
+            <p class="sk-body">Puts a supernatural burden on the souls of the target and all enemies in the area around them. Consumes the user's remaining <b class="mech">Void Spheres</b> to deal Ghost Property damage over time to all enemies around the target. The damage of this skill is increased by the user's <b class="kw kw-breach">Breach</b> Potency.</p>
             <ul class="sk-riders"><li>If Void Infusion: Ghost is active, this skill's Fixed Cast Time is removed.</li></ul>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-void-infusion">Void Infusion</a></p>
           </li>
