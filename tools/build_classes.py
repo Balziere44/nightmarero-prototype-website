@@ -200,8 +200,12 @@ def head(prefix, title, description, canonical, extra_ld="", og_image="assets/so
 <link rel="manifest" href="{p}site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{p}assets/css/style.css">
+<!-- The webfonts are on someone else's server, so they are loaded out of the
+     critical path: the page paints in the fallback face and swaps when they
+     arrive, instead of holding first paint on a third party round trip. -->
+<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"></noscript>
 <script>
 (function () {{
   try {{
@@ -679,6 +683,18 @@ def class_page(reg, name, blocks):
     summary = intro[0] if intro else "%s is a playable class on Nightmare RO." % name
     desc = (summary[:157] + "...") if len(summary) > 160 else summary
 
+    # Every community clip on the page gets a VideoObject, which is what puts
+    # a class page in the video results rather than only the web results.
+    clips = "".join("""    ,{{
+      "@type": "VideoObject",
+      "name": "{t}",
+      "description": "{t}, played on Nightmare RO.",
+      "thumbnailUrl": "https://i.ytimg.com/vi/{v}/hqdefault.jpg",
+      "uploadDate": "2026-01-01",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/{v}"
+    }}""".format(t=esc(c["title"].replace('"', "'")), v=esc(c["id"]))
+        for c in CLASS_VIDEOS.get(slug, []))
+
     ld = """<script type="application/ld+json">
 {{
   "@context": "https://schema.org",
@@ -700,12 +716,21 @@ def class_page(reg, name, blocks):
       "publisher": {{ "@type": "Organization", "name": "Nightmare RO" }},
       "description": "{desc}"
     }}
+{clips}
   ]
 }}
-</script>""".format(site=SITE, name=esc(name), slug=slug, desc=esc(desc.replace('"', "'")))
+</script>""".format(site=SITE, name=esc(name), slug=slug,
+                    desc=esc(desc.replace('"', "'")), clips=clips)
 
     title = "%s | Nightmare RO class guide" % name
-    parts = [head("../", title, desc, "classes/%s.html" % slug, ld),
+
+    # The class artwork makes a far better share card than the site cover, and
+    # it is what people are pasting into Discord anyway.
+    sexes = has_art(slug)
+    og = ("assets/img/classes/%s-%s.webp" % (slug, sexes[0])) if sexes \
+        else "assets/social/og-cover.jpg"
+
+    parts = [head("../", title, desc, "classes/%s.html" % slug, ld, og),
              header("../", "classes.html"),
              '<main id="main">']
 

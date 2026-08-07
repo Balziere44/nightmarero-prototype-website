@@ -424,9 +424,9 @@ def build():
 
     parts = [
         head("", "New player guide | Nightmare RO",
-             "Where to start on Nightmare RO: a levelling route from the "
-             "first job to level fifty, which cards are worth stopping for, "
-             "and where to go next.",
+             "Where to start on Nightmare RO: a levelling route from level 1 "
+             "to 99, which monsters and cards each stop is worth, and which "
+             "boss altars sit close enough to be worth the detour.",
              "guide.html", ld),
         header("", "guide.html"),
         """<main id="main">

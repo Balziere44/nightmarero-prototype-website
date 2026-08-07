@@ -32,3 +32,11 @@
 
 /assets/i18n/*
   Cache-Control: public, max-age=3600, must-revalidate
+
+/assets/quiz/*
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# The item database is rebuilt from the sheets, not on every deploy, and it is
+# the biggest thing the site downloads.
+/assets/data/*
+  Cache-Control: public, max-age=86400, must-revalidate
