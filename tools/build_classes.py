@@ -809,7 +809,7 @@ def class_page(reg, name, blocks):
             <a class="btn -ghost -lg" href="{wiki}" target="_blank" rel="noopener">
               <svg aria-hidden="true"><use href="#i-book"></use></svg><span data-i18n="cta.wiki">Open the wiki</span>
             </a>
-            <a class="btn -ghost -lg" href="../classes.html" data-i18n="cta.allClasses">See all 55 classes</a>
+            <a class="btn -ghost -lg" href="../classes.html" data-i18n="cta.allClasses">See the revamped classes</a>
           </div>
         </div>
       </div>
@@ -871,8 +871,8 @@ def classes_index(reg):
 }}
 </script>""".format(site=SITE)
 
-    parts = [head("", "All 55 Classes | Nightmare RO",
-                  "Every playable class on Nightmare RO. Nine starting classes, fourteen second tier and thirty two third tier classes, each with a fully rewritten skill set.",
+    parts = [head("", "Revamped Classes | Nightmare RO",
+                  "Every playable class on Nightmare RO, revamped. Nine starting classes, fourteen second tier and thirty two third tier classes, each with a fully rewritten skill set.",
                   "classes.html", ld),
              header("", "classes.html"),
              """<main id="main">
@@ -883,7 +883,7 @@ def classes_index(reg):
         <li data-i18n="nav.classes">Classes</li>
       </ol></nav>
       <div class="section-head">
-        <p class="eyebrow" data-i18n="idx.eyebrow">55 classes</p>
+        <p class="eyebrow" data-i18n="idx.eyebrow">Revamped classes</p>
         <h1 data-i18n="idx.title">Pick something and see how little you remember</h1>
         <p class="lede" data-i18n="idx.lede">Every skill tree here was written from a blank page. Nine starting classes, fourteen second tier classes, and thirty two third tier classes, each branching two ways from its parent.</p>
       </div>
@@ -893,7 +893,7 @@ def classes_index(reg):
   <section class="section-pad-sm">
     <div class="shell">
       <p class="note" style="margin-bottom:var(--gap-md)">
-        <span data-i18n="idx.quizNudge">Fifty five of them is a lot to read through. If you are not sure where to start, the class test asks nine questions and picks one for you.</span>
+        <span data-i18n="idx.quizNudge">That is a lot to read through. If you are not sure where to start, the class test asks thirteen questions and picks one for you.</span>
         <a href="quiz.html" style="color:var(--accent-soft);text-decoration:underline;text-underline-offset:3px" data-i18n="idx.quizLink">Take the test</a>
       </p>
       <div class="filter-bar">

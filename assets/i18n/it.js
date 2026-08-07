@@ -1,6 +1,6 @@
 /* Italiano */
 window.NM_I18N_REGISTER('it', {
-  'idx.quizNudge': 'Cinquantacinque sono tante da leggere. Se non sai da dove iniziare, il test fa nove domande e ne sceglie una per te.',
+  'idx.quizNudge': 'Sono tante da leggere. Se non sai da dove iniziare, il test fa tredici domande e ne sceglie una per te.',
   'idx.quizLink': 'Fai il test',
   'cta.quiz': 'Indeciso? Fai il test di classe',
   'nav.quiz': 'Test di classe',
@@ -93,14 +93,14 @@ window.NM_I18N_REGISTER('it', {
   'cta.discord': 'Entra nel Discord',
   'cta.download': 'Download',
   'cta.downloadPage': 'Pagina di download',
-  'cta.classes': 'Vedi le 55 classi',
-  'cta.allClasses': 'Vedi tutte le 55 classi',
+  'cta.classes': 'Vedi le classi rifatte',
+  'cta.allClasses': 'Vedi le classi rifatte',
   'cta.browseClasses': 'Sfoglia le classi',
 
   'hero.badge': 'Apre venerdì 7 agosto 2026',
   'hero.title1': 'Il RO che conosci,',
   'hero.title2': 'ricostruito da capo a fondo',
-  'hero.lede': 'Ogni classe, abilità, oggetto e mostro qui è stato <strong>rifatto da zero</strong>. 55 classi, livello 150, boss che evochi tu stesso, e un design pensato per <strong>giocare da solo senza mai bloccarti</strong>.',
+  'hero.lede': 'Ogni classe, abilità, oggetto e mostro qui è stato <strong>rifatto da zero</strong>. Classi rifatte, livello 150, boss che evochi tu stesso e un design pensato per <strong>giocare da solo senza sbattere contro un muro</strong>.',
   'hero.foot': 'Gratis. Nessun negozio che vende potere. Solo PvE.',
   'hero.live': 'I server sono online. Entra.',
 
@@ -110,7 +110,7 @@ window.NM_I18N_REGISTER('it', {
   'cd.seconds': 'secondi',
 
   'stats.level': 'livello massimo',
-  'stats.classes': 'classi giocabili',
+  'stats.classes': 'classi finali',
   'stats.party': 'giocatori per gruppo',
   'stats.custom': 'contenuto personalizzato',
 
@@ -153,7 +153,7 @@ window.NM_I18N_REGISTER('it', {
   'feat.t8': 'Scegli una parte, o nessuna',
   'feat.d8': 'Due nazioni in guerra civile, tre linee di reputazione. Aiuta una, entrambe o nessuna. <strong>Fatti dei nemici e ti manderanno qualcuno dietro.</strong>',
 
-  'cls.eyebrow': '55 classi',
+  'cls.eyebrow': 'Classi rifatte',
   'cls.title': 'Tre tier, e nessuno si gioca come prima',
   'cls.lede': 'Nove classi iniziali, quattordici di secondo tier, trentadue di terzo tier. Ogni albero delle abilità è nato da una pagina bianca, e ogni classe di secondo tier si divide in due opzioni molto diverse.',
   'cls.t3': 'Terzo tier',
@@ -214,7 +214,7 @@ window.NM_I18N_REGISTER('it', {
   'footer.overview': 'Panoramica del server',
   'footer.legal': 'Nightmare RO è un progetto amatoriale gratuito e senza scopo di lucro. Non affiliato ad alcun editore di videogiochi commerciale.',
 
-  'idx.eyebrow': '55 classi',
+  'idx.eyebrow': 'Classi rifatte',
   'idx.title': 'Scegline una e scopri quanto poco ricordi',
   'idx.lede': 'Ogni albero delle abilità qui è nato da una pagina bianca. Nove classi iniziali, quattordici di secondo tier e trentadue di terzo tier, ognuna divisa in due strade.',
   'idx.all': 'Tutte',

@@ -1,6 +1,6 @@
 /* Français */
 window.NM_I18N_REGISTER('fr', {
-  'idx.quizNudge': 'Cinquante-cinq, ça fait beaucoup à lire. Si vous hésitez, le test pose neuf questions et en choisit une pour vous.',
+  'idx.quizNudge': 'Ça fait beaucoup à lire. Si vous hésitez, le test pose treize questions et en choisit une pour vous.',
   'idx.quizLink': 'Faire le test',
   'cta.quiz': 'Vous hésitez ? Faites le test',
   'nav.quiz': 'Test de classe',
@@ -93,14 +93,14 @@ window.NM_I18N_REGISTER('fr', {
   'cta.discord': 'Rejoindre le Discord',
   'cta.download': 'Télécharger',
   'cta.downloadPage': 'Page de téléchargement',
-  'cta.classes': 'Voir les 55 classes',
-  'cta.allClasses': 'Voir les 55 classes',
+  'cta.classes': 'Voir les classes revues',
+  'cta.allClasses': 'Voir les classes revues',
   'cta.browseClasses': 'Parcourir les classes',
 
   'hero.badge': 'Ouverture vendredi 7 août 2026',
   'hero.title1': 'Le RO que vous connaissez,',
   'hero.title2': 'reconstruit de fond en comble',
-  'hero.lede': 'Chaque classe, compétence, objet et monstre ici a été <strong>refait de zéro</strong>. 55 classes, niveau 150, des boss que vous invoquez vous-même, et un design pensé pour <strong>jouer seul sans jamais être bloqué</strong>.',
+  'hero.lede': 'Chaque classe, compétence, objet et monstre ici a été <strong>refait de zéro</strong>. Des classes revues, niveau 150, des boss que vous invoquez vous-même, et un design pensé pour <strong>jouer seul sans jamais être bloqué</strong>.',
   'hero.foot': 'Gratuit. Aucune boutique qui vend de la puissance. PvE uniquement.',
   'hero.live': 'Les serveurs sont en ligne. Entrez.',
 
@@ -110,7 +110,7 @@ window.NM_I18N_REGISTER('fr', {
   'cd.seconds': 'secondes',
 
   'stats.level': 'niveau maximum',
-  'stats.classes': 'classes jouables',
+  'stats.classes': 'classes finales',
   'stats.party': 'joueurs par groupe',
   'stats.custom': 'contenu personnalisé',
 
@@ -153,7 +153,7 @@ window.NM_I18N_REGISTER('fr', {
   'feat.t8': 'Choisissez un camp, ou pas',
   'feat.d8': 'Deux nations en guerre civile, trois lignes de réputation. Aidez l’une, les deux ou aucune. <strong>Faites-vous des ennemis et ils enverront du monde.</strong>',
 
-  'cls.eyebrow': '55 classes',
+  'cls.eyebrow': 'Classes revues',
   'cls.title': 'Trois paliers, et aucun ne se joue comme avant',
   'cls.lede': 'Neuf classes de départ, quatorze classes de deuxième palier, trente-deux de troisième palier. Chaque arbre de compétences est parti d’une page blanche, et chaque classe de deuxième palier se divise en deux options très différentes.',
   'cls.t3': 'Troisième palier',
@@ -214,7 +214,7 @@ window.NM_I18N_REGISTER('fr', {
   'footer.overview': 'Présentation du serveur',
   'footer.legal': 'Nightmare RO est un projet de fan gratuit et non commercial. Sans lien avec aucun éditeur de jeu commercial.',
 
-  'idx.eyebrow': '55 classes',
+  'idx.eyebrow': 'Classes revues',
   'idx.title': 'Choisissez-en une et voyez ce qu’il vous reste',
   'idx.lede': 'Chaque arbre de compétences ici est parti d’une page blanche. Neuf classes de départ, quatorze de deuxième palier et trente-deux de troisième palier, chacune se divisant en deux voies.',
   'idx.all': 'Toutes',

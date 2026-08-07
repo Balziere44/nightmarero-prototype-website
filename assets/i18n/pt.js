@@ -1,6 +1,6 @@
 /* Português (Brasil) */
 window.NM_I18N_REGISTER('pt', {
-  'idx.quizNudge': 'São 55 para ler. Se não sabe por onde começar, o teste faz nove perguntas e escolhe uma pra você.',
+  'idx.quizNudge': 'É bastante coisa para ler. Se não sabe por onde começar, o teste faz treze perguntas e escolhe uma pra você.',
   'idx.quizLink': 'Fazer o teste',
   'cta.quiz': 'Na dúvida? Faça o teste de classe',
   'nav.quiz': 'Teste de classe',
@@ -93,14 +93,14 @@ window.NM_I18N_REGISTER('pt', {
   'cta.discord': 'Entrar no Discord',
   'cta.download': 'Download',
   'cta.downloadPage': 'Página de download',
-  'cta.classes': 'Ver as 55 classes',
-  'cta.allClasses': 'Ver todas as 55 classes',
+  'cta.classes': 'Ver as classes revisadas',
+  'cta.allClasses': 'Ver as classes revisadas',
   'cta.browseClasses': 'Explorar as classes',
 
   'hero.badge': 'Abre sexta, 7 de agosto de 2026',
   'hero.title1': 'O RO que você conhece,',
   'hero.title2': 'reconstruído por completo',
-  'hero.lede': 'Cada classe, skill, item e monstro daqui foi <strong>refeito do zero</strong>. 55 classes, nível 150, chefes que você mesmo invoca, e um design feito pra você <strong>jogar sozinho sem bater numa parede</strong>.',
+  'hero.lede': 'Cada classe, skill, item e monstro daqui foi <strong>refeito do zero</strong>. Classes revisadas, nível 150, chefes que você mesmo invoca, e um design feito pra você <strong>jogar sozinho sem bater numa parede</strong>.',
   'hero.foot': 'Grátis para jogar. Nenhuma loja que vende poder. Só PvE.',
   'hero.live': 'Os servidores estão no ar. Entre.',
 
@@ -110,7 +110,7 @@ window.NM_I18N_REGISTER('pt', {
   'cd.seconds': 'segundos',
 
   'stats.level': 'nível máximo',
-  'stats.classes': 'classes jogáveis',
+  'stats.classes': 'classes finais',
   'stats.party': 'jogadores por grupo',
   'stats.custom': 'conteúdo customizado',
 
@@ -153,7 +153,7 @@ window.NM_I18N_REGISTER('pt', {
   'feat.t8': 'Escolha um lado, ou não',
   'feat.d8': 'Duas nações em guerra civil, três linhas de reputação. Ajude uma, as duas ou nenhuma. <strong>Faça inimigos e eles mandam gente atrás de você.</strong>',
 
-  'cls.eyebrow': '55 classes',
+  'cls.eyebrow': 'Classes revisadas',
   'cls.title': 'Três tiers, e nenhum deles joga como antes',
   'cls.lede': 'Nove classes iniciais, quatorze de segundo tier, trinta e duas de terceiro tier. Cada árvore de skills foi escrita a partir de uma página em branco, e cada classe de segundo tier se divide em duas opções bem diferentes.',
   'cls.t3': 'Terceiro tier',
@@ -214,7 +214,7 @@ window.NM_I18N_REGISTER('pt', {
   'footer.overview': 'Visão geral do servidor',
   'footer.legal': 'O Nightmare RO é um projeto de fã gratuito e sem fins lucrativos. Não tem vínculo com nenhuma publicadora comercial de jogos.',
 
-  'idx.eyebrow': '55 classes',
+  'idx.eyebrow': 'Classes revisadas',
   'idx.title': 'Escolha uma e veja o quão pouco você lembra',
   'idx.lede': 'Toda árvore de skills aqui foi escrita a partir de uma página em branco. Nove classes iniciais, quatorze de segundo tier e trinta e duas de terceiro tier, cada uma se dividindo em dois caminhos.',
   'idx.all': 'Todas',

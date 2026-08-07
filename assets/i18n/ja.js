@@ -1,6 +1,6 @@
 /* 日本語 */
 window.NM_I18N_REGISTER('ja', {
-  'idx.quizNudge': '55クラスを読み切るのは大変です。迷ったら、9問の診断が1つ選んでくれます。',
+  'idx.quizNudge': '全部読むのは大変です。迷ったら、13問の診断が1つ選んでくれます。',
   'idx.quizLink': '診断してみる',
   'cta.quiz': '迷ったらクラス診断へ',
   'nav.quiz': 'クラス診断',
@@ -93,14 +93,14 @@ window.NM_I18N_REGISTER('ja', {
   'cta.discord': 'Discordに参加',
   'cta.download': 'ダウンロード',
   'cta.downloadPage': 'ダウンロードページ',
-  'cta.classes': '55クラスを見る',
-  'cta.allClasses': '55クラスすべてを見る',
+  'cta.classes': '刷新されたクラスを見る',
+  'cta.allClasses': '刷新されたクラスを見る',
   'cta.browseClasses': 'クラス一覧を見る',
 
   'hero.badge': '2026年8月7日（金）オープン',
   'hero.title1': 'あなたの知るROを、',
   'hero.title2': '一から作り直した',
-  'hero.lede': 'ここにあるクラス、スキル、アイテム、モンスターはすべて<strong>ゼロから作り直されています</strong>。55クラス、レベル150、自分で召喚するボス、そして<strong>ソロでも行き詰まらない</strong>設計です。',
+  'hero.lede': 'ここにあるクラス、スキル、アイテム、モンスターはすべて<strong>ゼロから作り直されています</strong>。刷新されたクラス、レベル150、自分で召喚するボス、そして<strong>ソロでも行き詰まらない</strong>設計です。',
   'hero.foot': '基本無料。強さを売るショップはありません。PvE専用です。',
   'hero.live': 'サーバー稼働中です。ぜひご参加ください。',
 
@@ -110,7 +110,7 @@ window.NM_I18N_REGISTER('ja', {
   'cd.seconds': '秒',
 
   'stats.level': '最大レベル',
-  'stats.classes': 'プレイ可能クラス',
+  'stats.classes': '最終クラス',
   'stats.party': 'パーティ人数',
   'stats.custom': 'カスタムコンテンツ',
 
@@ -153,7 +153,7 @@ window.NM_I18N_REGISTER('ja', {
   'feat.t8': 'どちらにつくかは自由',
   'feat.d8': '内戦中の2つの国と3つの評判系統。片方でも、両方でも、どちらでもなくても構いません。<strong>敵を作れば刺客が送られてきます。</strong>',
 
-  'cls.eyebrow': '55クラス',
+  'cls.eyebrow': '刷新されたクラス',
   'cls.title': '3段階、どれも以前とは別物',
   'cls.lede': '1次職9、2次職14、3次職32。すべてのスキルツリーが白紙から書き起こされ、2次職はそれぞれまったく異なる2つの3次職に分岐します。',
   'cls.t3': '3次職',
@@ -214,7 +214,7 @@ window.NM_I18N_REGISTER('ja', {
   'footer.overview': 'サーバー概要',
   'footer.legal': 'Nightmare ROは無料の非営利ファンプロジェクトです。商業ゲームパブリッシャーとの関係はありません。',
 
-  'idx.eyebrow': '55クラス',
+  'idx.eyebrow': '刷新されたクラス',
   'idx.title': '選んでみれば、記憶が役に立たないと分かります',
   'idx.lede': 'ここにあるスキルツリーはすべて白紙から書き起こされています。1次職9、2次職14、3次職32。それぞれが2つの道に分かれます。',
   'idx.all': 'すべて',

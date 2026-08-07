@@ -1,6 +1,6 @@
 /* Deutsch */
 window.NM_I18N_REGISTER('de', {
-  'idx.quizNudge': 'Fünfundfünfzig sind viel zu lesen. Wenn du unsicher bist, stellt der Test neun Fragen und sucht eine für dich aus.',
+  'idx.quizNudge': 'Das ist viel zu lesen. Wenn du unsicher bist, stellt der Test dreizehn Fragen und sucht eine für dich aus.',
   'idx.quizLink': 'Zum Test',
   'cta.quiz': 'Unsicher? Mach den Klassentest',
   'nav.quiz': 'Klassentest',
@@ -93,14 +93,14 @@ window.NM_I18N_REGISTER('de', {
   'cta.discord': 'Discord beitreten',
   'cta.download': 'Download',
   'cta.downloadPage': 'Downloadseite',
-  'cta.classes': 'Die 55 Klassen ansehen',
-  'cta.allClasses': 'Alle 55 Klassen ansehen',
+  'cta.classes': 'Die überarbeiteten Klassen ansehen',
+  'cta.allClasses': 'Die überarbeiteten Klassen ansehen',
   'cta.browseClasses': 'Klassen durchstöbern',
 
   'hero.badge': 'Öffnet Freitag, 7. August 2026',
   'hero.title1': 'Das RO, das du kennst,',
   'hero.title2': 'von Grund auf neu',
-  'hero.lede': 'Jede Klasse, jeder Skill, jedes Item und jedes Monster hier wurde <strong>von Grund auf neu gebaut</strong>. 55 Klassen, Level 150, Bosse, die du selbst beschwörst, und ein Design, mit dem du <strong>allein spielen kannst, ohne gegen eine Wand zu laufen</strong>.',
+  'hero.lede': 'Jede Klasse, jeder Skill, jedes Item und jeder Gegner hier wurde <strong>von Grund auf neu gebaut</strong>. Überarbeitete Klassen, Level 150, Bosse, die du selbst beschwörst, und ein Design dafür, dass du <strong>allein spielen kannst, ohne an eine Wand zu laufen</strong>.',
   'hero.foot': 'Kostenlos. Kein Shop, der Stärke verkauft. Nur PvE.',
   'hero.live': 'Die Server sind online. Komm rein.',
 
@@ -110,7 +110,7 @@ window.NM_I18N_REGISTER('de', {
   'cd.seconds': 'Sekunden',
 
   'stats.level': 'Maximallevel',
-  'stats.classes': 'spielbare Klassen',
+  'stats.classes': 'finale Klassen',
   'stats.party': 'Spieler pro Gruppe',
   'stats.custom': 'eigener Inhalt',
 
@@ -153,7 +153,7 @@ window.NM_I18N_REGISTER('de', {
   'feat.t8': 'Wähle eine Seite, oder keine',
   'feat.d8': 'Zwei Nationen im Bürgerkrieg, drei Ruflinien. Hilf einer, beiden oder keiner. <strong>Mach dir Feinde und sie schicken dir Leute hinterher.</strong>',
 
-  'cls.eyebrow': '55 Klassen',
+  'cls.eyebrow': 'Überarbeitete Klassen',
   'cls.title': 'Drei Stufen, und keine spielt sich wie früher',
   'cls.lede': 'Neun Startklassen, vierzehn auf der zweiten Stufe, zweiunddreißig auf der dritten. Jeder Skillbaum wurde auf einem leeren Blatt entworfen, und jede Klasse der zweiten Stufe verzweigt sich in zwei sehr unterschiedliche Optionen.',
   'cls.t3': 'Dritte Stufe',
@@ -214,7 +214,7 @@ window.NM_I18N_REGISTER('de', {
   'footer.overview': 'Server-Übersicht',
   'footer.legal': 'Nightmare RO ist ein kostenloses, nicht kommerzielles Fanprojekt. Nicht verbunden mit einem kommerziellen Spielepublisher.',
 
-  'idx.eyebrow': '55 Klassen',
+  'idx.eyebrow': 'Überarbeitete Klassen',
   'idx.title': 'Such dir eine aus und merke, wie wenig du noch weißt',
   'idx.lede': 'Jeder Skillbaum hier ist auf einem leeren Blatt entstanden. Neun Startklassen, vierzehn auf der zweiten Stufe und zweiunddreißig auf der dritten, jede mit zwei Verzweigungen.',
   'idx.all': 'Alle',
