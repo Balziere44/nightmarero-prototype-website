@@ -1,0 +1,163 @@
+{
+ "ui": {
+  "count": "questions",
+  "title": "Lequel de ceux-là êtes-vous vraiment?",
+  "lede": "Chaque arbre de compétences de ce serveur a été réécrit, donc la classe que vous avez jouée pendant des années n'est peut-être plus celle qui vous correspond. Des questions directes sur votre façon de jouer, aucune mauvaise réponse, une suggestion à la fin.",
+  "mainedLabel": "Que jouiez-vous avant?",
+  "mainedNote": "Sert seulement à formuler le résultat. Cela ne change pas la classe obtenue.",
+  "begin": "Commencer",
+  "question": "Question",
+  "of": "sur",
+  "back": "Retour",
+  "archetype": "Votre archétype",
+  "playThis": "Jouez ceci",
+  "pressing": "Ce que vous allez appuyer",
+  "notGrab": "Si celle-là ne vous parle pas",
+  "tryThis": "Essayez",
+  "readClass": "Voir la classe en entier",
+  "again": "Refaire le test",
+  "copyImage": "Copier l'image pour Discord",
+  "saveImage": "Enregistrer l'image",
+  "copyText": "Copier en texte",
+  "copied": "Copié, collez-le sur Discord",
+  "copiedText": "Copié",
+  "imageFailed": "Impossible de générer l'image",
+  "loadFailed": "Le test n'a pas pu se charger. Rafraîchissez la page.",
+  "line": "lignée {f}",
+  "tier": "Palier"
+ },
+ "traits": {
+  "force": "Force",
+  "guile": "Ruse",
+  "ward": "Garde",
+  "arcane": "Arcane",
+  "wild": "Instinct",
+  "bond": "Lien"
+ },
+ "questions": [
+  {
+   "q": "Comment aimez-vous vous battre?",
+   "hint": "La distance où vous êtes à l'aise.",
+   "a": [
+    "Collé à l'ennemi, en échangeant les coups.",
+    "De près, mais seulement quand il ne peut pas riposter.",
+    "De l'autre bout de l'écran.",
+    "Là où le groupe a besoin de moi.",
+    "N'importe où, tant que je continue de bouger."
+   ]
+  },
+  {
+   "q": "Voulez-vous quelque chose qui se batte à vos côtés?",
+   "hint": "Familiers, homoncules, drones, esprits, invocations.",
+   "a": [
+    "Oui. La moitié de mes dégâts devrait venir de là.",
+    "Un petit truc qui me garde en vie me suffit.",
+    "Non. Je veux tout faire moi-même.",
+    "Seulement s'il fait quelque chose d'imprévisible."
+   ]
+  },
+  {
+   "q": "Un boss va lancer une incantation longue et dangereuse.",
+   "a": [
+    "Je lâche tout et je finis avant la fin de l'incantation.",
+    "Je l'interromps. C'est à ça que sert mon kit.",
+    "J'encaisse volontairement et je garde tout le monde derrière moi.",
+    "J'annonce le timer pour que personne ne la prenne.",
+    "Je tente un truc imprudent en espérant la couper."
+   ]
+  },
+  {
+   "q": "Combien de touches voulez-vous appuyer?",
+   "a": [
+    "Deux ou trois, qui frappent très fort.",
+    "Un long combo où l'ordre compte.",
+    "Une barre entière d'outils situationnels.",
+    "Ce qui est disponible. J'improvise.",
+    "Peu, tant que les défensives sont sur la barre."
+   ]
+  },
+  {
+   "q": "Votre groupe meurt dès le premier pull d'un raid.",
+   "a": [
+    "« C'est ma faute. On reprend depuis le début. »",
+    "« L'ordre du pull était mauvais. Le voici, écrit. »",
+    "« Cette fois je tiens. Continuez à taper. »",
+    "« Laissez-moi tenter un truc stupide. »"
+   ]
+  },
+  {
+   "q": "Vous trouvez une porte scellée, sans poignée ni gonds.",
+   "a": [
+    "Je tape dessus jusqu'à ce que ce soit une ouverture.",
+    "Je l'observe un moment. Ces portes s'ouvrent à heure fixe.",
+    "Je recopie les inscriptions avant de toucher à quoi que ce soit.",
+    "Je fonce dedans pour voir. Les PV servent à ça."
+   ]
+  },
+  {
+   "q": "Un monstre champion garde ce que vous êtes venu chercher. Il ne vous a pas vu.",
+   "a": [
+    "J'ouvre avec tout et je finis en dix secondes.",
+    "J'empile tous les statuts avant qu'il fasse un pas.",
+    "Je l'attire sur un meilleur terrain et je tiens plus longtemps que lui.",
+    "J'attends les autres. C'est un problème de groupe."
+   ]
+  },
+  {
+   "q": "Quelqu'un demande sur le chat de guilde, pour la quatrième fois, comment marche le raffinage.",
+   "a": [
+    "Je réponds encore, correctement.",
+    "Je colle le tableau que j'ai écrit il y a des mois.",
+    "Je leur dis de taper au +10 et de voir.",
+    "Je ne dis rien et je retourne farmer."
+   ]
+  },
+  {
+   "q": "Il reste un point de compétence et deux choses vous tentent.",
+   "a": [
+    "Le plus gros chiffre. Toujours le plus gros chiffre.",
+    "Celle qui prépare les trois autres compétences.",
+    "Celle qui vous évite de mourir au pire moment.",
+    "Celle qui aide la personne à côté de vous."
+   ]
+  },
+  {
+   "q": "Au fond d'un Nightmare Dungeon, le sol lui-même vous vide vos PV.",
+   "a": [
+    "J'accélère. Je tue avant que le sol me tue.",
+    "Je ressors et je reviens avec le bon shadow set.",
+    "Je note chaque recoin sûr en descendant.",
+    "J'appelle le groupe. Personne ne descend seul là-dedans."
+   ]
+  },
+  {
+   "q": "Un boss vous bat trois fois de suite. Qu'est-ce qui change à la quatrième?",
+   "a": [
+    "Mon équipement. Je reviens plus fort.",
+    "Mon timing. Je connais son schéma maintenant.",
+    "Mes résistances. Il n'arrive plus à me tuer.",
+    "Mon groupe. J'amène du monde.",
+    "Toute ma build. Je reviens avec une autre idée."
+   ]
+  },
+  {
+   "q": "À quoi ressemble une bonne soirée sur le serveur?",
+   "a": [
+    "Farmer un endroit que je connais par cœur.",
+    "Fouiller un truc que personne n'a encore compris.",
+    "Refaire mon personnage autour d'une nouvelle idée.",
+    "Ce que font les gens en vocal."
+   ]
+  },
+  {
+   "q": "Dernière. Qu'est-ce qui vous plaît vraiment là-dedans?",
+   "a": [
+    "Le moment où une barre de vie disparaît.",
+    "Trouver ce que tout le monde a raté.",
+    "Survivre à quelque chose qui aurait dû me tuer.",
+    "Comprendre exactement pourquoi ça marche.",
+    "Les gens. Évidemment les gens."
+   ]
+  }
+ ]
+}

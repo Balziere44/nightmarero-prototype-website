@@ -1,0 +1,163 @@
+{
+ "ui": {
+  "count": "Fragen",
+  "title": "Welcher davon bist du wirklich?",
+  "lede": "Jeder Skillbaum auf diesem Server wurde neu geschrieben, die Klasse, die du jahrelang gespielt hast, muss also nicht mehr zu dir passen. Direkte Fragen dazu, wie du spielst, keine falschen Antworten, am Ende ein Vorschlag.",
+  "mainedLabel": "Was hast du vorher gespielt?",
+  "mainedNote": "Wird nur für die Formulierung des Ergebnisses benutzt und ändert die Klasse nicht.",
+  "begin": "Los geht's",
+  "question": "Frage",
+  "of": "von",
+  "back": "Zurück",
+  "archetype": "Dein Archetyp",
+  "playThis": "Spiel das hier",
+  "pressing": "Was du drücken wirst",
+  "notGrab": "Falls dich das nicht packt",
+  "tryThis": "Probier",
+  "readClass": "Die ganze Klasse lesen",
+  "again": "Nochmal machen",
+  "copyImage": "Bild für Discord kopieren",
+  "saveImage": "Als Bild speichern",
+  "copyText": "Als Text kopieren",
+  "copied": "Kopiert, füg es in Discord ein",
+  "copiedText": "Kopiert",
+  "imageFailed": "Das Bild konnte nicht erstellt werden",
+  "loadFailed": "Der Test konnte nicht laden. Versuch es mit einem Neuladen.",
+  "line": "{f}-Linie",
+  "tier": "Stufe"
+ },
+ "traits": {
+  "force": "Wucht",
+  "guile": "List",
+  "ward": "Schutz",
+  "arcane": "Arkan",
+  "wild": "Instinkt",
+  "bond": "Bindung"
+ },
+ "questions": [
+  {
+   "q": "Wie kämpfst du am liebsten?",
+   "hint": "Die Distanz, in der du dich wohlfühlst.",
+   "a": [
+    "Direkt davor, Schlag gegen Schlag.",
+    "Nah dran, aber nur wenn es nicht zurückschlagen kann.",
+    "Vom anderen Ende des Bildschirms.",
+    "Da, wo die Gruppe mich braucht.",
+    "Überall, solange ich in Bewegung bleibe."
+   ]
+  },
+  {
+   "q": "Soll etwas an deiner Seite mitkämpfen?",
+   "hint": "Pets, Homunculi, Drohnen, Geister, Beschwörungen.",
+   "a": [
+    "Ja. Die Hälfte meines Schadens sollte daher kommen.",
+    "Etwas Kleines, das mich am Leben hält, reicht.",
+    "Nein. Ich will alles selbst in der Hand haben.",
+    "Nur wenn es etwas Unvorhersehbares macht."
+   ]
+  },
+  {
+   "q": "Ein Boss setzt gleich einen langen, gefährlichen Zauber an.",
+   "a": [
+    "Alles raushauen und beenden, bevor der Zauber fertig ist.",
+    "Unterbrechen. Genau dafür ist mein Kit da.",
+    "Den Treffer absichtlich fressen und alle hinter mir halten.",
+    "Den Timer ansagen, damit ihn niemand kassiert.",
+    "Etwas Leichtsinniges versuchen und hoffen, dass es abbricht."
+   ]
+  },
+  {
+   "q": "Wie viele Tasten willst du drücken?",
+   "a": [
+    "Zwei oder drei, die sehr hart treffen.",
+    "Eine lange Combo, bei der die Reihenfolge zählt.",
+    "Eine ganze Leiste voller Situationswerkzeuge.",
+    "Was gerade bereit ist. Ich improvisiere.",
+    "Wenige, solange die defensiven auf der Leiste liegen."
+   ]
+  },
+  {
+   "q": "Deine Gruppe stirbt am ersten Pull eines Raids.",
+   "a": [
+    "„Mein Fehler. Nochmal von vorn.“",
+    "„Die Pull-Reihenfolge war falsch. Hier steht sie.“",
+    "„Diesmal halte ich. Haut einfach weiter drauf.“",
+    "„Lasst mich etwas Dummes probieren.“"
+   ]
+  },
+  {
+   "q": "Du findest eine versiegelte Tür ohne Griff und ohne Scharniere.",
+   "a": [
+    "Ich schlage darauf ein, bis sie ein Durchgang ist.",
+    "Ich beobachte sie. Solche Türen öffnen nach Zeitplan.",
+    "Ich zeichne die Zeichen ab, bevor ich irgendwas anfasse.",
+    "Ich laufe hinein und schaue. Dafür sind HP da."
+   ]
+  },
+  {
+   "q": "Ein Champion-Gegner bewacht, wofür du gekommen bist. Er hat dich nicht gesehen.",
+   "a": [
+    "Mit allem eröffnen und in zehn Sekunden beenden.",
+    "Jeden Status auf ihn stapeln, bevor er einen Schritt macht.",
+    "Ihn auf besseres Gelände ziehen und ihn überdauern.",
+    "Auf die anderen warten. Das ist ein Gruppenproblem."
+   ]
+  },
+  {
+   "q": "Jemand fragt im Gildenchat zum vierten Mal, wie Refinen funktioniert.",
+   "a": [
+    "Nochmal antworten, richtig.",
+    "Die Tabelle reinkopieren, die ich vor Monaten geschrieben habe.",
+    "Sagen, sie sollen auf +10 hauen und es rausfinden.",
+    "Nichts sagen und weiterfarmen."
+   ]
+  },
+  {
+   "q": "Ein Skillpunkt übrig, zwei Dinge, die du willst.",
+   "a": [
+    "Die größere Zahl. Immer die größere Zahl.",
+    "Die, die die anderen drei Skills aufsetzt.",
+    "Die, die dich im schlechtesten Moment am Leben hält.",
+    "Die, die dem hilft, der neben dir steht."
+   ]
+  },
+  {
+   "q": "Tief in einem Nightmare Dungeon zieht dir der Boden selbst Leben ab.",
+   "a": [
+    "Schneller vorwärts. Töten, bevor der Boden mich tötet.",
+    "Rausgehen und mit dem richtigen Shadow-Set wiederkommen.",
+    "Auf dem Weg nach unten jede sichere Ecke notieren.",
+    "Die Gruppe rufen. Da geht niemand allein runter."
+   ]
+  },
+  {
+   "q": "Ein Boss schlägt dich dreimal hintereinander. Was ändert sich beim vierten Mal?",
+   "a": [
+    "Meine Ausrüstung. Ich komme stärker wieder.",
+    "Mein Timing. Ich kenne sein Muster jetzt.",
+    "Meine Resistenzen. Er bringt mich nicht mehr um.",
+    "Meine Gruppe. Ich bringe Leute mit.",
+    "Meine ganze Build. Ich komme mit einer anderen Idee wieder."
+   ]
+  },
+  {
+   "q": "Wie sieht ein guter Abend auf dem Server aus?",
+   "a": [
+    "Eine Stelle farmen, die ich im Schlaf kann.",
+    "An etwas herumstochern, das noch niemand verstanden hat.",
+    "Meinen Charakter um eine neue Idee herum neu bauen.",
+    "Was auch immer die Leute im Voice gerade machen."
+   ]
+  },
+  {
+   "q": "Letzte Frage. Was macht dir daran wirklich Spaß?",
+   "a": [
+    "Der Moment, in dem ein Lebensbalken verschwindet.",
+    "Das zu finden, woran alle vorbeigelaufen sind.",
+    "Etwas zu überleben, das mich hätte töten müssen.",
+    "Genau zu verstehen, warum es funktioniert.",
+    "Die Leute. Natürlich die Leute."
+   ]
+  }
+ ]
+}

@@ -416,17 +416,17 @@
   function renderIntro() {
     root.innerHTML =
       '<div class="quiz-card">' +
-        '<p class="eyebrow">' + QUESTIONS.length + ' questions</p>' +
-        '<h2>Which one of these are you, really?</h2>' +
-        '<p class="muted">Every skill tree on this server was rewritten, so the class you mained for years might not be the class that fits you any more. Straight questions about how you like to play, no wrong answers, one suggestion at the end.</p>' +
-        '<label class="quiz-label" for="oldClass">What did you main before?</label>' +
+        '<p class="eyebrow">' + QUESTIONS.length + ' ' + ui('count') + '</p>' +
+        '<h2>' + esc(ui('title')) + '</h2>' +
+        '<p class="muted">' + esc(ui('lede')) + '</p>' +
+        '<label class="quiz-label" for="oldClass">' + esc(ui('mainedLabel')) + '</label>' +
         '<select id="oldClass">' +
           OLD_CLASSES.map(function (o) {
             return '<option value="' + esc(o.v) + '">' + esc(o.v || o.label) + '</option>';
           }).join('') +
         '</select>' +
-        '<p class="dim">Only used to word the result. It does not change which class you get.</p>' +
-        '<button class="btn -primary -lg -block" id="quizStart" type="button">Begin</button>' +
+        '<p class="dim">' + esc(ui('mainedNote')) + '</p>' +
+        '<button class="btn -primary -lg -block" id="quizStart" type="button">' + esc(ui('begin')) + '</button>' +
       '</div>';
 
     $('quizStart').addEventListener('click', function () {
@@ -437,11 +437,11 @@
   }
 
   function renderQuestion() {
-    var q = QUESTIONS[step];
+    var q = question(step);
     root.innerHTML =
       '<div class="quiz-card">' +
         progress() +
-        '<p class="eyebrow">Question ' + (step + 1) + ' of ' + QUESTIONS.length + '</p>' +
+        '<p class="eyebrow">' + ui('question') + ' ' + (step + 1) + ' ' + ui('of') + ' ' + QUESTIONS.length + '</p>' +
         '<h2 class="quiz-q">' + esc(q.q) + '</h2>' +
         (q.hint ? '<p class="quiz-hint">' + esc(q.hint) + '</p>' : '') +
         '<div class="quiz-answers">' +
@@ -450,7 +450,7 @@
                      esc(a.t) + '</button>';
           }).join('') +
         '</div>' +
-        (step > 0 ? '<button class="btn -quiet -sm quiz-back" id="quizBack" type="button">Back</button>' : '') +
+        (step > 0 ? '<button class="btn -quiet -sm quiz-back" id="quizBack" type="button">' + esc(ui('back')) + '</button>' : '') +
       '</div>';
 
     Array.prototype.forEach.call(root.querySelectorAll('.quiz-answer'), function (btn) {
@@ -472,7 +472,7 @@
   function traitBars() {
     var max = Math.max.apply(null, Object.keys(scores).map(function (k) { return scores[k]; })) || 1;
     return '<ul class="quiz-bars">' + ranked(scores).slice(0, 4).map(function (k) {
-      return '<li><span>' + TRAITS[k].label + '</span>' +
+      return '<li><span>' + esc(traitLabel(k)) + '</span>' +
              '<span class="quiz-bar"><i style="width:' +
              Math.round(scores[k] / max * 100) + '%"></i></span></li>';
     }).join('') + '</ul>';
@@ -485,7 +485,7 @@
     root.innerHTML =
       '<div class="quiz-result" id="quizResult">' +
         '<div class="quiz-result-head">' +
-          '<p class="eyebrow">Your archetype</p>' +
+          '<p class="eyebrow">' + esc(ui('archetype')) + '</p>' +
           '<h2>' + esc(r.arch.name) + '</h2>' +
           '<p class="quiz-motto">' + esc(r.arch.motto) + '</p>' +
           '<p class="muted">' + esc(r.arch.body) + '</p>' +
@@ -495,9 +495,9 @@
         /* Sharing sits here, above the fold, because people were screenshotting
            the page rather than scrolling to the bottom for these. */
         '<div class="quiz-share">' +
-          '<button class="btn -primary" id="quizImageCopy" type="button">Copy image for Discord</button>' +
-          '<button class="btn -ghost" id="quizImage" type="button">Save as image</button>' +
-          '<button class="btn -ghost" id="quizCopy" type="button">Copy as text</button>' +
+          '<button class="btn -primary" id="quizImageCopy" type="button">' + esc(ui('copyImage')) + '</button>' +
+          '<button class="btn -ghost" id="quizImage" type="button">' + esc(ui('saveImage')) + '</button>' +
+          '<button class="btn -ghost" id="quizCopy" type="button">' + esc(ui('copyText')) + '</button>' +
         '</div>' +
 
         '<div class="quiz-pick">' +
@@ -505,10 +505,12 @@
             ? '<div class="quiz-art"><img src="' + esc(cls.art) + '" alt="' + esc(cls.name) + '"></div>'
             : '') +
           '<div class="quiz-pick-body">' +
-            '<p class="eyebrow">Play this</p>' +
+            '<p class="eyebrow">' + esc(ui('playThis')) + '</p>' +
             '<h3>' + esc(cls ? cls.name : r.arch.pick) + '</h3>' +
-            (cls ? '<p class="tag -accent">' + esc(cls.family) + ' line<span aria-hidden="true"> · </span>' +
-                   'Tier ' + cls.tier + '</p>' : '') +
+            (cls ? '<p class="tag -accent">' +
+                   esc(ui('line').replace('{f}', cls.family)) +
+                   '<span aria-hidden="true"> · </span>' +
+                   ui('tier') + ' ' + cls.tier + '</p>' : '') +
             '<div class="quiz-why">' + r.why.map(function (p) {
               return '<p>' + p + '</p>';
             }).join('') + '</div>' +
@@ -516,7 +518,7 @@
         '</div>' +
 
         (cls && cls.skills.length
-          ? '<div class="quiz-skills"><p class="eyebrow">What you will be pressing</p>' +
+          ? '<div class="quiz-skills"><p class="eyebrow">' + esc(ui('pressing')) + '</p>' +
             '<ul class="skill-list">' + cls.skills.map(function (s) {
               return '<li class="skill"><strong>' + esc(s.name) + '</strong><p>' +
                      esc(s.text) + '</p></li>';
@@ -524,15 +526,15 @@
           : '') +
 
         '<div class="quiz-alt">' +
-          '<p class="eyebrow">If that one does not grab you</p>' +
-          '<p>Try <a href="classes/' + esc(r.alt ? r.alt.slug : '') + '.html"><b>' +
+          '<p class="eyebrow">' + esc(ui('notGrab')) + '</p>' +
+          '<p>' + esc(ui('tryThis')) + ' <a href="classes/' + esc(r.alt ? r.alt.slug : '') + '.html"><b>' +
             esc(r.altName) + '</b></a>' +
             (r.alt ? '. ' + esc(r.alt.summary) : '.') + '</p>' +
         '</div>' +
 
         '<div class="quiz-actions">' +
-          (cls ? '<a class="btn -primary" href="classes/' + esc(cls.slug) + '.html">Read the full class</a>' : '') +
-          '<button class="btn -quiet" id="quizAgain" type="button">Take it again</button>' +
+          (cls ? '<a class="btn -primary" href="classes/' + esc(cls.slug) + '.html">' + esc(ui('readClass')) + '</a>' : '') +
+          '<button class="btn -quiet" id="quizAgain" type="button">' + esc(ui('again')) + '</button>' +
         '</div>' +
       '</div>';
 
@@ -572,7 +574,7 @@
       '',
       'Find yours: <' + location.origin + location.pathname + '>'
     ];
-    copy(lines.join('\n'), btn, 'Copied');
+    copy(lines.join('\n'), btn, ui('copiedText'));
   }
 
   function copy(text, btn, done) {
@@ -731,7 +733,7 @@
       document.body.removeChild(a);
       setTimeout(function () { URL.revokeObjectURL(a.href); }, 4000);
     }).catch(function () {
-      flashLabel(btn, 'Could not build the image');
+      flashLabel(btn, ui('imageFailed'));
     });
   }
 
@@ -748,11 +750,90 @@
       var item = new ClipboardItem({ 'image/png': blob });
       return navigator.clipboard.write([item]);
     }).then(function () {
-      flashLabel(btn, 'Copied, paste it in Discord');
+      flashLabel(btn, ui('copied'));
     }).catch(function () {
       saveImage(btn);
     });
   }
+
+  /* --------------------------------------------------------------- language
+
+     English lives in this file. The other languages are one JSON per locale
+     under assets/quiz/, fetched the first time that language is picked and
+     then kept. Only the wording is swapped, never the scoring, so a French
+     player and an English player answering the same way get the same class.
+
+     Class names and skill names stay in English on purpose, the same as
+     everywhere else on the site, because that is how they read in game. */
+
+  var EN = {
+    ui: {
+      count: 'questions',
+      title: 'Which one of these are you, really?',
+      lede: 'Every skill tree on this server was rewritten, so the class you mained for years might not be the class that fits you any more. Straight questions about how you like to play, no wrong answers, one suggestion at the end.',
+      mainedLabel: 'What did you main before?',
+      mainedNote: 'Only used to word the result. It does not change which class you get.',
+      begin: 'Begin',
+      question: 'Question',
+      of: 'of',
+      back: 'Back',
+      archetype: 'Your archetype',
+      playThis: 'Play this',
+      pressing: 'What you will be pressing',
+      notGrab: 'If that one does not grab you',
+      tryThis: 'Try',
+      readClass: 'Read the full class',
+      again: 'Take it again',
+      copyImage: 'Copy image for Discord',
+      saveImage: 'Save as image',
+      copyText: 'Copy as text',
+      copied: 'Copied, paste it in Discord',
+      copiedText: 'Copied',
+      imageFailed: 'Could not build the image',
+      loadFailed: 'The test could not load. Try a refresh.',
+      line: '{f} line',
+      tier: 'Tier'
+    }
+  };
+
+  var lang = 'en';
+  var packs = { en: EN };
+
+  function T() { return packs[lang] || EN; }
+  function ui(key) { return (T().ui && T().ui[key]) || EN.ui[key] || key; }
+
+  function question(i) {
+    var base = QUESTIONS[i];
+    var tr = (T().questions || [])[i];
+    if (!tr) return base;
+    return {
+      q: tr.q || base.q,
+      hint: tr.hint || base.hint,
+      a: base.a.map(function (a, n) {
+        return { t: (tr.a && tr.a[n]) || a.t, s: a.s };
+      })
+    };
+  }
+
+  function traitLabel(key) {
+    return (T().traits && T().traits[key]) || TRAITS[key].label;
+  }
+
+  function loadPack(code) {
+    if (packs[code]) return Promise.resolve();
+    return fetch('assets/quiz/' + code + '.json')
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (data) { if (data) packs[code] = data; })
+      .catch(function () {});
+  }
+
+  document.addEventListener('nm:lang', function (e) {
+    var code = e.detail.lang;
+    loadPack(code).then(function () {
+      lang = packs[code] ? code : 'en';
+      if (classes && Object.keys(classes).length) render();
+    });
+  });
 
   /* ------------------------------------------------------------------- boot */
 
@@ -760,9 +841,17 @@
     .then(function (r) { return r.json(); })
     .then(function (data) {
       (data.classes || []).forEach(function (c) { classes[c.name] = c; });
+      var current = window.NM_I18N && window.NM_I18N.current;
+      if (current && current !== 'en') {
+        return loadPack(current).then(function () {
+          if (packs[current]) lang = current;
+          render();
+        });
+      }
       render();
     })
     .catch(function () {
-      root.innerHTML = '<div class="quiz-card"><p class="muted">The test could not load. Try a refresh.</p></div>';
+      root.innerHTML = '<div class="quiz-card"><p class="muted">' +
+                       ui('loadFailed') + '</p></div>';
     });
 })();

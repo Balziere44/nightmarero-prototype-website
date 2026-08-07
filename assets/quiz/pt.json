@@ -1,0 +1,163 @@
+{
+ "ui": {
+  "count": "perguntas",
+  "title": "Qual desses você é, de verdade?",
+  "lede": "Toda árvore de skills deste servidor foi reescrita, então a classe que você jogou por anos pode não ser mais a que combina com você. Perguntas diretas sobre como você gosta de jogar, sem resposta errada, e uma sugestão no final.",
+  "mainedLabel": "O que você jogava antes?",
+  "mainedNote": "Só usamos para escrever o resultado. Não muda qual classe você recebe.",
+  "begin": "Começar",
+  "question": "Pergunta",
+  "of": "de",
+  "back": "Voltar",
+  "archetype": "Seu arquétipo",
+  "playThis": "Jogue esta",
+  "pressing": "O que você vai apertar",
+  "notGrab": "Se essa não te agradar",
+  "tryThis": "Experimente",
+  "readClass": "Ver a classe completa",
+  "again": "Refazer o teste",
+  "copyImage": "Copiar imagem para o Discord",
+  "saveImage": "Salvar como imagem",
+  "copyText": "Copiar como texto",
+  "copied": "Copiado, é só colar no Discord",
+  "copiedText": "Copiado",
+  "imageFailed": "Não foi possível gerar a imagem",
+  "loadFailed": "O teste não carregou. Tente atualizar a página.",
+  "line": "linha {f}",
+  "tier": "Tier"
+ },
+ "traits": {
+  "force": "Força",
+  "guile": "Astúcia",
+  "ward": "Guarda",
+  "arcane": "Arcano",
+  "wild": "Instinto",
+  "bond": "Vínculo"
+ },
+ "questions": [
+  {
+   "q": "Como você gosta de lutar?",
+   "hint": "A distância em que você se sente bem.",
+   "a": [
+    "Colado, trocando golpes.",
+    "Perto, mas só quando ele não pode revidar.",
+    "Do outro lado da tela.",
+    "Onde o grupo precisar que eu fique.",
+    "Em qualquer lugar, desde que eu não pare de me mover."
+   ]
+  },
+  {
+   "q": "Você quer algo lutando ao seu lado?",
+   "hint": "Pets, homúnculos, drones, espíritos, invocações.",
+   "a": [
+    "Sim. Metade do meu dano deveria vir dele.",
+    "Algo pequeno que me mantenha vivo já basta.",
+    "Não. Quero minhas próprias mãos em tudo.",
+    "Só se ele fizer algo imprevisível."
+   ]
+  },
+  {
+   "q": "Um chefe vai começar uma conjuração longa e perigosa.",
+   "a": [
+    "Solto tudo agora e acabo antes da conjuração terminar.",
+    "Interrompo. É para isso que serve meu kit.",
+    "Levo o golpe de propósito e mantenho todo mundo atrás de mim.",
+    "Aviso o tempo no chat para ninguém tomar.",
+    "Faço alguma loucura e torço para cancelar."
+   ]
+  },
+  {
+   "q": "Quantos botões você quer apertar?",
+   "a": [
+    "Dois ou três, que batem muito forte.",
+    "Um combo longo em que a ordem importa.",
+    "Uma barra inteira de ferramentas situacionais.",
+    "O que estiver fora de cooldown. Eu improviso.",
+    "Poucos, desde que os defensivos estejam na barra."
+   ]
+  },
+  {
+   "q": "Seu grupo morre no primeiro pull de uma raid.",
+   "a": [
+    "“Erro meu. De novo, do começo.”",
+    "“A ordem do pull estava errada. Está anotada aqui.”",
+    "“Dessa vez eu seguro. Só continuem batendo.”",
+    "“Deixa eu tentar uma coisa idiota.”"
+   ]
+  },
+  {
+   "q": "Você encontra uma porta lacrada, sem maçaneta e sem dobradiças.",
+   "a": [
+    "Bato nela até virar passagem.",
+    "Observo um tempo. Portas assim abrem na hora certa.",
+    "Copio as marcas antes de encostar em qualquer coisa.",
+    "Entro nela e descubro. HP serve para isso."
+   ]
+  },
+  {
+   "q": "Um monstro champion guarda o que você veio buscar. Ele não te viu.",
+   "a": [
+    "Abro com tudo e acabo em dez segundos.",
+    "Empilho todos os status nele antes que dê um passo.",
+    "Puxo para um lugar melhor e aguento mais que ele.",
+    "Espero os outros. Isso é problema de grupo."
+   ]
+  },
+  {
+   "q": "Alguém pergunta no chat da guilda, pela quarta vez, como funciona refino.",
+   "a": [
+    "Respondo de novo, com calma.",
+    "Colo a tabela que escrevi meses atrás.",
+    "Mando bater no +10 e descobrir.",
+    "Não digo nada e volto a farmar."
+   ]
+  },
+  {
+   "q": "Sobrou um ponto de skill e você quer duas coisas.",
+   "a": [
+    "O número maior. Sempre o número maior.",
+    "A que prepara as outras três skills.",
+    "A que te impede de morrer na pior hora.",
+    "A que ajuda quem está do seu lado."
+   ]
+  },
+  {
+   "q": "No fundo de uma Nightmare Dungeon o próprio mapa começa a drenar sua vida.",
+   "a": [
+    "Acelero. Mato antes que o chão me mate.",
+    "Saio e volto com o shadow set certo.",
+    "Mapeio cada ponto seguro na descida.",
+    "Chamo o grupo. Ninguém desce sozinho ali."
+   ]
+  },
+  {
+   "q": "Um chefe te vence três vezes seguidas. O que muda na quarta?",
+   "a": [
+    "Meu equipamento. Volto mais forte.",
+    "Meu tempo de reação. Já sei o padrão dele.",
+    "Minhas resistências. Ele para de conseguir me matar.",
+    "Meu grupo. Levo gente comigo.",
+    "Minha build inteira. Volto com outra ideia."
+   ]
+  },
+  {
+   "q": "Como é uma boa noite no servidor?",
+   "a": [
+    "Farmar um lugar que já domino de olhos fechados.",
+    "Cutucar algo que ninguém entendeu ainda.",
+    "Refazer meu personagem em cima de uma ideia nova.",
+    "O que a galera da call estiver fazendo."
+   ]
+  },
+  {
+   "q": "Última. O que você curte de verdade nisso tudo?",
+   "a": [
+    "O momento em que a barra de vida some.",
+    "Achar aquilo por que todo mundo passou reto.",
+    "Sobreviver a algo que deveria ter me matado.",
+    "Entender exatamente por que aquilo funciona.",
+    "As pessoas. Obviamente as pessoas."
+   ]
+  }
+ ]
+}
