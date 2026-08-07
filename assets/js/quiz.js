@@ -1,10 +1,13 @@
 /* ==========================================================================
    Nightmare RO - "which class are you" test
    --------------------------------------------------------------------------
-   Nine scenarios in Midgard score six traits. The top two traits pick one of
-   fifteen archetypes, each of which points at a class. The class the player
-   used to main only nudges the wording, never the maths, so the same answers
-   always land in the same place.
+   Thirteen questions score six traits. The top two traits pick one of fifteen
+   archetypes, and the third trait picks which class inside that archetype you
+   get, which is what stops half the server sharing a result: 15 archetypes
+   times 4 runner-up traits is 45 endings across 43 different classes.
+
+   The class the player used to main only nudges the wording, never the maths,
+   so the same answers always land in the same place.
    ========================================================================== */
 
 (function () {
@@ -28,155 +31,238 @@
 
   /* ---------------------------------------------------------- the questions */
 
+  /* Each question is a plain situation with plain answers. Scenery got in the
+     way of people understanding what they were picking, so it is gone.
+
+     Every trait is the 3 point answer on the same number of questions, so no
+     trait wins by having been offered more often. */
+
   var QUESTIONS = [
     {
-      q: 'A Poring has swallowed your last Red Potion and is hopping away, entirely unbothered.',
+      q: 'How do you like to fight?',
+      hint: 'The distance you are comfortable at.',
       a: [
-        { t: 'Run it down and flatten it.', s: { force: 3, wild: 1 } },
-        { t: 'Wait by the spot it always hops back to.', s: { guile: 3, ward: 1 } },
-        { t: 'Let it go. Potions are a solved problem.', s: { arcane: 2, ward: 2 } },
-        { t: 'Whistle. Someone else will corner it.', s: { bond: 3, guile: 1 } }
+        { t: 'Right on top of it, trading hits.', s: { force: 3, ward: 1 } },
+        { t: 'Close, but only when it cannot hit back.', s: { guile: 3, force: 1 } },
+        { t: 'From across the screen.', s: { arcane: 3, guile: 1 } },
+        { t: 'Wherever the party needs me to stand.', s: { bond: 3, ward: 1 } },
+        { t: 'Anywhere, as long as I keep moving.', s: { wild: 3, force: 1 } }
       ]
     },
     {
-      q: 'The Kafra in Prontera asks where you are headed, mostly out of politeness.',
+      q: 'Do you want something fighting alongside you?',
+      hint: 'Pets, homunculi, drones, spirits, summons.',
       a: [
-        { t: '"Somewhere that hits back."', s: { force: 3, wild: 1 } },
-        { t: '"Somewhere nobody has bothered to map."', s: { wild: 3, guile: 1 } },
-        { t: '"The archive. I have reading to finish."', s: { arcane: 3, ward: 1 } },
-        { t: '"Wherever they are short a fifth."', s: { bond: 3, ward: 1 } }
+        { t: 'Yes. Half my damage should come from it.', s: { arcane: 3, bond: 1 } },
+        { t: 'Something small that keeps me alive is enough.', s: { ward: 3, bond: 1 } },
+        { t: 'No. I want my own hands on everything.', s: { force: 3, guile: 1 } },
+        { t: 'Only if it does something unpredictable.', s: { wild: 3, arcane: 1 } }
       ]
     },
     {
-      q: 'Your party wipes on the first pull of a guild raid. The silence is getting long.',
+      q: 'A boss is about to start a long, dangerous cast.',
       a: [
-        { t: '"My call. Again, from the top."', s: { ward: 2, bond: 2 } },
+        { t: 'Burn everything now and end it before the cast finishes.', s: { force: 3, wild: 1 } },
+        { t: 'Interrupt it. That is what my kit is for.', s: { guile: 3, arcane: 1 } },
+        { t: 'Take the hit on purpose and keep everyone behind me.', s: { ward: 3, bond: 1 } },
+        { t: 'Shout the timer so nobody eats it.', s: { bond: 3, arcane: 1 } },
+        { t: 'Do something reckless and hope it breaks the cast.', s: { wild: 3, guile: 1 } }
+      ]
+    },
+    {
+      q: 'How many buttons do you want to press?',
+      a: [
+        { t: 'Two or three, hit very hard.', s: { force: 3, ward: 1 } },
+        { t: 'A long combo where the order matters.', s: { guile: 3, arcane: 1 } },
+        { t: 'A whole bar of situational tools.', s: { arcane: 3, ward: 1 } },
+        { t: 'Whatever is off cooldown. I improvise.', s: { wild: 3, force: 1 } },
+        { t: 'A few, as long as the defensive ones are on the bar.', s: { ward: 3, arcane: 1 } }
+      ]
+    },
+    {
+      q: 'Your party wipes on the first pull of a raid.',
+      a: [
+        { t: '"My call. Again, from the top."', s: { bond: 3, ward: 1 } },
         { t: '"The pull order was wrong. Here it is written down."', s: { arcane: 3, bond: 1 } },
         { t: '"I will hold it this time. Just keep hitting."', s: { ward: 3, force: 1 } },
         { t: '"Let me try something stupid."', s: { wild: 3, force: 1 } }
       ]
     },
     {
-      q: 'Under Geffen you find a door with no handle, no hinges and a very faint draught.',
+      q: 'You find a sealed door with no handle and no hinges.',
       a: [
-        { t: 'Hit it until it becomes a doorway.', s: { force: 3 } },
-        { t: 'Sit with it. Doors like this open on a schedule.', s: { guile: 2, ward: 2 } },
-        { t: 'Copy the sigils down before touching anything.', s: { arcane: 3 } },
-        { t: 'Walk through and find out. That is what HP is for.', s: { wild: 3 } }
+        { t: 'Hit it until it is a doorway.', s: { force: 3, wild: 1 } },
+        { t: 'Watch it for a while. Doors like this open on a timer.', s: { guile: 3, ward: 1 } },
+        { t: 'Copy the markings down before touching anything.', s: { arcane: 3, guile: 1 } },
+        { t: 'Walk into it and find out. That is what HP is for.', s: { wild: 3, force: 1 } }
       ]
     },
     {
-      q: 'A champion monster is guarding the relic you need. It has not seen you yet.',
+      q: 'A champion monster is guarding what you came for. It has not seen you.',
       a: [
-        { t: 'Open with everything. Nothing survives the first ten seconds.', s: { force: 3, wild: 1 } },
+        { t: 'Open with everything and end it in ten seconds.', s: { force: 3, wild: 1 } },
         { t: 'Stack every status on it before it takes a step.', s: { guile: 3, arcane: 1 } },
-        { t: 'Pull it somewhere with better ground and outlast it.', s: { ward: 3, guile: 1 } },
-        { t: 'Wait for the others. This is a five person problem.', s: { bond: 3, ward: 1 } }
+        { t: 'Pull it somewhere better and outlast it.', s: { ward: 3, guile: 1 } },
+        { t: 'Wait for the others. This is a group problem.', s: { bond: 3, ward: 1 } }
       ]
     },
     {
-      q: 'Someone in the guild chat is asking, for the fourth time, how refining works.',
+      q: 'Someone asks in guild chat, for the fourth time, how refining works.',
       a: [
-        { t: 'Answer it. Again. Properly.', s: { bond: 3, ward: 1 } },
+        { t: 'Answer it again, properly.', s: { bond: 3, ward: 1 } },
         { t: 'Paste the table you wrote months ago.', s: { arcane: 3, bond: 1 } },
-        { t: 'Tell them to just swing at +10 and find out.', s: { wild: 3, force: 1 } },
-        { t: 'Say nothing and go back to farming.', s: { guile: 2, force: 2 } }
+        { t: 'Tell them to swing at +10 and find out.', s: { wild: 3, force: 1 } },
+        { t: 'Say nothing and go back to farming.', s: { guile: 3, force: 1 } }
       ]
     },
     {
-      q: 'You have exactly one skill point left and two things you want.',
+      q: 'One skill point left, two things you want.',
       a: [
         { t: 'The bigger number. Always the bigger number.', s: { force: 3, wild: 1 } },
-        { t: 'The one that sets up the other three skills.', s: { guile: 2, arcane: 2 } },
-        { t: 'The one that stops you dying at the worst moment.', s: { ward: 3 } },
-        { t: 'The one that helps whoever is standing next to you.', s: { bond: 3 } }
+        { t: 'The one that sets up the other three skills.', s: { guile: 3, arcane: 1 } },
+        { t: 'The one that stops you dying at the worst moment.', s: { ward: 3, guile: 1 } },
+        { t: 'The one that helps whoever is standing next to you.', s: { bond: 3, ward: 1 } }
       ]
     },
     {
-      q: 'Deep in a Nightmare Dungeon the map itself starts draining your health.',
+      q: 'Deep in a Nightmare Dungeon the floor itself starts draining your health.',
       a: [
-        { t: 'Push faster. Kill it before the floor kills you.', s: { force: 2, wild: 2 } },
-        { t: 'Back out and come back with the right shadow set.', s: { arcane: 2, ward: 2 } },
+        { t: 'Push faster. Kill it before the floor kills me.', s: { force: 3, wild: 1 } },
+        { t: 'Back out and return with the right shadow set.', s: { arcane: 3, ward: 1 } },
         { t: 'Map every safe pocket on the way down.', s: { guile: 3, arcane: 1 } },
         { t: 'Call the group. Nobody goes down there alone.', s: { bond: 3, ward: 1 } }
       ]
     },
     {
-      q: 'Last one. Someone asks what you actually enjoy about all this.',
+      q: 'A boss beats you three times in a row. What changes on the fourth?',
       a: [
-        { t: '"The moment a health bar disappears."', s: { force: 3, wild: 1 } },
-        { t: '"Finding the thing everyone else walked past."', s: { guile: 3, wild: 1 } },
-        { t: '"Surviving something that should have killed me."', s: { ward: 3, force: 1 } },
-        { t: '"Working out exactly why it works."', s: { arcane: 3, guile: 1 } },
-        { t: '"The people. Obviously the people."', s: { bond: 3, ward: 1 } }
+        { t: 'My gear. I come back stronger.', s: { force: 3, arcane: 1 } },
+        { t: 'My timing. I know its pattern now.', s: { guile: 3, ward: 1 } },
+        { t: 'My resistances. It stops being able to kill me.', s: { ward: 3, arcane: 1 } },
+        { t: 'My party. I bring people.', s: { bond: 3, force: 1 } },
+        { t: 'My whole build. I come back with a different idea.', s: { wild: 3, arcane: 1 } }
+      ]
+    },
+    {
+      q: 'What does a good evening on the server look like?',
+      a: [
+        { t: 'Farming a spot I have down to a routine.', s: { ward: 3, force: 1 } },
+        { t: 'Poking at something nobody has figured out yet.', s: { wild: 3, guile: 1 } },
+        { t: 'Rebuilding my character around a new idea.', s: { arcane: 3, wild: 1 } },
+        { t: 'Whatever the people in voice chat are doing.', s: { bond: 3, wild: 1 } }
+      ]
+    },
+    {
+      q: 'Last one. What do you actually enjoy about this?',
+      a: [
+        { t: 'The moment a health bar disappears.', s: { force: 3, wild: 1 } },
+        { t: 'Finding the thing everyone else walked past.', s: { guile: 3, wild: 1 } },
+        { t: 'Surviving something that should have killed me.', s: { ward: 3, force: 1 } },
+        { t: 'Working out exactly why it works.', s: { arcane: 3, guile: 1 } },
+        { t: 'The people. Obviously the people.', s: { bond: 3, ward: 1 } }
       ]
     }
   ];
 
   /* --------------------------------------------------------- the archetypes */
 
-  /* One per unordered pair of traits, so every combination lands somewhere. */
+  /* One per unordered pair of traits, so every combination lands somewhere.
+
+     `by` is the interesting part: it maps the third strongest trait onto a
+     class, which is how two people with the same top pair still come out
+     somewhere different. `pick` is the fallback if the third trait is missing
+     from the map. 43 of the 55 classes are reachable. */
+
   var ARCHETYPES = [
     { pair: 'force+guile', name: 'The Red Verdict',
       motto: 'You do not threaten. You conclude.',
       body: 'You open fights you have already decided the end of. Bleed, break, finish, and be somewhere else before the body lands.',
-      pick: 'Lord Knight', alt: 'Guillotine Cross' },
+      pick: 'Lord Knight',
+      by: { ward: 'Lord Knight', arcane: 'Assassin Cross', wild: 'Guillotine Cross', bond: 'Rune Knight' } },
+
     { pair: 'force+ward', name: 'The Bulwark Oath',
       motto: 'The line holds because you are standing on it.',
       body: 'You go in first, stay in longest, and treat your own health bar as a resource rather than a warning.',
-      pick: 'Royal Guard', alt: 'Paladin' },
+      pick: 'Royal Guard',
+      by: { guile: 'Paladin', arcane: 'Rune Knight', wild: 'Lord Knight', bond: 'Royal Guard' } },
+
     { pair: 'arcane+force', name: 'The Rune-Bitten',
       motto: 'You wrote the spell on the blade yourself.',
       body: 'Muscle bores you and theory alone is not enough. You want a toolbox you built, carved into something heavy.',
-      pick: 'Rune Knight', alt: 'Sorcerer' },
+      pick: 'Rune Knight',
+      by: { guile: 'Sorcerer', ward: 'Rune Knight', wild: 'Warlock', bond: 'Sage' } },
+
     { pair: 'force+wild', name: 'The Dawn Fist',
       motto: 'Momentum is a defensive stat if you commit hard enough.',
       body: 'You close distance for a living. Nothing you do is subtle and nothing you do is slow.',
-      pick: 'Sura', alt: 'Champion' },
+      pick: 'Sura',
+      by: { guile: 'Guillotine Cross', ward: 'Champion', arcane: 'Star Gladiator', bond: 'Sura' } },
+
     { pair: 'bond+force', name: 'The Standing Order',
       motto: 'Someone has to go first. It may as well be you.',
       body: 'You lead from the front, and the buff you leave behind matters as much as the hit you land.',
-      pick: 'Paladin', alt: 'Royal Guard' },
+      pick: 'Paladin',
+      by: { guile: 'Royal Guard', ward: 'Paladin', arcane: 'Crusader', wild: 'Star Emperor' } },
+
     { pair: 'guile+ward', name: 'The Far Quiet',
       motto: 'The best position is the one nothing reaches.',
       body: 'You would rather set the board than be on it. Traps, spacing, patience, and a very long sightline.',
-      pick: 'Ranger', alt: 'Sniper' },
+      pick: 'Ranger',
+      by: { force: 'Sniper', arcane: 'Ranger', wild: 'Hunter', bond: 'Sniper' } },
+
     { pair: 'arcane+guile', name: 'The Twin Smoke',
       motto: 'Two things happened. You only saw one.',
       body: 'You like layered rotations where the setup is invisible and the payoff is not survivable.',
-      pick: 'Maboroshi', alt: 'Night Watch' },
+      pick: 'Maboroshi',
+      by: { force: 'Night Watch', ward: 'Kagemusha', wild: 'Maboroshi', bond: 'Shadow Chaser' } },
+
     { pair: 'guile+wild', name: 'The Sixth Shadow',
       motto: 'If it is not nailed down it is a build option.',
       body: 'You steal, copy, misdirect and improvise. Nobody, including you, knows what you will do next.',
-      pick: 'Shadow Chaser', alt: 'Stalker' },
+      pick: 'Shadow Chaser',
+      by: { force: 'Stalker', ward: 'Rogue', arcane: 'Shadow Chaser', bond: 'Rebel' } },
+
     { pair: 'bond+guile', name: 'The Whispered Ledger',
       motto: 'Everything is chemistry, including people.',
       body: 'You keep the party alive with things you brewed yourself, and you keep a quiet list of what everyone owes you.',
-      pick: 'Biochemist', alt: 'Geneticist' },
+      pick: 'Biochemist',
+      by: { force: 'Geneticist', ward: 'Biochemist', arcane: 'Alchemist', wild: 'Geneticist' } },
+
     { pair: 'arcane+ward', name: 'The Long Study',
       motto: 'You have read what is about to happen.',
       body: 'You want to understand the fight more than you want to win it quickly, and that understanding is what keeps you upright.',
-      pick: 'Scholar', alt: 'High Wizard' },
+      pick: 'Scholar',
+      by: { force: 'Sage', guile: 'Scholar', wild: 'High Wizard', bond: 'Sorcerer' } },
+
     { pair: 'ward+wild', name: 'The Iron Improviser',
       motto: 'It held. Do not ask how.',
       body: 'You build the answer on site out of whatever is lying around, then armour it badly and use it anyway.',
-      pick: 'Mechanic', alt: 'Mastersmith' },
+      pick: 'Mechanic',
+      by: { force: 'Mastersmith', guile: 'Mechanic', arcane: 'Blacksmith', bond: 'Mastersmith' } },
+
     { pair: 'bond+ward', name: 'The Kept Flame',
       motto: 'Nobody drops while you are watching.',
       body: 'You measure a good run by how few times anyone needed you, and you are always there the moment they do.',
-      pick: 'Arch Bishop', alt: 'High Priest' },
+      pick: 'Arch Bishop',
+      by: { force: 'High Priest', guile: 'Priest', arcane: 'Arch Bishop', wild: 'High Priest' } },
+
     { pair: 'arcane+wild', name: 'The Hollow Chorus',
       motto: 'You called something and it answered.',
       body: 'Big, strange, expensive magic. You want the screen to go quiet and then very much not quiet.',
-      pick: 'Warlock', alt: 'Soul Reaper' },
+      pick: 'Warlock',
+      by: { force: 'High Wizard', guile: 'Soul Reaper', ward: 'Wizard', bond: 'Warlock' } },
+
     { pair: 'arcane+bond', name: 'The Star-Reader',
       motto: 'You borrowed the sky and gave it to a friend.',
       body: 'Your power lands on other people. You read the situation, then hand someone else the answer.',
-      pick: 'Soul Ascetic', alt: 'Sorcerer' },
+      pick: 'Soul Ascetic',
+      by: { force: 'Star Emperor', guile: 'Soul Linker', ward: 'Soul Ascetic', wild: 'Sky Emperor' } },
+
     { pair: 'bond+wild', name: 'The Road Song',
       motto: 'The party plays better when you are in the room.',
       body: 'You are the reason a bad run is still a good night. Everything you do lands on someone else and comes back louder.',
-      pick: 'Minstrel/Wanderer', alt: 'Clown/Gypsy' }
+      pick: 'Minstrel/Wanderer',
+      by: { force: 'Clown/Gypsy', guile: 'Minstrel/Wanderer', ward: 'Bard and Dancer', arcane: 'Clown/Gypsy' } }
   ];
 
   /* --------------------------------------------- what you used to main */
@@ -226,10 +312,32 @@
     return s;
   }
 
+  /* Ties used to fall back on the alphabet, which quietly handed every close
+     result to arcane and bond. Break them on conviction instead: how many
+     answers touched the trait at all, then which one you picked first. */
+
+  function breadth() {
+    var n = { force: 0, guile: 0, ward: 0, arcane: 0, wild: 0, bond: 0 };
+    var first = {};
+    answers.forEach(function (pick, i) {
+      var add = QUESTIONS[i].a[pick].s;
+      for (var k in add) {
+        n[k]++;
+        if (first[k] == null) first[k] = i;
+      }
+    });
+    return { count: n, first: first };
+  }
+
   function ranked(s) {
-    return Object.keys(s).sort(function (a, b) {
-      if (s[b] !== s[a]) return s[b] - s[a];
-      return a.localeCompare(b);       // stable when tied
+    var b = breadth();
+    return Object.keys(s).sort(function (a, b2) {
+      if (s[b2] !== s[a]) return s[b2] - s[a];
+      if (b.count[b2] !== b.count[a]) return b.count[b2] - b.count[a];
+      var fa = b.first[a] == null ? 99 : b.first[a];
+      var fb = b.first[b2] == null ? 99 : b.first[b2];
+      if (fa !== fb) return fa - fb;
+      return a.localeCompare(b2);
     });
   }
 
@@ -239,14 +347,31 @@
     var key = pairKey(order[0], order[1]);
     var arch = ARCHETYPES.filter(function (x) { return x.pair === key; })[0] || ARCHETYPES[0];
     var old = OLD_CLASSES.filter(function (x) { return x.v === oldClass; })[0] || OLD_CLASSES[0];
-    var cls = classes[arch.pick] || null;
-    var alt = classes[arch.alt] || null;
+
+    /* the third trait decides which class inside the archetype you get */
+    var third = order[2];
+    var pickName = (arch.by && arch.by[third]) || arch.pick;
+    var cls = classes[pickName] || null;
+
+    /* the runner up is the archetype's other most common ending, and it is
+       never the same class as the one you were just given */
+    var others = [];
+    for (var t in (arch.by || {})) {
+      if (arch.by[t] !== pickName && others.indexOf(arch.by[t]) === -1) {
+        others.push(arch.by[t]);
+      }
+    }
+    if (arch.pick !== pickName && others.indexOf(arch.pick) === -1) {
+      others.unshift(arch.pick);
+    }
+    var altName = others[0] || arch.pick;
+    var alt = classes[altName] || null;
 
     var sameFamily = old.family && cls && cls.family === old.family;
 
     return {
-      arch: arch, cls: cls, alt: alt, old: old, order: order,
-      sameFamily: sameFamily,
+      arch: arch, cls: cls, alt: alt, altName: altName, old: old, order: order,
+      third: third, sameFamily: sameFamily,
       why: buildWhy(arch, cls, old, order, sameFamily)
     };
   }
@@ -255,8 +380,11 @@
     var out = [];
     var t1 = TRAITS[order[0]].label, t2 = TRAITS[order[1]].label;
 
+    var t3 = TRAITS[order[2]].label;
     out.push('Your answers leaned hardest on <b>' + t1 + '</b> and <b>' + t2 +
-             '</b>, and that pairing is exactly what ' + esc(arch.pick) + ' is built around.');
+             '</b>, which is what this archetype is built around. <b>' + t3 +
+             '</b> came third, and that is what narrowed it to ' +
+             esc(cls ? cls.name : arch.pick) + ' rather than the others in the same bracket.');
 
     if (cls) {
       out.push(esc(cls.name) + ' sits in the ' + esc(cls.family) + ' line' +
@@ -288,9 +416,9 @@
   function renderIntro() {
     root.innerHTML =
       '<div class="quiz-card">' +
-        '<p class="eyebrow">Nine questions</p>' +
+        '<p class="eyebrow">' + QUESTIONS.length + ' questions</p>' +
         '<h2>Which one of these are you, really?</h2>' +
-        '<p class="muted">Every skill tree on this server was rewritten, so the class you mained for years might not be the class that fits you any more. Nine scenarios, no wrong answers, one honest suggestion at the end.</p>' +
+        '<p class="muted">Every skill tree on this server was rewritten, so the class you mained for years might not be the class that fits you any more. Straight questions about how you like to play, no wrong answers, one suggestion at the end.</p>' +
         '<label class="quiz-label" for="oldClass">What did you main before?</label>' +
         '<select id="oldClass">' +
           OLD_CLASSES.map(function (o) {
@@ -313,8 +441,9 @@
     root.innerHTML =
       '<div class="quiz-card">' +
         progress() +
-        '<p class="eyebrow">Scenario ' + (step + 1) + ' of ' + QUESTIONS.length + '</p>' +
+        '<p class="eyebrow">Question ' + (step + 1) + ' of ' + QUESTIONS.length + '</p>' +
         '<h2 class="quiz-q">' + esc(q.q) + '</h2>' +
+        (q.hint ? '<p class="quiz-hint">' + esc(q.hint) + '</p>' : '') +
         '<div class="quiz-answers">' +
           q.a.map(function (a, i) {
             return '<button class="quiz-answer" type="button" data-i="' + i + '">' +
@@ -363,6 +492,14 @@
           traitBars() +
         '</div>' +
 
+        /* Sharing sits here, above the fold, because people were screenshotting
+           the page rather than scrolling to the bottom for these. */
+        '<div class="quiz-share">' +
+          '<button class="btn -primary" id="quizImageCopy" type="button">Copy image for Discord</button>' +
+          '<button class="btn -ghost" id="quizImage" type="button">Save as image</button>' +
+          '<button class="btn -ghost" id="quizCopy" type="button">Copy as text</button>' +
+        '</div>' +
+
         '<div class="quiz-pick">' +
           (cls && cls.art
             ? '<div class="quiz-art"><img src="' + esc(cls.art) + '" alt="' + esc(cls.name) + '"></div>'
@@ -389,14 +526,12 @@
         '<div class="quiz-alt">' +
           '<p class="eyebrow">If that one does not grab you</p>' +
           '<p>Try <a href="classes/' + esc(r.alt ? r.alt.slug : '') + '.html"><b>' +
-            esc(r.arch.alt) + '</b></a>' +
+            esc(r.altName) + '</b></a>' +
             (r.alt ? '. ' + esc(r.alt.summary) : '.') + '</p>' +
         '</div>' +
 
         '<div class="quiz-actions">' +
           (cls ? '<a class="btn -primary" href="classes/' + esc(cls.slug) + '.html">Read the full class</a>' : '') +
-          '<button class="btn -ghost" id="quizImage" type="button">Save as image</button>' +
-          '<button class="btn -ghost" id="quizCopy" type="button">Copy for Discord</button>' +
           '<button class="btn -quiet" id="quizAgain" type="button">Take it again</button>' +
         '</div>' +
       '</div>';
@@ -407,6 +542,7 @@
     });
     $('quizCopy').addEventListener('click', function () { copyResult(this); });
     $('quizImage').addEventListener('click', function () { saveImage(this); });
+    $('quizImageCopy').addEventListener('click', function () { copyImage(this); });
 
     var url = shareUrl();
     if (history.replaceState) history.replaceState(null, '', url);
@@ -432,7 +568,7 @@
       '',
       'Nightmare RO says I should play **' + (r.cls ? r.cls.name : r.arch.pick) + '**' +
         (r.cls ? ' (' + r.cls.family + ' line, tier ' + r.cls.tier + ')' : '') + '.',
-      'Second choice: ' + r.arch.alt + '.',
+      'Second choice: ' + r.altName + '.',
       '',
       'Find yours: <' + location.origin + location.pathname + '>'
     ];
@@ -492,7 +628,9 @@
     return lines;
   }
 
-  function saveImage(btn) {
+  /* Draws the share card and hands back a PNG blob. Both the download button
+     and the copy to clipboard button run through this. */
+  function buildCard() {
     var r = result;
     var W = 1200, H = 630;
     var c = document.createElement('canvas');
@@ -502,7 +640,7 @@
     var jobs = [loadImage('assets/img/logo.png')];
     if (r.cls && r.cls.art) jobs.push(loadImage(r.cls.art));
 
-    Promise.all(jobs).then(function (imgs) {
+    return Promise.all(jobs).then(function (imgs) {
       var logo = imgs[0], art = imgs[1];
 
       ctx.fillStyle = '#07060a';
@@ -570,17 +708,49 @@
       ctx.font = '400 19px Inter, sans-serif';
       ctx.fillText('nightmarero.pages.dev', 64, H - 44);
 
-      c.toBlob(function (blob) {
-        var a = document.createElement('a');
-        a.href = URL.createObjectURL(blob);
-        a.download = 'nightmarero-' + (r.cls ? r.cls.slug : 'result') + '.png';
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        setTimeout(function () { URL.revokeObjectURL(a.href); }, 4000);
-      }, 'image/png');
+      return new Promise(function (res) {
+        c.toBlob(function (blob) { res(blob); }, 'image/png');
+      });
+    });
+  }
+
+  function flashLabel(btn, text) {
+    if (!btn.dataset.label) btn.dataset.label = btn.textContent;
+    btn.textContent = text;
+    setTimeout(function () { btn.textContent = btn.dataset.label; }, 1800);
+  }
+
+  function saveImage(btn) {
+    buildCard().then(function (blob) {
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'nightmarero-' +
+                   (result.cls ? result.cls.slug : 'result') + '.png';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(function () { URL.revokeObjectURL(a.href); }, 4000);
     }).catch(function () {
-      btn.textContent = 'Could not build the image';
+      flashLabel(btn, 'Could not build the image');
+    });
+  }
+
+  /* Straight onto the clipboard as an image, so it can be pasted into Discord
+     without ever touching the downloads folder. Browsers that cannot do that
+     get the download instead, which is the same end result with one more
+     step. */
+  function copyImage(btn) {
+    var canCopy = window.ClipboardItem && navigator.clipboard &&
+                  navigator.clipboard.write;
+    if (!canCopy) return saveImage(btn);
+
+    buildCard().then(function (blob) {
+      var item = new ClipboardItem({ 'image/png': blob });
+      return navigator.clipboard.write([item]);
+    }).then(function () {
+      flashLabel(btn, 'Copied, paste it in Discord');
+    }).catch(function () {
+      saveImage(btn);
     });
   }
 

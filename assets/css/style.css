@@ -2350,7 +2350,13 @@ html[data-theme="light"] .site-footer { background: color-mix(in srgb, var(--bg)
 
 .quiz-q {
   font-size: var(--step-2);
-  margin-bottom: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+.quiz-q + .quiz-answers { margin-top: 0.9rem; }
+.quiz-hint {
+  margin-bottom: 1.1rem;
+  font-size: 0.88rem;
+  color: var(--text-dim);
 }
 
 .quiz-answers { display: grid; gap: 0.55rem; }
@@ -2486,6 +2492,22 @@ html[data-theme="light"] .site-footer { background: color-mix(in srgb, var(--bg)
   flex-wrap: wrap;
   gap: 0.6rem;
   justify-content: center;
+}
+
+/* Sharing sits directly under the archetype, where people actually look. */
+.quiz-share {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  justify-content: center;
+  padding: 0.9rem 1rem;
+  margin-bottom: 0.4rem;
+  border-top: 1px solid var(--surface-line);
+  border-bottom: 1px solid var(--surface-line);
+  background: color-mix(in srgb, var(--accent) 5%, transparent);
+}
+@media (max-width: 520px) {
+  .quiz-share .btn { flex: 1 1 100%; justify-content: center; }
 }
 
 /* --------------------------------------------------------------------------
