@@ -109,6 +109,19 @@
   /* Friday 7 August 2026, 20:00 Brasilia time (UTC-3) = 23:00 UTC. */
   var LAUNCH = Date.UTC(2026, 7, 7, 23, 0, 0);
   var LAUNCH_OFFSET_MIN = -180;              // Brasilia, minutes from UTC
+
+  /* The site has to stop saying "opens on Friday" the second it opens, and
+     nobody is going to be redeploying at 20:00 on launch night. Anything
+     marked data-when="pre" or data-when="live" is swapped by CSS off this
+     one attribute, on every page, and it flips on its own when the clock
+     runs out mid-visit. With scripting off the page keeps the pre-launch
+     wording, which is what the HTML actually says. */
+  var setLaunchState = function () {
+    document.documentElement.dataset.launch =
+      Date.now() >= LAUNCH ? 'live' : 'pre';
+  };
+  setLaunchState();
+
   var cd = $('#countdown');
 
   if (cd) {
@@ -132,6 +145,7 @@
       if (left <= 0) {
         block.hidden = true;
         if (live) live.hidden = false;
+        setLaunchState();
         stop();
         return;
       }

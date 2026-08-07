@@ -803,7 +803,7 @@ def class_page(reg, name, blocks):
       <div class="cta-band mt-xl">
         <div class="inner">
           <h2 data-i18n="band.title">Come find out what changed</h2>
-          <p class="lede text-center" data-i18n="band.lede">Make an account now, grab the client, and be there when the servers go up.</p>
+          <p class="lede text-center" data-i18n="band.lede">Make an account, grab the client, and come and see what changed.</p>
           <div class="hero-actions">
             <a class="btn -primary -lg" href="{reg}" target="_blank" rel="noopener" data-i18n="cta.registerFree">Create a free account</a>
             <a class="btn -ghost -lg" href="{wiki}" target="_blank" rel="noopener">
@@ -971,7 +971,7 @@ def classes_index(reg):
       <div class="cta-band">
         <div class="inner">
           <h2 data-i18n="band.title">Come find out what changed</h2>
-          <p class="lede text-center" data-i18n="band.lede">Make an account now, grab the client, and be there when the servers go up.</p>
+          <p class="lede text-center" data-i18n="band.lede">Make an account, grab the client, and come and see what changed.</p>
           <div class="hero-actions">
             <a class="btn -primary -lg" href="{reg}" target="_blank" rel="noopener" data-i18n="cta.registerFree">Create a free account</a>
             <a class="btn -ghost -lg" href="{wiki}" target="_blank" rel="noopener">

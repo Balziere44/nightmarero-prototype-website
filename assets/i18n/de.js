@@ -102,7 +102,7 @@ window.NM_I18N_REGISTER('de', {
   'hero.title2': 'von Grund auf neu',
   'hero.lede': 'Jede Klasse, jeder Skill, jedes Item und jeder Gegner hier wurde <strong>von Grund auf neu gebaut</strong>. Überarbeitete Klassen, Level 150, Bosse, die du selbst beschwörst, und ein Design dafür, dass du <strong>allein spielen kannst, ohne an eine Wand zu laufen</strong>.',
   'hero.foot': 'Kostenlos. Kein Shop, der Stärke verkauft. Nur PvE.',
-  'hero.live': 'Die Server sind online. Komm rein.',
+  'hero.live': 'Nightmare RO ist online. Account anlegen, Client holen und rein.',
 
   'cd.days': 'Tage',
   'cd.hours': 'Stunden',
@@ -201,7 +201,7 @@ window.NM_I18N_REGISTER('de', {
 
   'band.eyebrow': 'Öffnet Freitag, 7. August 2026',
   'band.title': 'Schau dir an, was sich geändert hat',
-  'band.lede': 'Leg jetzt ein Konto an, hol dir den Client, und sei dabei, wenn die Server hochfahren.',
+  'band.lede': 'Mach dir einen Account, hol dir den Client und sieh dir an, was sich geändert hat.',
 
   'footer.blurb': 'Ein vollständig eigener privater Server. Neu gebaut, neu ausbalanciert und weiterhin in Arbeit.',
   'footer.play': 'Spielen',
@@ -382,4 +382,9 @@ window.NM_I18N_REGISTER('de', {
   'cls.videosEyebrow': 'Von den Spielern',
   'cls.videosTitle': 'Sieh sie im Einsatz',
   'cls.noVideos': 'Noch keine Videos zu dieser Klasse. Nimm dein Gameplay auf und poste es im Discord.',
+  'hero.badgeLive': 'Server sind offen',
+  'rows.k7': 'Bosse',
+  'rows.v7': 'Du beschwörst sie an Altären, und sie gehören <strong>nicht allen</strong>. Der Kill-Steal-Schutz gilt auch für Bosse, niemand schnappt dir also den weg, den du geöffnet hast.',
+  'rows.k8': 'Shop',
+  'rows.v8': '<strong>Nichts, das Macht verkauft.</strong> Keine Statuswerte, keine Exp-Rollen, keine Ausrüstung hinter einer Zahlung.',
 });

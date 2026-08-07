@@ -102,7 +102,7 @@ window.NM_I18N_REGISTER('pt', {
   'hero.title2': 'reconstruído por completo',
   'hero.lede': 'Cada classe, skill, item e monstro daqui foi <strong>refeito do zero</strong>. Classes revisadas, nível 150, chefes que você mesmo invoca, e um design feito pra você <strong>jogar sozinho sem bater numa parede</strong>.',
   'hero.foot': 'Grátis para jogar. Nenhuma loja que vende poder. Só PvE.',
-  'hero.live': 'Os servidores estão no ar. Entre.',
+  'hero.live': 'O Nightmare RO está no ar. Crie sua conta, baixe o cliente e entre.',
 
   'cd.days': 'dias',
   'cd.hours': 'horas',
@@ -201,7 +201,7 @@ window.NM_I18N_REGISTER('pt', {
 
   'band.eyebrow': 'Abre sexta, 7 de agosto de 2026',
   'band.title': 'Venha ver o que mudou',
-  'band.lede': 'Crie a conta agora, pegue o cliente, e esteja lá quando os servidores subirem.',
+  'band.lede': 'Crie sua conta, baixe o cliente e venha ver o que mudou.',
 
   'footer.blurb': 'Um servidor privado totalmente customizado. Reconstruído, rebalanceado e ainda em desenvolvimento.',
   'footer.play': 'Jogar',
@@ -382,4 +382,9 @@ window.NM_I18N_REGISTER('pt', {
   'cls.videosEyebrow': 'Da comunidade',
   'cls.videosTitle': 'Veja em ação',
   'cls.noVideos': 'Ainda não há vídeos desta classe. Grave sua gameplay e poste no Discord.',
+  'hero.badgeLive': 'Servidores abertos',
+  'rows.k7': 'Chefes',
+  'rows.v7': 'Você invoca em altares, e eles <strong>não são de todos</strong>. O comando de anti roubo de kill também funciona em chefe, então ninguém rouba o que você abriu.',
+  'rows.k8': 'Loja de itens',
+  'rows.v8': '<strong>Nada que venda poder.</strong> Sem bônus de status, sem pergaminho de exp, sem equipamento atrás de pagamento.',
 });

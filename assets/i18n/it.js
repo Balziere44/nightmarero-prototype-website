@@ -102,7 +102,7 @@ window.NM_I18N_REGISTER('it', {
   'hero.title2': 'ricostruito da capo a fondo',
   'hero.lede': 'Ogni classe, abilità, oggetto e mostro qui è stato <strong>rifatto da zero</strong>. Classi rifatte, livello 150, boss che evochi tu stesso e un design pensato per <strong>giocare da solo senza sbattere contro un muro</strong>.',
   'hero.foot': 'Gratis. Nessun negozio che vende potere. Solo PvE.',
-  'hero.live': 'I server sono online. Entra.',
+  'hero.live': 'Nightmare RO è online. Crea un account, scarica il client ed entra.',
 
   'cd.days': 'giorni',
   'cd.hours': 'ore',
@@ -201,7 +201,7 @@ window.NM_I18N_REGISTER('it', {
 
   'band.eyebrow': 'Apre venerdì 7 agosto 2026',
   'band.title': 'Vieni a vedere cosa è cambiato',
-  'band.lede': 'Crea un account adesso, prendi il client, e fatti trovare quando i server si accendono.',
+  'band.lede': 'Crea un account, scarica il client e vieni a vedere cosa è cambiato.',
 
   'footer.blurb': 'Un server privato completamente personalizzato. Ricostruito, ribilanciato e ancora in lavorazione.',
   'footer.play': 'Gioca',
@@ -382,4 +382,9 @@ window.NM_I18N_REGISTER('it', {
   'cls.videosEyebrow': 'Dalla community',
   'cls.videosTitle': 'Guardala in azione',
   'cls.noVideos': 'Ancora nessun video per questa classe. Registra la tua gameplay e postala sul Discord.',
+  'hero.badgeLive': 'Server aperti',
+  'rows.k7': 'Boss',
+  'rows.v7': 'Li evochi agli altari e <strong>non sono di tutti</strong>. Il comando anti furto di kill funziona anche sui boss, quindi nessuno ti ruba quello che hai aperto.',
+  'rows.k8': 'Negozio',
+  'rows.v8': '<strong>Niente che venda potere.</strong> Nessun bonus alle statistiche, nessuna pergamena di exp, nessun equipaggiamento dietro un pagamento.',
 });

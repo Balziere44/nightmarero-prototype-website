@@ -3318,6 +3318,47 @@ html[data-theme="light"] .site-footer { background: color-mix(in srgb, var(--bg)
 .vid-empty + p { margin-top: 0.8rem; text-align: center; }
 
 /* --------------------------------------------------------------------------
+   20j-b. A floor under the small print on phones
+
+   The labels that carry the most meaning on a class page, the skill type and
+   level pills, the prerequisite line and the keyword legend, were rendering
+   between 9.6px and 10.9px on a 375px screen. That is the densest content on
+   the site and it was the smallest type on it. Nothing here changes layout,
+   only how readable it is in the hand.
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 640px) {
+  .sk-type,
+  .sk-lv { font-size: 0.72rem; }
+  .sk-needs,
+  .sk-needs a { font-size: 0.78rem; }
+  .kw-legend span,
+  .type-key span { font-size: 0.72rem; }
+  .mech-strip,
+  .mech-strip em { font-size: 0.8rem; }
+  .branch-title span { font-size: 0.78rem; }
+  .tag,
+  .tier-tags .tag { font-size: 0.76rem; }
+  .vid-by { font-size: 0.76rem; }
+  .pager small { font-size: 0.74rem; }
+  .drawer nav .drawer-group { font-size: 0.78rem; }
+  .sex-toggle button { font-size: 0.76rem; }
+}
+
+/* --------------------------------------------------------------------------
+   20k. Before and after launch
+
+   main.js stamps data-launch on the root. Copy that only makes sense before
+   the servers open is marked data-when="pre", copy for after is data-when
+   ="live". With no scripting the page keeps the pre-launch wording, which is
+   what the HTML says on its own.
+   -------------------------------------------------------------------------- */
+
+[data-when="live"] { display: none; }
+:root[data-launch="live"] [data-when="live"] { display: revert; }
+:root[data-launch="live"] [data-when="pre"] { display: none; }
+
+/* --------------------------------------------------------------------------
    21. Reveal on scroll
    -------------------------------------------------------------------------- */
 

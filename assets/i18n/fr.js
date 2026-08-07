@@ -102,7 +102,7 @@ window.NM_I18N_REGISTER('fr', {
   'hero.title2': 'reconstruit de fond en comble',
   'hero.lede': 'Chaque classe, compétence, objet et monstre ici a été <strong>refait de zéro</strong>. Des classes revues, niveau 150, des boss que vous invoquez vous-même, et un design pensé pour <strong>jouer seul sans jamais être bloqué</strong>.',
   'hero.foot': 'Gratuit. Aucune boutique qui vend de la puissance. PvE uniquement.',
-  'hero.live': 'Les serveurs sont en ligne. Entrez.',
+  'hero.live': 'Nightmare RO est en ligne. Créez un compte, prenez le client et entrez.',
 
   'cd.days': 'jours',
   'cd.hours': 'heures',
@@ -201,7 +201,7 @@ window.NM_I18N_REGISTER('fr', {
 
   'band.eyebrow': 'Ouverture vendredi 7 août 2026',
   'band.title': 'Venez voir ce qui a changé',
-  'band.lede': 'Créez un compte maintenant, récupérez le client, et soyez là quand les serveurs s’allument.',
+  'band.lede': 'Créez un compte, prenez le client, et venez voir ce qui a changé.',
 
   'footer.blurb': 'Un serveur privé entièrement personnalisé. Reconstruit, rééquilibré et toujours en chantier.',
   'footer.play': 'Jouer',
@@ -382,4 +382,9 @@ window.NM_I18N_REGISTER('fr', {
   'cls.videosEyebrow': 'Par les joueurs',
   'cls.videosTitle': 'Voyez la classe en jeu',
   'cls.noVideos': 'Pas encore de vidéo pour cette classe. Enregistrez votre gameplay et postez-la sur le Discord.',
+  'hero.badgeLive': 'Serveurs ouverts',
+  'rows.k7': 'Boss',
+  'rows.v7': 'Vous les invoquez à des autels, et ils ne sont <strong>pas en accès libre</strong>. La commande anti vol de kill marche aussi sur les boss, donc personne ne vous pique celui que vous avez ouvert.',
+  'rows.k8': 'Boutique',
+  'rows.v8': '<strong>Rien qui vende de la puissance.</strong> Pas de bonus de stats, pas de parchemin d’exp, pas d’équipement derrière un paiement.',
 });
