@@ -389,10 +389,12 @@ def build():
                      % (slugify(title), esc(title)))
         count += 1
 
-    jumps.append('<a class="q-jump -aside" href="#potions" '
-                 'data-i18n="q.potionEyebrow">Potion crafting</a>')
-    jumps.append('<a class="q-jump -aside" href="#taekwon" '
-                 'data-i18n="q.tkEyebrow">Taekwon mission</a>')
+    # Quest names are a spoiler in themselves, so their buttons live inside
+    # the gate. Only the two sections that are not gated get a link above it.
+    aside = ['<a class="q-jump -aside" href="#potions" '
+             'data-i18n="q.potionEyebrow">Potion crafting</a>',
+             '<a class="q-jump -aside" href="#taekwon" '
+             'data-i18n="q.tkEyebrow">Taekwon mission</a>']
 
     ld = """<script type="application/ld+json">
 {{
@@ -425,16 +427,16 @@ def build():
         <p class="eyebrow" data-i18n="q.eyebrow">Spoilers</p>
         <h1 data-i18n="q.title">The answers, for when you want them</h1>
         <p class="lede" data-i18n="q.lede">Half the fun here is not knowing. Several of these quests have no NPC pointing at them and no log entry, and working one out with friends is the point. So nothing below is open until you say so.</p>
-        <p class="guide-credit"><span data-i18n="q.credit">Found and worked out by</span> <b>Leo, of guild [SENAI]</b></p>
+        <p class="guide-credit"><span data-i18n="q.credit">Found and worked out by</span> <b>Leo [SENAI]</b></p>
       </div>
     </div>
   </section>
 
   <section class="section-pad-sm">
     <div class="shell">
-      <nav class="q-jumps" aria-label="Jump to a quest">
+      <nav class="q-jumps" aria-label="Jump to a section">
         <span class="q-jumps-label" data-i18n="q.jump">Jump to</span>
-{jumps}
+{aside}
       </nav>
 
       <div class="q-gate" id="questGate">
@@ -447,7 +449,12 @@ def build():
       </div>
 
       <div class="q-body" id="questBody" hidden>
-""".format(jumps="\n".join("        " + j for j in jumps)),
+      <nav class="q-jumps" aria-label="Jump to a quest">
+        <span class="q-jumps-label" data-i18n="q.jump">Jump to</span>
+{jumps}
+      </nav>
+""".format(aside="\n".join("        " + j for j in aside),
+           jumps="\n".join("        " + j for j in jumps)),
     ]
 
     parts.append("\n".join(sections))
