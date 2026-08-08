@@ -61,9 +61,6 @@ window.NM_I18N_REGISTER('fr', {
   'dl.hotkeys': 'Les trois panneaux que vous ouvrirez sans arrêt : <strong>Alt+Q</strong> pour l’équipement et les points de stats, <strong>Alt+E</strong> pour l’inventaire, <strong>Alt+S</strong> pour l’arbre de compétences et les points non dépensés.',
   'nav.wiki': 'Wiki',
   'cta.wiki': 'Ouvrir le wiki',
-  'cd.sourceTime': 'Heure du serveur : 20h00 à Brasilia (UTC-3)',
-  'cd.label': 'Les serveurs ouvrent dans',
-  'cd.when': 'Vendredi 7 août 2026 à 20h00, heure de Brasilia (UTC-3)',
   'feat.codexLink': 'Lire le codex des statuts',
   'cls.legendMore': 'Ce qu’ils font',
   'codex.eyebrow': 'Codex des statuts',
@@ -98,17 +95,12 @@ window.NM_I18N_REGISTER('fr', {
   'cta.allClasses': 'Voir les classes revues',
   'cta.browseClasses': 'Parcourir les classes',
 
-  'hero.badge': 'Ouverture vendredi 7 août 2026',
   'hero.title1': 'Le RO que vous connaissez,',
   'hero.title2': 'reconstruit de fond en comble',
   'hero.lede': 'Chaque classe, compétence, objet et monstre ici a été <strong>refait de zéro</strong>. Des classes revues, niveau 150, des boss que vous invoquez vous-même, et un design pensé pour <strong>jouer seul sans jamais être bloqué</strong>.',
   'hero.foot': 'Gratuit. Aucune boutique qui vend de la puissance. PvE uniquement.',
-  'hero.live': 'Nightmare RO est en ligne. Créez un compte, prenez le client et entrez.',
+  'hero.live': 'En ligne depuis le <time datetime="2026-08-07T23:00:00Z">vendredi 7 août 2026</time>. Créez un compte, prenez le client et entrez.',
 
-  'cd.days': 'jours',
-  'cd.hours': 'heures',
-  'cd.minutes': 'minutes',
-  'cd.seconds': 'secondes',
 
   'stats.level': 'niveau maximum',
   'stats.classes': 'classes finales',
@@ -197,10 +189,10 @@ window.NM_I18N_REGISTER('fr', {
   'faq.a6': 'Ni l’un ni l’autre, en vrai. La base se rapproche du renewal, mais <strong>beaucoup de formules ont été réécrites</strong>, dont le temps d’incantation, la vitesse d’attaque, les critiques et toute la table des éléments.',
   'faq.q7': 'Puis-je perdre mon équipement en raffinant ?',
   'faq.a7': 'Jamais. L’équipement <strong>ne casse pas et ne redescend pas</strong> en cas d’échec. Plafond +10, réussite à 100 % moins 10 % par niveau actuel, donc la dernière étape est un jet à 10 %. Vous ne perdez que le minerai et le zeny.',
-  'faq.q8': 'Quand le serveur ouvre-t-il ?',
-  'faq.a8': '<strong>Le vendredi 7 août 2026 à 20h00, heure de Brasilia (UTC-3).</strong> Soit 23h00 UTC. Les comptes se créent dès maintenant, et le Discord est déjà actif.',
+  'faq.q8': 'Le serveur est-il ouvert ?',
+  'faq.a8': '<strong>Oui. Il est en ligne depuis le vendredi 7 août 2026.</strong> Créez un compte sur le panneau, téléchargez le client et entrez. Tout est annoncé sur le Discord.',
 
-  'band.eyebrow': 'Ouverture vendredi 7 août 2026',
+  'band.eyebrow': 'Serveurs ouverts',
   'band.title': 'Venez voir ce qui a changé',
   'band.lede': 'Créez un compte, prenez le client, et venez voir ce qui a changé.',
 

@@ -61,9 +61,6 @@ window.NM_I18N_REGISTER('pt', {
   'dl.hotkeys': 'Os três painéis onde você vai morar: <strong>Alt+Q</strong> para equipamento e pontos de status, <strong>Alt+E</strong> para o inventário, <strong>Alt+S</strong> para a árvore de skills e os pontos não gastos.',
   'nav.wiki': 'Wiki',
   'cta.wiki': 'Abrir a wiki',
-  'cd.sourceTime': 'Horário do servidor: 20h em Brasília (UTC-3)',
-  'cd.label': 'Os servidores abrem em',
-  'cd.when': 'Sexta-feira, 7 de agosto de 2026, às 20h de Brasília (UTC-3)',
   'feat.codexLink': 'Ver o codex de status',
   'cls.legendMore': 'O que fazem',
   'codex.eyebrow': 'Codex de status',
@@ -98,17 +95,12 @@ window.NM_I18N_REGISTER('pt', {
   'cta.allClasses': 'Ver as classes revisadas',
   'cta.browseClasses': 'Explorar as classes',
 
-  'hero.badge': 'Abre sexta, 7 de agosto de 2026',
   'hero.title1': 'O RO que você conhece,',
   'hero.title2': 'reconstruído por completo',
   'hero.lede': 'Cada classe, skill, item e monstro daqui foi <strong>refeito do zero</strong>. Classes revisadas, nível 150, chefes que você mesmo invoca, e um design feito pra você <strong>jogar sozinho sem bater numa parede</strong>.',
   'hero.foot': 'Grátis para jogar. Nenhuma loja que vende poder. Só PvE.',
-  'hero.live': 'O Nightmare RO está no ar. Crie sua conta, baixe o cliente e entre.',
+  'hero.live': 'No ar desde <time datetime="2026-08-07T23:00:00Z">sexta, 7 de agosto de 2026</time>. Crie sua conta, baixe o cliente e entre.',
 
-  'cd.days': 'dias',
-  'cd.hours': 'horas',
-  'cd.minutes': 'minutos',
-  'cd.seconds': 'segundos',
 
   'stats.level': 'nível máximo',
   'stats.classes': 'classes finais',
@@ -197,10 +189,10 @@ window.NM_I18N_REGISTER('pt', {
   'faq.a6': 'Nenhum dos dois, na real. A base fica mais perto de renewal, mas <strong>muitas fórmulas foram reescritas</strong>, incluindo tempo de conjuração, velocidade de ataque, críticos e a tabela de elementos inteira.',
   'faq.q7': 'Posso perder meu equipamento refinando?',
   'faq.a7': 'Nunca. O equipamento <strong>não quebra e não perde refino</strong> ao falhar. Limite +10, sucesso é 100% menos 10% por refino atual, então o último passo é uma chance de 10%. Você perde só o minério e o zeny.',
-  'faq.q8': 'Quando o servidor abre?',
-  'faq.a8': '<strong>Sexta-feira, 7 de agosto de 2026, às 20h de Brasília (UTC-3).</strong> Isso é 23:00 UTC. Dá pra criar conta agora, e o Discord já está ativo.',
+  'faq.q8': 'O servidor já abriu?',
+  'faq.a8': '<strong>Sim. Está no ar desde sexta-feira, 7 de agosto de 2026.</strong> Crie a conta no painel, baixe o cliente e entre. É no Discord que tudo é anunciado.',
 
-  'band.eyebrow': 'Abre sexta, 7 de agosto de 2026',
+  'band.eyebrow': 'Servidores abertos',
   'band.title': 'Venha ver o que mudou',
   'band.lede': 'Crie sua conta, baixe o cliente e venha ver o que mudou.',
 

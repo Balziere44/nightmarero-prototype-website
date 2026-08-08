@@ -61,9 +61,6 @@ window.NM_I18N_REGISTER('de', {
   'dl.hotkeys': 'Die drei Fenster, in denen du wohnen wirst: <strong>Alt+Q</strong> für Ausrüstung und Statuspunkte, <strong>Alt+E</strong> fürs Inventar, <strong>Alt+S</strong> für den Skillbaum und offene Skillpunkte.',
   'nav.wiki': 'Wiki',
   'cta.wiki': 'Zum Wiki',
-  'cd.sourceTime': 'Serverzeit: 20:00 Uhr in Brasília (UTC-3)',
-  'cd.label': 'Server starten in',
-  'cd.when': 'Freitag, 7. August 2026 um 20:00 Uhr Brasília-Zeit (UTC-3)',
   'feat.codexLink': 'Zum Status-Codex',
   'cls.legendMore': 'Was sie bewirken',
   'codex.eyebrow': 'Status-Codex',
@@ -98,17 +95,12 @@ window.NM_I18N_REGISTER('de', {
   'cta.allClasses': 'Die überarbeiteten Klassen ansehen',
   'cta.browseClasses': 'Klassen durchstöbern',
 
-  'hero.badge': 'Öffnet Freitag, 7. August 2026',
   'hero.title1': 'Das RO, das du kennst,',
   'hero.title2': 'von Grund auf neu',
   'hero.lede': 'Jede Klasse, jeder Skill, jedes Item und jeder Gegner hier wurde <strong>von Grund auf neu gebaut</strong>. Überarbeitete Klassen, Level 150, Bosse, die du selbst beschwörst, und ein Design dafür, dass du <strong>allein spielen kannst, ohne an eine Wand zu laufen</strong>.',
   'hero.foot': 'Kostenlos. Kein Shop, der Stärke verkauft. Nur PvE.',
-  'hero.live': 'Nightmare RO ist online. Account anlegen, Client holen und rein.',
+  'hero.live': 'Online seit <time datetime="2026-08-07T23:00:00Z">Freitag, 7. August 2026</time>. Account anlegen, Client holen und rein.',
 
-  'cd.days': 'Tage',
-  'cd.hours': 'Stunden',
-  'cd.minutes': 'Minuten',
-  'cd.seconds': 'Sekunden',
 
   'stats.level': 'Maximallevel',
   'stats.classes': 'finale Klassen',
@@ -197,10 +189,10 @@ window.NM_I18N_REGISTER('de', {
   'faq.a6': 'Genau genommen weder noch. Die Basis liegt näher an Renewal, aber <strong>sehr viele Formeln wurden neu geschrieben</strong>, darunter Zauberzeit, Angriffsgeschwindigkeit, kritische Treffer und die ganze Elementtabelle.',
   'faq.q7': 'Kann ich beim Aufwerten Ausrüstung verlieren?',
   'faq.a7': 'Nie. Ausrüstung <strong>zerbricht nicht und fällt nicht zurück</strong>. Limit +10, Erfolg ist 100% minus 10% pro aktueller Stufe, der letzte Schritt ist also ein 10% Wurf. Du verlierst nur Erz und Zeny.',
-  'faq.q8': 'Wann öffnet der Server?',
-  'faq.a8': '<strong>Am Freitag, 7. August 2026 um 20:00 Uhr Brasília-Zeit (UTC-3).</strong> Das sind 23:00 Uhr UTC. Konten lassen sich schon jetzt anlegen, und der Discord ist bereits aktiv.',
+  'faq.q8': 'Ist der Server offen?',
+  'faq.a8': '<strong>Ja. Er läuft seit Freitag, 7. August 2026.</strong> Account im Panel anlegen, Client herunterladen und rein. Angekündigt wird alles im Discord.',
 
-  'band.eyebrow': 'Öffnet Freitag, 7. August 2026',
+  'band.eyebrow': 'Server sind offen',
   'band.title': 'Schau dir an, was sich geändert hat',
   'band.lede': 'Mach dir einen Account, hol dir den Client und sieh dir an, was sich geändert hat.',
 

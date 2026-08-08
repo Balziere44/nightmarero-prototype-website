@@ -61,9 +61,6 @@ window.NM_I18N_REGISTER('it', {
   'dl.hotkeys': 'I tre pannelli che userai di continuo: <strong>Alt+Q</strong> per equipaggiamento e punti statistica, <strong>Alt+E</strong> per l’inventario, <strong>Alt+S</strong> per l’albero delle abilità e i punti non spesi.',
   'nav.wiki': 'Wiki',
   'cta.wiki': 'Apri la wiki',
-  'cd.sourceTime': 'Ora del server: 20:00 a Brasilia (UTC-3)',
-  'cd.label': 'I server aprono tra',
-  'cd.when': 'Venerdì 7 agosto 2026 alle 20:00, ora di Brasilia (UTC-3)',
   'feat.codexLink': 'Leggi il codex degli status',
   'cls.legendMore': 'Cosa fanno',
   'codex.eyebrow': 'Codex degli status',
@@ -98,17 +95,12 @@ window.NM_I18N_REGISTER('it', {
   'cta.allClasses': 'Vedi le classi rifatte',
   'cta.browseClasses': 'Sfoglia le classi',
 
-  'hero.badge': 'Apre venerdì 7 agosto 2026',
   'hero.title1': 'Il RO che conosci,',
   'hero.title2': 'ricostruito da capo a fondo',
   'hero.lede': 'Ogni classe, abilità, oggetto e mostro qui è stato <strong>rifatto da zero</strong>. Classi rifatte, livello 150, boss che evochi tu stesso e un design pensato per <strong>giocare da solo senza sbattere contro un muro</strong>.',
   'hero.foot': 'Gratis. Nessun negozio che vende potere. Solo PvE.',
-  'hero.live': 'Nightmare RO è online. Crea un account, scarica il client ed entra.',
+  'hero.live': 'Online da <time datetime="2026-08-07T23:00:00Z">venerdì 7 agosto 2026</time>. Crea un account, scarica il client ed entra.',
 
-  'cd.days': 'giorni',
-  'cd.hours': 'ore',
-  'cd.minutes': 'minuti',
-  'cd.seconds': 'secondi',
 
   'stats.level': 'livello massimo',
   'stats.classes': 'classi finali',
@@ -197,10 +189,10 @@ window.NM_I18N_REGISTER('it', {
   'faq.a6': 'Nessuno dei due, davvero. La base è più vicina al renewal, ma <strong>moltissime formule sono state riscritte</strong>, incluse tempo di cast, velocità d’attacco, critici e l’intera tabella degli elementi.',
   'faq.q7': 'Posso perdere l’equipaggiamento raffinando?',
   'faq.a7': 'Mai. L’equipaggiamento <strong>non si rompe e non scende di livello</strong> in caso di fallimento. Tetto +10, successo al 100% meno 10% per livello attuale, quindi l’ultimo passo è un tiro al 10%. Perdi solo il minerale e gli zeny.',
-  'faq.q8': 'Quando apre il server?',
-  'faq.a8': '<strong>Venerdì 7 agosto 2026 alle 20:00, ora di Brasilia (UTC-3).</strong> Cioè le 23:00 UTC. Gli account si creano già ora, e il Discord è già attivo.',
+  'faq.q8': 'Il server è aperto?',
+  'faq.a8': '<strong>Sì. È online da venerdì 7 agosto 2026.</strong> Crea un account sul pannello, scarica il client ed entra. Tutto viene annunciato sul Discord.',
 
-  'band.eyebrow': 'Apre venerdì 7 agosto 2026',
+  'band.eyebrow': 'Server aperti',
   'band.title': 'Vieni a vedere cosa è cambiato',
   'band.lede': 'Crea un account, scarica il client e vieni a vedere cosa è cambiato.',
 

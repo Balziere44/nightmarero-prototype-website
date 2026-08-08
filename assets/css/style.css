@@ -42,6 +42,7 @@
   --accent-soft: var(--red-400);
   --accent-ink: #ffffff;
   --glow: rgba(232, 17, 43, 0.42);
+  --live: #3fd68a;
 
   /* Type */
   --font-display: "Outfit", "Noto Sans JP", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -123,6 +124,7 @@ html[data-theme="light"] {
   --accent-soft: var(--red-500);
   --accent-ink: #ffffff;
   --glow: rgba(196, 13, 34, 0.28);
+  --live: #0f8a5c;
 
   --shadow-sm: 0 2px 8px rgba(40, 20, 25, 0.1);
   --shadow-md: 0 18px 45px rgba(40, 20, 25, 0.16);
@@ -933,62 +935,23 @@ html[data-theme="light"] .hero-bg img { opacity: 0.3; filter: saturate(0.6) cont
   50% { box-shadow: 0 0 0 7px rgba(232, 17, 43, 0); }
 }
 
-/* countdown */
-.countdown-block {
-  display: grid;
-  gap: 0.7rem;
-  justify-items: start;
+/* The servers are open, so the badge burns green instead of red and the
+   line under the lede says since when. */
+.badge.-live .dot {
+  background: var(--live);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--live) 18%, transparent);
+  animation: pulseLive 2.4s var(--ease) infinite;
+}
+@keyframes pulseLive {
+  0%, 100% { box-shadow: 0 0 0 3px color-mix(in srgb, var(--live) 20%, transparent); }
+  50% { box-shadow: 0 0 0 7px color-mix(in srgb, var(--live) 0%, transparent); }
 }
 
-.countdown-label {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--text-dim);
-}
-
-.countdown-when {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem 0.85rem;
-  font-size: 0.83rem;
+.hero-status {
+  font-size: 0.92rem;
   color: var(--text-muted);
 }
-.countdown-when .local-time { color: var(--text-dim); }
-.countdown-when time { font-variant-numeric: tabular-nums; }
-
-.countdown {
-  display: flex;
-  gap: 0.55rem;
-  flex-wrap: wrap;
-}
-.countdown li {
-  min-width: 76px;
-  padding: 0.7rem 0.5rem 0.55rem;
-  text-align: center;
-  background: var(--bg-panel);
-  border: 1px solid var(--surface-line);
-  border-radius: var(--radius-sm);
-  backdrop-filter: blur(12px);
-}
-.countdown b {
-  display: block;
-  font-family: var(--font-display);
-  font-size: 1.75rem;
-  font-weight: 700;
-  line-height: 1;
-  font-variant-numeric: tabular-nums;
-  color: var(--text);
-}
-.countdown small {
-  font-family: var(--font-mono);
-  font-size: 0.62rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--text-dim);
-}
+.hero-status time { font-weight: 600; color: var(--text); }
 
 /* hero art: two adventurers, shoulder to shoulder.
    Both figures are sized as a share of the container width, so they stay
@@ -3347,20 +3310,6 @@ html[data-theme="light"] .site-footer { background: color-mix(in srgb, var(--bg)
   .drawer nav .drawer-group { font-size: 0.78rem; }
   .sex-toggle button { font-size: 0.76rem; }
 }
-
-/* --------------------------------------------------------------------------
-   20k. Before and after launch
-
-   main.js stamps data-launch on the root. Copy that only makes sense before
-   the servers open is marked data-when="pre", copy for after is data-when
-   ="live". With no scripting the page keeps the pre-launch wording, which is
-   what the HTML says on its own.
-   -------------------------------------------------------------------------- */
-
-[data-when="live"] { display: none; }
-:root[data-launch="live"] [data-when="live"] { display: revert; }
-:root[data-launch="live"] [data-when="pre"] { display: none; }
-
 
 /* --------------------------------------------------------------------------
    20l. The mechanics and end game pages

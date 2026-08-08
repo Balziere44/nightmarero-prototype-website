@@ -61,9 +61,6 @@ window.NM_I18N_REGISTER('ja', {
   'dl.hotkeys': 'よく開くことになる3つのパネル: <strong>Alt+Q</strong> 装備とステータス振り、<strong>Alt+E</strong> インベントリ、<strong>Alt+S</strong> スキルツリーと未使用スキルポイント。',
   'nav.wiki': 'Wiki',
   'cta.wiki': 'Wikiを開く',
-  'cd.sourceTime': 'サーバー時間: ブラジリア 20時（UTC-3）',
-  'cd.label': 'サーバー稼働まで',
-  'cd.when': '2026年8月7日（金）20時 ブラジリア時間（UTC-3）',
   'feat.codexLink': 'ステータス一覧を見る',
   'cls.legendMore': '効果を見る',
   'codex.eyebrow': 'ステータス一覧',
@@ -98,17 +95,12 @@ window.NM_I18N_REGISTER('ja', {
   'cta.allClasses': '刷新されたクラスを見る',
   'cta.browseClasses': 'クラス一覧を見る',
 
-  'hero.badge': '2026年8月7日（金）オープン',
   'hero.title1': 'あなたの知るROを、',
   'hero.title2': '一から作り直した',
   'hero.lede': 'ここにあるクラス、スキル、アイテム、モンスターはすべて<strong>ゼロから作り直されています</strong>。刷新されたクラス、レベル150、自分で召喚するボス、そして<strong>ソロでも行き詰まらない</strong>設計です。',
   'hero.foot': '基本無料。強さを売るショップはありません。PvE専用です。',
-  'hero.live': 'Nightmare ROが稼働中です。アカウントを作成し、クライアントを入れて入場してください。',
+  'hero.live': '<time datetime="2026-08-07T23:00:00Z">2026年8月7日（金）</time>から稼働中です。アカウントを作成し、クライアントを入れて入場してください。',
 
-  'cd.days': '日',
-  'cd.hours': '時間',
-  'cd.minutes': '分',
-  'cd.seconds': '秒',
 
   'stats.level': '最大レベル',
   'stats.classes': '最終クラス',
@@ -197,10 +189,10 @@ window.NM_I18N_REGISTER('ja', {
   'faq.a6': '実際にはどちらでもありません。基礎はリニューアル寄りですが、<strong>多くの計算式が書き直されています</strong>。詠唱時間、攻撃速度、クリティカル、属性表なども含みます。',
   'faq.q7': '精錬で装備を失うことはありますか？',
   'faq.a7': 'ありません。失敗しても装備は<strong>壊れず、精錬値も下がりません</strong>。上限は+10、成功率は100%から現在の精錬値ごとに10%減で、最後は10%です。失うのは鉱石と所持金だけです。',
-  'faq.q8': 'サーバーはいつ開きますか？',
-  'faq.a8': '<strong>2026年8月7日（金）20時、ブラジリア時間（UTC-3）です。</strong>UTCでは23時にあたります。アカウントは今から作成でき、Discordはすでに稼働しています。',
+  'faq.q8': 'サーバーはもう開いていますか？',
+  'faq.a8': '<strong>はい。2026年8月7日（金）から稼働しています。</strong>コントロールパネルでアカウントを作成し、クライアントをダウンロードして入場してください。告知はすべてDiscordで行われます。',
 
-  'band.eyebrow': '2026年8月7日（金）オープン',
+  'band.eyebrow': 'サーバー稼働中',
   'band.title': '何が変わったのか確かめに来てください',
   'band.lede': 'アカウントを作り、クライアントを入れて、何が変わったのか見に来てください。',
 

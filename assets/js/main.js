@@ -1,6 +1,6 @@
 /* ==========================================================================
    Nightmare RO - site behaviour
-   Theme, menus, countdown, scroll reveals, class filtering, art toggles.
+   Theme, menus, scroll reveals, class filtering, art toggles.
    ========================================================================== */
 
 (function () {
@@ -104,103 +104,7 @@
     });
   }
 
-  /* --------------------------------------------------------- 4. countdown */
-
-  /* Friday 7 August 2026, 20:00 Brasilia time (UTC-3) = 23:00 UTC. */
-  var LAUNCH = Date.UTC(2026, 7, 7, 23, 0, 0);
-  var LAUNCH_OFFSET_MIN = -180;              // Brasilia, minutes from UTC
-
-  /* The site has to stop saying "opens on Friday" the second it opens, and
-     nobody is going to be redeploying at 20:00 on launch night. Anything
-     marked data-when="pre" or data-when="live" is swapped by CSS off this
-     one attribute, on every page, and it flips on its own when the clock
-     runs out mid-visit. With scripting off the page keeps the pre-launch
-     wording, which is what the HTML actually says. */
-  var setLaunchState = function () {
-    document.documentElement.dataset.launch =
-      Date.now() >= LAUNCH ? 'live' : 'pre';
-  };
-  setLaunchState();
-
-  var cd = $('#countdown');
-
-  if (cd) {
-    var block = $('#countdownBlock') || cd;
-    var live = $('#liveNow');
-    var cells = {
-      d: cd.querySelector('[data-cd="d"]'),
-      h: cd.querySelector('[data-cd="h"]'),
-      m: cd.querySelector('[data-cd="m"]'),
-      s: cd.querySelector('[data-cd="s"]')
-    };
-    var timer = null;
-    var pad = function (n) { return n < 10 ? '0' + n : String(n); };
-
-    var stop = function () {
-      if (timer) { clearInterval(timer); timer = null; }
-    };
-
-    var render = function () {
-      var left = LAUNCH - Date.now();
-      if (left <= 0) {
-        block.hidden = true;
-        if (live) live.hidden = false;
-        setLaunchState();
-        stop();
-        return;
-      }
-      var s = Math.floor(left / 1000);
-      cells.d.textContent = Math.floor(s / 86400);
-      cells.h.textContent = pad(Math.floor(s / 3600) % 24);
-      cells.m.textContent = pad(Math.floor(s / 60) % 60);
-      cells.s.textContent = pad(s % 60);
-    };
-
-    var start = function () {
-      if (timer || block.hidden) return;
-      render();
-      timer = setInterval(render, 1000);
-    };
-
-    start();
-
-    /* No point burning a tick a second on a tab nobody is looking at. */
-    document.addEventListener('visibilitychange', function () {
-      if (document.hidden) stop(); else start();
-    });
-
-    /* The countdown already ticks to a fixed instant. The date printed next
-       to it is rendered in the visitor's own time zone and language, so a
-       player in Tokyo reads a Tokyo date. The Brasilia wording sitting in
-       the markup is the fallback for anyone without scripting.
-       Re-runs on a language change so the date is spelled like the page. */
-    var whenEl = $('#whenLocal');
-    var sourceEl = $('#whenSource');
-
-    var showLaunchDate = function () {
-      if (!whenEl || !window.Intl) return;
-      try {
-        whenEl.textContent = new Intl.DateTimeFormat(
-          document.documentElement.lang || undefined,
-          {
-            weekday: 'long', day: 'numeric', month: 'long', year: 'numeric',
-            hour: '2-digit', minute: '2-digit', timeZoneName: 'short'
-          }
-        ).format(new Date(LAUNCH));
-
-        /* Only worth naming the server's own time zone to people who are
-           not already in it. */
-        if (sourceEl) {
-          sourceEl.hidden = -new Date().getTimezoneOffset() === LAUNCH_OFFSET_MIN;
-        }
-      } catch (e) { /* the markup already states it in Brasilia time */ }
-    };
-
-    showLaunchDate();
-    document.addEventListener('nm:lang', showLaunchDate);
-  }
-
-  /* ----------------------------------------------------- 5. scroll reveals */
+  /* ----------------------------------------------------- 4. scroll reveals */
 
   var reveals = $$('.reveal');
   if (reveals.length) {
@@ -218,7 +122,7 @@
     }
   }
 
-  /* ------------------------------------------------ 6. class list filtering */
+  /* ------------------------------------------------ 5. class list filtering */
 
   var grid = $('#classIndex');
   if (grid) {
@@ -259,7 +163,7 @@
     run();
   }
 
-  /* ----------------------------------------------- 7. class art male/female */
+  /* ----------------------------------------------- 6. class art male/female */
 
   $$('.sex-toggle').forEach(function (group) {
     var img = $('.portrait img');
@@ -276,7 +180,7 @@
     });
   });
 
-  /* ------------------------------------------------------- 8. the doram */
+  /* ------------------------------------------------------- 7. the doram */
 
   /* Doram is in the game and Doram is in a cell. Type the word and the site
      admits it. Nothing links here and nothing hints at it, which is the
@@ -351,7 +255,7 @@
     });
   })();
 
-  /* -------------------------------------------------------------- 9. misc */
+  /* -------------------------------------------------------------- 8. misc */
 
   var year = $('#year');
   if (year) year.textContent = String(new Date().getFullYear());
