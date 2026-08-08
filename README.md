@@ -390,21 +390,11 @@ are labelled as such on the page along with the date they were last touched.
 
 ## The navigation
 
-Six things across the top: **Start here**, Classes, **Database**, **The game**,
-Wiki, Download. The three in bold open onto more than one page, and both the
-desktop dropdowns and the drawer groups are generated from `NEW_PAGES`,
-`DB_PAGES` and `GAME_PAGES` in `tools/build_classes.py`.
-
-Every entry carries two lines: the label, and a short line saying what is
-actually behind it. A label alone was making people guess which of three
-menus holds the element table, so the tuples are five wide now:
-
-```python
-("mechanics.html", "nav.mech", "How it works",
- "navd.mech", "Stats, elements, refining, commands")
-```
-
-The blurb needs a `navd.*` key in all five locale files, same as the label.
+Three entries open onto more than one page: The game (the server spec on the
+home page, the mechanics page and the end game page), New players (the
+levelling route and the class test) and Database (items, MVPs, quests). Both
+the desktop dropdowns and the drawer groups come from `GAME_PAGES`,
+`NEW_PAGES` and `DB_PAGES` in `tools/build_classes.py`.
 
 The generated pages take their header from `header()`. `index.html`,
 `database.html`, `quiz.html` and `download.html` are hand written and carry

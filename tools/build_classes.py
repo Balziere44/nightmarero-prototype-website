@@ -227,52 +227,32 @@ def head(prefix, title, description, canonical, extra_ld="", og_image="assets/so
 # The nav entries that open onto more than one page. Both the desktop
 # dropdowns and the drawer groups are generated from these, so a page added
 # here shows up in both without touching the markup.
-#
-# Every entry carries a line of its own, because a label alone was making
-# people guess: "Database" and "The game" both sound like they might hold the
-# element table. The line says what is actually behind the link.
-#
-#   (page, label key, label, blurb key, blurb)
+GAME_PAGES = [
+    ("index.html#server", "nav.server", "The server"),
+    ("mechanics.html", "nav.mech", "How it works"),
+    ("endgame.html", "nav.endgame", "End game"),
+]
 NEW_PAGES = [
-    ("guide.html", "nav.route", "Levelling route",
-     "navd.route", "Where to grind at every level"),
-    ("mechanics.html", "nav.mech", "How it works",
-     "navd.mech", "Stats, elements, refining, commands"),
-    ("quiz.html", "nav.quiz", "Class test",
-     "navd.quiz", "Six questions, one class to try"),
+    ("guide.html", "nav.route", "Levelling route"),
+    ("quiz.html", "nav.quiz", "Class test"),
 ]
 DB_PAGES = [
-    ("database.html", "nav.items", "Items and cards",
-     "navd.items", "Every drop, card and set bonus"),
-    ("mvps.html", "nav.mvps", "MVPs and altars",
-     "navd.mvps", "What to hand in, and what drops"),
-    ("quests.html", "nav.quests", "Quests",
-     "navd.quests", "Walkthroughs, with spoilers gated"),
+    ("database.html", "nav.items", "Items and cards"),
+    ("mvps.html", "nav.mvps", "MVPs and altars"),
+    ("quests.html", "nav.quests", "Quests"),
 ]
-GAME_PAGES = [
-    ("index.html#server", "nav.server", "The server",
-     "navd.server", "What makes this one different"),
-    ("endgame.html", "nav.endgame", "End game",
-     "navd.endgame", "Champions, raids, reputation"),
-    ("index.html#faq", "nav.faq", "FAQ",
-     "navd.faq", "The short answers"),
-]
-DROPS = [("nav.guide", "Start here", NEW_PAGES),
-         ("nav.database", "Database", DB_PAGES),
-         ("nav.game", "The game", GAME_PAGES)]
+DROPS = [("nav.game", "The game", GAME_PAGES),
+         ("nav.guide", "New players", NEW_PAGES),
+         ("nav.database", "Database", DB_PAGES)]
 
 
 def nav_drop(prefix, active, key, label, pages):
-    inside = any(page == active for page, _k, _l, _bk, _b in pages)
+    inside = any(page == active for page, _k, _l in pages)
     items = "".join(
-        '''
-          <a href="{p}{page}" role="menuitem"{cur}>
-            <b data-i18n="{k}">{l}</b>
-            <span data-i18n="{bk}">{b}</span>
-          </a>'''
-        .format(p=prefix, page=page, k=k, l=l, bk=bk, b=b,
+        '\n          <a href="{p}{page}" role="menuitem"{cur} data-i18n="{k}">{l}</a>'
+        .format(p=prefix, page=page, k=k, l=l,
                 cur=' aria-current="page"' if page == active else "")
-        for page, k, l, bk, b in pages)
+        for page, k, l in pages)
     return """      <div class="nav-drop">
         <button class="nav-drop-btn{open}" type="button" aria-expanded="false" aria-haspopup="true" data-i18n="{key}">{label}</button>
         <div class="nav-drop-menu" role="menu">{items}
@@ -285,10 +265,10 @@ def nav_desktop(prefix, active):
     drops = {key: nav_drop(prefix, active, key, label, pages)
              for key, label, pages in DROPS}
 
-    return """{new}
+    return """{game}
+{new}
       <a href="{p}classes.html"{c_classes} data-i18n="nav.classes">Classes</a>
 {db}
-{game}
       <a href="https://wiki.nightmareofragnarok.com/" target="_blank" rel="noopener" data-i18n="nav.wiki">Wiki</a>
       <a href="{p}download.html"{c_dl} data-i18n="nav.download">Download</a>""".format(
         p=prefix, game=drops["nav.game"], new=drops["nav.guide"],
@@ -297,33 +277,28 @@ def nav_desktop(prefix, active):
         c_dl=' aria-current="page"' if active == "download.html" else "")
 
 
-def drawer_group(prefix, active, key, label, pages):
+def drawer_group(prefix, key, label, pages):
     subs = "".join(
-        '''
-      <a class="-sub" href="{p}{page}"{cur}>
-        <b data-i18n="{k}">{l}</b>
-        <span data-i18n="{bk}">{b}</span>
-      </a>'''
-        .format(p=prefix, page=page, k=k, l=l, bk=bk, b=b,
-                cur=' aria-current="page"' if page == active else "")
-        for page, k, l, bk, b in pages)
+        '\n      <a class="-sub" href="{p}{page}" data-i18n="{k}">{l}</a>'
+        .format(p=prefix, page=page, k=k, l=l) for page, k, l in pages)
     return ('      <span class="drawer-group" data-i18n="%s">%s</span>%s'
             % (key, label, subs))
 
 
-def nav_drawer(prefix, active=""):
-    groups = {key: drawer_group(prefix, active, key, label, pages)
+def nav_drawer(prefix):
+    groups = {key: drawer_group(prefix, key, label, pages)
               for key, label, pages in DROPS}
-    return """{new}
-      <a href="{p}classes.html"{c_classes} data-i18n="nav.classes">Classes</a>
+    return """{game}
+      <a href="{p}index.html#features" data-i18n="nav.features">Features</a>
+{new}
+      <a href="{p}classes.html" data-i18n="nav.classes">Classes</a>
 {db}
-{game}
       <a href="https://wiki.nightmareofragnarok.com/" target="_blank" rel="noopener" data-i18n="nav.wiki">Wiki</a>
-      <a href="{p}download.html"{c_dl} data-i18n="nav.download">Download</a>""".format(
+      <a href="{p}download.html" data-i18n="nav.download">Download</a>
+      <a href="{p}index.html#start" data-i18n="nav.start">Get started</a>
+      <a href="{p}index.html#faq" data-i18n="nav.faq">FAQ</a>""".format(
         p=prefix, game=groups["nav.game"], new=groups["nav.guide"],
-        db=groups["nav.database"],
-        c_classes=' aria-current="page"' if active == "classes.html" else "",
-        c_dl=' aria-current="page"' if active == "download.html" else "")
+        db=groups["nav.database"])
 
 
 def header(prefix, active):
@@ -376,7 +351,7 @@ def header(prefix, active):
 </div>
 """.format(p=prefix, reg=REGISTER, dc=DISCORD, wiki=WIKI,
            navmain=nav_desktop(prefix, active),
-           navdrawer=nav_drawer(prefix, active))
+           navdrawer=nav_drawer(prefix))
 
 
 def footer(prefix):

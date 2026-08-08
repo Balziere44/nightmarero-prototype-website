@@ -45,8 +45,7 @@ def main():
             lambda m: m.group(1) + nav_desktop("", active) + m.group(2),
             text, count=1)
         text, hit_drawer = DRAWER.subn(
-            lambda m: m.group(1) + nav_drawer("", active) + m.group(2),
-            text, count=1)
+            lambda m: m.group(1) + nav_drawer("") + m.group(2), text, count=1)
 
         if not (hit_main and hit_drawer):
             print("%s: could not find the nav (main=%d, drawer=%d)"

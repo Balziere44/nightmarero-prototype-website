@@ -652,7 +652,7 @@ html[data-theme="light"] .btn.-primary:hover { --btn-bg: var(--red-500); }
   position: absolute;
   top: calc(100% + 0.45rem);
   inset-inline-start: 0;
-  min-width: 15.5rem;
+  min-width: 13rem;
   display: grid;
   gap: 1px;
   padding: 0.35rem;
@@ -675,28 +675,15 @@ html[data-theme="light"] .btn.-primary:hover { --btn-bg: var(--red-500); }
   translate: 0 0;
 }
 
-/* Two lines per entry. A label on its own was making people guess which
-   of three menus holds the element table, so each one says what it opens. */
 .nav-drop-menu a {
-  display: grid;
-  gap: 0.1rem;
-  padding: 0.5rem 0.7rem;
+  padding: 0.55rem 0.7rem;
+  font-size: 0.86rem;
+  white-space: nowrap;
   border-radius: calc(var(--radius-sm) - 2px);
 }
-.nav-drop-menu a b {
-  font-size: 0.86rem;
-  font-weight: 600;
-  white-space: nowrap;
-}
-.nav-drop-menu a span {
-  font-size: 0.74rem;
-  line-height: 1.35;
-  color: var(--text-dim);
-}
 .nav-drop-menu a:hover { background: color-mix(in srgb, var(--accent) 14%, transparent); }
-.nav-drop-menu a:hover span { color: var(--text-muted); }
 .nav-drop-menu a::after { content: none; }
-.nav-drop-menu a[aria-current="page"] b { color: var(--accent-soft); }
+.nav-drop-menu a[aria-current="page"] { color: var(--accent-soft); }
 
 /* the background of the menu needs to be opaque enough to read over the page */
 html[data-theme="light"] .nav-drop-menu { background: color-mix(in srgb, var(--bg) 94%, #fff); }
@@ -835,20 +822,11 @@ html[data-theme="light"] .icon-btn .i-sun { display: none; }
   border-bottom: 1px solid var(--surface-line);
 }
 .drawer nav a.-sub {
-  display: grid;
-  gap: 0.15rem;
   padding-inline-start: 1.5rem;
   font-size: 1.05rem;
   font-weight: 500;
   color: var(--text-muted);
 }
-.drawer nav a.-sub span {
-  font-family: var(--font-body);
-  font-size: 0.82rem;
-  font-weight: 400;
-  color: var(--text-dim);
-}
-.drawer nav a[aria-current="page"] { color: var(--accent-soft); }
 .drawer nav .drawer-group {
   padding: 0.95rem 0.6rem 0.35rem;
   font-family: var(--font-mono);
