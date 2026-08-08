@@ -652,7 +652,7 @@ html[data-theme="light"] .btn.-primary:hover { --btn-bg: var(--red-500); }
   position: absolute;
   top: calc(100% + 0.45rem);
   inset-inline-start: 0;
-  min-width: 13rem;
+  min-width: 15.5rem;
   display: grid;
   gap: 1px;
   padding: 0.35rem;
@@ -675,15 +675,28 @@ html[data-theme="light"] .btn.-primary:hover { --btn-bg: var(--red-500); }
   translate: 0 0;
 }
 
+/* Two lines per entry. A label on its own was making people guess which
+   of three menus holds the element table, so each one says what it opens. */
 .nav-drop-menu a {
-  padding: 0.55rem 0.7rem;
-  font-size: 0.86rem;
-  white-space: nowrap;
+  display: grid;
+  gap: 0.1rem;
+  padding: 0.5rem 0.7rem;
   border-radius: calc(var(--radius-sm) - 2px);
 }
+.nav-drop-menu a b {
+  font-size: 0.86rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.nav-drop-menu a span {
+  font-size: 0.74rem;
+  line-height: 1.35;
+  color: var(--text-dim);
+}
 .nav-drop-menu a:hover { background: color-mix(in srgb, var(--accent) 14%, transparent); }
+.nav-drop-menu a:hover span { color: var(--text-muted); }
 .nav-drop-menu a::after { content: none; }
-.nav-drop-menu a[aria-current="page"] { color: var(--accent-soft); }
+.nav-drop-menu a[aria-current="page"] b { color: var(--accent-soft); }
 
 /* the background of the menu needs to be opaque enough to read over the page */
 html[data-theme="light"] .nav-drop-menu { background: color-mix(in srgb, var(--bg) 94%, #fff); }
@@ -822,11 +835,20 @@ html[data-theme="light"] .icon-btn .i-sun { display: none; }
   border-bottom: 1px solid var(--surface-line);
 }
 .drawer nav a.-sub {
+  display: grid;
+  gap: 0.15rem;
   padding-inline-start: 1.5rem;
   font-size: 1.05rem;
   font-weight: 500;
   color: var(--text-muted);
 }
+.drawer nav a.-sub span {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: var(--text-dim);
+}
+.drawer nav a[aria-current="page"] { color: var(--accent-soft); }
 .drawer nav .drawer-group {
   padding: 0.95rem 0.6rem 0.35rem;
   font-family: var(--font-mono);
@@ -3774,6 +3796,207 @@ li.wh-dungeon { border-left-color: var(--el-poison); }
 @media (prefers-reduced-motion: reduce) {
   .egg-back, .egg-card { animation: none; }
 }
+
+/* --------------------------------------------------------------------------
+   20o. The site search
+
+   The button lives in the header tools, next to the theme and the language.
+   Wide enough and it says the word and shows the key; narrow and it is just
+   the glass. The panel itself is built by main.js on first use.
+   -------------------------------------------------------------------------- */
+
+.find-btn {
+  width: auto;
+  gap: 0.45rem;
+  padding-inline: 0.5rem;
+}
+.find-btn .find-btn-word,
+.find-btn kbd { display: none; }
+
+@media (min-width: 1180px) {
+  .find-btn { padding-inline: 0.6rem 0.5rem; }
+  .find-btn .find-btn-word {
+    display: inline;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+  .find-btn kbd {
+    display: inline-grid;
+    place-items: center;
+    min-width: 1.15rem;
+    height: 1.15rem;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--text-dim);
+    background: color-mix(in srgb, var(--text) 8%, transparent);
+    border: 1px solid var(--surface-line);
+    border-radius: 5px;
+  }
+}
+.find-btn:hover .find-btn-word { color: var(--text); }
+
+.find-back {
+  position: fixed;
+  inset: 0;
+  z-index: 150;
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  padding: clamp(0.8rem, 8vh, 6rem) 1rem 1rem;
+  background: color-mix(in srgb, var(--ink-000) 74%, transparent);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  animation: findFade 0.16s var(--ease);
+}
+@keyframes findFade { from { opacity: 0; } to { opacity: 1; } }
+.find-back[hidden] { display: none; }
+
+.find-panel {
+  width: min(100%, 620px);
+  max-height: min(74vh, 620px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--bg-panel);
+  border: 1px solid var(--surface-line-strong);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+}
+html[data-theme="light"] .find-panel { background: color-mix(in srgb, var(--bg) 92%, #fff); }
+html[data-theme="dark"] .find-panel { background: color-mix(in srgb, #0e0c13 96%, transparent); }
+
+.find-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 0.9rem;
+  border-bottom: 1px solid var(--surface-line);
+}
+.find-ico {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: var(--text-dim);
+  stroke-width: 2;
+}
+.find-bar input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.2rem 0;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text);
+  background: none;
+  border: 0;
+  outline: none;
+  appearance: none;
+}
+.find-bar input::-webkit-search-cancel-button { display: none; }
+.find-esc {
+  flex: none;
+  padding: 0.1rem 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-dim);
+  background: color-mix(in srgb, var(--text) 8%, transparent);
+  border: 1px solid var(--surface-line);
+  border-radius: 5px;
+}
+
+.find-list {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 0.35rem;
+  overscroll-behavior: contain;
+}
+.find-group {
+  padding: 0.7rem 0.6rem 0.3rem;
+  font-family: var(--font-mono);
+  font-size: 0.63rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.find-hit {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  padding: 0.5rem 0.6rem;
+  border-radius: var(--radius-sm);
+  color: var(--text);
+}
+.find-hit b {
+  font-weight: 600;
+  font-size: 0.94rem;
+}
+.find-hit span {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: end;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+.find-hit mark {
+  color: var(--accent-soft);
+  background: none;
+}
+.find-hit.is-on {
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+}
+.find-hit.is-on span { color: var(--text-muted); }
+
+.find-note,
+.find-tip {
+  padding: 0.9rem;
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+.find-tip {
+  padding: 0.55rem;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  border-top: 1px solid var(--surface-line);
+}
+@media (max-width: 640px) { .find-tip { display: none; } }
+
+/* the drawer version: a full width box that looks like what it opens */
+.drawer-find {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  margin-bottom: 0.6rem;
+  padding: 0.85rem 0.8rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  text-align: start;
+  color: var(--text-dim);
+  background: color-mix(in srgb, var(--text) 6%, transparent);
+  border: 1px solid var(--surface-line);
+  border-radius: var(--radius-sm);
+}
+.drawer-find svg {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: var(--text-dim);
+  stroke-width: 2;
+}
+.drawer-find span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 
 /* --------------------------------------------------------------------------
    21. Reveal on scroll

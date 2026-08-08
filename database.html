@@ -75,27 +75,55 @@
     </a>
     <nav class="nav" aria-label="Main">
       <div class="nav-drop">
-        <button class="nav-drop-btn" type="button" aria-expanded="false" aria-haspopup="true" data-i18n="nav.game">The game</button>
+        <button class="nav-drop-btn" type="button" aria-expanded="false" aria-haspopup="true" data-i18n="nav.guide">Start here</button>
         <div class="nav-drop-menu" role="menu">
-          <a href="index.html#server" role="menuitem" data-i18n="nav.server">The server</a>
-          <a href="mechanics.html" role="menuitem" data-i18n="nav.mech">How it works</a>
-          <a href="endgame.html" role="menuitem" data-i18n="nav.endgame">End game</a>
-        </div>
-      </div>
-      <div class="nav-drop">
-        <button class="nav-drop-btn" type="button" aria-expanded="false" aria-haspopup="true" data-i18n="nav.guide">New players</button>
-        <div class="nav-drop-menu" role="menu">
-          <a href="guide.html" role="menuitem" data-i18n="nav.route">Levelling route</a>
-          <a href="quiz.html" role="menuitem" data-i18n="nav.quiz">Class test</a>
+          <a href="guide.html" role="menuitem">
+            <b data-i18n="nav.route">Levelling route</b>
+            <span data-i18n="navd.route">Where to grind at every level</span>
+          </a>
+          <a href="mechanics.html" role="menuitem">
+            <b data-i18n="nav.mech">How it works</b>
+            <span data-i18n="navd.mech">Stats, elements, refining, commands</span>
+          </a>
+          <a href="quiz.html" role="menuitem">
+            <b data-i18n="nav.quiz">Class test</b>
+            <span data-i18n="navd.quiz">Six questions, one class to try</span>
+          </a>
         </div>
       </div>
       <a href="classes.html" data-i18n="nav.classes">Classes</a>
       <div class="nav-drop">
         <button class="nav-drop-btn -on" type="button" aria-expanded="false" aria-haspopup="true" data-i18n="nav.database">Database</button>
         <div class="nav-drop-menu" role="menu">
-          <a href="database.html" role="menuitem" aria-current="page" data-i18n="nav.items">Items and cards</a>
-          <a href="mvps.html" role="menuitem" data-i18n="nav.mvps">MVPs and altars</a>
-          <a href="quests.html" role="menuitem" data-i18n="nav.quests">Quests</a>
+          <a href="database.html" role="menuitem" aria-current="page">
+            <b data-i18n="nav.items">Items and cards</b>
+            <span data-i18n="navd.items">Every drop, card and set bonus</span>
+          </a>
+          <a href="mvps.html" role="menuitem">
+            <b data-i18n="nav.mvps">MVPs and altars</b>
+            <span data-i18n="navd.mvps">What to hand in, and what drops</span>
+          </a>
+          <a href="quests.html" role="menuitem">
+            <b data-i18n="nav.quests">Quests</b>
+            <span data-i18n="navd.quests">Walkthroughs, with spoilers gated</span>
+          </a>
+        </div>
+      </div>
+      <div class="nav-drop">
+        <button class="nav-drop-btn" type="button" aria-expanded="false" aria-haspopup="true" data-i18n="nav.game">The game</button>
+        <div class="nav-drop-menu" role="menu">
+          <a href="index.html#server" role="menuitem">
+            <b data-i18n="nav.server">The server</b>
+            <span data-i18n="navd.server">What makes this one different</span>
+          </a>
+          <a href="endgame.html" role="menuitem">
+            <b data-i18n="nav.endgame">End game</b>
+            <span data-i18n="navd.endgame">Champions, raids, reputation</span>
+          </a>
+          <a href="index.html#faq" role="menuitem">
+            <b data-i18n="nav.faq">FAQ</b>
+            <span data-i18n="navd.faq">The short answers</span>
+          </a>
         </div>
       </div>
       <a href="https://wiki.nightmareofragnarok.com/" target="_blank" rel="noopener" data-i18n="nav.wiki">Wiki</a>
@@ -130,23 +158,48 @@
       </button>
     </div>
     <nav aria-label="Mobile">
-      <span class="drawer-group" data-i18n="nav.game">The game</span>
-      <a class="-sub" href="index.html#server" data-i18n="nav.server">The server</a>
-      <a class="-sub" href="mechanics.html" data-i18n="nav.mech">How it works</a>
-      <a class="-sub" href="endgame.html" data-i18n="nav.endgame">End game</a>
-      <a href="index.html#features" data-i18n="nav.features">Features</a>
-      <span class="drawer-group" data-i18n="nav.guide">New players</span>
-      <a class="-sub" href="guide.html" data-i18n="nav.route">Levelling route</a>
-      <a class="-sub" href="quiz.html" data-i18n="nav.quiz">Class test</a>
+      <span class="drawer-group" data-i18n="nav.guide">Start here</span>
+      <a class="-sub" href="guide.html">
+        <b data-i18n="nav.route">Levelling route</b>
+        <span data-i18n="navd.route">Where to grind at every level</span>
+      </a>
+      <a class="-sub" href="mechanics.html">
+        <b data-i18n="nav.mech">How it works</b>
+        <span data-i18n="navd.mech">Stats, elements, refining, commands</span>
+      </a>
+      <a class="-sub" href="quiz.html">
+        <b data-i18n="nav.quiz">Class test</b>
+        <span data-i18n="navd.quiz">Six questions, one class to try</span>
+      </a>
       <a href="classes.html" data-i18n="nav.classes">Classes</a>
       <span class="drawer-group" data-i18n="nav.database">Database</span>
-      <a class="-sub" href="database.html" data-i18n="nav.items">Items and cards</a>
-      <a class="-sub" href="mvps.html" data-i18n="nav.mvps">MVPs and altars</a>
-      <a class="-sub" href="quests.html" data-i18n="nav.quests">Quests</a>
+      <a class="-sub" href="database.html" aria-current="page">
+        <b data-i18n="nav.items">Items and cards</b>
+        <span data-i18n="navd.items">Every drop, card and set bonus</span>
+      </a>
+      <a class="-sub" href="mvps.html">
+        <b data-i18n="nav.mvps">MVPs and altars</b>
+        <span data-i18n="navd.mvps">What to hand in, and what drops</span>
+      </a>
+      <a class="-sub" href="quests.html">
+        <b data-i18n="nav.quests">Quests</b>
+        <span data-i18n="navd.quests">Walkthroughs, with spoilers gated</span>
+      </a>
+      <span class="drawer-group" data-i18n="nav.game">The game</span>
+      <a class="-sub" href="index.html#server">
+        <b data-i18n="nav.server">The server</b>
+        <span data-i18n="navd.server">What makes this one different</span>
+      </a>
+      <a class="-sub" href="endgame.html">
+        <b data-i18n="nav.endgame">End game</b>
+        <span data-i18n="navd.endgame">Champions, raids, reputation</span>
+      </a>
+      <a class="-sub" href="index.html#faq">
+        <b data-i18n="nav.faq">FAQ</b>
+        <span data-i18n="navd.faq">The short answers</span>
+      </a>
       <a href="https://wiki.nightmareofragnarok.com/" target="_blank" rel="noopener" data-i18n="nav.wiki">Wiki</a>
       <a href="download.html" data-i18n="nav.download">Download</a>
-      <a href="index.html#start" data-i18n="nav.start">Get started</a>
-      <a href="index.html#faq" data-i18n="nav.faq">FAQ</a>
     </nav>
     <div class="drawer-actions">
       <a class="btn -primary -block" href="https://nightmareofragnarok.com/?module=account&amp;action=create" target="_blank" rel="noopener" data-i18n="cta.register">Create account</a>

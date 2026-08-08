@@ -23,9 +23,10 @@ static host and it works.
 ├── classes/                 55 generated class pages
 ├── assets/
 │   ├── css/style.css        the whole design system
-│   ├── js/main.js           theme, menus, filters
+│   ├── js/main.js           theme, menus, site search, filters
 │   ├── js/i18n.js           language switcher
 │   ├── i18n/                pt, fr, it, de, ja  (English lives in the HTML)
+│   ├── data/                items.json and search.json, both generated
 │   └── img/
 │       ├── classes/         character art, .webp, two sizes each
 │       ├── bg/              hero and secondary backgrounds
@@ -389,11 +390,21 @@ are labelled as such on the page along with the date they were last touched.
 
 ## The navigation
 
-Three entries open onto more than one page: The game (the server spec on the
-home page, the mechanics page and the end game page), New players (the
-levelling route and the class test) and Database (items, MVPs, quests). Both
-the desktop dropdowns and the drawer groups come from `GAME_PAGES`,
-`NEW_PAGES` and `DB_PAGES` in `tools/build_classes.py`.
+Six things across the top: **Start here**, Classes, **Database**, **The game**,
+Wiki, Download. The three in bold open onto more than one page, and both the
+desktop dropdowns and the drawer groups are generated from `NEW_PAGES`,
+`DB_PAGES` and `GAME_PAGES` in `tools/build_classes.py`.
+
+Every entry carries two lines: the label, and a short line saying what is
+actually behind it. A label alone was making people guess which of three
+menus holds the element table, so the tuples are five wide now:
+
+```python
+("mechanics.html", "nav.mech", "How it works",
+ "navd.mech", "Stats, elements, refining, commands")
+```
+
+The blurb needs a `navd.*` key in all five locale files, same as the label.
 
 The generated pages take their header from `header()`. `index.html`,
 `database.html`, `quiz.html` and `download.html` are hand written and carry
@@ -405,6 +416,46 @@ python tools/build_classes.py  # then rebuild everything else
 ```
 
 `sync_nav.py` is safe to re-run; it reports which pages it actually changed.
+
+---
+
+## The site search
+
+A menu can only be six words wide, and the site is now a couple of thousand
+things. So there is one box that searches all of them, opened by the button in
+the header, by pressing <kbd>/</kbd>, or by <kbd>Ctrl</kbd> + <kbd>K</kbd>.
+
+`tools/build_search.py` writes `assets/data/search.json`: one row per page,
+section, class, skill, item, card, boss, quest, status family, field and
+dungeon. Rows are arrays, not objects, because there are thousands of them:
+
+```
+[title, subtitle, url, group, extra search words]
+```
+
+It reads what the other builders already produced, including two of the built
+pages, so **it runs last**:
+
+```bash
+python tools/build_mvps.py
+python tools/build_quests.py
+python tools/build_search.py
+```
+
+The panel itself is section 3d of `assets/js/main.js` and is built at runtime,
+so no page carries markup for it. The file is fetched the first time somebody
+reaches for the search and warmed as soon as a pointer touches the button.
+
+Two things worth knowing before changing the ranking. Groups are weighted, so
+a page outranks an item: "fire" is the name of a hundred cards and of one
+section that explains what fire does. And each group is capped at seven hits,
+so nine hundred cards cannot bury the one page. Both live at the top of that
+section as `WEIGHT` and `PER_GROUP`.
+
+Item and skill names are English everywhere on the site, but the search strips
+accents before matching and the page rows carry Portuguese words as well, so
+"refino", "poção" and "onde upar" all land somewhere sensible. Those words are
+in `PAGES` in the build script.
 
 ---
 

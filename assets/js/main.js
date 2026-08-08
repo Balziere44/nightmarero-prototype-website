@@ -104,6 +104,353 @@
     });
   }
 
+  /* ------------------------------------------------- 3d. the site search
+
+     The menu can only ever be six words wide, and the site is now eighteen
+     hundred things: classes, skills, items, cards, bosses, quests, statuses
+     and every field worth levelling on. So there is one box that searches
+     all of it, on / or Ctrl+K.
+
+     It is built at runtime, the same trick the rest of the chrome uses, so
+     no page carries markup for it. The index is one file, fetched the first
+     time somebody reaches for the search and warmed the moment a pointer
+     touches the button, so the first open feels like it was already there. */
+
+  (function () {
+    var tools = $('.header-tools');
+    if (!tools || !window.fetch) return;
+
+    /* Class pages sit one level down, and the logo already knows how far. */
+    var brand = $('.brand');
+    var PREFIX = (brand ? brand.getAttribute('href') : 'index.html')
+      .replace(/index\.html$/, '');
+
+    var t = function (key, fallback) {
+      var table = window.NM_I18N_TABLE || {};
+      return table[key] || fallback;
+    };
+
+    /* Accents are how a word is spelled, not how it gets typed into a
+       search box. Stripping them keeps "Kobold" and "Ktullanux" findable
+       from a keyboard that is not the one the name was written on. */
+    var flat = function (s) {
+      return s.normalize
+        ? s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
+        : s.toLowerCase();
+    };
+
+    var esc = function (s) {
+      return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;')
+                      .replace(/>/g, '&gt;');
+    };
+
+    /* A page outranks an item, because "fire" is the name of a hundred
+       cards and of one section that explains what fire actually does. */
+    var WEIGHT = {
+      page: 60, 'class': 52, boss: 40, quest: 38, status: 36,
+      map: 30, skill: 26, item: 20
+    };
+    var LABEL = {
+      page: 'Pages', 'class': 'Classes', skill: 'Skills',
+      item: 'Items and cards', boss: 'Bosses', quest: 'Quests',
+      status: 'Status effects', map: 'Fields and dungeons'
+    };
+    var PER_GROUP = 7;
+    var TOTAL = 28;
+
+    var rows = [];
+    var pending = null;
+
+    var load = function () {
+      if (pending) return pending;
+      pending = fetch(PREFIX + 'assets/data/search.json')
+        .then(function (r) { return r.json(); })
+        .then(function (json) {
+          rows = json.rows.map(function (r) {
+            return {
+              title: r[0], sub: r[1], url: r[2], group: r[3],
+              ft: flat(r[0]), fs: flat(r[1] + ' ' + (r[4] || ''))
+            };
+          });
+        })
+        .catch(function () { pending = null; });
+      return pending;
+    };
+
+    var score = function (row, q, tokens) {
+      var s = 0;
+      var i = row.ft.indexOf(q);
+      if (row.ft === q) s = 1000;
+      else if (i === 0) s = 700;
+      else if (i > 0 && row.ft.charAt(i - 1) === ' ') s = 520;
+      else if (i > 0) s = 340;
+      else if (row.fs.indexOf(q) > -1) s = 150;
+      else if (tokens.length > 1) {
+        var all = row.ft + ' ' + row.fs;
+        for (var k = 0; k < tokens.length; k++) {
+          if (all.indexOf(tokens[k]) < 0) return 0;
+        }
+        s = 110;
+      }
+      if (!s) return 0;
+      /* Between two equal matches the shorter name is the one meant. */
+      return s + (WEIGHT[row.group] || 0) - Math.min(row.title.length, 48) / 6;
+    };
+
+    var find = function (raw) {
+      var q = flat(raw.trim());
+      if (!q) {
+        return rows.filter(function (r) { return r.group === 'page'; })
+                   .slice(0, 8);
+      }
+      var tokens = q.split(/\s+/);
+      var hits = [];
+      for (var i = 0; i < rows.length; i++) {
+        var s = score(rows[i], q, tokens);
+        if (s > 0) hits.push([s, rows[i]]);
+      }
+      hits.sort(function (a, b) { return b[0] - a[0]; });
+
+      /* Cap each group so nine hundred cards cannot bury the one page. */
+      var seen = {};
+      var out = [];
+      for (var j = 0; j < hits.length && out.length < TOTAL; j++) {
+        var g = hits[j][1].group;
+        seen[g] = (seen[g] || 0) + 1;
+        if (seen[g] > PER_GROUP) continue;
+        out.push(hits[j][1]);
+      }
+      return out;
+    };
+
+    /* The matched run is marked, so it is obvious why a row is in the list. */
+    var mark = function (text, q) {
+      if (!q) return esc(text);
+      var at = flat(text).indexOf(q);
+      if (at < 0) return esc(text);
+      return esc(text.slice(0, at)) + '<mark>' +
+             esc(text.slice(at, at + q.length)) + '</mark>' +
+             esc(text.slice(at + q.length));
+    };
+
+    /* ---------------------------------------------------------- the panel */
+
+    var back = null, input = null, list = null, note = null, tip = null;
+    var cur = -1;
+    var opener = null;
+
+    var isOpen = function () { return back && !back.hidden; };
+
+    var close = function () {
+      if (!isOpen()) return;
+      back.hidden = true;
+      document.body.classList.remove('no-scroll');
+      if (opener) opener.focus();
+    };
+
+    var move = function (step) {
+      var items = $$('.find-hit', list);
+      if (!items.length) return;
+      cur = (cur + step + items.length) % items.length;
+      items.forEach(function (el, i) {
+        var on = i === cur;
+        el.classList.toggle('is-on', on);
+        el.setAttribute('aria-selected', String(on));
+        if (on) {
+          el.scrollIntoView({ block: 'nearest' });
+          input.setAttribute('aria-activedescendant', el.id);
+        }
+      });
+    };
+
+    var render = function () {
+      var raw = input.value;
+      var q = flat(raw.trim());
+      cur = -1;
+      input.removeAttribute('aria-activedescendant');
+
+      if (!rows.length) {
+        list.innerHTML = '';
+        note.hidden = false;
+        note.textContent = t('find.loading', 'Loading the index');
+        return;
+      }
+
+      var hits = find(raw);
+      if (!hits.length) {
+        list.innerHTML = '';
+        note.hidden = false;
+        note.textContent = t('find.none', 'Nothing matched') +
+                           ' “' + raw.trim() + '”';
+        return;
+      }
+      note.hidden = true;
+
+      var html = '';
+      var group = null;
+      var n = 0;
+      hits.forEach(function (r) {
+        if (r.group !== group) {
+          group = r.group;
+          html += '<li class="find-group" role="presentation">' +
+                  esc(q ? t('find.g.' + group, LABEL[group])
+                        : t('find.jump', 'Jump to')) + '</li>';
+        }
+        html += '<li role="presentation">' +
+                '<a class="find-hit" role="option" id="find-hit-' + n + '"' +
+                ' aria-selected="false" href="' + esc(PREFIX + r.url) + '">' +
+                '<b>' + mark(r.title, q) + '</b>' +
+                '<span>' + esc(r.sub) + '</span></a></li>';
+        n++;
+      });
+      list.innerHTML = html;
+    };
+
+    var build = function () {
+      back = document.createElement('div');
+      back.className = 'find-back';
+      back.hidden = true;
+      back.innerHTML =
+        '<div class="find-panel" role="dialog" aria-modal="true">' +
+          '<div class="find-bar">' +
+            '<svg class="find-ico" aria-hidden="true">' +
+              '<use href="#i-search"></use></svg>' +
+            '<input type="search" id="findInput" autocomplete="off"' +
+            ' spellcheck="false" role="combobox" aria-expanded="true"' +
+            ' aria-controls="findList" aria-autocomplete="list">' +
+            '<kbd class="find-esc">Esc</kbd>' +
+          '</div>' +
+          '<ul class="find-list" id="findList" role="listbox"></ul>' +
+          '<p class="find-note" hidden></p>' +
+          '<p class="find-tip"></p>' +
+        '</div>';
+      document.body.appendChild(back);
+
+      input = $('#findInput', back);
+      list = $('#findList', back);
+      note = $('.find-note', back);
+      tip = $('.find-tip', back);
+
+      back.addEventListener('click', function (e) {
+        if (e.target === back) close();
+      });
+      list.addEventListener('click', function (e) {
+        if (e.target.closest('.find-hit')) close();
+      });
+      list.addEventListener('mousemove', function (e) {
+        var hit = e.target.closest('.find-hit');
+        if (!hit) return;
+        var items = $$('.find-hit', list);
+        cur = items.indexOf(hit);
+        items.forEach(function (el, i) {
+          el.classList.toggle('is-on', i === cur);
+          el.setAttribute('aria-selected', String(i === cur));
+        });
+      });
+
+      var tick = null;
+      input.addEventListener('input', function () {
+        clearTimeout(tick);
+        tick = setTimeout(render, 70);
+      });
+
+      input.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowDown') { e.preventDefault(); move(1); }
+        else if (e.key === 'ArrowUp') { e.preventDefault(); move(-1); }
+        else if (e.key === 'Escape') { e.preventDefault(); close(); }
+        else if (e.key === 'Enter') {
+          var on = $('.find-hit.is-on', list) || $('.find-hit', list);
+          if (on) { e.preventDefault(); on.click(); }
+        }
+      });
+    };
+
+    var words = function () {
+      if (!input) return;
+      input.placeholder = t('find.placeholder',
+        'Search classes, items, bosses, quests');
+      input.setAttribute('aria-label', t('find.label', 'Search the site'));
+      tip.textContent = t('find.tip',
+        'Enter opens, arrows move, Esc closes');
+    };
+
+    var open = function (from) {
+      opener = from || null;
+      if (!back) build();
+      words();
+      back.hidden = false;
+      document.body.classList.add('no-scroll');
+      input.value = '';
+      render();
+      load().then(render);
+      input.focus();
+    };
+
+    /* ------------------------------------------------------- the way in */
+
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'icon-btn find-btn';
+    btn.id = 'findBtn';
+    btn.innerHTML =
+      '<svg aria-hidden="true"><use href="#i-search"></use></svg>' +
+      '<span class="find-btn-word"></span><kbd>/</kbd>';
+    tools.insertBefore(btn, tools.firstChild);
+
+    var label = function () {
+      btn.setAttribute('aria-label', t('find.label', 'Search the site'));
+      btn.title = t('find.label', 'Search the site');
+      $('.find-btn-word', btn).textContent = t('find.btn', 'Search');
+    };
+    label();
+    document.addEventListener('nm:lang', function () { label(); words(); });
+
+    btn.addEventListener('click', function () { open(btn); });
+    btn.addEventListener('pointerenter', load);
+    btn.addEventListener('focus', load);
+
+    /* The drawer gets one too, at the top, where a thumb already is. */
+    var drawerNav = document.querySelector('.drawer nav');
+    if (drawerNav) {
+      var dbtn = document.createElement('button');
+      dbtn.type = 'button';
+      dbtn.className = 'drawer-find';
+      dbtn.innerHTML =
+        '<svg aria-hidden="true"><use href="#i-search"></use></svg><span></span>';
+      var dlabel = function () {
+        dbtn.querySelector('span').textContent =
+          t('find.placeholder', 'Search classes, items, bosses, quests');
+      };
+      dlabel();
+      document.addEventListener('nm:lang', dlabel);
+      drawerNav.insertBefore(dbtn, drawerNav.firstChild);
+      dbtn.addEventListener('click', function () {
+        var d = $('#drawer');
+        var b = $('#burger');
+        if (d) d.dataset.open = 'false';
+        if (b) b.setAttribute('aria-expanded', 'false');
+        open(null);
+      });
+    }
+
+    /* Slash is what every wiki uses, Ctrl+K is what every app uses. Both. */
+    document.addEventListener('keydown', function (e) {
+      if (isOpen()) return;
+      if ((e.key === 'k' || e.key === 'K') && (e.ctrlKey || e.metaKey)) {
+        e.preventDefault();
+        open(btn);
+        return;
+      }
+      var el = e.target;
+      var typing = el && (el.isContentEditable ||
+        /^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName));
+      if (e.key === '/' && !typing && !e.ctrlKey && !e.metaKey && !e.altKey) {
+        e.preventDefault();
+        open(btn);
+      }
+    });
+  })();
+
   /* ----------------------------------------------------- 4. scroll reveals */
 
   var reveals = $$('.reveal');

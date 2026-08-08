@@ -20,7 +20,7 @@ Curse of Change,"If base str ≤30, neutral resist -10%; str ≥70, atk+10%.
 If base int ≤30, non-neutral resist -10%; int ≥70, +10% matk.
 If base dex ≤30, movement speed -15%, dex ≥70, +10% ranged damage.
 ",Garment
-Moonlight Flower,"All stats +10, all base and job EXP lost on death.",Headgear
+Moonlight Flower,"5% Chance to autocast Call of the Grave when attacked, inflicting Curse, Vulnerable and Blind on all enemies in an area around you. Vulnerable Potency +10%, Blind Potency +10",Headgear
 Lord of the Dead,"For every 10% of missing HP, Physical Damage Dealt +4%",Headgear
 Mistress,Reduces the Cooldown of Heal and Aid Potion by 3 seconds,Headgear
 Kraken,Ignore 50% of the Magic Defense of all monster/ Max SP -50%,Headgear
