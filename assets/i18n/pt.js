@@ -244,6 +244,7 @@ window.NM_I18N_REGISTER('pt', {
   'dl.title': 'Um pacote. Descompacte e jogue.',
   'dl.lede': 'O download é um cliente completo. Você não precisa de uma instalação base separada e não precisa caçar arquivos de dados. Descompacte onde quiser, rode o patcher uma vez, e daí em diante ele se mantém atualizado.',
   'dl.getClient': 'Baixar o cliente',
+  'dl.mirror': 'Espelho no Google Drive',
   'dl.note': 'Só Windows por enquanto. Você precisa de uma conta antes de conseguir entrar.',
   'dl.installEyebrow': 'Instalação',
   'dl.installTitle': 'Três passos, do começo ao fim',

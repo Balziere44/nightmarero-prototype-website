@@ -68,21 +68,22 @@ the `SITE` constant in both scripts moves with everything else.
 
 ### 2. The client download link
 
-`download.html` has one primary download button. It currently points at the
-control panel as a placeholder. Search the file for the comment that starts
-`Twilight: replace the href below` and swap in the real link.
+`download.html` has two download buttons in the hero. The primary one points
+at the release build on MediaFire, the ghost one at the older Google Drive
+copy, kept as a mirror. Both are plain hrefs in the markup, above a comment
+that says so.
 
-To add mirrors, duplicate that button:
+To add another mirror, duplicate the ghost button:
 
 ```html
 <a class="btn -ghost -lg" href="MIRROR-URL" target="_blank" rel="noopener">
   <svg aria-hidden="true"><use href="#i-download"></use></svg>
-  <span>Mirror: Mega</span>
+  <span>Mirror on Mega</span>
 </a>
 ```
 
-That is all that is strictly outstanding. All 55 classes have artwork, so
-nothing on the site falls back to a placeholder.
+A label that names the host wants a key in the five locale files, the way
+`dl.mirror` has one. A label that is just a host name does not need one.
 
 ---
 

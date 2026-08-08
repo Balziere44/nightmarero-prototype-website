@@ -244,6 +244,7 @@ window.NM_I18N_REGISTER('it', {
   'dl.title': 'Un pacchetto. Estrai e gioca.',
   'dl.lede': 'Il download è un client completo. Non serve un’installazione base separata e non devi andare a caccia di file di dati. Estrailo dove preferisci, avvia il patcher una volta, e da lì in poi resta aggiornato.',
   'dl.getClient': 'Scarica il client',
+  'dl.mirror': 'Mirror su Google Drive',
   'dl.note': 'Solo Windows per ora. Ti serve un account prima di poter entrare.',
   'dl.installEyebrow': 'Installazione',
   'dl.installTitle': 'Tre passi, dall’inizio alla fine',

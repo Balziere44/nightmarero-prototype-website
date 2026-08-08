@@ -244,6 +244,7 @@ window.NM_I18N_REGISTER('de', {
   'dl.title': 'Ein Paket. Entpacken und spielen.',
   'dl.lede': 'Der Download ist ein vollständiger Client. Du brauchst keine separate Basisinstallation und musst keine Datendateien suchen. Entpacke ihn, wo du willst, starte den Patcher einmal, und danach bleibt er von selbst aktuell.',
   'dl.getClient': 'Client holen',
+  'dl.mirror': 'Spiegel auf Google Drive',
   'dl.note': 'Vorerst nur Windows. Ohne Konto kommst du nicht rein.',
   'dl.installEyebrow': 'Installation',
   'dl.installTitle': 'Drei Schritte, von Anfang bis Ende',

@@ -244,6 +244,7 @@ window.NM_I18N_REGISTER('fr', {
   'dl.title': 'Un paquet. Décompressez et jouez.',
   'dl.lede': 'Le téléchargement est un client complet. Pas besoin d’une installation de base séparée, pas besoin de chercher des fichiers de données. Décompressez où vous voulez, lancez le patcher une fois, et il reste à jour ensuite.',
   'dl.getClient': 'Récupérer le client',
+  'dl.mirror': 'Miroir sur Google Drive',
   'dl.note': 'Windows uniquement pour l’instant. Il vous faut un compte avant de pouvoir vous connecter.',
   'dl.installEyebrow': 'Installation',
   'dl.installTitle': 'Trois étapes, du début à la fin',
