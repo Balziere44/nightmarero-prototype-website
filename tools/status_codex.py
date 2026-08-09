@@ -25,8 +25,8 @@ STATUS = [
      "Cuts the target's Hit and Flee by a flat 30, and shrinks how much of "
      "the screen a player can see."),
     ("vuln", "Vulnerable", ["Vulnerable"],
-     "Strips up to 40% of the target's hard and soft defence. No attack "
-     "bonus, unlike the Provoke you remember."),
+     "Strips 40% of the target's hard and soft defence. No attack bonus, "
+     "unlike the Provoke you remember."),
     ("breach", "Breach", ["Breached", "Breach"],
      "The same idea aimed at magic defence instead. It is how a caster gets "
      "through a high MDef enemy, and Breach Potency raises what it strips."),

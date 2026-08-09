@@ -25,13 +25,14 @@ and the reference text is not, which is the same rule the rest of the site
 follows.
 """
 
+import csv
 import io
 import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from build_classes import esc, head, header, footer, SITE, REGISTER
-from status_codex import STATUS
+from status_codex import STATUS, colorize
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -299,6 +300,99 @@ ORES = [
     ("Over 150", "Enriched Oridecon and Enriched Elunium"),
 ]
 
+
+# --------------------------------------------------------------------------
+# The two reference tabs of the gear sheet
+#
+# Both are laid out for a human reading a spreadsheet, not for a program:
+# blocks of slot columns sitting side by side with blank rows between them.
+# These two readers turn that back into a list, so the page follows the sheet
+# whenever Twilight touches it.
+# --------------------------------------------------------------------------
+
+DATA = os.path.join(ROOT, "tools", "data")
+
+
+def _grid(name):
+    with io.open(os.path.join(DATA, name), encoding="utf-8", newline="") as fh:
+        return [[c.strip() for c in row] for row in csv.reader(fh)]
+
+
+def random_options():
+    """[(title, [(slot, [options])], note)] in the order the sheet has them.
+
+    Three things in the columns are not options: the second slot header that
+    only two handed weapons get, and two sentences the sheet leaves in the
+    cells as footnotes. They come back out as a slot of their own and as the
+    block's note.
+    """
+    rows = _grid("gear__random-option-tables.csv")
+
+    def at(r, c):
+        return rows[r][c] if r < len(rows) and c < len(rows[r]) else ""
+
+    blocks = []
+    for i, row in enumerate(rows):
+        for j, cell in enumerate(row):
+            if cell != "Slot 1":
+                continue
+            cols = []
+            k = j
+            while at(i, k).startswith("Slot "):
+                cols.append((at(i, k), k))
+                k += 1
+
+            end = i + 1
+            while end < len(rows) and any(at(end, x) for x in range(j, j + 4)):
+                end += 1
+
+            slots, note_lines = [], []
+            for label, col in cols:
+                values = []
+                for r in range(i + 1, end):
+                    value = at(r, col)
+                    if not value:
+                        continue
+                    if "Level Tier above" in value or value.startswith("This tier"):
+                        note_lines.append(value)
+                    elif value.startswith("Slot "):
+                        slots.append((label, values))
+                        label, values = value, []
+                    else:
+                        values.append(value)
+                if values:
+                    slots.append((label, values))
+            blocks.append((at(i - 2, j), slots, " ".join(note_lines)))
+    return blocks
+
+
+# Four slips in the enchant tab that would read as real values on the page.
+# Fixed here rather than in the CSV, so re-fetching the sheet does not quietly
+# put them back.
+ENCHANT_TYPOS = [
+    ("Str +1, Stk +3%", "Str +1, Atk +3%"),
+    ("Nigthmares", "Nightmares"),
+    ("Damage Takenb from", "Damage Taken from"),
+    ("Int +5,. Matk", "Int +5, Matk"),
+]
+
+
+def shadow_enchants():
+    """[(stat, [(name, effect)])], one entry per stat the sheet groups by."""
+    groups = []
+    for row in _grid("gear__shadow-enchants.csv"):
+        name = row[0] if row else ""
+        effect = row[1] if len(row) > 1 else ""
+        if not name:
+            continue
+        if name.endswith("Enchants"):
+            groups.append((name[:-len(" Enchants")], []))
+        elif groups and effect:
+            for wrong, right in ENCHANT_TYPOS:
+                effect = effect.replace(wrong, right)
+            groups[-1][1].append((name, effect))
+    return groups
+
 MECH_JUMPS = [
     ("levels", "m.jLevels", "Levels and experience"),
     ("stats", "m.jStats", "Stats and breakpoints"),
@@ -308,6 +402,7 @@ MECH_JUMPS = [
     ("potions", "m.jPotions", "Potions and catalysts"),
     ("novice", "m.jNovice", "Skills everyone has"),
     ("refine", "m.jRefine", "Refining"),
+    ("options", "m.jOptions", "Random options"),
     ("warps", "m.jWarps", "Warps"),
     ("commands", "m.jCommands", "Commands"),
 ]
@@ -390,6 +485,58 @@ def status_cards():
                                        key=lambda w: (-len(w), w))[:3])))
         for key, label, terms, desc in STATUS)
 
+
+
+# The random option blocks group into three families that people shop for
+# separately: what you swing, what you wear, and the rest.
+RO_FAMILIES = [
+    ("m.roWeapons", "Weapons", ("Physical Weapons", "Magical Weapons",
+                                "Hybrid Weapons")),
+    ("m.roWorn", "Armour, shields and shoes", ("Armor / Shields", "Shoes")),
+    ("m.roRest", "Garments and accessories", ("Garments", "Accessories")),
+]
+
+
+def option_cards(blocks):
+    out = []
+    for key, label, prefixes in RO_FAMILIES:
+        out.append('      <h3 class="mech-sub" data-i18n="%s">%s</h3>\n'
+                   % (key, esc(label)))
+        cards = []
+        ordered = [b for prefix in prefixes for b in blocks
+                   if b[0].startswith(prefix)]
+        for title, slots, note_text in ordered:
+            cols = "".join(
+                """
+            <div class="ro-slot">
+              <b>%s</b>
+              <ul>%s</ul>
+            </div>""" % (esc(slot),
+                         "".join("<li>%s</li>" % esc(v) for v in values))
+                for slot, values in slots)
+            cards.append("""
+        <article class="ro-card">
+          <h4>%s</h4>
+          <div class="ro-slots">%s
+          </div>%s
+        </article>""" % (esc(title), cols,
+                         '\n          <p class="ro-note">%s</p>' % esc(note_text)
+                         if note_text else ""))
+        out.append('      <div class="ro-grid">%s\n      </div>\n'
+                   % "".join(cards))
+    return "".join(out)
+
+
+def enchant_cards(groups):
+    return '      <div class="ench-grid">%s\n      </div>\n' % "".join(
+        """
+        <article class="ench-card">
+          <h4>%s</h4>
+          <dl>%s</dl>
+        </article>""" % (esc(stat), "".join(
+            "<dt>%s</dt><dd>%s</dd>" % (esc(name), colorize(esc(effect)))
+            for name, effect in lines))
+        for stat, lines in groups)
 
 def build_mechanics():
     body = []
@@ -575,6 +722,45 @@ def build_mechanics():
         + table(["Boss", "Drops"], [[esc(a), esc(b)] for a, b in ORES])))
 
     body.append(section(
+        "options", "m.roTitle", "Random options",
+        "m.roLede",
+        "Almost everything that drops rolls its own extra stats on top of the "
+        "ones printed on it. Which stats it can roll depends on what the "
+        "piece is and what level bracket it came from, and the tables below "
+        "are the whole of it.",
+        rows([
+            ("What does not roll",
+             "<strong>Headgears</strong>, except in special cases. "
+             "<strong>Costumes</strong>, which are appearance only. And the "
+             "non standard weapons: shuriken, kunai, huuma, gatling guns and "
+             "grenade launchers."),
+            ("Slots",
+             "A piece rolls one option per slot on its table. Weapons get "
+             "fewer slots as their level bracket climbs, so a two slot weapon "
+             "at 150 rolls less than a four slot weapon at 30 and each roll "
+             "is worth much more. <strong>Two handed weapons</strong> get a "
+             "fourth slot the one handed ones do not."),
+            ("Boss gear",
+             "Gear that drops from a boss rolls on the tier above the one its "
+             "level requirement would suggest, and the top bracket has a tier "
+             "that <strong>only boss gear can reach</strong>."),
+            ("No options at all",
+             "Anything handed over by the Roaming Archaeologist, relic gear "
+             "included, comes with <strong>no random options</strong>. That "
+             "is the price of a guaranteed drop."),
+            ("Rerolling",
+             "Reroll Scrolls come out of the reward chests in the challenge "
+             "dungeons, which is the only way to change a roll you do not "
+             "want."),
+        ])
+        + option_cards(random_options())
+        + note("m.roNote",
+               "[Size] and [Element] are placeholders: the roll picks one and "
+               "prints it. A range like +1~5% means the roll lands somewhere "
+               "in it, so two copies of the same item are rarely worth the "
+               "same.")))
+
+    body.append(section(
         "warps", "m.wpTitle", "Warps",
         "m.wpLede",
         "The Kafra teleport service works, with one condition attached.",
@@ -639,6 +825,7 @@ END_JUMPS = [
     ("archaeologist", "e.jArch", "The Archaeologist"),
     ("guilds", "e.jGuilds", "Guilds and raids"),
     ("nightmare", "e.jNightmare", "Nightmare dungeons"),
+    ("shadow", "e.jShadow", "Shadow enchants"),
     ("challenge", "e.jChallenge", "Challenge dungeons"),
     ("reputation", "e.jRep", "Reputation"),
 ]
@@ -780,6 +967,19 @@ def build_endgame():
              "spend at the Steel Wings Headquarters in Luina."),
         ])
         + '<p class="mech-link"><a class="btn -ghost" href="database.html" data-i18n="e.nmLink">Every piece of Shadow Gear</a></p>'))
+
+    body.append(section(
+        "shadow", "e.shTitle", "Shadow enchants",
+        "e.shLede",
+        "Every piece of Shadow Gear takes an enchant, and the enchant is "
+        "where the set stops being a stat stick and starts being a build. "
+        "Each one is tied to a stat, comes in ranks, and like the gear "
+        "itself it only does anything inside a Nightmare dungeon.",
+        enchant_cards(shadow_enchants())
+        + note("e.shNote",
+               "Four ranks on the plain stat line, three on each of the "
+               "others. The higher the rank the rarer the roll, so a set is "
+               "usually a mix rather than four of the same.")))
 
     body.append(section(
         "challenge", "e.clTitle", "Challenge dungeons",

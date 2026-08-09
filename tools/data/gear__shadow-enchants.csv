@@ -1,0 +1,118 @@
+Strength Enchants,
+,
+,
+Strength I,"Str +1, Atk +3%"
+Strength II,"Str +2, Atk +6%"
+Strength III,"Str +3, Atk +10%"
+Strength IV,"Str +5, Atk +15%"
+,
+Force I,"Str +1, Atk +3%, Def Pierce +10%"
+Force II,"Str +2, Atk +6%, Def Pierce +15%"
+Force III,"Str +3, Atk +10%, Def Pierce +25%"
+,
+Bloodletter I,"Str +1, Atk +3%, Bleeding Damage +10%"
+Bloodletter II,"Str +2, Atk +6%, Bleeding Damage +15%"
+Bloodletter III,"Str +3, Atk +10%, Bleeding Damage +25%"
+,
+Leech I,"Str +1, Stk +3%, 1% Chance to leech 5% of Physical Damage"
+Leech II,"Str +2, Atk +6%, 3% Chance to leech 7% of Physical Damage"
+Leech III,"Str +3, Atk +10%, 5% Chance to leech 10% of Physical Damage"
+,
+Agility Enchants,
+,
+,
+Agility I,"Agi +1, Flee +5"
+Agility II,"Agi +2, Flee +10"
+Agility III,"Agi +3, Flee +15"
+Agility IV,"Agi +5, Flee +25"
+,
+Rapid I,"Agi +1, Flee +5, ASPD +1"
+Rapid II,"Agi +2, Flee +10, ASPD +3"
+Rapid III,"Agi +3, Flee +15, ASPD +5"
+,
+Toxic I,"Agi +1, Flee +5, Poison Damage +10%"
+Toxic II,"Agi +2, Flee +10, Poison Damage +15%"
+Toxic III,"Agi +3, Flee +15, Poison Damage +25%"
+,
+Haste I,"Agi +1, Flee +5, All Skill Cooldowns -1%"
+Haste II,"Agi +2, Flee +10, All Skill Cooldowns -3%"
+Haste III,"Agi +3, Flee +15, All Skill Cooldowns -5%"
+,
+Vitality Enchants,
+,
+,
+Vitality I,"Vit +1, Max HP +3%"
+Vitality II,"Vit +2, Max HP +6%"
+Vitality III,"Vit +3, Max HP +10%"
+Vitality IV,"Vit +5, Max HP +15%"
+,
+Block I,"Vit +1, Max HP +3%, Damage from Nightmares -1%"
+Block II,"Vit +2, Max HP +6%, Damage from Nigthmares -3%"
+Block III,"Vit +3, Max HP +10%, Damage Taken from Nightmares -5%"
+,
+Resist I,"Vit +1, Max HP +3%, Bleed/Burn/Poison Damage Taken -10%"
+Resist II,"Vit +2, Max HP +6%, Bleed/Burn/Poison Damage Taken -15%"
+Resist III,"Vit +3, Max HP +10%, Damage Takenb from Bleed/Burn/Poison -25%"
+,
+Robust I,"Vit +1, Max HP +3%, Potion Effectiveness +10%"
+Robust II,"Vit +2, Max HP +6%, Potion Effectiveness +15%"
+Robust III,"Vit +3, Max HP +10%, Potion Effectiveness +25%"
+,
+Intelligence Enchants,
+,
+,
+Intelligence I,"Int +1, Matk +3%"
+Intelligence II,"Int +2, Matk +6%"
+Intelligence III,"Int +3, Matk +10%"
+Intelligence IV,"Int +5,. Matk +15%"
+,
+Power I,"Int +1, Matk +3%, Mdef Pierce +10%"
+Power II,"Int +2, Matk +6%, Mdef Pierce +15%"
+Power III,"Int +3, Matk +10%, Mdef Pierce +25%"
+,
+Blazing I,"Int +1, Matk +3%, Burning/Searing Light Damage +10%"
+Blazing II,"Int +2, Matk +6%, Burning/Searing Light Damage +15%"
+Blazing III,"Int +3, Matk +10%, Burning/Searing Light Damage +25%"
+,
+Recovery I,"Int +1, Matk +3%, SP Regen +10%"
+Recovery II,"Int +2, Matk +6%, SP Regen +15%"
+Recovery III,"Int +3, Matk +10%, SP Regen +25%"
+,
+Dexterity Enchants,
+,
+Dexterity I,"Dex +1, Movement Speed +1%"
+Dexterity II,"Dex +2, Movement Speed +3%"
+Dexterity III,"Dex +3, Movement Speed +5%"
+Dexterity IV,"Dex +5, Movement Speed +10%"
+,
+Perfect I,"Dex +1, Movement Speed +1%, Hit +10"
+Perfect II,"Dex +2, Movement Speed +3%, Hit +20"
+Perfect III,"Dex +3, Movement Speed +5%, Hit +30"
+,
+Sniper I,"Dex +1, Movement Speed +1%, Ranged Damage +3%"
+Sniper II,"Dex +2, Movement Speed +3%, Ranged Damage +6%"
+Sniper III,"Dex +3, Movement Speed +5%, Ranged Damage +10%"
+,
+Chanter I,"Dex +1, Movement Speed +1%, Variable Cast Time -5%"
+Chanter II,"Dex +2, Movement Speed +3%, Variable Cast Time -10%"
+Chanter III,"Dex +3, Movement Speed +5%, Variable Cast Time -15%"
+,
+Luck Enchants,
+,
+,
+Luck I,"Luk +1, Crit Rate +3"
+Luck II,"Luk +2, Crit Rate +6"
+Luck III,"Luk +3, Crit Rate +10"
+Luck IV,"Luk +5, Crit Rate +15"
+,
+Deadly I,"Luk +1, Crit Rate +3, Crit Damage +10%"
+Deadly II,"Luk +2, Crit Rate +6, Crit Damage +15%"
+Deadly III,"Luk +3, Crit Rate +10, Crit Damage +25%"
+,
+Untouchable I,"Luk +1, Crit Rate +3, Perfect Dodge +1"
+Untouchable II,"Luk +2, Crit Rate +6, Perfect Dodge +3"
+Untouchable III,"Luk +3, Crit Rate +10, Perfect Dodge +5"
+,
+Inevitable I,"Luk +1, Crit Rate +3, Crit Pierce +10%"
+Inevitable II,"Luk +2, Crit Rate +6, Crit Pierce +15%"
+Inevitable III,"Luk +3, Crit Rate +10, Crit Pierce +25%"

@@ -314,6 +314,30 @@ Category names differ slightly between the two gear docs (`GATLINGS` versus
 `GATLING GUNS`). `CATEGORY_ALIASES` in `build_database.py` folds those
 together so the filter does not list near-duplicates.
 
+## The gear reference tabs
+
+Two tabs of the gear sheet are reference tables rather than item lists, so
+they do not belong in `items.json`. They are read straight off the CSV by
+`tools/build_mechanics.py` and rendered as cards:
+
+| Tab | Reader | Where it lands |
+| --- | --- | --- |
+| Random Option Tables | `random_options()` | `mechanics.html#options` |
+| Shadow Enchants | `shadow_enchants()` | `endgame.html#shadow` |
+
+Both tabs are laid out for a person reading a spreadsheet: blocks of slot
+columns side by side with blank rows between them. The readers put that back
+into a list, so a change to the sheet reaches the page with a re-fetch and a
+rebuild and nothing else.
+
+Two details worth knowing. The random option sheet leaves footnotes inside
+option cells ("MVP Armors drop at one Level Tier above their Requirements"),
+and the reader lifts those out as the block's note. And the enchant tab has
+four typos that would read as real values, so `ENCHANT_TYPOS` fixes them at
+read time rather than in the CSV, where a re-fetch would quietly undo it.
+
+---
+
 ## MVP altars
 
 `mvps.html` lists every summonable boss: the map its altar is on, the two item

@@ -10,7 +10,7 @@ tools/data/*.csv.
 Only run this when Twilight has changed the sheets. The CSVs are committed,
 so a normal rebuild does not need network access.
 
-Empty tabs (Shadow Gear and Shadow Enchants are still blank) are skipped.
+Empty tabs are skipped. Both Shadow tabs have content now.
 """
 
 import io

@@ -70,6 +70,11 @@ PAGES = [
      "element fire water wind earth holy dark undead ghost poison neutral elemento tabela elemental fogo agua vento terra sagrado sombrio veneno fantasma"),
     ("Status effects", "Every family and what it does", "mechanics.html#status",
      "status bleed burn poison blind vulnerable breach frozen stun sleep slow sangramento queimadura cego lento congelado atordoado"),
+    ("Random options", "What every piece can roll", "mechanics.html#options",
+     "random option roll reroll slot suffix bonus opcoes aleatorias opcao "
+     "rolagem atributo extra"),
+    ("Shadow enchants", "Every enchant, by stat", "endgame.html#shadow",
+     "shadow gear enchant nightmare costume encante encantamento sombra"),
     ("Refining", "Rates, ores and the +10 cap", "mechanics.html#refine",
      "refine upgrade ore enrich safe break refino refinar minerio upar item"),
     ("Potions", "What to carry", "mechanics.html#potions",
