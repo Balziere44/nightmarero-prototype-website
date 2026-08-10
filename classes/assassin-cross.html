@@ -213,7 +213,7 @@
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types, targets and the numbers behind every level come from the player wiki, so they match what you see in game.</p>
       </div>
       <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Blade Enchant</span><span>Counter State</span><span>Flashing Blades</span><span>Rejuvenating Blades</span><span>Toxic Blades</span></div>
       <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-poison">Poison</span><span class="kw-blind">Blind</span><span class="kw-vuln">Vulnerable</span><span class="kw-stun">Stun</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
@@ -223,22 +223,25 @@
         <h3 class="branch-title">General Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-passive" id="s-peerless-blades">
-            <div class="sk-top"><strong>Peerless Blades</strong><i class="sk-type">Blade Enchant</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Peerless Blades</strong><i class="sk-type">Blade Enchant</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">HP-threshold <b class="mech">Blade Enchant</b> that adds Luck scaling to Assassin skills.</p>
             <p class="sk-body">Infuses the user's weapons with their own life force, providing strong benefits while the user's HP remains high. Increases the user's Physical Attack while their current HP meets certain thresholds, and grants new effects to all Assassin skills.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Atk Bonus (above 50% HP)</th><th>Atk Bonus (above 75% HP)</th><th>Atk Bonus (above 90% HP)</th></tr></thead><tbody><tr><td>1</td><td>1%</td><td>1.5%</td><td>2%</td></tr><tr><td>2</td><td>2%</td><td>3%</td><td>4%</td></tr><tr><td>3</td><td>3%</td><td>4.5%</td><td>6%</td></tr><tr><td>4</td><td>4%</td><td>6%</td><td>8%</td></tr><tr><td>5</td><td>5%</td><td>7.5%</td><td>10%</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-deadly-shadow">
-            <div class="sk-top"><strong>Deadly Shadow</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Deadly Shadow</strong><i class="sk-type">Supportive</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Grants invisibility and empowers the next attack.</p>
             <p class="sk-body">The user turns invisible for a short time. Upon leaving the invisible state, the first skill used has a bonus to its Defense Pierce and Crit Damage.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Duration</th><th>Defense Pierce Bonus</th><th>Crit Damage Bonus</th></tr></thead><tbody><tr><td>1</td><td>3s</td><td>10%</td><td>5%</td></tr><tr><td>2</td><td>3.5s</td><td>20%</td><td>10%</td></tr><tr><td>3</td><td>4s</td><td>30%</td><td>15%</td></tr><tr><td>4</td><td>4.5s</td><td>40%</td><td>20%</td></tr><tr><td>5</td><td>5s</td><td>50%</td><td>25%</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-soul-destroyer">
-            <div class="sk-top"><strong>Soul Destroyer</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Soul Destroyer</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Consumes the active <b class="mech">Blade Enchant</b> for a deadly enchant-flavored projectile.</p>
             <p class="sk-body">The user channels their active <b class="mech">Blade Enchant</b> into a deadly projectile and fires it at an enemy. Deals exceptional Ranged Physical damage that has additional properties based on which <b class="mech">Blade Enchant</b> is active.</p>
             <ul class="sk-options"><li><b><b class="mech">Toxic Blades</b> Bonus: Treated as <b class="kw kw-poison">Poison</b> Damage</b></li></ul>
             <ul class="sk-riders"><li><b class="mech">Flashing Blades</b> Bonus: Guaranteed to Crit, ignores Physical Defense</li><li><b class="mech">Rejuvenating Blades</b> Bonus: Reduces all active skill cooldowns by 5 Seconds</li><li>Peerless Blades Bonus: Deals additional damage based on the user's Current HP</li></ul>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-peerless-blades">Peerless Blades</a></p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>100%</td><td>57</td></tr><tr><td>2</td><td>200%</td><td>64</td></tr><tr><td>3</td><td>300%</td><td>71</td></tr><tr><td>4</td><td>400%</td><td>78</td></tr><tr><td>5</td><td>500%</td><td>85</td></tr><tr><td>6</td><td>600%</td><td>92</td></tr><tr><td>7</td><td>700%</td><td>99</td></tr><tr><td>8</td><td>800%</td><td>106</td></tr><tr><td>9</td><td>900%</td><td>113</td></tr><tr><td>10</td><td>1000%</td><td>120</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -246,13 +249,14 @@
         <h3 class="branch-title">Dagger Skills<span>4 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-support" id="s-weapon-blocking">
-            <div class="sk-top"><strong>Weapon Blocking</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Weapon Blocking</strong><i class="sk-type">Supportive</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Blocks a Physical attack and grants the <b class="mech">Counter State</b>.</p>
             <p class="sk-body">Parries an incoming attack, blocking the next physical attack against the user. If an attack is successfully blocked, Rupture and Counter Slash have their cooldowns refreshed and the user gains the <b class="mech">Counter State</b> for a short time.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-counter-slash">Counter Slash</a><a href="#s-rupture">Rupture</a></p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Cooldown</th></tr></thead><tbody><tr><td>1</td><td>57s</td></tr><tr><td>2</td><td>54s</td></tr><tr><td>3</td><td>51s</td></tr><tr><td>4</td><td>48s</td></tr><tr><td>5</td><td>45s</td></tr><tr><td>6</td><td>42s</td></tr><tr><td>7</td><td>39s</td></tr><tr><td>8</td><td>36s</td></tr><tr><td>9</td><td>33s</td></tr><tr><td>10</td><td>30s</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-rupture">
-            <div class="sk-top"><strong>Rupture</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Rupture</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Precision strike that inflicts <b class="kw kw-vuln">Vulnerable</b>.</p>
             <p class="sk-body">Delivers a precision strike, landing a savage blow under the opponent's guard. Deals Melee Physical damage to a single target and inflicts the <b class="kw kw-vuln">Vulnerable</b> status. If used during the <b class="mech">Counter State</b>, the attack deals additional damage based on the user's <b class="kw kw-vuln">Vulnerable</b> Potency.</p>
             <p class="sk-body">During <b class="mech">Toxic Blades</b>, also inflicts <b class="kw kw-poison">Poison</b>.</p>
@@ -260,9 +264,11 @@
             <p class="sk-body">During <b class="mech">Rejuvenating Blades</b>, also inflicts <b class="kw kw-blind">Blind</b>.</p>
             <p class="sk-body">During Peerless Blades, reduces Weapon Blocking's Cooldown by 5 seconds.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-peerless-blades">Peerless Blades</a><a href="#s-weapon-blocking">Weapon Blocking</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-weapon-blocking">Weapon Blocking</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Status Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>320%</td><td>55%</td><td>16</td></tr><tr><td>2</td><td>340%</td><td>60%</td><td>17</td></tr><tr><td>3</td><td>360%</td><td>65%</td><td>18</td></tr><tr><td>4</td><td>380%</td><td>70%</td><td>19</td></tr><tr><td>5</td><td>400%</td><td>75%</td><td>20</td></tr><tr><td>6</td><td>420%</td><td>80%</td><td>21</td></tr><tr><td>7</td><td>440%</td><td>85%</td><td>22</td></tr><tr><td>8</td><td>460%</td><td>90%</td><td>23</td></tr><tr><td>9</td><td>480%</td><td>95%</td><td>24</td></tr><tr><td>10</td><td>500%</td><td>100%</td><td>25</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-counter-slash">
-            <div class="sk-top"><strong>Counter Slash</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Counter Slash</strong><i class="sk-type">Physical</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">AoE counter that repeats in the <b class="mech">Counter State</b>.</p>
             <p class="sk-body">Dagger skill. Lash out with perfect timing, delivering a punishing blow to all enemies in the area around the user. Deals Melee Physical damage in an area around the user, inflicting additional damage on <b class="kw kw-vuln">Vulnerable</b> enemies. If the user is currently in the <b class="mech">Counter State</b>, the skill repeats once for half damage.</p>
             <p class="sk-body">During <b class="mech">Toxic Blades</b>, the damage is treated as <b class="kw kw-poison">Poison</b> Damage.</p>
@@ -270,9 +276,11 @@
             <p class="sk-body">During <b class="mech">Rejuvenating Blades</b>, grants the Hallucination Walk effect for three seconds.</p>
             <p class="sk-body">During Peerless Blades, reduces the cooldown of Weapon Blocking by 5 seconds.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-peerless-blades">Peerless Blades</a><a href="#s-weapon-blocking">Weapon Blocking</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-weapon-blocking">Weapon Blocking</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>375%</td><td>32</td></tr><tr><td>2</td><td>400%</td><td>34</td></tr><tr><td>3</td><td>425%</td><td>36</td></tr><tr><td>4</td><td>450%</td><td>38</td></tr><tr><td>5</td><td>475%</td><td>40</td></tr><tr><td>6</td><td>500%</td><td>42</td></tr><tr><td>7</td><td>525%</td><td>44</td></tr><tr><td>8</td><td>550%</td><td>46</td></tr><tr><td>9</td><td>575%</td><td>48</td></tr><tr><td>10</td><td>600%</td><td>50</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-savage-blade">
-            <div class="sk-top"><strong>Savage Blade</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Savage Blade</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Ranged blade throw that can proactively trigger the <b class="mech">Counter State</b>.</p>
             <p class="sk-body">Dagger skill. The user throws a spinning blade at a distant target, dealing moderate damage and throwing them off balance. Deals Ranged Physical damage. If the skill hits an enemy that was in the middle of casting a skill, the user enters the <b class="mech">Counter State</b> for a short time.</p>
             <p class="sk-body">During <b class="mech">Toxic Blades</b>, this skill deals additional damage to Poisoned enemies.</p>
@@ -280,6 +288,8 @@
             <p class="sk-body">During <b class="mech">Rejuvenating Blades</b>, this skill inflicts the <b class="kw kw-stun">Stun</b> status.</p>
             <p class="sk-body">During Peerless Blades, refreshes the Cooldowns of Rolling Cutter and Cross Impact.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-peerless-blades">Peerless Blades</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-rupture">Rupture</a> Lv3, <a href="#s-counter-slash">Counter Slash</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>550%</td><td>22</td></tr><tr><td>2</td><td>600%</td><td>24</td></tr><tr><td>3</td><td>650%</td><td>26</td></tr><tr><td>4</td><td>700%</td><td>28</td></tr><tr><td>5</td><td>750%</td><td>30</td></tr><tr><td>6</td><td>800%</td><td>32</td></tr><tr><td>7</td><td>850%</td><td>34</td></tr><tr><td>8</td><td>900%</td><td>36</td></tr><tr><td>9</td><td>950%</td><td>38</td></tr><tr><td>10</td><td>1000%</td><td>40</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -287,12 +297,13 @@
         <h3 class="branch-title">Katar Skills<span>4 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-support" id="s-sonic-acceleration">
-            <div class="sk-top"><strong>Sonic Acceleration</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Sonic Acceleration</strong><i class="sk-type">Supportive</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Massive ASPD, Max ASPD, and Movement Speed buff.</p>
             <p class="sk-body">Katar skill. The user pushes themselves to the limit, accelerating their body to the extreme. Increases the user's ASPD, ASPD Limit, and Movement Speed for a short duration.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>ASPD Bonus</th><th>Max ASPD Bonus</th><th>Movement Speed Bonus</th><th>Cooldown</th></tr></thead><tbody><tr><td>1</td><td>1</td><td>0.3</td><td>2%</td><td>57s</td></tr><tr><td>2</td><td>2</td><td>0.6</td><td>4%</td><td>54s</td></tr><tr><td>3</td><td>3</td><td>0.9</td><td>6%</td><td>51s</td></tr><tr><td>4</td><td>4</td><td>1.2</td><td>8%</td><td>48s</td></tr><tr><td>5</td><td>5</td><td>1.5</td><td>10%</td><td>45s</td></tr><tr><td>6</td><td>6</td><td>1.8</td><td>12%</td><td>42s</td></tr><tr><td>7</td><td>7</td><td>2.1</td><td>14%</td><td>39s</td></tr><tr><td>8</td><td>8</td><td>2.4</td><td>16%</td><td>36s</td></tr><tr><td>9</td><td>9</td><td>2.7</td><td>18%</td><td>33s</td></tr><tr><td>10</td><td>10</td><td>3</td><td>20%</td><td>30s</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-dark-claw">
-            <div class="sk-top"><strong>Dark Claw</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Dark Claw</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Rending strike with enchant-based statuses.</p>
             <p class="sk-body">Katar skill. Delivers a rending blow, seeking out weaknesses in the enemy's armor. Deals additional damage to <b class="kw kw-vuln">Vulnerable</b> enemies. During Sonic Acceleration, this skill's cooldown is halved.</p>
             <p class="sk-body">During <b class="mech">Toxic Blades</b>, inflicts <b class="kw kw-poison">Poison</b>.</p>
@@ -300,9 +311,11 @@
             <p class="sk-body">During <b class="mech">Rejuvenating Blades</b>, inflicts <b class="kw kw-blind">Blind</b>.</p>
             <p class="sk-body">During Peerless Blades, reduces Sonic Acceleration's cooldown by 5 seconds.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-sonic-acceleration">Sonic Acceleration</a><a href="#s-peerless-blades">Peerless Blades</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-sonic-acceleration">Sonic Acceleration</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Status Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>270%</td><td>55%</td><td>16</td></tr><tr><td>2</td><td>290%</td><td>60%</td><td>17</td></tr><tr><td>3</td><td>310%</td><td>65%</td><td>18</td></tr><tr><td>4</td><td>330%</td><td>70%</td><td>19</td></tr><tr><td>5</td><td>350%</td><td>75%</td><td>20</td></tr><tr><td>6</td><td>370%</td><td>80%</td><td>21</td></tr><tr><td>7</td><td>390%</td><td>85%</td><td>22</td></tr><tr><td>8</td><td>410%</td><td>90%</td><td>23</td></tr><tr><td>9</td><td>430%</td><td>95%</td><td>24</td></tr><tr><td>10</td><td>450%</td><td>100%</td><td>25</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-phantom-claw">
-            <div class="sk-top"><strong>Phantom Claw</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Phantom Claw</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Gap-closing lunge with enchant-based statuses.</p>
             <p class="sk-body">The user lunges at a distant target, closing the distance between them and inflicting significant damage. During Sonic Acceleration, its cooldown is halved.</p>
             <p class="sk-body">During <b class="mech">Toxic Blades</b>, inflicts <b class="kw kw-poison">Deadly Poison</b>.</p>
@@ -310,9 +323,11 @@
             <p class="sk-body">During <b class="mech">Rejuvenating Blades</b>, grants the Hallucination Walk status for a few seconds.</p>
             <p class="sk-body">During Peerless Blades, subtracts 5 seconds from Sonic Acceleration's cooldown.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-sonic-acceleration">Sonic Acceleration</a><a href="#s-peerless-blades">Peerless Blades</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-sonic-acceleration">Sonic Acceleration</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Status Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>265%</td><td>55%</td><td>22</td></tr><tr><td>2</td><td>280%</td><td>60%</td><td>24</td></tr><tr><td>3</td><td>295%</td><td>65%</td><td>26</td></tr><tr><td>4</td><td>310%</td><td>70%</td><td>28</td></tr><tr><td>5</td><td>325%</td><td>75%</td><td>30</td></tr><tr><td>6</td><td>340%</td><td>80%</td><td>32</td></tr><tr><td>7</td><td>355%</td><td>85%</td><td>34</td></tr><tr><td>8</td><td>370%</td><td>90%</td><td>36</td></tr><tr><td>9</td><td>385%</td><td>95%</td><td>38</td></tr><tr><td>10</td><td>400%</td><td>100%</td><td>40</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-meteoric-claw">
-            <div class="sk-top"><strong>Meteoric Claw</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Meteoric Claw</strong><i class="sk-type">Physical</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Massive AoE that inflicts <b class="kw kw-bleed">Bleeding</b> and <b class="kw kw-vuln">Vulnerable</b>.</p>
             <p class="sk-body">The user unleashes a burst of shockwaves from their weapon, tearing through nearby enemies. All enemies around them take massive damage and receive the <b class="kw kw-bleed">Bleeding</b> and <b class="kw kw-vuln">Vulnerable</b> statuses.</p>
             <p class="sk-body">During <b class="mech">Toxic Blades</b>, also inflicts <b class="kw kw-poison">Poison</b>.</p>
@@ -320,6 +335,8 @@
             <p class="sk-body">During <b class="mech">Rejuvenating Blades</b>, also inflicts <b class="kw kw-stun">Stun</b>.</p>
             <p class="sk-body">During Peerless Blades, the user backslides and enters Deadly Shadow after casting.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-peerless-blades">Peerless Blades</a><a href="#s-deadly-shadow">Deadly Shadow</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-dark-claw">Dark Claw</a> Lv3, <a href="#s-phantom-claw">Phantom Claw</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Status Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>420%</td><td>30%</td><td>55</td></tr><tr><td>2</td><td>440%</td><td>35%</td><td>60</td></tr><tr><td>3</td><td>460%</td><td>40%</td><td>65</td></tr><tr><td>4</td><td>480%</td><td>45%</td><td>70</td></tr><tr><td>5</td><td>500%</td><td>50%</td><td>75</td></tr><tr><td>6</td><td>520%</td><td>55%</td><td>80</td></tr><tr><td>7</td><td>540%</td><td>60%</td><td>85</td></tr><tr><td>8</td><td>560%</td><td>65%</td><td>90</td></tr><tr><td>9</td><td>580%</td><td>70%</td><td>95</td></tr><tr><td>10</td><td>600%</td><td>75%</td><td>100</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>

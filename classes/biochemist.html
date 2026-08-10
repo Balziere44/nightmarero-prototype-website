@@ -213,7 +213,7 @@
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types, targets and the numbers behind every level come from the player wiki, so they match what you see in game.</p>
       </div>
       <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Extort Stacks</span></div>
       <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-poison">Poison</span><span class="kw-vuln">Vulnerable</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
@@ -223,9 +223,10 @@
         <h3 class="branch-title">Core Skills</h3>
         <ul class="skill-grid">
           <li class="skill-card sk-support" id="s-greater-aid-potion">
-            <div class="sk-top"><strong>Greater Aid Potion</strong><i class="sk-type">Recovery</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Greater Aid Potion</strong><i class="sk-type">Recovery</i><i class="sk-target">Ground</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">AoE version of Aid Potion using the same Throwable Potions.</p>
             <p class="sk-body">Throws a potion and scatters its contents over a wide area, healing all allies within its range. Uses the same Throwing Potions as the regular Aid Potion skill.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Potion Required</th></tr></thead><tbody><tr><td>1</td><td>Throwable Red Potion</td></tr><tr><td>2</td><td>Throwable Orange Potion</td></tr><tr><td>3</td><td>Throwable Yellow Potion</td></tr><tr><td>4</td><td>Throwable White Potion</td></tr><tr><td>5</td><td>Throwable Blue Potion</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -233,22 +234,25 @@
         <h3 class="branch-title">Chemical Skills<span>4 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-debuff" id="s-incinerate">
-            <div class="sk-top"><strong>Incinerate</strong><i class="sk-type">Chemical</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Incinerate</strong><i class="sk-type">Chemical</i><i class="sk-target">Ground</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Fire DoT field treated as <b class="kw kw-burn">Burning</b> damage; Extort reduces its cooldown.</p>
             <p class="sk-body">Throws a combination of volatile chemicals that ignite to create a short-lived field of fire. Enemies within the field take Physical Fire Property damage rapidly over time, which is treated as <b class="kw kw-burn">Burning</b> Damage and scales with the user's Intelligence. For each <b class="mech">Extort Stack</b> the user has, the Cooldown of this skill is reduced.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>70%</td><td>32</td></tr><tr><td>2</td><td>75%</td><td>34</td></tr><tr><td>3</td><td>80%</td><td>36</td></tr><tr><td>4</td><td>85%</td><td>38</td></tr><tr><td>5</td><td>90%</td><td>40</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-debuff" id="s-acid-cloud">
-            <div class="sk-top"><strong>Acid Cloud</strong><i class="sk-type">Chemical</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Acid Cloud</strong><i class="sk-type">Chemical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Acid burst scaling with <b class="kw kw-vuln">Vulnerable</b> Potency; Extort reduces its cooldown.</p>
             <p class="sk-body">Unleashes a cloud of acidic gas around the target, dealing Weapon Property Physical Damage to all enemies in an area around them. The damage of this skill is increased by the user's <b class="kw kw-vuln">Vulnerable</b> Potency and scales with the user's Intelligence. For each <b class="mech">Extort Stack</b> the user has, the Cooldown of this skill is reduced.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>385%</td><td>32</td></tr><tr><td>2</td><td>420%</td><td>34</td></tr><tr><td>3</td><td>455%</td><td>36</td></tr><tr><td>4</td><td>490%</td><td>38</td></tr><tr><td>5</td><td>525%</td><td>40</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-debuff" id="s-alchemic-cannon">
-            <div class="sk-top"><strong>Alchemic Cannon</strong><i class="sk-type">Chemical</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Alchemic Cannon</strong><i class="sk-type">Chemical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Explosive AoE with bonus damage against <b class="kw kw-vuln">Vulnerable</b> and <b class="kw kw-burn">Burning</b> enemies.</p>
             <p class="sk-body">Using intense alchemical reactions, the user fires a projectile at devastating speed toward the target, which explodes on contact from its sheer velocity. Deals damage to the target and all enemies around them, dealing additional damage to <b class="kw kw-vuln">Vulnerable</b> and <b class="kw kw-burn">Burning</b> targets, and scaling with the user's Intelligence. For each <b class="mech">Extort Stack</b> the user has, the Cooldown of this skill is reduced.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>330%</td><td>32</td></tr><tr><td>2</td><td>360%</td><td>34</td></tr><tr><td>3</td><td>390%</td><td>36</td></tr><tr><td>4</td><td>420%</td><td>38</td></tr><tr><td>5</td><td>450%</td><td>40</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-acid-demonstration">
-            <div class="sk-top"><strong>Acid Demonstration</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Acid Demonstration</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Consumes Extort for an absurd single-target burst.</p>
             <p class="sk-body">The user throws a combination of volatile chemicals that explode violently when they reach the target, doing massive Neutral Property damage to a single foe. This skill consumes all of the user's <b class="mech">Extort Stacks</b>, gaining benefits based on the number consumed. The damage is heavily influenced by the number of <b class="mech">Extort Stacks</b> consumed, and scales with the user's Intelligence. If the user has no <b class="mech">Extort Stacks</b> available, the skill will miss.</p>
             <p class="sk-body">1 Extort: Inflicts <b class="kw kw-vuln">Vulnerable</b> for 10 Seconds</p>
@@ -256,6 +260,8 @@
             <p class="sk-body">3 Extort: Inflicts <b class="kw kw-burn">Burning</b> for 10 Seconds</p>
             <p class="sk-body">4 Extort: Damage is treated as <b class="kw kw-burn">Burning</b> Damage</p>
             <p class="sk-body">5 Extort: <b class="mech">Extort Stacks</b> are not consumed</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-incinerate">Incinerate</a> Lv5, <a href="#s-acid-cloud">Acid Cloud</a> Lv5, <a href="#s-alchemic-cannon">Alchemic Cannon</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage (per Extort Stack)</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>165%</td><td>55</td></tr><tr><td>2</td><td>180%</td><td>60</td></tr><tr><td>3</td><td>195%</td><td>65</td></tr><tr><td>4</td><td>210%</td><td>70</td></tr><tr><td>5</td><td>225%</td><td>75</td></tr><tr><td>6</td><td>240%</td><td>80</td></tr><tr><td>7</td><td>255%</td><td>85</td></tr><tr><td>8</td><td>270%</td><td>90</td></tr><tr><td>9</td><td>285%</td><td>95</td></tr><tr><td>10</td><td>300%</td><td>100</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -266,36 +272,46 @@
             <div class="sk-top"><strong>Stimulant Research</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Reduces the side effects of Stimulant skills.</p>
             <p class="sk-body">Research into the safe and effective use of various drugs and stimulants. Each level reduces the negative side effects of Stimulant Skills cast by the user on allies, and enhances the effectiveness of Stimulant skills used on enemies.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Penalty Reduction</th></tr></thead><tbody><tr><td>1</td><td>5%</td></tr><tr><td>2</td><td>10%</td></tr><tr><td>3</td><td>15%</td></tr><tr><td>4</td><td>20%</td></tr><tr><td>5</td><td>25%</td></tr><tr><td>6</td><td>30%</td></tr><tr><td>7</td><td>35%</td></tr><tr><td>8</td><td>40%</td></tr><tr><td>9</td><td>45%</td></tr><tr><td>10</td><td>50%</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-crystal-clarity">
-            <div class="sk-top"><strong>Crystal Clarity</strong><i class="sk-type">Stimulant</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Crystal Clarity</strong><i class="sk-type">Stimulant</i><i class="sk-target">Ally</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Hit and FCT buff at the cost of defenses.</p>
             <p class="sk-body">Administers a drug to the target that helps clear their mind, improving the effectiveness and efficiency of their skill casting, but causes them to focus so intensely on offense that they neglect their own safety. Increases the target's Hit Rate and reduces all of their Fixed Cast Times, but also massively reduces their Defense and Magic Defense. If cast at level 3 or higher, the user generates one stack of Extort and the target's skills cannot be interrupted for the duration.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Hit Bonus</th><th>FCT Reduction</th><th>Def/MDef Reduction</th></tr></thead><tbody><tr><td>1</td><td>10</td><td>0.2s</td><td>20%</td></tr><tr><td>2</td><td>20</td><td>0.4s</td><td>40%</td></tr><tr><td>3</td><td>30</td><td>0.6s</td><td>60%</td></tr><tr><td>4</td><td>40</td><td>0.8s</td><td>80%</td></tr><tr><td>5</td><td>50</td><td>1s</td><td>100%</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-frenzy">
-            <div class="sk-top"><strong>Frenzy</strong><i class="sk-type">Stimulant</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Frenzy</strong><i class="sk-type">Stimulant</i><i class="sk-target">Ally</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Defense Pierce buff at the cost of Max HP/SP.</p>
             <p class="sk-body">Administers a drug to the target that invokes a berserk madness in them, making their attacks remarkably vicious, but also putting an intense strain on their bodies. Massively increases the target's Defense Pierce and Magic Defense Pierce, but also reduces the target's Max HP and SP for the duration. If cast at level 3 or higher, the user generates one stack of Extort and the target's Movement Speed is increased for the duration.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-crystal-clarity">Crystal Clarity</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Def/MDef Pierce</th><th>Max HP/SP Reduction</th></tr></thead><tbody><tr><td>1</td><td>10%</td><td>10%</td></tr><tr><td>2</td><td>20%</td><td>20%</td></tr><tr><td>3</td><td>30%</td><td>30%</td></tr><tr><td>4</td><td>40%</td><td>40%</td></tr><tr><td>5</td><td>50%</td><td>50%</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-white-ice">
-            <div class="sk-top"><strong>White Ice</strong><i class="sk-type">Stimulant</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>White Ice</strong><i class="sk-type">Stimulant</i><i class="sk-target">Ally</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Status damage reduction at the cost of Crit and cast speed.</p>
             <p class="sk-body">Administers a drug to the target that numbs their senses, making them extremely tolerant to pain, but also makes it difficult for them to wield their weapons and magic with the same dexterity as before. Reduces the damage the target takes from <b class="kw kw-bleed">Bleeding</b>, <b class="kw kw-burn">Burning</b>, and <b class="kw kw-poison">Poison</b>, at the cost of reducing their Crit Rate and increasing their Variable Cast Times. If cast at level 3 or higher, the user generates one stack of Extort and the target gains the Endure effect for the duration.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Status Damage Reduction</th><th>Crit Rate Penalty</th><th>VCT Penalty</th></tr></thead><tbody><tr><td>1</td><td>10%</td><td>6</td><td>20%</td></tr><tr><td>2</td><td>20%</td><td>12</td><td>40%</td></tr><tr><td>3</td><td>30%</td><td>18</td><td>60%</td></tr><tr><td>4</td><td>40%</td><td>24</td><td>80%</td></tr><tr><td>5</td><td>50%</td><td>30</td><td>100%</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-moonveil">
-            <div class="sk-top"><strong>Moonveil</strong><i class="sk-type">Stimulant</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Moonveil</strong><i class="sk-type">Stimulant</i><i class="sk-target">Ally</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Perfect Dodge buff at the cost of Attack and Magic Attack.</p>
             <p class="sk-body">Administers a drug to the target that accelerates their senses, giving them the impression that time has slowed down around them. In this state, they are able to avoid incoming attacks with ease, but will have difficulty gauging their own strength properly. Boosts the target's Perfect Dodge for the duration, but also reduces their Attack and Magic Attack. If cast at level 3 or higher, the user generates one stack of Extort and the target's skills all have reduced cooldowns for the duration.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-white-ice">White Ice</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Perfect Dodge Bonus</th><th>Atk/Matk Penalty</th></tr></thead><tbody><tr><td>1</td><td>3</td><td>10%</td></tr><tr><td>2</td><td>6</td><td>20%</td></tr><tr><td>3</td><td>9</td><td>30%</td></tr><tr><td>4</td><td>12</td><td>40%</td></tr><tr><td>5</td><td>15</td><td>50%</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-death-drip">
-            <div class="sk-top"><strong>Death Drip</strong><i class="sk-type">Stimulant</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Death Drip</strong><i class="sk-type">Stimulant</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short"><b class="kw kw-poison">Poison</b> burst injection that can inflict <b class="kw kw-poison">Deadly Poison</b>.</p>
             <p class="sk-body">Administers a lethal neurotoxin to the target, dealing an instant burst of <b class="kw kw-poison">Poison</b> Property damage that ignores Defense and is treated as <b class="kw kw-poison">Poison</b> Status damage. If cast at level 3 or higher, the user generates one stack of Extort, and the target also receives the <b class="kw kw-poison">Deadly Poison</b> status.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>330%</td><td>40</td></tr><tr><td>2</td><td>360%</td><td>40</td></tr><tr><td>3</td><td>390%</td><td>40</td></tr><tr><td>4</td><td>420%</td><td>40</td></tr><tr><td>5</td><td>450%</td><td>40</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-pyrelight">
-            <div class="sk-top"><strong>Pyrelight</strong><i class="sk-type">Stimulant</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Pyrelight</strong><i class="sk-type">Stimulant</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Fire burst injection that can inflict <b class="kw kw-burn">Severe Burning</b>.</p>
             <p class="sk-body">Administers a searing toxin to the target, burning them from the inside out. Inflicts significant damage to the target that is treated as <b class="kw kw-burn">Burning</b> Damage. If cast at level 3 or higher, the user generates one stack of Extort and also inflicts the <b class="kw kw-burn">Severe Burning</b> status on the target.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-death-drip">Death Drip</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>330%</td><td>40</td></tr><tr><td>2</td><td>360%</td><td>40</td></tr><tr><td>3</td><td>390%</td><td>40</td></tr><tr><td>4</td><td>420%</td><td>40</td></tr><tr><td>5</td><td>450%</td><td>40</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>

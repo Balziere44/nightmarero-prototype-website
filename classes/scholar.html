@@ -214,7 +214,7 @@
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types, targets and the numbers behind every level come from the player wiki, so they match what you see in game.</p>
       </div>
       <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-burn">Burning</span><span class="kw-breach">Breach</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
       <div class="type-key"><span class="sk-magic" data-i18n="cls.t.magic">Magic</span><span class="sk-support" data-i18n="cls.t.support">Support</span><span class="sk-passive" data-i18n="cls.t.passive">Passive</span><span class="sk-utility" data-i18n="cls.t.utility">Utility</span></div>
@@ -226,31 +226,39 @@
             <div class="sk-top"><strong>Free Cast</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Move and attack while casting, at reduced speed.</p>
             <p class="sk-body">Enables the user to walk and attack at reduced speed while casting spells. The penalty to Movement and Attack Speed is reduced at higher levels of the skill.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Movement Speed Reduction</th><th>Attack Speed Reduction</th></tr></thead><tbody><tr><td>1</td><td>65%</td><td>40%</td></tr><tr><td>2</td><td>55%</td><td>30%</td></tr><tr><td>3</td><td>45%</td><td>20%</td></tr><tr><td>4</td><td>35%</td><td>10%</td></tr><tr><td>5</td><td>25%</td><td>0%</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-utility" id="s-soul-siphon">
-            <div class="sk-top"><strong>Soul Siphon</strong><i class="sk-type">Utility</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Soul Siphon</strong><i class="sk-type">Utility</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Siphons SP from an enemy and inflicts <b class="kw kw-breach">Breach</b>.</p>
             <p class="sk-body">The user connects their soul to that of the targeted foe, directly siphoning their magical energy. The user regenerates a fixed amount of SP based on the Current HP of the target, and the target is inflicted with the <b class="kw kw-breach">Breach</b> Status.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>SP Recovery</th></tr></thead><tbody><tr><td>1</td><td>1% of enemy's Remaining HP</td></tr><tr><td>2</td><td>2% of enemy's Remaining HP</td></tr><tr><td>3</td><td>3% of enemy's Remaining HP</td></tr><tr><td>4</td><td>4% of enemy's Remaining HP</td></tr><tr><td>5</td><td>5% of enemy's Remaining HP</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-time-shift">
-            <div class="sk-top"><strong>Time Shift</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Time Shift</strong><i class="sk-type">Supportive</i><i class="sk-target">Party</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Instantly reduces the whole party's active cooldowns.</p>
             <p class="sk-body">The user uses their ultimate mastery over the inner workings of the world to shift time forward for their party. Immediately reduces the active Cooldowns of all party members by a certain amount based on skill level. This skill can never benefit from Cooldown Reduction or effects that reduce active Cooldowns.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-free-cast">Free Cast</a> Lv3, <a href="#s-soul-siphon">Soul Siphon</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Cooldown Reduction</th></tr></thead><tbody><tr><td>1</td><td>5s</td></tr><tr><td>2</td><td>10s</td></tr><tr><td>3</td><td>15s</td></tr><tr><td>4</td><td>20s</td></tr><tr><td>5</td><td>25s</td></tr><tr><td>6</td><td>30s</td></tr><tr><td>7</td><td>35s</td></tr><tr><td>8</td><td>40s</td></tr><tr><td>9</td><td>45s</td></tr><tr><td>10</td><td>50s</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-indulge">
-            <div class="sk-top"><strong>Indulge</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Indulge</strong><i class="sk-type">Supportive</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Converts Max HP into instant SP.</p>
             <p class="sk-body">The user consumes a portion of their HP, converting it into SP. The amount of HP consumed is determined by skill level.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>HP Cost</th></tr></thead><tbody><tr><td>1</td><td>10% of Max HP</td></tr><tr><td>2</td><td>20% of Max HP</td></tr><tr><td>3</td><td>30% of Max HP</td></tr><tr><td>4</td><td>40% of Max HP</td></tr><tr><td>5</td><td>50% of Max HP</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-soul-infusion">
-            <div class="sk-top"><strong>Soul Infusion</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Soul Infusion</strong><i class="sk-type">Supportive</i><i class="sk-target">Ally</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Makes an ally's next several skill casts free.</p>
             <p class="sk-body">The user infuses a targeted ally with arcane magics, fuelling their skills for a short duration. For a set number of skills, the SP cost of the targeted ally's abilities are massively reduced.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Free Casts</th></tr></thead><tbody><tr><td>1</td><td>1</td></tr><tr><td>2</td><td>2</td></tr><tr><td>3</td><td>3</td></tr><tr><td>4</td><td>4</td></tr><tr><td>5</td><td>5</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-psychic-barrier">
-            <div class="sk-top"><strong>Psychic Barrier</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Psychic Barrier</strong><i class="sk-type">Supportive</i><i class="sk-target">Party</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Converts remaining SP into a party-wide barrier.</p>
             <p class="sk-body">The user creates a barrier of pure magical force, consuming a fixed percentage of their remaining SP to protect themselves and their party members from all damage for a short duration. The barrier's HP is based on the amount of SP consumed.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-indulge">Indulge</a> Lv3, <a href="#s-soul-infusion">Soul Infusion</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>5% of Remaining SP</td></tr><tr><td>2</td><td>10% of Remaining SP</td></tr><tr><td>3</td><td>15% of Remaining SP</td></tr><tr><td>4</td><td>20% of Remaining SP</td></tr><tr><td>5</td><td>25% of Remaining SP</td></tr><tr><td>6</td><td>30% of Remaining SP</td></tr><tr><td>7</td><td>35% of Remaining SP</td></tr><tr><td>8</td><td>40% of Remaining SP</td></tr><tr><td>9</td><td>45% of Remaining SP</td></tr><tr><td>10</td><td>50% of Remaining SP</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -258,24 +266,30 @@
         <h3 class="branch-title">Offensive Skills<span>4 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-magic" id="s-soul-burn">
-            <div class="sk-top"><strong>Soul Burn</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Soul Burn</strong><i class="sk-type">Magical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">SP-scaled bolt that can inflict <b class="kw kw-burn">Severe Burning</b> through <b class="kw kw-breach">Breach</b>.</p>
             <p class="sk-body">The user attacks the target with a burst of raw magical energy which ignites on contact. Deals Neutral property Magic damage. If the target is <b class="kw kw-breach">Breached</b>, has a chance to inflict <b class="kw kw-burn">Severe Burning</b>. The damage of this skill is heavily influenced by the user's remaining SP.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Severe Burning Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>450%</td><td>55%</td><td>105</td></tr><tr><td>2</td><td>500%</td><td>60%</td><td>110</td></tr><tr><td>3</td><td>550%</td><td>65%</td><td>115</td></tr><tr><td>4</td><td>600%</td><td>70%</td><td>120</td></tr><tr><td>5</td><td>650%</td><td>75%</td><td>125</td></tr><tr><td>6</td><td>700%</td><td>80%</td><td>130</td></tr><tr><td>7</td><td>750%</td><td>85%</td><td>135</td></tr><tr><td>8</td><td>800%</td><td>90%</td><td>140</td></tr><tr><td>9</td><td>850%</td><td>95%</td><td>145</td></tr><tr><td>10</td><td>900%</td><td>100%</td><td>150</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-magic" id="s-force-barrage">
-            <div class="sk-top"><strong>Force Barrage</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Force Barrage</strong><i class="sk-type">Magical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">SP-scaled AoE with bonus damage against <b class="kw kw-breach">Breached</b> targets.</p>
             <p class="sk-body">The user unleashes a barrage of psychic energy, dealing Neutral property Magic damage to the targeted enemy and all other enemies in the area. The damage is increased against any targets suffering from the <b class="kw kw-breach">Breach</b> status. The damage of this skill is heavily influenced by the user's remaining SP.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>550%</td><td>210</td></tr><tr><td>2</td><td>600%</td><td>220</td></tr><tr><td>3</td><td>650%</td><td>230</td></tr><tr><td>4</td><td>700%</td><td>240</td></tr><tr><td>5</td><td>750%</td><td>250</td></tr><tr><td>6</td><td>800%</td><td>260</td></tr><tr><td>7</td><td>850%</td><td>270</td></tr><tr><td>8</td><td>900%</td><td>280</td></tr><tr><td>9</td><td>950%</td><td>290</td></tr><tr><td>10</td><td>1000%</td><td>300</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-magic" id="s-psychic-storm">
-            <div class="sk-top"><strong>Psychic Storm</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Psychic Storm</strong><i class="sk-type">Magical</i><i class="sk-target">Ground</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">SP-scaled DoT storm that inflicts <b class="kw kw-breach">Breach</b>.</p>
             <p class="sk-body">The user unleashes a storm of raw magical energy at the targeted location, dealing persistent Neutral Property Magic damage over time to all enemies within. Each hit has a chance to inflict the <b class="kw kw-breach">Breach</b> status. The damage of this skill is heavily influenced by the user's remaining SP.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-soul-burn">Soul Burn</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage (per hit)</th><th>Breach Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>115%</td><td>30%</td><td>320</td></tr><tr><td>2</td><td>130%</td><td>35%</td><td>340</td></tr><tr><td>3</td><td>145%</td><td>40%</td><td>360</td></tr><tr><td>4</td><td>160%</td><td>45%</td><td>380</td></tr><tr><td>5</td><td>175%</td><td>50%</td><td>400</td></tr><tr><td>6</td><td>190%</td><td>55%</td><td>420</td></tr><tr><td>7</td><td>205%</td><td>60%</td><td>440</td></tr><tr><td>8</td><td>220%</td><td>65%</td><td>460</td></tr><tr><td>9</td><td>235%</td><td>70%</td><td>480</td></tr><tr><td>10</td><td>250%</td><td>75%</td><td>500</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-magic" id="s-force-sigil">
-            <div class="sk-top"><strong>Force Sigil</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Force Sigil</strong><i class="sk-type">Magical</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">SP-scaled sigil that immobilizes enemies, and the user.</p>
             <p class="sk-body">The user inscribes an arcane sigil on the ground that channels incredible raw magic. For the duration, the sigil immobilizes the caster and all enemies within it, dealing constant Neutral Property Magic damage over time to all enemies. The damage dealt is heavily influenced by the user's remaining SP.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-force-barrage">Force Barrage</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage (per hit)</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>220%</td><td>375</td></tr><tr><td>2</td><td>240%</td><td>400</td></tr><tr><td>3</td><td>260%</td><td>425</td></tr><tr><td>4</td><td>280%</td><td>450</td></tr><tr><td>5</td><td>300%</td><td>475</td></tr><tr><td>6</td><td>320%</td><td>500</td></tr><tr><td>7</td><td>340%</td><td>525</td></tr><tr><td>8</td><td>360%</td><td>550</td></tr><tr><td>9</td><td>380%</td><td>575</td></tr><tr><td>10</td><td>400%</td><td>600</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>

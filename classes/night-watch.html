@@ -249,7 +249,7 @@
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types, targets and the numbers behind every level come from the player wiki, so they match what you see in game.</p>
       </div>
       <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Grenades</span></div>
       <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-vuln">Vulnerable</span><span class="kw-stun">Stun</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
@@ -259,17 +259,19 @@
         <h3 class="branch-title">Revolver Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-physical" id="s-revolver-specialization">
-            <div class="sk-top"><strong>Revolver Specialization</strong><i class="sk-type">Revolver</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Revolver Specialization</strong><i class="sk-type">Revolver</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Revolver stance: <b class="kw kw-slow">Slow</b> Potency and enhanced Revolver skills.</p>
             <p class="sk-body">The user alters their fighting style to specialize in the use of Revolvers. For the skill's duration, the user's <b class="kw kw-slow">Slow</b> Potency is increased and Revolver skills are enhanced. The status ends if the user changes their equipped weapon. This skill shares a cooldown with Rifle Specialization and Shotgun Specialization.</p>
             <ul class="sk-riders"><li>Quick Draw Bonus: Inflicts <b class="kw kw-vuln">Vulnerable</b> and Crimson Marker</li><li>Rapid Shower Bonus: Inflicts <b class="kw kw-bleed">Internal Bleeding</b> and Crimson Marker</li><li>Unload Bonus: Gain (Skill Lv/3) <b class="mech">Grenades</b> instead of 1</li></ul>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-shotgun-specialization">Shotgun Specialization</a><a href="#s-rifle-specialization">Rifle Specialization</a><a href="#s-crimson-marker">Crimson Marker</a></p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Slow Potency Bonus</th><th>Grenades from Unload</th></tr></thead><tbody><tr><td>1</td><td>+3</td><td>0</td></tr><tr><td>2</td><td>+6</td><td>0</td></tr><tr><td>3</td><td>+9</td><td>1</td></tr><tr><td>4</td><td>+12</td><td>1</td></tr><tr><td>5</td><td>+15</td><td>1</td></tr><tr><td>6</td><td>+18</td><td>2</td></tr><tr><td>7</td><td>+21</td><td>2</td></tr><tr><td>8</td><td>+24</td><td>2</td></tr><tr><td>9</td><td>+27</td><td>3</td></tr><tr><td>10</td><td>+30</td><td>3</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-unload">
-            <div class="sk-top"><strong>Unload</strong><i class="sk-type">Revolver</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Unload</strong><i class="sk-type">Revolver</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Revolver dump that interacts with Crimson Marker; generates a <b class="mech">Grenade</b>.</p>
             <p class="sk-body">The user unloads their revolvers into the targeted enemy, dealing significant physical damage and attempting to inflict the <b class="kw kw-slow">Slow</b> Status. If the user is under Revolver Specialization, inflicts the Crimson Marker Status. Otherwise, consumes it to instantly refresh this skill's Cooldown. Using this skill immediately generates one <b class="mech">Grenade</b>.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-revolver-specialization">Revolver Specialization</a><a href="#s-crimson-marker">Crimson Marker</a></p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Slow Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>430%</td><td>55%</td><td>17</td></tr><tr><td>2</td><td>460%</td><td>60%</td><td>19</td></tr><tr><td>3</td><td>490%</td><td>65%</td><td>21</td></tr><tr><td>4</td><td>520%</td><td>70%</td><td>23</td></tr><tr><td>5</td><td>550%</td><td>75%</td><td>25</td></tr><tr><td>6</td><td>580%</td><td>80%</td><td>27</td></tr><tr><td>7</td><td>610%</td><td>85%</td><td>29</td></tr><tr><td>8</td><td>640%</td><td>90%</td><td>31</td></tr><tr><td>9</td><td>670%</td><td>95%</td><td>33</td></tr><tr><td>10</td><td>700%</td><td>100%</td><td>35</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -277,17 +279,19 @@
         <h3 class="branch-title">Rifle Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-physical" id="s-rifle-specialization">
-            <div class="sk-top"><strong>Rifle Specialization</strong><i class="sk-type">Rifle</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Rifle Specialization</strong><i class="sk-type">Rifle</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Rifle stance: <b class="kw kw-vuln">Vulnerable</b> Potency and enhanced Rifle skills.</p>
             <p class="sk-body">The user alters their fighting style to specialize in the use of Rifles. For the skill's duration, the user's <b class="kw kw-vuln">Vulnerable</b> Potency is increased and Rifle skills are enhanced. The status ends if the user changes their equipped weapon. This skill shares a cooldown with Revolver Specialization and Shotgun Specialization.</p>
             <ul class="sk-riders"><li>Breaking Shot Bonus: Inflicts <b class="kw kw-slow">Slow</b> and Crimson Marker</li><li>Snipe Bonus: Inflicts <b class="kw kw-bleed">Internal Bleeding</b> and Crimson Marker</li><li>Hammer Round Bonus: Gain (Skill Lv/3) <b class="mech">Grenades</b> instead of 1</li></ul>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-revolver-specialization">Revolver Specialization</a><a href="#s-shotgun-specialization">Shotgun Specialization</a><a href="#s-crimson-marker">Crimson Marker</a></p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Vulnerable Potency Bonus</th><th>Grenades from Hammer Round</th></tr></thead><tbody><tr><td>1</td><td>2%</td><td>0</td></tr><tr><td>2</td><td>4%</td><td>0</td></tr><tr><td>3</td><td>6%</td><td>1</td></tr><tr><td>4</td><td>8%</td><td>1</td></tr><tr><td>5</td><td>10%</td><td>1</td></tr><tr><td>6</td><td>12%</td><td>2</td></tr><tr><td>7</td><td>14%</td><td>2</td></tr><tr><td>8</td><td>16%</td><td>2</td></tr><tr><td>9</td><td>18%</td><td>3</td></tr><tr><td>10</td><td>20%</td><td>3</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-hammer-round">
-            <div class="sk-top"><strong>Hammer Round</strong><i class="sk-type">Rifle</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Hammer Round</strong><i class="sk-type">Rifle</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Explosive splash round; consumes Crimson Marker for bonus damage.</p>
             <p class="sk-body">The user fires a devastating blast from their rifle, dealing heavy damage and attempting to inflict the <b class="kw kw-vuln">Vulnerable</b> status to the target and all enemies in the area around them. If not under Rifle Specialization, this skill inflicts Crimson Marker. Otherwise, any target under the Crimson Marker status takes significantly increased damage. Using this skill immediately generates one <b class="mech">Grenade</b>.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-rifle-specialization">Rifle Specialization</a><a href="#s-crimson-marker">Crimson Marker</a></p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Vulnerable Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>420%</td><td>55%</td><td>32</td></tr><tr><td>2</td><td>440%</td><td>60%</td><td>34</td></tr><tr><td>3</td><td>460%</td><td>65%</td><td>36</td></tr><tr><td>4</td><td>480%</td><td>70%</td><td>38</td></tr><tr><td>5</td><td>500%</td><td>75%</td><td>40</td></tr><tr><td>6</td><td>520%</td><td>80%</td><td>42</td></tr><tr><td>7</td><td>540%</td><td>85%</td><td>44</td></tr><tr><td>8</td><td>560%</td><td>90%</td><td>46</td></tr><tr><td>9</td><td>580%</td><td>95%</td><td>48</td></tr><tr><td>10</td><td>600%</td><td>100%</td><td>50</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -295,17 +299,19 @@
         <h3 class="branch-title">Shotgun Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-physical" id="s-shotgun-specialization">
-            <div class="sk-top"><strong>Shotgun Specialization</strong><i class="sk-type">Shotgun</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Shotgun Specialization</strong><i class="sk-type">Shotgun</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Shotgun stance: <b class="kw kw-bleed">Bleeding</b> Damage and enhanced Shotgun skills.</p>
             <p class="sk-body">The user alters their fighting style to specialize in the use of Shotguns. For the skill's duration, the user's <b class="kw kw-bleed">Bleeding</b> damage is increased and Shotgun skills are enhanced. The status ends if the user changes their equipped weapon. This skill shares a cooldown with Revolver Specialization and Rifle Specialization.</p>
             <ul class="sk-riders"><li>Scatter Shot Bonus: Inflicts <b class="kw kw-vuln">Vulnerable</b> and Crimson Marker</li><li>Full Blast Bonus: Inflicts <b class="kw kw-slow">Slow</b> and Crimson Marker</li><li>Slug Shot Bonus: Generates (Skill Lv/3) <b class="mech">Grenades</b> instead of 1</li></ul>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-revolver-specialization">Revolver Specialization</a><a href="#s-rifle-specialization">Rifle Specialization</a><a href="#s-crimson-marker">Crimson Marker</a></p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Bleeding Damage Bonus</th><th>Grenades from Slug Shot</th></tr></thead><tbody><tr><td>1</td><td>3%</td><td>0</td></tr><tr><td>2</td><td>6%</td><td>0</td></tr><tr><td>3</td><td>9%</td><td>1</td></tr><tr><td>4</td><td>12%</td><td>1</td></tr><tr><td>5</td><td>15%</td><td>1</td></tr><tr><td>6</td><td>18%</td><td>2</td></tr><tr><td>7</td><td>21%</td><td>2</td></tr><tr><td>8</td><td>24%</td><td>2</td></tr><tr><td>9</td><td>27%</td><td>3</td></tr><tr><td>10</td><td>30%</td><td>3</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-slug-shot">
-            <div class="sk-top"><strong>Slug Shot</strong><i class="sk-type">Shotgun</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Slug Shot</strong><i class="sk-type">Shotgun</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Heavy slug; consumes Crimson Marker to <b class="kw kw-stun">Stun</b>.</p>
             <p class="sk-body">The user fires a heavy slug at the targeted enemy, dealing heavy damage and attempting to inflict the <b class="kw kw-bleed">Internal Bleeding</b> status. This skill's damage is treated as Half <b class="kw kw-bleed">Bleeding</b>. If the user is not under Shotgun Specialization, inflicts the Crimson Marker status. Otherwise, consumes it to <b class="kw kw-stun">Stun</b> the target. Using this skill immediately generates one <b class="mech">Grenade</b>.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-shotgun-specialization">Shotgun Specialization</a><a href="#s-crimson-marker">Crimson Marker</a></p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Status Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>520%</td><td>55%</td><td>32</td></tr><tr><td>2</td><td>540%</td><td>60%</td><td>34</td></tr><tr><td>3</td><td>560%</td><td>65%</td><td>36</td></tr><tr><td>4</td><td>580%</td><td>70%</td><td>38</td></tr><tr><td>5</td><td>600%</td><td>75%</td><td>40</td></tr><tr><td>6</td><td>620%</td><td>80%</td><td>42</td></tr><tr><td>7</td><td>640%</td><td>85%</td><td>44</td></tr><tr><td>8</td><td>660%</td><td>90%</td><td>46</td></tr><tr><td>9</td><td>680%</td><td>95%</td><td>48</td></tr><tr><td>10</td><td>700%</td><td>100%</td><td>50</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -316,11 +322,13 @@
             <div class="sk-top"><strong>Crimson Marker</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Extends the duration of the user's Crimson Marker.</p>
             <p class="sk-body">Passively increases the duration of all Crimson Markers applied by the user.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Crimson Marker Duration</th></tr></thead><tbody><tr><td>1</td><td>6s</td></tr><tr><td>2</td><td>7s</td></tr><tr><td>3</td><td>8s</td></tr><tr><td>4</td><td>9s</td></tr><tr><td>5</td><td>10s</td></tr><tr><td>6</td><td>11s</td></tr><tr><td>7</td><td>12s</td></tr><tr><td>8</td><td>13s</td></tr><tr><td>9</td><td>14s</td></tr><tr><td>10</td><td>15s</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-ammunition-economy">
-            <div class="sk-top"><strong>Ammunition Economy</strong><i class="sk-type">Grenade Launcher</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Ammunition Economy</strong><i class="sk-type">Grenade Launcher</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Instantly generates <b class="mech">Grenades</b> for <b class="mech">Grenade</b> Launcher skills.</p>
             <p class="sk-body">The user immediately generates a number of <b class="mech">Grenades</b> to be used with <b class="mech">Grenade</b> Launcher skills. This skill is not counted when calculating <b class="mech">Grenade</b> Launcher mastery.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Grenades Generated</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>1</td><td>10</td></tr><tr><td>2</td><td>1</td><td>10</td></tr><tr><td>3</td><td>2</td><td>20</td></tr><tr><td>4</td><td>2</td><td>20</td></tr><tr><td>5</td><td>3</td><td>30</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -328,22 +336,28 @@
         <h3 class="branch-title">Grenade Launcher Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-physical" id="s-scorched-earth">
-            <div class="sk-top"><strong>Scorched Earth</strong><i class="sk-type">Grenade Launcher</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Scorched Earth</strong><i class="sk-type">Grenade Launcher</i><i class="sk-target">Ground</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Five-hit fire cone treated as <b class="kw kw-burn">Burning</b> Damage.</p>
             <p class="sk-body">The user launches a wave of fire in the designated direction, scorching all enemies in its path. Deals physical damage repeatedly to all enemies in its path that is treated as <b class="kw kw-burn">Burning</b> damage. Any enemies struck have a chance of receiving the <b class="kw kw-bleed">Internal Bleeding</b> status. The chance is increased for enemies under the Crimson Marker status.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-crimson-marker">Crimson Marker</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-ammunition-economy">Ammunition Economy</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage per Hit</th><th>Internal Bleeding Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>60%</td><td>5%</td><td>42</td></tr><tr><td>2</td><td>70%</td><td>10%</td><td>44</td></tr><tr><td>3</td><td>80%</td><td>15%</td><td>46</td></tr><tr><td>4</td><td>90%</td><td>20%</td><td>48</td></tr><tr><td>5</td><td>100%</td><td>25%</td><td>50</td></tr><tr><td>6</td><td>110%</td><td>30%</td><td>52</td></tr><tr><td>7</td><td>120%</td><td>35%</td><td>54</td></tr><tr><td>8</td><td>130%</td><td>40%</td><td>56</td></tr><tr><td>9</td><td>140%</td><td>45%</td><td>58</td></tr><tr><td>10</td><td>150%</td><td>50%</td><td>60</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-chain-blast">
-            <div class="sk-top"><strong>Chain Blast</strong><i class="sk-type">Grenade Launcher</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Chain Blast</strong><i class="sk-type">Grenade Launcher</i><i class="sk-target">Ground</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Triple detonation in widening areas.</p>
             <p class="sk-body">The user launches a multi-stage grenade at the target, which detonates three times in a progressively wider radius. Deals three hits of physical damage that is also treated as <b class="kw kw-burn">Burning</b> Damage. Enemies struck have a chance of being inflicted with the <b class="kw kw-vuln">Vulnerable</b> status. The chance is increased if the target is under Crimson Marker.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-crimson-marker">Crimson Marker</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-ammunition-economy">Ammunition Economy</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Vulnerable Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>155%</td><td>5%</td><td>32</td></tr><tr><td>2</td><td>160%</td><td>10%</td><td>34</td></tr><tr><td>3</td><td>165%</td><td>15%</td><td>36</td></tr><tr><td>4</td><td>170%</td><td>20%</td><td>38</td></tr><tr><td>5</td><td>175%</td><td>25%</td><td>40</td></tr><tr><td>6</td><td>180%</td><td>30%</td><td>42</td></tr><tr><td>7</td><td>185%</td><td>35%</td><td>44</td></tr><tr><td>8</td><td>190%</td><td>40%</td><td>46</td></tr><tr><td>9</td><td>195%</td><td>45%</td><td>48</td></tr><tr><td>10</td><td>200%</td><td>50%</td><td>50</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-heavy-salvo">
-            <div class="sk-top"><strong>Heavy Salvo</strong><i class="sk-type">Grenade Launcher</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Heavy Salvo</strong><i class="sk-type">Grenade Launcher</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Homing grenades striking only Marked enemies.</p>
             <p class="sk-body">The user launches a salvo of grenades in a wide area, dealing heavy damage to all marked enemies on the screen. Deals heavy physical damage that is treated as <b class="kw kw-burn">Burning</b> Damage to all enemies in a wide area around the user that are under the Crimson Marker Status. Enemies struck have a chance of being inflicted with the <b class="kw kw-slow">Slow</b> Status.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-crimson-marker">Crimson Marker</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-ammunition-economy">Ammunition Economy</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Slow Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>350%</td><td>10%</td><td>52</td></tr><tr><td>2</td><td>400%</td><td>20%</td><td>54</td></tr><tr><td>3</td><td>450%</td><td>30%</td><td>56</td></tr><tr><td>4</td><td>500%</td><td>40%</td><td>58</td></tr><tr><td>5</td><td>550%</td><td>50%</td><td>60</td></tr><tr><td>6</td><td>600%</td><td>60%</td><td>62</td></tr><tr><td>7</td><td>650%</td><td>70%</td><td>64</td></tr><tr><td>8</td><td>700%</td><td>80%</td><td>66</td></tr><tr><td>9</td><td>750%</td><td>90%</td><td>68</td></tr><tr><td>10</td><td>800%</td><td>100%</td><td>70</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>

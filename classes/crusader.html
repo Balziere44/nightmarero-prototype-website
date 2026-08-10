@@ -213,7 +213,7 @@
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types, targets and the numbers behind every level come from the player wiki, so they match what you see in game.</p>
       </div>
       <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-blind">Blind</span><span class="kw-vuln">Vulnerable</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
       <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-support" data-i18n="cls.t.support">Support</span><span class="sk-passive" data-i18n="cls.t.passive">Passive</span></div>
@@ -225,26 +225,35 @@
             <div class="sk-top"><strong>Faith</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Increases Max HP. Also DEF, and MDEF while wearing a shield.</p>
             <p class="sk-body">Increases the user's Max HP, while also boosting their Defense and Magic Defense if a shield is equipped.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Max HP Bonus</th><th>Defense Bonus</th><th>Magic Defense Bonus</th></tr></thead><tbody><tr><td>1</td><td>100</td><td>3</td><td>1</td></tr><tr><td>2</td><td>200</td><td>6</td><td>2</td></tr><tr><td>3</td><td>300</td><td>9</td><td>3</td></tr><tr><td>4</td><td>400</td><td>12</td><td>4</td></tr><tr><td>5</td><td>500</td><td>15</td><td>5</td></tr><tr><td>6</td><td>600</td><td>18</td><td>6</td></tr><tr><td>7</td><td>700</td><td>21</td><td>7</td></tr><tr><td>8</td><td>800</td><td>24</td><td>8</td></tr><tr><td>9</td><td>900</td><td>27</td><td>9</td></tr><tr><td>10</td><td>1000</td><td>30</td><td>10</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-guard">
-            <div class="sk-top"><strong>Guard</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Guard</strong><i class="sk-type">Supportive</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Block all physical attacks for a short duration.</p>
             <p class="sk-body">Enters a defensive stance, blocking all physical damage for a short duration. Requires a shield.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-faith">Faith</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Cooldown</th></tr></thead><tbody><tr><td>1</td><td>57s</td></tr><tr><td>2</td><td>54s</td></tr><tr><td>3</td><td>51s</td></tr><tr><td>4</td><td>48s</td></tr><tr><td>5</td><td>45s</td></tr><tr><td>6</td><td>42s</td></tr><tr><td>7</td><td>39s</td></tr><tr><td>8</td><td>36s</td></tr><tr><td>9</td><td>33s</td></tr><tr><td>10</td><td>30s</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-shield-boomerang">
-            <div class="sk-top"><strong>Shield Boomerang</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Shield Boomerang</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Ranged shield throw that applies <b class="kw kw-vuln">Vulnerable</b>.</p>
             <p class="sk-body">Ranged attack with a chance to inflict the <b class="kw kw-vuln">Vulnerable</b> status. Deals additional damage to enemies that are already <b class="kw kw-vuln">Vulnerable</b>. Damage is unaffected by shield weight.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-faith">Faith</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Vulnerable Damage Bonus</th><th>Vulnerable Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>115%</td><td>10%</td><td>55%</td><td>9</td></tr><tr><td>2</td><td>130%</td><td>20%</td><td>60%</td><td>10</td></tr><tr><td>3</td><td>145%</td><td>30%</td><td>65%</td><td>11</td></tr><tr><td>4</td><td>160%</td><td>40%</td><td>70%</td><td>12</td></tr><tr><td>5</td><td>175%</td><td>50%</td><td>75%</td><td>13</td></tr><tr><td>6</td><td>190%</td><td>60%</td><td>80%</td><td>14</td></tr><tr><td>7</td><td>205%</td><td>70%</td><td>85%</td><td>15</td></tr><tr><td>8</td><td>220%</td><td>80%</td><td>90%</td><td>16</td></tr><tr><td>9</td><td>235%</td><td>90%</td><td>95%</td><td>17</td></tr><tr><td>10</td><td>250%</td><td>100%</td><td>100%</td><td>18</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-shield-slam">
-            <div class="sk-top"><strong>Shield Slam</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Shield Slam</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Heavy shield bash that scales with user's VIT.</p>
             <p class="sk-body">Delivers a crushing blow to a nearby enemy. <b class="kw kw-vuln">Vulnerable</b> enemies take increased damage. Damage is unaffected by shield weight.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-shield-boomerang">Shield Boomerang</a> Lv3, <a href="#s-guard">Guard</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>165%</td><td>13</td></tr><tr><td>2</td><td>180%</td><td>14</td></tr><tr><td>3</td><td>195%</td><td>15</td></tr><tr><td>4</td><td>210%</td><td>16</td></tr><tr><td>5</td><td>225%</td><td>17</td></tr><tr><td>6</td><td>240%</td><td>18</td></tr><tr><td>7</td><td>255%</td><td>19</td></tr><tr><td>8</td><td>270%</td><td>20</td></tr><tr><td>9</td><td>285%</td><td>21</td></tr><tr><td>10</td><td>300%</td><td>22</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-restoration">
-            <div class="sk-top"><strong>Restoration</strong><i class="sk-type">Recovery</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Restoration</strong><i class="sk-type">Recovery</i><i class="sk-target">Ground</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Creates a healing zone for allies.</p>
             <p class="sk-body">Enchants the ground beneath the user's feet with holy energy, restoring life to allies over time. The healing amount is based on skill level, and scales up with the target's Max HP.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-shield-boomerang">Shield Boomerang</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Heal Amount</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>100</td><td>15</td></tr><tr><td>2</td><td>200</td><td>18</td></tr><tr><td>3</td><td>300</td><td>21</td></tr><tr><td>4</td><td>400</td><td>24</td></tr><tr><td>5</td><td>500</td><td>27</td></tr><tr><td>6</td><td>600</td><td>30</td></tr><tr><td>7</td><td>700</td><td>33</td></tr><tr><td>8</td><td>800</td><td>36</td></tr><tr><td>9</td><td>900</td><td>39</td></tr><tr><td>10</td><td>1000</td><td>42</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -255,27 +264,36 @@
             <div class="sk-top"><strong>Spear Mastery</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Increases damage and Hit rate of spears.</p>
             <p class="sk-body">Mastery for One-Handed and Two-Handed spears. Increases damage and accuracy with spears. Spears typically gain additional <b class="kw kw-vuln">Vulnerable</b> Potency as a mastery bonus.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage Bonus</th><th>Hit Bonus</th></tr></thead><tbody><tr><td>1</td><td>4</td><td>2</td></tr><tr><td>2</td><td>8</td><td>4</td></tr><tr><td>3</td><td>12</td><td>6</td></tr><tr><td>4</td><td>16</td><td>8</td></tr><tr><td>5</td><td>20</td><td>10</td></tr><tr><td>6</td><td>24</td><td>12</td></tr><tr><td>7</td><td>28</td><td>14</td></tr><tr><td>8</td><td>32</td><td>16</td></tr><tr><td>9</td><td>36</td><td>18</td></tr><tr><td>10</td><td>40</td><td>20</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-spear-flurry">
-            <div class="sk-top"><strong>Spear Flurry</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Spear Flurry</strong><i class="sk-type">Supportive</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Dramatically increases ASPD and spear skill cooldowns. Requires a spear.</p>
             <p class="sk-body">Increases the user's attack speed for a short duration. Also refreshes the cooldowns of Slash, Brilliant Strike, and Holy Cross when activated.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-brilliant-strike">Brilliant Strike</a><a href="#s-holy-cross">Holy Cross</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-spear-mastery">Spear Mastery</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Cooldown</th></tr></thead><tbody><tr><td>1</td><td>38s</td></tr><tr><td>2</td><td>36s</td></tr><tr><td>3</td><td>34s</td></tr><tr><td>4</td><td>32s</td></tr><tr><td>5</td><td>30s</td></tr><tr><td>6</td><td>28s</td></tr><tr><td>7</td><td>26s</td></tr><tr><td>8</td><td>24s</td></tr><tr><td>9</td><td>22s</td></tr><tr><td>10</td><td>20s</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-brilliant-strike">
-            <div class="sk-top"><strong>Brilliant Strike</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Brilliant Strike</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Deals damage and applies <b class="kw kw-blind">Blind</b>.</p>
             <p class="sk-body">A plain damage skill that has a high chance to inflict the <b class="kw kw-blind">Blind</b> status. Not element locked.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-spear-mastery">Spear Mastery</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Blind Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>265%</td><td>55%</td><td>12</td></tr><tr><td>2</td><td>280%</td><td>60%</td><td>13</td></tr><tr><td>3</td><td>295%</td><td>65%</td><td>14</td></tr><tr><td>4</td><td>310%</td><td>70%</td><td>15</td></tr><tr><td>5</td><td>325%</td><td>75%</td><td>16</td></tr><tr><td>6</td><td>340%</td><td>80%</td><td>17</td></tr><tr><td>7</td><td>355%</td><td>85%</td><td>18</td></tr><tr><td>8</td><td>370%</td><td>90%</td><td>19</td></tr><tr><td>9</td><td>385%</td><td>95%</td><td>20</td></tr><tr><td>10</td><td>400%</td><td>100%</td><td>21</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-holy-cross">
-            <div class="sk-top"><strong>Holy Cross</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Holy Cross</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Holy elemental double strike that scales with user's DEX.</p>
             <p class="sk-body">Deals two consecutive hits of Holy property physical damage. <b class="kw kw-bleed">Bleeding</b> and <b class="kw kw-blind">Blinded</b> enemies take significantly increased damage.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-brilliant-strike">Brilliant Strike</a> Lv3, <a href="#s-spear-flurry">Spear Flurry</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>105% × 2</td><td>15</td></tr><tr><td>2</td><td>110% × 2</td><td>16</td></tr><tr><td>3</td><td>115% × 2</td><td>17</td></tr><tr><td>4</td><td>120% × 2</td><td>18</td></tr><tr><td>5</td><td>125% × 2</td><td>19</td></tr><tr><td>6</td><td>130% × 2</td><td>20</td></tr><tr><td>7</td><td>135% × 2</td><td>21</td></tr><tr><td>8</td><td>140% × 2</td><td>22</td></tr><tr><td>9</td><td>145% × 2</td><td>23</td></tr><tr><td>10</td><td>150% × 2</td><td>24</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-grand-cross">
-            <div class="sk-top"><strong>Grand Cross</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Grand Cross</strong><i class="sk-type">Physical</i><i class="sk-target">Around you</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Sacrifices HP to deal massive AoE damage around the caster.</p>
             <p class="sk-body">Deals Holy property PHYSICAL damage to all enemies in an area around the user. Each hit has a chance to inflict the <b class="kw kw-blind">Blind</b> and <b class="kw kw-vuln">Vulnerable</b> statuses. Gains no benefit from Int or Magic Attack.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-brilliant-strike">Brilliant Strike</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Blind Chance</th><th>Vulnerable Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>220% × 5</td><td>3%</td><td>3%</td><td>23</td></tr><tr><td>2</td><td>240% × 5</td><td>6%</td><td>6%</td><td>26</td></tr><tr><td>3</td><td>260% × 5</td><td>9%</td><td>9%</td><td>29</td></tr><tr><td>4</td><td>280% × 5</td><td>12%</td><td>12%</td><td>32</td></tr><tr><td>5</td><td>300% × 5</td><td>15%</td><td>15%</td><td>35</td></tr><tr><td>6</td><td>320% × 5</td><td>18%</td><td>18%</td><td>38</td></tr><tr><td>7</td><td>340% × 5</td><td>21%</td><td>21%</td><td>41</td></tr><tr><td>8</td><td>360% × 5</td><td>24%</td><td>24%</td><td>44</td></tr><tr><td>9</td><td>380% × 5</td><td>27%</td><td>27%</td><td>47</td></tr><tr><td>10</td><td>400% × 5</td><td>30%</td><td>30%</td><td>50</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>

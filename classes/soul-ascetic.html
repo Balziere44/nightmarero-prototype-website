@@ -220,7 +220,7 @@
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types, targets and the numbers behind every level come from the player wiki, so they match what you see in game.</p>
       </div>
       <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Barrier</span></div>
       <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-poison">Poison</span><span class="kw-blind">Blind</span><span class="kw-vuln">Vulnerable</span><span class="kw-breach">Breach</span><span class="kw-stun">Stun</span><span class="kw-sleep">Sleep</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
@@ -230,14 +230,16 @@
         <h3 class="branch-title">Ritual Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-magic" id="s-ritual-of-invocation">
-            <div class="sk-top"><strong>Ritual of Invocation</strong><i class="sk-type">Ritual</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Ritual of Invocation</strong><i class="sk-type">Ritual</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Instantly gains AP; buffs Crit Rate and reduces Fixed Cast Times.</p>
             <p class="sk-body">The user performs a ritual to invoke the powers of the spirits of the natural world, preparing to wield their power to create powerful phenomena in the physical world. The user immediately gains a large boost of AP, then for a short duration they gain increased Crit Rate and reduced Fixed Cast Times.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>AP Gain</th><th>Crit Bonus</th><th>FCT Reduction</th><th>Duration</th></tr></thead><tbody><tr><td>1</td><td>+10</td><td>+5</td><td>0.1s</td><td>10s</td></tr><tr><td>2</td><td>+20</td><td>+10</td><td>0.2s</td><td>20s</td></tr><tr><td>3</td><td>+30</td><td>+15</td><td>0.3s</td><td>30s</td></tr><tr><td>4</td><td>+40</td><td>+20</td><td>0.4s</td><td>40s</td></tr><tr><td>5</td><td>+50</td><td>+25</td><td>0.5s</td><td>50s</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-magic" id="s-ritual-of-binding">
-            <div class="sk-top"><strong>Ritual of Binding</strong><i class="sk-type">Ritual</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Ritual of Binding</strong><i class="sk-type">Ritual</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Instantly drains AP; buffs Attack Speed and reduces SP costs.</p>
             <p class="sk-body">The user performs a ritual to subdue the spirits of the natural world, blunting their impact on the physical world. The user immediately loses a large amount of AP, then for a short duration they gain a bonus to Attack Speed and a reduction in all SP Costs.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>AP Drain</th><th>ASPD Bonus</th><th>SP Cost Reduction</th><th>Duration</th></tr></thead><tbody><tr><td>1</td><td>-10</td><td>+1</td><td>5%</td><td>10s</td></tr><tr><td>2</td><td>-20</td><td>+2</td><td>10%</td><td>20s</td></tr><tr><td>3</td><td>-30</td><td>+3</td><td>15%</td><td>30s</td></tr><tr><td>4</td><td>-40</td><td>+4</td><td>20%</td><td>40s</td></tr><tr><td>5</td><td>-50</td><td>+5</td><td>25%</td><td>50s</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -245,14 +247,18 @@
         <h3 class="branch-title">Talisman Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-summon" id="s-talisman-of-protection">
-            <div class="sk-top"><strong>Talisman of Protection</strong><i class="sk-type">Talisman</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Talisman of Protection</strong><i class="sk-type">Talisman</i><i class="sk-target">Ally</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Grants an ally a <b class="mech">Barrier</b> that strengthens near 100 AP.</p>
             <p class="sk-body">The user calls on the spirits of nature to protect the targeted ally, bestowing on them a talisman of protection. Grants the targeted ally a <b class="mech">Barrier</b> for a short duration. The closer the user's AP is to 100, the stronger the <b class="mech">Barrier</b> becomes. If the user's AP is within 50 points of 100, it also protects from <b class="kw kw-bleed">Bleeding</b>, <b class="kw kw-burn">Burning</b>, and <b class="kw kw-poison">Poison</b>. If the user's AP is within 10 points of 100, it also heals them for the same amount as the <b class="mech">Barrier</b>.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-ritual-of-invocation">Ritual of Invocation</a> Lv1, <a href="#s-ritual-of-binding">Ritual of Binding</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Barrier Amount</th><th>AP Drain</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>1000</td><td>-3</td><td>30</td></tr><tr><td>2</td><td>2000</td><td>-6</td><td>35</td></tr><tr><td>3</td><td>3000</td><td>-9</td><td>40</td></tr><tr><td>4</td><td>4000</td><td>-12</td><td>45</td></tr><tr><td>5</td><td>5000</td><td>-15</td><td>50</td></tr><tr><td>6</td><td>6000</td><td>-18</td><td>55</td></tr><tr><td>7</td><td>7000</td><td>-21</td><td>60</td></tr><tr><td>8</td><td>8000</td><td>-24</td><td>65</td></tr><tr><td>9</td><td>9000</td><td>-27</td><td>70</td></tr><tr><td>10</td><td>10000</td><td>-30</td><td>75</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-summon" id="s-talisman-of-war">
-            <div class="sk-top"><strong>Talisman of War</strong><i class="sk-type">Talisman</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Talisman of War</strong><i class="sk-type">Talisman</i><i class="sk-target">Ally</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Boosts an ally's <b class="kw kw-vuln">Vulnerable</b> and <b class="kw kw-breach">Breach</b> Potency.</p>
             <p class="sk-body">The user calls on the spirits of nature to bolster the strength of the targeted ally's attacks, bestowing on them a talisman of war. Grants the targeted ally a bonus to <b class="kw kw-vuln">Vulnerable</b> and <b class="kw kw-breach">Breach</b> Potency for a short duration. The closer the user's AP is to 100, the stronger the bonus becomes. If the user's AP is within 50 points of 100, it also grants protection from <b class="kw kw-blind">Blind</b>, <b class="kw kw-slow">Slow</b>, and <b class="kw kw-slow">Slowcast</b>. If the user's AP is within 10 points of 100, it also increases the target's <b class="kw kw-bleed">Bleeding</b>, <b class="kw kw-burn">Burning</b>, and <b class="kw kw-poison">Poison</b> damage.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-ritual-of-invocation">Ritual of Invocation</a> Lv1, <a href="#s-ritual-of-binding">Ritual of Binding</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Duration</th><th>AP Gain</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>3s</td><td>+3</td><td>30</td></tr><tr><td>2</td><td>6s</td><td>+6</td><td>35</td></tr><tr><td>3</td><td>9s</td><td>+9</td><td>40</td></tr><tr><td>4</td><td>12s</td><td>+12</td><td>45</td></tr><tr><td>5</td><td>15s</td><td>+15</td><td>50</td></tr><tr><td>6</td><td>18s</td><td>+18</td><td>55</td></tr><tr><td>7</td><td>21s</td><td>+21</td><td>60</td></tr><tr><td>8</td><td>24s</td><td>+24</td><td>65</td></tr><tr><td>9</td><td>27s</td><td>+27</td><td>70</td></tr><tr><td>10</td><td>30s</td><td>+30</td><td>75</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -260,24 +266,30 @@
         <h3 class="branch-title">Magical Curse Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-magic" id="s-curse-of-absorption">
-            <div class="sk-top"><strong>Curse of Absorption</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Curse of Absorption</strong><i class="sk-type">Magical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Ghost magic strike that inflicts <b class="kw kw-breach">Breach</b>.</p>
             <p class="sk-body">The user calls on the spirits of the natural world to attack the targeted enemy, draining them of strength and weakening their defenses. Deals Ghost Property Magic Damage to a single target and attempts to inflict the <b class="kw kw-breach">Breach</b> status. The Damage of this skill is increased the closer the user's AP is to 100. If the user's AP is within 50 points of 100, it deals additional damage to <b class="kw kw-breach">Breached</b> enemies. If within 10 points of 100, the user is healed for a portion of the damage dealt.</p>
             <p class="sk-body">Generates a small amount of AP when used.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-ritual-of-invocation">Ritual of Invocation</a> Lv1, <a href="#s-ritual-of-binding">Ritual of Binding</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>AP Gain</th><th>Breach Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>950%</td><td>+5</td><td>60%</td><td>40</td></tr><tr><td>2</td><td>1100%</td><td>+10</td><td>70%</td><td>45</td></tr><tr><td>3</td><td>1250%</td><td>+15</td><td>80%</td><td>50</td></tr><tr><td>4</td><td>1400%</td><td>+20</td><td>90%</td><td>55</td></tr><tr><td>5</td><td>1550%</td><td>+25</td><td>100%</td><td>60</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-magic" id="s-curse-of-doom">
-            <div class="sk-top"><strong>Curse of Doom</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Curse of Doom</strong><i class="sk-type">Magical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Ghost magic damage over time; can inflict <b class="kw kw-slow">Slow</b>.</p>
             <p class="sk-body">The use calls on the spirits of the natural world to attack the targeted enemy, slowly sapping the life of them over time. Deals Ghost Property damage every second to the targeted enemy for a short duration. The damage inflicted by this skill is increased the closer the user's AP is to 100. If the user's AP is within 50 points of 100, also inflicts the <b class="kw kw-slow">Slow</b> status. If within 10 points of 100, the duration of both statuses is doubled.</p>
             <p class="sk-body">Generates a small amount of AP when used.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-curse-of-absorption">Curse of Absorption</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>AP Gain</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>550%</td><td>+5</td><td>40</td></tr><tr><td>2</td><td>600%</td><td>+10</td><td>45</td></tr><tr><td>3</td><td>650%</td><td>+15</td><td>50</td></tr><tr><td>4</td><td>700%</td><td>+20</td><td>55</td></tr><tr><td>5</td><td>750%</td><td>+25</td><td>60</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-magic" id="s-curse-of-sealing">
-            <div class="sk-top"><strong>Curse of Sealing</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Curse of Sealing</strong><i class="sk-type">Magical</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Huge Ghost magic AoE that can <b class="kw kw-slow">Slow</b> or <b class="kw kw-sleep">Sleep</b> enemies.</p>
             <p class="sk-body">The user calls on the spirits of the natural world to bind and suppress all enemies in the area around them, dealing massive Ghost Property Magical Damage. The damage of this skill is increased the closer the user's AP is to 100.</p>
             <p class="sk-body">If the user's AP is within 50 points of 100, it also inflicts the <b class="kw kw-slow">Slow</b> status.</p>
             <p class="sk-body">If the user's AP is within 10 points of 100, it also inflicts the <b class="kw kw-sleep">Sleep</b> status.</p>
             <p class="sk-body">Drains a large amount of AP when used.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-curse-of-doom">Curse of Doom</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>AP Drain</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>1650%</td><td>-5</td><td>110</td></tr><tr><td>2</td><td>1800%</td><td>-10</td><td>120</td></tr><tr><td>3</td><td>1950%</td><td>-15</td><td>130</td></tr><tr><td>4</td><td>2100%</td><td>-20</td><td>140</td></tr><tr><td>5</td><td>2250%</td><td>-25</td><td>150</td></tr><tr><td>6</td><td>2400%</td><td>-30</td><td>160</td></tr><tr><td>7</td><td>2550%</td><td>-35</td><td>170</td></tr><tr><td>8</td><td>2700%</td><td>-40</td><td>180</td></tr><tr><td>9</td><td>2850%</td><td>-45</td><td>190</td></tr><tr><td>10</td><td>3000%</td><td>-50</td><td>200</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -285,28 +297,34 @@
         <h3 class="branch-title">Physical Curse Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-physical" id="s-curse-of-destruction">
-            <div class="sk-top"><strong>Curse of Destruction</strong><i class="sk-type">Physical Ranged</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Curse of Destruction</strong><i class="sk-type">Physical Ranged</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Ghost physical strike that inflicts <b class="kw kw-vuln">Vulnerable</b>.</p>
             <p class="sk-body">The user calls on the spirits of the natural world to attack the target's physical body, dealing Ghost Property Physical Damage and attempting to inflict the <b class="kw kw-vuln">Vulnerable</b> Status. The damage of this skill is increased the closer the user's AP is to 100.</p>
             <p class="sk-body">If the user's AP is within 50 points of 100, it deals additional damage to <b class="kw kw-vuln">Vulnerable</b> enemies.</p>
             <p class="sk-body">If the user's AP is within 10 points of 100, it also grants the user a <b class="mech">Barrier</b> equal to a portion of the damage dealt.</p>
             <p class="sk-body">Drains a small amount of AP when used.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-ritual-of-invocation">Ritual of Invocation</a> Lv1, <a href="#s-ritual-of-binding">Ritual of Binding</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>AP Drain</th><th>Vulnerable Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>550%</td><td>-5</td><td>60%</td><td>32</td></tr><tr><td>2</td><td>600%</td><td>-10</td><td>70%</td><td>34</td></tr><tr><td>3</td><td>650%</td><td>-15</td><td>80%</td><td>36</td></tr><tr><td>4</td><td>700%</td><td>-20</td><td>90%</td><td>38</td></tr><tr><td>5</td><td>750%</td><td>-25</td><td>100%</td><td>40</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-curse-of-brilliance">
-            <div class="sk-top"><strong>Curse of Brilliance</strong><i class="sk-type">Physical Ranged</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Curse of Brilliance</strong><i class="sk-type">Physical Ranged</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Ghost physical strike that inflicts <b class="kw kw-blind">Blind</b>.</p>
             <p class="sk-body">The user calls on the spirits of the natural world to strike the targeted enemy with blindness, dealing Ghost Property Physical Damage and attempting to inflict the <b class="kw kw-blind">Blind</b> Status. The damage of this skill is increased the closer the user's AP is to 100.</p>
             <p class="sk-body">If the user's AP is within 50 points of 100, it also deals increased damage to <b class="kw kw-blind">Blind</b> enemies.</p>
             <p class="sk-body">If the user's AP is within 10 points of 100, it also grants the user a short Movement Speed bonus.</p>
             <p class="sk-body">Drains a small amount of AP when used.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-curse-of-destruction">Curse of Destruction</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>AP Drain</th><th>Blind Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>550%</td><td>-5</td><td>60%</td><td>32</td></tr><tr><td>2</td><td>600%</td><td>-10</td><td>70%</td><td>34</td></tr><tr><td>3</td><td>650%</td><td>-15</td><td>80%</td><td>36</td></tr><tr><td>4</td><td>700%</td><td>-20</td><td>90%</td><td>38</td></tr><tr><td>5</td><td>750%</td><td>-25</td><td>100%</td><td>40</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-curse-of-annihilation">
-            <div class="sk-top"><strong>Curse of Annihilation</strong><i class="sk-type">Physical Ranged</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Curse of Annihilation</strong><i class="sk-type">Physical Ranged</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Huge Ghost physical AoE that can <b class="kw kw-blind">Blind</b> or <b class="kw kw-stun">Stun</b> enemies.</p>
             <p class="sk-body">The user opens a gate to the spiritual world, unleashing a torrent of spirits to obliterate all enemies around them. Deals massive Ghost Property Physical Damage to all enemies in the area around the user. The damage is increased the closer the user's AP is to 100.</p>
             <p class="sk-body">If the user's AP is within 50 points of 100, it also inflicts the <b class="kw kw-blind">Blind</b> status.</p>
             <p class="sk-body">If the user's AP is within 10 points of 100, it also inflicts the <b class="kw kw-stun">Stun</b> status.</p>
             <p class="sk-body">Generates a large amount of AP when used.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-curse-of-brilliance">Curse of Brilliance</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>AP Gain</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>825%</td><td>+5</td><td>110</td></tr><tr><td>2</td><td>900%</td><td>+10</td><td>120</td></tr><tr><td>3</td><td>975%</td><td>+15</td><td>130</td></tr><tr><td>4</td><td>1050%</td><td>+20</td><td>140</td></tr><tr><td>5</td><td>1125%</td><td>+25</td><td>150</td></tr><tr><td>6</td><td>1200%</td><td>+30</td><td>160</td></tr><tr><td>7</td><td>1275%</td><td>+35</td><td>170</td></tr><tr><td>8</td><td>1350%</td><td>+40</td><td>180</td></tr><tr><td>9</td><td>1425%</td><td>+45</td><td>190</td></tr><tr><td>10</td><td>1500%</td><td>+50</td><td>200</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>

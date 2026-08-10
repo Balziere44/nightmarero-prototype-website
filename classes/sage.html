@@ -214,7 +214,7 @@
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types, targets and the numbers behind every level come from the player wiki, so they match what you see in game.</p>
       </div>
       <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-burn">Burning</span><span class="kw-frozen">Frozen</span><span class="kw-sleep">Sleep</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
       <div class="type-key"><span class="sk-magic" data-i18n="cls.t.magic">Magic</span><span class="sk-support" data-i18n="cls.t.support">Support</span><span class="sk-passive" data-i18n="cls.t.passive">Passive</span></div>
@@ -226,37 +226,50 @@
             <div class="sk-top"><strong>Elemental Mastery</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Improves damage caused by and resistance to Fire, Water, Wind, and Earth damage.</p>
             <p class="sk-body">Increases the damage dealt and reduces the damage received from attacks of the Fire, Water, Wind, and Earth properties.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Elemental Damage Bonus</th><th>Elemental Resistance Bonus</th></tr></thead><tbody><tr><td>1</td><td>1%</td><td>1%</td></tr><tr><td>2</td><td>2%</td><td>2%</td></tr><tr><td>3</td><td>3%</td><td>3%</td></tr><tr><td>4</td><td>4%</td><td>4%</td></tr><tr><td>5</td><td>5%</td><td>5%</td></tr><tr><td>6</td><td>6%</td><td>6%</td></tr><tr><td>7</td><td>7%</td><td>7%</td></tr><tr><td>8</td><td>8%</td><td>8%</td></tr><tr><td>9</td><td>9%</td><td>9%</td></tr><tr><td>10</td><td>10%</td><td>10%</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-tailwind">
-            <div class="sk-top"><strong>Tailwind</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Tailwind</strong><i class="sk-type">Supportive</i><i class="sk-target">Party</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Increases the party's movement speed and Flee.</p>
             <p class="sk-body">Calls an enchanted wind to follow the party, increasing all party members' Movement Speed and Flee for the duration.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-elemental-mastery">Elemental Mastery</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Movement Speed Bonus</th><th>Flee Bonus</th><th>Duration</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>0.5%</td><td>2</td><td>30s</td><td>135</td></tr><tr><td>2</td><td>1%</td><td>4</td><td>60s</td><td>145</td></tr><tr><td>3</td><td>1.5%</td><td>6</td><td>90s</td><td>155</td></tr><tr><td>4</td><td>2%</td><td>8</td><td>120s</td><td>165</td></tr><tr><td>5</td><td>2.5%</td><td>10</td><td>150s</td><td>175</td></tr><tr><td>6</td><td>3%</td><td>12</td><td>180s</td><td>185</td></tr><tr><td>7</td><td>3.5%</td><td>14</td><td>210s</td><td>195</td></tr><tr><td>8</td><td>4%</td><td>16</td><td>240s</td><td>205</td></tr><tr><td>9</td><td>4.5%</td><td>18</td><td>270s</td><td>215</td></tr><tr><td>10</td><td>5%</td><td>20</td><td>300s</td><td>225</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-magic" id="s-whirlwind">
-            <div class="sk-top"><strong>Whirlwind</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Whirlwind</strong><i class="sk-type">Magical</i><i class="sk-target">Ground</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Summons a violent, persistent gale that does Wind damage over time to an area.</p>
             <p class="sk-body">Summons a fierce gale at the targeted location, dealing Wind property damage over time to enemies within. The damage is increased if the caster is under the Tailwind status.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-tailwind">Tailwind</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-tailwind">Tailwind</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Duration</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>160%</td><td>11s</td><td>160</td></tr><tr><td>2</td><td>170%</td><td>12s</td><td>170</td></tr><tr><td>3</td><td>180%</td><td>13s</td><td>180</td></tr><tr><td>4</td><td>190%</td><td>14s</td><td>190</td></tr><tr><td>5</td><td>200%</td><td>15s</td><td>200</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-magic" id="s-chilling-frost">
-            <div class="sk-top"><strong>Chilling Frost</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Chilling Frost</strong><i class="sk-type">Magical</i><i class="sk-target">Ground</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Flash-freezes an area, Chilling or Freezing already chilled enemies.</p>
             <p class="sk-body">Creates a blast of cold air at the targeted location, dealing minor Water property damage and attempting to <b class="kw kw-frozen">Chill</b> all enemies in a wide area. Enemies that are already Chilled have a chance of being <b class="kw kw-frozen">Frozen</b>.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-elemental-mastery">Elemental Mastery</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Freeze Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>230%</td><td>3%</td><td>85</td></tr><tr><td>2</td><td>260%</td><td>6%</td><td>95</td></tr><tr><td>3</td><td>290%</td><td>9%</td><td>105</td></tr><tr><td>4</td><td>320%</td><td>12%</td><td>115</td></tr><tr><td>5</td><td>350%</td><td>15%</td><td>125</td></tr><tr><td>6</td><td>380%</td><td>18%</td><td>135</td></tr><tr><td>7</td><td>410%</td><td>21%</td><td>145</td></tr><tr><td>8</td><td>440%</td><td>24%</td><td>155</td></tr><tr><td>9</td><td>470%</td><td>27%</td><td>165</td></tr><tr><td>10</td><td>500%</td><td>30%</td><td>175</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-magic" id="s-deluge">
-            <div class="sk-top"><strong>Deluge</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Deluge</strong><i class="sk-type">Magical</i><i class="sk-target">Ground</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Summons a persistent torrent of water, that does Water damage over time to an area.</p>
             <p class="sk-body">Summons a raging torrent at the targeted location, dealing Water property damage over time to all enemies within. The damage is increased if the target is Chilled.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-chilling-frost">Chilling Frost</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Duration</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>160%</td><td>11s</td><td>160</td></tr><tr><td>2</td><td>170%</td><td>12s</td><td>170</td></tr><tr><td>3</td><td>180%</td><td>13s</td><td>180</td></tr><tr><td>4</td><td>190%</td><td>14s</td><td>190</td></tr><tr><td>5</td><td>200%</td><td>15s</td><td>200</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-magic" id="s-fire-wall">
-            <div class="sk-top"><strong>Fire Wall</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Fire Wall</strong><i class="sk-type">Magical</i><i class="sk-target">Ground</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Creates a wall of intense flame that prevents movement through it and inflicts Burn on contact.</p>
             <p class="sk-body">Creates a wall of fire that will inflict minor damage and knock back enemies trying to pass through it. Each hit has a chance of inflicting the <b class="kw kw-burn">Burning</b> status.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-elemental-mastery">Elemental Mastery</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Burn Chance</th><th>Cooldown</th></tr></thead><tbody><tr><td>1</td><td>10%</td><td>10%</td><td>28s</td></tr><tr><td>2</td><td>20%</td><td>20%</td><td>26s</td></tr><tr><td>3</td><td>30%</td><td>30%</td><td>24s</td></tr><tr><td>4</td><td>40%</td><td>40%</td><td>22s</td></tr><tr><td>5</td><td>50%</td><td>50%</td><td>20s</td></tr><tr><td>6</td><td>60%</td><td>60%</td><td>18s</td></tr><tr><td>7</td><td>70%</td><td>70%</td><td>16s</td></tr><tr><td>8</td><td>80%</td><td>80%</td><td>14s</td></tr><tr><td>9</td><td>90%</td><td>90%</td><td>12s</td></tr><tr><td>10</td><td>100%</td><td>100%</td><td>10s</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-magic" id="s-inferno">
-            <div class="sk-top"><strong>Inferno</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Inferno</strong><i class="sk-type">Magical</i><i class="sk-target">Ground</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Summons a raging inferno that does Fire damage over time to an area.</p>
             <p class="sk-body">Summons a blazing inferno at the targeted location, dealing Fire property damage over time to all enemies within. The damage is increased if the target is <b class="kw kw-burn">Burning</b>.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-fire-wall">Fire Wall</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Duration</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>160%</td><td>11s</td><td>160</td></tr><tr><td>2</td><td>170%</td><td>12s</td><td>170</td></tr><tr><td>3</td><td>180%</td><td>13s</td><td>180</td></tr><tr><td>4</td><td>190%</td><td>14s</td><td>190</td></tr><tr><td>5</td><td>200%</td><td>15s</td><td>200</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -264,29 +277,37 @@
         <h3 class="branch-title">Utility Skills<span>5 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-support" id="s-transposition-spell">
-            <div class="sk-top"><strong>Transposition Spell</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Transposition Spell</strong><i class="sk-type">Supportive</i><i class="sk-target">Ground</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Instantly teleports the user to a targeted cell in sight.</p>
             <p class="sk-body">Instantly teleports the user to the targeted location. The user must have an unobstructed line of sight to the target or the skill will fail.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Cooldown</th></tr></thead><tbody><tr><td>1</td><td>26s</td></tr><tr><td>2</td><td>22s</td></tr><tr><td>3</td><td>18s</td></tr><tr><td>4</td><td>14s</td></tr><tr><td>5</td><td>10s</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-spell-eater">
-            <div class="sk-top"><strong>Spell Eater</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Spell Eater</strong><i class="sk-type">Supportive</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Casts a counter-spell that consumes incoming magic.</p>
             <p class="sk-body">For two seconds, the user enters a defensive stance that will nullify all single-target magic aimed at them. If this skill successfully nullifies a spell, the user regenerates a small amount of SP, and the next spell they cast will be instant.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Cooldown</th></tr></thead><tbody><tr><td>1</td><td>26s</td></tr><tr><td>2</td><td>22s</td></tr><tr><td>3</td><td>18s</td></tr><tr><td>4</td><td>14s</td></tr><tr><td>5</td><td>10s</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-antimagic-field">
-            <div class="sk-top"><strong>Antimagic Field</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Antimagic Field</strong><i class="sk-type">Supportive</i><i class="sk-target">Ground</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Enchants the ground with a field that massively reduces incoming magical damage.</p>
             <p class="sk-body">Creates a null zone of magic, massively reducing the magic damage taken by all allies and enemies standing inside. Affected targets will also be immune to the <b class="kw kw-burn">Burning</b>, Chilled, and <b class="kw kw-sleep">Sleep</b> statuses.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-elemental-mastery">Elemental Mastery</a> Lv5, <a href="#s-spell-eater">Spell Eater</a> Lv1, <a href="#s-transposition-spell">Transposition Spell</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Area</th><th>Cooldown</th></tr></thead><tbody><tr><td>1</td><td>3x3</td><td>57s</td></tr><tr><td>2</td><td>3x3</td><td>54s</td></tr><tr><td>3</td><td>3x3</td><td>51s</td></tr><tr><td>4</td><td>5x5</td><td>48s</td></tr><tr><td>5</td><td>5x5</td><td>45s</td></tr><tr><td>6</td><td>5x5</td><td>42s</td></tr><tr><td>7</td><td>7x7</td><td>39s</td></tr><tr><td>8</td><td>7x7</td><td>36s</td></tr><tr><td>9</td><td>7x7</td><td>33s</td></tr><tr><td>10</td><td>9x9</td><td>30s</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-endow-weapon">
-            <div class="sk-top"><strong>Endow Weapon</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Endow Weapon</strong><i class="sk-type">Supportive</i><i class="sk-target">Ally</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Endows the target's weapon, changing the elemental property of their attacks and enhancing magic of that element.</p>
             <p class="sk-body">Endows the target's weapon with one of the natural elements, making all physical attacks take that element and increasing the damage of magic of the same. Requires a catalyst crafted at the Sage Castle in Juno to be used above level 1. At level 1, the spell gives a &quot;Neutral Endow,&quot; forcing the target's weapon to be Neutral property and blocking all other attempts at changing their weapon property for the duration.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-elemental-mastery">Elemental Mastery</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Element</th><th>Stat Scaling</th><th>Catalyst</th></tr></thead><tbody><tr><td>1</td><td>Neutral</td><td>Str</td><td>None</td></tr><tr><td>2</td><td>Earth</td><td>Dex</td><td>Green Live</td></tr><tr><td>3</td><td>Wind</td><td>Agi</td><td>Wind of Verdure</td></tr><tr><td>4</td><td>Water</td><td>Vit</td><td>Crystal Blue</td></tr><tr><td>5</td><td>Fire</td><td>Luk</td><td>Red Blood</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-magic" id="s-endow-armor">
-            <div class="sk-top"><strong>Endow Armor</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Endow Armor</strong><i class="sk-type">Magical</i><i class="sk-target">Ally</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Endows the target's armor with an element, increasing resistance to that element while reducing resistance to the opposite element.</p>
             <p class="sk-body">Endows the target's armor with one of the natural elements, reducing all damage they take from that element considerably, but also increasing the damage they take of its opposite. Requires a catalyst crafted at the Sage Castle in Juno to be used above level 1. At level 1, the spell gives a &quot;Neutral Endow,&quot; forcing the target's armor to be Neutral property and blocking all other attempts at changing their armor property for the duration.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-elemental-mastery">Elemental Mastery</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Effect</th><th>Catalyst</th></tr></thead><tbody><tr><td>1</td><td>Armor forced Neutral</td><td>None</td></tr><tr><td>2</td><td>Reduces Earth, increases Fire</td><td>Green Live</td></tr><tr><td>3</td><td>Reduces Wind, increases Earth</td><td>Wind of Verdure</td></tr><tr><td>4</td><td>Reduces Water, increases Wind</td><td>Crystal Blue</td></tr><tr><td>5</td><td>Reduces Fire, increases Water</td><td>Red Blood</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>

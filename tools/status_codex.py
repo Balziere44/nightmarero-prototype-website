@@ -31,8 +31,9 @@ STATUS = [
      "The same idea aimed at magic defence instead. It is how a caster gets "
      "through a high MDef enemy, and Breach Potency raises what it strips."),
     ("frozen", "Frozen", ["Frozen", "Freeze", "Chill", "Cold"],
-     "Cancels casting and locks the target until it takes damage. Chill slows "
-     "movement and attack speed, Cold is the follow up during the resist window."),
+     "Cancels casting and locks the target until it takes damage. Chill is "
+     "the milder one, taking a slice off movement, attack and cast speed at "
+     "once. Cold is the follow up during the resist window."),
     ("stun", "Stun", ["Stunned", "Stun", "Staggered", "Stagger"],
      "Cancels casting and stops the target acting. Monsters resist for 30 "
      "seconds afterwards and take Stagger instead."),

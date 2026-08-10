@@ -24,6 +24,17 @@ from skills import build as build_skills, load_wiki, mark_mechanics, type_family
 
 WIKI_SKILLS = load_wiki()
 
+# Everything the per skill wiki pages carry that the class tables do not:
+# what a skill targets, what it needs learnt first, and the numbers at every
+# level. Written by tools/fetch_wiki_skills.py. Missing file is not fatal,
+# the pages just build without the tables.
+try:
+    SKILL_PAGES = json.load(io.open(
+        os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                     "data", "wiki-skills.json"), encoding="utf-8"))
+except (IOError, ValueError):
+    SKILL_PAGES = {}
+
 # The eight colour families the wiki's seventy type labels fold into, in the
 # order they show up in the key under the status legend.
 TYPE_KEY = [
@@ -495,14 +506,59 @@ def skill_anchor(name):
     return "s-" + slugify(name)
 
 
+# What a skill points at. The wiki writes these a few ways for the same
+# thing, and anything not listed here is shown as it was typed.
+TARGETS = {
+    "caster": "Self",
+    "enemies": "Enemies",
+    "allies": "Allies",
+    "1 enemy": "Enemy",
+    "pbaoe": "Around you",
+    "enemies around the caster": "Around you",
+}
+
+
+def requirement(text, by_name, mechanics):
+    """The prerequisite line off the wiki, with the skill names linked.
+
+    Written as "Fauna Specialization Lv1" or two of those separated by a
+    comma. Only the names that are on this page become links; a first job
+    skill named as a requirement on a third job page is still worth reading
+    even though there is nothing to point at."""
+    out = esc(text)
+    for name in sorted(by_name, key=len, reverse=True):
+        if name in text:
+            out = out.replace(esc(name), '<a href="#%s">%s</a>'
+                              % (skill_anchor(name), esc(name)), 1)
+    return out
+
+
+def level_table(table, mechanics):
+    """The per level numbers, folded away until asked for."""
+    head = "".join("<th>%s</th>" % esc(h) for h in table["headers"])
+    body = "".join(
+        "<tr>%s</tr>" % "".join("<td>%s</td>" % rich(c, mechanics) for c in row)
+        for row in table["rows"])
+    return ('            <details class="sk-nums">'
+            '<summary><span data-i18n="cls.levelTable">Level by level</span>'
+            '</summary>'
+            '<div class="table-wrap"><table><thead><tr>%s</tr></thead>'
+            '<tbody>%s</tbody></table></div></details>' % (head, body))
+
+
 def skill_card(skill, mechanics, by_name):
     fam = type_family(skill["type"]) if skill["type"] else "other"
+    page = SKILL_PAGES.get(skill["name"], {})
     bits = ['          <li class="skill-card sk-%s" id="%s">'
             % (fam, skill_anchor(skill["name"]))]
 
     badges = ""
     if skill["type"]:
         badges += '<i class="sk-type">%s</i>' % esc(skill["type"])
+    target = page.get("target", "")
+    if target:
+        target = TARGETS.get(target.lower(), target)
+        badges += '<i class="sk-target">%s</i>' % esc(target)
     if skill["max"] and skill["max"] not in ("0", "1", "-"):
         badges += '<i class="sk-lv">Lv %s</i>' % esc(skill["max"])
     bits.append('            <div class="sk-top"><strong>%s</strong>%s</div>'
@@ -532,6 +588,14 @@ def skill_card(skill, mechanics, by_name):
         if links:
             bits.append('            <p class="sk-needs">'
                         '<span data-i18n="cls.needs">Works with</span>%s</p>' % links)
+
+    if page.get("requires") and page["requires"].lower() != "none":
+        bits.append('            <p class="sk-needs -req">'
+                    '<span data-i18n="cls.requires">Learn first</span>%s</p>'
+                    % requirement(page["requires"], by_name, mechanics))
+
+    if page.get("levels"):
+        bits.append(level_table(page["levels"], mechanics))
 
     bits.append("          </li>")
     return "\n".join(bits)
@@ -595,7 +659,7 @@ def skills_section(tree):
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types, targets and the numbers behind every level come from the player wiki, so they match what you see in game.</p>
       </div>
 {strip}{legend}{key}
 {blocks}

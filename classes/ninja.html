@@ -227,7 +227,7 @@
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types, targets and the numbers behind every level come from the player wiki, so they match what you see in game.</p>
       </div>
       <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Advanced Ninja Arts</span><span>Basic Ninja Arts</span><span>First Art</span><span>Second Art</span><span>Third Art</span></div>
       <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
@@ -240,17 +240,22 @@
             <div class="sk-top"><strong>Dagger Mastery</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Increases damage, double attack chance, and hit rate of daggers.</p>
             <p class="sk-body">Mastery. Increases the damage, Hit Rate, and Double Attack rate of Daggers.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage Bonus</th><th>Double Attack Chance</th><th>Hit Bonus</th></tr></thead><tbody><tr><td>1</td><td>3</td><td>5%</td><td>2</td></tr><tr><td>2</td><td>6</td><td>10%</td><td>4</td></tr><tr><td>3</td><td>9</td><td>15%</td><td>6</td></tr><tr><td>4</td><td>12</td><td>20%</td><td>8</td></tr><tr><td>5</td><td>15</td><td>25%</td><td>10</td></tr><tr><td>6</td><td>18</td><td>30%</td><td>12</td></tr><tr><td>7</td><td>21</td><td>35%</td><td>14</td></tr><tr><td>8</td><td>24</td><td>40%</td><td>16</td></tr><tr><td>9</td><td>27</td><td>45%</td><td>18</td></tr><tr><td>10</td><td>30</td><td>50%</td><td>20</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-flashing-steel">
-            <div class="sk-top"><strong>Flashing Steel</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Flashing Steel</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Damage that ignores Flee, scales with INT and DEX.</p>
             <p class="sk-body">Strikes the target with a blow faster than the eye can follow. Deals moderate physical damage that scales heavily with Dex and Int. This skill ignores Flee, and grants the <b class="mech">First Art</b> status on hit. If Second or <b class="mech">Third Art</b> are active, it gains an additional 30 Crit. If both, it is guaranteed to Crit, <b class="mech">Second Art</b> ends, and Echoing Shadow has its cooldown refreshed.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-echoing-shadow">Echoing Shadow</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-dagger-mastery">Dagger Mastery</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>130%</td><td>11</td></tr><tr><td>2</td><td>160%</td><td>12</td></tr><tr><td>3</td><td>190%</td><td>13</td></tr><tr><td>4</td><td>220%</td><td>14</td></tr><tr><td>5</td><td>250%</td><td>15</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-soaring-steel">
-            <div class="sk-top"><strong>Soaring Steel</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Soaring Steel</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Ranged dash attack, scaled with INT and DEX.</p>
             <p class="sk-body">Dashes through a distant target, dealing three successive blows that inflict physical damage that scales heavily with Dex and Int. Grants the <b class="mech">First Art</b> status on hit. If Second or <b class="mech">Third Art</b> are active, it gains an additional 30 Crit. If both, it is guaranteed to Crit, <b class="mech">Third Art</b> ends, and <b class="mech">Advanced Ninja Arts</b> have their cooldowns refreshed.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-dagger-mastery">Dagger Mastery</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>220%</td><td>16</td></tr><tr><td>2</td><td>240%</td><td>17</td></tr><tr><td>3</td><td>260%</td><td>18</td></tr><tr><td>4</td><td>280%</td><td>19</td></tr><tr><td>5</td><td>300%</td><td>20</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -263,15 +268,18 @@
             <p class="sk-body">Training in the art of throwing weapons, such as shurikens, kunai, and Huuma shurikens. Each point in this mastery increases the level of the Throwing skill unlocked by equipped throwing weapons.</p>
           </li>
           <li class="skill-card sk-physical" id="s-departing-shadow">
-            <div class="sk-top"><strong>Departing Shadow</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Departing Shadow</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Ranged attack that also backslides user, scales with STR and INT.</p>
             <p class="sk-body">Throws the equipped offhand weapon at a distant target, while the user immediately backslides to safety, granting the <b class="mech">Second Art</b> status.. Damage is based on the user's Dex, and scales heavily with Str and Int. If First or <b class="mech">Third Art</b> are active, this skill has a 50% chance to <b class="kw kw-slow">Slow</b> the target. If both, the chance is 100%, <b class="mech">First Art</b> ends, and Soaring Steel has its cooldown refreshed.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-soaring-steel">Soaring Steel</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-throwing-mastery">Throwing Mastery</a> Lv1</p>
           </li>
           <li class="skill-card sk-physical" id="s-echoing-shadow">
-            <div class="sk-top"><strong>Echoing Shadow</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Echoing Shadow</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Copies the skill of the current equipped subweapon, ignoring it's cooldown.</p>
             <p class="sk-body">Copies the Throwing skill of the currently equipped Throwing Weapon. The copied skill is cast at this skill's level, rather than the known level of the skill being copied, and ignores the original skill's cooldown.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-throwing-mastery">Throwing Mastery</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>12</td></tr><tr><td>2</td><td>14</td></tr><tr><td>3</td><td>16</td></tr><tr><td>4</td><td>18</td></tr><tr><td>5</td><td>20</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -284,6 +292,7 @@
             <p class="sk-body">Training in attuning oneself to the magical forces of the world. Reduces the SP cost of all skills, increases SP regen, and improves the effectiveness of SP potions.</p>
             <ul class="sk-riders"><li>Flaming Petals/Freezing Spear/Wind Blade/Stone Lance: The four <b class="mech">Basic Ninja Arts</b>. Deals a modest amount of magical damage of the appropriate element to a target. The amount of damage dealt is based on the learned level of Magical Attunement, rather than the level of the skill itself, and scales heavily with Str and Dex. Grants the <b class="mech">Third Art</b> status on hit. If First or <b class="mech">Second Art</b> are active, these skills have their Fixed Cast Time removed. If both, the entire cast time is removed, <b class="mech">First Art</b> ends, and Flashing Steel has its cooldown refreshed. All four <b class="mech">Basic Ninja Arts</b> share a cooldown.</li></ul>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-flashing-steel">Flashing Steel</a></p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>SP Regeneration</th><th>SP Item Effectiveness</th><th>SP Cost Reduction</th></tr></thead><tbody><tr><td>1</td><td>5.2% of Max SP</td><td>+10%</td><td>-1%</td></tr><tr><td>2</td><td>5.4% of Max SP</td><td>+20%</td><td>-2%</td></tr><tr><td>3</td><td>5.6% of Max SP</td><td>+30%</td><td>-3%</td></tr><tr><td>4</td><td>5.8% of Max SP</td><td>+40%</td><td>-4%</td></tr><tr><td>5</td><td>6.0% of Max SP</td><td>+50%</td><td>-5%</td></tr><tr><td>6</td><td>6.2% of Max SP</td><td>+60%</td><td>-6%</td></tr><tr><td>7</td><td>6.4% of Max SP</td><td>+70%</td><td>-7%</td></tr><tr><td>8</td><td>6.6% of Max SP</td><td>+80%</td><td>-8%</td></tr><tr><td>9</td><td>6.8% of Max SP</td><td>+90%</td><td>-9%</td></tr><tr><td>10</td><td>7.0% of Max SP</td><td>+100%</td><td>-10%</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -303,22 +312,25 @@
         <h3 class="branch-title">Subweapon Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-physical" id="s-throw-shuriken">
-            <div class="sk-top"><strong>Throw Shuriken</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Throw Shuriken</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Can hit multiple times if <b class="mech">First Art</b> and/or <b class="mech">Third Art</b> are active.</p>
             <p class="sk-body">Unlocked only by equipping a Shuriken in the offhand. Deals quick ranged damage to a target based on the user's Dex, scaling with Str and Int and granting the <b class="mech">Second Art</b> status. If First or <b class="mech">Third Art</b> are active, this skill repeats two more times after being cast. If both, it repeats two more times, for a total of five hits, <b class="mech">Third Art</b> ends, and <b class="mech">Basic Ninja Arts</b> have their cooldowns refreshed. This skill shares a cooldown with Throw Kunai and Throw Huuma Shuriken.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-throw-huuma-shuriken">Throw Huuma Shuriken</a><a href="#s-throw-kunai">Throw Kunai</a></p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>First/Third Art Damage</th><th>Both Arts Damage</th></tr></thead><tbody><tr><td>1</td><td>20%</td><td>60%</td><td>100%</td></tr><tr><td>2</td><td>40%</td><td>120%</td><td>200%</td></tr><tr><td>3</td><td>60%</td><td>180%</td><td>300%</td></tr><tr><td>4</td><td>80%</td><td>240%</td><td>400%</td></tr><tr><td>5</td><td>100%</td><td>300%</td><td>500%</td></tr><tr><td>6</td><td>120%</td><td>360%</td><td>600%</td></tr><tr><td>7</td><td>140%</td><td>420%</td><td>700%</td></tr><tr><td>8</td><td>160%</td><td>480%</td><td>800%</td></tr><tr><td>9</td><td>180%</td><td>540%</td><td>900%</td></tr><tr><td>10</td><td>200%</td><td>600%</td><td>1000%</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-throw-kunai">
-            <div class="sk-top"><strong>Throw Kunai</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Throw Kunai</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Applies statuses if <b class="mech">First Art</b> and/or <b class="mech">Third Art</b> are active.</p>
             <p class="sk-body">Unlocked only by equipping a Kunai in the offhand. Deals substantial ranged damage to a target based on the user's Dex, scaling heavily with Str and Int and granting the <b class="mech">Second Art</b> status. If First or <b class="mech">Third Art</b> are active, it has a 50% chance to inflict the status associated with the equipped Kunai. If both, the chance is 100%, <b class="mech">Third Art</b> ends, and <b class="mech">Basic Ninja Arts</b> have their cooldowns refreshed. This skill shares a cooldown with Throw Shuriken and Throw Huuma Shuriken.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-throw-huuma-shuriken">Throw Huuma Shuriken</a><a href="#s-throw-shuriken">Throw Shuriken</a></p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th></tr></thead><tbody><tr><td>1</td><td>50%</td></tr><tr><td>2</td><td>100%</td></tr><tr><td>3</td><td>150%</td></tr><tr><td>4</td><td>200%</td></tr><tr><td>5</td><td>250%</td></tr><tr><td>6</td><td>300%</td></tr><tr><td>7</td><td>350%</td></tr><tr><td>8</td><td>400%</td></tr><tr><td>9</td><td>450%</td></tr><tr><td>10</td><td>500%</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-throw-huuma-shuriken">
-            <div class="sk-top"><strong>Throw Huuma Shuriken</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Throw Huuma Shuriken</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Hits in AoE around the target if <b class="mech">First Art</b> and/or <b class="mech">Third Art</b> are active.</p>
             <p class="sk-body">Unlocked only by equipping a Huuma Shuriken in the offhand. Deals heavy ranged damage to a target based on the user's Dex, scaling heavily with Str and Int, and granting the <b class="mech">Second Art</b> status. If First or <b class="mech">Third Art</b> are active, it splashes in a 3x3 area. If both, it splashes in a 7x7 area, <b class="mech">Third Art</b> ends, and <b class="mech">Basic Ninja Arts</b> have their cooldowns refreshed. This skill shares a cooldown with Throw Shuriken and Throw Kunai.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-throw-shuriken">Throw Shuriken</a><a href="#s-throw-kunai">Throw Kunai</a></p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th></tr></thead><tbody><tr><td>1</td><td>60%</td></tr><tr><td>2</td><td>120%</td></tr><tr><td>3</td><td>180%</td></tr><tr><td>4</td><td>240%</td></tr><tr><td>5</td><td>300%</td></tr><tr><td>6</td><td>360%</td></tr><tr><td>7</td><td>420%</td></tr><tr><td>8</td><td>480%</td></tr><tr><td>9</td><td>540%</td></tr><tr><td>10</td><td>600%</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>

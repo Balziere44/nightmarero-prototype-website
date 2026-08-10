@@ -234,7 +234,7 @@
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types, targets and the numbers behind every level come from the player wiki, so they match what you see in game.</p>
       </div>
       <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Barrier</span></div>
       <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-blind">Blind</span><span class="kw-vuln">Vulnerable</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
@@ -244,19 +244,23 @@
         <h3 class="branch-title">Spear Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-physical" id="s-radiant-sweep">
-            <div class="sk-top"><strong>Radiant Sweep</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Radiant Sweep</strong><i class="sk-type">Physical</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">AoE sweep that inflicts <b class="kw kw-blind">Blind</b>.</p>
             <p class="sk-body">The user delivers a whirling slash with their spear, attempting to blind enemies struck with holy light. All enemies struck have a chance of receiving the <b class="kw kw-blind">Blind</b> Status. The damage of this skill is enhanced by the user's Dexterity, and deals additional damage to <b class="kw kw-bleed">Bleeding</b> targets.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Blind Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>325%</td><td>60%</td><td>23</td></tr><tr><td>2</td><td>350%</td><td>70%</td><td>26</td></tr><tr><td>3</td><td>375%</td><td>80%</td><td>29</td></tr><tr><td>4</td><td>400%</td><td>90%</td><td>32</td></tr><tr><td>5</td><td>425%</td><td>100%</td><td>35</td></tr><tr><td>6</td><td>450%</td><td>110%</td><td>38</td></tr><tr><td>7</td><td>475%</td><td>120%</td><td>41</td></tr><tr><td>8</td><td>500%</td><td>130%</td><td>44</td></tr><tr><td>9</td><td>525%</td><td>140%</td><td>47</td></tr><tr><td>10</td><td>550%</td><td>150%</td><td>50</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-impale">
-            <div class="sk-top"><strong>Impale</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Impale</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Ranged spear throw that inflicts <b class="kw kw-bleed">Bleeding</b> and pins <b class="kw kw-blind">Blind</b> targets.</p>
             <p class="sk-body">The user hurls a holy spear at a distant target, attempting to pin them in place. Deals Ranged Physical damage to a single target, attempting to inflict <b class="kw kw-bleed">Bleeding</b> and <b class="kw kw-slow">Slow</b>. If the target is <b class="kw kw-blind">Blind</b>, it also immobilizes the target for a short duration. The damage of this skill scales with the user's Dexterity and deals additional damage to <b class="kw kw-blind">Blinded</b> enemies.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Bleeding Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>325%</td><td>55%</td><td>22</td></tr><tr><td>2</td><td>350%</td><td>60%</td><td>24</td></tr><tr><td>3</td><td>375%</td><td>65%</td><td>26</td></tr><tr><td>4</td><td>400%</td><td>70%</td><td>28</td></tr><tr><td>5</td><td>425%</td><td>75%</td><td>30</td></tr><tr><td>6</td><td>450%</td><td>80%</td><td>32</td></tr><tr><td>7</td><td>475%</td><td>85%</td><td>34</td></tr><tr><td>8</td><td>500%</td><td>90%</td><td>36</td></tr><tr><td>9</td><td>525%</td><td>95%</td><td>38</td></tr><tr><td>10</td><td>550%</td><td>100%</td><td>40</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-cannon-spear">
-            <div class="sk-top"><strong>Cannon Spear</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Cannon Spear</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Line AoE amplified by <b class="kw kw-bleed">Bleeding</b>, <b class="kw kw-blind">Blind</b>, and <b class="kw kw-vuln">Vulnerable</b>.</p>
             <p class="sk-body">The user launches their spear like a cannon, driving it through all enemies before them. Does massive damage that is increased against <b class="kw kw-blind">Blind</b>, <b class="kw kw-bleed">Bleeding</b>, and <b class="kw kw-vuln">Vulnerable</b> enemies. Any enemy struck that has at least two of these statuses is additionally stunned. Scales with the user's Dexterity.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-radiant-sweep">Radiant Sweep</a> Lv5, <a href="#s-impale">Impale</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>550%</td><td>48</td></tr><tr><td>2</td><td>600%</td><td>51</td></tr><tr><td>3</td><td>650%</td><td>54</td></tr><tr><td>4</td><td>700%</td><td>57</td></tr><tr><td>5</td><td>750%</td><td>60</td></tr><tr><td>6</td><td>800%</td><td>63</td></tr><tr><td>7</td><td>850%</td><td>66</td></tr><tr><td>8</td><td>900%</td><td>69</td></tr><tr><td>9</td><td>950%</td><td>72</td></tr><tr><td>10</td><td>1000%</td><td>75</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -264,19 +268,23 @@
         <h3 class="branch-title">Shield Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-physical" id="s-shield-press">
-            <div class="sk-top"><strong>Shield Press</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Shield Press</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Shield slam that generates a protective <b class="mech">Barrier</b>.</p>
             <p class="sk-body">The user slams their shield into an enemy, dealing damage and generating a protective <b class="mech">Barrier</b> around themselves with HP based on the amount of damage dealt. The damage of this skill scales with the user's Vitality.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>325%</td><td>22</td></tr><tr><td>2</td><td>350%</td><td>24</td></tr><tr><td>3</td><td>375%</td><td>26</td></tr><tr><td>4</td><td>400%</td><td>28</td></tr><tr><td>5</td><td>425%</td><td>30</td></tr><tr><td>6</td><td>450%</td><td>32</td></tr><tr><td>7</td><td>475%</td><td>34</td></tr><tr><td>8</td><td>500%</td><td>36</td></tr><tr><td>9</td><td>525%</td><td>38</td></tr><tr><td>10</td><td>550%</td><td>40</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-shield-shooting">
-            <div class="sk-top"><strong>Shield Shooting</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Shield Shooting</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Ranged shield throw that generates a protective <b class="mech">Barrier</b>.</p>
             <p class="sk-body">The user hurls their shield at a distant target while taking a defensive stance to prepare for retaliation. Deals Ranged Physical damage to a single target, then creates a <b class="mech">Barrier</b> for the user with HP based on the damage dealt. The damage of this skill scales with the user's Vitality.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>325%</td><td>22</td></tr><tr><td>2</td><td>350%</td><td>24</td></tr><tr><td>3</td><td>375%</td><td>26</td></tr><tr><td>4</td><td>400%</td><td>28</td></tr><tr><td>5</td><td>425%</td><td>30</td></tr><tr><td>6</td><td>450%</td><td>32</td></tr><tr><td>7</td><td>475%</td><td>34</td></tr><tr><td>8</td><td>500%</td><td>36</td></tr><tr><td>9</td><td>525%</td><td>38</td></tr><tr><td>10</td><td>550%</td><td>40</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-burst-slash">
-            <div class="sk-top"><strong>Burst Slash</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Burst Slash</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Devastating blow amplified by an active <b class="mech">Barrier</b>.</p>
             <p class="sk-body">The user delivers a vengeful slash with their weapon, turning their defensive <b class="mech">Barrier</b> into offensive power. Deals massive damage to a single target which is increased if the target is <b class="kw kw-vuln">Vulnerable</b>. If the user has an active <b class="mech">Barrier</b>, it is consumed to deal additional damage. Additionally scales with the user's Vitality.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-shield-press">Shield Press</a> Lv5, <a href="#s-shield-shooting">Shield Shooting</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>550%</td><td>48</td></tr><tr><td>2</td><td>600%</td><td>51</td></tr><tr><td>3</td><td>650%</td><td>54</td></tr><tr><td>4</td><td>700%</td><td>57</td></tr><tr><td>5</td><td>750%</td><td>60</td></tr><tr><td>6</td><td>800%</td><td>63</td></tr><tr><td>7</td><td>850%</td><td>66</td></tr><tr><td>8</td><td>900%</td><td>69</td></tr><tr><td>9</td><td>950%</td><td>72</td></tr><tr><td>10</td><td>1000%</td><td>75</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -284,26 +292,32 @@
         <h3 class="branch-title">Utility Skills<span>4 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-support" id="s-guardian-angel">
-            <div class="sk-top"><strong>Guardian Angel</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Guardian Angel</strong><i class="sk-type">Supportive</i><i class="sk-target">Party</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Sacrifices HP to shield the whole party.</p>
             <p class="sk-body">The user expends their own life force to bestow a protective blessing on their party. Consumes half of the user's remaining HP to create a temporary <b class="mech">Barrier</b> that blocks damage for all party members. The amount of HP the <b class="mech">Barrier</b> has is based on the amount of HP consumed to activate this skill. When mastered, this skill also reduces the cooldown of Guardian Stance by 10 seconds.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-guardian-stance">Guardian Stance</a></p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Barrier Amount</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>40% of Consumed HP</td><td>30</td></tr><tr><td>2</td><td>80% of Consumed HP</td><td>35</td></tr><tr><td>3</td><td>120% of Consumed HP</td><td>40</td></tr><tr><td>4</td><td>160% of Consumed HP</td><td>45</td></tr><tr><td>5</td><td>200% of Consumed HP</td><td>50</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-stance" id="s-guardian-stance">
-            <div class="sk-top"><strong>Guardian Stance</strong><i class="sk-type">Stance</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Guardian Stance</strong><i class="sk-type">Stance</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Damage-reduction stance that heals missing HP when it ends.</p>
             <p class="sk-body">The user takes up a defensive stance, ready to block any damage they might receive. For a short duration, the user cannot cast any skills, but their ASPD Limit is increased and all damage they receive is reduced. When Guardian Stance ends, the user is healed for a portion of the damage they took while it was active.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-guardian-angel">Guardian Angel</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage Reduction</th><th>ASPD Limit Bonus</th><th>Heal on End</th></tr></thead><tbody><tr><td>1</td><td>10%</td><td>1</td><td>10% of Missing HP</td></tr><tr><td>2</td><td>20%</td><td>2</td><td>20% of Missing HP</td></tr><tr><td>3</td><td>30%</td><td>3</td><td>30% of Missing HP</td></tr><tr><td>4</td><td>40%</td><td>4</td><td>40% of Missing HP</td></tr><tr><td>5</td><td>50%</td><td>5</td><td>50% of Missing HP</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-assault-break">
-            <div class="sk-top"><strong>Assault Break</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Assault Break</strong><i class="sk-type">Supportive</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Autoattacks gain a chance to deal double damage.</p>
             <p class="sk-body">The user infuses their weapon with divine power, giving all of their autoattacks a chance to inflict double damage for the duration. When mastered, this skill reduces the cooldown of Assault Stance by 10 seconds.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-assault-stance">Assault Stance</a></p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Trigger Chance</th><th>Duration</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>46%</td><td>9s</td><td>30</td></tr><tr><td>2</td><td>52%</td><td>13s</td><td>35</td></tr><tr><td>3</td><td>58%</td><td>17s</td><td>40</td></tr><tr><td>4</td><td>64%</td><td>21s</td><td>45</td></tr><tr><td>5</td><td>70%</td><td>25s</td><td>50</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-assault-stance">
-            <div class="sk-top"><strong>Assault Stance</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Assault Stance</strong><i class="sk-type">Supportive</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">ASPD stance that ends in a burst based on damage dealt.</p>
             <p class="sk-body">The user takes up an offensive stance, focused on dealing exceptional damage at the cost of all else. For a short duration, the user cannot cast any skills, but their ASPD Limit and Crit Rate are significantly boosted. When Assault Stance ends, it triggers a burst attack that strikes all enemies around them for an amount of damage based on the damage they dealt while in Assault Stance.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-assault-break">Assault Break</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Burst Damage</th><th>Crit Bonus</th><th>ASPD Limit Bonus</th></tr></thead><tbody><tr><td>1</td><td>10% of Damage Dealt</td><td>4</td><td>1</td></tr><tr><td>2</td><td>20% of Damage Dealt</td><td>8</td><td>2</td></tr><tr><td>3</td><td>30% of Damage Dealt</td><td>12</td><td>3</td></tr><tr><td>4</td><td>40% of Damage Dealt</td><td>16</td><td>4</td></tr><tr><td>5</td><td>50% of Damage Dealt</td><td>20</td><td>5</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>

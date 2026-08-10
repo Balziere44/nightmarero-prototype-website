@@ -248,7 +248,7 @@
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types, targets and the numbers behind every level come from the player wiki, so they match what you see in game.</p>
       </div>
       <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Barrier</span><span>Extort Stacks</span></div>
       <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-burn">Burning</span><span class="kw-blind">Blind</span><span class="kw-vuln">Vulnerable</span><span class="kw-stun">Stun</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
@@ -261,30 +261,39 @@
             <div class="sk-top"><strong>Madogear Construction</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Boosts Madogear skills and waives their Extort costs while suited.</p>
             <p class="sk-body">Skill in the construction of Madogear, a mechanical suit of power armor that enhances the user's abilities. Each level increases the effectiveness of Madogear skills and reduces the amount of damage taken from the <b class="kw kw-burn">Burning</b> status. These bonuses only apply while the Madogear is equipped. While it is equipped, the Extort Cost of all Madogear skills is removed.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Burning Reduction</th><th>Madogear Damage Increase</th></tr></thead><tbody><tr><td>1</td><td>3%</td><td>3%</td></tr><tr><td>2</td><td>6%</td><td>6%</td></tr><tr><td>3</td><td>9%</td><td>9%</td></tr><tr><td>4</td><td>12%</td><td>12%</td></tr><tr><td>5</td><td>15%</td><td>15%</td></tr><tr><td>6</td><td>18%</td><td>18%</td></tr><tr><td>7</td><td>21%</td><td>21%</td></tr><tr><td>8</td><td>24%</td><td>24%</td></tr><tr><td>9</td><td>27%</td><td>27%</td></tr><tr><td>10</td><td>30%</td><td>30%</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-summon" id="s-machine-slam">
-            <div class="sk-top"><strong>Machine Slam</strong><i class="sk-type">Madogear</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Machine Slam</strong><i class="sk-type">Madogear</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Massive AoE crush.</p>
             <p class="sk-body">The user leverages the immense strength of the Madogear to crush the targeted enemy, dealing massive damage in an area around them. The damage of this skill scales with the user's Vitality. During Overdrive, this skill has a reduced Cooldown and additionally inflicts <b class="kw kw-stun">Stun</b>.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-overdrive">Overdrive</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-madogear-construction">Madogear Construction</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>430%</td><td>27</td></tr><tr><td>2</td><td>460%</td><td>29</td></tr><tr><td>3</td><td>490%</td><td>31</td></tr><tr><td>4</td><td>520%</td><td>33</td></tr><tr><td>5</td><td>550%</td><td>35</td></tr><tr><td>6</td><td>580%</td><td>37</td></tr><tr><td>7</td><td>610%</td><td>39</td></tr><tr><td>8</td><td>640%</td><td>41</td></tr><tr><td>9</td><td>670%</td><td>43</td></tr><tr><td>10</td><td>700%</td><td>45</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-summon" id="s-arm-cannon">
-            <div class="sk-top"><strong>Arm Cannon</strong><i class="sk-type">Madogear</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Arm Cannon</strong><i class="sk-type">Madogear</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Ranged cannon blast, strongest against <b class="kw kw-stun">Stunned</b> targets.</p>
             <p class="sk-body">The user fires a barrage from the Madogear's cannon, dealing repeated hits to a single target. Deals additional damage to targets that are <b class="kw kw-stun">Stunned</b> or <b class="kw kw-stun">Staggered</b>, and inflicts the <b class="kw kw-stun">Staggered</b> status. The damage of this skill scales with the user's Vitality. During Overdrive, this skill has a reduced Cooldown and additionally inflicts <b class="kw kw-vuln">Vulnerable</b> and <b class="kw kw-burn">Severe Burning</b>.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-overdrive">Overdrive</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-madogear-construction">Madogear Construction</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>320%</td><td>27</td></tr><tr><td>2</td><td>340%</td><td>29</td></tr><tr><td>3</td><td>360%</td><td>31</td></tr><tr><td>4</td><td>380%</td><td>33</td></tr><tr><td>5</td><td>400%</td><td>35</td></tr><tr><td>6</td><td>420%</td><td>37</td></tr><tr><td>7</td><td>440%</td><td>39</td></tr><tr><td>8</td><td>460%</td><td>41</td></tr><tr><td>9</td><td>480%</td><td>43</td></tr><tr><td>10</td><td>500%</td><td>45</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-summon" id="s-active-shielding">
-            <div class="sk-top"><strong>Active Shielding</strong><i class="sk-type">Madogear</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Active Shielding</strong><i class="sk-type">Madogear</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Extort-fueled defensive <b class="mech">Barrier</b>.</p>
             <p class="sk-body">The user activates the defensive shielding of the Madogear, creating a protective <b class="mech">Barrier</b> that blocks all damage received for a short duration. The <b class="mech">Barrier</b>'s HP is based on the Madogear Construction level of the user and the current amount of <b class="mech">Extort Stacks</b> they have. If a Madogear is currently equipped, the Extort stacks are counted, but they are not consumed. During Overdrive, this skill always treats the user as having five <b class="mech">Extort Stacks</b>.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-madogear-construction">Madogear Construction</a><a href="#s-overdrive">Overdrive</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-madogear-construction">Madogear Construction</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Base Barrier HP (per Extort Stack)</th></tr></thead><tbody><tr><td>1</td><td>100</td></tr><tr><td>2</td><td>200</td></tr><tr><td>3</td><td>300</td></tr><tr><td>4</td><td>400</td></tr><tr><td>5</td><td>500</td></tr><tr><td>6</td><td>600</td></tr><tr><td>7</td><td>700</td></tr><tr><td>8</td><td>800</td></tr><tr><td>9</td><td>900</td></tr><tr><td>10</td><td>1000</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-summon" id="s-overdrive">
-            <div class="sk-top"><strong>Overdrive</strong><i class="sk-type">Madogear</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Overdrive</strong><i class="sk-type">Madogear</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Refreshes and empowers Madogear skills at the cost of self-<b class="kw kw-burn">Burning</b>.</p>
             <p class="sk-body">The user forces the Madogear into overdrive, increasing its performance but causing it to overheat to a dangerous degree. Instantly refreshes the cooldowns of all Madogear Skills when activated, then gives them bonus effects for a short duration, but continuously inflicts <b class="kw kw-burn">Burning</b> Damage on the user until its duration expires.</p>
             <ul class="sk-options"><li><b>Support Unit Construction</b>Skill in the construction and deployment of support drones. Each level increases the base stats of constructed drones and enhances the effects of supporting Protocol skills. While a Madogear is NOT equipped, the Extort Cost of all Drone skills is removed. Support Drones inherit their summoner's Hit Rate and half of their Crit Rate, and are not targeted for attacks by monsters.</li></ul>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-machine-slam">Machine Slam</a> Lv3, <a href="#s-arm-cannon">Arm Cannon</a> Lv3, <a href="#s-active-shielding">Active Shielding</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Duration</th><th>Burning Damage Taken (per second)</th></tr></thead><tbody><tr><td>1</td><td>6s</td><td>100</td></tr><tr><td>2</td><td>7s</td><td>200</td></tr><tr><td>3</td><td>8s</td><td>300</td></tr><tr><td>4</td><td>9s</td><td>400</td></tr><tr><td>5</td><td>10s</td><td>500</td></tr><tr><td>6</td><td>11s</td><td>600</td></tr><tr><td>7</td><td>12s</td><td>700</td></tr><tr><td>8</td><td>13s</td><td>800</td></tr><tr><td>9</td><td>14s</td><td>900</td></tr><tr><td>10</td><td>15s</td><td>1000</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -292,24 +301,32 @@
         <h3 class="branch-title">Drone Skills<span>4 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-summon" id="s-deploy-combat-drone">
-            <div class="sk-top"><strong>Deploy Combat Drone</strong><i class="sk-type">Drone</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Deploy Combat Drone</strong><i class="sk-type">Drone</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Melee drone that inflicts <b class="kw kw-burn">Severe Burning</b>; grants ASPD.</p>
             <p class="sk-body">Deploys a mobile combat drone to fight alongside the user. Its stats are influenced by the user's Base Level and stats, and the user's level of Support Unit Construction. Combat Drones are melee combatants that regularly inflict the <b class="kw kw-burn">Severe Burning</b> status. While a Combat Drone is active, its master gains a bonus to their ASPD Limit.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span>Drone Construction Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>ASPD Limit Bonus</th><th>Cooldown</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>0.2</td><td>57s</td><td>32</td></tr><tr><td>2</td><td>0.4</td><td>54s</td><td>34</td></tr><tr><td>3</td><td>0.6</td><td>51s</td><td>36</td></tr><tr><td>4</td><td>0.8</td><td>48s</td><td>38</td></tr><tr><td>5</td><td>1</td><td>45s</td><td>40</td></tr><tr><td>6</td><td>1.2</td><td>42s</td><td>42</td></tr><tr><td>7</td><td>1.4</td><td>39s</td><td>44</td></tr><tr><td>8</td><td>1.6</td><td>36s</td><td>46</td></tr><tr><td>9</td><td>1.8</td><td>33s</td><td>48</td></tr><tr><td>10</td><td>2</td><td>30s</td><td>50</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-summon" id="s-deploy-support-drone">
-            <div class="sk-top"><strong>Deploy Support Drone</strong><i class="sk-type">Drone</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Deploy Support Drone</strong><i class="sk-type">Drone</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Ranged drone that inflicts <b class="kw kw-blind">Blind</b>; grants Defense Pierce.</p>
             <p class="sk-body">Deploys a mobile support drone to fight alongside the user. Its stats are influenced by the user's Base Level and stats, and the user's level of Support Unit Construction. Support Drones are ranged combatants that regularly inflict the <b class="kw kw-blind">Blind</b> status on enemies they attack. While a Support Drone is active, its master gains a bonus to their Defense Pierce.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span>Drone Construction Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Defense Pierce Bonus</th><th>Cooldown</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>3%</td><td>57s</td><td>32</td></tr><tr><td>2</td><td>6%</td><td>54s</td><td>34</td></tr><tr><td>3</td><td>9%</td><td>51s</td><td>36</td></tr><tr><td>4</td><td>12%</td><td>48s</td><td>38</td></tr><tr><td>5</td><td>15%</td><td>45s</td><td>40</td></tr><tr><td>6</td><td>18%</td><td>42s</td><td>42</td></tr><tr><td>7</td><td>21%</td><td>39s</td><td>44</td></tr><tr><td>8</td><td>24%</td><td>36s</td><td>46</td></tr><tr><td>9</td><td>27%</td><td>33s</td><td>48</td></tr><tr><td>10</td><td>30%</td><td>30s</td><td>50</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-summon" id="s-attack-protocol">
-            <div class="sk-top"><strong>Attack Protocol</strong><i class="sk-type">Drone</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Attack Protocol</strong><i class="sk-type">Drone</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Sends drones berserk and buffs allies' offense.</p>
             <p class="sk-body">Issues an offensive command to all currently active drones, causing them to enter a berserk state where they gain new skills. At the same time, all allies in the area of the user have their Attack increased.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-deploy-combat-drone">Deploy Combat Drone</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Attack Bonus</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>1%</td><td>22</td></tr><tr><td>2</td><td>2%</td><td>24</td></tr><tr><td>3</td><td>3%</td><td>26</td></tr><tr><td>4</td><td>4%</td><td>28</td></tr><tr><td>5</td><td>5%</td><td>30</td></tr><tr><td>6</td><td>6%</td><td>32</td></tr><tr><td>7</td><td>7%</td><td>34</td></tr><tr><td>8</td><td>8%</td><td>36</td></tr><tr><td>9</td><td>9%</td><td>38</td></tr><tr><td>10</td><td>10%</td><td>40</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-summon" id="s-defense-protocol">
-            <div class="sk-top"><strong>Defense Protocol</strong><i class="sk-type">Drone</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Defense Protocol</strong><i class="sk-type">Drone</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Puts drones on defense and shields allies.</p>
             <p class="sk-body">Issues a defensive command to all currently active drones, causing them to enter a protective state where they gain new skills. At the same time, all allies in the area of the user receive a small <b class="mech">Barrier</b>.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-deploy-support-drone">Deploy Support Drone</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Barrier HP</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>200</td><td>22</td></tr><tr><td>2</td><td>400</td><td>24</td></tr><tr><td>3</td><td>600</td><td>26</td></tr><tr><td>4</td><td>800</td><td>28</td></tr><tr><td>5</td><td>1000</td><td>30</td></tr><tr><td>6</td><td>1200</td><td>32</td></tr><tr><td>7</td><td>1400</td><td>34</td></tr><tr><td>8</td><td>1600</td><td>36</td></tr><tr><td>9</td><td>1800</td><td>38</td></tr><tr><td>10</td><td>2000</td><td>40</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>

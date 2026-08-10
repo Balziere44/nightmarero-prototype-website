@@ -141,6 +141,18 @@ def parse_gear(path, source, kind_of_sheet):
     return items
 
 
+# Five of the 583 card rows are typed differently from the rest. Corrected
+# here rather than in the CSV, because the CSV is refetched and would bring
+# them back. The wiki's own card page spells all five the short way.
+CARD_NAME_FIX = {
+    "Geographer Card": "Geographer",
+    "Ignis Fang Card": "Ignis Fang",
+    "Santer Kloss Card": "Santer Kloss",
+    "Yellow Pitaya Card": "Yellow Pitaya",
+    "Violet PItaya": "Violet Pitaya",
+}
+
+
 def parse_cards(path, slot):
     items = []
     for row in read(path):
@@ -151,6 +163,7 @@ def parse_cards(path, slot):
             continue
         cells = (row + [""] * 4)[:4]
         name = clean(cells[0])
+        name = CARD_NAME_FIX.get(name, name)
         if not name:
             continue
         items.append({

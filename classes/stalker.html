@@ -213,7 +213,7 @@
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types, targets and the numbers behind every level come from the player wiki, so they match what you see in game.</p>
       </div>
       <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-poison">Poison</span><span class="kw-blind">Blind</span><span class="kw-vuln">Vulnerable</span><span class="kw-stun">Stun</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
       <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-support" data-i18n="cls.t.support">Support</span></div>
@@ -222,16 +222,18 @@
         <h3 class="branch-title">Utility Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-support" id="s-stalker-s-instinct">
-            <div class="sk-top"><strong>Stalker's Instinct</strong><i class="sk-type">Buff</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Stalker's Instinct</strong><i class="sk-type">Buff</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Halves all skill cooldowns; ends early if the user takes skill damage.</p>
             <p class="sk-body">The user hones their instincts for dirty fighting, taking every battlefield advantage they can and leaving their opponents no opportunity to fight back. For a short duration, the cooldowns of all other skills are massively reduced. If the user takes damage from any skill, the status ends early. This effect DOES stack with other Rogue Instincts.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Duration</th></tr></thead><tbody><tr><td>1</td><td>3s</td></tr><tr><td>2</td><td>6s</td></tr><tr><td>3</td><td>9s</td></tr><tr><td>4</td><td>12s</td></tr><tr><td>5</td><td>15s</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-lightning-reflexes">
-            <div class="sk-top"><strong>Lightning Reflexes</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Lightning Reflexes</strong><i class="sk-type">Supportive</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Blocks a Physical skill with level-based rewards.</p>
             <p class="sk-body">The user responds instantly to an incoming attack, preventing the damage and taking advantage of the enemy's now misdirected momentum. Blocks a single Physical Skill against the user. If a skill is successfully blocked, the user gains a different benefit based on which level of this skill was cast.</p>
             <ul class="sk-options"><li><b>Level 1</b>Increased Movement Speed for a short time.</li><li><b>Level 2</b>Inflicts <b class="kw kw-blind">Blind</b> on the enemy. Deft Stab and Ricochet Knife are refreshed.</li><li><b>Level 3</b>Inflicts <b class="kw kw-vuln">Vulnerable</b> on the enemy. Blindside and Scorpion Lash are refreshed.</li><li><b>Level 4</b>The user enters Cloaking. Breakout and Firecracker are refreshed.</li><li><b>Level 5</b>The Cooldown of Stalker's Instinct is reduced by 10 seconds.</li></ul>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-stalker-s-instinct">Stalker's Instinct</a><a href="#s-ricochet-knife">Ricochet Knife</a><a href="#s-scorpion-lash">Scorpion Lash</a></p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Effect on Block</th></tr></thead><tbody><tr><td>1</td><td>Increased Movement Speed for 5 seconds</td></tr><tr><td>2</td><td>Inflicts <b class="kw kw-blind">Blind</b>; refreshes Deft Stab and Ricochet Knife</td></tr><tr><td>3</td><td>Inflicts <b class="kw kw-vuln">Vulnerable</b>; refreshes Blindside and Scorpion Lash</td></tr><tr><td>4</td><td>User enters Cloaking; refreshes Breakout and Fire Cracker</td></tr><tr><td>5</td><td>Stalker's Instinct cooldown reduced by 10 seconds</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -239,24 +241,29 @@
         <h3 class="branch-title">Predatory Skills<span>4 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-physical" id="s-deft-stab">
-            <div class="sk-top"><strong>Deft Stab</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Deft Stab</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Cycles <b class="kw kw-blind">Blind</b>, <b class="kw kw-vuln">Vulnerable</b>, and <b class="kw kw-bleed">Bleeding</b>.</p>
             <p class="sk-body">The user delivers a quick, distracting jab to the enemy. If the target is already <b class="kw kw-blind">Blind</b>, inflicts <b class="kw kw-vuln">Vulnerable</b>. If the target is already <b class="kw kw-vuln">Vulnerable</b>, inflicts <b class="kw kw-bleed">Bleeding</b>. If the target is already <b class="kw kw-bleed">Bleeding</b>, inflicts <b class="kw kw-blind">Blind</b>.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Status Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>230%</td><td>55%</td><td>16</td></tr><tr><td>2</td><td>260%</td><td>60%</td><td>17</td></tr><tr><td>3</td><td>290%</td><td>65%</td><td>18</td></tr><tr><td>4</td><td>320%</td><td>70%</td><td>19</td></tr><tr><td>5</td><td>350%</td><td>75%</td><td>20</td></tr><tr><td>6</td><td>380%</td><td>80%</td><td>21</td></tr><tr><td>7</td><td>410%</td><td>85%</td><td>22</td></tr><tr><td>8</td><td>440%</td><td>90%</td><td>23</td></tr><tr><td>9</td><td>470%</td><td>95%</td><td>24</td></tr><tr><td>10</td><td>500%</td><td>100%</td><td>25</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-blindside">
-            <div class="sk-top"><strong>Blindside</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Blindside</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Gap-closing surprise attack that inflicts <b class="kw kw-blind">Blind</b>.</p>
             <p class="sk-body">The user dashes to a distant target, hitting them with a surprise attack that has a chance to leave the target <b class="kw kw-blind">Blind</b>.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Blind Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>230%</td><td>55%</td><td>21</td></tr><tr><td>2</td><td>260%</td><td>60%</td><td>22</td></tr><tr><td>3</td><td>290%</td><td>65%</td><td>23</td></tr><tr><td>4</td><td>320%</td><td>70%</td><td>24</td></tr><tr><td>5</td><td>350%</td><td>75%</td><td>25</td></tr><tr><td>6</td><td>380%</td><td>80%</td><td>26</td></tr><tr><td>7</td><td>410%</td><td>85%</td><td>27</td></tr><tr><td>8</td><td>440%</td><td>90%</td><td>28</td></tr><tr><td>9</td><td>470%</td><td>95%</td><td>29</td></tr><tr><td>10</td><td>500%</td><td>100%</td><td>30</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-breakout">
-            <div class="sk-top"><strong>Breakout</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Breakout</strong><i class="sk-type">Physical</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">AoE from Hiding that briefly enables free Ambush casts.</p>
             <p class="sk-body">The user jumps out from hiding, striking all enemies around them. For two seconds after this skill is cast, the user can cast Ambush as if they were in Hiding. Requires the Hiding or Cloaking status.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>435%</td><td>27</td></tr><tr><td>2</td><td>470%</td><td>29</td></tr><tr><td>3</td><td>505%</td><td>31</td></tr><tr><td>4</td><td>540%</td><td>33</td></tr><tr><td>5</td><td>575%</td><td>35</td></tr><tr><td>6</td><td>610%</td><td>37</td></tr><tr><td>7</td><td>645%</td><td>39</td></tr><tr><td>8</td><td>680%</td><td>41</td></tr><tr><td>9</td><td>715%</td><td>43</td></tr><tr><td>10</td><td>750%</td><td>45</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-fate-sealer">
-            <div class="sk-top"><strong>Fate Sealer</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Fate Sealer</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Ultimate: debuffs healthy targets, executes weakened ones.</p>
             <p class="sk-body">The user delivers a whirling strike to the target, dealing massive damage that has additional properties based on the target's HP. If the target is above half health, the skill inflicts <b class="kw kw-blind">Blind</b> and <b class="kw kw-vuln">Vulnerable</b> and has its cooldown reduced. If they are below half HP, it deals double damage instead.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-deft-stab">Deft Stab</a> Lv5, <a href="#s-blindside">Blindside</a> Lv5, <a href="#s-breakout">Breakout</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>550%</td><td>33</td></tr><tr><td>2</td><td>600%</td><td>36</td></tr><tr><td>3</td><td>650%</td><td>39</td></tr><tr><td>4</td><td>700%</td><td>42</td></tr><tr><td>5</td><td>750%</td><td>45</td></tr><tr><td>6</td><td>800%</td><td>48</td></tr><tr><td>7</td><td>850%</td><td>51</td></tr><tr><td>8</td><td>900%</td><td>54</td></tr><tr><td>9</td><td>950%</td><td>57</td></tr><tr><td>10</td><td>1000%</td><td>60</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -264,24 +271,29 @@
         <h3 class="branch-title">Malicious Skills<span>4 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-physical" id="s-ricochet-knife">
-            <div class="sk-top"><strong>Ricochet Knife</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Ricochet Knife</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Bouncing knife that always inflicts <b class="kw kw-bleed">Bleeding</b>.</p>
             <p class="sk-body">The user hurls a throwing knife at the target, which then ricochets between them and all enemies in the area around them. All enemies struck are inflicted with the <b class="kw kw-bleed">Bleeding</b> Status. For each <b class="kw kw-burn">Burning</b> target struck, the Cooldown of this skill is reduced by 1 second. The damage of this skill is treated as <b class="kw kw-bleed">Bleeding</b> Damage.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>230%</td><td>27</td></tr><tr><td>2</td><td>260%</td><td>29</td></tr><tr><td>3</td><td>290%</td><td>31</td></tr><tr><td>4</td><td>320%</td><td>33</td></tr><tr><td>5</td><td>350%</td><td>35</td></tr><tr><td>6</td><td>380%</td><td>37</td></tr><tr><td>7</td><td>410%</td><td>39</td></tr><tr><td>8</td><td>440%</td><td>41</td></tr><tr><td>9</td><td>470%</td><td>43</td></tr><tr><td>10</td><td>500%</td><td>45</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-scorpion-lash">
-            <div class="sk-top"><strong>Scorpion Lash</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Scorpion Lash</strong><i class="sk-type">Physical</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">AoE lash that always inflicts <b class="kw kw-poison">Poison</b>.</p>
             <p class="sk-body">The user lashes out around them with a venom-tipped knife, damaging and inflicting the <b class="kw kw-poison">Poison</b> Status on all enemies in an area around them. For each <b class="kw kw-bleed">Bleeding</b> target struck, the Cooldown of this skill is reduced by 1 second. The damage of this skill is treated as <b class="kw kw-poison">Poison</b> Status damage.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>230%</td><td>27</td></tr><tr><td>2</td><td>260%</td><td>29</td></tr><tr><td>3</td><td>290%</td><td>31</td></tr><tr><td>4</td><td>320%</td><td>33</td></tr><tr><td>5</td><td>350%</td><td>35</td></tr><tr><td>6</td><td>380%</td><td>37</td></tr><tr><td>7</td><td>410%</td><td>39</td></tr><tr><td>8</td><td>440%</td><td>41</td></tr><tr><td>9</td><td>470%</td><td>43</td></tr><tr><td>10</td><td>500%</td><td>45</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-fire-cracker">
-            <div class="sk-top"><strong>Fire Cracker</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Fire Cracker</strong><i class="sk-type">Physical</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">AoE blast that always inflicts <b class="kw kw-burn">Burning</b>.</p>
             <p class="sk-body">The user throws a handful of gunpowder into the air around them, which ignites and explodes after a short delay. All enemies around the user take Fire Property Physical damage and receive the <b class="kw kw-burn">Burning</b> Status. For each target struck that is suffering from <b class="kw kw-poison">Poison</b>, the cooldown of this skill is reduced by 1 second. The damage of this skill is treated as <b class="kw kw-burn">Burning</b> Damage.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>230%</td><td>27</td></tr><tr><td>2</td><td>260%</td><td>29</td></tr><tr><td>3</td><td>290%</td><td>31</td></tr><tr><td>4</td><td>320%</td><td>33</td></tr><tr><td>5</td><td>350%</td><td>35</td></tr><tr><td>6</td><td>380%</td><td>37</td></tr><tr><td>7</td><td>410%</td><td>39</td></tr><tr><td>8</td><td>440%</td><td>41</td></tr><tr><td>9</td><td>470%</td><td>43</td></tr><tr><td>10</td><td>500%</td><td>45</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-annihilate">
-            <div class="sk-top"><strong>Annihilate</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Annihilate</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Ultimate: amplified by each damaging status on the target.</p>
             <p class="sk-body">Delivers a savage blow to a single enemy, dealing exceptional damage. If the target is suffering from <b class="kw kw-bleed">Bleeding</b>, <b class="kw kw-burn">Burning</b>, or <b class="kw kw-poison">Poison</b>, consumes those statuses to inflict additional damage and reduce this skill's Cooldown. If all three statuses are consumed, additionally inflicts the <b class="kw kw-stun">Stun</b> status.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-ricochet-knife">Ricochet Knife</a> Lv5, <a href="#s-scorpion-lash">Scorpion Lash</a> Lv5, <a href="#s-fire-cracker">Fire Cracker</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>550%</td><td>55</td></tr><tr><td>2</td><td>600%</td><td>60</td></tr><tr><td>3</td><td>650%</td><td>65</td></tr><tr><td>4</td><td>700%</td><td>70</td></tr><tr><td>5</td><td>750%</td><td>75</td></tr><tr><td>6</td><td>800%</td><td>80</td></tr><tr><td>7</td><td>850%</td><td>85</td></tr><tr><td>8</td><td>900%</td><td>90</td></tr><tr><td>9</td><td>950%</td><td>95</td></tr><tr><td>10</td><td>1000%</td><td>100</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>

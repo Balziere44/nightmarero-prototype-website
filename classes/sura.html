@@ -241,7 +241,7 @@
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types, targets and the numbers behind every level come from the player wiki, so they match what you see in game.</p>
       </div>
       <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Discipline</span><span>Iron Fists</span><span>Stigmata</span></div>
       <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-burn">Burning</span><span class="kw-stun">Stun</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
@@ -251,15 +251,17 @@
         <h3 class="branch-title">Stigmata Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-utility" id="s-burning-faith">
-            <div class="sk-top"><strong>Burning Faith</strong><i class="sk-type">Combo</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Burning Faith</strong><i class="sk-type">Combo</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short"><b class="mech">Stigmata</b> damage passive; active empowers the Monk Combo skills.</p>
             <p class="sk-body">Passively increases the damage dealt by Sura skills against enemies with <b class="mech">Stigmata</b> Stacks. When activated, Monk Combo Skills also gain this benefit, and also inflict <b class="mech">Stigmata</b> stacks.</p>
             <ul class="sk-options"><li><b>Resolute Faith</b>Passively reduces the damage taken from enemies that have any <b class="mech">Stigmata</b> stacks. When activated, Monk Spirit skills are treated as Sura skills for <b class="mech">Stigmata</b> damage buffs, and also inflict <b class="mech">Stigmata</b> stacks.</li></ul>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Passive Damage Bonus</th><th>Active Duration</th></tr></thead><tbody><tr><td>1</td><td>1%</td><td>2s</td></tr><tr><td>2</td><td>2%</td><td>4s</td></tr><tr><td>3</td><td>3%</td><td>6s</td></tr><tr><td>4</td><td>4%</td><td>8s</td></tr><tr><td>5</td><td>5%</td><td>10s</td></tr><tr><td>6</td><td>6%</td><td>12s</td></tr><tr><td>7</td><td>7%</td><td>14s</td></tr><tr><td>8</td><td>8%</td><td>16s</td></tr><tr><td>9</td><td>9%</td><td>18s</td></tr><tr><td>10</td><td>10%</td><td>20s</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-judge-s-conviction">
-            <div class="sk-top"><strong>Judge's Conviction</strong><i class="sk-type">Debuff</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Judge's Conviction</strong><i class="sk-type">Debuff</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Applies <b class="mech">Stigmata</b> stacks to all nearby enemies.</p>
             <p class="sk-body">The user channels their inner fury, preparing to turn it against all enemies in the area around them. Inflicts a number of <b class="mech">Stigmata</b> stacks on all enemies in the area around the user. All Sura skills deal increased damage for each <b class="mech">Stigmata</b> stack on a target.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Stigmata Stacks</th><th>Stigmata Duration Bonus</th></tr></thead><tbody><tr><td>1</td><td>0</td><td>+0.5s</td></tr><tr><td>2</td><td>1</td><td>+1s</td></tr><tr><td>3</td><td>1</td><td>+1.5s</td></tr><tr><td>4</td><td>2</td><td>+2s</td></tr><tr><td>5</td><td>2</td><td>+2.5s</td></tr><tr><td>6</td><td>3</td><td>+3s</td></tr><tr><td>7</td><td>3</td><td>+3.5s</td></tr><tr><td>8</td><td>4</td><td>+4s</td></tr><tr><td>9</td><td>4</td><td>+4.5s</td></tr><tr><td>10</td><td>5</td><td>+5s</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -267,29 +269,36 @@
         <h3 class="branch-title">Combo Skills<span>5 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-utility" id="s-furious-thrust">
-            <div class="sk-top"><strong>Furious Thrust</strong><i class="sk-type">Combo</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Furious Thrust</strong><i class="sk-type">Combo</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Quick jab that applies <b class="mech">Stigmata</b>.</p>
             <p class="sk-body">The user throws a quick jab, delivering tremendous force with the minimum motion possible. Deals physical damage to a single target and inflicts one stack of <b class="mech">Stigmata</b>. If the user is under the <b class="mech">Discipline</b> Status, this skill is guaranteed to Crit. If the user is under the <b class="mech">Iron Fists</b> Status, this skill additionally grants the user the Aspersio status.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>265%</td><td>26</td></tr><tr><td>2</td><td>280%</td><td>27</td></tr><tr><td>3</td><td>295%</td><td>28</td></tr><tr><td>4</td><td>310%</td><td>29</td></tr><tr><td>5</td><td>325%</td><td>30</td></tr><tr><td>6</td><td>340%</td><td>31</td></tr><tr><td>7</td><td>355%</td><td>32</td></tr><tr><td>8</td><td>370%</td><td>33</td></tr><tr><td>9</td><td>385%</td><td>34</td></tr><tr><td>10</td><td>400%</td><td>35</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-utility" id="s-furious-barrage">
-            <div class="sk-top"><strong>Furious Barrage</strong><i class="sk-type">Combo</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Furious Barrage</strong><i class="sk-type">Combo</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Rapid strikes; <b class="mech">Iron Fists</b> refreshes Furious Thrust.</p>
             <p class="sk-body">The user unleashes a rapid barrage of strikes against a single target, dealing significant damage and inflicting two stacks of <b class="mech">Stigmata</b>. If the user is under the <b class="mech">Discipline</b> Status, this skill is guaranteed to Crit. If the user is under the <b class="mech">Iron Fists</b> status, the cooldown of Furious Thrust is refreshed.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-furious-thrust">Furious Thrust</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-furious-thrust">Furious Thrust</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>265%</td><td>26</td></tr><tr><td>2</td><td>280%</td><td>27</td></tr><tr><td>3</td><td>295%</td><td>28</td></tr><tr><td>4</td><td>310%</td><td>29</td></tr><tr><td>5</td><td>325%</td><td>30</td></tr><tr><td>6</td><td>340%</td><td>31</td></tr><tr><td>7</td><td>355%</td><td>32</td></tr><tr><td>8</td><td>370%</td><td>33</td></tr><tr><td>9</td><td>385%</td><td>34</td></tr><tr><td>10</td><td>400%</td><td>35</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-utility" id="s-furious-execution">
-            <div class="sk-top"><strong>Furious Execution</strong><i class="sk-type">Combo Finisher</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Furious Execution</strong><i class="sk-type">Combo Finisher</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Combo finisher applying 3 <b class="mech">Stigmata</b> stacks.</p>
             <p class="sk-body">The user delivers a single crushing blow to an enemy, dealing exceptional physical damage to a single target and inflicting three stacks of <b class="mech">Stigmata</b>. If the user is under the <b class="mech">Discipline</b> Status, this skill is guaranteed to Crit. If the user is under the <b class="mech">Iron Fists</b> status, this skill splashes in a 5x5 area. This skill consumes the <b class="mech">Discipline</b> and <b class="mech">Iron Fists</b> statuses, but does not grant them.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-furious-barrage">Furious Barrage</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>540%</td><td>73</td></tr><tr><td>2</td><td>580%</td><td>76</td></tr><tr><td>3</td><td>620%</td><td>79</td></tr><tr><td>4</td><td>660%</td><td>82</td></tr><tr><td>5</td><td>700%</td><td>85</td></tr><tr><td>6</td><td>740%</td><td>88</td></tr><tr><td>7</td><td>780%</td><td>91</td></tr><tr><td>8</td><td>820%</td><td>94</td></tr><tr><td>9</td><td>860%</td><td>97</td></tr><tr><td>10</td><td>900%</td><td>100</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-utility" id="s-flash-combo">
-            <div class="sk-top"><strong>Flash Combo</strong><i class="sk-type">Combo</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Flash Combo</strong><i class="sk-type">Combo</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Auto-casts the Monk Combo skills at <b class="mech">Stigmata</b>-based levels.</p>
             <p class="sk-body">The user unleashes a string of powerful Combo skills, dealing exceptional damage to a single target. Immediately casts Raging Trifecta, Raging Quadruple Blow, and Raging Thrust in quick succession, ignoring the internal cooldowns of the skills. The skills are cast at a level equal to the number of <b class="mech">Stigmata</b> stacks on the target, ignoring the learned level. If the target is at 10 stacks of <b class="mech">Stigmata</b>, Furious Guillotine is added to the end of the combo.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-furious-guillotine">Furious Guillotine</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-burning-faith">Burning Faith</a> Lv5, <a href="#s-judge-s-conviction">Judge's Conviction</a> Lv5, <a href="#s-furious-execution">Furious Execution</a> Lv10</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Cooldown</th></tr></thead><tbody><tr><td>1</td><td>54s</td></tr><tr><td>2</td><td>48s</td></tr><tr><td>3</td><td>42s</td></tr><tr><td>4</td><td>36s</td></tr><tr><td>5</td><td>30s</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-furious-guillotine">
-            <div class="sk-top"><strong>Furious Guillotine</strong><i class="sk-type">Finisher</i></div>
+            <div class="sk-top"><strong>Furious Guillotine</strong><i class="sk-type">Finisher</i><i class="sk-target">Enemy</i></div>
             <p class="sk-short">Unlearnable finisher appended to Flash Combo at 10 stacks.</p>
             <p class="sk-body">The user delivers a finishing blow to the target, dealing massive physical damage and inflicting the <b class="kw kw-stun">Stun</b> status. This skill does not benefit from the <b class="mech">Iron Fists</b> or <b class="mech">Discipline</b> statuses, and does not grant them. This skill cannot be learned, and can only be cast through Flash Combo.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-flash-combo">Flash Combo</a></p>
@@ -300,29 +309,36 @@
         <h3 class="branch-title">Spirit Skills<span>5 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-summon" id="s-zealous-hammer">
-            <div class="sk-top"><strong>Zealous Hammer</strong><i class="sk-type">Spirit</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Zealous Hammer</strong><i class="sk-type">Spirit</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short"><b class="kw kw-burn">Burning</b> spirit strike that applies <b class="mech">Stigmata</b>.</p>
             <p class="sk-body">The user slams a fist charged with burning spiritual energy into the target, dealing heavy damage to a single target and inflicting one stack of <b class="mech">Stigmata</b>. If the user is under the <b class="mech">Iron Fists</b> status, this skill also inflicts the <b class="kw kw-burn">Burning</b> status. If the user is under the <b class="mech">Discipline</b> status, this skill also grants the Aspersio status to the user.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Burning Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>275%</td><td>55%</td><td>22</td></tr><tr><td>2</td><td>300%</td><td>60%</td><td>24</td></tr><tr><td>3</td><td>325%</td><td>65%</td><td>26</td></tr><tr><td>4</td><td>350%</td><td>70%</td><td>28</td></tr><tr><td>5</td><td>375%</td><td>75%</td><td>30</td></tr><tr><td>6</td><td>400%</td><td>80%</td><td>32</td></tr><tr><td>7</td><td>425%</td><td>85%</td><td>34</td></tr><tr><td>8</td><td>450%</td><td>90%</td><td>36</td></tr><tr><td>9</td><td>475%</td><td>95%</td><td>38</td></tr><tr><td>10</td><td>500%</td><td>100%</td><td>40</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-summon" id="s-zealous-echo">
-            <div class="sk-top"><strong>Zealous Echo</strong><i class="sk-type">Spirit</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Zealous Echo</strong><i class="sk-type">Spirit</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Point-blank spirit AoE; <b class="mech">Discipline</b> refreshes Zealous Hammer.</p>
             <p class="sk-body">The user unleashes a concentrated wave of spiritual energy, striking all enemies in the area around them. Deals physical damage to all enemies around the user and inflicting two stacks of <b class="mech">Stigmata</b>. If the user is under the <b class="mech">Iron Fists</b> status, also inflicts the Intense <b class="kw kw-burn">Burning</b> status. If the user is under the <b class="mech">Discipline</b> status, the cooldown of Zealous Hammer is instantly refreshed.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-zealous-hammer">Zealous Hammer</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-zealous-hammer">Zealous Hammer</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Severe Burning Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>430%</td><td>55%</td><td>42</td></tr><tr><td>2</td><td>460%</td><td>60%</td><td>44</td></tr><tr><td>3</td><td>490%</td><td>65%</td><td>46</td></tr><tr><td>4</td><td>520%</td><td>70%</td><td>48</td></tr><tr><td>5</td><td>550%</td><td>75%</td><td>50</td></tr><tr><td>6</td><td>580%</td><td>80%</td><td>52</td></tr><tr><td>7</td><td>610%</td><td>85%</td><td>54</td></tr><tr><td>8</td><td>640%</td><td>90%</td><td>56</td></tr><tr><td>9</td><td>670%</td><td>95%</td><td>58</td></tr><tr><td>10</td><td>700%</td><td>100%</td><td>60</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-summon" id="s-zealous-rage">
-            <div class="sk-top"><strong>Zealous Rage</strong><i class="sk-type">Spirit Finisher</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Zealous Rage</strong><i class="sk-type">Spirit Finisher</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Spirit finisher applying 3 <b class="mech">Stigmata</b> stacks.</p>
             <p class="sk-body">The user unleashes an explosive wave of spiritual energy, scorching all enemies around them with holy fire. Deals physical damage to all enemies around the user and inflicts three stacks of <b class="mech">Stigmata</b>. If the user is under the <b class="mech">Iron Fists</b> status, the skill also inflicts Intense <b class="kw kw-burn">Burning</b>. If the user is under the <b class="mech">Discipline</b> status, the Variable Cast Time of the skill is removed.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-zealous-echo">Zealous Echo</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>660%</td><td>105</td></tr><tr><td>2</td><td>720%</td><td>110</td></tr><tr><td>3</td><td>780%</td><td>115</td></tr><tr><td>4</td><td>840%</td><td>120</td></tr><tr><td>5</td><td>900%</td><td>125</td></tr><tr><td>6</td><td>960%</td><td>130</td></tr><tr><td>7</td><td>1020%</td><td>135</td></tr><tr><td>8</td><td>1080%</td><td>140</td></tr><tr><td>9</td><td>1140%</td><td>145</td></tr><tr><td>10</td><td>1200%</td><td>150</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-summon" id="s-last-exorcism">
-            <div class="sk-top"><strong>Last Exorcism</strong><i class="sk-type">Spirit</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Last Exorcism</strong><i class="sk-type">Spirit</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Auto-casts the Monk Spirit skills at <b class="mech">Stigmata</b>-based levels.</p>
             <p class="sk-body">The user unleashes a string of powerful Spirit skills, dealing exceptional damage to their target. Immediately casts Soul Piercer, Spiritual Lash, and Soul Quake in quick succession, ignoring the internal cooldowns of the skills. The skills are cast at a level equal to the number of <b class="mech">Stigmata</b> stacks on the target. If the target has 10 stacks of <b class="mech">Stigmata</b>, Zealous Pyre is added to the end of the combo.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-zealous-pyre">Zealous Pyre</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span>Indomitable Faith Lv5, <a href="#s-judge-s-conviction">Judge's Conviction</a> Lv5, <a href="#s-zealous-rage">Zealous Rage</a> Lv10</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>SP Cost</th><th>Cooldown</th></tr></thead><tbody><tr><td>1</td><td>30</td><td>54s</td></tr><tr><td>2</td><td>60</td><td>48s</td></tr><tr><td>3</td><td>90</td><td>42s</td></tr><tr><td>4</td><td>120</td><td>36s</td></tr><tr><td>5</td><td>150</td><td>30s</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-zealous-pyre">
-            <div class="sk-top"><strong>Zealous Pyre</strong><i class="sk-type">Finisher</i></div>
+            <div class="sk-top"><strong>Zealous Pyre</strong><i class="sk-type">Finisher</i><i class="sk-target">Self</i></div>
             <p class="sk-short">Unlearnable inferno appended to Last Exorcism at 10 stacks.</p>
             <p class="sk-body">The user focuses their spiritual might on the targeted enemy, creating a localized inferno to obliterate them and all nearby enemies. Deals massive physical damage and inflicts both <b class="kw kw-burn">Burning</b> and <b class="kw kw-burn">Severe Burning</b>. This skill does not benefit from the <b class="mech">Iron Fists</b> or <b class="mech">Discipline</b> statuses, and does not grant them. This skill cannot be learned, and can only be cast through Last Exorcism.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-last-exorcism">Last Exorcism</a></p>

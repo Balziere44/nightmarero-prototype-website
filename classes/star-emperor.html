@@ -213,7 +213,7 @@
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types, targets and the numbers behind every level come from the player wiki, so they match what you see in game.</p>
       </div>
       <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Lunar Protection</span><span>Solar Heat</span><span>Stellar Blessing</span><span>Umbral Veil</span></div>
       <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-burn">Burning</span><span class="kw-blind">Blind</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
@@ -223,14 +223,17 @@
         <h3 class="branch-title">Solar Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-physical" id="s-solar-flash">
-            <div class="sk-top"><strong>Solar Flash</strong><i class="sk-type">Physical Melee</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Solar Flash</strong><i class="sk-type">Physical Melee</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Focused strike that detonates <b class="kw kw-burn">Burning</b> for five ticks at once.</p>
             <p class="sk-body">The user channels the power of the Sun into a single focused strike, dealing a small amount of damage and inflicting the <b class="kw kw-burn">Burning</b> status. If the target is already burning, it instead consumes the <b class="kw kw-burn">Burning</b> status from them to deal five ticks worth of <b class="kw kw-burn">Burning</b> damage instantly. The damage of this skill is increased based on the user's Int, and is treated as <b class="kw kw-burn">Burning</b> damage. If used under <b class="mech">Lunar Protection</b>, the attack gains a small amount of Lifesteal. If used under <b class="mech">Stellar Blessing</b>, the attack ignores defense. If used under <b class="mech">Umbral Veil</b>, the attack gains bonus Crit Rate.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>430%</td><td>22</td></tr><tr><td>2</td><td>460%</td><td>24</td></tr><tr><td>3</td><td>490%</td><td>26</td></tr><tr><td>4</td><td>520%</td><td>28</td></tr><tr><td>5</td><td>550%</td><td>30</td></tr><tr><td>6</td><td>580%</td><td>32</td></tr><tr><td>7</td><td>610%</td><td>34</td></tr><tr><td>8</td><td>640%</td><td>36</td></tr><tr><td>9</td><td>670%</td><td>38</td></tr><tr><td>10</td><td>700%</td><td>40</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-solar-prominence">
-            <div class="sk-top"><strong>Solar Prominence</strong><i class="sk-type">Physical Melee</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Solar Prominence</strong><i class="sk-type">Physical Melee</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Self-centered blast with a chance to inflict <b class="kw kw-burn">Burning</b>.</p>
             <p class="sk-body">The user channels the power of the Sun, unleashing it in a burst around them to deal damage to all nearby enemies. The damage is increased based on the user's Int, and is treated as <b class="kw kw-burn">Burning</b> damage. If used under <b class="mech">Lunar Protection</b>, the attack gains a small amount of Lifesteal. If used under <b class="mech">Stellar Blessing</b>, the attack ignores defense. If used under <b class="mech">Umbral Veil</b>, the attack gains bonus Crit Rate.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-solar-flash">Solar Flash</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Burning Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>530%</td><td>30%</td><td>24</td></tr><tr><td>2</td><td>560%</td><td>35%</td><td>28</td></tr><tr><td>3</td><td>590%</td><td>40%</td><td>32</td></tr><tr><td>4</td><td>620%</td><td>45%</td><td>36</td></tr><tr><td>5</td><td>650%</td><td>50%</td><td>40</td></tr><tr><td>6</td><td>680%</td><td>55%</td><td>44</td></tr><tr><td>7</td><td>710%</td><td>60%</td><td>48</td></tr><tr><td>8</td><td>740%</td><td>65%</td><td>52</td></tr><tr><td>9</td><td>770%</td><td>70%</td><td>56</td></tr><tr><td>10</td><td>800%</td><td>75%</td><td>60</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -238,14 +241,17 @@
         <h3 class="branch-title">Lunar Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-physical" id="s-lunar-eclipse">
-            <div class="sk-top"><strong>Lunar Eclipse</strong><i class="sk-type">Physical Melee</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Lunar Eclipse</strong><i class="sk-type">Physical Melee</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Lifestealing strike that grants Cloaking.</p>
             <p class="sk-body">The user channels the power of the Moon, infusing it into a single strike that then hides them from their enemies. Deals physical damage that is increased based on the user's Vit, heals the user for a percentage of the damage dealt, and puts the user in the Cloaking status for five seconds. If used under <b class="mech">Solar Heat</b>, the damage is treated as <b class="kw kw-burn">Burning</b> damage. If used under <b class="mech">Stellar Blessing</b>, the attack ignores defense. If used under <b class="mech">Umbral Veil</b>, the attack gains bonus Crit Rate.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Life Steal</th><th>Cloaking Duration</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>415%</td><td>10%</td><td>0s</td><td>22</td></tr><tr><td>2</td><td>430%</td><td>20%</td><td>0.5s</td><td>24</td></tr><tr><td>3</td><td>445%</td><td>30%</td><td>0.5s</td><td>26</td></tr><tr><td>4</td><td>460%</td><td>40%</td><td>1s</td><td>28</td></tr><tr><td>5</td><td>475%</td><td>50%</td><td>1s</td><td>30</td></tr><tr><td>6</td><td>490%</td><td>60%</td><td>1.5s</td><td>32</td></tr><tr><td>7</td><td>505%</td><td>70%</td><td>1.5s</td><td>34</td></tr><tr><td>8</td><td>520%</td><td>80%</td><td>2s</td><td>36</td></tr><tr><td>9</td><td>535%</td><td>90%</td><td>2s</td><td>38</td></tr><tr><td>10</td><td>550%</td><td>100%</td><td>2.5s</td><td>40</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-lunar-advent">
-            <div class="sk-top"><strong>Lunar Advent</strong><i class="sk-type">Physical Melee</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Lunar Advent</strong><i class="sk-type">Physical Melee</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Devastating lifestealing strike; double damage from Cloaking.</p>
             <p class="sk-body">The user channels the power of the Moon, unleashing it to deal devastating damage to a single foe. Deals physical damage that is increased based on the user's Vit and heals the user for a percentage of the damage dealt. If used while in the Cloaking status, the damage is further increased. If used under <b class="mech">Solar Heat</b>, the damage is treated as <b class="kw kw-burn">Burning</b> damage. If used under <b class="mech">Stellar Blessing</b>, the attack ignores defense. If used under <b class="mech">Umbral Veil</b>, the attack gains bonus Crit Rate.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-lunar-eclipse">Lunar Eclipse</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Life Steal</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>415%</td><td>10%</td><td>24</td></tr><tr><td>2</td><td>430%</td><td>20%</td><td>28</td></tr><tr><td>3</td><td>445%</td><td>30%</td><td>32</td></tr><tr><td>4</td><td>460%</td><td>40%</td><td>36</td></tr><tr><td>5</td><td>475%</td><td>50%</td><td>40</td></tr><tr><td>6</td><td>490%</td><td>60%</td><td>44</td></tr><tr><td>7</td><td>505%</td><td>70%</td><td>48</td></tr><tr><td>8</td><td>520%</td><td>80%</td><td>52</td></tr><tr><td>9</td><td>535%</td><td>90%</td><td>56</td></tr><tr><td>10</td><td>550%</td><td>100%</td><td>60</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -253,14 +259,17 @@
         <h3 class="branch-title">Stellar Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-physical" id="s-stellar-flicker">
-            <div class="sk-top"><strong>Stellar Flicker</strong><i class="sk-type">Physical Melee</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Stellar Flicker</strong><i class="sk-type">Physical Melee</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Quick strike that Marks the target, reducing their Defense.</p>
             <p class="sk-body">The user channels the power of the Stars, striking a single target for moderate physical damage and briefly marking them. The damage of this skill is increased by the user's Dex. Marked targets have their defense reduced. This defense reduction stacks additively with item based Defense Pierce. If used under <b class="mech">Solar Heat</b>, the damage is treated as <b class="kw kw-burn">Burning</b> damage. If used under <b class="mech">Lunar Protection</b>, the attack gains a small amount of Lifesteal. If used under <b class="mech">Umbral Veil</b>, the attack gains bonus Crit Rate.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Defense Reduction</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>415%</td><td>3%</td><td>22</td></tr><tr><td>2</td><td>430%</td><td>6%</td><td>24</td></tr><tr><td>3</td><td>445%</td><td>9%</td><td>26</td></tr><tr><td>4</td><td>460%</td><td>12%</td><td>28</td></tr><tr><td>5</td><td>475%</td><td>15%</td><td>30</td></tr><tr><td>6</td><td>490%</td><td>18%</td><td>32</td></tr><tr><td>7</td><td>505%</td><td>21%</td><td>34</td></tr><tr><td>8</td><td>520%</td><td>24%</td><td>36</td></tr><tr><td>9</td><td>535%</td><td>27%</td><td>38</td></tr><tr><td>10</td><td>550%</td><td>30%</td><td>40</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-stellar-tempest">
-            <div class="sk-top"><strong>Stellar Tempest</strong><i class="sk-type">Physical Melee</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Stellar Tempest</strong><i class="sk-type">Physical Melee</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Meteor barrage that Marks all enemies around the user.</p>
             <p class="sk-body">The user channels the power of the Stars, calling five of them to rain down and strike enemies in the area around them. Enemies in the area of the falling stars take a moderate amount of physical damage, which is increased by the user's Dex, and are marked for a brief time. Marked targets have their defense reduced. This defense reduction stacks additively with item based Defense Pierce. If used under <b class="mech">Solar Heat</b>, the damage is treated as <b class="kw kw-burn">Burning</b> damage. If used under <b class="mech">Lunar Protection</b>, the attack gains a small amount of Lifesteal. If used under <b class="mech">Umbral Veil</b>, the attack gains bonus Crit Rate.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-stellar-flicker">Stellar Flicker</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Defense Reduction</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>220%</td><td>3%</td><td>24</td></tr><tr><td>2</td><td>240%</td><td>6%</td><td>28</td></tr><tr><td>3</td><td>260%</td><td>9%</td><td>32</td></tr><tr><td>4</td><td>280%</td><td>12%</td><td>36</td></tr><tr><td>5</td><td>300%</td><td>15%</td><td>40</td></tr><tr><td>6</td><td>320%</td><td>18%</td><td>44</td></tr><tr><td>7</td><td>340%</td><td>21%</td><td>48</td></tr><tr><td>8</td><td>360%</td><td>24%</td><td>52</td></tr><tr><td>9</td><td>380%</td><td>27%</td><td>56</td></tr><tr><td>10</td><td>400%</td><td>30%</td><td>60</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -268,14 +277,17 @@
         <h3 class="branch-title">Umbral Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-physical" id="s-umbral-lash">
-            <div class="sk-top"><strong>Umbral Lash</strong><i class="sk-type">Physical Ranged</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Umbral Lash</strong><i class="sk-type">Physical Ranged</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">High-crit shadow lash striking all nearby enemies.</p>
             <p class="sk-body">The user channels the power of Shadow, unleashing a wave of darkness that strikes all enemies in a line between the user and a distant target. The damage dealt is increased by the user's Agi, and has a bonus Crit rate. If used under <b class="mech">Solar Heat</b>, the damage is treated as <b class="kw kw-burn">Burning</b> damage. If used under <b class="mech">Lunar Protection</b>, the attack gains a small amount of Lifesteal. If used under <b class="mech">Stellar Blessing</b>, the attack ignores defense.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>415%</td><td>22</td></tr><tr><td>2</td><td>430%</td><td>24</td></tr><tr><td>3</td><td>445%</td><td>26</td></tr><tr><td>4</td><td>460%</td><td>28</td></tr><tr><td>5</td><td>475%</td><td>30</td></tr><tr><td>6</td><td>490%</td><td>32</td></tr><tr><td>7</td><td>505%</td><td>34</td></tr><tr><td>8</td><td>520%</td><td>36</td></tr><tr><td>9</td><td>535%</td><td>38</td></tr><tr><td>10</td><td>550%</td><td>40</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-umbral-howl">
-            <div class="sk-top"><strong>Umbral Howl</strong><i class="sk-type">Physical Melee</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Umbral Howl</strong><i class="sk-type">Physical Melee</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Shadow wave that strikes and Blinds nearby enemies.</p>
             <p class="sk-body">The user channels the power of the Shadow, summoning a massive burst of cosmic darkness to annihilate their foes. Deals massive damage in an area around the user, which is increased by the user's Agi, has bonus Crit Rate, and has a high chance to inflict the <b class="kw kw-blind">Blind</b> status on enemies struck. If used under <b class="mech">Solar Heat</b>, the damage is treated as <b class="kw kw-burn">Burning</b> damage. If used under <b class="mech">Lunar Protection</b>, the attack gains a small amount of Lifesteal. If used under <b class="mech">Stellar Blessing</b>, the attack ignores defense.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-umbral-lash">Umbral Lash</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Blind Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>415%</td><td>30%</td><td>24</td></tr><tr><td>2</td><td>430%</td><td>35%</td><td>28</td></tr><tr><td>3</td><td>445%</td><td>40%</td><td>32</td></tr><tr><td>4</td><td>460%</td><td>45%</td><td>36</td></tr><tr><td>5</td><td>475%</td><td>50%</td><td>40</td></tr><tr><td>6</td><td>490%</td><td>55%</td><td>44</td></tr><tr><td>7</td><td>505%</td><td>60%</td><td>48</td></tr><tr><td>8</td><td>520%</td><td>65%</td><td>52</td></tr><tr><td>9</td><td>535%</td><td>70%</td><td>56</td></tr><tr><td>10</td><td>550%</td><td>75%</td><td>60</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -283,12 +295,13 @@
         <h3 class="branch-title">Cosmic Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-support" id="s-cosmic-revelation">
-            <div class="sk-top"><strong>Cosmic Revelation</strong><i class="sk-type">Buff</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Cosmic Revelation</strong><i class="sk-type">Buff</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Massive all-stat buff; Star Emperor skills briefly cost no SP.</p>
             <p class="sk-body">The user channels the power of the unified cosmos, enhancing their abilities for a short duration. For ten seconds, or until a certain number of skills have been cast, the user gains an increase to all stats and has the SP Cost of Star Emperor skills they use reduced to 0. While Cosmic Revelation is active, the internal cooldown for Cosmic Union autocasts is ignored.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>All Stats Bonus</th><th>Number of Charges</th></tr></thead><tbody><tr><td>1</td><td>+1</td><td>1</td></tr><tr><td>2</td><td>+2</td><td>1</td></tr><tr><td>3</td><td>+3</td><td>2</td></tr><tr><td>4</td><td>+4</td><td>2</td></tr><tr><td>5</td><td>+5</td><td>2</td></tr><tr><td>6</td><td>+6</td><td>3</td></tr><tr><td>7</td><td>+7</td><td>3</td></tr><tr><td>8</td><td>+8</td><td>3</td></tr><tr><td>9</td><td>+9</td><td>4</td></tr><tr><td>10</td><td>+10</td><td>4</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-cosmic-nova">
-            <div class="sk-top"><strong>Cosmic Nova</strong><i class="sk-type">Physical Melee</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Cosmic Nova</strong><i class="sk-type">Physical Melee</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Alignment-neutral blast that gains every active Alignment bonus.</p>
             <p class="sk-body">The user channels the power of the unified cosmos, unleashing them in the area around themselves to strike all enemies in range. The damage dealt is increased by the user's Luk.</p>
             <p class="sk-body">If used under <b class="mech">Solar Heat</b>, the damage is treated as <b class="kw kw-burn">Burning</b> damage.</p>
@@ -297,6 +310,8 @@
             <p class="sk-body">If used under <b class="mech">Umbral Veil</b>, the attack gains bonus Crit Rate.</p>
             <p class="sk-body">If used under Cosmic Union, Cosmic Revelation has its Cooldowns reset.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-cosmic-revelation">Cosmic Revelation</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-cosmic-revelation">Cosmic Revelation</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th></tr></thead><tbody><tr><td>1</td><td>550%</td></tr><tr><td>2</td><td>600%</td></tr><tr><td>3</td><td>650%</td></tr><tr><td>4</td><td>700%</td></tr><tr><td>5</td><td>750%</td></tr><tr><td>6</td><td>800%</td></tr><tr><td>7</td><td>850%</td></tr><tr><td>8</td><td>900%</td></tr><tr><td>9</td><td>950%</td></tr><tr><td>10</td><td>1000%</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>

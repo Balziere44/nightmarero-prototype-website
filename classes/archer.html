@@ -212,7 +212,7 @@
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types, targets and the numbers behind every level come from the player wiki, so they match what you see in game.</p>
       </div>
       <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
       <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-passive" data-i18n="cls.t.passive">Passive</span><span class="sk-utility" data-i18n="cls.t.utility">Utility</span></div>
@@ -224,31 +224,41 @@
             <div class="sk-top"><strong>Bow Mastery</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Increases range and Hit of Bows.</p>
             <p class="sk-body">Increases the auto-attack range and Hit Rate of Bows. Notably, this skill does not increase the range of skills, and does not improve the damage of bows.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Hit Bonus</th><th>Range Bonus</th></tr></thead><tbody><tr><td>1</td><td>2</td><td>1</td></tr><tr><td>2</td><td>4</td><td>1</td></tr><tr><td>3</td><td>6</td><td>2</td></tr><tr><td>4</td><td>8</td><td>2</td></tr><tr><td>5</td><td>10</td><td>3</td></tr><tr><td>6</td><td>12</td><td>3</td></tr><tr><td>7</td><td>14</td><td>4</td></tr><tr><td>8</td><td>16</td><td>4</td></tr><tr><td>9</td><td>18</td><td>5</td></tr><tr><td>10</td><td>20</td><td>5</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-arrow-shower">
-            <div class="sk-top"><strong>Arrow Shower</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Arrow Shower</strong><i class="sk-type">Physical</i><i class="sk-target">Ground</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Ground target AoE that knocks back.</p>
             <p class="sk-body">Deals splash damage at a target location, knocking back any enemies struck.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-bow-mastery">Bow Mastery</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Splash Range</th></tr></thead><tbody><tr><td>1</td><td>160%</td><td>3x3</td></tr><tr><td>2</td><td>170%</td><td>3x3</td></tr><tr><td>3</td><td>180%</td><td>3x3</td></tr><tr><td>4</td><td>190%</td><td>3x3</td></tr><tr><td>5</td><td>200%</td><td>3x3</td></tr><tr><td>6</td><td>210%</td><td>5x5</td></tr><tr><td>7</td><td>220%</td><td>5x5</td></tr><tr><td>8</td><td>230%</td><td>5x5</td></tr><tr><td>9</td><td>240%</td><td>5x5</td></tr><tr><td>10</td><td>250%</td><td>5x5</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-double-strafe">
-            <div class="sk-top"><strong>Double Strafe</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Double Strafe</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Fires twice, has bonus Crit rate against <b class="kw kw-slow">Slowed</b> targets.</p>
             <p class="sk-body">Deals two hits in rapid succession to a ranged target. This skill gains bonus Crit Rate when hitting a <b class="kw kw-slow">Slowed</b> target.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-bow-mastery">Bow Mastery</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Total Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>220%</td><td>6</td></tr><tr><td>2</td><td>240%</td><td>7</td></tr><tr><td>3</td><td>260%</td><td>8</td></tr><tr><td>4</td><td>280%</td><td>9</td></tr><tr><td>5</td><td>300%</td><td>10</td></tr><tr><td>6</td><td>320%</td><td>11</td></tr><tr><td>7</td><td>340%</td><td>12</td></tr><tr><td>8</td><td>360%</td><td>13</td></tr><tr><td>9</td><td>380%</td><td>14</td></tr><tr><td>10</td><td>400%</td><td>15</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-pin-down">
-            <div class="sk-top"><strong>Pin Down</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Pin Down</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Low damage, Inflicts <b class="kw kw-slow">Slow</b>.</p>
             <p class="sk-body">Fires an arrow at a target's legs, dealing minor damage and attempting to inflict the <b class="kw kw-slow">Slow</b> status.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Slow Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>60%</td><td>55%</td><td>11</td></tr><tr><td>2</td><td>70%</td><td>60%</td><td>12</td></tr><tr><td>3</td><td>80%</td><td>65%</td><td>13</td></tr><tr><td>4</td><td>90%</td><td>70%</td><td>14</td></tr><tr><td>5</td><td>100%</td><td>75%</td><td>15</td></tr><tr><td>6</td><td>110%</td><td>80%</td><td>16</td></tr><tr><td>7</td><td>120%</td><td>85%</td><td>17</td></tr><tr><td>8</td><td>130%</td><td>90%</td><td>18</td></tr><tr><td>9</td><td>140%</td><td>95%</td><td>19</td></tr><tr><td>10</td><td>150%</td><td>100%</td><td>20</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-arrow-repel">
-            <div class="sk-top"><strong>Arrow Repel</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Arrow Repel</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Low damage and strong knockback.</p>
             <p class="sk-body">Fires a heavy arrow at the target, dealing minor damage and knocking them backwards.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-pin-down">Pin Down</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Knockback Distance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>60%</td><td>3 cells</td><td>8</td></tr><tr><td>2</td><td>70%</td><td>3 cells</td><td>10</td></tr><tr><td>3</td><td>80%</td><td>3 cells</td><td>12</td></tr><tr><td>4</td><td>90%</td><td>4 cells</td><td>14</td></tr><tr><td>5</td><td>100%</td><td>4 cells</td><td>16</td></tr><tr><td>6</td><td>110%</td><td>5 cells</td><td>18</td></tr><tr><td>7</td><td>120%</td><td>5 cells</td><td>20</td></tr><tr><td>8</td><td>130%</td><td>6 cells</td><td>22</td></tr><tr><td>9</td><td>140%</td><td>6 cells</td><td>24</td></tr><tr><td>10</td><td>150%</td><td>7 cells</td><td>26</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-utility" id="s-reposition">
-            <div class="sk-top"><strong>Reposition</strong><i class="sk-type">Utility</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Reposition</strong><i class="sk-type">Utility</i><i class="sk-target">Party</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Massively increases the party's movespeed and removes <b class="kw kw-slow">Slow</b> effects.</p>
             <p class="sk-body">Commands the party to move, greatly increasing their movement speed for a short duration and removing most movement impairing effects.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-pin-down">Pin Down</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Speed Boost</th></tr></thead><tbody><tr><td>1</td><td>23%</td></tr><tr><td>2</td><td>26%</td></tr><tr><td>3</td><td>29%</td></tr><tr><td>4</td><td>32%</td></tr><tr><td>5</td><td>35%</td></tr><tr><td>6</td><td>38%</td></tr><tr><td>7</td><td>41%</td></tr><tr><td>8</td><td>44%</td></tr><tr><td>9</td><td>47%</td></tr><tr><td>10</td><td>50%</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>

@@ -214,7 +214,7 @@
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types, targets and the numbers behind every level come from the player wiki, so they match what you see in game.</p>
       </div>
       <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-poison">Poison</span><span class="kw-blind">Blind</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
       <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-passive" data-i18n="cls.t.passive">Passive</span><span class="sk-utility" data-i18n="cls.t.utility">Utility</span></div>
@@ -226,31 +226,41 @@
             <div class="sk-top"><strong>Dagger Mastery</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Increases damage, Double Attack rate of Daggers</p>
             <p class="sk-body">Increases the damage and Double Attack rate of Daggers.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage Bonus</th><th>Double Attack Chance</th><th>Hit Bonus</th></tr></thead><tbody><tr><td>1</td><td>3</td><td>5%</td><td>2</td></tr><tr><td>2</td><td>6</td><td>10%</td><td>4</td></tr><tr><td>3</td><td>9</td><td>15%</td><td>6</td></tr><tr><td>4</td><td>12</td><td>20%</td><td>8</td></tr><tr><td>5</td><td>15</td><td>25%</td><td>10</td></tr><tr><td>6</td><td>18</td><td>30%</td><td>12</td></tr><tr><td>7</td><td>21</td><td>35%</td><td>14</td></tr><tr><td>8</td><td>24</td><td>40%</td><td>16</td></tr><tr><td>9</td><td>27</td><td>45%</td><td>18</td></tr><tr><td>10</td><td>30</td><td>50%</td><td>20</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-sand-attack">
-            <div class="sk-top"><strong>Sand Attack</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Sand Attack</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Damage and inflicts <b class="kw kw-blind">Blind</b></p>
             <p class="sk-body">Deals a fair amount of Neutral damage at a small range, with a chance to inflict the <b class="kw kw-blind">Blind</b> status.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-dagger-mastery">Dagger Mastery</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Blind Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>110%</td><td>55%</td><td>5</td></tr><tr><td>2</td><td>120%</td><td>60%</td><td>7</td></tr><tr><td>3</td><td>130%</td><td>65%</td><td>9</td></tr><tr><td>4</td><td>140%</td><td>70%</td><td>11</td></tr><tr><td>5</td><td>150%</td><td>75%</td><td>13</td></tr><tr><td>6</td><td>160%</td><td>80%</td><td>15</td></tr><tr><td>7</td><td>170%</td><td>85%</td><td>17</td></tr><tr><td>8</td><td>180%</td><td>90%</td><td>19</td></tr><tr><td>9</td><td>190%</td><td>95%</td><td>21</td></tr><tr><td>10</td><td>200%</td><td>100%</td><td>23</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-envenom">
-            <div class="sk-top"><strong>Envenom</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Envenom</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short"><b class="kw kw-poison">Poison</b> element damage and inflicts <b class="kw kw-poison">Poison</b></p>
             <p class="sk-body">Deals minor poison damage, with a chance to inflict the <b class="kw kw-poison">Poison</b> status.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-dagger-mastery">Dagger Mastery</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th><th>Poison Chance</th></tr></thead><tbody><tr><td>1</td><td>110%</td><td>5</td><td>55%</td></tr><tr><td>2</td><td>120%</td><td>7</td><td>60%</td></tr><tr><td>3</td><td>130%</td><td>9</td><td>65%</td></tr><tr><td>4</td><td>140%</td><td>11</td><td>70%</td></tr><tr><td>5</td><td>150%</td><td>13</td><td>75%</td></tr><tr><td>6</td><td>160%</td><td>15</td><td>80%</td></tr><tr><td>7</td><td>170%</td><td>17</td><td>85%</td></tr><tr><td>8</td><td>180%</td><td>19</td><td>90%</td></tr><tr><td>9</td><td>190%</td><td>21</td><td>95%</td></tr><tr><td>10</td><td>200%</td><td>23</td><td>100%</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-passive" id="s-nimbleness">
             <div class="sk-top"><strong>Nimbleness</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Increases Flee and Movement Speed</p>
             <p class="sk-body">Increases the base Flee and Movement Speed.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Flee Bonus</th><th>Movement Speed Bonus</th></tr></thead><tbody><tr><td>1</td><td>2</td><td>0.5%</td></tr><tr><td>2</td><td>4</td><td>1%</td></tr><tr><td>3</td><td>6</td><td>1.5%</td></tr><tr><td>4</td><td>8</td><td>2%</td></tr><tr><td>5</td><td>10</td><td>2.5%</td></tr><tr><td>6</td><td>12</td><td>3%</td></tr><tr><td>7</td><td>14</td><td>3.5%</td></tr><tr><td>8</td><td>16</td><td>4%</td></tr><tr><td>9</td><td>18</td><td>4.5%</td></tr><tr><td>10</td><td>20</td><td>5%</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-utility" id="s-hiding">
-            <div class="sk-top"><strong>Hiding</strong><i class="sk-type">Utility</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Hiding</strong><i class="sk-type">Utility</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Avoids most physical and magical attacks for a short duration</p>
             <p class="sk-body">Hides under the ground to avoid all attacks for a brief time. Has a lengthy cooldown that can be reduced with higher skill levels.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-nimbleness">Nimbleness</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Cooldown</th><th>Duration</th></tr></thead><tbody><tr><td>1</td><td>33s</td><td>1s</td></tr><tr><td>2</td><td>31s</td><td>1s</td></tr><tr><td>3</td><td>29s</td><td>1s</td></tr><tr><td>4</td><td>27s</td><td>1s</td></tr><tr><td>5</td><td>25s</td><td>1.5s</td></tr><tr><td>6</td><td>23s</td><td>1.5s</td></tr><tr><td>7</td><td>21s</td><td>1.5s</td></tr><tr><td>8</td><td>19s</td><td>1.5s</td></tr><tr><td>9</td><td>17s</td><td>2s</td></tr><tr><td>10</td><td>15s</td><td>2s</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-utility" id="s-back-slide">
-            <div class="sk-top"><strong>Back Slide</strong><i class="sk-type">Utility</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Back Slide</strong><i class="sk-type">Utility</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Instantly moves backward a fixed distance</p>
             <p class="sk-body">Shifts the user backward instantly 7 cells. Has a lengthy cooldown that can be reduced with higher skill levels.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-nimbleness">Nimbleness</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Cooldown</th></tr></thead><tbody><tr><td>1</td><td>28</td></tr><tr><td>2</td><td>26</td></tr><tr><td>3</td><td>24</td></tr><tr><td>4</td><td>22</td></tr><tr><td>5</td><td>20</td></tr><tr><td>6</td><td>18</td></tr><tr><td>7</td><td>16</td></tr><tr><td>8</td><td>14</td></tr><tr><td>9</td><td>12</td></tr><tr><td>10</td><td>10</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>

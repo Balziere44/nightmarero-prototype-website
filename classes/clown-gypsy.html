@@ -221,7 +221,7 @@
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types, targets and the numbers behind every level come from the player wiki, so they match what you see in game.</p>
       </div>
       <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Rhythm</span></div>
       <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-poison">Poison</span><span class="kw-stun">Stun</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
@@ -231,24 +231,30 @@
         <h3 class="branch-title">Rhythm Skills<span>4 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-physical" id="s-voluminous-volley">
-            <div class="sk-top"><strong>Voluminous Volley</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Voluminous Volley</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Multi-hit volley scaling with <b class="mech">Rhythm</b>.</p>
             <p class="sk-body">The user fires a volley of arrows at a distant target, hitting a number of times based on their <b class="mech">Rhythm</b> level for physical damage. If the user's <b class="mech">Rhythm</b> is at 0, the skill will miss.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage (per hit)</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>80%</td><td>22</td></tr><tr><td>2</td><td>85%</td><td>24</td></tr><tr><td>3</td><td>90%</td><td>26</td></tr><tr><td>4</td><td>95%</td><td>28</td></tr><tr><td>5</td><td>100%</td><td>30</td></tr><tr><td>6</td><td>105%</td><td>32</td></tr><tr><td>7</td><td>110%</td><td>34</td></tr><tr><td>8</td><td>115%</td><td>36</td></tr><tr><td>9</td><td>120%</td><td>38</td></tr><tr><td>10</td><td>125%</td><td>40</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-ravaging-rainstorm">
-            <div class="sk-top"><strong>Ravaging Rainstorm</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Ravaging Rainstorm</strong><i class="sk-type">Physical</i><i class="sk-target">Ground</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Consumes <b class="mech">Rhythm</b> to accelerate an arrow storm.</p>
             <p class="sk-body">The user fires a volley of enchanted arrows to rain on a distant area, inflicting physical damage repeatedly to all targets within over time. The interval between hits is reduced by the user's <b class="mech">Rhythm</b> level, which is consumed on cast.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-voluminous-volley">Voluminous Volley</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage (per hit)</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>55%</td><td>75</td></tr><tr><td>2</td><td>60%</td><td>80</td></tr><tr><td>3</td><td>65%</td><td>85</td></tr><tr><td>4</td><td>70%</td><td>90</td></tr><tr><td>5</td><td>75%</td><td>95</td></tr><tr><td>6</td><td>80%</td><td>100</td></tr><tr><td>7</td><td>85%</td><td>105</td></tr><tr><td>8</td><td>90%</td><td>110</td></tr><tr><td>9</td><td>95%</td><td>115</td></tr><tr><td>10</td><td>100%</td><td>120</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-magic" id="s-rhythmic-retort">
-            <div class="sk-top"><strong>Rhythmic Retort</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Rhythmic Retort</strong><i class="sk-type">Magical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Magic pulse that tunes the user's <b class="mech">Rhythm</b> toward three.</p>
             <p class="sk-body">The user fires a bolt of sound at a distance target, inflicting magic damage while altering their own <b class="mech">Rhythm</b> level. If the user's <b class="mech">Rhythm</b> level is below 3, it is increased by 1. If it's above 3, it is decreased by 1. If the user's rhythm level is exactly three, its duration is increased by 5 seconds.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>420%</td><td>22</td></tr><tr><td>2</td><td>440%</td><td>24</td></tr><tr><td>3</td><td>460%</td><td>26</td></tr><tr><td>4</td><td>480%</td><td>28</td></tr><tr><td>5</td><td>500%</td><td>30</td></tr><tr><td>6</td><td>520%</td><td>32</td></tr><tr><td>7</td><td>540%</td><td>34</td></tr><tr><td>8</td><td>560%</td><td>36</td></tr><tr><td>9</td><td>580%</td><td>38</td></tr><tr><td>10</td><td>600%</td><td>40</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-magic" id="s-crushing-concerto">
-            <div class="sk-top"><strong>Crushing Concerto</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Crushing Concerto</strong><i class="sk-type">Magical</i><i class="sk-target">Ground</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Consumes <b class="mech">Rhythm</b> for a multi-hit sound wave.</p>
             <p class="sk-body">Creates a powerful burst of sound, dealing devastating magical damage to all enemies in a small area. The amount of damage is based on the user's <b class="mech">Rhythm</b> level, which is consumed. If the user's <b class="mech">Rhythm</b> is 0, this skill will miss.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-rhythmic-retort">Rhythmic Retort</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage (per hit)</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>125%</td><td>75</td></tr><tr><td>2</td><td>150%</td><td>80</td></tr><tr><td>3</td><td>175%</td><td>85</td></tr><tr><td>4</td><td>200%</td><td>90</td></tr><tr><td>5</td><td>225%</td><td>95</td></tr><tr><td>6</td><td>250%</td><td>100</td></tr><tr><td>7</td><td>275%</td><td>105</td></tr><tr><td>8</td><td>300%</td><td>110</td></tr><tr><td>9</td><td>325%</td><td>115</td></tr><tr><td>10</td><td>350%</td><td>120</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -256,29 +262,35 @@
         <h3 class="branch-title">Supportive Tarot Cards<span>5 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-support" id="s-tarot-card-the-magician">
-            <div class="sk-top"><strong>Tarot Card: The Magician</strong><i class="sk-type">Support</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Tarot Card: The Magician</strong><i class="sk-type">Support</i><i class="sk-target">Ally</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Adds flat MATK% to an ally's magic skills.</p>
             <p class="sk-body">Bestows the blessing of the Magician on the targeted ally, increasing all damage dealt by their magical attacks for a short time. The duration of the buff is based on the <b class="mech">Rhythm</b> level of the user when it was applied.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Matk Bonus</th></tr></thead><tbody><tr><td>1</td><td>50% Matk</td></tr><tr><td>2</td><td>100% Matk</td></tr><tr><td>3</td><td>150% Matk</td></tr><tr><td>4</td><td>200% Matk</td></tr><tr><td>5</td><td>250% Matk</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-tarot-card-strength">
-            <div class="sk-top"><strong>Tarot Card: Strength</strong><i class="sk-type">Support</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Tarot Card: Strength</strong><i class="sk-type">Support</i><i class="sk-target">Ally</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Adds flat ATK% to an ally's physical skills.</p>
             <p class="sk-body">Bestows the blessing of Strength on the targeted ally, increasing all damage dealt by their Physical attacks for a short time. The duration of the buff is based on the <b class="mech">Rhythm</b> level of the user when it was applied.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Atk Bonus</th></tr></thead><tbody><tr><td>1</td><td>50% Atk</td></tr><tr><td>2</td><td>100% Atk</td></tr><tr><td>3</td><td>150% Atk</td></tr><tr><td>4</td><td>200% Atk</td></tr><tr><td>5</td><td>250% Atk</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-tarot-card-the-high-priestess">
-            <div class="sk-top"><strong>Tarot Card: The High Priestess</strong><i class="sk-type">Support</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Tarot Card: The High Priestess</strong><i class="sk-type">Support</i><i class="sk-target">Ally</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Auto-heals an ally the next few times they take damage.</p>
             <p class="sk-body">Bestows the blessing of the High Priestess on the targeted ally, causing them to heal a small amount of life the next few times they would take damage. The amount healed is based on the user's <b class="mech">Rhythm</b> Level when the buff was applied.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Number of Hits Healed</th></tr></thead><tbody><tr><td>1</td><td>1</td></tr><tr><td>2</td><td>1</td></tr><tr><td>3</td><td>2</td></tr><tr><td>4</td><td>2</td></tr><tr><td>5</td><td>3</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-tarot-card-the-lovers">
-            <div class="sk-top"><strong>Tarot Card: The Lovers</strong><i class="sk-type">Support</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Tarot Card: The Lovers</strong><i class="sk-type">Support</i><i class="sk-target">Ally</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Cleanses statuses and grants temporary immunity.</p>
             <p class="sk-body">Bestows the blessing of the Lovers on the targeted ally, curing them of numerous negative Statuses and shielding them from those statuses for a short time. The duration of the protective effect is based on the user's <b class="mech">Rhythm</b> Level when the buff was applied.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Cooldown</th></tr></thead><tbody><tr><td>1</td><td>27s</td></tr><tr><td>2</td><td>24s</td></tr><tr><td>3</td><td>21s</td></tr><tr><td>4</td><td>18s</td></tr><tr><td>5</td><td>15s</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-tarot-card-wheel-of-fortune">
-            <div class="sk-top"><strong>Tarot Card: Wheel of Fortune</strong><i class="sk-type">Support</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Tarot Card: Wheel of Fortune</strong><i class="sk-type">Support</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Consumes <b class="mech">Rhythm</b> to reduce all of the user's active cooldowns.</p>
             <p class="sk-body">Bestows the blessing of the Wheel of Fortune on the user. Consumes the user's <b class="mech">Rhythm</b> Level to reduce all currently active skill cooldowns by a large amount. This skill only affects the caster, it cannot be used on other allies.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-tarot-card-the-magician">Tarot Card: The Magician</a> Lv5, <a href="#s-tarot-card-strength">Tarot Card: Strength</a> Lv5, <a href="#s-tarot-card-the-high-priestess">Tarot Card: The High Priestess</a> Lv5, <a href="#s-tarot-card-the-lovers">Tarot Card: The Lovers</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Cooldown</th></tr></thead><tbody><tr><td>1</td><td>114s</td></tr><tr><td>2</td><td>108s</td></tr><tr><td>3</td><td>102s</td></tr><tr><td>4</td><td>96s</td></tr><tr><td>5</td><td>90s</td></tr><tr><td>6</td><td>84s</td></tr><tr><td>7</td><td>78s</td></tr><tr><td>8</td><td>72s</td></tr><tr><td>9</td><td>66s</td></tr><tr><td>10</td><td>60s</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -286,35 +298,41 @@
         <h3 class="branch-title">Offensive Tarot Cards<span>5 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-physical" id="s-tarot-card-the-fool">
-            <div class="sk-top"><strong>Tarot Card: The Fool</strong><i class="sk-type">Offensive</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Tarot Card: The Fool</strong><i class="sk-type">Offensive</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Curses an enemy's skills with a chance to fail.</p>
             <p class="sk-body">Bestows the curse of the Fool on the targeted enemy. For a short duration, skills cast by that enemy have a chance to fail. The failure chance is based on the user's <b class="mech">Rhythm</b> Level when the debuff was applied. The debuff will persist until either a skill fails, or the max duration is reached.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Duration</th></tr></thead><tbody><tr><td>1</td><td>3s</td></tr><tr><td>2</td><td>6s</td></tr><tr><td>3</td><td>9s</td></tr><tr><td>4</td><td>12s</td></tr><tr><td>5</td><td>15s</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-tarot-card-the-hanged-man">
-            <div class="sk-top"><strong>Tarot Card: The Hanged Man</strong><i class="sk-type">Offensive</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Tarot Card: The Hanged Man</strong><i class="sk-type">Offensive</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short"><b class="mech">Rhythm</b>-scaled disable: <b class="kw kw-slow">Slow</b>, <b class="kw kw-slow">Immobilize</b>, or <b class="kw kw-stun">Stun</b>.</p>
             <p class="sk-body">Bestows the curse of the Hanged Man on the targeted enemy, inflicting various disabling statuses based on the user's <b class="mech">Rhythm</b> Level.</p>
             <p class="sk-body">1~2: <b class="kw kw-slow">Slow</b></p>
             <p class="sk-body">3~4: <b class="kw kw-slow">Immobilize</b></p>
             <p class="sk-body">5: <b class="kw kw-stun">Stun</b></p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Cooldown</th></tr></thead><tbody><tr><td>1</td><td>27s</td></tr><tr><td>2</td><td>24s</td></tr><tr><td>3</td><td>21s</td></tr><tr><td>4</td><td>18s</td></tr><tr><td>5</td><td>15s</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-tarot-card-the-tower">
-            <div class="sk-top"><strong>Tarot Card: The Tower</strong><i class="sk-type">Offensive</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Tarot Card: The Tower</strong><i class="sk-type">Offensive</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Multi-hit arrow-property burst scaling with <b class="mech">Rhythm</b>.</p>
             <p class="sk-body">Inflicts Hybrid damage on the targeted enemy based on the user's <b class="mech">Rhythm</b> Level. The damage takes the property of the user's equipped arrow. If the user's <b class="mech">Rhythm</b> Level is zero, this skill will miss.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage (per hit)</th></tr></thead><tbody><tr><td>1</td><td>70%</td></tr><tr><td>2</td><td>90%</td></tr><tr><td>3</td><td>110%</td></tr><tr><td>4</td><td>130%</td></tr><tr><td>5</td><td>150%</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-tarot-card-the-devil">
-            <div class="sk-top"><strong>Tarot Card: The Devil</strong><i class="sk-type">Offensive</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Tarot Card: The Devil</strong><i class="sk-type">Offensive</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Delayed explosion with <b class="mech">Rhythm</b>-scaled severe statuses.</p>
             <p class="sk-body">Bestows the curse of the Devil on the targeted enemy. After a short delay, the target explodes, dealing hybrid damage and inflicting various status effects to all enemies in the area based on the user's <b class="mech">Rhythm</b> Level at the time the debuff was applied.</p>
             <p class="sk-body">1~2: <b class="kw kw-burn">Severe Burning</b></p>
             <p class="sk-body">3~4: <b class="kw kw-poison">Deadly Poison</b></p>
             <p class="sk-body">5: <b class="kw kw-bleed">Internal Bleeding</b></p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th></tr></thead><tbody><tr><td>1</td><td>275%</td></tr><tr><td>2</td><td>300%</td></tr><tr><td>3</td><td>325%</td></tr><tr><td>4</td><td>350%</td></tr><tr><td>5</td><td>375%</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-tarot-card-death">
-            <div class="sk-top"><strong>Tarot Card: Death</strong><i class="sk-type">Offensive</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Tarot Card: Death</strong><i class="sk-type">Offensive</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Max-HP-based burst that pierces all defenses.</p>
             <p class="sk-body">Consumes the user's <b class="mech">Rhythm</b> level to inflict direct damage on a single target proportional to the user's Max HP. The damage dealt by this skill is neither physical nor magical. The HP to Damage ratio of this skill is determined by the user's <b class="mech">Rhythm</b> Level.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-tarot-card-the-fool">Tarot Card: The Fool</a> Lv5, <a href="#s-tarot-card-the-hanged-man">Tarot Card: The Hanged Man</a> Lv5, <a href="#s-tarot-card-the-tower">Tarot Card: The Tower</a> Lv5, <a href="#s-tarot-card-the-devil">Tarot Card: The Devil</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Cooldown</th></tr></thead><tbody><tr><td>1</td><td>114s</td></tr><tr><td>2</td><td>108s</td></tr><tr><td>3</td><td>102s</td></tr><tr><td>4</td><td>96s</td></tr><tr><td>5</td><td>90s</td></tr><tr><td>6</td><td>84s</td></tr><tr><td>7</td><td>78s</td></tr><tr><td>8</td><td>72s</td></tr><tr><td>9</td><td>66s</td></tr><tr><td>10</td><td>60s</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>

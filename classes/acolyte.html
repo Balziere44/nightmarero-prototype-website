@@ -212,7 +212,7 @@
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types, targets and the numbers behind every level come from the player wiki, so they match what you see in game.</p>
       </div>
       <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-magic" data-i18n="cls.t.magic">Magic</span><span class="sk-support" data-i18n="cls.t.support">Support</span><span class="sk-passive" data-i18n="cls.t.passive">Passive</span><span class="sk-utility" data-i18n="cls.t.utility">Utility</span></div>
 
@@ -220,39 +220,50 @@
         <h3 class="branch-title">Skills<span>7 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-magic" id="s-signum-crucis">
-            <div class="sk-top"><strong>Signum Crucis</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Signum Crucis</strong><i class="sk-type">Magical</i><i class="sk-target">Around you</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Holy AoE damage and grants Aspersio, endowing weapon with Holy.</p>
             <p class="sk-body">Does hybrid Physical and Magical damage that is Holy element to all enemies in an area around the caster. Also endows the user with the Aspersio effect for a short time.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Area</th></tr></thead><tbody><tr><td>1</td><td>110%</td><td>3x3</td></tr><tr><td>2</td><td>120%</td><td>3x3</td></tr><tr><td>3</td><td>130%</td><td>3x3</td></tr><tr><td>4</td><td>140%</td><td>3x3</td></tr><tr><td>5</td><td>150%</td><td>5x5</td></tr><tr><td>6</td><td>160%</td><td>5x5</td></tr><tr><td>7</td><td>170%</td><td>5x5</td></tr><tr><td>8</td><td>180%</td><td>5x5</td></tr><tr><td>9</td><td>190%</td><td>7x7</td></tr><tr><td>10</td><td>200%</td><td>7x7</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-heal">
-            <div class="sk-top"><strong>Heal</strong><i class="sk-type">Recovery</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Heal</strong><i class="sk-type">Recovery</i><i class="sk-target">Ally</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Restores target's HP, deals damage to Undead enemies.</p>
             <p class="sk-body">Instantly recovers a large amount of HP for the target. Can alternatively be used to damage Undead property enemies. Has a considerable cooldown.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-signum-crucis">Signum Crucis</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>13</td></tr><tr><td>2</td><td>16</td></tr><tr><td>3</td><td>19</td></tr><tr><td>4</td><td>22</td></tr><tr><td>5</td><td>25</td></tr><tr><td>6</td><td>28</td></tr><tr><td>7</td><td>31</td></tr><tr><td>8</td><td>34</td></tr><tr><td>9</td><td>37</td></tr><tr><td>10</td><td>40</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-utility" id="s-blessing">
-            <div class="sk-top"><strong>Blessing</strong><i class="sk-type">Utility</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Blessing</strong><i class="sk-type">Utility</i><i class="sk-target">Ally</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Increases target's Hit, Flee, and Perfect Dodge.</p>
             <p class="sk-body">Increases the Hit, Flee, and Perfect Dodge of the target for a lengthy duration.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-signum-crucis">Signum Crucis</a> Lv3, <a href="#s-heal">Heal</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Duration</th><th>Hit Bonus</th><th>Flee Bonus</th><th>PDodge Bonus</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>60s</td><td>2</td><td>2</td><td>1</td><td>28</td></tr><tr><td>2</td><td>80s</td><td>4</td><td>4</td><td>2</td><td>32</td></tr><tr><td>3</td><td>100s</td><td>6</td><td>6</td><td>3</td><td>36</td></tr><tr><td>4</td><td>120s</td><td>8</td><td>8</td><td>4</td><td>40</td></tr><tr><td>5</td><td>140s</td><td>10</td><td>10</td><td>5</td><td>44</td></tr><tr><td>6</td><td>160s</td><td>12</td><td>12</td><td>6</td><td>48</td></tr><tr><td>7</td><td>180s</td><td>14</td><td>14</td><td>7</td><td>52</td></tr><tr><td>8</td><td>200s</td><td>16</td><td>16</td><td>8</td><td>56</td></tr><tr><td>9</td><td>220s</td><td>18</td><td>18</td><td>9</td><td>60</td></tr><tr><td>10</td><td>240s</td><td>20</td><td>20</td><td>10</td><td>64</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-passive" id="s-mace-mastery">
             <div class="sk-top"><strong>Mace Mastery</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Increases damage and hit rate of Maces.</p>
             <p class="sk-body">Increases the damage and Hit Rate of Maces.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage Bonus</th><th>Hit Bonus</th></tr></thead><tbody><tr><td>1</td><td>4</td><td>2</td></tr><tr><td>2</td><td>8</td><td>4</td></tr><tr><td>3</td><td>12</td><td>6</td></tr><tr><td>4</td><td>16</td><td>8</td></tr><tr><td>5</td><td>20</td><td>10</td></tr><tr><td>6</td><td>24</td><td>12</td></tr><tr><td>7</td><td>28</td><td>14</td></tr><tr><td>8</td><td>32</td><td>16</td></tr><tr><td>9</td><td>36</td><td>18</td></tr><tr><td>10</td><td>40</td><td>20</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-smite">
-            <div class="sk-top"><strong>Smite</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Smite</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Strong melee attack that also consumes Aspersio to add a delayed AoE explosion.</p>
             <p class="sk-body">Deals physical damage according to the weapon's property to a single target. If under the Aspersio status, the target will explode after three seconds, doing the same damage again to the target and all enemies in the area around them.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-signum-crucis">Signum Crucis</a> Lv1, <a href="#s-mace-mastery">Mace Mastery</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>210%</td><td>12</td></tr><tr><td>2</td><td>220%</td><td>14</td></tr><tr><td>3</td><td>230%</td><td>16</td></tr><tr><td>4</td><td>240%</td><td>18</td></tr><tr><td>5</td><td>250%</td><td>20</td></tr><tr><td>6</td><td>260%</td><td>22</td></tr><tr><td>7</td><td>270%</td><td>24</td></tr><tr><td>8</td><td>280%</td><td>26</td></tr><tr><td>9</td><td>290%</td><td>28</td></tr><tr><td>10</td><td>300%</td><td>30</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-passive" id="s-piety">
             <div class="sk-top"><strong>Piety</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Improves max SP, SP Regen, and Healing Power.</p>
             <p class="sk-body">Improves the users Max SP, SP Regeneration, and Healing Power.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Max SP Bonus</th><th>SP Regen Bonus</th><th>Healing Power Bonus</th></tr></thead><tbody><tr><td>1</td><td>1%</td><td>3%</td><td>2%</td></tr><tr><td>2</td><td>2%</td><td>6%</td><td>4%</td></tr><tr><td>3</td><td>3%</td><td>9%</td><td>6%</td></tr><tr><td>4</td><td>4%</td><td>12%</td><td>8%</td></tr><tr><td>5</td><td>5%</td><td>15%</td><td>10%</td></tr><tr><td>6</td><td>6%</td><td>18%</td><td>12%</td></tr><tr><td>7</td><td>7%</td><td>21%</td><td>14%</td></tr><tr><td>8</td><td>8%</td><td>24%</td><td>16%</td></tr><tr><td>9</td><td>9%</td><td>27%</td><td>18%</td></tr><tr><td>10</td><td>10%</td><td>30%</td><td>20%</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-magic" id="s-holy-light">
-            <div class="sk-top"><strong>Holy Light</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Holy Light</strong><i class="sk-type">Magical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Magical attack that deals more damage under Aspersio.</p>
             <p class="sk-body">Deals Holy element magic damage to a single target, which is increased if the caster is under the Aspersio status.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-signum-crucis">Signum Crucis</a> Lv1, <a href="#s-piety">Piety</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Bonus Aspersio Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>175%</td><td>25%</td><td>17</td></tr><tr><td>2</td><td>200%</td><td>50%</td><td>19</td></tr><tr><td>3</td><td>225%</td><td>75%</td><td>21</td></tr><tr><td>4</td><td>250%</td><td>100%</td><td>23</td></tr><tr><td>5</td><td>275%</td><td>125%</td><td>25</td></tr><tr><td>6</td><td>300%</td><td>150%</td><td>27</td></tr><tr><td>7</td><td>325%</td><td>175%</td><td>29</td></tr><tr><td>8</td><td>350%</td><td>200%</td><td>31</td></tr><tr><td>9</td><td>375%</td><td>225%</td><td>33</td></tr><tr><td>10</td><td>400%</td><td>250%</td><td>35</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>

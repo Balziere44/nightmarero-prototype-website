@@ -221,7 +221,7 @@
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types, targets and the numbers behind every level come from the player wiki, so they match what you see in game.</p>
       </div>
       <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Summoned Elemental</span></div>
       <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-burn">Burning</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
@@ -231,19 +231,23 @@
         <h3 class="branch-title">Fire Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-summon" id="s-summon-ardor">
-            <div class="sk-top"><strong>Summon Ardor</strong><i class="sk-type">Summon</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Summon Ardor</strong><i class="sk-type">Summon</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Summons the fire spirit: Fire MDef Pierce, reduced Water Resistance.</p>
             <p class="sk-body">Summons Ardor, the spirit of indomitable fire, to aid in combat. While summoned, the user's Fire Property magic gains additional Magic Defense Pierce, but the user's Water Resistance is reduced. Only one Elemental Spirit can be summoned at a time.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-agni-s-wrath">Agni's Wrath</a> Lv3, <a href="#s-agni-s-heat">Agni's Heat</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Fire Magic MDef Pierce</th><th>Water Damage Taken Penalty</th></tr></thead><tbody><tr><td>1</td><td>10%</td><td>+10%</td></tr><tr><td>2</td><td>20%</td><td>+20%</td></tr><tr><td>3</td><td>30%</td><td>+30%</td></tr><tr><td>4</td><td>40%</td><td>+40%</td></tr><tr><td>5</td><td>50%</td><td>+50%</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-magic" id="s-agni-s-wrath">
-            <div class="sk-top"><strong>Agni's Wrath</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Agni's Wrath</strong><i class="sk-type">Magical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Fire AoE that triggers the spirit's Attack Skill.</p>
             <p class="sk-body">The user calls on Agni, spirit of flame, to incinerate their foes. Deals a burst of Fire Property damage to the target and all enemies around them. The damage of this skill is increased by the user's bonuses to Summoned Entity damage, and triggers the user's <b class="mech">Summoned Elemental</b> to use its Offensive ability. This skill's Cooldown is halved if Ardor is present.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>450%</td><td>55</td></tr><tr><td>2</td><td>500%</td><td>60</td></tr><tr><td>3</td><td>550%</td><td>65</td></tr><tr><td>4</td><td>600%</td><td>70</td></tr><tr><td>5</td><td>650%</td><td>75</td></tr><tr><td>6</td><td>700%</td><td>80</td></tr><tr><td>7</td><td>750%</td><td>85</td></tr><tr><td>8</td><td>800%</td><td>90</td></tr><tr><td>9</td><td>850%</td><td>95</td></tr><tr><td>10</td><td>900%</td><td>100</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-agni-s-heat">
-            <div class="sk-top"><strong>Agni's Heat</strong><i class="sk-type">Support</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Agni's Heat</strong><i class="sk-type">Support</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short"><b class="kw kw-burn">Burning</b>-damage field that triggers the spirit's Support Skill.</p>
             <p class="sk-body">The user calls on Agni, the spirit of flame, to infuse the targeted area with unnatural heat. For a short duration, all enemies that enter the targeted area take damage over time. The damage is based on the user's <b class="kw kw-burn">Burning</b> Damage, but does not count as the actual <b class="kw kw-burn">Burning</b> Status. The damage is further increased by the user's bonuses to Summoned Entity HP, and triggers the user's <b class="mech">Summoned Elemental</b> to use its Support Skill. This skill's Cooldown is halved if Ardor is present.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Duration</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>1s</td><td>110</td></tr><tr><td>2</td><td>2s</td><td>120</td></tr><tr><td>3</td><td>3s</td><td>130</td></tr><tr><td>4</td><td>4s</td><td>140</td></tr><tr><td>5</td><td>5s</td><td>150</td></tr><tr><td>6</td><td>6s</td><td>160</td></tr><tr><td>7</td><td>7s</td><td>170</td></tr><tr><td>8</td><td>8s</td><td>180</td></tr><tr><td>9</td><td>9s</td><td>190</td></tr><tr><td>10</td><td>10s</td><td>200</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -251,19 +255,23 @@
         <h3 class="branch-title">Water Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-summon" id="s-summon-diluvio">
-            <div class="sk-top"><strong>Summon Diluvio</strong><i class="sk-type">Summon</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Summon Diluvio</strong><i class="sk-type">Summon</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Summons the water spirit: Water MDef Pierce, reduced Wind Resistance.</p>
             <p class="sk-body">Summons Diluvio, the spirit of the endless ocean depths, to aid in combat. While summoned, the user's Water Property Magic gains additional Magic Defense Pierce, but the user's Wind Resistance is reduced. Only one Elemental Spirit can be summoned at a time.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-aqua-s-breath">Aqua's Breath</a> Lv3, <a href="#s-aqua-s-relief">Aqua's Relief</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Water Magic MDef Pierce</th><th>Wind Damage Taken Penalty</th></tr></thead><tbody><tr><td>1</td><td>10%</td><td>+10%</td></tr><tr><td>2</td><td>20%</td><td>+20%</td></tr><tr><td>3</td><td>30%</td><td>+30%</td></tr><tr><td>4</td><td>40%</td><td>+40%</td></tr><tr><td>5</td><td>50%</td><td>+50%</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-magic" id="s-aqua-s-breath">
-            <div class="sk-top"><strong>Aqua's Breath</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Aqua's Breath</strong><i class="sk-type">Magical</i><i class="sk-target">Ground</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Water AoE that triggers the spirit's Attack Skill.</p>
             <p class="sk-body">Calls on Aqua, the spirit of water, to strike down their foes, creating a blast of frigid snow and ice to strike the targeted area. All enemies in the are take Water Property damage and have a chance to be Chilled. The damage of this skill is increased by the user's bonuses to Summoned Entity Damage, and triggers the user's <b class="mech">Summoned Elemental</b> to use its Offensive Skill. This skill's Cooldown is halved if Diluvio is present.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>450%</td><td>55</td></tr><tr><td>2</td><td>500%</td><td>60</td></tr><tr><td>3</td><td>550%</td><td>65</td></tr><tr><td>4</td><td>600%</td><td>70</td></tr><tr><td>5</td><td>650%</td><td>75</td></tr><tr><td>6</td><td>700%</td><td>80</td></tr><tr><td>7</td><td>750%</td><td>85</td></tr><tr><td>8</td><td>800%</td><td>90</td></tr><tr><td>9</td><td>850%</td><td>95</td></tr><tr><td>10</td><td>900%</td><td>100</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-aqua-s-relief">
-            <div class="sk-top"><strong>Aqua's Relief</strong><i class="sk-type">Support</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Aqua's Relief</strong><i class="sk-type">Support</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Healing rain that triggers the spirit's Support Skill.</p>
             <p class="sk-body">Calls on Aqua, the spirit of water, to grant relief to their allies. Causes a gentle healing rain to fall around the user, gradually healing all allies within it over time. The amount of healing is increased by the user's bonuses to Summoned Entity HP, and triggers the user's <b class="mech">Summoned Elemental</b> to use its Support Skill. This skill's Cooldown is halved if Diluvio is present.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Healing (per second)</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>100</td><td>110</td></tr><tr><td>2</td><td>200</td><td>120</td></tr><tr><td>3</td><td>300</td><td>130</td></tr><tr><td>4</td><td>400</td><td>140</td></tr><tr><td>5</td><td>500</td><td>150</td></tr><tr><td>6</td><td>600</td><td>160</td></tr><tr><td>7</td><td>700</td><td>170</td></tr><tr><td>8</td><td>800</td><td>180</td></tr><tr><td>9</td><td>900</td><td>190</td></tr><tr><td>10</td><td>1000</td><td>200</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -271,19 +279,23 @@
         <h3 class="branch-title">Wind Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-summon" id="s-summon-procella">
-            <div class="sk-top"><strong>Summon Procella</strong><i class="sk-type">Summon</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Summon Procella</strong><i class="sk-type">Summon</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Summons the wind spirit: Wind MDef Pierce, reduced Earth Resistance.</p>
             <p class="sk-body">Summons Procella, the spirit of storm and gale, to aid in combat. While summoned, the user's Wind Property Magic gains additional Magic Defense Pierce, but the user's Earth Resistance is reduced. Only one Elemental Spirit can be summoned at a time.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-ventus-s-gale">Ventus's Gale</a> Lv3, <a href="#s-ventus-s-haste">Ventus's Haste</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Wind Magic MDef Pierce</th><th>Earth Damage Taken Penalty</th></tr></thead><tbody><tr><td>1</td><td>10%</td><td>+10%</td></tr><tr><td>2</td><td>20%</td><td>+20%</td></tr><tr><td>3</td><td>30%</td><td>+30%</td></tr><tr><td>4</td><td>40%</td><td>+40%</td></tr><tr><td>5</td><td>50%</td><td>+50%</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-magic" id="s-ventus-s-gale">
-            <div class="sk-top"><strong>Ventus's Gale</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Ventus's Gale</strong><i class="sk-type">Magical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Line-piercing Wind attack that triggers the spirit's Attack Skill.</p>
             <p class="sk-body">Calls on Ventus, the spirit of the wind, to unleash a violent tornado at their foes, dealing damage to all enemies in a straight line. The damage of this skill is increased by the user's bonuses to Summoned Entity Damage, and triggers the user's <b class="mech">Summoned Elemental</b> to use its Offensive Skill. This skill's cooldown is halved if Procella is present.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>450%</td><td>55</td></tr><tr><td>2</td><td>500%</td><td>60</td></tr><tr><td>3</td><td>550%</td><td>65</td></tr><tr><td>4</td><td>600%</td><td>70</td></tr><tr><td>5</td><td>650%</td><td>75</td></tr><tr><td>6</td><td>700%</td><td>80</td></tr><tr><td>7</td><td>750%</td><td>85</td></tr><tr><td>8</td><td>800%</td><td>90</td></tr><tr><td>9</td><td>850%</td><td>95</td></tr><tr><td>10</td><td>900%</td><td>100</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-ventus-s-haste">
-            <div class="sk-top"><strong>Ventus's Haste</strong><i class="sk-type">Support</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Ventus's Haste</strong><i class="sk-type">Support</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Party ASPD and cast-speed buff that triggers the spirit's Support Skill.</p>
             <p class="sk-body">The user calls on Ventus, the spirit of the wind, to accelerate their party members. For a short duration, all party members have increased Attack Speed and reduced Variable Cast Time. It also triggers the user's <b class="mech">Summoned Elemental</b> to use its Support Skill. This skill's Cooldown is halved if Procella is present.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Attack Speed Bonus</th><th>VCT Reduction</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>0.5</td><td>2%</td><td>110</td></tr><tr><td>2</td><td>1</td><td>4%</td><td>120</td></tr><tr><td>3</td><td>1.5</td><td>6%</td><td>130</td></tr><tr><td>4</td><td>2</td><td>8%</td><td>140</td></tr><tr><td>5</td><td>2.5</td><td>10%</td><td>150</td></tr><tr><td>6</td><td>3</td><td>12%</td><td>160</td></tr><tr><td>7</td><td>3.5</td><td>14%</td><td>170</td></tr><tr><td>8</td><td>4</td><td>16%</td><td>180</td></tr><tr><td>9</td><td>4.5</td><td>18%</td><td>190</td></tr><tr><td>10</td><td>5</td><td>20%</td><td>200</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -291,19 +303,23 @@
         <h3 class="branch-title">Earth Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-summon" id="s-summon-terra-motus">
-            <div class="sk-top"><strong>Summon Terra Motus</strong><i class="sk-type">Summon</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Summon Terra Motus</strong><i class="sk-type">Summon</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Summons the earth spirit: Earth MDef Pierce, reduced Fire Resistance.</p>
             <p class="sk-body">Summons Terra Motus, the spirit of earth and stone, to aid in combat. While summoned, the user's Earth Property Magic gains additional Magic Defense Pierce, but the user's Fire Resistance is reduced. Only one Elemental Spirit can be summoned at a time.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-terra-s-fangs">Terra's Fangs</a> Lv3, <a href="#s-terra-s-shield">Terra's Shield</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Earth Magic MDef Pierce</th><th>Fire Damage Taken Penalty</th></tr></thead><tbody><tr><td>1</td><td>10%</td><td>+10%</td></tr><tr><td>2</td><td>20%</td><td>+20%</td></tr><tr><td>3</td><td>30%</td><td>+30%</td></tr><tr><td>4</td><td>40%</td><td>+40%</td></tr><tr><td>5</td><td>50%</td><td>+50%</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-magic" id="s-terra-s-fangs">
-            <div class="sk-top"><strong>Terra's Fangs</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Terra's Fangs</strong><i class="sk-type">Magical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Earth AoE that triggers the spirit's Attack Skill.</p>
             <p class="sk-body">Call on Terra, spirit of the earth, to create a tremor in the ground at the targeted location. All enemies in the area are struck for Earth Property damage. The damage of this skill is increased by the user's bonuses to Summoned Entity Damage, and it triggers the user's <b class="mech">Summoned Elemental</b> to use its Offensive Skill. This skill's Cooldown is halved if Terra Motus is present.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>450%</td><td>55</td></tr><tr><td>2</td><td>500%</td><td>60</td></tr><tr><td>3</td><td>550%</td><td>65</td></tr><tr><td>4</td><td>600%</td><td>70</td></tr><tr><td>5</td><td>650%</td><td>75</td></tr><tr><td>6</td><td>700%</td><td>80</td></tr><tr><td>7</td><td>750%</td><td>85</td></tr><tr><td>8</td><td>800%</td><td>90</td></tr><tr><td>9</td><td>850%</td><td>95</td></tr><tr><td>10</td><td>900%</td><td>100</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-terra-s-shield">
-            <div class="sk-top"><strong>Terra's Shield</strong><i class="sk-type">Support</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Terra's Shield</strong><i class="sk-type">Support</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Party damage-absorbing barrier that triggers the spirit's Support Skill.</p>
             <p class="sk-body">Calls on Terra, spirit of the earth, to protect all of the user's party members. Each party member receives a shield that absorbs half of the damage they would take from all Physical and Magical damage. The shield ends after a set duration or after it has absorbed a certain amount of damage. The shield's HP is increased by the user's Barrier Potency and by the user's bonuses to Summoned Entity HP. It also triggers the user's <b class="mech">Summoned Elemental</b> to use its Support Skill. This skill's Cooldown is halved if Terra Motus is present.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Shield HP</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>500</td><td>110</td></tr><tr><td>2</td><td>1000</td><td>120</td></tr><tr><td>3</td><td>1500</td><td>130</td></tr><tr><td>4</td><td>2000</td><td>140</td></tr><tr><td>5</td><td>2500</td><td>150</td></tr><tr><td>6</td><td>3000</td><td>160</td></tr><tr><td>7</td><td>3500</td><td>170</td></tr><tr><td>8</td><td>4000</td><td>180</td></tr><tr><td>9</td><td>4500</td><td>190</td></tr><tr><td>10</td><td>5000</td><td>200</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>

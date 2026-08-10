@@ -214,7 +214,7 @@
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types, targets and the numbers behind every level come from the player wiki, so they match what you see in game.</p>
       </div>
       <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-burn">Burning</span><span class="kw-vuln">Vulnerable</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
       <div class="type-key"><span class="sk-support" data-i18n="cls.t.support">Support</span><span class="sk-debuff" data-i18n="cls.t.debuff">Debuff</span><span class="sk-passive" data-i18n="cls.t.passive">Passive</span></div>
@@ -228,33 +228,42 @@
             <p class="sk-body">Increases the effectiveness of all Grace skills cast by the user. After casting a Grace skill, the next Authority skill they cast will be cast at the same level as that Grace skill, unless the Authority skill is already a higher level.</p>
           </li>
           <li class="skill-card sk-support" id="s-aspersio">
-            <div class="sk-top"><strong>Aspersio</strong><i class="sk-type">Grace</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Aspersio</strong><i class="sk-type">Grace</i><i class="sk-target">Party</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Endows party weapons with the Holy property.</p>
             <p class="sk-body">Endows the weapons of all party members with the Holy property. For each level of Divine Grace learned, all Holy property damage dealt by those party members is increased.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-divine-grace">Divine Grace</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-divine-grace">Divine Grace</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Duration</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>30s</td><td>60</td></tr><tr><td>2</td><td>60s</td><td>70</td></tr><tr><td>3</td><td>90s</td><td>80</td></tr><tr><td>4</td><td>120s</td><td>90</td></tr><tr><td>5</td><td>150s</td><td>100</td></tr><tr><td>6</td><td>180s</td><td>110</td></tr><tr><td>7</td><td>210s</td><td>120</td></tr><tr><td>8</td><td>240s</td><td>130</td></tr><tr><td>9</td><td>270s</td><td>140</td></tr><tr><td>10</td><td>300s</td><td>150</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-renovatio">
-            <div class="sk-top"><strong>Renovatio</strong><i class="sk-type">Grace</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Renovatio</strong><i class="sk-type">Grace</i><i class="sk-target">Party</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Party AoE heal over time.</p>
             <p class="sk-body">Calls a regenerating light to shine on all party members, restoring life over time for a short duration. Higher levels of Divine Grace reduce this skill's cooldown.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-divine-grace">Divine Grace</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-divine-grace">Divine Grace</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>110</td></tr><tr><td>2</td><td>120</td></tr><tr><td>3</td><td>130</td></tr><tr><td>4</td><td>140</td></tr><tr><td>5</td><td>150</td></tr><tr><td>6</td><td>160</td></tr><tr><td>7</td><td>170</td></tr><tr><td>8</td><td>180</td></tr><tr><td>9</td><td>190</td></tr><tr><td>10</td><td>200</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-impositio-manus">
-            <div class="sk-top"><strong>Impositio Manus</strong><i class="sk-type">Grace</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Impositio Manus</strong><i class="sk-type">Grace</i><i class="sk-target">Party</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Cleanses damaging statuses from the party and grants brief immunity.</p>
             <p class="sk-body">Invokes a miracle of restoration on all party members through the laying of hands. Removes a number of damaging status effects from all party members and provides immunity to them for a short period of time. Higher levels of Divine Grace reduce this skill's cooldown.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-divine-grace">Divine Grace</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-divine-grace">Divine Grace</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Immunity Duration</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>1s</td><td>90</td></tr><tr><td>2</td><td>2s</td><td>95</td></tr><tr><td>3</td><td>3s</td><td>100</td></tr><tr><td>4</td><td>4s</td><td>105</td></tr><tr><td>5</td><td>5s</td><td>110</td></tr><tr><td>6</td><td>6s</td><td>115</td></tr><tr><td>7</td><td>7s</td><td>120</td></tr><tr><td>8</td><td>8s</td><td>125</td></tr><tr><td>9</td><td>9s</td><td>130</td></tr><tr><td>10</td><td>10s</td><td>135</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-offertorium">
-            <div class="sk-top"><strong>Offertorium</strong><i class="sk-type">Grace</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Offertorium</strong><i class="sk-type">Grace</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Boosts Healing Power and autocasts Smite on attacks.</p>
             <p class="sk-body">The user presents themselves as an offering to the divine, preparing themselves to prioritize the will of Heaven before their own wants and needs. While active, the user gains a bonus to Healing Power based on their Strength, and gains a chance to autocast the Smite skill when autoattacking.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Smite Chance</th></tr></thead><tbody><tr><td>1</td><td>11%</td></tr><tr><td>2</td><td>12%</td></tr><tr><td>3</td><td>13%</td></tr><tr><td>4</td><td>14%</td></tr><tr><td>5</td><td>15%</td></tr><tr><td>6</td><td>16%</td></tr><tr><td>7</td><td>17%</td></tr><tr><td>8</td><td>18%</td></tr><tr><td>9</td><td>19%</td></tr><tr><td>10</td><td>20%</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-kyrie-eleison">
-            <div class="sk-top"><strong>Kyrie Eleison</strong><i class="sk-type">Grace</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Kyrie Eleison</strong><i class="sk-type">Grace</i><i class="sk-target">Ally</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Halves all damage taken by an ally for a short duration.</p>
             <p class="sk-body">The user prays for divine intervention, calling on heavenly powers to protect a target from all harm. For a short duration, all damage taken by the target is halved. Higher levels of Divine Grace reduce this skill's cooldown.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-divine-grace">Divine Grace</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-aspersio">Aspersio</a> Lv3, <a href="#s-renovatio">Renovatio</a> Lv3, <a href="#s-impositio-manus">Impositio Manus</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Duration</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>1s</td><td>280</td></tr><tr><td>2</td><td>2s</td><td>260</td></tr><tr><td>3</td><td>3s</td><td>240</td></tr><tr><td>4</td><td>4s</td><td>220</td></tr><tr><td>5</td><td>5s</td><td>200</td></tr><tr><td>6</td><td>6s</td><td>180</td></tr><tr><td>7</td><td>7s</td><td>160</td></tr><tr><td>8</td><td>8s</td><td>140</td></tr><tr><td>9</td><td>9s</td><td>120</td></tr><tr><td>10</td><td>10s</td><td>100</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -267,34 +276,43 @@
             <p class="sk-body">Increases the effectiveness of all Authority skills cast by the user. After casting an Authority skill, the next Grace skill they cast will be cast at the same level as that Authority skill, unless the Grace skill is already a higher level.</p>
           </li>
           <li class="skill-card sk-debuff" id="s-banishing-light">
-            <div class="sk-top"><strong>Banishing Light</strong><i class="sk-type">Authority</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Banishing Light</strong><i class="sk-type">Authority</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Burst damage, strongest against Angel, Demon, and Undead races.</p>
             <p class="sk-body">Authority Skill.; Summons a holy light to banish the target from the mortal realm, dealing Holy property damage that is increased against Demon, Undead, and Angel race monsters. For each level of Divine Authority learned, a portion of this bonus is applied to enemies of other races.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-divine-authority">Divine Authority</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-divine-authority">Divine Authority</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>265%</td><td>38</td></tr><tr><td>2</td><td>280%</td><td>41</td></tr><tr><td>3</td><td>295%</td><td>44</td></tr><tr><td>4</td><td>310%</td><td>47</td></tr><tr><td>5</td><td>325%</td><td>50</td></tr><tr><td>6</td><td>340%</td><td>53</td></tr><tr><td>7</td><td>355%</td><td>56</td></tr><tr><td>8</td><td>370%</td><td>59</td></tr><tr><td>9</td><td>385%</td><td>62</td></tr><tr><td>10</td><td>400%</td><td>65</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-debuff" id="s-searing-light">
-            <div class="sk-top"><strong>Searing Light</strong><i class="sk-type">Authority</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Searing Light</strong><i class="sk-type">Authority</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Holy damage over time, enhanced against Dark, Undead, and Ghost property.</p>
             <p class="sk-body">Calls sacred fire from the heavens to incinerate the target, inflicting them with a status effect similar to the <b class="kw kw-burn">Burning</b> status. The damage is heavily influenced by the user's Base Level, Skill Level, and Int, and is increased against Dark, Undead, and Ghost Property targets, while halved against Holy Property targets. The duration of the status is increased by the Divine Authority skill.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-divine-authority">Divine Authority</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-divine-authority">Divine Authority</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>15</td></tr><tr><td>2</td><td>30</td></tr><tr><td>3</td><td>45</td></tr><tr><td>4</td><td>60</td></tr><tr><td>5</td><td>75</td></tr><tr><td>6</td><td>90</td></tr><tr><td>7</td><td>105</td></tr><tr><td>8</td><td>120</td></tr><tr><td>9</td><td>135</td></tr><tr><td>10</td><td>150</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-debuff" id="s-purifying-light">
-            <div class="sk-top"><strong>Purifying Light</strong><i class="sk-type">Authority</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Purifying Light</strong><i class="sk-type">Authority</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">AoE Holy damage that inflicts Holy Vulnerability.</p>
             <p class="sk-body">Invokes a divine light to purify the world of the enemy and their surroundings. Deals significant Holy property damage to enemies in an area around the target and inflicts the Holy Vulnerability status, increasing the damage they take from Holy property attacks from all sources (Holy Vulnerability does not affect Searing Light damage). The strength of the Vulnerability is based on the learned level of the Divine Authority skill.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-divine-authority">Divine Authority</a><a href="#s-searing-light">Searing Light</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-divine-authority">Divine Authority</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>500%</td><td>165</td></tr><tr><td>2</td><td>550%</td><td>180</td></tr><tr><td>3</td><td>600%</td><td>195</td></tr><tr><td>4</td><td>650%</td><td>210</td></tr><tr><td>5</td><td>700%</td><td>225</td></tr><tr><td>6</td><td>750%</td><td>240</td></tr><tr><td>7</td><td>800%</td><td>255</td></tr><tr><td>8</td><td>850%</td><td>270</td></tr><tr><td>9</td><td>900%</td><td>285</td></tr><tr><td>10</td><td>950%</td><td>300</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-debuff" id="s-austere-light">
-            <div class="sk-top"><strong>Austere Light</strong><i class="sk-type">Authority</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Austere Light</strong><i class="sk-type">Authority</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Weapon-property strike with a chance to inflict <b class="kw kw-vuln">Vulnerable</b>.</p>
             <p class="sk-body">The user smashes an enemy with their weapon, dealing Weapon Property Physical damage to a single target and boosting the user's Attack Speed for a short duration. This skill has a chance to inflict the <b class="kw kw-vuln">Vulnerable</b> Status based on the user's learned level of Divine Authority.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-divine-authority">Divine Authority</a></p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>275%</td><td>26</td></tr><tr><td>2</td><td>300%</td><td>27</td></tr><tr><td>3</td><td>325%</td><td>28</td></tr><tr><td>4</td><td>350%</td><td>29</td></tr><tr><td>5</td><td>375%</td><td>30</td></tr><tr><td>6</td><td>400%</td><td>31</td></tr><tr><td>7</td><td>425%</td><td>32</td></tr><tr><td>8</td><td>450%</td><td>33</td></tr><tr><td>9</td><td>475%</td><td>34</td></tr><tr><td>10</td><td>500%</td><td>35</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-debuff" id="s-divine-judgment">
-            <div class="sk-top"><strong>Divine Judgment</strong><i class="sk-type">Authority</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Divine Judgment</strong><i class="sk-type">Authority</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Doubles damage the target takes for a set number of hits.</p>
             <p class="sk-body">Calls divine judgment down on a target, causing them to take double damage from attacks of all sources for a set number of hits, based on the level of the skill. Higher levels of Divine Authority reduce this skill's cooldown.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-divine-authority">Divine Authority</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-banishing-light">Banishing Light</a> Lv3, <a href="#s-searing-light">Searing Light</a> Lv3, <a href="#s-purifying-light">Purifying Light</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Number of Hits</th></tr></thead><tbody><tr><td>1</td><td>1</td></tr><tr><td>2</td><td>1</td></tr><tr><td>3</td><td>1</td></tr><tr><td>4</td><td>1</td></tr><tr><td>5</td><td>2</td></tr><tr><td>6</td><td>2</td></tr><tr><td>7</td><td>2</td></tr><tr><td>8</td><td>2</td></tr><tr><td>9</td><td>2</td></tr><tr><td>10</td><td>3</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>

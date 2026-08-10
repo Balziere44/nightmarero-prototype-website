@@ -216,7 +216,7 @@
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types, targets and the numbers behind every level come from the player wiki, so they match what you see in game.</p>
       </div>
       <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-vuln">Vulnerable</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
       <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-magic" data-i18n="cls.t.magic">Magic</span><span class="sk-support" data-i18n="cls.t.support">Support</span><span class="sk-summon" data-i18n="cls.t.summon">Summon</span><span class="sk-passive" data-i18n="cls.t.passive">Passive</span></div>
@@ -228,6 +228,7 @@
             <div class="sk-top"><strong>Soul Harmony</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Boosts Hit and cast speed with Souls; unlocks all skills regardless of weapon requirements.</p>
             <p class="sk-body">Mastery. Increases the user's Hit Rate and reduces the user's Variable Cast Time while wielding a Soul class weapon. Souls typically give additional Skills as a Mastery bonus.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Hit Bonus</th><th>Variable Cast Reduction</th></tr></thead><tbody><tr><td>1</td><td>2</td><td>2%</td></tr><tr><td>2</td><td>4</td><td>4%</td></tr><tr><td>3</td><td>6</td><td>6%</td></tr><tr><td>4</td><td>8</td><td>8%</td></tr><tr><td>5</td><td>10</td><td>10%</td></tr><tr><td>6</td><td>12</td><td>12%</td></tr><tr><td>7</td><td>14</td><td>14%</td></tr><tr><td>8</td><td>16</td><td>16%</td></tr><tr><td>9</td><td>18</td><td>18%</td></tr><tr><td>10</td><td>20</td><td>20%</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -235,29 +236,39 @@
         <h3 class="branch-title">Vicious Possession Skills<span>5 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-summon" id="s-vicious-possession">
-            <div class="sk-top"><strong>Vicious Possession</strong><i class="sk-type">Possession</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Vicious Possession</strong><i class="sk-type">Possession</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Converts MATK to ATK; Int and Dex grant Crit Rate and Crit Damage.</p>
             <p class="sk-body">The user calls on the soul of a bloodthirsty warrior to inhabit their body, borrowing a portion of their strength. Converts a portion of the user's Magic Attack into Physical Attack, and increases the user's Crit Rate and Crit Damage based on their Int and Dex. Only one Possession can be active at a time.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-soul-harmony">Soul Harmony</a></p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Attack Bonus</th></tr></thead><tbody><tr><td>1</td><td>2% of MATK</td></tr><tr><td>2</td><td>4% of MATK</td></tr><tr><td>3</td><td>6% of MATK</td></tr><tr><td>4</td><td>8% of MATK</td></tr><tr><td>5</td><td>10% of MATK</td></tr><tr><td>6</td><td>12% of MATK</td></tr><tr><td>7</td><td>14% of MATK</td></tr><tr><td>8</td><td>16% of MATK</td></tr><tr><td>9</td><td>18% of MATK</td></tr><tr><td>10</td><td>20% of MATK</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-spectral-thrust">
-            <div class="sk-top"><strong>Spectral Thrust</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Spectral Thrust</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Ghost property strike with knockback and a <b class="kw kw-vuln">Vulnerable</b> chance.</p>
             <p class="sk-body">The user unleashes a burst of spectral energy, striking and knocking away a targeted enemy. Deals Ghost property Physical damage with a chance to leave the target <b class="kw kw-vuln">Vulnerable</b>. Each level of Axe Kick learned increases the chance to inflict Vulnerability.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-vicious-possession">Vicious Possession</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>315%</td><td>30</td></tr><tr><td>2</td><td>330%</td><td>35</td></tr><tr><td>3</td><td>345%</td><td>40</td></tr><tr><td>4</td><td>360%</td><td>45</td></tr><tr><td>5</td><td>375%</td><td>50</td></tr><tr><td>6</td><td>390%</td><td>55</td></tr><tr><td>7</td><td>405%</td><td>60</td></tr><tr><td>8</td><td>420%</td><td>65</td></tr><tr><td>9</td><td>435%</td><td>70</td></tr><tr><td>10</td><td>450%</td><td>75</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-spectral-claw">
-            <div class="sk-top"><strong>Spectral Claw</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Spectral Claw</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Ghost property AoE that increases Physical damage taken by enemies struck.</p>
             <p class="sk-body">The user summons a wraith from beyond the grave to lash out at the target, dealing Ghost property Physical damage to them and all enemies in the area, leaving an open wound that makes them more susceptible to Physical damage for a short duration. This skill deals additional damage to enemies that are <b class="kw kw-vuln">Vulnerable</b>. The Physical Vulnerability effect is increased for each level of Tornado Kick learned by the user.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-spectral-thrust">Spectral Thrust</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>315%</td><td>50</td></tr><tr><td>2</td><td>330%</td><td>60</td></tr><tr><td>3</td><td>345%</td><td>70</td></tr><tr><td>4</td><td>360%</td><td>80</td></tr><tr><td>5</td><td>375%</td><td>90</td></tr><tr><td>6</td><td>390%</td><td>100</td></tr><tr><td>7</td><td>405%</td><td>110</td></tr><tr><td>8</td><td>420%</td><td>120</td></tr><tr><td>9</td><td>435%</td><td>130</td></tr><tr><td>10</td><td>450%</td><td>140</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-spectral-veil">
-            <div class="sk-top"><strong>Spectral Veil</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Spectral Veil</strong><i class="sk-type">Supportive</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Blocks a single Physical hit; restores HP on a successful block.</p>
             <p class="sk-body">The user slips out of the realm of the living, making themselves immune to Physical damage for a single hit. If this skill ends because it blocked an attack, the user restores a portion of their Max HP based on the currently learned level of Counter Kick.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-vicious-possession">Vicious Possession</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Cooldown</th></tr></thead><tbody><tr><td>1</td><td>56s</td></tr><tr><td>2</td><td>52s</td></tr><tr><td>3</td><td>48s</td></tr><tr><td>4</td><td>44s</td></tr><tr><td>5</td><td>40s</td></tr><tr><td>6</td><td>36s</td></tr><tr><td>7</td><td>32s</td></tr><tr><td>8</td><td>28s</td></tr><tr><td>9</td><td>24s</td></tr><tr><td>10</td><td>20s</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-spectral-toll">
-            <div class="sk-top"><strong>Spectral Toll</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Spectral Toll</strong><i class="sk-type">Supportive</i><i class="sk-target">Ally</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Drains own HP to restore an ally's SP over time.</p>
             <p class="sk-body">The user pulls their own soul closer to the realm of the dead, turning themselves into a conduit that allows power from beyond the grave to flow back into the world of the living. Rapidly drains the user's HP for a short duration, restoring SP for a targeted ally at the same time. The amount of HP consumed is reduced by the level of Roundhouse Kick learned by the user.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-spectral-veil">Spectral Veil</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>SP Restoration Per Second</th></tr></thead><tbody><tr><td>1</td><td>1% of Max SP</td></tr><tr><td>2</td><td>2% of Max SP</td></tr><tr><td>3</td><td>3% of Max SP</td></tr><tr><td>4</td><td>4% of Max SP</td></tr><tr><td>5</td><td>5% of Max SP</td></tr><tr><td>6</td><td>6% of Max SP</td></tr><tr><td>7</td><td>7% of Max SP</td></tr><tr><td>8</td><td>8% of Max SP</td></tr><tr><td>9</td><td>9% of Max SP</td></tr><tr><td>10</td><td>10% of Max SP</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -265,29 +276,39 @@
         <h3 class="branch-title">Arcane Possession Skills<span>5 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-summon" id="s-arcane-possession">
-            <div class="sk-top"><strong>Arcane Possession</strong><i class="sk-type">Possession</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Arcane Possession</strong><i class="sk-type">Possession</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Converts ATK to MATK; Str and Vit grant cast speed and SP Regen.</p>
             <p class="sk-body">The user invites the soul of a powerful mystic to inhabit their body, drawing on a portion of their knowledge. Converts a portion of the user's Physical Attack into Magic Attack, and reduces the users Variable Cast Time and increases their SP Regen based on their Str and Vit. Only one Possession can be active at a time.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-soul-harmony">Soul Harmony</a></p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Magic Attack Bonus</th></tr></thead><tbody><tr><td>1</td><td>2% of ATK</td></tr><tr><td>2</td><td>4% of ATK</td></tr><tr><td>3</td><td>6% of ATK</td></tr><tr><td>4</td><td>8% of ATK</td></tr><tr><td>5</td><td>10% of ATK</td></tr><tr><td>6</td><td>12% of ATK</td></tr><tr><td>7</td><td>14% of ATK</td></tr><tr><td>8</td><td>16% of ATK</td></tr><tr><td>9</td><td>18% of ATK</td></tr><tr><td>10</td><td>20% of ATK</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-magic" id="s-soul-pressure">
-            <div class="sk-top"><strong>Soul Pressure</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Soul Pressure</strong><i class="sk-type">Magical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Ghost property magic strike with a <b class="kw kw-slow">Slow</b> chance.</p>
             <p class="sk-body">Calls on a vengeful soul to suppress an enemy, dealing Ghost property Magic damage and attempting to <b class="kw kw-slow">Slow</b> them. <b class="kw kw-slow">Slow</b> chance is influenced by the user's learned level of Axe Kick.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-arcane-possession">Arcane Possession</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>630%</td><td>30</td></tr><tr><td>2</td><td>660%</td><td>35</td></tr><tr><td>3</td><td>690%</td><td>40</td></tr><tr><td>4</td><td>720%</td><td>45</td></tr><tr><td>5</td><td>750%</td><td>50</td></tr><tr><td>6</td><td>780%</td><td>55</td></tr><tr><td>7</td><td>810%</td><td>60</td></tr><tr><td>8</td><td>840%</td><td>65</td></tr><tr><td>9</td><td>870%</td><td>70</td></tr><tr><td>10</td><td>900%</td><td>75</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-magic" id="s-soul-convergence">
-            <div class="sk-top"><strong>Soul Convergence</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Soul Convergence</strong><i class="sk-type">Magical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Ghost property magic AoE that increases Magic damage taken by enemies struck.</p>
             <p class="sk-body">Summons a horde of vengeful souls to a targeted enemy, dealing Ghost property magic damage to them and to all enemies in the area around them. This skill deals additional damage to enemies that are <b class="kw kw-slow">Slowed</b>. Enemies struck by the attack are left vulnerable to Magic damage for a short duration. The strength of the Magic Damage Vulnerability is influenced by the learned level of Tornado Kick.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-soul-pressure">Soul Pressure</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>630%</td><td>60</td></tr><tr><td>2</td><td>660%</td><td>70</td></tr><tr><td>3</td><td>690%</td><td>80</td></tr><tr><td>4</td><td>720%</td><td>90</td></tr><tr><td>5</td><td>750%</td><td>100</td></tr><tr><td>6</td><td>780%</td><td>110</td></tr><tr><td>7</td><td>810%</td><td>120</td></tr><tr><td>8</td><td>840%</td><td>130</td></tr><tr><td>9</td><td>870%</td><td>140</td></tr><tr><td>10</td><td>900%</td><td>150</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-soul-mirror">
-            <div class="sk-top"><strong>Soul Mirror</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Soul Mirror</strong><i class="sk-type">Supportive</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Reflects a single Magic attack; restores SP on a successful reflect.</p>
             <p class="sk-body">Summons a protective spirit to shield the user from harmful magic, turning it back on its source. If this skill ends because it reflected an attack, the user regenerates a percentage of their Max SP based on the learned level of Counter Kick.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-arcane-possession">Arcane Possession</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Cooldown</th></tr></thead><tbody><tr><td>1</td><td>56s</td></tr><tr><td>2</td><td>52s</td></tr><tr><td>3</td><td>48s</td></tr><tr><td>4</td><td>44s</td></tr><tr><td>5</td><td>40s</td></tr><tr><td>6</td><td>36s</td></tr><tr><td>7</td><td>32s</td></tr><tr><td>8</td><td>28s</td></tr><tr><td>9</td><td>24s</td></tr><tr><td>10</td><td>20s</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-soul-reshaping">
-            <div class="sk-top"><strong>Soul Reshaping</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Soul Reshaping</strong><i class="sk-type">Supportive</i><i class="sk-target">Ally</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Drains own SP to rapidly restore an ally's HP over time.</p>
             <p class="sk-body">The user calls on a benign spirit that feeds off their SP to rapidly restore health to an ally over time. The amount of SP consumed by this skill is reduced by the learned level of Roundhouse Kick.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-soul-mirror">Soul Mirror</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>HP Restoration Per Second</th></tr></thead><tbody><tr><td>1</td><td>1% of Max HP</td></tr><tr><td>2</td><td>2% of Max HP</td></tr><tr><td>3</td><td>3% of Max HP</td></tr><tr><td>4</td><td>4% of Max HP</td></tr><tr><td>5</td><td>5% of Max HP</td></tr><tr><td>6</td><td>6% of Max HP</td></tr><tr><td>7</td><td>7% of Max HP</td></tr><tr><td>8</td><td>8% of Max HP</td></tr><tr><td>9</td><td>9% of Max HP</td></tr><tr><td>10</td><td>10% of Max HP</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>

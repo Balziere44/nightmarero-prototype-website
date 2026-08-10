@@ -623,6 +623,12 @@ def build_mechanics():
             ("Movement and regen",
              "Base movement went from 150ms per cell to <strong>120ms</strong>. "
              "HP and SP regeneration are five times what you remember."),
+            ("Where stacking stops",
+             "Four hard ceilings, and nothing gets past them: elemental "
+             "resistance at <strong>80%</strong>, cooldown reduction at "
+             "<strong>70%</strong>, attack speed at <strong>190</strong>, "
+             "movement speed at <strong>+40%</strong>. Worth knowing before "
+             "you build a set around a fifth piece that does nothing."),
         ])))
 
     body.append(section(
@@ -647,6 +653,13 @@ def build_mechanics():
         "a lot of skills change behaviour depending on what is already on the "
         "target.",
         status_cards()
+        + note("m.sfDot",
+               "The three damage over time families all tick once a second "
+               "for (stat × 8) × (base level / 100), and the stat is "
+               "the one named on the card above. So the same status is worth "
+               "more or less depending on who applied it, and a stronger "
+               "variant is not stronger by itself, it just reads a different "
+               "stat.")
         + note("m.sfNote",
                "Two rules follow from that. No stat gives you any resistance, "
                "so the only defences are the Luck breakpoints and gear. And "
@@ -657,19 +670,27 @@ def build_mechanics():
         "potions", "m.poTitle", "Potions and catalysts",
         "m.poLede",
         "Your potion is a piece of equipment, not a stack of items. It is "
-        "never consumed, it sits on a ten second cooldown, and you upgrade it "
-        "as you go.",
+        "never consumed, it sits on a cooldown instead, and you upgrade it as "
+        "you go. Nothing on this ladder can be traded.",
         rows([
             ("Healing",
              "<strong>Red, then Orange, Yellow, White.</strong> Around level "
              "30 the Red one stops keeping up. Gather the herbs and materials "
              "and commission the upgrade from the Alchemists in Aldebaran, or "
-             "from any starting town tool shop for the Red one."),
-            ("SP", "<strong>Grape Juice, then Blue Potion.</strong>"),
+             "from any starting town tool shop for the Red one. Ten second "
+             "cooldown."),
+            ("SP",
+             "<strong>Grape Juice, then Blue Potion.</strong> Thirty second "
+             "cooldown."),
             ("Attack speed",
-             "<strong>Concentration, Awakening, Berserk.</strong> Every class "
-             "restriction on these has been removed."),
-            ("Status", "A Green Potion, for when the pressure gets silly."),
+             "<strong>Concentration +2, Awakening +4, Berserk +6.</strong> "
+             "Every class restriction on these has been removed."),
+            ("Status",
+             "A Green Potion, which clears bleeding, poison and burning on "
+             "the spot. Thirty second cooldown."),
+            ("Cooldowns",
+             "Those are the baseline numbers. Vitality shortens all of them, "
+             "half a second for every twenty five points."),
             ("Catalysts",
              "Most class consumables are gone. The ones that stayed became "
              "catalysts that are <strong>not used up</strong>: endow stones, "
@@ -965,6 +986,13 @@ def build_endgame():
              "refine ores, convex mirrors and supplies rather than unique "
              "gear. They also drop <strong>Nightmare Echoes</strong>, which "
              "spend at the Steel Wings Headquarters in Luina."),
+            ("Where the first three are",
+             "The level 70 tier is the one people reach first, and none of the "
+             "three entrances are signposted. <strong>Pyramid Underground</strong> "
+             "is through the basement of the Morroc pyramid. "
+             "<strong>Capatolina Catacombs</strong> is in the centre building "
+             "of the monastery map, at 192/169. <strong>Magma Depths</strong> "
+             "is on the north side of Juno field 03, by the cliffs."),
         ])
         + '<p class="mech-link"><a class="btn -ghost" href="database.html" data-i18n="e.nmLink">Every piece of Shadow Gear</a></p>'))
 

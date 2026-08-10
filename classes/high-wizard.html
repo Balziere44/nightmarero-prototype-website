@@ -229,7 +229,7 @@
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types, targets and the numbers behind every level come from the player wiki, so they match what you see in game.</p>
       </div>
       <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Earth Affinity</span><span>Elemental Affinity</span><span>Fire Affinity</span><span>Water Affinity</span><span>Wind Affinity</span></div>
       <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-frozen">Frozen</span><span class="kw-sleep">Sleep</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
@@ -239,14 +239,17 @@
         <h3 class="branch-title">Fire Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-magic" id="s-crimson-arrow">
-            <div class="sk-top"><strong>Crimson Arrow</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Crimson Arrow</strong><i class="sk-type">Magical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Line-piercing Fire bolt with <b class="kw kw-burn">Burning</b> synergy.</p>
             <p class="sk-body">The user fires a bolt of concentrated Fire Magic, striking all targets in a straight line. Any target struck that is <b class="kw kw-burn">Burning</b> takes additional damage, otherwise it attempts to inflict the <b class="kw kw-burn">Burning</b> Status. If <b class="mech">Fire Affinity</b> is active, its duration is reset and the damage is treated as <b class="kw kw-burn">Burning</b> Damage.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Burning Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>900%</td><td>60%</td><td>65</td></tr><tr><td>2</td><td>1000%</td><td>70%</td><td>70</td></tr><tr><td>3</td><td>1100%</td><td>80%</td><td>75</td></tr><tr><td>4</td><td>1200%</td><td>90%</td><td>80</td></tr><tr><td>5</td><td>1300%</td><td>100%</td><td>85</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-magic" id="s-volcanic-burst">
-            <div class="sk-top"><strong>Volcanic Burst</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Volcanic Burst</strong><i class="sk-type">Magical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Massive Fire AoE that grants <b class="mech">Fire Affinity</b>.</p>
             <p class="sk-body">The user causes a burst of blazing magical energy to erupt beneath their target's feet, dealing Fire damage to them and all enemies around them. This skill deals additional damage to <b class="kw kw-burn">Burning</b> enemies and applies the <b class="mech">Fire Affinity</b> status on the user.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-crimson-arrow">Crimson Arrow</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Affinity Pierce</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>1100%</td><td>5%</td><td>210</td></tr><tr><td>2</td><td>1200%</td><td>10%</td><td>220</td></tr><tr><td>3</td><td>1300%</td><td>15%</td><td>230</td></tr><tr><td>4</td><td>1400%</td><td>20%</td><td>240</td></tr><tr><td>5</td><td>1500%</td><td>25%</td><td>250</td></tr><tr><td>6</td><td>1600%</td><td>30%</td><td>260</td></tr><tr><td>7</td><td>1700%</td><td>35%</td><td>270</td></tr><tr><td>8</td><td>1800%</td><td>40%</td><td>280</td></tr><tr><td>9</td><td>1900%</td><td>45%</td><td>290</td></tr><tr><td>10</td><td>2000%</td><td>50%</td><td>300</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -254,14 +257,17 @@
         <h3 class="branch-title">Water Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-magic" id="s-frozen-grip">
-            <div class="sk-top"><strong>Frozen Grip</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Frozen Grip</strong><i class="sk-type">Magical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Ice spikes with Chilled synergy.</p>
             <p class="sk-body">The user summons spikes of ice at the target's location, dealing Water property damage to them and all enemies nearby. If this skill strikes a Chilled target, it deals additional damage. Otherwise, it attempts to inflict the Chilled status. If <b class="mech">Water Affinity</b> is active, its duration is reset and this skill has a chance to <b class="kw kw-frozen">Freeze</b>.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Status Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>900%</td><td>60%</td><td>65</td></tr><tr><td>2</td><td>1000%</td><td>70%</td><td>70</td></tr><tr><td>3</td><td>1100%</td><td>80%</td><td>75</td></tr><tr><td>4</td><td>1200%</td><td>90%</td><td>80</td></tr><tr><td>5</td><td>1300%</td><td>100%</td><td>85</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-magic" id="s-frost-nova">
-            <div class="sk-top"><strong>Frost Nova</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Frost Nova</strong><i class="sk-type">Magical</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Massive self-centered Water AoE that grants <b class="mech">Water Affinity</b>.</p>
             <p class="sk-body">The user unleashes a blast of freezing magic around themselves, dealing Water Property damage to all enemies in an area around them. This skill deals additional damage to Chilled enemies, and applies the <b class="mech">Water Affinity</b> status on the user.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-frozen-grip">Frozen Grip</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Affinity Pierce</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>1100%</td><td>5%</td><td>210</td></tr><tr><td>2</td><td>1200%</td><td>10%</td><td>220</td></tr><tr><td>3</td><td>1300%</td><td>15%</td><td>230</td></tr><tr><td>4</td><td>1400%</td><td>20%</td><td>240</td></tr><tr><td>5</td><td>1500%</td><td>25%</td><td>250</td></tr><tr><td>6</td><td>1600%</td><td>30%</td><td>260</td></tr><tr><td>7</td><td>1700%</td><td>35%</td><td>270</td></tr><tr><td>8</td><td>1800%</td><td>40%</td><td>280</td></tr><tr><td>9</td><td>1900%</td><td>45%</td><td>290</td></tr><tr><td>10</td><td>2000%</td><td>50%</td><td>300</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -269,14 +275,17 @@
         <h3 class="branch-title">Wind Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-magic" id="s-chain-lightning">
-            <div class="sk-top"><strong>Chain Lightning</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Chain Lightning</strong><i class="sk-type">Magical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Bouncing lightning with <b class="kw kw-sleep">Sleep</b> synergy.</p>
             <p class="sk-body">Invokes a burst of lightning on the target, dealing Wind Property damage before repeating against another nearby target. The number of bounces is affected by the level of the skill. If there are no other targets in the area, the same target can be struck multiple times. This skill deals additional damage to <b class="kw kw-sleep">Sleeping</b> and <b class="kw kw-sleep">Dazed</b> enemies. If <b class="mech">Wind Affinity</b> is active, its duration is reset and this skill gains additional bounces.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage (per bounce)</th><th>Number of Bounces</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>220%</td><td>4</td><td>65</td></tr><tr><td>2</td><td>240%</td><td>5</td><td>70</td></tr><tr><td>3</td><td>260%</td><td>6</td><td>75</td></tr><tr><td>4</td><td>280%</td><td>7</td><td>80</td></tr><tr><td>5</td><td>300%</td><td>8</td><td>85</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-magic" id="s-static-storm">
-            <div class="sk-top"><strong>Static Storm</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Static Storm</strong><i class="sk-type">Magical</i><i class="sk-target">Ground</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Lightning DoT field that grants <b class="mech">Wind Affinity</b>.</p>
             <p class="sk-body">Creates an electrically charged zone that is struck repeatedly by lightning bolts, dealing rapid Wind Property damage over time to all enemies within it. This skill deals additional damage to <b class="kw kw-sleep">Sleeping</b> and <b class="kw kw-sleep">Dazed</b> targets, and applies the <b class="mech">Wind Affinity</b> Status on the user.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-chain-lightning">Chain Lightning</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage (per hit)</th><th>Affinity Pierce</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>110%</td><td>5%</td><td>210</td></tr><tr><td>2</td><td>120%</td><td>10%</td><td>220</td></tr><tr><td>3</td><td>130%</td><td>15%</td><td>230</td></tr><tr><td>4</td><td>140%</td><td>20%</td><td>240</td></tr><tr><td>5</td><td>150%</td><td>25%</td><td>250</td></tr><tr><td>6</td><td>160%</td><td>30%</td><td>260</td></tr><tr><td>7</td><td>170%</td><td>35%</td><td>270</td></tr><tr><td>8</td><td>180%</td><td>40%</td><td>280</td></tr><tr><td>9</td><td>190%</td><td>45%</td><td>290</td></tr><tr><td>10</td><td>200%</td><td>50%</td><td>300</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -284,14 +293,17 @@
         <h3 class="branch-title">Earth Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-magic" id="s-stone-crush">
-            <div class="sk-top"><strong>Stone Crush</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Stone Crush</strong><i class="sk-type">Magical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Falling boulder that inflicts <b class="kw kw-bleed">Internal Bleeding</b>.</p>
             <p class="sk-body">Summons an enormous stone sphere and drops it on the target's location, dealing Earth Property damage to them and all enemies around them. Deals additional damage to <b class="kw kw-bleed">Bleeding</b> enemies, otherwise has a chance to inflict <b class="kw kw-bleed">Internal Bleeding</b>. If <b class="mech">Earth Affinity</b> is active, its duration is reset and the damage is treated as <b class="kw kw-bleed">Bleeding</b> damage.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Internal Bleeding Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>900%</td><td>60%</td><td>65</td></tr><tr><td>2</td><td>1000%</td><td>70%</td><td>70</td></tr><tr><td>3</td><td>1100%</td><td>80%</td><td>75</td></tr><tr><td>4</td><td>1200%</td><td>90%</td><td>80</td></tr><tr><td>5</td><td>1300%</td><td>100%</td><td>85</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-magic" id="s-seismic-tremors">
-            <div class="sk-top"><strong>Seismic Tremors</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Seismic Tremors</strong><i class="sk-type">Magical</i><i class="sk-target">Ground</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Earth DoT field that grants <b class="mech">Earth Affinity</b>.</p>
             <p class="sk-body">Infuses magic into the ground at the target location, causing it to tremor and deal Earth Property damage to all enemies above it. This skill deals additional damage to <b class="kw kw-bleed">Bleeding</b> enemies, and applies the <b class="mech">Earth Affinity</b> status on the user.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-stone-crush">Stone Crush</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Affinity Pierce</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>1100%</td><td>5%</td><td>210</td></tr><tr><td>2</td><td>1200%</td><td>10%</td><td>220</td></tr><tr><td>3</td><td>1300%</td><td>15%</td><td>230</td></tr><tr><td>4</td><td>1400%</td><td>20%</td><td>240</td></tr><tr><td>5</td><td>1500%</td><td>25%</td><td>250</td></tr><tr><td>6</td><td>1600%</td><td>30%</td><td>260</td></tr><tr><td>7</td><td>1700%</td><td>35%</td><td>270</td></tr><tr><td>8</td><td>1800%</td><td>40%</td><td>280</td></tr><tr><td>9</td><td>1900%</td><td>45%</td><td>290</td></tr><tr><td>10</td><td>2000%</td><td>50%</td><td>300</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -299,16 +311,19 @@
         <h3 class="branch-title">Arcane Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-support" id="s-mystical-amplification">
-            <div class="sk-top"><strong>Mystical Amplification</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Mystical Amplification</strong><i class="sk-type">Supportive</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Massively amplifies one cast; consumes Affinities for lasting buffs.</p>
             <p class="sk-body">The user infuses their staff with incredible magical energies, amplifying the effects of their next spell. For a single skill cast, the user's Magic Attack is massively increased, but so is its Fixed Cast Time. If the user is under any <b class="mech">Elemental Affinity</b> when this skill is cast, it is consumed to grant and additional buff for thirty seconds:</p>
             <ul class="sk-options"><li><b>Fire</b><b class="kw kw-burn">Burning</b> Damage increased by 30%</li><li><b>Water</b>All skills have a chance to inflict <b class="kw kw-frozen">Freeze</b></li><li><b>Wind</b>All skills have a chance to inflict <b class="kw kw-sleep">Sleep</b></li><li><b>Earth</b><b class="kw kw-bleed">Bleeding</b> Damage increased by 30% This skill does not stack with Rapid Incantation.</li></ul>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-affinities">Affinities</a></p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Matk Bonus</th><th>Fixed Cast Increase</th><th>Status Chance</th></tr></thead><tbody><tr><td>1</td><td>10%</td><td>0.5s</td><td>5%</td></tr><tr><td>2</td><td>20%</td><td>1s</td><td>10%</td></tr><tr><td>3</td><td>30%</td><td>1.5s</td><td>15%</td></tr><tr><td>4</td><td>40%</td><td>2s</td><td>20%</td></tr><tr><td>5</td><td>50%</td><td>2.5s</td><td>25%</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-magic" id="s-elemental-annihilation">
-            <div class="sk-top"><strong>Elemental Annihilation</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Elemental Annihilation</strong><i class="sk-type">Magical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Four-wave elemental nuke, unified by any active Affinity.</p>
             <p class="sk-body">The user channels a massive blast of elemental energy, obliterating a single target and all enemies nearby. Attacks in four waves, in the order of Fire, Water, Wind, Earth. If the user has an <b class="mech">Elemental Affinity</b> active, all four waves will match that element instead.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-frozen-grip">Frozen Grip</a> Lv5, <a href="#s-chain-lightning">Chain Lightning</a> Lv5, <a href="#s-stone-crush">Stone Crush</a> Lv5, <a href="#s-crimson-arrow">Crimson Arrow</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage (per wave)</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>660%</td><td>270</td></tr><tr><td>2</td><td>720%</td><td>290</td></tr><tr><td>3</td><td>780%</td><td>310</td></tr><tr><td>4</td><td>840%</td><td>330</td></tr><tr><td>5</td><td>900%</td><td>350</td></tr><tr><td>6</td><td>960%</td><td>370</td></tr><tr><td>7</td><td>1020%</td><td>390</td></tr><tr><td>8</td><td>1080%</td><td>410</td></tr><tr><td>9</td><td>1140%</td><td>430</td></tr><tr><td>10</td><td>1200%</td><td>450</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>

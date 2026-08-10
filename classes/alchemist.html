@@ -212,7 +212,7 @@
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types, targets and the numbers behind every level come from the player wiki, so they match what you see in game.</p>
       </div>
       <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Extort</span></div>
       <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-vuln">Vulnerable</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
@@ -226,21 +226,28 @@
             <p class="sk-short">Improves damage and status effect application of all Chemical skills.</p>
             <p class="sk-body">&quot;Mastery&quot; skill for Chemical-type skills. Increases the damage of Acid Terror, Demonstration, and Conflagration, while also increasing their chance to apply their status effects.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-demonstration">Demonstration</a><a href="#s-conflagration">Conflagration</a><a href="#s-acid-terror">Acid Terror</a></p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage Bonus</th></tr></thead><tbody><tr><td>1</td><td>2% total damage</td></tr><tr><td>2</td><td>4% total damage</td></tr><tr><td>3</td><td>6% total damage</td></tr><tr><td>4</td><td>8% total damage</td></tr><tr><td>5</td><td>10% total damage</td></tr><tr><td>6</td><td>12% total damage</td></tr><tr><td>7</td><td>14% total damage</td></tr><tr><td>8</td><td>16% total damage</td></tr><tr><td>9</td><td>18% total damage</td></tr><tr><td>10</td><td>20% total damage</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-debuff" id="s-acid-terror">
-            <div class="sk-top"><strong>Acid Terror</strong><i class="sk-type">Chemical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Acid Terror</strong><i class="sk-type">Chemical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Deals damage and can apply <b class="kw kw-vuln">Vulnerable</b>. Generates <b class="mech">Extort</b>.</p>
             <p class="sk-body">Deals significant Ranged Physical damage to a distant target with a chance to inflict the <b class="kw kw-vuln">Vulnerable</b> status. This skill generates one <b class="mech">Extort</b> stack on use.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-chemical-research">Chemical Research</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Vulnerable Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>330%</td><td>3%</td><td>17</td></tr><tr><td>2</td><td>360%</td><td>6%</td><td>19</td></tr><tr><td>3</td><td>390%</td><td>9%</td><td>21</td></tr><tr><td>4</td><td>420%</td><td>12%</td><td>23</td></tr><tr><td>5</td><td>450%</td><td>15%</td><td>25</td></tr><tr><td>6</td><td>480%</td><td>18%</td><td>27</td></tr><tr><td>7</td><td>510%</td><td>21%</td><td>29</td></tr><tr><td>8</td><td>540%</td><td>24%</td><td>31</td></tr><tr><td>9</td><td>570%</td><td>27%</td><td>33</td></tr><tr><td>10</td><td>600%</td><td>30%</td><td>35</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-debuff" id="s-demonstration">
-            <div class="sk-top"><strong>Demonstration</strong><i class="sk-type">Chemical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Demonstration</strong><i class="sk-type">Chemical</i><i class="sk-target">Ground</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Fire AoE bomb that can cause <b class="kw kw-burn">Burning</b>. Generates <b class="mech">Extort</b>.</p>
             <p class="sk-body">Ignites a small fire at the targeted location, dealing constant Fire property damage to enemies in a small area around it. The initial cast generates one stack of <b class="mech">Extort</b>, while each hit has a chance to inflict the <b class="kw kw-burn">Burning</b> status.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-chemical-research">Chemical Research</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Burn Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>110%</td><td>1%</td><td>17</td></tr><tr><td>2</td><td>120%</td><td>2%</td><td>19</td></tr><tr><td>3</td><td>130%</td><td>3%</td><td>21</td></tr><tr><td>4</td><td>140%</td><td>4%</td><td>23</td></tr><tr><td>5</td><td>150%</td><td>5%</td><td>25</td></tr><tr><td>6</td><td>160%</td><td>6%</td><td>27</td></tr><tr><td>7</td><td>170%</td><td>7%</td><td>29</td></tr><tr><td>8</td><td>180%</td><td>8%</td><td>31</td></tr><tr><td>9</td><td>190%</td><td>9%</td><td>33</td></tr><tr><td>10</td><td>200%</td><td>10%</td><td>35</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-debuff" id="s-conflagration">
-            <div class="sk-top"><strong>Conflagration</strong><i class="sk-type">Chemical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Conflagration</strong><i class="sk-type">Chemical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Consumes <b class="mech">Extort</b> stacks for big AoE Neutral damage. Can cause <b class="kw kw-burn">Burning</b> and <b class="kw kw-bleed">Bleeding</b>.</p>
             <p class="sk-body">Consumes all of the user's <b class="mech">Extort</b> stacks to deal massive Ranged Physical damage over a wide area. This skill has a chance to inflict the <b class="kw kw-bleed">Bleeding</b> and <b class="kw kw-burn">Burning</b> status effects.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-acid-terror">Acid Terror</a> Lv3, <a href="#s-demonstration">Demonstration</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Area</th><th>Bleed/Burn Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>160%</td><td>5x5</td><td>3%</td><td>28</td></tr><tr><td>2</td><td>170%</td><td>5x5</td><td>6%</td><td>31</td></tr><tr><td>3</td><td>180%</td><td>5x5</td><td>9%</td><td>34</td></tr><tr><td>4</td><td>190%</td><td>5x5</td><td>12%</td><td>37</td></tr><tr><td>5</td><td>200%</td><td>7x7</td><td>15%</td><td>40</td></tr><tr><td>6</td><td>210%</td><td>7x7</td><td>18%</td><td>43</td></tr><tr><td>7</td><td>220%</td><td>7x7</td><td>21%</td><td>46</td></tr><tr><td>8</td><td>230%</td><td>7x7</td><td>24%</td><td>49</td></tr><tr><td>9</td><td>240%</td><td>9x9</td><td>27%</td><td>52</td></tr><tr><td>10</td><td>250%</td><td>9x9</td><td>30%</td><td>55</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -251,21 +258,28 @@
             <div class="sk-top"><strong>Enhancement Research</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Improves duration and effect of all Alchemical Enhancements.</p>
             <p class="sk-body">Increases the duration and effectiveness of all Alchemical Enhancements.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Duration Bonus</th></tr></thead><tbody><tr><td>1</td><td>20s</td></tr><tr><td>2</td><td>40s</td></tr><tr><td>3</td><td>60s</td></tr><tr><td>4</td><td>80s</td></tr><tr><td>5</td><td>100s</td></tr><tr><td>6</td><td>120s</td></tr><tr><td>7</td><td>140s</td></tr><tr><td>8</td><td>160s</td></tr><tr><td>9</td><td>180s</td></tr><tr><td>10</td><td>200s</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-energized-armor">
-            <div class="sk-top"><strong>Energized Armor</strong><i class="sk-type">Enhancement</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Energized Armor</strong><i class="sk-type">Enhancement</i><i class="sk-target">Ally</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Coats an ally's armor in an agent that increases all defenses.</p>
             <p class="sk-body">Coats an ally's armor with an alchemical agent that disperses the force of incoming attacks. Increases the target's resistance to attacks of all elements for a duration.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-enhancement-research">Enhancement Research</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Neutral Resistance</th><th>Duration</th></tr></thead><tbody><tr><td>1</td><td>1%</td><td>20s</td></tr><tr><td>2</td><td>2%</td><td>40s</td></tr><tr><td>3</td><td>3%</td><td>60s</td></tr><tr><td>4</td><td>4%</td><td>80s</td></tr><tr><td>5</td><td>5%</td><td>100s</td></tr><tr><td>6</td><td>6%</td><td>120s</td></tr><tr><td>7</td><td>7%</td><td>140s</td></tr><tr><td>8</td><td>8%</td><td>160s</td></tr><tr><td>9</td><td>9%</td><td>180s</td></tr><tr><td>10</td><td>10%</td><td>200s</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-synthetic-shield">
-            <div class="sk-top"><strong>Synthetic Shield</strong><i class="sk-type">Enhancement</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Synthetic Shield</strong><i class="sk-type">Enhancement</i><i class="sk-target">Ally</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Synthesize an autonomous shield that passively blocks for an ally.</p>
             <p class="sk-body">Creates an autonomously acting shield to protect the target. Increases the targets Magic Defense, while also giving them a chance to block any physical damage taken.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-enhancement-research">Enhancement Research</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Block Chance</th><th>Duration</th></tr></thead><tbody><tr><td>1</td><td>2%</td><td>20s</td></tr><tr><td>2</td><td>4%</td><td>40s</td></tr><tr><td>3</td><td>6%</td><td>60s</td></tr><tr><td>4</td><td>8%</td><td>80s</td></tr><tr><td>5</td><td>10%</td><td>100s</td></tr><tr><td>6</td><td>12%</td><td>120s</td></tr><tr><td>7</td><td>14%</td><td>140s</td></tr><tr><td>8</td><td>16%</td><td>160s</td></tr><tr><td>9</td><td>18%</td><td>180s</td></tr><tr><td>10</td><td>20%</td><td>200s</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-alchemical-weapon">
-            <div class="sk-top"><strong>Alchemical Weapon</strong><i class="sk-type">Enhancement</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Alchemical Weapon</strong><i class="sk-type">Enhancement</i><i class="sk-target">Ally</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Coats an ally's weapon in an agent that dramatically improves offensive stats.</p>
             <p class="sk-body">Coats the target's weapon with an alchemical agent that increases its potency. Increases the Attack, Magic Attack, Defense Pierce, and Magic Defense Pierce of the target.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-synthetic-shield">Synthetic Shield</a> Lv3, <a href="#s-energized-armor">Energized Armor</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>ATK/MATK Bonus</th><th>Duration</th></tr></thead><tbody><tr><td>1</td><td>2%</td><td>20s</td></tr><tr><td>2</td><td>4%</td><td>40s</td></tr><tr><td>3</td><td>6%</td><td>60s</td></tr><tr><td>4</td><td>8%</td><td>80s</td></tr><tr><td>5</td><td>10%</td><td>100s</td></tr><tr><td>6</td><td>12%</td><td>120s</td></tr><tr><td>7</td><td>14%</td><td>140s</td></tr><tr><td>8</td><td>16%</td><td>160s</td></tr><tr><td>9</td><td>18%</td><td>180s</td></tr><tr><td>10</td><td>20%</td><td>200s</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -277,11 +291,13 @@
             <p class="sk-short">Enables Homunculus creation quests, passively improves summoned Homunculi.</p>
             <p class="sk-body">Enables the user to craft Homunculi at the Alchemist's Guild. Each additional level beyond the first improves the stats of any Homunculus summoned by the user.</p>
             <ul class="sk-options"><li><b>Homunculus System</b>The Homunculus System has been entirely reworked. The vanilla system for using Homunculi has been entirely removed: Homunculi have predetermined stats, predetermined skills, and do not gain experience. Another major change is that the player has virtually no control over the Homunculus's actions. Homunculi have their own AI (which cannot be changed by the player in any way). All Homunculi behave differently, based on what type of Homunculus they are, and will use all of their skills automatically as they see fit. That said, the Alchemist has access to seven Command skills that allow them to give instructions to their Homunculus, triggering their skills while ignoring their internal cooldowns. These Command skills are obtained immediately upon job change, and thus are available to all Alchemists regardless of build. Alchemists can craft Homunculus Embryos at the Alchemist's Guild. These embryos are used to summon their relevant Homunculus, but are not consumed on use. When first crafted, these Embryos will summon a Homunculus that is level 60 and has access to only one skill. Further crafting at the Alchemist's Guild will allow them to upgrade their Homunculus, each level giving it higher stats and more skills to use. The highest level of Homunculus available to an Alchemist is level 99, after which the Alchemist must advance to either the Biochemist or Geneticist job to continue their Homunculus's growth. A brief overview of the four available Homunculus types and their behavior:</li><li><b>Lif</b>Kind and compassionate, Lif will do everything in her power to support you while you fight. However, she doesn't like fighting herself, and will even refuse to attack back in cases where she manages to pull aggro. Careful use of the Return and Hide commands will be needed to keep her out of harm's way so she can continue supporting her master and allies.</li><li><b>Vanilmirth</b>Bloodthirsty and dangerous, Vanilmirth will proactively seek out enemies to fight and hold nothing back when it finds one. However its defensive options are rather weak, requiring a discerning master to keep it from biting off more than it can chew, lest it face frequent and untimely deaths.</li><li><b>Amistr</b>Brave and highly protective of its master, Amistr will go out of its way to seek out and hold the attention of enemies in the area. While it has great defensive capabilities which it can even share with its master, it doesn't have the damage output to handle many encounters on its own. Amistr's natural toughness combined with clever use of the Defend command can make it an exceptional tank for the Alchemist that wants to focus their own efforts on putting out damage.</li><li><b>Filir</b>Filir is quick and deadly, boasting a high physical attack stat, high attack speed, and low cooldowns on its offensive abilities, which it learns relatively early in life. However, it is very much a coward, with only its natural Flee and the Hiding skill to protect itself. Filir will not proactively engage enemies, and may even ignore Attack commands if it isn't already fighting, preferring to wait until its master has the monster's attention before swooping in to secure the kill. The following is a list of the seven Command skills available to Alchemists. Each skill is unlocked once a Homunculus capable of responding to that command is crafted.</li></ul>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Max HP Bonus</th><th>Atk/Matk Bonus</th><th>Def/MDef Bonus</th><th>Hit Bonus</th><th>Flee Bonus</th></tr></thead><tbody><tr><td>1</td><td>100</td><td>1%</td><td>1%</td><td>1</td><td>1</td></tr><tr><td>2</td><td>300</td><td>2%</td><td>2%</td><td>2</td><td>2</td></tr><tr><td>3</td><td>600</td><td>3%</td><td>3%</td><td>3</td><td>3</td></tr><tr><td>4</td><td>1000</td><td>4%</td><td>4%</td><td>4</td><td>4</td></tr><tr><td>5</td><td>1500</td><td>5%</td><td>5%</td><td>5</td><td>5</td></tr><tr><td>6</td><td>2100</td><td>6%</td><td>6%</td><td>6</td><td>6</td></tr><tr><td>7</td><td>2800</td><td>7%</td><td>7%</td><td>7</td><td>7</td></tr><tr><td>8</td><td>3600</td><td>8%</td><td>8%</td><td>8</td><td>8</td></tr><tr><td>9</td><td>4500</td><td>9%</td><td>9%</td><td>9</td><td>9</td></tr><tr><td>10</td><td>5500</td><td>10%</td><td>10%</td><td>10</td><td>10</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-aid-potion">
-            <div class="sk-top"><strong>Aid Potion</strong><i class="sk-type">Enhancement</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Aid Potion</strong><i class="sk-type">Enhancement</i><i class="sk-target">Ally</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Tosses a specially created healing potion at an ally, can heal HP or SP.</p>
             <p class="sk-body">Hurls a specially crafted Throwing Potion at the target, recovering HP (or SP) based on the potion thrown. Throwing potions must be crafted at the Alchemist's Guild, but are not consumed on use.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Potion Required</th><th>Healing Bonus</th><th>Cooldown</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>Throwable Red Potion</td><td>10%</td><td>10s</td><td>5</td></tr><tr><td>2</td><td>Throwable Red Potion</td><td>20%</td><td>10s</td><td>10</td></tr><tr><td>3</td><td>Throwable Orange Potion</td><td>30%</td><td>10s</td><td>15</td></tr><tr><td>4</td><td>Throwable Orange Potion</td><td>40%</td><td>10s</td><td>20</td></tr><tr><td>5</td><td>Throwable Yellow Potion</td><td>50%</td><td>10s</td><td>25</td></tr><tr><td>6</td><td>Throwable Yellow Potion</td><td>60%</td><td>10s</td><td>30</td></tr><tr><td>7</td><td>Throwable White Potion</td><td>70%</td><td>10s</td><td>35</td></tr><tr><td>8</td><td>Throwable White Potion</td><td>80%</td><td>10s</td><td>40</td></tr><tr><td>9</td><td>Throwable Blue Potion</td><td>90%</td><td>30s</td><td>45</td></tr><tr><td>10</td><td>Throwable Blue Potion</td><td>100%</td><td>30s</td><td>50</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -289,39 +305,46 @@
         <h3 class="branch-title">Command Skills<span>7 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-utility" id="s-command-move">
-            <div class="sk-top"><strong>Command: Move</strong><i class="sk-type">Command</i></div>
+            <div class="sk-top"><strong>Command: Move</strong><i class="sk-type">Command</i><i class="sk-target">Homunculus</i></div>
             <p class="sk-short">Orders the Homunculus to move to the target cell.</p>
             <p class="sk-body">Orders the Homunculus to move to the targeted location. It will ignore enemies until it reaches its destination.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span>Alchemist Job Change</p>
           </li>
           <li class="skill-card sk-utility" id="s-command-attack">
-            <div class="sk-top"><strong>Command: Attack</strong><i class="sk-type">Command</i></div>
+            <div class="sk-top"><strong>Command: Attack</strong><i class="sk-type">Command</i><i class="sk-target">Homunculus</i></div>
             <p class="sk-short">Orders the Homunculus to use it's Attack skill, bypassing cooldown.</p>
             <p class="sk-body">Orders the Homunculus to perform its &quot;Attack&quot; action. The Homunculus may not respond to this command if it is not currently engaged with a target, or if there is no applicable target in range.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span>Alchemist Job Change</p>
           </li>
           <li class="skill-card sk-utility" id="s-command-defend">
-            <div class="sk-top"><strong>Command: Defend</strong><i class="sk-type">Command</i></div>
+            <div class="sk-top"><strong>Command: Defend</strong><i class="sk-type">Command</i><i class="sk-target">Homunculus</i></div>
             <p class="sk-short">Orders the Homunculus to use it's Defensive skill, bypassing cooldown.</p>
             <p class="sk-body">Orders the Homunculus to perform its &quot;Defend&quot; action, typically involving blocking or reducing incoming damage for itself.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span>Alchemist Job Change</p>
           </li>
           <li class="skill-card sk-utility" id="s-command-support">
-            <div class="sk-top"><strong>Command: Support</strong><i class="sk-type">Command</i></div>
+            <div class="sk-top"><strong>Command: Support</strong><i class="sk-type">Command</i><i class="sk-target">Homunculus</i></div>
             <p class="sk-short">Orders the Homunculus to use it's Support skill, bypassing cooldown.</p>
             <p class="sk-body">Orders the Homunculus to perform its &quot;Support&quot; action, typically involving buffing the Alchemist, and sometimes itself in the process.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span>Alchemist Job Change</p>
           </li>
           <li class="skill-card sk-utility" id="s-command-hide">
-            <div class="sk-top"><strong>Command: Hide</strong><i class="sk-type">Command</i></div>
+            <div class="sk-top"><strong>Command: Hide</strong><i class="sk-type">Command</i><i class="sk-target">Homunculus</i></div>
             <p class="sk-short">Orders the Homunculus to use it's Hiding skill, bypassing cooldown.</p>
             <p class="sk-body">Orders the Homunculus to perform its &quot;Hide&quot; action. This is always to use the Thief skill &quot;Hiding,&quot; making it (mostly) invulnerable and dropping all aggro for a short duration.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span>Alchemist Job Change</p>
           </li>
           <li class="skill-card sk-utility" id="s-command-ultimate">
-            <div class="sk-top"><strong>Command: Ultimate</strong><i class="sk-type">Command</i></div>
+            <div class="sk-top"><strong>Command: Ultimate</strong><i class="sk-type">Command</i><i class="sk-target">Homunculus</i></div>
             <p class="sk-short">Orders the Homunculus to use it's Ultimate skill, bypassing cooldown.</p>
             <p class="sk-body">Orders the Homunculus to perform its &quot;Ultimate&quot; action. The effect of this varies widely based on the type of Homunculus.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span>Alchemist Job Change</p>
           </li>
           <li class="skill-card sk-utility" id="s-command-return">
-            <div class="sk-top"><strong>Command: Return</strong><i class="sk-type">Command</i></div>
+            <div class="sk-top"><strong>Command: Return</strong><i class="sk-type">Command</i><i class="sk-target">Self</i></div>
             <p class="sk-short">Orders the Homunculus to the Alchemist's side.</p>
             <p class="sk-body">Orders the Homunculus to return to its master's side, immediately teleporting it back regardless of the distance between them (as long as they are on the same map).</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span>Alchemist Job Change</p>
           </li>
         </ul>
       </div>

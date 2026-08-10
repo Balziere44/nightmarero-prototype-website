@@ -214,7 +214,7 @@
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types, targets and the numbers behind every level come from the player wiki, so they match what you see in game.</p>
       </div>
       <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Extort</span></div>
       <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-burn">Burning</span><span class="kw-vuln">Vulnerable</span><span class="kw-stun">Stun</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
@@ -224,21 +224,25 @@
         <h3 class="branch-title">Autoattack Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-support" id="s-meltdown">
-            <div class="sk-top"><strong>Meltdown</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Meltdown</strong><i class="sk-type">Supportive</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Boosts <b class="kw kw-burn">Burning</b> damage; active window converts attacks to half <b class="kw kw-burn">Burning</b> Damage.</p>
             <p class="sk-body">The user superheats their weapon, passively increasing their <b class="kw kw-burn">Burning</b> Damage and giving their Whirling Axe procs a chance to inflict the <b class="kw kw-burn">Severe Burning</b> status. When activated, autoattacks and Whirling Axe procs will be treated as <b class="kw kw-burn">Burning</b> damage for a short duration.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-whirling-axe">Whirling Axe</a></p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Burning Damage Bonus</th><th>Severe Burning Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>3%</td><td>10%</td><td>23</td></tr><tr><td>2</td><td>6%</td><td>20%</td><td>26</td></tr><tr><td>3</td><td>9%</td><td>30%</td><td>29</td></tr><tr><td>4</td><td>12%</td><td>40%</td><td>32</td></tr><tr><td>5</td><td>15%</td><td>50%</td><td>35</td></tr><tr><td>6</td><td>18%</td><td>60%</td><td>38</td></tr><tr><td>7</td><td>21%</td><td>70%</td><td>41</td></tr><tr><td>8</td><td>24%</td><td>80%</td><td>44</td></tr><tr><td>9</td><td>27%</td><td>90%</td><td>47</td></tr><tr><td>10</td><td>30%</td><td>100%</td><td>50</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-whirling-axe">
-            <div class="sk-top"><strong>Whirling Axe</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Whirling Axe</strong><i class="sk-type">Supportive</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Autoattacks gain a chance to splash in a 5x5 area.</p>
             <p class="sk-body">The user adopts a wild, whirling fighting style, passively giving their attacks a chance to splash in a 5x5 area around them. This splash will also deal additional damage to the original target of the attack. When activated, the trigger chance is massively increased for a short duration.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Passive Splash Chance</th><th>Active Splash Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>2%</td><td>6%</td><td>23</td></tr><tr><td>2</td><td>4%</td><td>12%</td><td>26</td></tr><tr><td>3</td><td>6%</td><td>18%</td><td>29</td></tr><tr><td>4</td><td>8%</td><td>24%</td><td>32</td></tr><tr><td>5</td><td>10%</td><td>30%</td><td>35</td></tr><tr><td>6</td><td>12%</td><td>36%</td><td>38</td></tr><tr><td>7</td><td>14%</td><td>42%</td><td>41</td></tr><tr><td>8</td><td>16%</td><td>48%</td><td>44</td></tr><tr><td>9</td><td>18%</td><td>54%</td><td>47</td></tr><tr><td>10</td><td>20%</td><td>60%</td><td>50</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-berserk">
-            <div class="sk-top"><strong>Berserk</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Berserk</strong><i class="sk-type">Supportive</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Massive ASPD and damage reduction</p>
             <p class="sk-body">The user enters a battle frenzy, gaining massive Damage Reduction, Attack, and ASPD for the duration. While active, the user cannot use any skills or consumables. When the Frenzy status ends, the user's HP is reduced to 10% of their maximum, and their SP is reduced to zero. Triggering this skill automatically activates Meltdown and Whirling Axe at their learned levels, extends their duration to 10 seconds, and increases the user's ASPD cap to 190.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-whirling-axe">Whirling Axe</a><a href="#s-meltdown">Meltdown</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-meltdown">Meltdown</a> Lv5, <a href="#s-whirling-axe">Whirling Axe</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Cooldown</th></tr></thead><tbody><tr><td>1</td><td>114s</td></tr><tr><td>2</td><td>108s</td></tr><tr><td>3</td><td>102s</td></tr><tr><td>4</td><td>96s</td></tr><tr><td>5</td><td>90s</td></tr><tr><td>6</td><td>84s</td></tr><tr><td>7</td><td>78s</td></tr><tr><td>8</td><td>72s</td></tr><tr><td>9</td><td>66s</td></tr><tr><td>10</td><td>60s</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -246,17 +250,19 @@
         <h3 class="branch-title">Extort Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-physical" id="s-overwhelm">
-            <div class="sk-top"><strong>Overwhelm</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Overwhelm</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Short-cooldown slam that generates <b class="mech">Extort</b>.</p>
             <p class="sk-body">Slams into the enemy with tremendous force, generating a stack of <b class="mech">Extort</b>. If the enemy is <b class="kw kw-stun">Stunned</b> or <b class="kw kw-stun">Staggered</b>, they take additional damage.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>375%</td><td>26</td></tr><tr><td>2</td><td>400%</td><td>27</td></tr><tr><td>3</td><td>425%</td><td>28</td></tr><tr><td>4</td><td>450%</td><td>29</td></tr><tr><td>5</td><td>475%</td><td>30</td></tr><tr><td>6</td><td>500%</td><td>31</td></tr><tr><td>7</td><td>525%</td><td>32</td></tr><tr><td>8</td><td>550%</td><td>33</td></tr><tr><td>9</td><td>575%</td><td>34</td></tr><tr><td>10</td><td>600%</td><td>35</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-cleave">
-            <div class="sk-top"><strong>Cleave</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Cleave</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Strips defensive statuses and inflicts <b class="kw kw-vuln">Vulnerable</b>.</p>
             <p class="sk-body">Delivers a sundering blow to the enemy, shredding any protective abilities. Strips most defensive abilities from the target, then deals heavy physical damage that is increased if the target is <b class="kw kw-vuln">Vulnerable</b>. If the target is not <b class="kw kw-vuln">Vulnerable</b>, has a chance to inflict the <b class="kw kw-vuln">Vulnerable</b> status instead.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Vulnerable Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>320%</td><td>55%</td><td>21</td></tr><tr><td>2</td><td>340%</td><td>60%</td><td>22</td></tr><tr><td>3</td><td>360%</td><td>65%</td><td>23</td></tr><tr><td>4</td><td>380%</td><td>70%</td><td>24</td></tr><tr><td>5</td><td>400%</td><td>75%</td><td>25</td></tr><tr><td>6</td><td>420%</td><td>80%</td><td>26</td></tr><tr><td>7</td><td>440%</td><td>85%</td><td>27</td></tr><tr><td>8</td><td>460%</td><td>90%</td><td>28</td></tr><tr><td>9</td><td>480%</td><td>95%</td><td>29</td></tr><tr><td>10</td><td>500%</td><td>100%</td><td>30</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-power-swing">
-            <div class="sk-top"><strong>Power Swing</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Power Swing</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Consumes all <b class="mech">Extort</b> for massive damage and escalating effects.</p>
             <p class="sk-body">Slams the user's weapon into the head of the enemy, dealing massive damage based on the user's <b class="mech">Extort</b> stacks. Gains bonus effects cumulatively based on the number of <b class="mech">Extort</b> stacks consumed. If the user has no <b class="mech">Extort</b> stacks, the skill will miss.</p>
             <p class="sk-body">Inflicts <b class="kw kw-vuln">Vulnerable</b> for 5 Seconds</p>
@@ -265,6 +271,8 @@
             <p class="sk-body">Refreshes the Cooldown of Cleave</p>
             <p class="sk-body">Splashes in a 5x5 Area</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-overwhelm">Overwhelm</a><a href="#s-cleave">Cleave</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-overwhelm">Overwhelm</a> Lv5, <a href="#s-cleave">Cleave</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>430%</td><td>52</td></tr><tr><td>2</td><td>460%</td><td>54</td></tr><tr><td>3</td><td>490%</td><td>56</td></tr><tr><td>4</td><td>520%</td><td>58</td></tr><tr><td>5</td><td>550%</td><td>60</td></tr><tr><td>6</td><td>580%</td><td>62</td></tr><tr><td>7</td><td>610%</td><td>64</td></tr><tr><td>8</td><td>640%</td><td>66</td></tr><tr><td>9</td><td>670%</td><td>68</td></tr><tr><td>10</td><td>700%</td><td>70</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -280,11 +288,13 @@
             <div class="sk-top"><strong>Weapon Modification</strong><i class="sk-type">Crafting</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Crafts devices that replace weapon Random Options with focused bonuses.</p>
             <p class="sk-body">Combines materials to create a Weapon Modification Device. The device can be used to replace the Random Options on any weapon. The level of this skill learned improves the efficiency of those mods for the user, but does not influence the success rate of crafting or the strength of the rolls received.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-equipment-modification">Equipment Modification</a> Lv1</p>
           </li>
           <li class="skill-card sk-utility" id="s-armor-modification">
             <div class="sk-top"><strong>Armor Modification</strong><i class="sk-type">Crafting</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Crafts devices that replace armor Random Options with focused bonuses.</p>
             <p class="sk-body">Combines materials to create an Armor Modification Device. The device can be used to replace the Random Options on any Armor (not garments or shoes). The level of this skill learned improves the efficiency of those mods for the user, but does not influence the success rate of crafting or the strength of the rolls received.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-equipment-modification">Equipment Modification</a> Lv1</p>
           </li>
         </ul>
       </div>

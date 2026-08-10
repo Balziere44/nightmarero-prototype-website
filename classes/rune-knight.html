@@ -228,7 +228,7 @@
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types, targets and the numbers behind every level come from the player wiki, so they match what you see in game.</p>
       </div>
       <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Rune Stones</span></div>
       <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-vuln">Vulnerable</span><span class="kw-stun">Stun</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
@@ -254,29 +254,34 @@
         <h3 class="branch-title">Attack Skills<span>5 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-physical" id="s-winter-razor">
-            <div class="sk-top"><strong>Winter Razor</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Winter Razor</strong><i class="sk-type">Physical</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Icy AoE treated as <b class="kw kw-bleed">Bleeding</b> Damage.</p>
             <p class="sk-body">Releases a blast of icy wind around the user, slicing apart nearby enemies. Attempts to inflict the <b class="kw kw-bleed">Bleeding</b> status on all enemies struck. Damage dealt by this skill is increased by the user's Int and is treated as <b class="kw kw-bleed">Bleeding</b> damage.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>320%</td><td>24</td></tr><tr><td>2</td><td>340%</td><td>28</td></tr><tr><td>3</td><td>360%</td><td>32</td></tr><tr><td>4</td><td>380%</td><td>36</td></tr><tr><td>5</td><td>400%</td><td>40</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-ignition-break">
-            <div class="sk-top"><strong>Ignition Break</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Ignition Break</strong><i class="sk-type">Physical</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Fiery AoE scaling with <b class="kw kw-burn">Burning</b> Damage bonuses.</p>
             <p class="sk-body">Creates a burst of mystical fire from the user's weapon, incinerating enemies in the area. This skill deals additional damage based on the user's Int and is treated as <b class="kw kw-burn">Burning</b> damage.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>330%</td><td>51</td></tr><tr><td>2</td><td>360%</td><td>57</td></tr><tr><td>3</td><td>390%</td><td>63</td></tr><tr><td>4</td><td>420%</td><td>69</td></tr><tr><td>5</td><td>450%</td><td>75</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-burning-breath">
-            <div class="sk-top"><strong>Burning Breath</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Burning Breath</strong><i class="sk-type">Physical</i><i class="sk-target">Ground</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Ranged fire AoE that inflicts <b class="kw kw-burn">Burning</b>.</p>
             <p class="sk-body">Unleashes a burst of flame to envelop the targeted location. Deals Physical Fire Property damage and attempts to inflict the <b class="kw kw-burn">Burning</b> status on all enemies in the area. This skill deals additional damage based on the user's Int.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>275%</td><td>36</td></tr><tr><td>2</td><td>300%</td><td>42</td></tr><tr><td>3</td><td>325%</td><td>48</td></tr><tr><td>4</td><td>350%</td><td>54</td></tr><tr><td>5</td><td>375%</td><td>60</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-storm-blast">
-            <div class="sk-top"><strong>Storm Blast</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Storm Blast</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Explosive strike that spreads the target's statuses to nearby enemies.</p>
             <p class="sk-body">Strikes the targeted enemy, then explodes outward, striking all enemies in an area around them.. If the original target is <b class="kw kw-bleed">Bleeding</b>, <b class="kw kw-burn">Burning</b>, or <b class="kw kw-vuln">Vulnerable</b>, spreads those statuses to all enemies struck by the blast. Deals additional damage based on the user's Int.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>275%</td><td>35</td></tr><tr><td>2</td><td>350%</td><td>40</td></tr><tr><td>3</td><td>425%</td><td>45</td></tr><tr><td>4</td><td>500%</td><td>50</td></tr><tr><td>5</td><td>575%</td><td>55</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-crush-strike">
-            <div class="sk-top"><strong>Crush Strike</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Crush Strike</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Heavy blow that always inflicts <b class="kw kw-vuln">Vulnerable</b>.</p>
             <p class="sk-body">Delivers a crushing blow to the target, smashing through their defenses. Inflicts the <b class="kw kw-vuln">Vulnerable</b> status. If the target was already <b class="kw kw-vuln">Vulnerable</b>, additionally inflicts the <b class="kw kw-stun">Stun</b> Status. This skill deals additional damage based on the user's Int and <b class="kw kw-vuln">Vulnerable</b> Potency.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>430%</td><td>36</td></tr><tr><td>2</td><td>460%</td><td>42</td></tr><tr><td>3</td><td>490%</td><td>48</td></tr><tr><td>4</td><td>520%</td><td>54</td></tr><tr><td>5</td><td>550%</td><td>60</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -284,31 +289,36 @@
         <h3 class="branch-title">Buff Skills<span>5 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-support" id="s-bloodthirst">
-            <div class="sk-top"><strong>Bloodthirst</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Bloodthirst</strong><i class="sk-type">Supportive</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Autoattacks become <b class="kw kw-bleed">Bleeding</b> Damage and can autocast Rend.</p>
             <p class="sk-body">For a short duration, all autoattacks from the user are treated as <b class="kw kw-bleed">Bleeding</b> damage and have a chance to autocast the Rend skill.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Duration</th></tr></thead><tbody><tr><td>1</td><td>8s</td></tr><tr><td>2</td><td>11s</td></tr><tr><td>3</td><td>14s</td></tr><tr><td>4</td><td>17s</td></tr><tr><td>5</td><td>20s</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-refresh">
-            <div class="sk-top"><strong>Refresh</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Refresh</strong><i class="sk-type">Supportive</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Massively reduces the next skill's cooldown.</p>
             <p class="sk-body">For ten seconds, reduces the Cooldown of the next skill cast by the user.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Cooldown Reduction</th></tr></thead><tbody><tr><td>1</td><td>15%</td></tr><tr><td>2</td><td>30%</td></tr><tr><td>3</td><td>45%</td></tr><tr><td>4</td><td>60%</td></tr><tr><td>5</td><td>75%</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-burning-rage">
-            <div class="sk-top"><strong>Burning Rage</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Burning Rage</strong><i class="sk-type">Supportive</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Converts <b class="kw kw-burn">Burning</b> Damage bonuses into Physical skill damage.</p>
             <p class="sk-body">For a short duration, all Physical Skills cast by the user are treated as <b class="kw kw-burn">Burning</b> Damage. (This skill does not affect Ignition Break, as it is already <b class="kw kw-burn">Burning</b> Damage). The duration of this skill is increased by the user's Rune Research level.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-ignition-break">Ignition Break</a><a href="#s-rune-research">Rune Research</a></p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Burning Damage Conversion</th></tr></thead><tbody><tr><td>1</td><td>10%</td></tr><tr><td>2</td><td>20%</td></tr><tr><td>3</td><td>30%</td></tr><tr><td>4</td><td>40%</td></tr><tr><td>5</td><td>50%</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-tenacity">
-            <div class="sk-top"><strong>Tenacity</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Tenacity</strong><i class="sk-type">Supportive</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Rapid self-heal over time.</p>
             <p class="sk-body">Rapidly regenerates the user's HP over a short duration.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Heal Per Second</th></tr></thead><tbody><tr><td>1</td><td>2% of Max HP</td></tr><tr><td>2</td><td>4% of Max HP</td></tr><tr><td>3</td><td>6% of Max HP</td></tr><tr><td>4</td><td>8% of Max HP</td></tr><tr><td>5</td><td>10% of Max HP</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-millennium-shield">
-            <div class="sk-top"><strong>Millennium Shield</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Millennium Shield</strong><i class="sk-type">Supportive</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Barrier that absorbs all non-Status damage.</p>
             <p class="sk-body">Creates a mystical shield around the user that blocks a certain amount of damage. The amount of HP the barrier has is influenced by the skill level and the user's Rune Research level.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-rune-research">Rune Research</a></p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Barrier HP</th></tr></thead><tbody><tr><td>1</td><td>1000</td></tr><tr><td>2</td><td>2000</td></tr><tr><td>3</td><td>3000</td></tr><tr><td>4</td><td>4000</td></tr><tr><td>5</td><td>5000</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>

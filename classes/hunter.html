@@ -213,7 +213,7 @@
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types, targets and the numbers behind every level come from the player wiki, so they match what you see in game.</p>
       </div>
       <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-poison">Poison</span><span class="kw-vuln">Vulnerable</span><span class="kw-stun">Stun</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
       <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-support" data-i18n="cls.t.support">Support</span><span class="sk-summon" data-i18n="cls.t.summon">Summon</span><span class="sk-passive" data-i18n="cls.t.passive">Passive</span></div>
@@ -222,20 +222,25 @@
         <h3 class="branch-title">Marksmanship Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-support" id="s-marksman-s-focus">
-            <div class="sk-top"><strong>Marksman's Focus</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Marksman's Focus</strong><i class="sk-type">Supportive</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Greatly increases Hit and Crit Rate.</p>
             <p class="sk-body">Self buff. Increases Hit and Crit Rate. Does not stack with Trapper's Focus.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-trapper-s-focus">Trapper's Focus</a></p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Hit Bonus</th><th>Crit Bonus</th></tr></thead><tbody><tr><td>1</td><td>3</td><td>3</td></tr><tr><td>2</td><td>6</td><td>6</td></tr><tr><td>3</td><td>9</td><td>9</td></tr><tr><td>4</td><td>12</td><td>12</td></tr><tr><td>5</td><td>15</td><td>15</td></tr><tr><td>6</td><td>18</td><td>18</td></tr><tr><td>7</td><td>21</td><td>21</td></tr><tr><td>8</td><td>24</td><td>24</td></tr><tr><td>9</td><td>27</td><td>27</td></tr><tr><td>10</td><td>30</td><td>30</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-precision-shot">
-            <div class="sk-top"><strong>Precision Shot</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Precision Shot</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Ranged attack with bonus damage against <b class="kw kw-slow">Slowed</b> targets.</p>
             <p class="sk-body">Takes careful aim at a target before firing, dealing significant damage that is increased against <b class="kw kw-slow">Slowed</b> enemies.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-marksman-s-focus">Marksman's Focus</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>265%</td><td>16</td></tr><tr><td>2</td><td>280%</td><td>17</td></tr><tr><td>3</td><td>295%</td><td>18</td></tr><tr><td>4</td><td>310%</td><td>19</td></tr><tr><td>5</td><td>325%</td><td>20</td></tr><tr><td>6</td><td>340%</td><td>21</td></tr><tr><td>7</td><td>355%</td><td>22</td></tr><tr><td>8</td><td>370%</td><td>23</td></tr><tr><td>9</td><td>385%</td><td>24</td></tr><tr><td>10</td><td>400%</td><td>25</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-threefold-arrow">
-            <div class="sk-top"><strong>Threefold Arrow</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Threefold Arrow</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Three-stage attack applying <b class="kw kw-slow">Slow</b>, <b class="kw kw-vuln">Vulnerable</b>, or <b class="kw kw-stun">Stun</b>.</p>
             <p class="sk-body">Three part skill. Initially attempts to inflict <b class="kw kw-slow">Slow</b>. If the target is already <b class="kw kw-slow">Slowed</b>, instead attempts to inflict <b class="kw kw-vuln">Vulnerable</b>. If the target is already <b class="kw kw-vuln">Vulnerable</b>, instead attempts to inflict <b class="kw kw-stun">Stun</b>.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-marksman-s-focus">Marksman's Focus</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Status Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>320%</td><td>55%</td><td>17</td></tr><tr><td>2</td><td>340%</td><td>60%</td><td>19</td></tr><tr><td>3</td><td>360%</td><td>65%</td><td>21</td></tr><tr><td>4</td><td>380%</td><td>70%</td><td>23</td></tr><tr><td>5</td><td>400%</td><td>75%</td><td>25</td></tr><tr><td>6</td><td>420%</td><td>80%</td><td>27</td></tr><tr><td>7</td><td>440%</td><td>85%</td><td>29</td></tr><tr><td>8</td><td>460%</td><td>90%</td><td>31</td></tr><tr><td>9</td><td>480%</td><td>95%</td><td>33</td></tr><tr><td>10</td><td>500%</td><td>100%</td><td>35</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -243,25 +248,32 @@
         <h3 class="branch-title">Trap Skills<span>4 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-support" id="s-trapper-s-focus">
-            <div class="sk-top"><strong>Trapper's Focus</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Trapper's Focus</strong><i class="sk-type">Supportive</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Removes Trap Fixed Cast Times and extends their status durations.</p>
             <p class="sk-body">Self buff. Removes the Fixed Cast Time of Trap skills, and increases the duration of statuses they inflict. Does not stack with Marksman's Focus.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-marksman-s-focus">Marksman's Focus</a></p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Status Duration Bonus</th></tr></thead><tbody><tr><td>1</td><td>0.5s</td></tr><tr><td>2</td><td>1s</td></tr><tr><td>3</td><td>1.5s</td></tr><tr><td>4</td><td>2s</td></tr><tr><td>5</td><td>2.5s</td></tr><tr><td>6</td><td>3s</td></tr><tr><td>7</td><td>3.5s</td></tr><tr><td>8</td><td>4s</td></tr><tr><td>9</td><td>4.5s</td></tr><tr><td>10</td><td>5s</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-summon" id="s-toxic-mine">
-            <div class="sk-top"><strong>Toxic Mine</strong><i class="sk-type">Trap</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Toxic Mine</strong><i class="sk-type">Trap</i><i class="sk-target">Ground</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Trap dealing <b class="kw kw-poison">Poison</b> damage that inflicts <b class="kw kw-poison">Poison</b>.</p>
             <p class="sk-body">Sets a trap that spews a cloud of poisonous gas when triggered. Deals damage scaling with the user's Agi, and inflicts the <b class="kw kw-poison">Poison</b> status on all enemies in a 5x5 area. This skill has an extremely long Fixed Cast Time.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-trapper-s-focus">Trapper's Focus</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Poison Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>120%</td><td>55%</td><td>32</td></tr><tr><td>2</td><td>140%</td><td>60%</td><td>34</td></tr><tr><td>3</td><td>160%</td><td>65%</td><td>36</td></tr><tr><td>4</td><td>180%</td><td>70%</td><td>38</td></tr><tr><td>5</td><td>200%</td><td>75%</td><td>40</td></tr><tr><td>6</td><td>220%</td><td>80%</td><td>42</td></tr><tr><td>7</td><td>240%</td><td>85%</td><td>44</td></tr><tr><td>8</td><td>260%</td><td>90%</td><td>46</td></tr><tr><td>9</td><td>280%</td><td>95%</td><td>48</td></tr><tr><td>10</td><td>300%</td><td>100%</td><td>50</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-summon" id="s-shrapnel-mine">
-            <div class="sk-top"><strong>Shrapnel Mine</strong><i class="sk-type">Trap</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Shrapnel Mine</strong><i class="sk-type">Trap</i><i class="sk-target">Ground</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Trap dealing Neutral damage that inflicts <b class="kw kw-bleed">Internal Bleeding</b>.</p>
             <p class="sk-body">Sets a trap that explodes in a cloud of shrapnel when triggered. Deals damage scaling with the user's Dex, and inflicts the <b class="kw kw-bleed">Internal Bleeding</b> status on all enemies in a 5x5 area. This skill has an extremely long Fixed Cast Time.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-trapper-s-focus">Trapper's Focus</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Internal Bleeding Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>120%</td><td>55%</td><td>32</td></tr><tr><td>2</td><td>140%</td><td>60%</td><td>34</td></tr><tr><td>3</td><td>160%</td><td>65%</td><td>36</td></tr><tr><td>4</td><td>180%</td><td>70%</td><td>38</td></tr><tr><td>5</td><td>200%</td><td>75%</td><td>40</td></tr><tr><td>6</td><td>220%</td><td>80%</td><td>42</td></tr><tr><td>7</td><td>240%</td><td>85%</td><td>44</td></tr><tr><td>8</td><td>260%</td><td>90%</td><td>46</td></tr><tr><td>9</td><td>280%</td><td>95%</td><td>48</td></tr><tr><td>10</td><td>300%</td><td>100%</td><td>50</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-summon" id="s-incendiary-mine">
-            <div class="sk-top"><strong>Incendiary Mine</strong><i class="sk-type">Trap</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Incendiary Mine</strong><i class="sk-type">Trap</i><i class="sk-target">Ground</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Trap dealing Fire damage that inflicts <b class="kw kw-burn">Burning</b>.</p>
             <p class="sk-body">Sets a trap that releases a cloud of burning gas when triggered. Deals damage scaling with the user's Int, and inflicts the <b class="kw kw-burn">Burning</b> status on all enemies in a 5x5 area. This skill has an extremely long Fixed Cast Time.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-trapper-s-focus">Trapper's Focus</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Burning Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>120%</td><td>55%</td><td>32</td></tr><tr><td>2</td><td>140%</td><td>60%</td><td>34</td></tr><tr><td>3</td><td>160%</td><td>65%</td><td>36</td></tr><tr><td>4</td><td>180%</td><td>70%</td><td>38</td></tr><tr><td>5</td><td>200%</td><td>75%</td><td>40</td></tr><tr><td>6</td><td>220%</td><td>80%</td><td>42</td></tr><tr><td>7</td><td>240%</td><td>85%</td><td>44</td></tr><tr><td>8</td><td>260%</td><td>90%</td><td>46</td></tr><tr><td>9</td><td>280%</td><td>95%</td><td>48</td></tr><tr><td>10</td><td>300%</td><td>100%</td><td>50</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -272,16 +284,21 @@
             <div class="sk-top"><strong>Falconry Mastery</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Enables Falcon rental and boosts Falcon skill damage.</p>
             <p class="sk-body">Allows the usage of a Falcon, and increases the damage of all Falcon-related skills.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Falcon Skill Damage Bonus</th></tr></thead><tbody><tr><td>1</td><td>3%</td></tr><tr><td>2</td><td>6%</td></tr><tr><td>3</td><td>9%</td></tr><tr><td>4</td><td>12%</td></tr><tr><td>5</td><td>15%</td></tr><tr><td>6</td><td>18%</td></tr><tr><td>7</td><td>21%</td></tr><tr><td>8</td><td>24%</td></tr><tr><td>9</td><td>27%</td></tr><tr><td>10</td><td>30%</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-blitz-beat">
-            <div class="sk-top"><strong>Blitz Beat</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Blitz Beat</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Falcon AoE that inflicts <b class="kw kw-slow">Slow</b> and can autocast on attacks.</p>
             <p class="sk-body">Commands the Falcon to attack enemies in a small area, dealing Defense-ignoring damage that has a chance to <b class="kw kw-slow">Slow</b>. Enemies suffering from <b class="kw kw-bleed">Bleeding</b>, <b class="kw kw-burn">Burning</b>, or <b class="kw kw-poison">Poison</b> have an increased chance of being <b class="kw kw-slow">Slowed</b>. This skill has a chance to be autocast with each non-skill attack made with a bow, ignoring its Cooldown.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-falconry-mastery">Falconry Mastery</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Slow Chance</th><th>Additional Slow Chance</th><th>Autoblitz Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>210%</td><td>4%</td><td>+6%</td><td>1%</td><td>17</td></tr><tr><td>2</td><td>220%</td><td>8%</td><td>+12%</td><td>2%</td><td>19</td></tr><tr><td>3</td><td>230%</td><td>12%</td><td>+18%</td><td>3%</td><td>21</td></tr><tr><td>4</td><td>240%</td><td>16%</td><td>+24%</td><td>4%</td><td>23</td></tr><tr><td>5</td><td>250%</td><td>20%</td><td>+30%</td><td>5%</td><td>25</td></tr><tr><td>6</td><td>260%</td><td>24%</td><td>+36%</td><td>6%</td><td>27</td></tr><tr><td>7</td><td>270%</td><td>28%</td><td>+42%</td><td>7%</td><td>29</td></tr><tr><td>8</td><td>280%</td><td>32%</td><td>+48%</td><td>8%</td><td>31</td></tr><tr><td>9</td><td>290%</td><td>36%</td><td>+54%</td><td>9%</td><td>33</td></tr><tr><td>10</td><td>300%</td><td>40%</td><td>+60%</td><td>10%</td><td>35</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-aggravating-assault">
-            <div class="sk-top"><strong>Aggravating Assault</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Aggravating Assault</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Heavy Falcon strike against <b class="kw kw-slow">Slowed</b> targets that extends DoT durations.</p>
             <p class="sk-body">Commands the Falcon to harass a single enemy, dealing heavy Defense-ignoring damage that is significantly increased if the target is <b class="kw kw-slow">Slowed</b>. If the target is suffering from any of the <b class="kw kw-bleed">Bleeding</b>, <b class="kw kw-burn">Burning</b>, or <b class="kw kw-poison">Poison</b> statuses, those statuses have their durations extended by a fixed amount.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-falconry-mastery">Falconry Mastery</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Status Extension</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>265%</td><td>1s</td><td>17</td></tr><tr><td>2</td><td>280%</td><td>2s</td><td>19</td></tr><tr><td>3</td><td>295%</td><td>3s</td><td>21</td></tr><tr><td>4</td><td>310%</td><td>4s</td><td>23</td></tr><tr><td>5</td><td>325%</td><td>5s</td><td>25</td></tr><tr><td>6</td><td>340%</td><td>6s</td><td>27</td></tr><tr><td>7</td><td>355%</td><td>7s</td><td>29</td></tr><tr><td>8</td><td>370%</td><td>8s</td><td>31</td></tr><tr><td>9</td><td>385%</td><td>9s</td><td>33</td></tr><tr><td>10</td><td>400%</td><td>10s</td><td>35</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>

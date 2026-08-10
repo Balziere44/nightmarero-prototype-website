@@ -261,45 +261,62 @@ def quest_section(stem, title, blurb, steps):
 
 
 # --------------------------------------------------------------------------
-# Potions, from the fan wiki
+# Potions, from the player wiki's Potion page
 # --------------------------------------------------------------------------
 
 POTIONS = [
     ("Health potions", [
-        ("Red Potion", ["Bought, not crafted"], "Heals 100 to 200 HP"),
-        ("Orange Potion", ["1 Red Potion", "15 Red Herb", "5 Yellow Herb",
-                           "15 Stem"], "Heals 400 to 600 HP"),
-        ("Yellow Potion", ["1 Orange Potion", "25 Yellow Herb",
-                           "30 Mantis Scythe", "30 Moth Dust"],
-         "Heals 1000 to 2000 HP"),
-        ("White Potion", ["1 Yellow Potion", "30 White Herb",
-                          "1 Burning Shard", "1 Enchanted Key", "1 Pyroxene"],
+        ("Red Potion", ["Handed to you in the tutorial"],
+         "Heals 100 to 200 HP"),
+        ("Orange Potion", ["10 Red Herb", "5 Yellow Herb", "15 Stem"],
+         "Heals 400 to 600 HP"),
+        ("Yellow Potion", ["25 Yellow Herb", "25 Mantis Scythe",
+                           "25 Moth Dust"], "Heals 1000 to 2000 HP"),
+        ("White Potion", ["30 White Herb", "1 Burning Shard",
+                          "1 Enchanted Key", "1 Pyroxene"],
          "Heals 3000 to 6000 HP"),
     ]),
     ("Spirit potions", [
         ("Grape Juice", ["25 Grape", "10 Ant Jaw", "10 Golden Hair"],
-         "Heals 50 to 100 SP"),
-        ("Blue Potion", ["1 Grape Juice", "25 Blue Herb", "25 Grave Dust",
-                         "25 Blazing Stone", "25 Broken Urn"],
-         "Heals 400 to 600 SP"),
+         "Recovers 50 to 100 SP"),
+        ("Blue Potion", ["25 Blue Herb", "25 Grave Dust", "25 Blazing Stone",
+                         "25 Broken Urn"], "Recovers 400 to 600 SP"),
     ]),
     ("Attack speed potions", [
         ("Concentration Potion", ["25 Mushroom Spore", "1 Gnome's Moustache",
-                                  "1 Memento"], ""),
-        ("Awakening Potion", ["1 Concentration Potion", "25 Mushroom Spore",
-                              "25 Poison Spore", "1 Detrimindexta",
-                              "1 Ancient Tooth", "1 Cultish Mask"], ""),
-        ("Berserk Potion", ["Base level 100", "1 Awakening Potion",
-                            "50 Mushroom Spore", "50 Poison Spore",
-                            "10 Detrimindexta", "10 Karvodailnirol"], ""),
+                                  "1 Memento"], "ASPD +2"),
+        ("Awakening Potion", ["25 Mushroom Spore", "25 Poison Spore",
+                              "1 Detrimindexta", "1 Ancient Tooth",
+                              "1 Cultish Mask"], "ASPD +4"),
+        ("Berserk Potion", ["25 Mushroom Spore", "25 Poison Spore",
+                            "1 Detrimindexta", "1 Karvodailnirol"],
+         "ASPD +6"),
     ]),
-    ("Other", [
-        ("Green Potion", ["25 Green Herb", "25 Stem", "25 Scell",
-                          "25 Nine Tail"], ""),
+    ("Status cure", [
+        ("Green Potion", ["30 Green Herb", "30 Stem", "25 Scell",
+                          "25 Nine Tail"],
+         "Cures Bleeding, Poison and Burning on the spot"),
     ]),
 ]
 
-POTION_SOURCE = "https://twilight-senai.tiddlyhost.com/?page=potions"
+POTION_SOURCE = "https://wiki.nightmareofragnarok.com/wiki/Potion"
+
+# The rules around the ladder that are not amounts, so do not belong in a
+# table of amounts.
+POTION_RULES = [
+    ("q.potionCd", "Cooldowns",
+     "Health potions sit on ten seconds. Spirit potions and the Green Potion "
+     "sit on thirty. Vitality shortens all of them, half a second for every "
+     "twenty five points."),
+    ("q.potionTrade", "Not tradable",
+     "No potion can be traded, and neither can blue herbs. Blue herbs can at "
+     "least go into storage."),
+    ("q.potionWhere", "Where to craft",
+     "The Alchemist Guild in Aldebaran does the whole ladder. The Orange "
+     "Potion and the Grape Juice are the exception: any major city tool "
+     "dealer has a guild representative who can make those two, so you do not "
+     "have to make the trip for them."),
+]
 
 
 def potion_section():
@@ -336,20 +353,43 @@ def potion_section():
       <div class="section-head">
         <p class="eyebrow" data-i18n="q.potionEyebrow">Potion crafting</p>
         <h2 data-i18n="q.potionTitle">Everything upgrades from the tier below</h2>
-        <p class="lede" data-i18n="q.potionLede">Potions are crafted and upgraded at the Alchemist Guild in Aldebaran. Each tier eats one of the tier under it, so the ladder starts at the Red Potion and works up.</p>
+        <p class="lede" data-i18n="q.potionLede">Your potion is a piece of equipment. It is never used up, and each upgrade eats the one under it, so the ladder starts at the Red Potion you were handed and works up. These are the materials each step asks for.</p>
       </div>
-      <p class="note" data-i18n="q.potionWarn">This part comes from a player made wiki rather than from Twilight, and it was last touched in October 2024. Treat the amounts as a guide and check in game before you go farming.</p>
 {groups}
+      <dl class="rows" style="margin-top:1.35rem">{rules}</dl>
       <p class="dim" style="margin-top:1rem">
         <span data-i18n="q.potionSource">Source</span>
-        <a href="{src}" target="_blank" rel="noopener">twilight-senai.tiddlyhost.com</a>
+        <a href="{src}" target="_blank" rel="noopener" data-i18n="footer.wiki">Player wiki</a>
       </p>
     </div>
   </section>
-""".format(groups="\n".join(groups), src=POTION_SOURCE)
+""".format(groups="\n".join(groups), src=POTION_SOURCE,
+           rules="".join(
+               '<div class="row"><dt data-i18n="%s.t">%s</dt>'
+               '<dd data-i18n="%s">%s</dd></div>' % (key, esc(term), key,
+                                                     esc(text))
+               for key, term, text in POTION_RULES))
 
 
 # --------------------------------------------------------------------------
+
+def taekwon_levels():
+    """The ten levels of Taekwon Mission, straight off the wiki skill page.
+
+    Read at build time rather than copied out, so it follows the wiki the
+    next time somebody retunes the numbers."""
+    skills = load_json("wiki-skills.json", {})
+    table = (skills.get("Taekwon Mission") or {}).get("levels")
+    if not table:
+        return ""
+    head_html = "".join("<th>%s</th>" % esc(h) for h in table["headers"])
+    body = "".join(
+        "<tr>%s</tr>" % "".join("<td>%s</td>" % esc(c) for c in row)
+        for row in table["rows"])
+    return ('<div class="table-wrap"><table class="mvp-table">'
+            "<thead><tr>%s</tr></thead><tbody>%s</tbody></table></div>"
+            % (head_html, body))
+
 
 def taekwon_section():
     rows = read_csv("mvp-spoiler-quest")
@@ -367,12 +407,15 @@ def taekwon_section():
       <div class="section-head">
         <p class="eyebrow" data-i18n="q.tkEyebrow">Taekwon mission</p>
         <h2 data-i18n="q.tkTitle">Five rounds of boss hunting</h2>
-        <p class="lede" data-i18n="q.tkLede">The Taekwon Mission skill raises the job level cap, and it costs you the ability to change jobs ever again. These are the five rounds it asks for.</p>
+        <p class="lede" data-i18n="q.tkLede">The quest starts in the Archer Village outside Payon. The skill raises your job level cap and the damage of everything you do, and it costs you the ability to change jobs ever again. These are the five rounds it asks for.</p>
       </div>
       <ol class="q-steps">{items}</ol>
+      <h3 class="q-potion-head" data-i18n="q.tkPaysTitle">What each level pays</h3>
+      {table}
+      <p class="note" data-i18n="q.tkWarn">Learning it is permanent. A Taekwon who takes this can never become a Star Gladiator or a Soul Linker, and neither of their third jobs is reachable afterwards either.</p>
     </div>
   </section>
-""".format(items=items)
+""".format(items=items, table=taekwon_levels())
 
 
 def build():

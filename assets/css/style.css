@@ -1681,6 +1681,7 @@ html[data-theme="light"] .site-footer { background: color-mix(in srgb, var(--bg)
 }
 
 .sk-type,
+.sk-target,
 .sk-lv {
   flex: none;
   padding: 0.14rem 0.48rem;
@@ -1699,6 +1700,11 @@ html[data-theme="light"] .site-footer { background: color-mix(in srgb, var(--bg)
   background: color-mix(in srgb, var(--sk) 9%, transparent);
 }
 .sk-lv { color: var(--text-dim); border: 1px solid var(--surface-line); }
+.sk-target {
+  color: var(--text-muted);
+  background: var(--bg-elevated);
+  border: 1px solid var(--surface-line);
+}
 
 .sk-short {
   font-size: 0.83rem;
@@ -1768,6 +1774,72 @@ html[data-theme="light"] .site-footer { background: color-mix(in srgb, var(--bg)
   transition: background-color 0.2s var(--ease);
 }
 .sk-needs a:hover { background: color-mix(in srgb, var(--accent) 14%, transparent); }
+.sk-needs.-req a { color: var(--text); border-color: var(--surface-line); }
+
+/* the per level numbers off the wiki. Folded away, because most of the time
+   the description is the answer and the table is the follow up question. */
+/* A grid item is as wide as its widest child unless it is told otherwise, so
+   without these a seven column table would stretch its card and push the
+   whole page sideways instead of scrolling inside its own box. */
+.skill-card,
+.sk-nums,
+.sk-nums .table-wrap { min-width: 0; }
+
+.sk-nums { margin-top: 0.1rem; }
+.sk-nums summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.55rem;
+  font-family: var(--font-mono);
+  font-size: 0.63rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  cursor: pointer;
+  border: 1px solid var(--surface-line);
+  border-radius: 100px;
+  list-style: none;
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+.sk-nums summary::-webkit-details-marker { display: none; }
+.sk-nums summary::after {
+  content: "+";
+  font-size: 0.85rem;
+  line-height: 1;
+}
+.sk-nums[open] summary::after { content: "\2212"; }
+.sk-nums summary:hover {
+  color: var(--sk);
+  border-color: color-mix(in srgb, var(--sk) 40%, transparent);
+}
+.sk-nums .table-wrap { margin-top: 0.55rem; }
+.sk-nums table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.74rem;
+  font-variant-numeric: tabular-nums;
+}
+.sk-nums th,
+.sk-nums td {
+  padding: 0.28rem 0.5rem;
+  text-align: start;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--surface-line);
+}
+.sk-nums th {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.sk-nums td { color: var(--text-muted); }
+.sk-nums td:first-child { color: var(--text); font-weight: 600; }
+.sk-nums tbody tr:last-child td { border-bottom: 0; }
+/* a table of sentences rather than numbers, like Void Infusion's demerits */
+.sk-nums td:last-child { white-space: normal; }
 
 /* class mechanics: resources, stances and states that are not skills */
 .mech {
@@ -3295,9 +3367,13 @@ html[data-theme="light"] .site-footer { background: color-mix(in srgb, var(--bg)
 
 @media (max-width: 640px) {
   .sk-type,
+  .sk-target,
   .sk-lv { font-size: 0.72rem; }
   .sk-needs,
-  .sk-needs a { font-size: 0.78rem; }
+  .sk-needs a,
+  .sk-nums summary { font-size: 0.78rem; }
+  .sk-nums th { font-size: 0.72rem; }
+  .sk-nums table { font-size: 0.8rem; }
   .kw-legend span,
   .type-key span { font-size: 0.72rem; }
   .mech-strip,

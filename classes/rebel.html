@@ -228,7 +228,7 @@
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types, targets and the numbers behind every level come from the player wiki, so they match what you see in game.</p>
       </div>
       <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-vuln">Vulnerable</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
       <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-support" data-i18n="cls.t.support">Support</span></div>
@@ -237,16 +237,18 @@
         <h3 class="branch-title">Support Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-support" id="s-bullet-time">
-            <div class="sk-top"><strong>Bullet Time</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Bullet Time</strong><i class="sk-type">Supportive</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Massive Perfect Dodge buff at the cost of Movement Speed.</p>
             <p class="sk-body">The user focuses all of their efforts on defense, enabling them to dodge incoming attacks with ease. Massively increases the user's Perfect Dodge, but reduces the user's movement speed for the duration. Does not stack with Gunslinger's Gambit.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-gunslinger-s-gambit">Gunslinger's Gambit</a></p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Perfect Dodge Bonus</th></tr></thead><tbody><tr><td>1</td><td>+20</td></tr><tr><td>2</td><td>+40</td></tr><tr><td>3</td><td>+60</td></tr><tr><td>4</td><td>+80</td></tr><tr><td>5</td><td>+100</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-gunslinger-s-gambit">
-            <div class="sk-top"><strong>Gunslinger's Gambit</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Gunslinger's Gambit</strong><i class="sk-type">Supportive</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Reduces all cooldowns to 1 second while immobilized.</p>
             <p class="sk-body">The user focuses all of their efforts on offense, discarding any pretense of self preservation. For a short duration, all of the user's skills have their Cooldowns reduced to 1 second. This status ends after a certain number of skills are cast, and the user is immobilized until the duration expires or all stacks have been consumed. Does not stack with Bullet Time.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-bullet-time">Bullet Time</a></p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Skills Affected</th></tr></thead><tbody><tr><td>1</td><td>1</td></tr><tr><td>2</td><td>2</td></tr><tr><td>3</td><td>3</td></tr><tr><td>4</td><td>4</td></tr><tr><td>5</td><td>5</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -254,14 +256,17 @@
         <h3 class="branch-title">Revolver Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-physical" id="s-disengage">
-            <div class="sk-top"><strong>Disengage</strong><i class="sk-type">Revolver</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Disengage</strong><i class="sk-type">Revolver</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Backsliding shot; upgrades <b class="kw kw-slow">Slow</b> to <b class="kw kw-bleed">Internal Bleeding</b>.</p>
             <p class="sk-body">The user fires a distracting shot with their pistols, creating an opening to remove themselves from a dangerous situation. Deals moderate physical damage to a single target, then the user immediately backslides. Has a chance to inflict the <b class="kw kw-slow">Slow</b> Status. If the target is already <b class="kw kw-slow">Slowed</b>, it instead inflicts the <b class="kw kw-bleed">Internal Bleeding</b> status. This skill does additional damage to <b class="kw kw-vuln">Vulnerable</b> enemies.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Status Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>275%</td><td>60%</td><td>16</td></tr><tr><td>2</td><td>300%</td><td>70%</td><td>17</td></tr><tr><td>3</td><td>325%</td><td>80%</td><td>18</td></tr><tr><td>4</td><td>350%</td><td>90%</td><td>19</td></tr><tr><td>5</td><td>375%</td><td>100%</td><td>20</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-rapid-blitz">
-            <div class="sk-top"><strong>Rapid Blitz</strong><i class="sk-type">Revolver</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Rapid Blitz</strong><i class="sk-type">Revolver</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Teleports behind the target; upgrades <b class="kw kw-slow">Slow</b> to <b class="kw kw-vuln">Vulnerable</b>.</p>
             <p class="sk-body">The user dashes behind an enemy, delivering a quick hail of bullets into their back. Teleports behind a target before dealing moderate physical damage to them, with a chance to inflict the <b class="kw kw-slow">Slow</b> status. If the target is already <b class="kw kw-slow">Slowed</b>, instead inflicts the <b class="kw kw-vuln">Vulnerable</b> status. This skill deals additional damage to <b class="kw kw-bleed">Bleeding</b> enemies.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-disengage">Disengage</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Status Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>380%</td><td>55%</td><td>16</td></tr><tr><td>2</td><td>410%</td><td>60%</td><td>17</td></tr><tr><td>3</td><td>440%</td><td>65%</td><td>18</td></tr><tr><td>4</td><td>470%</td><td>70%</td><td>19</td></tr><tr><td>5</td><td>500%</td><td>75%</td><td>20</td></tr><tr><td>6</td><td>530%</td><td>80%</td><td>21</td></tr><tr><td>7</td><td>560%</td><td>85%</td><td>22</td></tr><tr><td>8</td><td>590%</td><td>90%</td><td>23</td></tr><tr><td>9</td><td>620%</td><td>95%</td><td>24</td></tr><tr><td>10</td><td>650%</td><td>100%</td><td>25</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -269,14 +274,17 @@
         <h3 class="branch-title">Rifle Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-physical" id="s-penetrating-shot">
-            <div class="sk-top"><strong>Penetrating Shot</strong><i class="sk-type">Rifle</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Penetrating Shot</strong><i class="sk-type">Rifle</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Line pierce; upgrades <b class="kw kw-vuln">Vulnerable</b> to <b class="kw kw-bleed">Internal Bleeding</b>.</p>
             <p class="sk-body">The user fires a powerful round from their rifle, punching through the targeted enemy and any other enemies in a line behind them. Deals physical damage to all enemies in the targeted area with a chance to inflict the <b class="kw kw-vuln">Vulnerable</b> Status. Any enemy that is already <b class="kw kw-vuln">Vulnerable</b> is inflicted with the <b class="kw kw-bleed">Internal Bleeding</b> status instead. This skill gains bonus damage against <b class="kw kw-slow">Slowed</b> enemies.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Status Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>330%</td><td>60%</td><td>21</td></tr><tr><td>2</td><td>360%</td><td>70%</td><td>22</td></tr><tr><td>3</td><td>390%</td><td>80%</td><td>23</td></tr><tr><td>4</td><td>420%</td><td>90%</td><td>24</td></tr><tr><td>5</td><td>450%</td><td>100%</td><td>25</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-burst-fire">
-            <div class="sk-top"><strong>Burst Fire</strong><i class="sk-type">Rifle</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Burst Fire</strong><i class="sk-type">Rifle</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Three-round burst; upgrades <b class="kw kw-vuln">Vulnerable</b> to <b class="kw kw-slow">Slow</b>.</p>
             <p class="sk-body">The user fires a quick three round burst into the targeted enemy, dealing exceptional physical damage and inflicting the <b class="kw kw-vuln">Vulnerable</b> status. If the target is already suffering from the <b class="kw kw-vuln">Vulnerable</b> Status, it instead inflicts the <b class="kw kw-slow">Slow</b> status. This skill gains bonus damage against <b class="kw kw-bleed">Bleeding</b> enemies.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-penetrating-shot">Penetrating Shot</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Status Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>630%</td><td>55%</td><td>26</td></tr><tr><td>2</td><td>660%</td><td>60%</td><td>27</td></tr><tr><td>3</td><td>690%</td><td>65%</td><td>28</td></tr><tr><td>4</td><td>720%</td><td>70%</td><td>29</td></tr><tr><td>5</td><td>750%</td><td>75%</td><td>30</td></tr><tr><td>6</td><td>780%</td><td>80%</td><td>31</td></tr><tr><td>7</td><td>810%</td><td>85%</td><td>32</td></tr><tr><td>8</td><td>840%</td><td>90%</td><td>33</td></tr><tr><td>9</td><td>870%</td><td>95%</td><td>34</td></tr><tr><td>10</td><td>900%</td><td>100%</td><td>35</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -284,14 +292,17 @@
         <h3 class="branch-title">Shotgun Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-physical" id="s-blazing-shell">
-            <div class="sk-top"><strong>Blazing Shell</strong><i class="sk-type">Shotgun</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Blazing Shell</strong><i class="sk-type">Shotgun</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short"><b class="kw kw-burn">Burning</b> shrapnel AoE; upgrades <b class="kw kw-bleed">Internal Bleeding</b> to <b class="kw kw-slow">Slow</b>.</p>
             <p class="sk-body">Unleashes a burst of flaming shrapnel to damage and disorient enemies in the targeted area. Deals splash damage to all enemies around the target, attempting to inflict the <b class="kw kw-bleed">Internal Bleeding</b> status. Enemies that are already <b class="kw kw-bleed">Bleeding</b> instead are inflicted with the <b class="kw kw-slow">Slow</b> status. Enemies that are <b class="kw kw-vuln">Vulnerable</b> take additional damage.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Status Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>250%</td><td>60%</td><td>21</td></tr><tr><td>2</td><td>300%</td><td>70%</td><td>22</td></tr><tr><td>3</td><td>350%</td><td>80%</td><td>23</td></tr><tr><td>4</td><td>400%</td><td>90%</td><td>24</td></tr><tr><td>5</td><td>450%</td><td>100%</td><td>25</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-shattering-blast">
-            <div class="sk-top"><strong>Shattering Blast</strong><i class="sk-type">Shotgun</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Shattering Blast</strong><i class="sk-type">Shotgun</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Explosive slug; upgrades <b class="kw kw-bleed">Internal Bleeding</b> to <b class="kw kw-vuln">Vulnerable</b>.</p>
             <p class="sk-body">Fires an explosive shot at an enemy, tearing apart their defenses as well as their bodies. Deals physical damage to a single enemy, attempting to inflict the <b class="kw kw-bleed">Internal Bleeding</b> status. If the target is already <b class="kw kw-bleed">Bleeding</b>, instead inflicts the <b class="kw kw-vuln">Vulnerable</b> Status. Enemies that are <b class="kw kw-slow">Slowed</b> take additional damage.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-blazing-shell">Blazing Shell</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Status Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>435%</td><td>55%</td><td>27</td></tr><tr><td>2</td><td>470%</td><td>60%</td><td>29</td></tr><tr><td>3</td><td>505%</td><td>65%</td><td>31</td></tr><tr><td>4</td><td>540%</td><td>70%</td><td>33</td></tr><tr><td>5</td><td>575%</td><td>75%</td><td>35</td></tr><tr><td>6</td><td>610%</td><td>80%</td><td>37</td></tr><tr><td>7</td><td>645%</td><td>85%</td><td>39</td></tr><tr><td>8</td><td>680%</td><td>90%</td><td>41</td></tr><tr><td>9</td><td>715%</td><td>95%</td><td>43</td></tr><tr><td>10</td><td>750%</td><td>100%</td><td>45</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -299,19 +310,25 @@
         <h3 class="branch-title">Gatling Gun Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-physical" id="s-lead-barrage">
-            <div class="sk-top"><strong>Lead Barrage</strong><i class="sk-type">Gatling</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Lead Barrage</strong><i class="sk-type">Gatling</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Spinning point-blank AoE with knockback and <b class="kw kw-slow">Slow</b>.</p>
             <p class="sk-body">The user fires a quick burst from their Gatling Gun, knocking back enemies around them. Deals moderate physical damage to all enemies in an area around the user, knocking them back and inflicting the <b class="kw kw-slow">Slow</b> Status.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-rapid-blitz">Rapid Blitz</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Slow Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>265%</td><td>60%</td><td>26</td></tr><tr><td>2</td><td>280%</td><td>70%</td><td>27</td></tr><tr><td>3</td><td>295%</td><td>80%</td><td>28</td></tr><tr><td>4</td><td>310%</td><td>90%</td><td>29</td></tr><tr><td>5</td><td>325%</td><td>100%</td><td>30</td></tr><tr><td>6</td><td>340%</td><td>110%</td><td>31</td></tr><tr><td>7</td><td>355%</td><td>120%</td><td>32</td></tr><tr><td>8</td><td>370%</td><td>130%</td><td>33</td></tr><tr><td>9</td><td>385%</td><td>140%</td><td>34</td></tr><tr><td>10</td><td>400%</td><td>150%</td><td>35</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-spray-pray">
-            <div class="sk-top"><strong>Spray and Pray</strong><i class="sk-type">Gatling</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Spray and Pray</strong><i class="sk-type">Gatling</i><i class="sk-target">Ground</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Ten-volley saturation fire with its own Hit chance.</p>
             <p class="sk-body">The user unleashes a hail of gunfire with their Gatling Gun, saturating a wide area with fire. Rapidly fires at all enemies in the target area, hitting multiple times in quick succession but with a low accuracy rate. Each enemy within the targeted area can be struck by each volley, but the chance to hit each enemy is calculated separately. The chance to hit is increased by the level of the skill used. Each hit has a chance of inflicting the <b class="kw kw-bleed">Internal Bleeding</b> status.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-shattering-blast">Shattering Blast</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Hit Chance</th><th>Internal Bleeding Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>110%</td><td>30%</td><td>30%</td><td>32</td></tr><tr><td>2</td><td>120%</td><td>35%</td><td>35%</td><td>34</td></tr><tr><td>3</td><td>130%</td><td>40%</td><td>40%</td><td>36</td></tr><tr><td>4</td><td>140%</td><td>45%</td><td>45%</td><td>38</td></tr><tr><td>5</td><td>150%</td><td>50%</td><td>50%</td><td>40</td></tr><tr><td>6</td><td>160%</td><td>55%</td><td>55%</td><td>42</td></tr><tr><td>7</td><td>170%</td><td>60%</td><td>60%</td><td>44</td></tr><tr><td>8</td><td>180%</td><td>65%</td><td>65%</td><td>46</td></tr><tr><td>9</td><td>190%</td><td>70%</td><td>70%</td><td>48</td></tr><tr><td>10</td><td>200%</td><td>75%</td><td>75%</td><td>50</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-pyrrhic-rainstorm">
-            <div class="sk-top"><strong>Pyrrhic Rainstorm</strong><i class="sk-type">Gatling</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Pyrrhic Rainstorm</strong><i class="sk-type">Gatling</i><i class="sk-target">Ground</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Sustained damage-over-time zone.</p>
             <p class="sk-body">The user unleashes a massive hail of gunfire at the targeted location, dealing heavy damage over time to all enemies that remain within it. Each hit has a chance to inflict the <b class="kw kw-vuln">Vulnerable</b> status.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-burst-fire">Burst Fire</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Vulnerable Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>55%</td><td>30%</td><td>52</td></tr><tr><td>2</td><td>60%</td><td>35%</td><td>54</td></tr><tr><td>3</td><td>65%</td><td>40%</td><td>56</td></tr><tr><td>4</td><td>70%</td><td>45%</td><td>58</td></tr><tr><td>5</td><td>75%</td><td>50%</td><td>60</td></tr><tr><td>6</td><td>80%</td><td>55%</td><td>62</td></tr><tr><td>7</td><td>85%</td><td>60%</td><td>64</td></tr><tr><td>8</td><td>90%</td><td>65%</td><td>66</td></tr><tr><td>9</td><td>95%</td><td>70%</td><td>68</td></tr><tr><td>10</td><td>100%</td><td>75%</td><td>70</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>

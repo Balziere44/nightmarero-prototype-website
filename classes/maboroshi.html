@@ -255,7 +255,7 @@
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types, targets and the numbers behind every level come from the player wiki, so they match what you see in game.</p>
       </div>
       <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Basic Ninja Art</span><span>Ninja Arts</span><span>Third Art</span></div>
 
@@ -263,24 +263,29 @@
         <h3 class="branch-title">Mirage Skills<span>4 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-physical" id="s-deadly-mirage">
-            <div class="sk-top"><strong>Deadly Mirage</strong><i class="sk-type">Dagger</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Deadly Mirage</strong><i class="sk-type">Dagger</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Dash strike that leaves a Mirage; can grant First Art.</p>
             <p class="sk-body">The user dashes toward a distant target, dealing a small amount of physical damage and leaving behind a Mirage at their original location. If no <b class="mech">Ninja Arts</b> are active, this skill grants the First Art Status.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Mirage Duration</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>165%</td><td>6s</td><td>27</td></tr><tr><td>2</td><td>180%</td><td>7s</td><td>29</td></tr><tr><td>3</td><td>195%</td><td>8s</td><td>31</td></tr><tr><td>4</td><td>210%</td><td>9s</td><td>33</td></tr><tr><td>5</td><td>225%</td><td>10s</td><td>35</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-fading-mirage">
-            <div class="sk-top"><strong>Fading Mirage</strong><i class="sk-type">Throwing</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Fading Mirage</strong><i class="sk-type">Throwing</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Dash escape into Cloaking that leaves a Mirage.</p>
             <p class="sk-body">The user creates a cloud of smoke to hide themselves, immediately dashing toward the targeted location and entering the Cloaking Status for a brief time, leaving a Mirage at their original location. If no <b class="mech">Ninja Arts</b> are active, this skill grants the Second Art status.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Mirage Duration</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>6s</td><td>27</td></tr><tr><td>2</td><td>7s</td><td>29</td></tr><tr><td>3</td><td>8s</td><td>31</td></tr><tr><td>4</td><td>9s</td><td>33</td></tr><tr><td>5</td><td>10s</td><td>35</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-treacherous-mirage">
-            <div class="sk-top"><strong>Treacherous Mirage</strong><i class="sk-type">Elite Ninja Art</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Treacherous Mirage</strong><i class="sk-type">Elite Ninja Art</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Illusion that makes a skill attack miss, generating Mirages.</p>
             <p class="sk-body">The user wraps themselves in a bewitching illusion, sheltering them from the next skill against them for a short duration. If a skill is successfully blocked, leaves a Mirage at the user's location. If no <b class="mech">Ninja Arts</b> are active, this skill grants the <b class="mech">Third Art</b> status.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Mirage Duration</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>6s</td><td>27</td></tr><tr><td>2</td><td>7s</td><td>29</td></tr><tr><td>3</td><td>8s</td><td>31</td></tr><tr><td>4</td><td>9s</td><td>33</td></tr><tr><td>5</td><td>10s</td><td>35</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-other" id="s-stalking-mirage">
-            <div class="sk-top"><strong>Stalking Mirage</strong><i class="sk-type">Mirage</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Stalking Mirage</strong><i class="sk-type">Mirage</i><i class="sk-target">Ground</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Summons all three Mirages at once.</p>
             <p class="sk-body">Immediately summons three mirages at the user's current location.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-deadly-mirage">Deadly Mirage</a> Lv3, <a href="#s-fading-mirage">Fading Mirage</a> Lv3, <a href="#s-treacherous-mirage">Treacherous Mirage</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Cooldown</th><th>Mirage Duration</th></tr></thead><tbody><tr><td>1</td><td>28s</td><td>6s</td></tr><tr><td>2</td><td>26s</td><td>7s</td></tr><tr><td>3</td><td>24s</td><td>8s</td></tr><tr><td>4</td><td>22s</td><td>9s</td></tr><tr><td>5</td><td>20s</td><td>10s</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -288,21 +293,25 @@
         <h3 class="branch-title">Melee Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-physical" id="s-prowling-steel">
-            <div class="sk-top"><strong>Prowling Steel</strong><i class="sk-type">Dagger</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Prowling Steel</strong><i class="sk-type">Dagger</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Shadow-blade AoE that triggers Mirage casts by Art pair.</p>
             <p class="sk-body">The user lashes out around them, striking all enemies in the area around them. Deals moderate physical damage to all enemies in an area around the user.</p>
             <p class="sk-body">If the user is in the First and Second Art Status, all active Mirages immediately cast a random <b class="mech">Basic Ninja Art</b> on one of the targets struck.</p>
             <p class="sk-body">If the user is in the First and <b class="mech">Third Art</b> Status, all active Mirages immediately cast Echoing Shadow on one of the targets struck.</p>
             <p class="sk-body">If the user is in the Second and <b class="mech">Third Art</b> Status, all active Mirages immediately cast Prowling Steel, dealing half damage.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-deadly-mirage">Deadly Mirage</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>360%</td><td>27</td></tr><tr><td>2</td><td>420%</td><td>29</td></tr><tr><td>3</td><td>480%</td><td>31</td></tr><tr><td>4</td><td>540%</td><td>33</td></tr><tr><td>5</td><td>600%</td><td>35</td></tr><tr><td>6</td><td>660%</td><td>37</td></tr><tr><td>7</td><td>720%</td><td>39</td></tr><tr><td>8</td><td>780%</td><td>41</td></tr><tr><td>9</td><td>840%</td><td>43</td></tr><tr><td>10</td><td>900%</td><td>45</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-fatal-steel">
-            <div class="sk-top"><strong>Fatal Steel</strong><i class="sk-type">Dagger</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Fatal Steel</strong><i class="sk-type">Dagger</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Applies Death Mark, making all Physical attacks against the target Crit.</p>
             <p class="sk-body">The user delivers a final decisive blow to a single target, dealing massive physical damage and applying the Death Mark status to the target. All physical attacks against enemies with the Death Mark status are guaranteed to be critical.</p>
             <p class="sk-body">If the user is in the First and Second Art Status, all active Mirages immediately cast a random <b class="mech">Basic Ninja Art</b> on the target.</p>
             <p class="sk-body">If the user is in the First and <b class="mech">Third Art</b> Status, all active Mirages immediately cast Echoing Shadow on the target.</p>
             <p class="sk-body">If the user is in the Second and <b class="mech">Third Art</b> Status, all active Mirages immediately cast Prowling Steel, dealing half damage.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-prowling-steel">Prowling Steel</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-prowling-steel">Prowling Steel</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>550%</td><td>27</td></tr><tr><td>2</td><td>600%</td><td>29</td></tr><tr><td>3</td><td>650%</td><td>31</td></tr><tr><td>4</td><td>700%</td><td>33</td></tr><tr><td>5</td><td>750%</td><td>35</td></tr><tr><td>6</td><td>800%</td><td>37</td></tr><tr><td>7</td><td>850%</td><td>39</td></tr><tr><td>8</td><td>900%</td><td>41</td></tr><tr><td>9</td><td>950%</td><td>43</td></tr><tr><td>10</td><td>1000%</td><td>45</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -310,22 +319,26 @@
         <h3 class="branch-title">Ranged Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-physical" id="s-piercing-shadow">
-            <div class="sk-top"><strong>Piercing Shadow</strong><i class="sk-type">Throwing</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Piercing Shadow</strong><i class="sk-type">Throwing</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Piercing throw whose cooldown depends on the Throwing Weapon.</p>
             <p class="sk-body">The user throws the equipped Throwing Weapon at an enemy with tremendous force, piercing through them to strike any other enemies in the immediate area. Deals ranged physical damage to the target and all enemies in a small area around them. The damage of this skill is based on the Throwing Skill of the equipped offhand.</p>
             <p class="sk-body">If the user is in the First and Second Art Status, all active Mirages immediately cast a random <b class="mech">Basic Ninja Art</b> on the target.</p>
             <p class="sk-body">If the user is in the First and <b class="mech">Third Art</b> Status, all active Mirages immediately cast Piercing Shadow on the target, dealing half damage.</p>
             <p class="sk-body">If the user is in the Second and <b class="mech">Third Art</b> Status, all active Mirages immediately cast Flashing Steel on the target.</p>
             <p class="sk-body">This skill's Cooldown changes based on the equipped Offhand.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-fading-mirage">Fading Mirage</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>300%</td><td>22</td></tr><tr><td>2</td><td>350%</td><td>24</td></tr><tr><td>3</td><td>400%</td><td>26</td></tr><tr><td>4</td><td>450%</td><td>28</td></tr><tr><td>5</td><td>500%</td><td>30</td></tr><tr><td>6</td><td>550%</td><td>32</td></tr><tr><td>7</td><td>600%</td><td>34</td></tr><tr><td>8</td><td>650%</td><td>36</td></tr><tr><td>9</td><td>700%</td><td>38</td></tr><tr><td>10</td><td>750%</td><td>40</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-refracting-shadow">
-            <div class="sk-top"><strong>Refracting Shadow</strong><i class="sk-type">Throwing</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Refracting Shadow</strong><i class="sk-type">Throwing</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Ricocheting giant shuriken that consumes all <b class="mech">Ninja Arts</b>.</p>
             <p class="sk-body">The user hurls a massive illusory shuriken at the target which ricochets around, dealing physical damage to all enemies in the area. The damage of this skill is based on the user's Dex instead of Atk, and is not influenced by the equipped Throwing Weapon.</p>
             <p class="sk-body">If the user is in the First and Second Art Status, all active Mirages immediately cast a random <b class="mech">Basic Ninja Art</b> on the target.</p>
             <p class="sk-body">If the user is in the First and <b class="mech">Third Art</b> Status, all active Mirages immediately cast Piercing Shadow on the target, dealing half damage.</p>
             <p class="sk-body">If the user is in the Second and <b class="mech">Third Art</b> Status, all active Mirages immediately cast Flashing Steel on the target.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-piercing-shadow">Piercing Shadow</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-piercing-shadow">Piercing Shadow</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>550%</td><td>27</td></tr><tr><td>2</td><td>600%</td><td>29</td></tr><tr><td>3</td><td>650%</td><td>31</td></tr><tr><td>4</td><td>700%</td><td>33</td></tr><tr><td>5</td><td>750%</td><td>35</td></tr><tr><td>6</td><td>800%</td><td>37</td></tr><tr><td>7</td><td>850%</td><td>39</td></tr><tr><td>8</td><td>900%</td><td>41</td></tr><tr><td>9</td><td>950%</td><td>43</td></tr><tr><td>10</td><td>1000%</td><td>45</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -333,36 +346,44 @@
         <h3 class="branch-title">Magic Skills<span>4 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-physical" id="s-blazing-howl">
-            <div class="sk-top"><strong>Blazing Howl</strong><i class="sk-type">Elite Ninja Art</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Blazing Howl</strong><i class="sk-type">Elite Ninja Art</i><i class="sk-target">Ground</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Fire cone; <b class="mech">Third Art</b> makes Mirages cast Blazing Dragon.</p>
             <p class="sk-body">The user unleashes a blast of scorching flames in front of them, dealing Fire property Magic damage to all enemies in the area in front of them.</p>
             <p class="sk-body">If the First Art Status is active, this skill's Fixed Cast Time is removed.</p>
             <p class="sk-body">If the Second Art Status is active, this skill's Variable Cast Time is removed.</p>
             <p class="sk-body">If the <b class="mech">Third Art</b> Status is active, all active Mirages immediately cast Blazing Dragon.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-treacherous-mirage">Treacherous Mirage</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>500%</td><td>55</td></tr><tr><td>2</td><td>600%</td><td>60</td></tr><tr><td>3</td><td>700%</td><td>65</td></tr><tr><td>4</td><td>800%</td><td>70</td></tr><tr><td>5</td><td>900%</td><td>75</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-frigid-wind">
-            <div class="sk-top"><strong>Frigid Wind</strong><i class="sk-type">Elite Ninja Art</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Frigid Wind</strong><i class="sk-type">Elite Ninja Art</i><i class="sk-target">Ground</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Water blast; <b class="mech">Third Art</b> makes Mirages cast Winter's Grasp.</p>
             <p class="sk-body">The user unleashes a burst of deadly cold around themselves, dealing Water property Magic damage to all enemies in the area around them.</p>
             <p class="sk-body">If the First Art Status is active, this skill's Fixed Cast Time is removed.</p>
             <p class="sk-body">If the Second Art Status is active, this skill's Variable Cast Time is removed.</p>
             <p class="sk-body">If the <b class="mech">Third Art</b> Status is active, all active Mirages immediately cast Winter's Grasp.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-treacherous-mirage">Treacherous Mirage</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>500%</td><td>55</td></tr><tr><td>2</td><td>600%</td><td>60</td></tr><tr><td>3</td><td>700%</td><td>65</td></tr><tr><td>4</td><td>800%</td><td>70</td></tr><tr><td>5</td><td>900%</td><td>75</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-voltaic-call">
-            <div class="sk-top"><strong>Voltaic Call</strong><i class="sk-type">Elite Ninja Art</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Voltaic Call</strong><i class="sk-type">Elite Ninja Art</i><i class="sk-target">Ground</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Wind lightning barrage; <b class="mech">Third Art</b> makes Mirages cast Thunderous Surge.</p>
             <p class="sk-body">The user calls down bolts of lightning from the heavens, dealing Wind property Magic damage to all enemies in the area around them.</p>
             <p class="sk-body">If the First Art Status is active, this skill's Fixed Cast Time is removed.</p>
             <p class="sk-body">If the Second Art Status is active, this skill's Variable Cast Time is removed.</p>
             <p class="sk-body">If the <b class="mech">Third Art</b> Status is active, all active Mirages immediately cast Thunderous Surge.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-treacherous-mirage">Treacherous Mirage</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>500%</td><td>55</td></tr><tr><td>2</td><td>600%</td><td>60</td></tr><tr><td>3</td><td>700%</td><td>65</td></tr><tr><td>4</td><td>800%</td><td>70</td></tr><tr><td>5</td><td>900%</td><td>75</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-raging-earth">
-            <div class="sk-top"><strong>Raging Earth</strong><i class="sk-type">Elite Ninja Art</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Raging Earth</strong><i class="sk-type">Elite Ninja Art</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Earth dragon in a line; <b class="mech">Third Art</b> makes Mirages cast Seismic Collapse.</p>
             <p class="sk-body">The user launches a dragon of earth toward the target enemy, dealing Earth property Magic damage to all enemies in a straight line in front of them.</p>
             <p class="sk-body">If the First Art Status is active, this skill's Fixed Cast Time is removed.</p>
             <p class="sk-body">If the Second Art Status is active, this skill's Variable Cast Time is removed.</p>
             <p class="sk-body">If the <b class="mech">Third Art</b> Status is active, all active Mirages immediately cast Seismic Collapse.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-treacherous-mirage">Treacherous Mirage</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>500%</td><td>55</td></tr><tr><td>2</td><td>600%</td><td>60</td></tr><tr><td>3</td><td>700%</td><td>65</td></tr><tr><td>4</td><td>800%</td><td>70</td></tr><tr><td>5</td><td>900%</td><td>75</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>

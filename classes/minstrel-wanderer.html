@@ -249,7 +249,7 @@
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types, targets and the numbers behind every level come from the player wiki, so they match what you see in game.</p>
       </div>
       <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Rhythm</span></div>
       <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
@@ -259,15 +259,18 @@
         <h3 class="branch-title">Core Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-support" id="s-improvised-interlude">
-            <div class="sk-top"><strong>Improvised Interlude</strong><i class="sk-type">Rhythm</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Improvised Interlude</strong><i class="sk-type">Rhythm</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Instantly sets the user's <b class="mech">Rhythm</b> level.</p>
             <p class="sk-body">The user improvises a melody, reaching a crescendo in their performance exactly when it's needed. Immediately sets the user's <b class="mech">Rhythm</b> level to a value determined by the skill level used.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Rhythm Level Set</th></tr></thead><tbody><tr><td>1</td><td>1</td></tr><tr><td>2</td><td>2</td></tr><tr><td>3</td><td>3</td></tr><tr><td>4</td><td>4</td></tr><tr><td>5</td><td>5</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-desperate-dynamic">
-            <div class="sk-top"><strong>Desperate Dynamic</strong><i class="sk-type">Buff/Debuff</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Desperate Dynamic</strong><i class="sk-type">Buff/Debuff</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Mass-applies Melodic Mark to enemies and Hypnotic Harmony to allies.</p>
             <p class="sk-body">The user adds a powerful chord to their performance, preparing for a desperate and grand climax. Immediately applies Melodic Mark to all enemies and Hypnotic Harmony to all allies within a given range of the user.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-hypnotic-harmony">Hypnotic Harmony</a><a href="#s-melodic-mark">Melodic Mark</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-melodic-mark">Melodic Mark</a> Lv5, <a href="#s-hypnotic-harmony">Hypnotic Harmony</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Range</th></tr></thead><tbody><tr><td>1</td><td>4 cells</td></tr><tr><td>2</td><td>5 cells</td></tr><tr><td>3</td><td>6 cells</td></tr><tr><td>4</td><td>7 cells</td></tr><tr><td>5</td><td>8 cells</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -275,25 +278,32 @@
         <h3 class="branch-title">Melodic Mark Skills<span>4 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-physical" id="s-melodic-mark">
-            <div class="sk-top"><strong>Melodic Mark</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Melodic Mark</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Curses a target to be struck by the user's note skills.</p>
             <p class="sk-body">Applies a musical curse to the target, dealing a small amount of damage and making them vulnerable to further abilities coming from the user.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>110%</td><td>16</td></tr><tr><td>2</td><td>120%</td><td>17</td></tr><tr><td>3</td><td>130%</td><td>18</td></tr><tr><td>4</td><td>140%</td><td>19</td></tr><tr><td>5</td><td>150%</td><td>20</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-sonorant-spike">
-            <div class="sk-top"><strong>Sonorant Spike</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Sonorant Spike</strong><i class="sk-type">Physical</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Detonates all Marks for Physical damage and <b class="kw kw-bleed">Internal Bleeding</b>.</p>
             <p class="sk-body">The user sings a screeching note, triggering all of their Melodic Marks to deal damage to their targets. Deals Physical Ranged damage to all targets affected by Melodic Mark within range of the user, has a chance to inflict the <b class="kw kw-bleed">Internal Bleeding</b> status on them, and resets the duration of their Melodic Mark.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-melodic-mark">Melodic Mark</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-melodic-mark">Melodic Mark</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>265%</td><td>32</td></tr><tr><td>2</td><td>280%</td><td>34</td></tr><tr><td>3</td><td>295%</td><td>36</td></tr><tr><td>4</td><td>310%</td><td>38</td></tr><tr><td>5</td><td>325%</td><td>40</td></tr><tr><td>6</td><td>340%</td><td>42</td></tr><tr><td>7</td><td>355%</td><td>44</td></tr><tr><td>8</td><td>370%</td><td>46</td></tr><tr><td>9</td><td>385%</td><td>48</td></tr><tr><td>10</td><td>400%</td><td>50</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-magic" id="s-ruinous-rhapsody">
-            <div class="sk-top"><strong>Ruinous Rhapsody</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Ruinous Rhapsody</strong><i class="sk-type">Magical</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Detonates all Marks for Magic damage and <b class="kw kw-burn">Burning</b>.</p>
             <p class="sk-body">The user sings a terrifying note, triggering all of their Melodic Marks to deal Magic Damage, inflict the <b class="kw kw-burn">Burning</b> Status, and then reset the duration of their Marks.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-melodic-mark">Melodic Mark</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>530%</td><td>33</td></tr><tr><td>2</td><td>560%</td><td>36</td></tr><tr><td>3</td><td>590%</td><td>39</td></tr><tr><td>4</td><td>620%</td><td>42</td></tr><tr><td>5</td><td>650%</td><td>45</td></tr><tr><td>6</td><td>680%</td><td>48</td></tr><tr><td>7</td><td>710%</td><td>51</td></tr><tr><td>8</td><td>740%</td><td>54</td></tr><tr><td>9</td><td>770%</td><td>57</td></tr><tr><td>10</td><td>800%</td><td>60</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-other" id="s-furious-finale">
-            <div class="sk-top"><strong>Furious Finale</strong><i class="sk-type">Finale</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Furious Finale</strong><i class="sk-type">Finale</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Consumes all <b class="mech">Rhythm</b> to detonate every Mark for enormous Hybrid damage.</p>
             <p class="sk-body">The user sings a furious note, triggering all of their Melodic Marks to inflict massive damage on their targets. Consumes the user's current <b class="mech">Rhythm</b> level to deal enormous Hybrid damage and reset the duration of the targets' Melodic Marks. If the user's <b class="mech">Rhythm</b> Level is at 0, this skill will fail.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-sonorant-spike">Sonorant Spike</a> Lv5, <a href="#s-ruinous-rhapsody">Ruinous Rhapsody</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage (per Rhythm Level)</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>165%</td><td>80</td></tr><tr><td>2</td><td>180%</td><td>85</td></tr><tr><td>3</td><td>195%</td><td>90</td></tr><tr><td>4</td><td>210%</td><td>95</td></tr><tr><td>5</td><td>225%</td><td>100</td></tr><tr><td>6</td><td>240%</td><td>105</td></tr><tr><td>7</td><td>255%</td><td>110</td></tr><tr><td>8</td><td>270%</td><td>115</td></tr><tr><td>9</td><td>285%</td><td>120</td></tr><tr><td>10</td><td>300%</td><td>125</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -301,27 +311,34 @@
         <h3 class="branch-title">Hypnotic Harmony Skills<span>4 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-support" id="s-hypnotic-harmony">
-            <div class="sk-top"><strong>Hypnotic Harmony</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Hypnotic Harmony</strong><i class="sk-type">Supportive</i><i class="sk-target">Ally</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Blesses an ally with <b class="mech">Rhythm</b>-scaled stats and marks them for chorus buffs.</p>
             <p class="sk-body">Applies a musical blessing to the target, providing a small increase to the target's stats and marking them to receive bonuses from the other skills of the user. Whenever Hypnotic Harmony is applied to an ally, it is also applied to the user.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Duration</th><th>Stat Bonus Cap</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>5s</td><td>1</td><td>16</td></tr><tr><td>2</td><td>10s</td><td>2</td><td>17</td></tr><tr><td>3</td><td>15s</td><td>3</td><td>18</td></tr><tr><td>4</td><td>20s</td><td>4</td><td>19</td></tr><tr><td>5</td><td>25s</td><td>5</td><td>20</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-woeful-warcry">
-            <div class="sk-top"><strong>Woeful Warcry</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Woeful Warcry</strong><i class="sk-type">Supportive</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Chorus: Str/Vit, Defense Pierce, and Crit Damage per <b class="mech">Rhythm</b> consumed.</p>
             <p class="sk-body">The user sings a vengeful note, spurring their allies on to bloodshed. The user gains the Warcry status, increasing their Strength, Vitality, Defense Pierce, and Crit Damage based on their <b class="mech">Rhythm</b> Level. The same Status is applied to all allies within range that currently have Hypnotic Harmony active, and the duration of their Hypnotic Harmony status is reset. Casting this skill resets the user's <b class="mech">Rhythm</b> level to zero. Does not stack with Cryptic Cadence or Eternal Echo.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-hypnotic-harmony">Hypnotic Harmony</a><a href="#s-cryptic-cadence">Cryptic Cadence</a><a href="#s-eternal-echo">Eternal Echo</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-hypnotic-harmony">Hypnotic Harmony</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Duration</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>3s</td><td>38</td></tr><tr><td>2</td><td>6s</td><td>41</td></tr><tr><td>3</td><td>9s</td><td>44</td></tr><tr><td>4</td><td>12s</td><td>47</td></tr><tr><td>5</td><td>15s</td><td>50</td></tr><tr><td>6</td><td>18s</td><td>53</td></tr><tr><td>7</td><td>21s</td><td>56</td></tr><tr><td>8</td><td>24s</td><td>59</td></tr><tr><td>9</td><td>27s</td><td>62</td></tr><tr><td>10</td><td>30s</td><td>65</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-cryptic-cadence">
-            <div class="sk-top"><strong>Cryptic Cadence</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Cryptic Cadence</strong><i class="sk-type">Supportive</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Chorus: Int/Dex, Magic Pierce, and cast speed per <b class="mech">Rhythm</b> consumed.</p>
             <p class="sk-body">The user sings a mysterious note, bestowing strength on their allies from beyond their understanding. The user gains the Cryptic status, granting them increased Intelligence, Dexterity, and Magic Defense Pierce, and reduced Cast Times based on their <b class="mech">Rhythm</b> Level. The same Status is applied to all allies within range that currently have Hypnotic Harmony active, and the duration of their Hypnotic Harmony status is reset. Casting this skill resets the user's <b class="mech">Rhythm</b> level to zero. Does not stack with Woeful Warcry or Eternal Echo.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-hypnotic-harmony">Hypnotic Harmony</a><a href="#s-woeful-warcry">Woeful Warcry</a><a href="#s-eternal-echo">Eternal Echo</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-hypnotic-harmony">Hypnotic Harmony</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Duration</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>3s</td><td>38</td></tr><tr><td>2</td><td>6s</td><td>41</td></tr><tr><td>3</td><td>9s</td><td>44</td></tr><tr><td>4</td><td>12s</td><td>47</td></tr><tr><td>5</td><td>15s</td><td>50</td></tr><tr><td>6</td><td>18s</td><td>53</td></tr><tr><td>7</td><td>21s</td><td>56</td></tr><tr><td>8</td><td>24s</td><td>59</td></tr><tr><td>9</td><td>27s</td><td>62</td></tr><tr><td>10</td><td>30s</td><td>65</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-eternal-echo">
-            <div class="sk-top"><strong>Eternal Echo</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Eternal Echo</strong><i class="sk-type">Supportive</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Chorus: Agi/Luk, Max ASPD, and Cooldown Reduction per <b class="mech">Rhythm</b> consumed.</p>
             <p class="sk-body">The user sings an echoing note, drawing supernatural strength from their allies' souls. The user gains the Echo status, reducing their Cooldowns and increasing their Agility, Luck, and Max ASPD. The same Status is applied to all allies within range that currently have Hypnotic Harmony active, and the duration of their Hypnotic Harmony status is reset. Casting this skill resets the user's <b class="mech">Rhythm</b> level to zero. Does not stack with Woeful Warcry or Cryptic Cadence.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-hypnotic-harmony">Hypnotic Harmony</a><a href="#s-cryptic-cadence">Cryptic Cadence</a><a href="#s-woeful-warcry">Woeful Warcry</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-hypnotic-harmony">Hypnotic Harmony</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Duration</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>3s</td><td>38</td></tr><tr><td>2</td><td>6s</td><td>41</td></tr><tr><td>3</td><td>9s</td><td>44</td></tr><tr><td>4</td><td>12s</td><td>47</td></tr><tr><td>5</td><td>15s</td><td>50</td></tr><tr><td>6</td><td>18s</td><td>53</td></tr><tr><td>7</td><td>21s</td><td>56</td></tr><tr><td>8</td><td>24s</td><td>59</td></tr><tr><td>9</td><td>27s</td><td>62</td></tr><tr><td>10</td><td>30s</td><td>65</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>

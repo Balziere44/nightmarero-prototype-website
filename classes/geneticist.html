@@ -213,7 +213,7 @@
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types, targets and the numbers behind every level come from the player wiki, so they match what you see in game.</p>
       </div>
       <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Extort</span></div>
       <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-poison">Poison</span><span class="kw-vuln">Vulnerable</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
@@ -226,31 +226,42 @@
             <div class="sk-top"><strong>Fauna Specialization</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Boosts Homunculi stats and all Fauna skills.</p>
             <p class="sk-body">Increases the stats of summoned Homunculi, and enhances the effects of all Fauna-type Geneticist skills.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>HP/Atk/Matk/Def/MDef Bonus</th><th>Hit/Flee Bonus</th><th>Crit Bonus</th></tr></thead><tbody><tr><td>1</td><td>1%</td><td>1</td><td>2</td></tr><tr><td>2</td><td>2%</td><td>2</td><td>4</td></tr><tr><td>3</td><td>3%</td><td>3</td><td>6</td></tr><tr><td>4</td><td>4%</td><td>4</td><td>8</td></tr><tr><td>5</td><td>5%</td><td>5</td><td>10</td></tr><tr><td>6</td><td>6%</td><td>6</td><td>12</td></tr><tr><td>7</td><td>7%</td><td>7</td><td>14</td></tr><tr><td>8</td><td>8%</td><td>8</td><td>16</td></tr><tr><td>9</td><td>9%</td><td>9</td><td>18</td></tr><tr><td>10</td><td>10%</td><td>10</td><td>20</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-summon" id="s-gift-of-life">
-            <div class="sk-top"><strong>Gift of Life</strong><i class="sk-type">Fauna</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Gift of Life</strong><i class="sk-type">Fauna</i><i class="sk-target">Allies</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Sacrifices HP to heal allies. Eira-themed.</p>
             <p class="sk-body">Sacrifices a portion of the user's HP to heal all allies in the area, including summoned entities. If Eira is present, consumes the user's <b class="mech">Extort</b> stacks to reduce this skill's Cooldown. Otherwise, generates one stack of <b class="mech">Extort</b>.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-fauna-specialization">Fauna Specialization</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Heal Amount</th></tr></thead><tbody><tr><td>1</td><td>60% of Consumed HP</td></tr><tr><td>2</td><td>120% of Consumed HP</td></tr><tr><td>3</td><td>180% of Consumed HP</td></tr><tr><td>4</td><td>240% of Consumed HP</td></tr><tr><td>5</td><td>300% of Consumed HP</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-summon" id="s-gift-of-light">
-            <div class="sk-top"><strong>Gift of Light</strong><i class="sk-type">Fauna</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Gift of Light</strong><i class="sk-type">Fauna</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Cleanses and shields against statuses. Bayeri-themed.</p>
             <p class="sk-body">Shines a holy light on the user and their summoned entities, protecting them from harm. Cures numerous negative status effects and provides immunity to them for a short duration. If Bayeri is present, consumes the user's <b class="mech">Extort</b> stacks to also reduce all damage taken for the duration. Otherwise, generates one stack of <b class="mech">Extort</b>.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-fauna-specialization">Fauna Specialization</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Duration</th></tr></thead><tbody><tr><td>1</td><td>1s</td></tr><tr><td>2</td><td>2s</td></tr><tr><td>3</td><td>3s</td></tr><tr><td>4</td><td>4s</td></tr><tr><td>5</td><td>5s</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-summon" id="s-gift-of-venom">
-            <div class="sk-top"><strong>Gift of Venom</strong><i class="sk-type">Fauna</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Gift of Venom</strong><i class="sk-type">Fauna</i><i class="sk-target">Ground</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short"><b class="kw kw-poison">Poison</b> pool that inflicts <b class="kw kw-slow">Slow</b>. Sera-themed.</p>
             <p class="sk-body">Creates a pool of toxic venom on the ground, dealing constant <b class="kw kw-poison">Poison</b> property damage and attempting to slow enemies within it. If Sera is present, consumes the user's <b class="mech">Extort</b> stacks to increase the duration of the pools. Otherwise, generates one stack of <b class="mech">Extort</b>.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-fauna-specialization">Fauna Specialization</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Slow Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>160%</td><td>15%</td><td>35</td></tr><tr><td>2</td><td>170%</td><td>30%</td><td>40</td></tr><tr><td>3</td><td>180%</td><td>45%</td><td>45</td></tr><tr><td>4</td><td>190%</td><td>60%</td><td>50</td></tr><tr><td>5</td><td>200%</td><td>75%</td><td>55</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-summon" id="s-gift-of-flame">
-            <div class="sk-top"><strong>Gift of Flame</strong><i class="sk-type">Fauna</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Gift of Flame</strong><i class="sk-type">Fauna</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Fire burst that inflicts <b class="kw kw-burn">Burning</b>. Dieter-themed.</p>
             <p class="sk-body">Invokes a burst of flame at the target's location, dealing Fire damage to enemies in the area with a chance to inflict the <b class="kw kw-burn">Burning</b> status. If Dieter is present, consumes the user's <b class="mech">Extort</b> stacks to do massively improved damage. Otherwise, generates one stack of <b class="mech">Extort</b>.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-fauna-specialization">Fauna Specialization</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Burning Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>400%</td><td>15%</td><td>35</td></tr><tr><td>2</td><td>500%</td><td>30%</td><td>40</td></tr><tr><td>3</td><td>600%</td><td>45%</td><td>45</td></tr><tr><td>4</td><td>700%</td><td>60%</td><td>50</td></tr><tr><td>5</td><td>800%</td><td>75%</td><td>55</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-summon" id="s-gift-of-strength">
-            <div class="sk-top"><strong>Gift of Strength</strong><i class="sk-type">Fauna</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Gift of Strength</strong><i class="sk-type">Fauna</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Massive Crit buff for the user and summons. Eleanor-themed.</p>
             <p class="sk-body">Draws out the savage nature of the user and their summoned entities, massively increasing their Crit Rate. If Eleanor is present, consumes the user's <b class="mech">Extort</b> Stacks to increase the Defense Pierce of all affected for the duration., Otherwise, generates one stack of <b class="mech">Extort</b>.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-fauna-specialization">Fauna Specialization</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Crit Bonus</th></tr></thead><tbody><tr><td>1</td><td>5</td></tr><tr><td>2</td><td>10</td></tr><tr><td>3</td><td>15</td></tr><tr><td>4</td><td>20</td></tr><tr><td>5</td><td>25</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -261,31 +272,42 @@
             <div class="sk-top"><strong>Flora Specialization</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Boosts summoned Plants and all Flora skills.</p>
             <p class="sk-body">Increases the stats of summoned Plants, and improves the effectiveness of all Flora skills.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Plant Attack Bonus</th><th>Plant Hit Bonus</th><th>Plant Crit Bonus</th></tr></thead><tbody><tr><td>1</td><td>50</td><td>5</td><td>3</td></tr><tr><td>2</td><td>100</td><td>10</td><td>6</td></tr><tr><td>3</td><td>150</td><td>15</td><td>9</td></tr><tr><td>4</td><td>200</td><td>20</td><td>12</td></tr><tr><td>5</td><td>250</td><td>25</td><td>15</td></tr><tr><td>6</td><td>300</td><td>30</td><td>18</td></tr><tr><td>7</td><td>350</td><td>35</td><td>21</td></tr><tr><td>8</td><td>400</td><td>40</td><td>24</td></tr><tr><td>9</td><td>450</td><td>45</td><td>27</td></tr><tr><td>10</td><td>500</td><td>50</td><td>30</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-summon" id="s-explosive-growth">
-            <div class="sk-top"><strong>Explosive Growth</strong><i class="sk-type">Flora</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Explosive Growth</strong><i class="sk-type">Flora</i><i class="sk-target">Ground</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Multi-hit AoE with summon-based status effects.</p>
             <p class="sk-body">Causes a massive growth of plants in the targeted area that rapidly grow, strike all enemies in the area, then immediately wither and die. This skill gains bonus effects based on the user's Summoned Flora.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-flora-specialization">Flora Specialization</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage (per hit)</th><th>Number of Hits</th><th>Status Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>60%</td><td>4</td><td>4%</td><td>40</td></tr><tr><td>2</td><td>70%</td><td>5</td><td>8%</td><td>50</td></tr><tr><td>3</td><td>80%</td><td>6</td><td>12%</td><td>60</td></tr><tr><td>4</td><td>90%</td><td>7</td><td>16%</td><td>70</td></tr><tr><td>5</td><td>100%</td><td>8</td><td>20%</td><td>80</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-summon" id="s-mandragora-howl">
-            <div class="sk-top"><strong>Mandragora Howl</strong><i class="sk-type">Flora</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Mandragora Howl</strong><i class="sk-type">Flora</i><i class="sk-target">Enemies</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">AoE howl with summon-based status effects.</p>
             <p class="sk-body">Pulls a mandragora from its resting place, inducing it to howl so intensely it damages nearby enemies. Deals physical damage around the user with a chance to <b class="kw kw-slow">Slow</b>. This skill inflicts various Status Effects based on the summoned Flora. If the user has a Summoned Warrior or Fairy, the cast will be centered around them instead of around the caster.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-flora-specialization">Flora Specialization</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Status Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>340%</td><td>10%</td><td>40</td></tr><tr><td>2</td><td>380%</td><td>20%</td><td>45</td></tr><tr><td>3</td><td>420%</td><td>30%</td><td>50</td></tr><tr><td>4</td><td>460%</td><td>40%</td><td>55</td></tr><tr><td>5</td><td>500%</td><td>50%</td><td>60</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-summon" id="s-summon-warrior">
-            <div class="sk-top"><strong>Summon Warrior</strong><i class="sk-type">Flora</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Summon Warrior</strong><i class="sk-type">Flora</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Summons a melee Wooden Warrior that halves Acid Terror's cooldown.</p>
             <p class="sk-body">Summons a Wooden Warrior to fight by the user's side for a short duration. Only one Wooden Warrior can be present at a time, and it cannot be summoned alongside a Forest Sprite. Wooden Warriors are melee combatants that deal increased damage to enemies suffering from <b class="kw kw-bleed">Bleeding</b> and <b class="kw kw-vuln">Vulnerable</b>, and reduce the cooldown of the user's Acid Terror while alive.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-flora-specialization">Flora Specialization</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Cooldown</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>54s</td><td>40</td></tr><tr><td>2</td><td>48s</td><td>55</td></tr><tr><td>3</td><td>42s</td><td>70</td></tr><tr><td>4</td><td>36s</td><td>85</td></tr><tr><td>5</td><td>30s</td><td>100</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-summon" id="s-summon-fairy">
-            <div class="sk-top"><strong>Summon Fairy</strong><i class="sk-type">Flora</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Summon Fairy</strong><i class="sk-type">Flora</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Summons a supportive Forest Sprite that halves Demonstration's cooldown.</p>
             <p class="sk-body">Summons a Forest Sprite to fight for the user for a short duration. Only one Sprite can be summoned at a time, and it cannot be summoned alongside a Wooden Warrior. Forest Sprites are ranged combatants that use a mixture of supportive and offensive skills, and reduce the cooldown of the user's Demonstration while alive.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-flora-specialization">Flora Specialization</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Cooldown</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>54s</td><td>40</td></tr><tr><td>2</td><td>48s</td><td>55</td></tr><tr><td>3</td><td>42s</td><td>70</td></tr><tr><td>4</td><td>36s</td><td>85</td></tr><tr><td>5</td><td>30s</td><td>100</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-summon" id="s-summon-infernal-tree">
-            <div class="sk-top"><strong>Summon Infernal Tree</strong><i class="sk-type">Flora</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Summon Infernal Tree</strong><i class="sk-type">Flora</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Summons a Cursed Tree that empowers other Flora summons.</p>
             <p class="sk-body">Summons a Cursed Tree to fight for the user for a short duration. Only one Cursed Tree can be summoned at a time, but it can be summoned alongside other Flora. Cursed Trees do not move or attack, but occasionally immobilize enemies and empower allies in the area around them. While alive, Wooden Warriors and Forest Sprites nearby will enter a berserk state, causing them to use skills more frequently and deal more damage.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-summon-warrior">Summon Warrior</a> Lv5, <a href="#s-summon-fairy">Summon Fairy</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Cooldown</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>114s</td><td>40</td></tr><tr><td>2</td><td>108s</td><td>60</td></tr><tr><td>3</td><td>102s</td><td>80</td></tr><tr><td>4</td><td>96s</td><td>100</td></tr><tr><td>5</td><td>90s</td><td>120</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>

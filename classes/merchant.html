@@ -214,7 +214,7 @@
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types, targets and the numbers behind every level come from the player wiki, so they match what you see in game.</p>
       </div>
       <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-stun">Stun</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
       <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-passive" data-i18n="cls.t.passive">Passive</span><span class="sk-utility" data-i18n="cls.t.utility">Utility</span></div>
@@ -223,36 +223,45 @@
         <h3 class="branch-title">Skills<span>6 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-physical" id="s-crush">
-            <div class="sk-top"><strong>Crush</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Crush</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Can Crit, can <b class="kw kw-stun">Stun</b>, deals additional damage to <b class="kw kw-stun">Stunned</b>.</p>
             <p class="sk-body">Delivers a single heavy blow to the target with a chance to <b class="kw kw-stun">Stun</b> them. This skill gets bonus damage and Crit Rate against enemies that are already stunned.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-axe-mastery">Axe Mastery</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Stun Chance</th><th>Cooldown</th></tr></thead><tbody><tr><td>1</td><td>230%</td><td>5%</td><td>5</td></tr><tr><td>2</td><td>260%</td><td>10%</td><td>5</td></tr><tr><td>3</td><td>290%</td><td>15%</td><td>5</td></tr><tr><td>4</td><td>320%</td><td>20%</td><td>5</td></tr><tr><td>5</td><td>350%</td><td>25%</td><td>5</td></tr><tr><td>6</td><td>380%</td><td>30%</td><td>5</td></tr><tr><td>7</td><td>410%</td><td>35%</td><td>5</td></tr><tr><td>8</td><td>440%</td><td>40%</td><td>5</td></tr><tr><td>9</td><td>470%</td><td>45%</td><td>5</td></tr><tr><td>10</td><td>500%</td><td>50%</td><td>5</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-axe-boomerang">
-            <div class="sk-top"><strong>Axe Boomerang</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Axe Boomerang</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Ranged attack that can <b class="kw kw-stun">Stun</b></p>
             <p class="sk-body">Throws the user's axe at a distant target, knocking them back a few cells and also having a chance to inflict the <b class="kw kw-stun">Stun</b> status.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-axe-mastery">Axe Mastery</a> Lv3</p>
           </li>
           <li class="skill-card sk-passive" id="s-axe-mastery">
             <div class="sk-top"><strong>Axe Mastery</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Increases damage of 1H and 2H Axes</p>
             <p class="sk-body">Boosts the damage and Hit rate of One and Two-Handed Axes.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage Bonus</th><th>Hit Bonus</th></tr></thead><tbody><tr><td>1</td><td>3</td><td>2</td></tr><tr><td>2</td><td>6</td><td>4</td></tr><tr><td>3</td><td>9</td><td>6</td></tr><tr><td>4</td><td>12</td><td>8</td></tr><tr><td>5</td><td>15</td><td>10</td></tr><tr><td>6</td><td>18</td><td>12</td></tr><tr><td>7</td><td>21</td><td>14</td></tr><tr><td>8</td><td>24</td><td>16</td></tr><tr><td>9</td><td>27</td><td>18</td></tr><tr><td>10</td><td>30</td><td>20</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-extort">
-            <div class="sk-top"><strong>Extort</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Extort</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Deals damage and generates Extort stacks</p>
             <p class="sk-body">Deals a small amount of damage to an enemy, increasing the user's &quot;coin&quot; count by one. The coins provide a minimal ATK boost, but are mostly used as a resource to be consumed by other skills.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Stack Duration</th><th>Max Stacks</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>115%</td><td>10s</td><td>1</td><td>5</td></tr><tr><td>2</td><td>130%</td><td>12s</td><td>1</td><td>7</td></tr><tr><td>3</td><td>145%</td><td>14s</td><td>1</td><td>9</td></tr><tr><td>4</td><td>160%</td><td>16s</td><td>2</td><td>11</td></tr><tr><td>5</td><td>175%</td><td>18s</td><td>2</td><td>13</td></tr><tr><td>6</td><td>190%</td><td>20s</td><td>3</td><td>15</td></tr><tr><td>7</td><td>205%</td><td>22s</td><td>3</td><td>17</td></tr><tr><td>8</td><td>220%</td><td>24s</td><td>4</td><td>19</td></tr><tr><td>9</td><td>235%</td><td>26s</td><td>4</td><td>21</td></tr><tr><td>10</td><td>250%</td><td>28s</td><td>5</td><td>23</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-mammonite">
-            <div class="sk-top"><strong>Mammonite</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Mammonite</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Consumes Extort stacks to deal massive damage</p>
             <p class="sk-body">Deals heavy damage to a single target. If the user has any stacks of Extort, consumes all of them to do massively improved damage and guarantees the skill will Crit.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-extort">Extort</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-extort">Extort</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>130%</td><td>7</td></tr><tr><td>2</td><td>160%</td><td>9</td></tr><tr><td>3</td><td>190%</td><td>11</td></tr><tr><td>4</td><td>220%</td><td>13</td></tr><tr><td>5</td><td>250%</td><td>15</td></tr><tr><td>6</td><td>280%</td><td>17</td></tr><tr><td>7</td><td>310%</td><td>19</td></tr><tr><td>8</td><td>340%</td><td>21</td></tr><tr><td>9</td><td>370%</td><td>23</td></tr><tr><td>10</td><td>400%</td><td>25</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-utility" id="s-crazy-uproar">
-            <div class="sk-top"><strong>Crazy Uproar</strong><i class="sk-type">Utility</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Crazy Uproar</strong><i class="sk-type">Utility</i><i class="sk-target">Party</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Consumes Extort stacks to buff party Crit and ASPD</p>
             <p class="sk-body">Consumes Extort stacks to whip the party into an uproar, increasing the ASPD and Crit Rate of all members.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-extort">Extort</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-extort">Extort</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Duration</th></tr></thead><tbody><tr><td>1</td><td>1m</td></tr><tr><td>2</td><td>2m</td></tr><tr><td>3</td><td>3m</td></tr><tr><td>4</td><td>4m</td></tr><tr><td>5</td><td>5m</td></tr><tr><td>6</td><td>6m</td></tr><tr><td>7</td><td>7m</td></tr><tr><td>8</td><td>8m</td></tr><tr><td>9</td><td>9m</td></tr><tr><td>10</td><td>10m</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>

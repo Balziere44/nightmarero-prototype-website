@@ -214,7 +214,7 @@
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types, targets and the numbers behind every level come from the player wiki, so they match what you see in game.</p>
       </div>
       <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-vuln">Vulnerable</span><span class="kw-breach">Breach</span><span class="kw-stun">Stun</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
       <div class="type-key"><span class="sk-support" data-i18n="cls.t.support">Support</span><span class="sk-debuff" data-i18n="cls.t.debuff">Debuff</span></div>
@@ -223,14 +223,16 @@
         <h3 class="branch-title">Utility Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-support" id="s-lux-divina">
-            <div class="sk-top"><strong>Lux Divina</strong><i class="sk-type">Grace</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Lux Divina</strong><i class="sk-type">Grace</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Grants or raises the Authority status, up to level 15.</p>
             <p class="sk-body">The user is blessed by the divine light of Heaven, granting them unprecedented ability to call on miracles to aid their allies. If the user is under the Grace status, they gain the Authority status of the same level. If the user is already under the Authority status, the level of the Authority status is increased (to a maximum of 15).</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Authority Level Bonus</th></tr></thead><tbody><tr><td>1</td><td>+1</td></tr><tr><td>2</td><td>+2</td></tr><tr><td>3</td><td>+3</td></tr><tr><td>4</td><td>+4</td></tr><tr><td>5</td><td>+5</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-debuff" id="s-lux-aeterna">
-            <div class="sk-top"><strong>Lux Aeterna</strong><i class="sk-type">Authority</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Lux Aeterna</strong><i class="sk-type">Authority</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Grants or raises the Grace status, up to level 15.</p>
             <p class="sk-body">The user is blessed by the eternal light of Heaven, granting them unprecedented ability to call down holy wrath on their foes. If the user is under the Authority status, they gain the Grace status of the same level. If the user is already under the Grace status, the level of the Grace status is increased (to a maximum of 15).</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Grace Level Bonus</th></tr></thead><tbody><tr><td>1</td><td>+1</td></tr><tr><td>2</td><td>+2</td></tr><tr><td>3</td><td>+3</td></tr><tr><td>4</td><td>+4</td></tr><tr><td>5</td><td>+5</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -238,24 +240,29 @@
         <h3 class="branch-title">Grace Skills<span>4 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-support" id="s-coluceo-heal">
-            <div class="sk-top"><strong>Coluceo Heal</strong><i class="sk-type">Grace</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Coluceo Heal</strong><i class="sk-type">Grace</i><i class="sk-target">Party</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Instantly heals the entire party for a Heal-equivalent amount.</p>
             <p class="sk-body">The user casts a wide ranging blessing, mending the wounds of all party members simultaneously. Immediately heals all party members for an amount equal to a Heal skill of the same level. Each level of Divine Grace learned reduces this skill's Cooldown.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>85</td></tr><tr><td>2</td><td>90</td></tr><tr><td>3</td><td>95</td></tr><tr><td>4</td><td>100</td></tr><tr><td>5</td><td>105</td></tr><tr><td>6</td><td>110</td></tr><tr><td>7</td><td>115</td></tr><tr><td>8</td><td>120</td></tr><tr><td>9</td><td>125</td></tr><tr><td>10</td><td>130</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-gloria">
-            <div class="sk-top"><strong>Gloria</strong><i class="sk-type">Grace</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Gloria</strong><i class="sk-type">Grace</i><i class="sk-target">Party</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Raises the party's Crit Rate and ASPD Limit.</p>
             <p class="sk-body">The user sings a hymn of praise, lending divine strength to their allies' attacks. Increases the Crit Rate and ASPD Cap of all party members for a short duration.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Crit Rate Bonus</th><th>ASPD Limit Bonus</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>+2</td><td>+0.2</td><td>160</td></tr><tr><td>2</td><td>+4</td><td>+0.4</td><td>170</td></tr><tr><td>3</td><td>+6</td><td>+0.6</td><td>180</td></tr><tr><td>4</td><td>+8</td><td>+0.8</td><td>190</td></tr><tr><td>5</td><td>+10</td><td>+1</td><td>200</td></tr><tr><td>6</td><td>+12</td><td>+1.2</td><td>210</td></tr><tr><td>7</td><td>+14</td><td>+1.4</td><td>220</td></tr><tr><td>8</td><td>+16</td><td>+1.6</td><td>230</td></tr><tr><td>9</td><td>+18</td><td>+1.8</td><td>240</td></tr><tr><td>10</td><td>+20</td><td>+2</td><td>250</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-magnificat">
-            <div class="sk-top"><strong>Magnificat</strong><i class="sk-type">Grace</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Magnificat</strong><i class="sk-type">Grace</i><i class="sk-target">Party</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Reduces party SP costs and prevents cast interruption.</p>
             <p class="sk-body">The user sings a hymn of praise, granting divine edification to their party members. Reduces the SP Costs of all skills and grants ignore interrupt to all party members for a short duration.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>SP Cost Reduction</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>3%</td><td>160</td></tr><tr><td>2</td><td>6%</td><td>170</td></tr><tr><td>3</td><td>9%</td><td>180</td></tr><tr><td>4</td><td>12%</td><td>190</td></tr><tr><td>5</td><td>15%</td><td>200</td></tr><tr><td>6</td><td>18%</td><td>210</td></tr><tr><td>7</td><td>21%</td><td>220</td></tr><tr><td>8</td><td>24%</td><td>230</td></tr><tr><td>9</td><td>27%</td><td>240</td></tr><tr><td>10</td><td>30%</td><td>250</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-benedictio-sanctissimi-sacramenti">
-            <div class="sk-top"><strong>Benedictio Sanctissimi Sacramenti</strong><i class="sk-type">Grace</i></div>
+            <div class="sk-top"><strong>Benedictio Sanctissimi Sacramenti</strong><i class="sk-type">Grace</i><i class="sk-target">Party</i></div>
             <p class="sk-short">Ultimate Grace rite: party-wide Defense, Magic Defense, and Pierce.</p>
             <p class="sk-body">Performs a holy rite, massively improving the party's attack and defense. Grants all party members improved Defense Pierce, Magic Pierce, Hard Defense, and Hard Magic Defense.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-coluceo-heal">Coluceo Heal</a> Lv10, <a href="#s-gloria">Gloria</a> Lv10, <a href="#s-magnificat">Magnificat</a> Lv10</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Effective Level</th><th>Defense/Magic Defense Pierce</th><th>Defense Bonus</th><th>Magic Defense Bonus</th></tr></thead><tbody><tr><td>1</td><td>3%</td><td>+5</td><td>+2.5</td></tr><tr><td>2</td><td>6%</td><td>+10</td><td>+5</td></tr><tr><td>3</td><td>9%</td><td>+15</td><td>+7.5</td></tr><tr><td>4</td><td>12%</td><td>+20</td><td>+10</td></tr><tr><td>5</td><td>15%</td><td>+25</td><td>+12.5</td></tr><tr><td>6</td><td>18%</td><td>+30</td><td>+15</td></tr><tr><td>7</td><td>21%</td><td>+35</td><td>+17.5</td></tr><tr><td>8</td><td>24%</td><td>+40</td><td>+20</td></tr><tr><td>9</td><td>27%</td><td>+45</td><td>+22.5</td></tr><tr><td>10</td><td>30%</td><td>+50</td><td>+25</td></tr><tr><td>11</td><td>33%</td><td>+55</td><td>+27.5</td></tr><tr><td>12</td><td>36%</td><td>+60</td><td>+30</td></tr><tr><td>13</td><td>39%</td><td>+65</td><td>+32.5</td></tr><tr><td>14</td><td>42%</td><td>+70</td><td>+35</td></tr><tr><td>15</td><td>45%</td><td>+75</td><td>+37.5</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -263,24 +270,29 @@
         <h3 class="branch-title">Authority Skills<span>4 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-debuff" id="s-flamen">
-            <div class="sk-top"><strong>Flamen</strong><i class="sk-type">Authority</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Flamen</strong><i class="sk-type">Authority</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Single-target Holy nuke that splashes; stronger against Searing Light.</p>
             <p class="sk-body">Summons a holy light to smite an enemy. Deals Holy property magic damage to a single enemy. Does increased damage to enemies afflicted with Searing Light.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>430%</td><td>80</td></tr><tr><td>2</td><td>460%</td><td>85</td></tr><tr><td>3</td><td>490%</td><td>90</td></tr><tr><td>4</td><td>520%</td><td>95</td></tr><tr><td>5</td><td>550%</td><td>100</td></tr><tr><td>6</td><td>580%</td><td>105</td></tr><tr><td>7</td><td>610%</td><td>110</td></tr><tr><td>8</td><td>640%</td><td>115</td></tr><tr><td>9</td><td>670%</td><td>120</td></tr><tr><td>10</td><td>700%</td><td>125</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-debuff" id="s-oleum-sanctum">
-            <div class="sk-top"><strong>Oleum Sanctum</strong><i class="sk-type">Authority</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Oleum Sanctum</strong><i class="sk-type">Authority</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Point-blank Holy AoE with knockback that applies Searing Light.</p>
             <p class="sk-body">Shatters a vial of sacred oil, creating a wave of purification that forces out all enemies in the area. Deals Holy property magic damage to all enemies in the area around the user and knocks them back. Has a chance to inflict Searing Light on all enemies struck.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Searing Light Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>540%</td><td>55%</td><td>105</td></tr><tr><td>2</td><td>580%</td><td>60%</td><td>110</td></tr><tr><td>3</td><td>620%</td><td>65%</td><td>115</td></tr><tr><td>4</td><td>660%</td><td>70%</td><td>120</td></tr><tr><td>5</td><td>700%</td><td>75%</td><td>125</td></tr><tr><td>6</td><td>740%</td><td>80%</td><td>130</td></tr><tr><td>7</td><td>780%</td><td>85%</td><td>135</td></tr><tr><td>8</td><td>820%</td><td>90%</td><td>140</td></tr><tr><td>9</td><td>860%</td><td>95%</td><td>145</td></tr><tr><td>10</td><td>900%</td><td>100%</td><td>150</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-debuff" id="s-magnus-exorcismus">
-            <div class="sk-top"><strong>Magnus Exorcismus</strong><i class="sk-type">Authority</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Magnus Exorcismus</strong><i class="sk-type">Authority</i><i class="sk-target">Ground</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Consecrated ground dealing Holy damage over time.</p>
             <p class="sk-body">Creates an area of consecrated ground to exorcize the wicked. Places a persistent ground effect that deals Holy magic damage over time to all enemies that stand within it. Demon, Undead, and Angel Race monsters struck are additionally <b class="kw kw-stun">Stunned</b>, while all other enemies are <b class="kw kw-slow">Slowed</b>. Deals additional damage to enemies under Searing Light.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage per Wave</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>275%</td><td>215</td></tr><tr><td>2</td><td>300%</td><td>230</td></tr><tr><td>3</td><td>325%</td><td>245</td></tr><tr><td>4</td><td>350%</td><td>260</td></tr><tr><td>5</td><td>375%</td><td>275</td></tr><tr><td>6</td><td>400%</td><td>290</td></tr><tr><td>7</td><td>425%</td><td>305</td></tr><tr><td>8</td><td>450%</td><td>320</td></tr><tr><td>9</td><td>475%</td><td>335</td></tr><tr><td>10</td><td>500%</td><td>350</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-debuff" id="s-epiclesis">
-            <div class="sk-top"><strong>Epiclesis</strong><i class="sk-type">Authority</i></div>
+            <div class="sk-top"><strong>Epiclesis</strong><i class="sk-type">Authority</i><i class="sk-target">Ground</i></div>
             <p class="sk-short">Ultimate Authority rite: a holy tree that damages and debuffs.</p>
             <p class="sk-body">Creates an illusory tree of divine light, filling the targeted area with holy energies that reject all of the caster's enemies for the duration. While the tree persists, all enemies in the area take Magic damage over time and are repeatedly inflicted with the <b class="kw kw-vuln">Vulnerable</b>, <b class="kw kw-breach">Breach</b>, and <b class="kw kw-slow">Slow</b> statuses.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-flamen">Flamen</a> Lv10, <a href="#s-oleum-sanctum">Oleum Sanctum</a> Lv10, <a href="#s-magnus-exorcismus">Magnus Exorcismus</a> Lv10</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Effective Level</th><th>Damage</th><th>Duration</th><th>Status Chance</th></tr></thead><tbody><tr><td>1</td><td>110%</td><td>2s</td><td>5%</td></tr><tr><td>2</td><td>120%</td><td>4s</td><td>10%</td></tr><tr><td>3</td><td>130%</td><td>6s</td><td>15%</td></tr><tr><td>4</td><td>140%</td><td>8s</td><td>20%</td></tr><tr><td>5</td><td>150%</td><td>10s</td><td>25%</td></tr><tr><td>6</td><td>160%</td><td>12s</td><td>30%</td></tr><tr><td>7</td><td>170%</td><td>14s</td><td>35%</td></tr><tr><td>8</td><td>180%</td><td>16s</td><td>40%</td></tr><tr><td>9</td><td>190%</td><td>18s</td><td>45%</td></tr><tr><td>10</td><td>200%</td><td>20s</td><td>50%</td></tr><tr><td>11</td><td>210%</td><td>22s</td><td>55%</td></tr><tr><td>12</td><td>220%</td><td>24s</td><td>60%</td></tr><tr><td>13</td><td>230%</td><td>26s</td><td>65%</td></tr><tr><td>14</td><td>240%</td><td>28s</td><td>70%</td></tr><tr><td>15</td><td>250%</td><td>30s</td><td>75%</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>

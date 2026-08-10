@@ -212,7 +212,7 @@
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types, targets and the numbers behind every level come from the player wiki, so they match what you see in game.</p>
       </div>
       <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-vuln">Vulnerable</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
       <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-support" data-i18n="cls.t.support">Support</span><span class="sk-passive" data-i18n="cls.t.passive">Passive</span></div>
@@ -224,21 +224,28 @@
             <div class="sk-top"><strong>Two-Handed Sword Mastery</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Increases damage and Hit with 2H swords.</p>
             <p class="sk-body">Mastery for Two-handed swords. Damage and Accuracy with Two-Handed Swords. Two-Handed Swords typically gain bonus Crit Rate as a mastery bonus.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage Bonus</th><th>Hit Bonus</th></tr></thead><tbody><tr><td>1</td><td>4</td><td>2</td></tr><tr><td>2</td><td>8</td><td>4</td></tr><tr><td>3</td><td>12</td><td>6</td></tr><tr><td>4</td><td>16</td><td>8</td></tr><tr><td>5</td><td>20</td><td>10</td></tr><tr><td>6</td><td>24</td><td>12</td></tr><tr><td>7</td><td>28</td><td>14</td></tr><tr><td>8</td><td>32</td><td>16</td></tr><tr><td>9</td><td>36</td><td>18</td></tr><tr><td>10</td><td>40</td><td>20</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-quicken">
-            <div class="sk-top"><strong>Quicken</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Quicken</strong><i class="sk-type">Supportive</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Dramatically increases offensive stats for a shot duration.</p>
             <p class="sk-body">Sword skill. Maximizes the user's Attack Speed and increases their Hit and Crit Rate for five seconds, but blocks the usage of skills while active.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-two-handed-sword-mastery">Two-Handed Sword Mastery</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Cooldown</th><th>Hit Bonus</th><th>Crit Bonus</th></tr></thead><tbody><tr><td>1</td><td>57s</td><td>3</td><td>3</td></tr><tr><td>2</td><td>54s</td><td>6</td><td>6</td></tr><tr><td>3</td><td>51s</td><td>9</td><td>9</td></tr><tr><td>4</td><td>48s</td><td>12</td><td>12</td></tr><tr><td>5</td><td>45s</td><td>15</td><td>15</td></tr><tr><td>6</td><td>42s</td><td>18</td><td>18</td></tr><tr><td>7</td><td>39s</td><td>21</td><td>21</td></tr><tr><td>8</td><td>36s</td><td>24</td><td>24</td></tr><tr><td>9</td><td>33s</td><td>27</td><td>27</td></tr><tr><td>10</td><td>30s</td><td>30</td><td>30</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-rend">
-            <div class="sk-top"><strong>Rend</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Rend</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Deals damage and applies <b class="kw kw-bleed">Bleed</b> or <b class="kw kw-vuln">Vulnerable</b></p>
             <p class="sk-body">Simple follow-up skill to Slash. Deals additional damage to enemies that are <b class="kw kw-bleed">Bleeding</b> or <b class="kw kw-vuln">Vulnerable</b>. Inflicts <b class="kw kw-bleed">Bleeding</b> if the enemy is already <b class="kw kw-vuln">Vulnerable</b>, or <b class="kw kw-vuln">Vulnerable</b> if the enemy is already <b class="kw kw-bleed">Bleeding</b>.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-two-handed-sword-mastery">Two-Handed Sword Mastery</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>260%</td><td>12</td></tr><tr><td>2</td><td>270%</td><td>13</td></tr><tr><td>3</td><td>280%</td><td>14</td></tr><tr><td>4</td><td>290%</td><td>15</td></tr><tr><td>5</td><td>300%</td><td>16</td></tr><tr><td>6</td><td>310%</td><td>17</td></tr><tr><td>7</td><td>320%</td><td>18</td></tr><tr><td>8</td><td>330%</td><td>19</td></tr><tr><td>9</td><td>340%</td><td>20</td></tr><tr><td>10</td><td>350%</td><td>21</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-devastating-blow">
-            <div class="sk-top"><strong>Devastating Blow</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Devastating Blow</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">AoE Damage and refreshes <b class="kw kw-bleed">Bleeding</b> duration.</p>
             <p class="sk-body">Sword Finisher skill. Strikes all enemies in a small area, dealing additional hits to <b class="kw kw-bleed">Bleeding</b> targets and refreshing the duration of their <b class="kw kw-bleed">Bleeding</b> effects.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-rend">Rend</a> Lv3, <a href="#s-quicken">Quicken</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>165% × 2</td><td>15</td></tr><tr><td>2</td><td>180% × 2</td><td>18</td></tr><tr><td>3</td><td>195% × 2</td><td>21</td></tr><tr><td>4</td><td>210% × 2</td><td>24</td></tr><tr><td>5</td><td>225% × 2</td><td>27</td></tr><tr><td>6</td><td>240% × 2</td><td>30</td></tr><tr><td>7</td><td>255% × 2</td><td>33</td></tr><tr><td>8</td><td>270% × 2</td><td>36</td></tr><tr><td>9</td><td>285% × 2</td><td>39</td></tr><tr><td>10</td><td>300% × 2</td><td>42</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -249,21 +256,28 @@
             <div class="sk-top"><strong>Spear Mastery</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Increases damage and Hit with spears.</p>
             <p class="sk-body">Mastery for spears. Increases damage and accuracy with spears, both one- and two-handed. Spears typically gain bonus <b class="kw kw-vuln">Vulnerable</b> Potency as a mastery bonus.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage Bonus</th><th>Hit Bonus</th></tr></thead><tbody><tr><td>1</td><td>4</td><td>2</td></tr><tr><td>2</td><td>8</td><td>4</td></tr><tr><td>3</td><td>12</td><td>6</td></tr><tr><td>4</td><td>16</td><td>8</td></tr><tr><td>5</td><td>20</td><td>10</td></tr><tr><td>6</td><td>24</td><td>12</td></tr><tr><td>7</td><td>28</td><td>14</td></tr><tr><td>8</td><td>32</td><td>16</td></tr><tr><td>9</td><td>36</td><td>18</td></tr><tr><td>10</td><td>40</td><td>20</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-pierce">
-            <div class="sk-top"><strong>Pierce</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Pierce</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Defense-piercing attack.</p>
             <p class="sk-body">Spear attack with bonus Defense Pierce. Enemies suffering from <b class="kw kw-bleed">Bleeding</b> or <b class="kw kw-vuln">Vulnerable</b> statuses take extra hits.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-spear-mastery">Spear Mastery</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>160%</td><td>8</td></tr><tr><td>2</td><td>170%</td><td>9</td></tr><tr><td>3</td><td>180%</td><td>10</td></tr><tr><td>4</td><td>190%</td><td>11</td></tr><tr><td>5</td><td>200%</td><td>12</td></tr><tr><td>6</td><td>210%</td><td>13</td></tr><tr><td>7</td><td>220%</td><td>14</td></tr><tr><td>8</td><td>230%</td><td>15</td></tr><tr><td>9</td><td>240%</td><td>16</td></tr><tr><td>10</td><td>250%</td><td>17</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-spear-stab">
-            <div class="sk-top"><strong>Spear Stab</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Spear Stab</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Long range stab that applies <b class="kw kw-vuln">Vulnerable</b>.</p>
             <p class="sk-body">Targets a distant enemy (4 cells range), then hits all enemies between them and the caster (including the target). Has a chance to inflict the <b class="kw kw-vuln">Vulnerable</b> status, and deals additional damage to targets that are already <b class="kw kw-vuln">Vulnerable</b>.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-spear-mastery">Spear Mastery</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Vulnerable Chance</th><th>Vulnerable Damage Bonus</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>215%</td><td>55%</td><td>15%</td><td>8</td></tr><tr><td>2</td><td>230%</td><td>60%</td><td>30%</td><td>9</td></tr><tr><td>3</td><td>245%</td><td>65%</td><td>45%</td><td>10</td></tr><tr><td>4</td><td>260%</td><td>70%</td><td>60%</td><td>11</td></tr><tr><td>5</td><td>275%</td><td>75%</td><td>75%</td><td>12</td></tr><tr><td>6</td><td>290%</td><td>80%</td><td>90%</td><td>13</td></tr><tr><td>7</td><td>305%</td><td>85%</td><td>105%</td><td>14</td></tr><tr><td>8</td><td>320%</td><td>90%</td><td>120%</td><td>15</td></tr><tr><td>9</td><td>335%</td><td>95%</td><td>135%</td><td>16</td></tr><tr><td>10</td><td>350%</td><td>100%</td><td>150%</td><td>17</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-brandish-spear">
-            <div class="sk-top"><strong>Brandish Spear</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Brandish Spear</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">AoE Damage and refreshes <b class="kw kw-vuln">Vulnerable</b> duration.</p>
             <p class="sk-body">Performs a large AoE in front of the user, dealing heavy damage. <b class="kw kw-vuln">Vulnerable</b> targets have their <b class="kw kw-vuln">Vulnerable</b> duration refreshed and take additional damage.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-pierce">Pierce</a> Lv3, <a href="#s-spear-stab">Spear Stab</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Vulnerable Damage Bonus</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>330%</td><td>40%</td><td>15</td></tr><tr><td>2</td><td>360%</td><td>80%</td><td>18</td></tr><tr><td>3</td><td>390%</td><td>120%</td><td>21</td></tr><tr><td>4</td><td>420%</td><td>160%</td><td>24</td></tr><tr><td>5</td><td>450%</td><td>200%</td><td>27</td></tr><tr><td>6</td><td>480%</td><td>240%</td><td>30</td></tr><tr><td>7</td><td>510%</td><td>280%</td><td>33</td></tr><tr><td>8</td><td>540%</td><td>320%</td><td>36</td></tr><tr><td>9</td><td>570%</td><td>360%</td><td>39</td></tr><tr><td>10</td><td>600%</td><td>400%</td><td>42</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -274,11 +288,13 @@
             <div class="sk-top"><strong>Armor Mastery</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Passively increases defense while not wearing a shield.</p>
             <p class="sk-body">Improves the physical defenses of the user when not wearing a shield.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Defense Bonus</th></tr></thead><tbody><tr><td>1</td><td>2%</td></tr><tr><td>2</td><td>4%</td></tr><tr><td>3</td><td>6%</td></tr><tr><td>4</td><td>8%</td></tr><tr><td>5</td><td>10%</td></tr><tr><td>6</td><td>12%</td></tr><tr><td>7</td><td>14%</td></tr><tr><td>8</td><td>16%</td></tr><tr><td>9</td><td>18%</td></tr><tr><td>10</td><td>20%</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-deflect">
-            <div class="sk-top"><strong>Deflect</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Deflect</strong><i class="sk-type">Supportive</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Blocks all physical attacks for a short duration.</p>
             <p class="sk-body">The user takes a defensive stance, blocking all physical attacks for a short duration. Requires a Two-Handed Sword or Two-Handed Spear.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Cooldown</th></tr></thead><tbody><tr><td>1</td><td>57s</td></tr><tr><td>2</td><td>54s</td></tr><tr><td>3</td><td>51s</td></tr><tr><td>4</td><td>48s</td></tr><tr><td>5</td><td>45s</td></tr><tr><td>6</td><td>42s</td></tr><tr><td>7</td><td>39s</td></tr><tr><td>8</td><td>36s</td></tr><tr><td>9</td><td>33s</td></tr><tr><td>10</td><td>30s</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>

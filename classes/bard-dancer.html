@@ -221,7 +221,7 @@
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types, targets and the numbers behind every level come from the player wiki, so they match what you see in game.</p>
       </div>
       <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Even Rhythm</span><span>Odd Rhythm</span><span>Rhythm Stacks</span></div>
       <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-blind">Blind</span><span class="kw-vuln">Vulnerable</span><span class="kw-breach">Breach</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
@@ -234,27 +234,36 @@
             <div class="sk-top"><strong>Musical Mastery</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Increases damage and Hit with Instruments; extends Rhythm duration.</p>
             <p class="sk-body">Increases the Hit Rate and Damage of Instruments, and increases the duration of Rhythm stacks gained. Instruments typically gain Reduced SP Consumption as a mastery bonus.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage Bonus</th><th>Hit Bonus</th><th>Rhythm Duration</th></tr></thead><tbody><tr><td>1</td><td>3</td><td>2</td><td>5.5s</td></tr><tr><td>2</td><td>6</td><td>4</td><td>6s</td></tr><tr><td>3</td><td>9</td><td>6</td><td>6.5s</td></tr><tr><td>4</td><td>12</td><td>8</td><td>7s</td></tr><tr><td>5</td><td>15</td><td>10</td><td>7.5s</td></tr><tr><td>6</td><td>18</td><td>12</td><td>8s</td></tr><tr><td>7</td><td>21</td><td>14</td><td>8.5s</td></tr><tr><td>8</td><td>24</td><td>16</td><td>9s</td></tr><tr><td>9</td><td>27</td><td>18</td><td>9.5s</td></tr><tr><td>10</td><td>30</td><td>20</td><td>10s</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-restorative-refrain">
-            <div class="sk-top"><strong>Restorative Refrain</strong><i class="sk-type">Song</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Restorative Refrain</strong><i class="sk-type">Song</i><i class="sk-target">Party</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Party AoE heal over time. <b class="mech">Odd Rhythm</b>.</p>
             <p class="sk-body">Plays a gentle song to encourage and reinvigorate the party, healing all party members a small amount over time. If the current Rhythm Level is Odd, it is increased by 1. Otherwise, it is decreased by 1.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-musical-mastery">Musical Mastery</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Heal Per Second</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>50</td><td>32</td></tr><tr><td>2</td><td>100</td><td>34</td></tr><tr><td>3</td><td>150</td><td>36</td></tr><tr><td>4</td><td>200</td><td>38</td></tr><tr><td>5</td><td>250</td><td>40</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-quickening-chorus">
-            <div class="sk-top"><strong>Quickening Chorus</strong><i class="sk-type">Song</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Quickening Chorus</strong><i class="sk-type">Song</i><i class="sk-target">Party</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Reduces party Variable Cast Time. <b class="mech">Even Rhythm</b>.</p>
             <p class="sk-body">Plays an energetic song to inspire the party to quick action. Reduces the Variable Cast Time of all skills cast by each party member significantly. If cast while the current Rhythm Level is even or zero, it is increased by 1. Otherwise, it is decreased by 1.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-musical-mastery">Musical Mastery</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Cast Reduction</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>5%</td><td>32</td></tr><tr><td>2</td><td>10%</td><td>34</td></tr><tr><td>3</td><td>15%</td><td>36</td></tr><tr><td>4</td><td>20%</td><td>38</td></tr><tr><td>5</td><td>25%</td><td>40</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-darkening-dirge">
-            <div class="sk-top"><strong>Darkening Dirge</strong><i class="sk-type">Song</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Darkening Dirge</strong><i class="sk-type">Song</i><i class="sk-target">Enemies</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Inflicts <b class="kw kw-blind">Blind</b> on approaching enemies. <b class="mech">Odd Rhythm</b>.</p>
             <p class="sk-body">Plays a haunting melody to cloud the minds, and eyes, of enemies. Has a high chance to inflict the <b class="kw kw-blind">Blind</b> status to all enemies in an enormous area. If the current Rhythm Level is odd, it is increased by 1. Otherwise, it is decreased by 1.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-musical-mastery">Musical Mastery</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Range (from caster)</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>2 cells</td><td>60</td></tr><tr><td>2</td><td>3 cells</td><td>70</td></tr><tr><td>3</td><td>4 cells</td><td>80</td></tr><tr><td>4</td><td>5 cells</td><td>90</td></tr><tr><td>5</td><td>6 cells</td><td>100</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-enervating-elegy">
-            <div class="sk-top"><strong>Enervating Elegy</strong><i class="sk-type">Song</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Enervating Elegy</strong><i class="sk-type">Song</i><i class="sk-target">Enemies</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Inflicts <b class="kw kw-vuln">Vulnerable</b> and <b class="kw kw-breach">Breach</b> on approaching enemies. <b class="mech">Even Rhythm</b>.</p>
             <p class="sk-body">Plays an eerie tune that saps the energy from enemies, leaving them weak and vulnerable. Inflicts the <b class="kw kw-vuln">Vulnerable</b> and <b class="kw kw-breach">Breach</b> Statuses on all enemies in the area. If the current Rhythm Level is even or zero, it is increased by 1. Otherwise, it is decreased by 1.</p>
             <p class="sk-body">Dancer Only Skills</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-musical-mastery">Musical Mastery</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Range (from caster)</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>2 cells</td><td>32</td></tr><tr><td>2</td><td>3 cells</td><td>34</td></tr><tr><td>3</td><td>4 cells</td><td>36</td></tr><tr><td>4</td><td>5 cells</td><td>38</td></tr><tr><td>5</td><td>6 cells</td><td>40</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -265,27 +274,36 @@
             <div class="sk-top"><strong>Dancing Dexterity</strong><i class="sk-type">Passive</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Increases damage and Hit with Whips; extends Rhythm duration.</p>
             <p class="sk-body">Increases the Hit Rate and Damage of Whips, and increases the duration of Rhythm stacks gained. Whips typically gain Reduced SP Consumption as a mastery bonus.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage Bonus</th><th>Hit Bonus</th><th>Rhythm Duration</th></tr></thead><tbody><tr><td>1</td><td>3</td><td>2</td><td>5.5s</td></tr><tr><td>2</td><td>6</td><td>4</td><td>6s</td></tr><tr><td>3</td><td>9</td><td>6</td><td>6.5s</td></tr><tr><td>4</td><td>12</td><td>8</td><td>7s</td></tr><tr><td>5</td><td>15</td><td>10</td><td>7.5s</td></tr><tr><td>6</td><td>18</td><td>12</td><td>8s</td></tr><tr><td>7</td><td>21</td><td>14</td><td>8.5s</td></tr><tr><td>8</td><td>24</td><td>16</td><td>9s</td></tr><tr><td>9</td><td>27</td><td>18</td><td>9.5s</td></tr><tr><td>10</td><td>30</td><td>20</td><td>10s</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-noetic-number">
-            <div class="sk-top"><strong>Noetic Number</strong><i class="sk-type">Dance</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Noetic Number</strong><i class="sk-type">Dance</i><i class="sk-target">Party</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Party AoE SP restoration over time. <b class="mech">Odd Rhythm</b>.</p>
             <p class="sk-body">The user performs an edifying dance, restoring SP to the party over a short period of time. If the current Rhythm level is odd, it is increased by 1. Otherwise, it is decreased by 1.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-dancing-dexterity">Dancing Dexterity</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>SP Recovery Per Second</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>3</td><td>32</td></tr><tr><td>2</td><td>6</td><td>34</td></tr><tr><td>3</td><td>9</td><td>36</td></tr><tr><td>4</td><td>12</td><td>38</td></tr><tr><td>5</td><td>15</td><td>40</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-savage-stride">
-            <div class="sk-top"><strong>Savage Stride</strong><i class="sk-type">Dance</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Savage Stride</strong><i class="sk-type">Dance</i><i class="sk-target">Party</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Massively increases party Crit Rate. <b class="mech">Even Rhythm</b>.</p>
             <p class="sk-body">The user performs a savagely beautiful dance, inspiring the party to acts of great violence. Provides a massive boost to Crit Rate for a short duration. If the current Rhythm Level is even or zero, it is increased by 1. Otherwise, it is decreased by 1.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-dancing-dexterity">Dancing Dexterity</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Crit Bonus</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>4</td><td>32</td></tr><tr><td>2</td><td>8</td><td>34</td></tr><tr><td>3</td><td>12</td><td>36</td></tr><tr><td>4</td><td>16</td><td>38</td></tr><tr><td>5</td><td>20</td><td>40</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-wearying-waltz">
-            <div class="sk-top"><strong>Wearying Waltz</strong><i class="sk-type">Dance</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Wearying Waltz</strong><i class="sk-type">Dance</i><i class="sk-target">Enemies</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Inflicts <b class="kw kw-slow">Slow</b> on approaching enemies. <b class="mech">Odd Rhythm</b>.</p>
             <p class="sk-body">The user performs a strangely enervating dance, attempting to <b class="kw kw-slow">Slow</b> all enemies in the area. If the current Rhythm level is odd, it is increased by 1. Otherwise, it is decreased by 1.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-dancing-dexterity">Dancing Dexterity</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Range (from caster)</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>2 cells</td><td>32</td></tr><tr><td>2</td><td>3 cells</td><td>34</td></tr><tr><td>3</td><td>4 cells</td><td>36</td></tr><tr><td>4</td><td>5 cells</td><td>38</td></tr><tr><td>5</td><td>6 cells</td><td>40</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-sinister-saunter">
-            <div class="sk-top"><strong>Sinister Saunter</strong><i class="sk-type">Dance</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Sinister Saunter</strong><i class="sk-type">Dance</i><i class="sk-target">Enemies</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Increases damage taken by nearby enemies. <b class="mech">Even Rhythm</b>.</p>
             <p class="sk-body">The user performs an alluring dance, distracting enemies into letting down their guard. All enemies in the area take increased damage for a short period of time. If the current Rhythm Level is even or zero, it is increased by 1. Otherwise, it is decreased by 1.</p>
             <p class="sk-body">Shared Skills</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-dancing-dexterity">Dancing Dexterity</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Range (from caster)</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>2 cells</td><td>32</td></tr><tr><td>2</td><td>3 cells</td><td>34</td></tr><tr><td>3</td><td>4 cells</td><td>36</td></tr><tr><td>4</td><td>5 cells</td><td>38</td></tr><tr><td>5</td><td>6 cells</td><td>40</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -293,31 +311,41 @@
         <h3 class="branch-title">Shared Skills<span>5 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-physical" id="s-synchronic-strike">
-            <div class="sk-top"><strong>Synchronic Strike</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Synchronic Strike</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Ranged attack that scales with and extends Rhythm.</p>
             <p class="sk-body">Uses the Instrument or Whip to throw a volley of arrows at a distant target, carefully timed to synchronize with their performance. Deals increased damage based on the currently active Rhythm level, and increases its duration slightly.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span>Bard: <a href="#s-musical-mastery">Musical Mastery</a> Lv1 / Dancer: <a href="#s-dancing-dexterity">Dancing Dexterity</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>265%</td><td>13</td></tr><tr><td>2</td><td>280%</td><td>16</td></tr><tr><td>3</td><td>295%</td><td>19</td></tr><tr><td>4</td><td>310%</td><td>22</td></tr><tr><td>5</td><td>325%</td><td>25</td></tr><tr><td>6</td><td>340%</td><td>28</td></tr><tr><td>7</td><td>355%</td><td>31</td></tr><tr><td>8</td><td>370%</td><td>34</td></tr><tr><td>9</td><td>385%</td><td>37</td></tr><tr><td>10</td><td>400%</td><td>40</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-magic" id="s-vicious-verse">
-            <div class="sk-top"><strong>Vicious Verse</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Vicious Verse</strong><i class="sk-type">Magical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Magic attack that scales with and extends Rhythm.</p>
             <p class="sk-body">The user recites an enchanted verse laced with deadly magic to harm their enemies without breaking the rhythm of their performance. Deals magic damage to the target, which is increased by the current Rhythm Level, and slightly increases its duration.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span>Bard: <a href="#s-musical-mastery">Musical Mastery</a> Lv1 / Dancer: <a href="#s-dancing-dexterity">Dancing Dexterity</a> Lv1</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>530%</td><td>22</td></tr><tr><td>2</td><td>560%</td><td>24</td></tr><tr><td>3</td><td>590%</td><td>26</td></tr><tr><td>4</td><td>620%</td><td>28</td></tr><tr><td>5</td><td>650%</td><td>30</td></tr><tr><td>6</td><td>680%</td><td>32</td></tr><tr><td>7</td><td>710%</td><td>34</td></tr><tr><td>8</td><td>740%</td><td>36</td></tr><tr><td>9</td><td>770%</td><td>38</td></tr><tr><td>10</td><td>800%</td><td>40</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-hero-s-hymn">
-            <div class="sk-top"><strong>Hero's Hymn</strong><i class="sk-type">Performance</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Hero's Hymn</strong><i class="sk-type">Performance</i><i class="sk-target">Party</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Finale: consumes Rhythm for massive offense and defense buffs.</p>
             <p class="sk-body">The user sings a majestic song to steel the party's resolve, consuming all Rhythm stacks to provide massive buffs to Attack, Magic Attack, Defense, and Magic Defense for the duration. The duration of the buff is based on the number of <b class="mech">Rhythm Stacks</b> consumed. Does not stack with Ardent Anthem.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-ardent-anthem">Ardent Anthem</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span>Bard: <a href="#s-quickening-chorus">Quickening Chorus</a> Lv5, <a href="#s-restorative-refrain">Restorative Refrain</a> Lv5 / Dancer: <a href="#s-noetic-number">Noetic Number</a> Lv5, <a href="#s-savage-stride">Savage Stride</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Atk/Matk Bonus</th><th>Def Bonus</th><th>MDef Bonus</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>2%</td><td>10</td><td>3</td><td>60</td></tr><tr><td>2</td><td>4%</td><td>20</td><td>6</td><td>70</td></tr><tr><td>3</td><td>6%</td><td>30</td><td>9</td><td>80</td></tr><tr><td>4</td><td>8%</td><td>40</td><td>12</td><td>90</td></tr><tr><td>5</td><td>10%</td><td>50</td><td>15</td><td>100</td></tr><tr><td>6</td><td>12%</td><td>60</td><td>18</td><td>110</td></tr><tr><td>7</td><td>14%</td><td>70</td><td>21</td><td>120</td></tr><tr><td>8</td><td>16%</td><td>80</td><td>24</td><td>130</td></tr><tr><td>9</td><td>18%</td><td>90</td><td>27</td><td>140</td></tr><tr><td>10</td><td>20%</td><td>100</td><td>30</td><td>150</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-ardent-anthem">
-            <div class="sk-top"><strong>Ardent Anthem</strong><i class="sk-type">Performance</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Ardent Anthem</strong><i class="sk-type">Performance</i><i class="sk-target">Party</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Finale: consumes Rhythm for Movement Speed, Flee, and Perfect Dodge buffs.</p>
             <p class="sk-body">The user sings an energizing melody, inspiring their party to quicker and safer movement. Consumes all of the user's Rhythm stacks to give massive boosts to Movement Speed, Flee, and Perfect Dodge to the whole party. The duration of the buff is based on the number of <b class="mech">Rhythm Stacks</b> consumed. Does not stack with Hero's Hymn.</p>
             <p class="sk-needs"><span data-i18n="cls.needs">Works with</span><a href="#s-hero-s-hymn">Hero's Hymn</a></p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span>Bard: <a href="#s-quickening-chorus">Quickening Chorus</a> Lv5, <a href="#s-darkening-dirge">Darkening Dirge</a> Lv5 / Dancer: <a href="#s-wearying-waltz">Wearying Waltz</a> Lv5, <a href="#s-savage-stride">Savage Stride</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Flee Bonus</th><th>Perfect Dodge Bonus</th><th>Movement Speed Bonus</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>5</td><td>2</td><td>3%</td><td>60</td></tr><tr><td>2</td><td>10</td><td>4</td><td>6%</td><td>70</td></tr><tr><td>3</td><td>15</td><td>6</td><td>9%</td><td>80</td></tr><tr><td>4</td><td>20</td><td>8</td><td>12%</td><td>90</td></tr><tr><td>5</td><td>25</td><td>10</td><td>15%</td><td>100</td></tr><tr><td>6</td><td>30</td><td>12</td><td>18%</td><td>110</td></tr><tr><td>7</td><td>35</td><td>14</td><td>21%</td><td>120</td></tr><tr><td>8</td><td>40</td><td>16</td><td>24%</td><td>130</td></tr><tr><td>9</td><td>45</td><td>18</td><td>27%</td><td>140</td></tr><tr><td>10</td><td>50</td><td>20</td><td>30%</td><td>150</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-devastating-descant">
-            <div class="sk-top"><strong>Devastating Descant</strong><i class="sk-type">Performance</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Devastating Descant</strong><i class="sk-type">Performance</i><i class="sk-target">Enemies</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Finale: consumes Rhythm for a massive Hybrid damage AoE.</p>
             <p class="sk-body">The user infuses their voice with destructive power and screams, consuming all Rhythm stacks to deal massive hybrid-type damage to all enemies in the area around them. The damage dealt is heavily influenced by the number of Rhythm stacks consumed.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span>Bard: <a href="#s-enervating-elegy">Enervating Elegy</a> Lv5, <a href="#s-darkening-dirge">Darkening Dirge</a> Lv5 / Dancer: <a href="#s-wearying-waltz">Wearying Waltz</a> Lv5, <a href="#s-sinister-saunter">Sinister Saunter</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage (per hit)</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>82.5%</td><td>60</td></tr><tr><td>2</td><td>90%</td><td>70</td></tr><tr><td>3</td><td>97.5%</td><td>80</td></tr><tr><td>4</td><td>105%</td><td>90</td></tr><tr><td>5</td><td>112.5%</td><td>100</td></tr><tr><td>6</td><td>120%</td><td>110</td></tr><tr><td>7</td><td>127.5%</td><td>120</td></tr><tr><td>8</td><td>135%</td><td>130</td></tr><tr><td>9</td><td>142.5%</td><td>140</td></tr><tr><td>10</td><td>150%</td><td>150</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>

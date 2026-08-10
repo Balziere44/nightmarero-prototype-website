@@ -241,7 +241,7 @@
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types, targets and the numbers behind every level come from the player wiki, so they match what you see in game.</p>
       </div>
       <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-blind">Blind</span><span class="kw-vuln">Vulnerable</span><span class="kw-breach">Breach</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
       <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-magic" data-i18n="cls.t.magic">Magic</span><span class="sk-summon" data-i18n="cls.t.summon">Summon</span><span class="sk-passive" data-i18n="cls.t.passive">Passive</span></div>
@@ -260,19 +260,24 @@
         <h3 class="branch-title">Spirit Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-magic" id="s-spiteful-spirit">
-            <div class="sk-top"><strong>Spiteful Spirit</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Spiteful Spirit</strong><i class="sk-type">Magical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Single-target Ghost magic that inflicts <b class="kw kw-breach">Breach</b>; generates 1 Spirit.</p>
             <p class="sk-body">The user conjures an evil spirit to attack the targeted enemy, dealing Ghost Property magic damage and attempting to inflict the <b class="kw kw-breach">Breach</b> status. Casting this skill generates one Soul.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Breach Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>530%</td><td>55%</td><td>55</td></tr><tr><td>2</td><td>560%</td><td>60%</td><td>60</td></tr><tr><td>3</td><td>590%</td><td>65%</td><td>65</td></tr><tr><td>4</td><td>620%</td><td>70%</td><td>70</td></tr><tr><td>5</td><td>650%</td><td>75%</td><td>75</td></tr><tr><td>6</td><td>680%</td><td>80%</td><td>80</td></tr><tr><td>7</td><td>710%</td><td>85%</td><td>85</td></tr><tr><td>8</td><td>740%</td><td>90%</td><td>90</td></tr><tr><td>9</td><td>770%</td><td>95%</td><td>95</td></tr><tr><td>10</td><td>800%</td><td>100%</td><td>100</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-magic" id="s-tormented-spirit">
-            <div class="sk-top"><strong>Tormented Spirit</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Tormented Spirit</strong><i class="sk-type">Magical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Ghost magic AoE that inflicts <b class="kw kw-slow">Slow</b>; generates 3 Spirits.</p>
             <p class="sk-body">The user calls a tormented spirit to haunt the targeted enemy, dealing Ghost Property Magic Damage to them and all enemies in an area around them. All enemies affected have a chance of receiving the <b class="kw kw-slow">Slow</b> Status. Generates 3 Souls on use.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-spiteful-spirit">Spiteful Spirit</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Slow Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>730%</td><td>55%</td><td>80</td></tr><tr><td>2</td><td>760%</td><td>60%</td><td>85</td></tr><tr><td>3</td><td>790%</td><td>65%</td><td>90</td></tr><tr><td>4</td><td>820%</td><td>70%</td><td>95</td></tr><tr><td>5</td><td>850%</td><td>75%</td><td>100</td></tr><tr><td>6</td><td>880%</td><td>80%</td><td>105</td></tr><tr><td>7</td><td>910%</td><td>85%</td><td>110</td></tr><tr><td>8</td><td>940%</td><td>90%</td><td>115</td></tr><tr><td>9</td><td>970%</td><td>95%</td><td>120</td></tr><tr><td>10</td><td>1000%</td><td>100%</td><td>125</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-magic" id="s-doomed-spirit">
-            <div class="sk-top"><strong>Doomed Spirit</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Doomed Spirit</strong><i class="sk-type">Magical</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Huge Ghost magic blast; stronger against debuffed enemies; generates 6 Spirits.</p>
             <p class="sk-body">The user conjures a doomed spirit to wreak havoc across the battlefield, dealing Ghost Property Magic Damage in a huge area around them. This skill deals increased damage to <b class="kw kw-slow">Slow</b> and <b class="kw kw-breach">Breached</b> enemies. Generates 6 Souls on use.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-tormented-spirit">Tormented Spirit</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>1100%</td><td>110</td></tr><tr><td>2</td><td>1200%</td><td>120</td></tr><tr><td>3</td><td>1300%</td><td>130</td></tr><tr><td>4</td><td>1400%</td><td>140</td></tr><tr><td>5</td><td>1500%</td><td>150</td></tr><tr><td>6</td><td>1600%</td><td>160</td></tr><tr><td>7</td><td>1700%</td><td>170</td></tr><tr><td>8</td><td>1800%</td><td>180</td></tr><tr><td>9</td><td>1900%</td><td>190</td></tr><tr><td>10</td><td>2000%</td><td>200</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -280,19 +285,24 @@
         <h3 class="branch-title">Shade Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-physical" id="s-spiteful-shade">
-            <div class="sk-top"><strong>Spiteful Shade</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Spiteful Shade</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Single-target Ghost strike that inflicts <b class="kw kw-vuln">Vulnerable</b>; generates 1 Spirit.</p>
             <p class="sk-body">The user conjures a spiteful shade to attack the targeted enemy, dealing Ghost Property Physical Damage and attempting to inflict the <b class="kw kw-vuln">Vulnerable</b> Status. Generates 1 Soul on use.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Vulnerable Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>265%</td><td>55%</td><td>33</td></tr><tr><td>2</td><td>280%</td><td>60%</td><td>36</td></tr><tr><td>3</td><td>295%</td><td>65%</td><td>39</td></tr><tr><td>4</td><td>310%</td><td>70%</td><td>42</td></tr><tr><td>5</td><td>325%</td><td>75%</td><td>45</td></tr><tr><td>6</td><td>340%</td><td>80%</td><td>48</td></tr><tr><td>7</td><td>355%</td><td>85%</td><td>51</td></tr><tr><td>8</td><td>370%</td><td>90%</td><td>54</td></tr><tr><td>9</td><td>385%</td><td>95%</td><td>57</td></tr><tr><td>10</td><td>400%</td><td>100%</td><td>60</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-tormented-shade">
-            <div class="sk-top"><strong>Tormented Shade</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Tormented Shade</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Ghost strike AoE that inflicts <b class="kw kw-blind">Blind</b>; generates 3 Spirits.</p>
             <p class="sk-body">The user summons a tormented shade to assault the targeted enemy, dealing Ghost Property Physical Damage and attempting to inflict the <b class="kw kw-blind">Blind</b> Status to them and all enemies in the area. Generates 3 Souls on use.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-spiteful-shade">Spiteful Shade</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Blind Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>365%</td><td>55%</td><td>35</td></tr><tr><td>2</td><td>380%</td><td>60%</td><td>40</td></tr><tr><td>3</td><td>395%</td><td>65%</td><td>45</td></tr><tr><td>4</td><td>410%</td><td>70%</td><td>50</td></tr><tr><td>5</td><td>425%</td><td>75%</td><td>55</td></tr><tr><td>6</td><td>440%</td><td>80%</td><td>60</td></tr><tr><td>7</td><td>455%</td><td>85%</td><td>65</td></tr><tr><td>8</td><td>470%</td><td>90%</td><td>70</td></tr><tr><td>9</td><td>485%</td><td>95%</td><td>75</td></tr><tr><td>10</td><td>500%</td><td>100%</td><td>80</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-doomed-shade">
-            <div class="sk-top"><strong>Doomed Shade</strong><i class="sk-type">Physical Ranged</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Doomed Shade</strong><i class="sk-type">Physical Ranged</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Massive Ghost AoE; stronger against debuffed enemies; generates 6 Spirits.</p>
             <p class="sk-body">The user conjures a doomed shade to wreak havoc across the battlefield, dealing Ghost Property Physical Damage to all enemies nearby. This skill deals increased damage to enemies suffering from <b class="kw kw-vuln">Vulnerable</b> and <b class="kw kw-blind">Blind</b>. Generates 6 Souls on use.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-tormented-shade">Tormented Shade</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>525%</td><td>55</td></tr><tr><td>2</td><td>550%</td><td>60</td></tr><tr><td>3</td><td>575%</td><td>65</td></tr><tr><td>4</td><td>600%</td><td>70</td></tr><tr><td>5</td><td>625%</td><td>75</td></tr><tr><td>6</td><td>650%</td><td>80</td></tr><tr><td>7</td><td>675%</td><td>85</td></tr><tr><td>8</td><td>700%</td><td>90</td></tr><tr><td>9</td><td>725%</td><td>95</td></tr><tr><td>10</td><td>750%</td><td>100</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -300,24 +310,28 @@
         <h3 class="branch-title">Soul Skills<span>4 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-summon" id="s-soul-eater">
-            <div class="sk-top"><strong>Soul Eater</strong><i class="sk-type">Spirit</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Soul Eater</strong><i class="sk-type">Spirit</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Consumes all Spirits for an Atk/Matk buff.</p>
             <p class="sk-body">The user draws the power of the evil spirits around them into themselves, using their malice to empower their own attacks. Consumes all of the user's active Souls to gain a short bonus to Attack and Magic Attack. The strength of the bonus is based on the number of Souls consumed.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Duration</th></tr></thead><tbody><tr><td>1</td><td>6s</td></tr><tr><td>2</td><td>12s</td></tr><tr><td>3</td><td>18s</td></tr><tr><td>4</td><td>24s</td></tr><tr><td>5</td><td>30s</td></tr><tr><td>6</td><td>36s</td></tr><tr><td>7</td><td>42s</td></tr><tr><td>8</td><td>48s</td></tr><tr><td>9</td><td>54s</td></tr><tr><td>10</td><td>60s</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-summon" id="s-soul-sacrifice">
-            <div class="sk-top"><strong>Soul Sacrifice</strong><i class="sk-type">Spirit</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Soul Sacrifice</strong><i class="sk-type">Spirit</i><i class="sk-target">Ally</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Consumes all Spirits to heal an ally.</p>
             <p class="sk-body">The user draws on the power of the evil spirits around them, transforming them into healing power to sustain themselves in combat. Consumes all of the user's active Souls to recover HP for the targeted ally. The strength of the heal increases with the number of souls consumed. The base healing amount scales with the user's Intelligence.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>55</td></tr><tr><td>2</td><td>60</td></tr><tr><td>3</td><td>65</td></tr><tr><td>4</td><td>70</td></tr><tr><td>5</td><td>75</td></tr><tr><td>6</td><td>80</td></tr><tr><td>7</td><td>85</td></tr><tr><td>8</td><td>90</td></tr><tr><td>9</td><td>95</td></tr><tr><td>10</td><td>100</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-summon" id="s-soul-division">
-            <div class="sk-top"><strong>Soul Division</strong><i class="sk-type">Spirit</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Soul Division</strong><i class="sk-type">Spirit</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Consumes all Spirits to grant the party a Barrier.</p>
             <p class="sk-body">The user draws on the power of the evil spirits around them, dividing their power among all nearby allies to protect them from harm. Consumes all of the user's active Souls to grant a Barrier to all party members. The strength of the barrier increases with the number of Souls consumed, and scales with the user's Strength.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>55</td></tr><tr><td>2</td><td>60</td></tr><tr><td>3</td><td>65</td></tr><tr><td>4</td><td>70</td></tr><tr><td>5</td><td>75</td></tr><tr><td>6</td><td>80</td></tr><tr><td>7</td><td>85</td></tr><tr><td>8</td><td>90</td></tr><tr><td>9</td><td>95</td></tr><tr><td>10</td><td>100</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-summon" id="s-soul-binding">
-            <div class="sk-top"><strong>Soul Binding</strong><i class="sk-type">Spirit</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Soul Binding</strong><i class="sk-type">Spirit</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Consumes all Spirits to reduce the user's active cooldowns.</p>
             <p class="sk-body">The user draws on the power of the evil spirits around them, feeding off of their power to empower their own abilities. Consumes all of the user's active Souls to reduce the active Cooldowns of all of the user's skills. Each Soul consumed reduces the Cooldowns further. Skills and equipment that reduce active Cooldowns never affect this skill.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>SP Cost</th><th>Cooldown</th></tr></thead><tbody><tr><td>1</td><td>55</td><td>57s</td></tr><tr><td>2</td><td>60</td><td>54s</td></tr><tr><td>3</td><td>65</td><td>51s</td></tr><tr><td>4</td><td>70</td><td>48s</td></tr><tr><td>5</td><td>75</td><td>45s</td></tr><tr><td>6</td><td>80</td><td>42s</td></tr><tr><td>7</td><td>85</td><td>39s</td></tr><tr><td>8</td><td>90</td><td>36s</td></tr><tr><td>9</td><td>95</td><td>33s</td></tr><tr><td>10</td><td>100</td><td>30s</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>

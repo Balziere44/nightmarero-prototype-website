@@ -220,7 +220,7 @@
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types, targets and the numbers behind every level come from the player wiki, so they match what you see in game.</p>
       </div>
       <div class="mech-strip"><em data-i18n="cls.mechanics">This class runs on</em><span>Discipline</span><span>Iron Fists</span></div>
       <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
@@ -230,15 +230,17 @@
         <h3 class="branch-title">Support Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-support" id="s-zen">
-            <div class="sk-top"><strong>Zen</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Zen</strong><i class="sk-type">Supportive</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Grants both <b class="mech">Iron Fists</b> and <b class="mech">Discipline</b> at double level.</p>
             <p class="sk-body">The user calms their mind and relaxes their body, drawing out their true inner strength and exceeding their limits for a brief moment. Immediately grants both the <b class="mech">Iron Fists</b> and <b class="mech">Discipline</b> statuses. This skill does not interfere with the stack count of Spiritual Cadence or Fury.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Granted Status Level</th></tr></thead><tbody><tr><td>1</td><td>2</td></tr><tr><td>2</td><td>4</td></tr><tr><td>3</td><td>6</td></tr><tr><td>4</td><td>8</td></tr><tr><td>5</td><td>10</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-unburden">
-            <div class="sk-top"><strong>Unburden</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Unburden</strong><i class="sk-type">Supportive</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Consumes the stances to restore HP or SP.</p>
             <p class="sk-body">The user releases themselves of all worldly attachments, freeing themselves to focus solely on the enemy before them. Consumes the <b class="mech">Iron Fists</b>, <b class="mech">Discipline</b>, and Fury Statuses to gain various effects.</p>
             <ul class="sk-riders"><li>If <b class="mech">Iron Fists</b> is consumed, the user recovers a large amount of HP.</li><li>If <b class="mech">Discipline</b> is consumed, the user recovers a large amount of SP.</li></ul>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Cooldown</th></tr></thead><tbody><tr><td>1</td><td>36s</td></tr><tr><td>2</td><td>32s</td></tr><tr><td>3</td><td>28s</td></tr><tr><td>4</td><td>24s</td></tr><tr><td>5</td><td>20s</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -246,20 +248,24 @@
         <h3 class="branch-title">Combo Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-utility" id="s-raging-barrage">
-            <div class="sk-top"><strong>Raging Barrage</strong><i class="sk-type">Combo</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Raging Barrage</strong><i class="sk-type">Combo</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Single-target barrage of blows.</p>
             <p class="sk-body">Deals heavy damage to a single target. If the user is under the <b class="mech">Discipline</b> Status, this skill is guaranteed to Crit and grants double the level of <b class="mech">Iron Fists</b>. If the user is under the <b class="mech">Iron Fists</b> status, its cooldown is halved.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>250%</td><td>22</td></tr><tr><td>2</td><td>300%</td><td>24</td></tr><tr><td>3</td><td>350%</td><td>26</td></tr><tr><td>4</td><td>400%</td><td>28</td></tr><tr><td>5</td><td>450%</td><td>30</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-utility" id="s-raging-windmill">
-            <div class="sk-top"><strong>Raging Windmill</strong><i class="sk-type">Combo</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Raging Windmill</strong><i class="sk-type">Combo</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Point-blank AoE combo strike.</p>
             <p class="sk-body">Unleashes a whirling blow, striking all enemies in the area around the user for moderate physical damage. If the user is in the <b class="mech">Discipline</b> status, it is guaranteed to Crit and grants double the level of <b class="mech">Iron Fists</b>. If the user is in the <b class="mech">Iron Fists</b> status, its cooldown is halved.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>240%</td><td>32</td></tr><tr><td>2</td><td>280%</td><td>34</td></tr><tr><td>3</td><td>320%</td><td>36</td></tr><tr><td>4</td><td>360%</td><td>38</td></tr><tr><td>5</td><td>400%</td><td>40</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-utility" id="s-falling-mountain">
-            <div class="sk-top"><strong>Falling Mountain</strong><i class="sk-type">Combo Finisher</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Falling Mountain</strong><i class="sk-type">Combo Finisher</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Combo finisher: one crushing blow that consumes the stances.</p>
             <p class="sk-body">Combo Finisher. Delivers a single crushing blow to the target. If the user is in the <b class="mech">Discipline</b> Status, it is guaranteed to Crit. If the user is in the <b class="mech">Iron Fists</b> status, its cooldown is halved.</p>
             <p class="sk-body">This skill consumes <b class="mech">Iron Fists</b> and <b class="mech">Discipline</b>, but does not grant them.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-raging-barrage">Raging Barrage</a> Lv3, <a href="#s-raging-windmill">Raging Windmill</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>370%</td><td>55</td></tr><tr><td>2</td><td>440%</td><td>60</td></tr><tr><td>3</td><td>510%</td><td>65</td></tr><tr><td>4</td><td>580%</td><td>70</td></tr><tr><td>5</td><td>650%</td><td>75</td></tr><tr><td>6</td><td>720%</td><td>80</td></tr><tr><td>7</td><td>790%</td><td>85</td></tr><tr><td>8</td><td>860%</td><td>90</td></tr><tr><td>9</td><td>930%</td><td>95</td></tr><tr><td>10</td><td>1000%</td><td>100</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -267,24 +273,28 @@
         <h3 class="branch-title">Spirit Skills<span>3 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-summon" id="s-spiritual-rupture">
-            <div class="sk-top"><strong>Spiritual Rupture</strong><i class="sk-type">Spirit</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Spiritual Rupture</strong><i class="sk-type">Spirit</i><i class="sk-target">Ground</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Ranged ground explosion of spiritual energy.</p>
             <p class="sk-body">The user creates a burst of spiritual energy at the targeted location, dealing Ranged Physical Damage to all enemies in the area. The damage is increased by the user's Magic Attack. If the user is in th eIron Fists Status, it has a chance to inflict <b class="kw kw-bleed">Bleeding</b> and grants double the level of <b class="mech">Discipline</b>. If the user is under the <b class="mech">Discipline</b> status, its cooldown is halved.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Bleeding Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>220%</td><td>30%</td><td>42</td></tr><tr><td>2</td><td>240%</td><td>35%</td><td>44</td></tr><tr><td>3</td><td>260%</td><td>40%</td><td>46</td></tr><tr><td>4</td><td>280%</td><td>45%</td><td>48</td></tr><tr><td>5</td><td>300%</td><td>50%</td><td>50</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-summon" id="s-spiritual-pursuit">
-            <div class="sk-top"><strong>Spiritual Pursuit</strong><i class="sk-type">Spirit</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Spiritual Pursuit</strong><i class="sk-type">Spirit</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Teleports to a distant target and strikes.</p>
             <p class="sk-body">Spirit skill. The user wields their spiritual energy to hurl themselves at a distant foe, using their own body as a projectile. Deals Ranged Physical Damage to a single target that is increased by the user's Magic Attack.</p>
             <p class="sk-body">If the user is in the <b class="mech">Iron Fists</b> status, has a chance to inflict <b class="kw kw-bleed">Internal Bleeding</b> and grants double the level of <b class="mech">Discipline</b>.</p>
             <p class="sk-body">If the user is in the <b class="mech">Discipline</b> status, its cooldown is halved.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Internal Bleeding Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>230%</td><td>55%</td><td>27</td></tr><tr><td>2</td><td>260%</td><td>60%</td><td>29</td></tr><tr><td>3</td><td>290%</td><td>65%</td><td>31</td></tr><tr><td>4</td><td>320%</td><td>70%</td><td>33</td></tr><tr><td>5</td><td>350%</td><td>75%</td><td>35</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-summon" id="s-soul-explosion">
-            <div class="sk-top"><strong>Soul Explosion</strong><i class="sk-type">Spirit Finisher</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Soul Explosion</strong><i class="sk-type">Spirit Finisher</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Spirit finisher: a massive self-centered blast.</p>
             <p class="sk-body">Spirit Finisher. The user unleashes all of their spiritual power in a massive blast centered on themselves. Deals physical damage in an area around the caster, which is increased by the user's Magic Attack.</p>
             <p class="sk-body">If the user is in the <b class="mech">Iron Fists</b> status, all enemies struck are knocked back.</p>
             <p class="sk-body">If the user is in the <b class="mech">Discipline</b> status, its cooldown is halved.</p>
             <p class="sk-body">This skill consumes <b class="mech">Iron Fists</b> and <b class="mech">Discipline</b>, but does not grant them.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-spiritual-rupture">Spiritual Rupture</a> Lv3, <a href="#s-spiritual-pursuit">Spiritual Pursuit</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>330%</td><td>55</td></tr><tr><td>2</td><td>360%</td><td>60</td></tr><tr><td>3</td><td>390%</td><td>65</td></tr><tr><td>4</td><td>420%</td><td>70</td></tr><tr><td>5</td><td>450%</td><td>75</td></tr><tr><td>6</td><td>480%</td><td>80</td></tr><tr><td>7</td><td>510%</td><td>85</td></tr><tr><td>8</td><td>540%</td><td>90</td></tr><tr><td>9</td><td>570%</td><td>95</td></tr><tr><td>10</td><td>600%</td><td>100</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -292,17 +302,21 @@
         <h3 class="branch-title">Ultimate Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-support" id="s-unbreakable-resolve">
-            <div class="sk-top"><strong>Unbreakable Resolve</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Unbreakable Resolve</strong><i class="sk-type">Supportive</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Consumes all remaining SP for heavy damage reduction.</p>
             <p class="sk-body">The user focuses inward, drawing out a supernatural resilience from within themselves. Consumes the user's remaining SP to grant them a buff that reduces all damage taken for the duration. While this skill is active, the user cannot gain the <b class="mech">Iron Fists</b> or <b class="mech">Discipline</b> statuses.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-unburden">Unburden</a> Lv5, <a href="#s-soul-explosion">Soul Explosion</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage Reduction</th></tr></thead><tbody><tr><td>1</td><td>5%</td></tr><tr><td>2</td><td>10%</td></tr><tr><td>3</td><td>15%</td></tr><tr><td>4</td><td>20%</td></tr><tr><td>5</td><td>25%</td></tr><tr><td>6</td><td>30%</td></tr><tr><td>7</td><td>35%</td></tr><tr><td>8</td><td>40%</td></tr><tr><td>9</td><td>45%</td></tr><tr><td>10</td><td>50%</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-guillotine-fist">
-            <div class="sk-top"><strong>Guillotine Fist</strong><i class="sk-type">Physical Melee</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Guillotine Fist</strong><i class="sk-type">Physical Melee</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Consumes all remaining SP for unbelievable single-target damage.</p>
             <p class="sk-body">The user focuses all of their strength into a single blow, exhausting everything they have to ensure it is fatal. Consumes all of the user's remaining SP to deal massive damage to a single target. The damage is based on the amount of SP consumed, and is increased by the percentage of missing HP from the target.</p>
             <p class="sk-body">If the user is in the <b class="mech">Iron Fists</b> status, this skill is guaranteed to Crit and ignores Defense.</p>
             <p class="sk-body">If the user is in the <b class="mech">Discipline</b> status, the damage dealt is based on the user's Max SP instead of the amount of SP consumed.</p>
             <p class="sk-body">Once struck by this skill, the target will be immune to the effects of Guillotine Fist from the same caster for the next five minutes.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-zen">Zen</a> Lv5, <a href="#s-falling-mountain">Falling Mountain</a> Lv5</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage per SP Consumed</th></tr></thead><tbody><tr><td>1</td><td>0.2%</td></tr><tr><td>2</td><td>0.4%</td></tr><tr><td>3</td><td>0.6%</td></tr><tr><td>4</td><td>0.8%</td></tr><tr><td>5</td><td>1%</td></tr><tr><td>6</td><td>1.2%</td></tr><tr><td>7</td><td>1.4%</td></tr><tr><td>8</td><td>1.6%</td></tr><tr><td>9</td><td>1.8%</td></tr><tr><td>10</td><td>2%</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>

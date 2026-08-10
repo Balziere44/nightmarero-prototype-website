@@ -214,7 +214,7 @@
       <div class="section-head">
         <p class="eyebrow" data-i18n="cls.skillsEyebrow">Skill list</p>
         <h2 data-i18n="cls.skillsTitle">Skills</h2>
-        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types and level caps come from the player wiki, so they match what you see in game.</p>
+        <p class="muted" data-i18n="cls.skillsNote">Grouped the way the tree is grouped. Names, types, targets and the numbers behind every level come from the player wiki, so they match what you see in game.</p>
       </div>
       <div class="kw-legend" style="margin-bottom:0.75rem"><span class="kw-bleed">Bleeding</span><span class="kw-burn">Burning</span><span class="kw-vuln">Vulnerable</span><span class="kw-frozen">Frozen</span><span class="kw-sleep">Sleep</span><span class="kw-slow">Slow</span><a href="../classes.html#codex" data-i18n="cls.legendMore">What these do</a></div>
       <div class="type-key"><span class="sk-physical" data-i18n="cls.t.physical">Physical</span><span class="sk-magic" data-i18n="cls.t.magic">Magic</span><span class="sk-support" data-i18n="cls.t.support">Support</span><span class="sk-utility" data-i18n="cls.t.utility">Utility</span></div>
@@ -223,54 +223,69 @@
         <h3 class="branch-title">Elemental Skills<span>10 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-utility" id="s-cloak-of-flame">
-            <div class="sk-top"><strong>Cloak of Flame</strong><i class="sk-type">Utility</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Cloak of Flame</strong><i class="sk-type">Utility</i><i class="sk-target">Self</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Deals constant Fire damage over time in an area around the caster, applying Fire Vulnerability.</p>
             <p class="sk-body">The user wraps themselves in flame, dealing Fire property damage to all enemies that approach within a 5x5 area. Enemies struck suffer from Fire Vulnerability for ten seconds.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th></tr></thead><tbody><tr><td>1</td><td>60%</td></tr><tr><td>2</td><td>70%</td></tr><tr><td>3</td><td>80%</td></tr><tr><td>4</td><td>90%</td></tr><tr><td>5</td><td>100%</td></tr><tr><td>6</td><td>110%</td></tr><tr><td>7</td><td>120%</td></tr><tr><td>8</td><td>130%</td></tr><tr><td>9</td><td>140%</td></tr><tr><td>10</td><td>150%</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-magic" id="s-crimson-rock">
-            <div class="sk-top"><strong>Crimson Rock</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Crimson Rock</strong><i class="sk-type">Magical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Deals massive Fire area damage, inflicting <b class="kw kw-burn">Burning</b>.</p>
             <p class="sk-body">Calls a flaming meteor from the heavens to deal heavy Fire property damage and inflict the <b class="kw kw-burn">Burning</b> status to a target and all enemies around it.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-cloak-of-flame">Cloak of Flame</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Burning Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>870%</td><td>55%</td><td>180</td></tr><tr><td>2</td><td>940%</td><td>60%</td><td>185</td></tr><tr><td>3</td><td>1010%</td><td>65%</td><td>190</td></tr><tr><td>4</td><td>1080%</td><td>70%</td><td>195</td></tr><tr><td>5</td><td>1150%</td><td>75%</td><td>200</td></tr><tr><td>6</td><td>1220%</td><td>80%</td><td>205</td></tr><tr><td>7</td><td>1290%</td><td>85%</td><td>210</td></tr><tr><td>8</td><td>1360%</td><td>90%</td><td>215</td></tr><tr><td>9</td><td>1430%</td><td>95%</td><td>220</td></tr><tr><td>10</td><td>1500%</td><td>100%</td><td>225</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-magic" id="s-freezing-breath">
-            <div class="sk-top"><strong>Freezing Breath</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Freezing Breath</strong><i class="sk-type">Magical</i><i class="sk-target">Ground</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Blasts the target area with Water damage, inflicting <b class="kw kw-frozen">Chill</b> and Water Vulnerability.</p>
             <p class="sk-body">Unleashes a blast of cold air at a target location, dealing Water property damage and attempting to inflict the Chilled and Water Vulnerability statuses.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Chill Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>100%</td><td>55%</td><td>30</td></tr><tr><td>2</td><td>200%</td><td>60%</td><td>35</td></tr><tr><td>3</td><td>300%</td><td>65%</td><td>40</td></tr><tr><td>4</td><td>400%</td><td>70%</td><td>45</td></tr><tr><td>5</td><td>500%</td><td>75%</td><td>50</td></tr><tr><td>6</td><td>600%</td><td>80%</td><td>55</td></tr><tr><td>7</td><td>700%</td><td>85%</td><td>60</td></tr><tr><td>8</td><td>800%</td><td>90%</td><td>65</td></tr><tr><td>9</td><td>900%</td><td>95%</td><td>70</td></tr><tr><td>10</td><td>1000%</td><td>100%</td><td>75</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-magic" id="s-storm-gust">
-            <div class="sk-top"><strong>Storm Gust</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Storm Gust</strong><i class="sk-type">Magical</i><i class="sk-target">Ground</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Conjures a blizzard in target area, dealing Water damage and inflicting <b class="kw kw-frozen">Chill</b>.</p>
             <p class="sk-body">Summons a wintry storm at the targeted location, dealing repeated Water property damage with a chance to inflict the Chilled status each time.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-freezing-breath">Freezing Breath</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage (per hit)</th><th>Chill Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>140%</td><td>10%</td><td>110</td></tr><tr><td>2</td><td>180%</td><td>20%</td><td>120</td></tr><tr><td>3</td><td>220%</td><td>30%</td><td>130</td></tr><tr><td>4</td><td>260%</td><td>40%</td><td>140</td></tr><tr><td>5</td><td>300%</td><td>50%</td><td>150</td></tr><tr><td>6</td><td>340%</td><td>60%</td><td>160</td></tr><tr><td>7</td><td>380%</td><td>70%</td><td>170</td></tr><tr><td>8</td><td>420%</td><td>80%</td><td>180</td></tr><tr><td>9</td><td>460%</td><td>90%</td><td>190</td></tr><tr><td>10</td><td>500%</td><td>100%</td><td>200</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-magic" id="s-jupitel-thunder">
-            <div class="sk-top"><strong>Jupitel Thunder</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Jupitel Thunder</strong><i class="sk-type">Magical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Fires a ball of Wind energy at a target, applying Wind Vulnerability.</p>
             <p class="sk-body">Fires a ball of lightning at a target, knocking them back and inflicting the Wind Vulnerability status for ten seconds. <b class="kw kw-sleep">Sleeping</b> enemies take additional damage.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>175%</td><td>30</td></tr><tr><td>2</td><td>250%</td><td>40</td></tr><tr><td>3</td><td>325%</td><td>50</td></tr><tr><td>4</td><td>400%</td><td>60</td></tr><tr><td>5</td><td>475%</td><td>70</td></tr><tr><td>6</td><td>550%</td><td>80</td></tr><tr><td>7</td><td>625%</td><td>90</td></tr><tr><td>8</td><td>700%</td><td>100</td></tr><tr><td>9</td><td>775%</td><td>110</td></tr><tr><td>10</td><td>850%</td><td>120</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-magic" id="s-lord-of-vermillion">
-            <div class="sk-top"><strong>Lord of Vermillion</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Lord of Vermillion</strong><i class="sk-type">Magical</i><i class="sk-target">Ground</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Summons a barrage of lightning at a target area, inflicting <b class="kw kw-sleep">Sleep</b>.</p>
             <p class="sk-body">Summons a barrage of lightning bolts that does significant damage and possibly inflicts the <b class="kw kw-sleep">Sleep</b> status on all targets over a huge area.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-jupitel-thunder">Jupitel Thunder</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Sleep Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>500%</td><td>30%</td><td>155</td></tr><tr><td>2</td><td>600%</td><td>35%</td><td>160</td></tr><tr><td>3</td><td>700%</td><td>40%</td><td>165</td></tr><tr><td>4</td><td>800%</td><td>45%</td><td>170</td></tr><tr><td>5</td><td>900%</td><td>50%</td><td>175</td></tr><tr><td>6</td><td>1000%</td><td>55%</td><td>180</td></tr><tr><td>7</td><td>1100%</td><td>60%</td><td>185</td></tr><tr><td>8</td><td>1200%</td><td>65%</td><td>190</td></tr><tr><td>9</td><td>1300%</td><td>70%</td><td>195</td></tr><tr><td>10</td><td>1400%</td><td>75%</td><td>200</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-magic" id="s-earth-spike">
-            <div class="sk-top"><strong>Earth Spike</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Earth Spike</strong><i class="sk-type">Magical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Erupts a stone out of the ground, dealing Earth damage and bonus damage against <b class="kw kw-bleed">Bleeding</b> targets.</p>
             <p class="sk-body">Deals Earth property damage to a single target, which is increased if the target is <b class="kw kw-bleed">Bleeding</b>.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>80%</td><td>10</td></tr><tr><td>2</td><td>160%</td><td>20</td></tr><tr><td>3</td><td>240%</td><td>30</td></tr><tr><td>4</td><td>320%</td><td>40</td></tr><tr><td>5</td><td>400%</td><td>50</td></tr><tr><td>6</td><td>480%</td><td>60</td></tr><tr><td>7</td><td>560%</td><td>70</td></tr><tr><td>8</td><td>640%</td><td>80</td></tr><tr><td>9</td><td>720%</td><td>90</td></tr><tr><td>10</td><td>800%</td><td>100</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-magic" id="s-heaven-s-drive">
-            <div class="sk-top"><strong>Heaven's Drive</strong><i class="sk-type">Magical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Heaven's Drive</strong><i class="sk-type">Magical</i><i class="sk-target">Ground</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Causes the ground to explode, dealing Earth damage and inflicting <b class="kw kw-bleed">Internal Bleeding</b>.</p>
             <p class="sk-body">Deals Earth property damage to targets over a small area, with a high chance to inflict the <b class="kw kw-bleed">Bleeding</b> status. <b class="kw kw-bleed">Bleeding</b> inflicted by this skill scales with Dex instead of Str.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-earth-spike">Earth Spike</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Internal Bleeding Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>250%</td><td>55%</td><td>80</td></tr><tr><td>2</td><td>300%</td><td>60%</td><td>85</td></tr><tr><td>3</td><td>350%</td><td>65%</td><td>90</td></tr><tr><td>4</td><td>400%</td><td>70%</td><td>95</td></tr><tr><td>5</td><td>450%</td><td>75%</td><td>100</td></tr><tr><td>6</td><td>500%</td><td>80%</td><td>105</td></tr><tr><td>7</td><td>550%</td><td>85%</td><td>110</td></tr><tr><td>8</td><td>600%</td><td>90%</td><td>115</td></tr><tr><td>9</td><td>650%</td><td>95%</td><td>120</td></tr><tr><td>10</td><td>700%</td><td>100%</td><td>125</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-force-pulse">
-            <div class="sk-top"><strong>Force Pulse</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Force Pulse</strong><i class="sk-type">Physical</i><i class="sk-target">Enemy</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Uses the caster's MATK to deal Physical damage bolts.</p>
             <p class="sk-body">Deals Neutral Physical damage to a single target, which is increased if the target is <b class="kw kw-vuln">Vulnerable</b>. This skill takes its damage from the user's Magic Attack, but is only reduced by Physical Defense.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>80%</td><td>10</td></tr><tr><td>2</td><td>160%</td><td>20</td></tr><tr><td>3</td><td>240%</td><td>30</td></tr><tr><td>4</td><td>320%</td><td>40</td></tr><tr><td>5</td><td>400%</td><td>50</td></tr><tr><td>6</td><td>480%</td><td>60</td></tr><tr><td>7</td><td>560%</td><td>70</td></tr><tr><td>8</td><td>640%</td><td>80</td></tr><tr><td>9</td><td>720%</td><td>90</td></tr><tr><td>10</td><td>800%</td><td>100</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-physical" id="s-gravitational-collapse">
-            <div class="sk-top"><strong>Gravitational Collapse</strong><i class="sk-type">Physical</i><i class="sk-lv">Lv 10</i></div>
+            <div class="sk-top"><strong>Gravitational Collapse</strong><i class="sk-type">Physical</i><i class="sk-target">Ground</i><i class="sk-lv">Lv 10</i></div>
             <p class="sk-short">Distorts gravity in an area, dealing Physical damage and applying <b class="kw kw-vuln">Vulnerable</b>.</p>
             <p class="sk-body">Deals Neutral Physical damage to targets over a small area, attempting to inflict the <b class="kw kw-vuln">Vulnerable</b> status with each hit. Enemies within the area of effect are slowed, though this does not count as the <b class="kw kw-slow">Slow</b> status effect. This skill takes its damage from the user's Magic Attack, but is only reduced by Physical Defense.</p>
+            <p class="sk-needs -req"><span data-i18n="cls.requires">Learn first</span><a href="#s-force-pulse">Force Pulse</a> Lv3</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Damage</th><th>Vulnerable Chance</th><th>SP Cost</th></tr></thead><tbody><tr><td>1</td><td>120%</td><td>7%</td><td>75</td></tr><tr><td>2</td><td>140%</td><td>14%</td><td>85</td></tr><tr><td>3</td><td>160%</td><td>21%</td><td>95</td></tr><tr><td>4</td><td>180%</td><td>28%</td><td>105</td></tr><tr><td>5</td><td>200%</td><td>35%</td><td>115</td></tr><tr><td>6</td><td>220%</td><td>42%</td><td>125</td></tr><tr><td>7</td><td>240%</td><td>49%</td><td>135</td></tr><tr><td>8</td><td>260%</td><td>56%</td><td>145</td></tr><tr><td>9</td><td>280%</td><td>63%</td><td>155</td></tr><tr><td>10</td><td>300%</td><td>70%</td><td>165</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
@@ -278,14 +293,16 @@
         <h3 class="branch-title">Utility Skills<span>2 <span data-i18n="cls.skillWord">skills</span></span></h3>
         <ul class="skill-grid">
           <li class="skill-card sk-support" id="s-rapid-incantation">
-            <div class="sk-top"><strong>Rapid Incantation</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Rapid Incantation</strong><i class="sk-type">Supportive</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Dramatically speeds up the Fixed Cast Time of all spells for a short duration.</p>
             <p class="sk-body">For five seconds, all spells cast by the user have their Variable Cast Time halved.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Cooldown</th></tr></thead><tbody><tr><td>1</td><td>70s</td></tr><tr><td>2</td><td>60s</td></tr><tr><td>3</td><td>50s</td></tr><tr><td>4</td><td>40s</td></tr><tr><td>5</td><td>30s</td></tr></tbody></table></div></details>
           </li>
           <li class="skill-card sk-support" id="s-energy-coat">
-            <div class="sk-top"><strong>Energy Coat</strong><i class="sk-type">Supportive</i><i class="sk-lv">Lv 5</i></div>
+            <div class="sk-top"><strong>Energy Coat</strong><i class="sk-type">Supportive</i><i class="sk-target">Self</i><i class="sk-lv">Lv 5</i></div>
             <p class="sk-short">Deals a portion of incoming damage to the user's SP instead of HP.</p>
             <p class="sk-body">The user creates a magic forcefield around themselves, reducing the damage of all incoming attacks by a percentage based on the amount of SP they have remaining. Each hit taken under this status drains a percentage of the user's Max SP.</p>
+            <details class="sk-nums"><summary><span data-i18n="cls.levelTable">Level by level</span></summary><div class="table-wrap"><table><thead><tr><th>Level</th><th>Bracket Size (% of Max SP)</th></tr></thead><tbody><tr><td>1</td><td>9%</td></tr><tr><td>2</td><td>8%</td></tr><tr><td>3</td><td>7%</td></tr><tr><td>4</td><td>6%</td></tr><tr><td>5</td><td>5%</td></tr></tbody></table></div></details>
           </li>
         </ul>
       </div>
