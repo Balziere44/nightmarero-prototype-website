@@ -20,6 +20,7 @@ static host and it works.
 ├── mvps.html                boss altars, summon lists and drops
 ├── quests.html              spoiler quest walkthroughs
 ├── download.html            client download and install help
+├── loading-screens.html     the class loading screens, browsable and free
 ├── classes/                 55 generated class pages
 ├── assets/
 │   ├── css/style.css        the whole design system
@@ -29,6 +30,7 @@ static host and it works.
 │   ├── data/                items.json and search.json, both generated
 │   └── img/
 │       ├── classes/         character art, .webp, two sizes each
+│       ├── loadings/        loading screens, full size + thumbs/
 │       ├── bg/              hero and secondary backgrounds
 │       ├── hero-a/-b.webp   the two figures in the landing page hero
 │       ├── logo.webp/.png   logo
@@ -415,15 +417,16 @@ are labelled as such on the page along with the date they were last touched.
 
 ## The navigation
 
-Three entries open onto more than one page: The game (the server spec on the
+Four entries open onto more than one page: The game (the server spec on the
 home page, the mechanics page and the end game page), New players (the
-levelling route and the class test) and Database (items, MVPs, quests). Both
-the desktop dropdowns and the drawer groups come from `GAME_PAGES`,
-`NEW_PAGES` and `DB_PAGES` in `tools/build_classes.py`.
+levelling route and the class test), Database (items, MVPs, quests) and
+Download (the client, the loading screens). Both the desktop dropdowns and the
+drawer groups come from `GAME_PAGES`, `NEW_PAGES`, `DB_PAGES` and `DL_PAGES` in
+`tools/build_classes.py`.
 
 The generated pages take their header from `header()`. `index.html`,
-`database.html`, `quiz.html` and `download.html` are hand written and carry
-their own copy, so after any nav change:
+`database.html`, `quiz.html`, `download.html` and `loading-screens.html` are
+hand written and carry their own copy, so after any nav change:
 
 ```bash
 python tools/sync_nav.py       # paste the generated nav into the four copies
@@ -431,6 +434,46 @@ python tools/build_classes.py  # then rebuild everything else
 ```
 
 `sync_nav.py` is safe to re-run; it reports which pages it actually changed.
+
+---
+
+## The loading screens
+
+`loading-screens.html` shows every finished loading screen and hands out the
+file. The artwork is from Ragnarok Online 3, edited in Photoshop by Balziere,
+with the class text by Twilight, and the page says so in three places, so keep
+that credit wherever the set is mentioned.
+
+Two copies of each screen live in `assets/img/loadings/`: the original
+1280 × 720 JPG, which is what the download link points at, and a 720px wide
+thumbnail in `thumbs/` for the grid. Nothing on the page loads a full size
+image until somebody opens the viewer.
+
+The grid inside `<div class="ls-grid" id="lsGrid">` is generated. Adding the
+next class is one line in `SCREENS` in `tools/build_loadings.py` — the slug
+(which is also the file name and the class page it links to), the name printed
+on the card, `trans` or `third`, and the file it comes from in the source
+folder — then:
+
+```bash
+python tools/build_loadings.py "C:/path/to/Loading Screens"
+```
+
+That imports the originals, rewrites the thumbnails, rebuilds the cards and
+updates the count next to the filter chips. Without the folder argument it
+rebuilds thumbnails and markup from the files already in the repo. It needs
+Pillow (`pip install Pillow`), same as `prepare_art.py`.
+
+One thing it cannot fix for you: the FAQ answer on the page counts the finished
+classes out loud ("seven transcendent classes and their seven third class
+counterparts"). That sentence is `ls.a1`, in the page and in all five locale
+files, and the script prints a reminder about it every run.
+
+The viewer, the tier filters, the thumbnail rail and the cursor glow are
+section 7b of `assets/js/main.js`. The grid is a set of plain links to the full
+JPGs, so with the script blocked the page still works, it just opens the image
+directly. The open screen is mirrored into the URL hash, so
+`loading-screens.html#warlock` opens on the Warlock.
 
 ---
 

@@ -532,7 +532,7 @@ window.NM_I18N_REGISTER('it', {
   'ls.lede': 'Sono le schermate di caricamento incluse nel client, una per classe, a piena risoluzione. Clicca quella che vuoi per guardarla come si deve, poi prendi il file. Fanno degli sfondi decenti, e nessuno ti fermerà se le usi su Discord.',
   'ls.creditLabel': 'Crediti',
   'ls.credit': 'Illustrazioni da <strong>Ragnarok Online 3</strong> &middot; ritocco in Photoshop di <strong>Balziere</strong> &middot; testi delle classi scritti da <strong>Twilight</strong>.',
-  'ls.getAll': 'Scarica tutte e 14',
+  'ls.getAll': 'Scaricale tutte',
   'ls.getClient': 'Scarica il client',
   'ls.note': 'Ogni file è un JPG 1280 &times; 720 da circa 800 KB. Gratis, ricondivisibile, lascia solo il credito dov\'è.',
   'ls.fAll': 'Tutte',

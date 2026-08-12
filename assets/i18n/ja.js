@@ -532,7 +532,7 @@ window.NM_I18N_REGISTER('ja', {
   'ls.lede': 'クライアントに同梱されているローディング画面を、職業ごとにフル解像度で置いてあります。気になったものをクリックしてじっくり見て、そのままファイルを持っていってください。壁紙にも使えますし、Discord で使っても誰も止めません。',
   'ls.creditLabel': 'クレジット',
   'ls.credit': '原画は <strong>ラグナロクオンライン3</strong> &middot; Photoshop での編集は <strong>Balziere</strong> &middot; 職業テキストは <strong>Twilight</strong>。',
-  'ls.getAll': '14枚すべてダウンロード',
+  'ls.getAll': 'すべてダウンロード',
   'ls.getClient': 'ゲームクライアントを入手',
   'ls.note': 'どれも 1280 &times; 720 の JPG で、1枚およそ 800 KB。無料で、再掲載も自由です。クレジットだけは残してください。',
   'ls.fAll': 'すべて',

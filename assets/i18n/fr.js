@@ -532,7 +532,7 @@ window.NM_I18N_REGISTER('fr', {
   'ls.lede': 'Voici les écrans de chargement livrés avec le client, un par classe, en pleine résolution. Cliquez sur celui que vous voulez pour le voir correctement, puis prenez le fichier. Ils font de bons fonds d\'écran, et personne ne vous empêchera de les utiliser sur Discord.',
   'ls.creditLabel': 'Crédits',
   'ls.credit': 'Illustrations de <strong>Ragnarok Online 3</strong> &middot; retouches Photoshop par <strong>Balziere</strong> &middot; textes de classe écrits par <strong>Twilight</strong>.',
-  'ls.getAll': 'Tout télécharger (14)',
+  'ls.getAll': 'Tout télécharger',
   'ls.getClient': 'Télécharger le client',
   'ls.note': 'Chaque fichier est un JPG 1280 &times; 720 d\'environ 800 Ko. Gratuit, repartageable, laissez juste le crédit en place.',
   'ls.fAll': 'Tout',

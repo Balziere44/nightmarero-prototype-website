@@ -532,7 +532,7 @@ window.NM_I18N_REGISTER('de', {
   'ls.lede': 'Das sind die Ladebildschirme, die mit dem Client kommen, einer pro Klasse, in voller Auflösung. Klick einen an, um ihn richtig anzusehen, und nimm die Datei mit. Sie geben ordentliche Hintergrundbilder ab, und niemand hält dich davon ab, sie auf Discord zu benutzen.',
   'ls.creditLabel': 'Credits',
   'ls.credit': 'Artwork aus <strong>Ragnarok Online 3</strong> &middot; bearbeitet in Photoshop von <strong>Balziere</strong> &middot; Klassentexte von <strong>Twilight</strong>.',
-  'ls.getAll': 'Alle 14 herunterladen',
+  'ls.getAll': 'Alle herunterladen',
   'ls.getClient': 'Spiel-Client holen',
   'ls.note': 'Jede Datei ist ein 1280 &times; 720 JPG mit rund 800 KB. Kostenlos, gern weiterverbreiten, lass nur die Credits dran.',
   'ls.fAll': 'Alle',

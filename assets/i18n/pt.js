@@ -532,7 +532,7 @@ window.NM_I18N_REGISTER('pt', {
   'ls.lede': 'São as telas de carregamento que vêm com o cliente, uma por classe, em resolução cheia. Clique em qualquer uma para ver de perto e leve o arquivo. Servem bem de papel de parede, e ninguém vai reclamar se você usar no Discord.',
   'ls.creditLabel': 'Créditos',
   'ls.credit': 'Artes do <strong>Ragnarok Online 3</strong> &middot; edição no Photoshop por <strong>Balziere</strong> &middot; textos das classes por <strong>Twilight</strong>.',
-  'ls.getAll': 'Baixar todas as 14',
+  'ls.getAll': 'Baixar todas elas',
   'ls.getClient': 'Baixar o cliente do jogo',
   'ls.note': 'Cada arquivo é um JPG de 1280 &times; 720, com cerca de 800 KB. De graça, pode repostar, só não tire o crédito.',
   'ls.fAll': 'Todas',
