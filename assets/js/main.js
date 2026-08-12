@@ -602,6 +602,262 @@
     });
   })();
 
+  /* ------------------------------------------ 7b. loading screen gallery */
+
+  /* The grid in the HTML is already a set of links to the full JPGs, so this
+     only adds the nice parts: tier filters, the viewer with arrow keys, a
+     thumbnail rail, and the cursor glow on each card. The open screen is
+     mirrored into the URL hash so a specific one can be linked. */
+
+  (function () {
+    var grid = $('#lsGrid');
+    if (!grid) return;
+
+    var cards = $$('.ls-card', grid);
+    if (!cards.length) return;
+
+    var chips = $$('[data-ls-filter]');
+    var counter = $('#lsCountN');
+    var shown = cards.slice();     // the filtered set, in grid order
+    var box = null;                // viewer element, built on first open
+    var at = -1;
+    var lastFocus = null;
+
+    var t = function (key, fallback) {
+      var table = window.NM_I18N_TABLE || {};
+      return table[key] || fallback;
+    };
+
+    var full = function (card) { return $('.ls-shot', card).getAttribute('href'); };
+    var thumb = function (card) { return $('img', card).getAttribute('src'); };
+
+    /* ---------------------------------------------------------- filtering */
+
+    var filter = function (tier) {
+      shown = cards.filter(function (card) {
+        var ok = tier === 'all' || card.dataset.tier === tier;
+        card.hidden = !ok;
+        return ok;
+      });
+      if (counter) counter.textContent = String(shown.length);
+      if (box) rail();
+    };
+
+    chips.forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        chips.forEach(function (c) { c.setAttribute('aria-pressed', String(c === chip)); });
+        filter(chip.dataset.lsFilter);
+      });
+    });
+
+    /* ------------------------------------------------------------- viewer */
+
+    var hash = function (slug) {
+      if (!history.replaceState) return;
+      history.replaceState(null, '', slug ? '#' + slug : location.pathname + location.search);
+    };
+
+    var preload = function (card) {
+      if (!card) return;
+      var img = new Image();
+      img.src = full(card);
+    };
+
+    var rail = function () {
+      var strip = $('[data-ls-rail]', box);
+      strip.innerHTML = '';
+      shown.forEach(function (card, i) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.dataset.lsGo = String(i);
+        b.setAttribute('aria-label', card.dataset.name);
+        b.innerHTML = '<img src="' + thumb(card) + '" alt="" loading="lazy" decoding="async">';
+        strip.appendChild(b);
+      });
+      mark();
+    };
+
+    var mark = function () {
+      $$('[data-ls-go]', box).forEach(function (b, i) {
+        var on = i === at;
+        b.setAttribute('aria-current', String(on));
+        if (on && b.scrollIntoView) {
+          b.scrollIntoView({ block: 'nearest', inline: 'center' });
+        }
+      });
+    };
+
+    var show = function (i) {
+      if (!shown.length) return;
+      at = (i + shown.length) % shown.length;
+      var card = shown[at];
+      var img = $('[data-ls-img]', box);
+      var dl = $('[data-ls-dl]', box);
+
+      img.src = full(card);
+      img.alt = $('img', card).getAttribute('alt');
+      $('[data-ls-name]', box).textContent = card.dataset.name;
+      var tier = card.dataset.tier === 'third'
+        ? t('ls.fThird', card.dataset.role)
+        : t('ls.fTrans', card.dataset.role);
+      $('[data-ls-meta]', box).textContent =
+        tier + '  ·  ' + (at + 1) + ' / ' + shown.length;
+      dl.href = full(card);
+      dl.setAttribute('download', 'nightmarero-loading-' + card.dataset.slug + '.jpg');
+
+      mark();
+      hash(card.dataset.slug);
+      preload(shown[(at + 1) % shown.length]);
+      preload(shown[(at - 1 + shown.length) % shown.length]);
+    };
+
+    var close = function () {
+      if (!box) return;
+      box.remove();
+      box = null;
+      at = -1;
+      document.body.classList.remove('no-scroll');
+      document.removeEventListener('keydown', onKey, true);
+      hash(null);
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    };
+
+    function onKey(e) {
+      if (!box) return;
+      if (e.key === 'Escape') { e.stopPropagation(); close(); }
+      else if (e.key === 'ArrowRight') { e.preventDefault(); show(at + 1); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); show(at - 1); }
+    }
+
+    var build = function () {
+      box = document.createElement('div');
+      box.className = 'ls-box';
+      box.setAttribute('role', 'dialog');
+      box.setAttribute('aria-modal', 'true');
+      box.setAttribute('aria-label', t('ls.viewer', 'Loading screen viewer'));
+      box.innerHTML =
+        '<div class="ls-box-top">' +
+          '<div class="ls-box-title">' +
+            '<strong data-ls-name></strong>' +
+            '<span data-ls-meta></span>' +
+          '</div>' +
+          '<div class="ls-box-tools">' +
+            '<a class="btn -primary -sm" data-ls-dl href="#" download>' +
+              '<svg aria-hidden="true"><use href="#i-download"></use></svg>' +
+              '<span>' + t('ls.getThis', 'Download') + '</span>' +
+            '</a>' +
+            '<button class="icon-btn" type="button" data-ls-close aria-label="' +
+              t('ls.close', 'Close') + '">' +
+              '<svg aria-hidden="true"><use href="#i-close"></use></svg>' +
+            '</button>' +
+          '</div>' +
+        '</div>' +
+        '<div class="ls-stage">' +
+          '<button class="ls-arrow -prev" type="button" data-ls-step="-1" aria-label="' +
+            t('ls.prev', 'Previous screen') + '">' +
+            '<svg aria-hidden="true"><use href="#i-arrow"></use></svg>' +
+          '</button>' +
+          '<img data-ls-img alt="" decoding="async">' +
+          '<button class="ls-arrow -next" type="button" data-ls-step="1" aria-label="' +
+            t('ls.next', 'Next screen') + '">' +
+            '<svg aria-hidden="true"><use href="#i-arrow"></use></svg>' +
+          '</button>' +
+        '</div>' +
+        '<div class="ls-rail" data-ls-rail></div>';
+
+      box.addEventListener('click', function (e) {
+        var step = e.target.closest('[data-ls-step]');
+        if (step) { show(at + Number(step.dataset.lsStep)); return; }
+
+        var go = e.target.closest('[data-ls-go]');
+        if (go) { show(Number(go.dataset.lsGo)); return; }
+
+        if (e.target.closest('[data-ls-close]')) { close(); return; }
+
+        /* clicking the empty space around the picture closes it */
+        if (e.target === box || e.target.classList.contains('ls-stage')) close();
+      });
+
+      document.body.appendChild(box);
+      document.body.classList.add('no-scroll');
+      document.addEventListener('keydown', onKey, true);
+      rail();
+    };
+
+    var open = function (card) {
+      var i = shown.indexOf(card);
+      if (i === -1) { filter('all'); chips.forEach(function (c) {
+        c.setAttribute('aria-pressed', String(c.dataset.lsFilter === 'all'));
+      }); i = shown.indexOf(card); }
+      if (i === -1) return;
+
+      lastFocus = document.activeElement;
+      if (!box) build();
+      show(i);
+      var x = $('[data-ls-close]', box);
+      if (x) x.focus();
+    };
+
+    grid.addEventListener('click', function (e) {
+      var link = e.target.closest('[data-ls-open]');
+      if (!link || e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+      e.preventDefault();
+      open(link.closest('.ls-card'));
+    });
+
+    /* cursor glow, one listener per card, pointer devices only */
+    if (matchMedia('(hover: hover)').matches) {
+      cards.forEach(function (card) {
+        var shot = $('.ls-shot', card);
+        shot.addEventListener('mousemove', function (e) {
+          var r = shot.getBoundingClientRect();
+          card.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100).toFixed(1) + '%');
+          card.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100).toFixed(1) + '%');
+        }, { passive: true });
+      });
+    }
+
+    /* grab the lot, one download at a time so the browser keeps up */
+    var all = $('#lsGetAll');
+    if (all) {
+      all.addEventListener('click', function () {
+        var label = $('span', all);
+        var was = label ? label.textContent : '';
+        if (label) label.textContent = t('ls.getting', 'Starting downloads...');
+        all.disabled = true;
+
+        cards.forEach(function (card, i) {
+          setTimeout(function () {
+            var a = document.createElement('a');
+            a.href = full(card);
+            a.download = 'nightmarero-loading-' + card.dataset.slug + '.jpg';
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            if (i === cards.length - 1) {
+              all.disabled = false;
+              if (label) label.textContent = was;
+            }
+          }, i * 450);
+        });
+      });
+    }
+
+    filter('all');
+
+    /* deep link, e.g. loading-screens.html#warlock. Also watched after load,
+       so pasting a link while already on the page opens the right one. */
+    var fromHash = function () {
+      var slug = location.hash.slice(1);
+      if (!slug) return;
+      var want = cards.filter(function (c) { return c.dataset.slug === slug; })[0];
+      if (want && (!box || shown[at] !== want)) open(want);
+    };
+
+    window.addEventListener('hashchange', fromHash);
+    fromHash();
+  })();
+
   /* -------------------------------------------------------------- 8. misc */
 
   var year = $('#year');

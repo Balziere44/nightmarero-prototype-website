@@ -5,8 +5,8 @@ Rewrites the nav and the drawer of the hand written pages.
 
     python tools/sync_nav.py
 
-index.html, database.html, quiz.html and download.html are edited by hand, so
-they carry their own copy of the header and the footer. The generated pages
+index.html, database.html, quiz.html, download.html and loading-screens.html
+are edited by hand, so they carry their own copy of the header and the footer. The generated pages
 get theirs from build_classes.header() and footer(). This script pastes both
 back into the four copies, so changing NEW_PAGES, DB_PAGES, the nav layout or
 a reference link only ever needs doing once.
@@ -29,6 +29,7 @@ PAGES = [
     ("database.html", "database.html"),
     ("quiz.html", "quiz.html"),
     ("download.html", "download.html"),
+    ("loading-screens.html", "loading-screens.html"),
 ]
 
 MAIN = re.compile(r'(<nav class="nav" aria-label="Main">\n).*?(\n    </nav>)', re.S)

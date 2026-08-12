@@ -56,6 +56,9 @@ PAGES = [
     ("Home", "", "index.html", "download client install play inicio home jogar"),
     ("Download the client", "How to get in", "download.html",
      "install patch launcher setup client exe baixar instalar cliente"),
+    ("Loading screens", "Class art, free to download", "loading-screens.html",
+     "loading screen wallpaper art download image jpg tela de carregamento "
+     "wallpaper arte baixar imagem"),
     ("Levelling route", "Where to grind at every level", "guide.html",
      "leveling level up grind route where to hunt xp exp new player upar level guia iniciante novato onde cacar"),
     ("Fields and dungeons by level", "The short list", "guide.html#where",

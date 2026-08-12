@@ -125,7 +125,13 @@
         </div>
       </div>
       <a href="https://wiki.nightmareofragnarok.com/" target="_blank" rel="noopener" data-i18n="nav.wiki">Wiki</a>
-      <a href="../download.html" data-i18n="nav.download">Download</a>
+      <div class="nav-drop">
+        <button class="nav-drop-btn" type="button" aria-expanded="false" aria-haspopup="true" data-i18n="nav.download">Download</button>
+        <div class="nav-drop-menu" role="menu">
+          <a href="../download.html" role="menuitem" data-i18n="nav.client">Game client</a>
+          <a href="../loading-screens.html" role="menuitem" data-i18n="nav.loadings">Loading screens</a>
+        </div>
+      </div>
     </nav>
     <div class="header-tools">
       <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch theme" title="Switch theme">
@@ -170,7 +176,9 @@
       <a class="-sub" href="../mvps.html" data-i18n="nav.mvps">MVPs and altars</a>
       <a class="-sub" href="../quests.html" data-i18n="nav.quests">Quests</a>
       <a href="https://wiki.nightmareofragnarok.com/" target="_blank" rel="noopener" data-i18n="nav.wiki">Wiki</a>
-      <a href="../download.html" data-i18n="nav.download">Download</a>
+      <span class="drawer-group" data-i18n="nav.download">Download</span>
+      <a class="-sub" href="../download.html" data-i18n="nav.client">Game client</a>
+      <a class="-sub" href="../loading-screens.html" data-i18n="nav.loadings">Loading screens</a>
       <a href="../index.html#start" data-i18n="nav.start">Get started</a>
       <a href="../index.html#faq" data-i18n="nav.faq">FAQ</a>
     </nav>
@@ -381,6 +389,7 @@
         <ul>
           <li><a href="https://nightmareofragnarok.com/?module=account&amp;action=create" target="_blank" rel="noopener" data-i18n="cta.register">Create account</a></li>
           <li><a href="../download.html" data-i18n="nav.download">Download</a></li>
+          <li><a href="../loading-screens.html" data-i18n="nav.loadings">Loading screens</a></li>
           <li><a href="../classes.html" data-i18n="nav.classes">Classes</a></li>
           <li><a href="../quiz.html" data-i18n="nav.quiz">Class test</a></li>
           <li><a href="../database.html" data-i18n="nav.database">Database</a></li>

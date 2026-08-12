@@ -252,9 +252,14 @@ DB_PAGES = [
     ("mvps.html", "nav.mvps", "MVPs and altars"),
     ("quests.html", "nav.quests", "Quests"),
 ]
+DL_PAGES = [
+    ("download.html", "nav.client", "Game client"),
+    ("loading-screens.html", "nav.loadings", "Loading screens"),
+]
 DROPS = [("nav.game", "The game", GAME_PAGES),
          ("nav.guide", "New players", NEW_PAGES),
-         ("nav.database", "Database", DB_PAGES)]
+         ("nav.database", "Database", DB_PAGES),
+         ("nav.download", "Download", DL_PAGES)]
 
 
 def nav_drop(prefix, active, key, label, pages):
@@ -281,11 +286,10 @@ def nav_desktop(prefix, active):
       <a href="{p}classes.html"{c_classes} data-i18n="nav.classes">Classes</a>
 {db}
       <a href="https://wiki.nightmareofragnarok.com/" target="_blank" rel="noopener" data-i18n="nav.wiki">Wiki</a>
-      <a href="{p}download.html"{c_dl} data-i18n="nav.download">Download</a>""".format(
+{dl}""".format(
         p=prefix, game=drops["nav.game"], new=drops["nav.guide"],
-        db=drops["nav.database"],
-        c_classes=' aria-current="page"' if active == "classes.html" else "",
-        c_dl=' aria-current="page"' if active == "download.html" else "")
+        db=drops["nav.database"], dl=drops["nav.download"],
+        c_classes=' aria-current="page"' if active == "classes.html" else "")
 
 
 def drawer_group(prefix, key, label, pages):
@@ -305,11 +309,11 @@ def nav_drawer(prefix):
       <a href="{p}classes.html" data-i18n="nav.classes">Classes</a>
 {db}
       <a href="https://wiki.nightmareofragnarok.com/" target="_blank" rel="noopener" data-i18n="nav.wiki">Wiki</a>
-      <a href="{p}download.html" data-i18n="nav.download">Download</a>
+{dl}
       <a href="{p}index.html#start" data-i18n="nav.start">Get started</a>
       <a href="{p}index.html#faq" data-i18n="nav.faq">FAQ</a>""".format(
         p=prefix, game=groups["nav.game"], new=groups["nav.guide"],
-        db=groups["nav.database"])
+        db=groups["nav.database"], dl=groups["nav.download"])
 
 
 def header(prefix, active):
@@ -378,6 +382,7 @@ def footer(prefix):
         <ul>
           <li><a href="{reg}" target="_blank" rel="noopener" data-i18n="cta.register">Create account</a></li>
           <li><a href="{p}download.html" data-i18n="nav.download">Download</a></li>
+          <li><a href="{p}loading-screens.html" data-i18n="nav.loadings">Loading screens</a></li>
           <li><a href="{p}classes.html" data-i18n="nav.classes">Classes</a></li>
           <li><a href="{p}quiz.html" data-i18n="nav.quiz">Class test</a></li>
           <li><a href="{p}database.html" data-i18n="nav.database">Database</a></li>

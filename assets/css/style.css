@@ -4148,6 +4148,333 @@ html[data-theme="dark"] .find-panel { background: color-mix(in srgb, #0e0c13 96%
 
 
 /* --------------------------------------------------------------------------
+   20q. Loading screens gallery
+   The grid is plain links to the full JPGs, so it still works with no
+   JavaScript. The viewer, the filters and the cursor glow are enhancements
+   layered on top of that.
+   -------------------------------------------------------------------------- */
+
+.ls-credit {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.5rem;
+  align-items: center;
+  margin-top: var(--gap-md);
+  padding: 0.85rem 1.1rem;
+  background: var(--bg-panel);
+  border: 1px solid var(--surface-line);
+  border-inline-start: 2px solid var(--accent);
+  border-radius: var(--radius-sm);
+  font-size: var(--step--1);
+  color: var(--text-muted);
+}
+.ls-credit b {
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.ls-credit span strong { color: var(--text); font-weight: 600; }
+
+.ls-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: var(--gap-md);
+}
+.ls-toolbar .ls-count {
+  margin-inline-start: auto;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.ls-grid {
+  display: grid;
+  gap: var(--gap-md);
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr));
+}
+
+.ls-card {
+  --mx: 50%;
+  --my: 50%;
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  background: var(--bg-panel);
+  border: 1px solid var(--surface-line);
+  border-radius: var(--radius);
+  transition: transform 0.35s var(--ease), border-color 0.3s var(--ease),
+              box-shadow 0.35s var(--ease), opacity 0.25s var(--ease);
+}
+.ls-card:hover,
+.ls-card:focus-within {
+  transform: translateY(-5px);
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  box-shadow: var(--shadow-glow);
+}
+.ls-card[hidden] { display: none; }
+
+.ls-shot {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--ink-100);
+}
+html[data-theme="light"] .ls-shot { background: rgba(20, 14, 18, 0.06); }
+
+.ls-shot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: scale 0.7s var(--ease), filter 0.4s var(--ease);
+}
+.ls-card:hover .ls-shot img,
+.ls-card:focus-within .ls-shot img { scale: 1.07; }
+
+/* cursor glow, fed by --mx / --my from the script */
+.ls-shot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  background:
+    radial-gradient(220px circle at var(--mx) var(--my),
+      color-mix(in srgb, var(--accent) 32%, transparent), transparent 70%);
+  mix-blend-mode: screen;
+  transition: opacity 0.3s var(--ease);
+  pointer-events: none;
+}
+.ls-card:hover .ls-shot::after { opacity: 1; }
+
+.ls-zoom {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  background: linear-gradient(to top,
+    color-mix(in srgb, var(--ink-000) 55%, transparent), transparent 60%);
+  transition: opacity 0.3s var(--ease);
+  pointer-events: none;
+}
+.ls-card:hover .ls-zoom,
+.ls-card:focus-within .ls-zoom { opacity: 1; }
+
+.ls-zoom i {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  scale: 0.75;
+  border-radius: 50%;
+  color: #fff;
+  background: color-mix(in srgb, var(--accent) 82%, transparent);
+  box-shadow: 0 10px 34px -8px var(--glow);
+  transition: scale 0.35s var(--ease);
+}
+.ls-card:hover .ls-zoom i,
+.ls-card:focus-within .ls-zoom i { scale: 1; }
+.ls-zoom svg { width: 22px; height: 22px; }
+
+.ls-tier {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  z-index: 2;
+  padding: 0.24rem 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  /* sits on the artwork, not on the page, so it stays light in both themes */
+  color: #f2eff5;
+  background: color-mix(in srgb, var(--ink-000) 62%, transparent);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 100px;
+  backdrop-filter: blur(6px);
+  pointer-events: none;
+}
+.ls-card.-third .ls-tier { color: var(--red-100); border-color: color-mix(in srgb, var(--accent) 55%, transparent); }
+
+.ls-card figcaption {
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 0.9rem 0.85rem;
+  border-top: 1px solid var(--surface-line);
+}
+.ls-card figcaption strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.ls-card figcaption em {
+  font-style: normal;
+  font-size: 0.72rem;
+  color: var(--text-dim);
+}
+.ls-card figcaption em a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.ls-card figcaption em a:hover { color: var(--accent-soft); }
+
+.ls-get {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.42rem 0.8rem;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: var(--bg-elevated);
+  border: 1px solid var(--surface-line);
+  border-radius: 100px;
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease),
+              background-color 0.2s var(--ease);
+}
+.ls-get svg { width: 15px; height: 15px; }
+.ls-get:hover {
+  color: var(--accent-ink);
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ---- viewer ---- */
+
+.ls-box {
+  position: fixed;
+  inset: 0;
+  z-index: 140;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  background: color-mix(in srgb, var(--ink-000) 90%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  animation: dbFade 0.2s var(--ease);
+}
+html[data-theme="light"] .ls-box { background: rgba(16, 10, 14, 0.88); }
+
+.ls-box-top {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem clamp(0.8rem, 3vw, 1.6rem);
+  color: #f2eff5;
+}
+.ls-box-title { min-width: 0; }
+.ls-box-title strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: var(--step-1);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: #fff;
+}
+.ls-box-title span {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(242, 239, 245, 0.55);
+}
+.ls-box-tools { display: flex; flex: none; gap: 0.5rem; align-items: center; }
+.ls-box-tools .icon-btn { color: #f2eff5; border-color: rgba(255, 255, 255, 0.18); }
+.ls-box-tools .icon-btn:hover { color: #fff; border-color: rgba(255, 255, 255, 0.4); }
+
+.ls-stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 0;
+  padding: 0 clamp(0.6rem, 6vw, 4.5rem);
+}
+.ls-stage img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 30px 90px -25px rgba(0, 0, 0, 0.9);
+  animation: lsPop 0.32s var(--ease);
+}
+@keyframes lsPop {
+  from { opacity: 0; scale: 0.97; }
+  to { opacity: 1; scale: 1; }
+}
+
+.ls-arrow {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  color: #fff;
+  background: color-mix(in srgb, var(--ink-000) 55%, transparent);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transition: background-color 0.2s var(--ease), border-color 0.2s var(--ease), scale 0.2s var(--ease);
+}
+.ls-arrow:hover { background: var(--accent); border-color: var(--accent); scale: 1.08; }
+.ls-arrow svg { width: 22px; height: 22px; }
+.ls-arrow.-prev { left: clamp(0.2rem, 1.5vw, 1rem); rotate: 180deg; }
+.ls-arrow.-next { right: clamp(0.2rem, 1.5vw, 1rem); }
+
+.ls-rail {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding: 0.9rem clamp(0.8rem, 3vw, 1.6rem) 1.1rem;
+  scrollbar-width: thin;
+}
+.ls-rail button {
+  flex: none;
+  width: 104px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--radius-sm);
+  opacity: 0.5;
+  transition: opacity 0.25s var(--ease), border-color 0.25s var(--ease), scale 0.25s var(--ease);
+}
+.ls-rail button img { width: 100%; height: 100%; object-fit: cover; }
+.ls-rail button:hover { opacity: 0.85; }
+.ls-rail button[aria-current="true"] {
+  opacity: 1;
+  border-color: var(--accent);
+  scale: 1.04;
+  box-shadow: 0 0 0 1px var(--accent), 0 8px 26px -10px var(--glow);
+}
+
+@media (max-width: 600px) {
+  .ls-rail button { width: 78px; }
+  .ls-card figcaption { flex-wrap: wrap; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ls-card, .ls-shot img, .ls-zoom i { transition: none; }
+  .ls-card:hover { transform: none; }
+  .ls-card:hover .ls-shot img { scale: 1; }
+  .ls-stage img { animation: none; }
+}
+
+/* --------------------------------------------------------------------------
    21. Reveal on scroll
    -------------------------------------------------------------------------- */
 
