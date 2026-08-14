@@ -313,8 +313,9 @@ window.NM_I18N_REGISTER('pt', {
   'mvp.thItem': 'Dropa',
   'mvp.thOpens': 'Abre',
   'mvp.relicEyebrow': 'Equipamento de relíquia',
-  'mvp.relicTitle': 'Para que servem os altares',
-  'mvp.relicLede': 'As peças de relíquia caem desses chefes e aceitam três opções de encanto cada. A planilha guarda essa parte como imagem, então foi copiada como está.',
+  'mvp.relicTitle': 'Equipamento de relíquia, e onde ele fica',
+  'mvp.relicLede': 'Cada peça fica em um mapa, e a planilha mostra ao lado os materiais que ela pede. Além disso, cada uma aceita três opções de encanto, liberadas um mapa por vez. Estas são as que já foram documentadas.',
+  'mvp.relicWhere': 'Fica em',
   'q.eyebrow': 'Spoilers',
   'q.title': 'As respostas, para quando você quiser',
   'q.lede': 'Metade da graça está em não saber. Várias dessas quests não têm NPC apontando nem entrada no log, e descobrir junto com os amigos é o ponto. Por isso nada abaixo abre até você mandar.',
@@ -343,6 +344,8 @@ window.NM_I18N_REGISTER('pt', {
   'mvp.relicLevel': 'Nível',
   'mvp.relicNote': 'Todos eles também estão na database de itens, na categoria Relic Gear, se você preferir buscar em vez de rolar.',
   'mvp.relicLink': 'Abrir a database',
+  'mvp.relicCostNote': 'A planilha não dá o nome desses materiais: mostra o ícone e a quantidade. Por isso a tira embaixo de cada peça é a da própria planilha, deixada como está em vez de chutada.',
+  'mvp.relicOptionsLink': 'Onde as opções de encanto são liberadas',
   'q.jump': 'Ir para',
 
   /* new player guide, drop rates, shadow gear, desert layers */

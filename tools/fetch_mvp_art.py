@@ -67,9 +67,11 @@ SKIP_TABS = ("quest-spare-1", "quest-spare-12", "quest-spare-14",
              # the spoiler quest tab duplicates pictures the per quest tabs
              # already carry, and only its text is used
              "spoiler-quest",
-             # relic gear was tooltip screenshots. It is transcribed into
-             # tools/data/relic-gear.json instead, so the pictures are not
-             # needed on the site
+             # relic gear is mostly tooltip screenshots, transcribed into
+             # tools/data/relic-gear.json instead. The two pictures that are
+             # worth keeping, the minimap and the cost strip, have to be tied
+             # to a named piece rather than to a cell, so fetch_relic_art.py
+             # pulls those on its own
              "relic-gears")
 
 

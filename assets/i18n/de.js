@@ -313,8 +313,9 @@ window.NM_I18N_REGISTER('de', {
   'mvp.thItem': 'Droppt',
   'mvp.thOpens': 'Öffnet',
   'mvp.relicEyebrow': 'Relikt-Ausrüstung',
-  'mvp.relicTitle': 'Wofür die Altare gut sind',
-  'mvp.relicLede': 'Reliktteile fallen bei diesen Bossen und nehmen je drei Verzauberungsoptionen. Die Tabelle hält diesen Teil als Screenshots fest, also steht er hier so, wie er ist.',
+  'mvp.relicTitle': 'Relikt-Ausrüstung, und wo sie liegt',
+  'mvp.relicLede': 'Jedes Teil liegt auf einer Karte, und die Tabelle stellt daneben, was es kostet. Dazu nimmt jedes drei Verzauberungsoptionen, die Karte für Karte freigeschaltet werden. Das sind die bisher erfassten.',
+  'mvp.relicWhere': 'Zu finden auf',
   'q.eyebrow': 'Spoiler',
   'q.title': 'Die Antworten, für den Fall der Fälle',
   'q.lede': 'Der halbe Reiz liegt im Nichtwissen. Mehrere dieser Quests haben weder einen NPC, der darauf zeigt, noch einen Logeintrag, und genau das gemeinsam herauszufinden ist der Punkt. Deshalb ist unten nichts offen, bis du es sagst.',
@@ -343,6 +344,8 @@ window.NM_I18N_REGISTER('de', {
   'mvp.relicLevel': 'Stufe',
   'mvp.relicNote': 'Alle stehen auch in der Item-Datenbank unter der Kategorie Relic Gear, falls du lieber suchst als scrollst.',
   'mvp.relicLink': 'Datenbank öffnen',
+  'mvp.relicCostNote': 'Die Tabelle nennt diese Materialien nie beim Namen, sie zeigt nur Symbol und Anzahl. Der Streifen unter jedem Teil stammt deshalb aus der Tabelle selbst und bleibt, wie er ist, statt geraten zu werden.',
+  'mvp.relicOptionsLink': 'Wo die Verzauberungsoptionen freigeschaltet werden',
   'q.jump': 'Springe zu',
 
   /* new player guide, drop rates, shadow gear, desert layers */

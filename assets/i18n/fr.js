@@ -313,8 +313,9 @@ window.NM_I18N_REGISTER('fr', {
   'mvp.thItem': 'Butin',
   'mvp.thOpens': 'Ouvre',
   'mvp.relicEyebrow': 'Équipement relique',
-  'mvp.relicTitle': 'À quoi servent les autels',
-  'mvp.relicLede': 'Les pièces reliques tombent de ces boss et acceptent trois options d\'enchantement chacune. Le tableur garde cette partie en captures, donc elle est reprise telle quelle.',
+  'mvp.relicTitle': 'L\'équipement relique, et où il se trouve',
+  'mvp.relicLede': 'Chaque pièce se trouve sur une carte, et le tableur montre à côté les matériaux qu\'elle demande. Chacune accepte en plus trois options d\'enchantement, débloquées une carte à la fois. Voici celles qui sont documentées pour l\'instant.',
+  'mvp.relicWhere': 'Se trouve sur',
   'q.eyebrow': 'Spoilers',
   'q.title': 'Les réponses, quand vous les voudrez',
   'q.lede': 'La moitié du plaisir tient au fait de ne pas savoir. Plusieurs de ces quêtes n\'ont ni PNJ qui les annonce ni entrée de journal, et les démêler entre amis est tout l\'intérêt. Rien n\'est donc ouvert ci-dessous tant que vous ne le demandez pas.',
@@ -343,6 +344,8 @@ window.NM_I18N_REGISTER('fr', {
   'mvp.relicLevel': 'Niveau',
   'mvp.relicNote': 'Tous figurent aussi dans la base d\'objets, catégorie Relic Gear, si vous préférez chercher plutôt que faire défiler.',
   'mvp.relicLink': 'Ouvrir la base',
+  'mvp.relicCostNote': 'Le tableur ne nomme jamais ces matériaux : il montre leur icône et un nombre. La bande sous chaque pièce est donc celle du tableur, laissée telle quelle plutôt que devinée.',
+  'mvp.relicOptionsLink': 'Où les options d\'enchantement se débloquent',
   'q.jump': 'Aller à',
 
   /* new player guide, drop rates, shadow gear, desert layers */

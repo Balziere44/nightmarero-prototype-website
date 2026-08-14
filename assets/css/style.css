@@ -2798,6 +2798,44 @@ html[data-theme="light"] .site-footer { background: color-mix(in srgb, var(--bg)
   border-top: 1px solid var(--surface-line);
 }
 
+/* where the piece is found: the map, its minimap, and the strip of icons
+   the sheet uses to show what it costs */
+.relic-where {
+  display: grid;
+  gap: 0.45rem;
+  padding-top: 0.55rem;
+  border-top: 1px solid var(--surface-line);
+}
+.relic-foot + .relic-where { border-top: 0; padding-top: 0; }
+
+.relic-where-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.relic-shots {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 0.4rem;
+}
+.relic-shots img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--surface-line);
+}
+/* the minimap is a game screenshot at a game's resolution, so let it stay
+   crisp instead of being smoothed on the way up */
+.relic-map { image-rendering: pixelated; }
+
 .mvp-table {
   width: 100%;
   border-collapse: collapse;

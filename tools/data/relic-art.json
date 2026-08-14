@@ -1,0 +1,162 @@
+{
+ "assassin-dagger-cost": [
+  147,
+  61
+ ],
+ "assassin-dagger-map": [
+  123,
+  125
+ ],
+ "black-forest-boots-cost": [
+  149,
+  61
+ ],
+ "black-forest-boots-map": [
+  128,
+  125
+ ],
+ "bloody-axe-cost": [
+  121,
+  62
+ ],
+ "bloody-axe-map": [
+  129,
+  127
+ ],
+ "book-of-tides-cost": [
+  151,
+  67
+ ],
+ "book-of-tides-map": [
+  110,
+  120
+ ],
+ "brocca-cost": [
+  95,
+  63
+ ],
+ "brocca-map": [
+  97,
+  125
+ ],
+ "cinquedea-cost": [
+  124,
+  60
+ ],
+ "cinquedea-map": [
+  131,
+  121
+ ],
+ "crossbow-cost": [
+  161,
+  61
+ ],
+ "crossbow-map": [
+  138,
+  129
+ ],
+ "desert-twilight-cost": [
+  151,
+  130
+ ],
+ "desert-twilight-map": [
+  123,
+  125
+ ],
+ "doom-slayer-cost": [
+  114,
+  59
+ ],
+ "doom-slayer-map": [
+  131,
+  130
+ ],
+ "dress-sword-cost": [
+  113,
+  62
+ ],
+ "dress-sword-map": [
+  128,
+  126
+ ],
+ "floral-microphone-cost": [
+  180,
+  127
+ ],
+ "floral-microphone-map": [
+  124,
+  126
+ ],
+ "focus-staff-cost": [
+  123,
+  62
+ ],
+ "focus-staff-map": [
+  134,
+  120
+ ],
+ "guardian-claymore-cost": [
+  155,
+  61
+ ],
+ "guardian-claymore-map": [
+  127,
+  125
+ ],
+ "jungle-boar-hide-cost": [
+  147,
+  62
+ ],
+ "jungle-boar-hide-map": [
+  128,
+  128
+ ],
+ "loki-s-nail-cost": [
+  112,
+  59
+ ],
+ "loki-s-nail-map": [
+  140,
+  139
+ ],
+ "novice-breastplate-cost": [
+  205,
+  59
+ ],
+ "novice-breastplate-map": [
+  110,
+  125
+ ],
+ "sandstorm-cost": [
+  151,
+  130
+ ],
+ "sandstorm-map": [
+  123,
+  125
+ ],
+ "sea-breeze-ukulele-cost": [
+  180,
+  127
+ ],
+ "sea-breeze-ukulele-map": [
+  124,
+  126
+ ],
+ "stardust-blade-cost": [
+  122,
+  60
+ ],
+ "stardust-blade-map": [
+  139,
+  134
+ ],
+ "void-s-burden-cost": [
+  131,
+  60
+ ],
+ "void-s-burden-map": [
+  124,
+  123
+ ]
+}

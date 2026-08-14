@@ -1,11 +1,17 @@
 {
- "_note": "Transcribed by hand from the item tooltips on the Relic Gears tab of the MVP sheet, which only exist there as screenshots. A few tooltips are cut off at the bottom in the source, so the flavour text can end mid sentence. The screenshots are deliberately not shipped with the site; re-check against the sheet if it is updated.",
+ "_note": "Transcribed by hand from the item tooltips on the Relic Gears tab of the MVP sheet, which only exist there as screenshots. A few tooltips are cut off at the bottom in the source, so the flavour text can end mid sentence. The tooltip screenshots are deliberately not shipped; re-check against the sheet if it is updated.",
+ "_maps": "map is the map the tab shows the piece on, and cell holds the row,col each picture is anchored to on that tab, which is how fetch_relic_art.py knows which minimap and which cost strip belong to which piece. The map names are printed labels on the tab: they are neither cell text nor drawing text, so no export can see them and they have to live here. Every one was checked against the client minimap textures, and prt_maze02 was read off the texture alone because the label for Loki's Nail falls on a page break in the print.",
  "_source": "https://docs.google.com/spreadsheets/d/1ojSow2JMglSDcvXii3Sppoa9Nx9mWAcVtC3c_OzApzk",
  "items": [
   {
    "name": "Assassin Dagger",
    "type": "Relic Dagger",
    "slot": "weapon",
+   "map": "moc_fild19",
+   "cell": {
+    "map": "0,0",
+    "cost": "6,0"
+   },
    "stat": "42/42",
    "mastery": [
     "Dagger mastery: Bleeding Damage +3%",
@@ -25,6 +31,11 @@
    "name": "Guardian Claymore",
    "type": "Relic Two-Handed Sword",
    "slot": "weapon",
+   "map": "moc_ruins",
+   "cell": {
+    "map": "0,3",
+    "cost": "6,2"
+   },
    "stat": "90/00",
    "mastery": [
     "Two-Handed Sword mastery: Crit +3"
@@ -42,6 +53,11 @@
    "name": "Brocca",
    "type": "Relic One-Handed Spear",
    "slot": "weapon",
+   "map": "umbala",
+   "cell": {
+    "map": "0,10",
+    "cost": "6,10"
+   },
    "stat": "65/00",
    "mastery": [
     "Spear mastery: Crit +3"
@@ -58,6 +74,11 @@
    "name": "Sea Breeze Ukulele",
    "type": "Relic Instrument",
    "slot": "weapon",
+   "map": "comodo",
+   "cell": {
+    "map": "0,6",
+    "cost": "6,5"
+   },
    "stat": "80/80",
    "mastery": [
     "Musical Mastery: SP Consumption -3%"
@@ -77,6 +98,11 @@
    "name": "Floral Microphone",
    "type": "Relic Whip",
    "slot": "weapon",
+   "map": "comodo",
+   "cell": {
+    "map": "0,6",
+    "cost": "6,5"
+   },
    "stat": "80/80",
    "mastery": [
     "Dancing Dexterity mastery: SP Consumption -3%"
@@ -96,6 +122,11 @@
    "name": "Focus Staff",
    "type": "Relic Staff",
    "slot": "weapon",
+   "map": "gef_dun00",
+   "cell": {
+    "map": "30,0",
+    "cost": "35,0"
+   },
    "stat": "10/40",
    "mastery": [
     "Magical Attunement mastery: Variable Cast Time -3%"
@@ -112,6 +143,11 @@
    "name": "Stardust Blade",
    "type": "Relic Sword",
    "slot": "weapon",
+   "map": "prt_sewb1",
+   "cell": {
+    "map": "29,2",
+    "cost": "36,3"
+   },
    "stat": "30/00",
    "mastery": [
     "Sword mastery: ASPD +1"
@@ -128,6 +164,11 @@
    "name": "Cinquedea",
    "type": "Relic Dagger",
    "slot": "weapon",
+   "map": "anthell01",
+   "cell": {
+    "map": "30,6",
+    "cost": "36,6"
+   },
    "stat": "26/26",
    "mastery": [
     "Dagger mastery: Flee +3",
@@ -145,6 +186,11 @@
    "name": "Book of Tides",
    "type": "Relic Book",
    "slot": "weapon",
+   "map": "izlu2dun",
+   "cell": {
+    "map": "30,9",
+    "cost": "36,9"
+   },
    "stat": "55/00",
    "mastery": [
     "Cosmic Insight mastery: Vit +0.5"
@@ -162,6 +208,11 @@
    "name": "Dress Sword",
    "type": "Relic One-Handed Sword",
    "slot": "weapon",
+   "map": "tur_dun01",
+   "cell": {
+    "map": "58,0",
+    "cost": "64,0"
+   },
    "stat": "60/00",
    "mastery": [
     "Sword mastery: Hard Defense +5"
@@ -178,6 +229,11 @@
    "name": "Bloody Axe",
    "type": "Relic Axe",
    "slot": "weapon",
+   "map": "alb2trea",
+   "cell": {
+    "map": "58,3",
+    "cost": "64,2"
+   },
    "stat": "45/00",
    "mastery": [
     "Axe mastery: Crit Rate +3"
@@ -194,6 +250,11 @@
    "name": "Doom Slayer",
    "type": "Relic Two-Handed Axe",
    "slot": "weapon",
+   "map": "gef_fild10",
+   "cell": {
+    "map": "57,5",
+    "cost": "64,5"
+   },
    "stat": "90/00",
    "mastery": [
     "Axe mastery: Crit Damage +3%"
@@ -210,6 +271,11 @@
    "name": "Crossbow",
    "type": "Relic Bow",
    "slot": "weapon",
+   "map": "pay_dun00",
+   "cell": {
+    "map": "58,9",
+    "cost": "64,8"
+   },
    "stat": "30/00",
    "mastery": [
     "Bow mastery: Ranged Damage +2%"
@@ -226,6 +292,11 @@
    "name": "Loki's Nail",
    "type": "Relic Katar",
    "slot": "weapon",
+   "map": "prt_maze02",
+   "cell": {
+    "map": "85,0",
+    "cost": "92,0"
+   },
    "stat": "75/00",
    "mastery": [
     "Katar mastery: Crit Damage +3%"
@@ -244,6 +315,11 @@
    "name": "Void's Burden",
    "type": "Relic Two-Handed Sword",
    "slot": "weapon",
+   "map": "nif_fild01",
+   "cell": {
+    "map": "111,3",
+    "cost": "117,2"
+   },
    "stat": "130/00",
    "mastery": [
     "Two-Handed Sword mastery: Crit +3"
@@ -260,6 +336,11 @@
    "name": "Desert Twilight",
    "type": "Relic Dagger",
    "slot": "weapon",
+   "map": "ve_fild01",
+   "cell": {
+    "map": "110,0",
+    "cost": "118,0"
+   },
    "stat": "58/00",
    "mastery": [
     "Dagger mastery: Flee +3"
@@ -278,6 +359,11 @@
    "name": "Sandstorm",
    "type": "Relic Dagger",
    "slot": "weapon",
+   "map": "ve_fild01",
+   "cell": {
+    "map": "110,0",
+    "cost": "118,0"
+   },
    "stat": "58/00",
    "mastery": [
     "Dagger mastery: Flee +3"
@@ -296,6 +382,11 @@
    "name": "Black Forest Boots",
    "type": "Relic Shoes",
    "slot": "shoes",
+   "map": "hu_fild02",
+   "cell": {
+    "map": "85,2",
+    "cost": "91,2"
+   },
    "stat": "20/05",
    "mastery": [],
    "effect": [
@@ -312,6 +403,11 @@
    "name": "Novice Breastplate",
    "type": "Relic Armor",
    "slot": "armor",
+   "map": "pay_fild11",
+   "cell": {
+    "map": "85,6",
+    "cost": "91,5"
+   },
    "stat": "20/00",
    "mastery": [],
    "effect": [
@@ -328,6 +424,11 @@
    "name": "Jungle Boar Hide",
    "type": "Relic Garment",
    "slot": "garment",
+   "map": "um_fild04",
+   "cell": {
+    "map": "85,9",
+    "cost": "91,8"
+   },
    "stat": "20/10",
    "mastery": [],
    "effect": [

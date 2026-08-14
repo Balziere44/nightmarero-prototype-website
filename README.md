@@ -31,6 +31,8 @@ static host and it works.
 │   └── img/
 │       ├── classes/         character art, .webp, two sizes each
 │       ├── loadings/        loading screens, full size + thumbs/
+│       ├── mvp/             sheet screenshots for the boss and quest pages
+│       ├── relic/           per relic piece: its minimap and its cost strip
 │       ├── bg/              hero and secondary backgrounds
 │       ├── hero-a/-b.webp   the two figures in the landing page hero
 │       ├── logo.webp/.png   logo
@@ -378,10 +380,45 @@ covers them: MVP cards under an `MVP Card` category, and relic gear under
 `Relic Gear`.
 
 Relic gear only exists in the sheet as tooltip screenshots. Those are
-transcribed into `tools/data/relic-gear.json`, and the screenshots are
+transcribed into `tools/data/relic-gear.json`, and the tooltips themselves are
 deliberately not shipped: the page renders the transcription instead, and
 `fetch_mvp_art.py` skips that tab. `build_database.py` reads the same file, so
 adding an entry there puts it on both the MVP page and in the database.
+
+## Where relic gear is found
+
+Every piece sits on the tab under the name of the map it is found on, next to
+a minimap and a strip of item icons showing what it costs. Those three things
+are the answer to "where do I get this", so they are on the page, and they
+come from three different places:
+
+```bash
+python tools/fetch_relic_art.py  # the minimap and the cost strip per piece
+python tools/build_mvps.py
+```
+
+- **The map names are printed labels.** They are not cell text and not
+  drawing text, so the CSV export is empty, the xlsx export has nothing, and
+  even Google's own PDF export of that tab comes out with no text in it at
+  all. They live in `relic-gear.json` under `map`, typed in by hand off the
+  printed sheet, and every one was checked against the client's minimap
+  textures before being written down. `prt_maze02` for Loki's Nail was read
+  off the texture alone, because its label falls on a page break in the print
+  and does not survive it.
+- **The pictures are anchored, not named.** `cell` in `relic-gear.json` holds
+  the `row,col` the minimap and the cost strip are pinned to, and
+  `fetch_relic_art.py` matches on that, so each piece gets
+  `assets/img/relic/<slug>-map.webp` and `<slug>-cost.webp` plus its size in
+  `tools/data/relic-art.json`. Where the sheet drew two pieces against one
+  screenshot, both slugs cite the same anchor and both get a copy. A piece
+  whose anchors are missing is reported and skipped rather than guessed at.
+- **The materials are not named anywhere.** The sheet shows an icon and a
+  number and nothing else, so the cost strip is shown as the sheet drew it and
+  the page says as much. Do not write material names into the JSON unless
+  something on the server says what they are.
+
+`build_database.py` also puts `Found on <map>` on each relic entry, so a
+search for a map name in the database turns up the pieces that come from it.
 
 ## Quests
 

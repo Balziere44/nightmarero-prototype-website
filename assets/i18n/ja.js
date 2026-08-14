@@ -313,8 +313,9 @@ window.NM_I18N_REGISTER('ja', {
   'mvp.thItem': 'ドロップ',
   'mvp.thOpens': '開く祭壇',
   'mvp.relicEyebrow': 'レリック装備',
-  'mvp.relicTitle': '祭壇を回す理由',
-  'mvp.relicLede': 'レリック装備はこれらのボスから出て、それぞれ3つのエンチャント枠を持ちます。この部分は元の資料が画像なので、そのまま掲載しています。',
+  'mvp.relicTitle': 'レリック装備と、その入手先',
+  'mvp.relicLede': '各装備は決まったマップで手に入り、シートにはその横に必要な素材が並んでいます。さらに1つにつきエンチャント枠が3つあり、マップごとに順に解放されます。以下は現在までに判明している分です。',
+  'mvp.relicWhere': '入手先',
   'q.eyebrow': 'ネタバレ',
   'q.title': '知りたくなったときの答え',
   'q.lede': '知らないことの面白さが半分です。ここにあるクエストのいくつかは、案内するNPCもクエストログもなく、仲間と手探りで解くことそのものが狙いです。ですから下の内容は、あなたが開くまで閉じたままにしてあります。',
@@ -343,6 +344,8 @@ window.NM_I18N_REGISTER('ja', {
   'mvp.relicLevel': 'レベル',
   'mvp.relicNote': 'これらはすべてアイテムデータベースのRelic Gearカテゴリにも入っています。スクロールより検索が早ければそちらへ。',
   'mvp.relicLink': 'データベースを開く',
+  'mvp.relicCostNote': 'シートは素材の名前を書かず、アイコンと個数だけを載せています。各装備の下の帯はそのシートのものをそのまま置いたもので、こちらで名前を推測はしていません。',
+  'mvp.relicOptionsLink': 'エンチャント枠が解放される場所',
   'q.jump': '移動先',
 
   /* new player guide, drop rates, shadow gear, desert layers */

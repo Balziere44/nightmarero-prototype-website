@@ -222,6 +222,10 @@ def parse_relics(path):
         effect = list(it.get("mastery", [])) + list(it.get("effect", []))
         if it.get("classes"):
             effect.append("Usable by %s" % it["classes"])
+        if it.get("map"):
+            # so searching the map name finds the piece, the same way a
+            # monster name finds what it drops
+            effect.append("Found on %s" % it["map"])
         items.append({
             "name": it["name"],
             "kind": "gear",

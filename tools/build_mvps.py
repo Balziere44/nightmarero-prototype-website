@@ -403,6 +403,35 @@ def champion_rows(champions, bosses):
     return "\n".join(rows)
 
 
+def relic_where(item, sizes):
+    """The map a piece is found on, its minimap, and the strip of icons the
+    sheet uses to show what it costs. The strip is shown rather than written
+    out because the sheet never names those materials: they are icons and a
+    number, and guessing at the names would put words on the page that are in
+    no source."""
+    map_name = item.get("map", "")
+    shots = []
+    for part in ("map", "cost"):
+        stem = "%s-%s" % (slugify(item["name"]), part)
+        size = sizes.get(stem)
+        if not size:
+            continue
+        shots.append('<img class="relic-%s" src="assets/img/relic/%s.webp" '
+                     'alt="" width="%d" height="%d" loading="lazy" '
+                     'decoding="async">' % (part, stem, size[0], size[1]))
+
+    if not map_name and not shots:
+        return ""
+
+    where = ""
+    if map_name:
+        where = ('<p class="relic-where-line">'
+                 '<span data-i18n="mvp.relicWhere">Found on</span> '
+                 '<span class="mvp-map">%s</span></p>' % esc(map_name))
+    art = ('<div class="relic-shots">%s</div>' % "".join(shots)) if shots else ""
+    return '\n          <div class="relic-where">%s%s</div>' % (where, art)
+
+
 def relic_section():
     """Relic gear, transcribed off the tooltip screenshots in the sheet. The
     same entries go into the item database, so this is the readable overview
@@ -412,6 +441,11 @@ def relic_section():
                                  encoding="utf-8"))
     except (IOError, ValueError):
         return ""
+    try:
+        sizes = json.load(io.open(os.path.join(SRC, "relic-art.json"),
+                                  encoding="utf-8"))
+    except (IOError, ValueError):
+        sizes = {}                       # fetch_relic_art.py has not been run
 
     cards = []
     for it in data.get("items", []):
@@ -443,10 +477,10 @@ def relic_section():
           </div>
           <div class="relic-badges">{badges}</div>
           <ul class="relic-lines">{bits}</ul>
-          {foot}
+          {foot}{where}
         </article>""".format(
             name=esc(it["name"]), type=esc(it.get("type", "")), badges=badges,
-            bits="".join(bits),
+            bits="".join(bits), where=relic_where(it, sizes),
             foot=('<p class="relic-foot">%s</p>' % ", ".join(foot)) if foot else ""))
 
     return """
@@ -454,13 +488,17 @@ def relic_section():
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow" data-i18n="mvp.relicEyebrow">Relic gear</p>
-        <h2 data-i18n="mvp.relicTitle">What the altars are for</h2>
-        <p class="lede" data-i18n="mvp.relicLede">Relic pieces come off these bosses and take three enchant options each, unlocked one map at a time. These {n} are the ones written up so far.</p>
+        <h2 data-i18n="mvp.relicTitle">Relic gear, and where it is found</h2>
+        <p class="lede" data-i18n="mvp.relicLede">Every piece is found on one map, and the sheet pairs it with the materials it takes. Each one holds three enchant options on top, unlocked one map at a time. These {n} are the ones written up so far.</p>
       </div>
       <div class="relic-grid">
 {cards}
       </div>
       <p class="note" style="margin-top:1.1rem">
+        <span data-i18n="mvp.relicCostNote">The sheet never names those materials. It shows their icons and a number, so the strip under each piece is the sheet's own, left as it is rather than guessed at.</span>
+        <a href="quests.html#q-relic-gear-options" style="color:var(--accent-soft);text-decoration:underline;text-underline-offset:3px" data-i18n="mvp.relicOptionsLink">Where the enchant options are unlocked</a>
+      </p>
+      <p class="note" style="margin-top:0.5rem">
         <span data-i18n="mvp.relicNote">Every one of these is in the item database too, under the Relic Gear category, if you would rather search than scroll.</span>
         <a href="database.html?item=Assassin+Dagger" style="color:var(--accent-soft);text-decoration:underline;text-underline-offset:3px" data-i18n="mvp.relicLink">Open the database</a>
       </p>

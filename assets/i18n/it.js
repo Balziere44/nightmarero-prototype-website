@@ -313,8 +313,9 @@ window.NM_I18N_REGISTER('it', {
   'mvp.thItem': 'Droppa',
   'mvp.thOpens': 'Apre',
   'mvp.relicEyebrow': 'Equipaggiamento reliquia',
-  'mvp.relicTitle': 'A cosa servono gli altari',
-  'mvp.relicLede': 'I pezzi reliquia cadono da questi boss e accettano tre opzioni di incanto ciascuno. Il foglio tiene questa parte come immagini, quindi è riportata così com\'è.',
+  'mvp.relicTitle': 'L\'equipaggiamento reliquia, e dove si trova',
+  'mvp.relicLede': 'Ogni pezzo si trova su una mappa, e il foglio gli affianca i materiali che chiede. Ognuno accetta poi tre opzioni di incanto, sbloccate una mappa alla volta. Questi sono quelli documentati finora.',
+  'mvp.relicWhere': 'Si trova su',
   'q.eyebrow': 'Spoiler',
   'q.title': 'Le risposte, per quando le vuoi',
   'q.lede': 'Metà del bello sta nel non sapere. Diverse di queste quest non hanno un NPC che le annuncia né una voce nel diario, e capirle con gli amici è il punto. Perciò qui sotto non si apre niente finché non lo dici tu.',
@@ -343,6 +344,8 @@ window.NM_I18N_REGISTER('it', {
   'mvp.relicLevel': 'Livello',
   'mvp.relicNote': 'Ci sono tutti anche nel database degli oggetti, nella categoria Relic Gear, se preferisci cercare invece di scorrere.',
   'mvp.relicLink': 'Apri il database',
+  'mvp.relicCostNote': 'Il foglio non dà mai il nome di quei materiali: mostra l\'icona e un numero. La striscia sotto ogni pezzo è quindi quella del foglio, lasciata com\'è invece di essere indovinata.',
+  'mvp.relicOptionsLink': 'Dove si sbloccano le opzioni di incanto',
   'q.jump': 'Vai a',
 
   /* new player guide, drop rates, shadow gear, desert layers */
