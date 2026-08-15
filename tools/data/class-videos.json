@@ -20,7 +20,8 @@
    {"id": "3qYAXlI5mpY", "title": "Sura vs Herald of Dusk, rematch", "by": "Matheus"}
   ],
   "taekwon": [
-   {"id": "UK2NMYAHJTE", "title": "Taekwon Ranker vs Death Witch", "by": "Fray"}
+   {"id": "UK2NMYAHJTE", "title": "Taekwon Ranker vs Death Witch", "by": "Fray"},
+   {"id": "GSDxR9ujK44", "title": "Taekwon Ranker showcase", "by": "Nepli"}
   ],
   "lord-knight": [
    {"id": "-dfCGvL_mUc", "title": "Lord Knight vs Gloom Under Night", "by": "Matheus"}
@@ -94,10 +95,24 @@
    {"id": "psbUrJ7lIKM", "title": "Soul Reaper in a challenge dungeon", "by": "Arthur L"}
   ],
   "soul-ascetic": [
-   {"id": "H_iRimrndv0", "title": "Soul Ascetic vs Valkyrie Randgris", "by": "Rex"}
+   {"id": "H_iRimrndv0", "title": "Soul Ascetic vs Valkyrie Randgris", "by": "Rex"},
+   {"id": "55sPvBtrZck", "title": "Soul Ascetic in Niflheim", "by": "Sae"}
   ],
   "monk": [
    {"id": "Kc_dhFLUIDA", "title": "Monk vs Baphomet", "by": "BetoLira"}
+  ],
+  "soul-linker": [
+   {"id": "MrUNRHz2sdc", "title": "Soul Linker in the closed beta", "by": "Hades"},
+   {"id": "_fe2nwig-6g", "title": "Soul Linker in the Magma Dungeon", "by": "Sae"}
+  ],
+  "mastersmith": [
+   {"id": "LB9KaHiRG7s", "title": "Mastersmith showcase", "by": "Sfyn"}
+  ],
+  "assassin": [
+   {"id": "SAF3Sqi5Og8", "title": "Assassin, katar build, at level 90", "by": "Durarara"}
+  ],
+  "assassin-cross": [
+   {"id": "tvH5WfNF2rQ", "title": "Assassin Cross, katar build, in the New World fields", "by": "Durarara"}
   ]
  }
 }

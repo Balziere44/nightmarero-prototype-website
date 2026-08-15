@@ -3,7 +3,7 @@
   "sheet": "locations",
   "row": 5,
   "col": 10,
-  "file": "assets/img/mvp/locations-image25.webp",
+  "file": "assets/img/mvp/locations-41d3382812.webp",
   "w": 123,
   "h": 121,
   "kind": "tile"
@@ -12,7 +12,7 @@
   "sheet": "locations",
   "row": 8,
   "col": 2,
-  "file": "assets/img/mvp/locations-image32.webp",
+  "file": "assets/img/mvp/locations-8467743c13.webp",
   "w": 576,
   "h": 58,
   "kind": "drops"
@@ -21,7 +21,7 @@
   "sheet": "locations",
   "row": 9,
   "col": 12,
-  "file": "assets/img/mvp/locations-image24.webp",
+  "file": "assets/img/mvp/locations-4309f4e315.webp",
   "w": 580,
   "h": 67,
   "kind": "drops"
@@ -30,7 +30,7 @@
   "sheet": "locations",
   "row": 16,
   "col": 0,
-  "file": "assets/img/mvp/locations-image1.webp",
+  "file": "assets/img/mvp/locations-2884bb5cbf.webp",
   "w": 130,
   "h": 124,
   "kind": "tile"
@@ -39,7 +39,7 @@
   "sheet": "locations",
   "row": 16,
   "col": 9,
-  "file": "assets/img/mvp/locations-image11.webp",
+  "file": "assets/img/mvp/locations-1638da6a94.webp",
   "w": 100,
   "h": 100,
   "kind": "tile"
@@ -48,7 +48,7 @@
   "sheet": "locations",
   "row": 18,
   "col": 12,
-  "file": "assets/img/mvp/locations-image3.webp",
+  "file": "assets/img/mvp/locations-484b132a39.webp",
   "w": 549,
   "h": 66,
   "kind": "drops"
@@ -57,7 +57,7 @@
   "sheet": "locations",
   "row": 19,
   "col": 1,
-  "file": "assets/img/mvp/locations-image30.webp",
+  "file": "assets/img/mvp/locations-8860e0a8bd.webp",
   "w": 522,
   "h": 65,
   "kind": "drops"
@@ -66,7 +66,7 @@
   "sheet": "locations",
   "row": 27,
   "col": 0,
-  "file": "assets/img/mvp/locations-image31.webp",
+  "file": "assets/img/mvp/locations-6836c5dc66.webp",
   "w": 131,
   "h": 107,
   "kind": "tile"
@@ -75,7 +75,7 @@
   "sheet": "locations",
   "row": 27,
   "col": 10,
-  "file": "assets/img/mvp/locations-image46.webp",
+  "file": "assets/img/mvp/locations-9f9a3f9b0c.webp",
   "w": 342,
   "h": 376,
   "kind": "wide"
@@ -84,7 +84,7 @@
   "sheet": "locations",
   "row": 31,
   "col": 1,
-  "file": "assets/img/mvp/locations-image29.webp",
+  "file": "assets/img/mvp/locations-f4d501a791.webp",
   "w": 128,
   "h": 124,
   "kind": "tile"
@@ -93,7 +93,7 @@
   "sheet": "locations",
   "row": 31,
   "col": 1,
-  "file": "assets/img/mvp/locations-image16.webp",
+  "file": "assets/img/mvp/locations-1626ec2152.webp",
   "w": 531,
   "h": 71,
   "kind": "drops"
@@ -102,7 +102,7 @@
   "sheet": "locations",
   "row": 31,
   "col": 12,
-  "file": "assets/img/mvp/locations-image26.webp",
+  "file": "assets/img/mvp/locations-2da9db226c.webp",
   "w": 528,
   "h": 91,
   "kind": "drops"
@@ -111,7 +111,7 @@
   "sheet": "locations",
   "row": 39,
   "col": 0,
-  "file": "assets/img/mvp/locations-image6.webp",
+  "file": "assets/img/mvp/locations-e8ff110c6d.webp",
   "w": 130,
   "h": 123,
   "kind": "tile"
@@ -120,7 +120,7 @@
   "sheet": "locations",
   "row": 40,
   "col": 10,
-  "file": "assets/img/mvp/locations-image28.webp",
+  "file": "assets/img/mvp/locations-f0131632f6.webp",
   "w": 96,
   "h": 95,
   "kind": "tile"
@@ -129,7 +129,7 @@
   "sheet": "locations",
   "row": 42,
   "col": 2,
-  "file": "assets/img/mvp/locations-image27.webp",
+  "file": "assets/img/mvp/locations-36b2673f39.webp",
   "w": 467,
   "h": 89,
   "kind": "drops"
@@ -138,7 +138,7 @@
   "sheet": "locations",
   "row": 44,
   "col": 11,
-  "file": "assets/img/mvp/locations-image64.webp",
+  "file": "assets/img/mvp/locations-026462bbb3.webp",
   "w": 521,
   "h": 98,
   "kind": "drops"
@@ -147,7 +147,7 @@
   "sheet": "locations",
   "row": 51,
   "col": 0,
-  "file": "assets/img/mvp/locations-image9.webp",
+  "file": "assets/img/mvp/locations-7e5a4c43eb.webp",
   "w": 109,
   "h": 114,
   "kind": "tile"
@@ -156,7 +156,7 @@
   "sheet": "locations",
   "row": 52,
   "col": 9,
-  "file": "assets/img/mvp/locations-image40.webp",
+  "file": "assets/img/mvp/locations-a8bb506303.webp",
   "w": 133,
   "h": 132,
   "kind": "tile"
@@ -165,7 +165,7 @@
   "sheet": "locations",
   "row": 56,
   "col": 1,
-  "file": "assets/img/mvp/locations-image12.webp",
+  "file": "assets/img/mvp/locations-8086542611.webp",
   "w": 559,
   "h": 97,
   "kind": "drops"
@@ -174,7 +174,7 @@
   "sheet": "locations",
   "row": 58,
   "col": 12,
-  "file": "assets/img/mvp/locations-image18.webp",
+  "file": "assets/img/mvp/locations-6c59da4198.webp",
   "w": 514,
   "h": 94,
   "kind": "drops"
@@ -183,7 +183,7 @@
   "sheet": "locations",
   "row": 64,
   "col": 0,
-  "file": "assets/img/mvp/locations-image19.webp",
+  "file": "assets/img/mvp/locations-975cf343e8.webp",
   "w": 135,
   "h": 134,
   "kind": "tile"
@@ -192,7 +192,7 @@
   "sheet": "locations",
   "row": 67,
   "col": 10,
-  "file": "assets/img/mvp/locations-image69.webp",
+  "file": "assets/img/mvp/locations-5ac5f68995.webp",
   "w": 130,
   "h": 132,
   "kind": "tile"
@@ -201,7 +201,7 @@
   "sheet": "locations",
   "row": 70,
   "col": 1,
-  "file": "assets/img/mvp/locations-image13.webp",
+  "file": "assets/img/mvp/locations-fcb34caa18.webp",
   "w": 540,
   "h": 88,
   "kind": "drops"
@@ -210,7 +210,7 @@
   "sheet": "locations",
   "row": 72,
   "col": 12,
-  "file": "assets/img/mvp/locations-image15.webp",
+  "file": "assets/img/mvp/locations-8627ac1e0a.webp",
   "w": 513,
   "h": 104,
   "kind": "drops"
@@ -219,7 +219,7 @@
   "sheet": "locations",
   "row": 79,
   "col": 0,
-  "file": "assets/img/mvp/locations-image8.webp",
+  "file": "assets/img/mvp/locations-15653c63c0.webp",
   "w": 128,
   "h": 129,
   "kind": "tile"
@@ -228,7 +228,7 @@
   "sheet": "locations",
   "row": 81,
   "col": 2,
-  "file": "assets/img/mvp/locations-image33.webp",
+  "file": "assets/img/mvp/locations-6bcce8ce31.webp",
   "w": 573,
   "h": 87,
   "kind": "drops"
@@ -237,7 +237,7 @@
   "sheet": "locations",
   "row": 81,
   "col": 9,
-  "file": "assets/img/mvp/locations-image36.webp",
+  "file": "assets/img/mvp/locations-397214aa78.webp",
   "w": 137,
   "h": 135,
   "kind": "tile"
@@ -246,7 +246,7 @@
   "sheet": "locations",
   "row": 85,
   "col": 11,
-  "file": "assets/img/mvp/locations-image20.webp",
+  "file": "assets/img/mvp/locations-c9627382cf.webp",
   "w": 579,
   "h": 97,
   "kind": "drops"
@@ -255,7 +255,7 @@
   "sheet": "locations",
   "row": 90,
   "col": 0,
-  "file": "assets/img/mvp/locations-image17.webp",
+  "file": "assets/img/mvp/locations-b36030fe3d.webp",
   "w": 129,
   "h": 127,
   "kind": "tile"
@@ -264,7 +264,7 @@
   "sheet": "locations",
   "row": 92,
   "col": 2,
-  "file": "assets/img/mvp/locations-image22.webp",
+  "file": "assets/img/mvp/locations-2ef6926cf4.webp",
   "w": 505,
   "h": 91,
   "kind": "drops"
@@ -273,7 +273,7 @@
   "sheet": "locations",
   "row": 94,
   "col": 10,
-  "file": "assets/img/mvp/locations-image21.webp",
+  "file": "assets/img/mvp/locations-63fd2d9c7f.webp",
   "w": 128,
   "h": 126,
   "kind": "tile"
@@ -282,7 +282,7 @@
   "sheet": "locations",
   "row": 97,
   "col": 12,
-  "file": "assets/img/mvp/locations-image49.webp",
+  "file": "assets/img/mvp/locations-0d070a2b6b.webp",
   "w": 482,
   "h": 91,
   "kind": "drops"
@@ -291,7 +291,7 @@
   "sheet": "locations",
   "row": 100,
   "col": 0,
-  "file": "assets/img/mvp/locations-image39.webp",
+  "file": "assets/img/mvp/locations-ee806405b5.webp",
   "w": 160,
   "h": 151,
   "kind": "tile"
@@ -300,7 +300,7 @@
   "sheet": "locations",
   "row": 103,
   "col": 2,
-  "file": "assets/img/mvp/locations-image23.webp",
+  "file": "assets/img/mvp/locations-a562aedba7.webp",
   "w": 565,
   "h": 89,
   "kind": "drops"
@@ -309,7 +309,7 @@
   "sheet": "locations",
   "row": 105,
   "col": 10,
-  "file": "assets/img/mvp/locations-image53.webp",
+  "file": "assets/img/mvp/locations-18717dbf0f.webp",
   "w": 161,
   "h": 142,
   "kind": "tile"
@@ -318,7 +318,7 @@
   "sheet": "locations",
   "row": 108,
   "col": 12,
-  "file": "assets/img/mvp/locations-image34.webp",
+  "file": "assets/img/mvp/locations-8220f2fa67.webp",
   "w": 521,
   "h": 91,
   "kind": "drops"
@@ -327,7 +327,7 @@
   "sheet": "locations",
   "row": 108,
   "col": 12,
-  "file": "assets/img/mvp/locations-image34.webp",
+  "file": "assets/img/mvp/locations-8220f2fa67.webp",
   "w": 521,
   "h": 91,
   "kind": "drops"
@@ -336,7 +336,7 @@
   "sheet": "locations",
   "row": 110,
   "col": 0,
-  "file": "assets/img/mvp/locations-image35.webp",
+  "file": "assets/img/mvp/locations-b5fca1ccea.webp",
   "w": 125,
   "h": 126,
   "kind": "tile"
@@ -345,7 +345,7 @@
   "sheet": "locations",
   "row": 113,
   "col": 2,
-  "file": "assets/img/mvp/locations-image38.webp",
+  "file": "assets/img/mvp/locations-3ff67d5434.webp",
   "w": 578,
   "h": 102,
   "kind": "drops"
@@ -354,7 +354,7 @@
   "sheet": "locations",
   "row": 117,
   "col": 10,
-  "file": "assets/img/mvp/locations-image37.webp",
+  "file": "assets/img/mvp/locations-148fa86d72.webp",
   "w": 131,
   "h": 131,
   "kind": "tile"
@@ -363,7 +363,7 @@
   "sheet": "locations",
   "row": 120,
   "col": 12,
-  "file": "assets/img/mvp/locations-image80.webp",
+  "file": "assets/img/mvp/locations-a1f36b4d3c.webp",
   "w": 581,
   "h": 109,
   "kind": "drops"
@@ -372,7 +372,7 @@
   "sheet": "locations",
   "row": 123,
   "col": 0,
-  "file": "assets/img/mvp/locations-image47.webp",
+  "file": "assets/img/mvp/locations-0cc9ab3b99.webp",
   "w": 129,
   "h": 129,
   "kind": "tile"
@@ -381,7 +381,7 @@
   "sheet": "locations",
   "row": 126,
   "col": 2,
-  "file": "assets/img/mvp/locations-image42.webp",
+  "file": "assets/img/mvp/locations-7b2d5668a8.webp",
   "w": 461,
   "h": 90,
   "kind": "drops"
@@ -390,7 +390,7 @@
   "sheet": "locations",
   "row": 129,
   "col": 10,
-  "file": "assets/img/mvp/locations-image57.webp",
+  "file": "assets/img/mvp/locations-0693bebd8c.webp",
   "w": 129,
   "h": 128,
   "kind": "tile"
@@ -399,7 +399,7 @@
   "sheet": "locations",
   "row": 131,
   "col": 12,
-  "file": "assets/img/mvp/locations-image44.webp",
+  "file": "assets/img/mvp/locations-df0d711b60.webp",
   "w": 567,
   "h": 87,
   "kind": "drops"
@@ -408,7 +408,7 @@
   "sheet": "locations",
   "row": 135,
   "col": 0,
-  "file": "assets/img/mvp/locations-image45.webp",
+  "file": "assets/img/mvp/locations-de8bf260f5.webp",
   "w": 132,
   "h": 127,
   "kind": "tile"
@@ -417,7 +417,7 @@
   "sheet": "locations",
   "row": 137,
   "col": 2,
-  "file": "assets/img/mvp/locations-image43.webp",
+  "file": "assets/img/mvp/locations-db8cd7b4d9.webp",
   "w": 584,
   "h": 116,
   "kind": "drops"
@@ -426,7 +426,7 @@
   "sheet": "locations",
   "row": 140,
   "col": 10,
-  "file": "assets/img/mvp/locations-image52.webp",
+  "file": "assets/img/mvp/locations-1c08317322.webp",
   "w": 129,
   "h": 126,
   "kind": "tile"
@@ -435,7 +435,7 @@
   "sheet": "locations",
   "row": 144,
   "col": 12,
-  "file": "assets/img/mvp/locations-image50.webp",
+  "file": "assets/img/mvp/locations-cf0e748f3b.webp",
   "w": 502,
   "h": 89,
   "kind": "drops"
@@ -444,7 +444,7 @@
   "sheet": "locations",
   "row": 147,
   "col": 0,
-  "file": "assets/img/mvp/locations-image56.webp",
+  "file": "assets/img/mvp/locations-5d5ea044f3.webp",
   "w": 131,
   "h": 127,
   "kind": "tile"
@@ -453,7 +453,7 @@
   "sheet": "locations",
   "row": 151,
   "col": 2,
-  "file": "assets/img/mvp/locations-image51.webp",
+  "file": "assets/img/mvp/locations-4f335fb96d.webp",
   "w": 513,
   "h": 89,
   "kind": "drops"
@@ -462,7 +462,7 @@
   "sheet": "locations",
   "row": 153,
   "col": 10,
-  "file": "assets/img/mvp/locations-image55.webp",
+  "file": "assets/img/mvp/locations-07e4555673.webp",
   "w": 123,
   "h": 135,
   "kind": "tile"
@@ -471,7 +471,7 @@
   "sheet": "locations",
   "row": 155,
   "col": 12,
-  "file": "assets/img/mvp/locations-image58.webp",
+  "file": "assets/img/mvp/locations-704bb3ecad.webp",
   "w": 516,
   "h": 90,
   "kind": "drops"
@@ -480,7 +480,7 @@
   "sheet": "locations",
   "row": 160,
   "col": 0,
-  "file": "assets/img/mvp/locations-image63.webp",
+  "file": "assets/img/mvp/locations-89e37b37e6.webp",
   "w": 124,
   "h": 118,
   "kind": "tile"
@@ -489,7 +489,7 @@
   "sheet": "locations",
   "row": 162,
   "col": 2,
-  "file": "assets/img/mvp/locations-image48.webp",
+  "file": "assets/img/mvp/locations-55155fe32c.webp",
   "w": 538,
   "h": 90,
   "kind": "drops"
@@ -498,7 +498,7 @@
   "sheet": "locations",
   "row": 164,
   "col": 10,
-  "file": "assets/img/mvp/locations-image72.webp",
+  "file": "assets/img/mvp/locations-2341a315d5.webp",
   "w": 132,
   "h": 112,
   "kind": "tile"
@@ -507,7 +507,7 @@
   "sheet": "locations",
   "row": 166,
   "col": 12,
-  "file": "assets/img/mvp/locations-image60.webp",
+  "file": "assets/img/mvp/locations-33484a11b0.webp",
   "w": 495,
   "h": 86,
   "kind": "drops"
@@ -516,7 +516,7 @@
   "sheet": "locations",
   "row": 172,
   "col": 0,
-  "file": "assets/img/mvp/locations-image59.webp",
+  "file": "assets/img/mvp/locations-5142622612.webp",
   "w": 126,
   "h": 132,
   "kind": "tile"
@@ -525,7 +525,7 @@
   "sheet": "locations",
   "row": 174,
   "col": 1,
-  "file": "assets/img/mvp/locations-image61.webp",
+  "file": "assets/img/mvp/locations-a669f51eac.webp",
   "w": 581,
   "h": 101,
   "kind": "drops"
@@ -534,7 +534,7 @@
   "sheet": "locations",
   "row": 177,
   "col": 10,
-  "file": "assets/img/mvp/locations-image54.webp",
+  "file": "assets/img/mvp/locations-acb6ab5ba1.webp",
   "w": 192,
   "h": 193,
   "kind": "tile"
@@ -543,7 +543,7 @@
   "sheet": "locations",
   "row": 181,
   "col": 12,
-  "file": "assets/img/mvp/locations-image62.webp",
+  "file": "assets/img/mvp/locations-6e7efc3718.webp",
   "w": 529,
   "h": 91,
   "kind": "drops"
@@ -552,7 +552,7 @@
   "sheet": "locations",
   "row": 184,
   "col": 0,
-  "file": "assets/img/mvp/locations-image66.webp",
+  "file": "assets/img/mvp/locations-a9b667b8cf.webp",
   "w": 113,
   "h": 112,
   "kind": "tile"
@@ -561,7 +561,7 @@
   "sheet": "locations",
   "row": 196,
   "col": 0,
-  "file": "assets/img/mvp/locations-image67.webp",
+  "file": "assets/img/mvp/locations-ea3ffe4ea7.webp",
   "w": 126,
   "h": 123,
   "kind": "tile"
@@ -570,7 +570,7 @@
   "sheet": "locations",
   "row": 196,
   "col": 10,
-  "file": "assets/img/mvp/locations-image145.webp",
+  "file": "assets/img/mvp/locations-d1f697d607.webp",
   "w": 125,
   "h": 123,
   "kind": "tile"
@@ -579,7 +579,7 @@
   "sheet": "locations",
   "row": 208,
   "col": 0,
-  "file": "assets/img/mvp/locations-image92.webp",
+  "file": "assets/img/mvp/locations-895a7cdd5c.webp",
   "w": 125,
   "h": 125,
   "kind": "tile"
@@ -588,7 +588,7 @@
   "sheet": "locations",
   "row": 208,
   "col": 10,
-  "file": "assets/img/mvp/locations-image84.webp",
+  "file": "assets/img/mvp/locations-cea98fb108.webp",
   "w": 126,
   "h": 128,
   "kind": "tile"
@@ -597,7 +597,7 @@
   "sheet": "locations",
   "row": 211,
   "col": 12,
-  "file": "assets/img/mvp/locations-image81.webp",
+  "file": "assets/img/mvp/locations-d6fbda141a.webp",
   "w": 353,
   "h": 137,
   "kind": "drops"
@@ -606,7 +606,7 @@
   "sheet": "locations",
   "row": 214,
   "col": 0,
-  "file": "assets/img/mvp/locations-image68.webp",
+  "file": "assets/img/mvp/locations-5858664616.webp",
   "w": 125,
   "h": 123,
   "kind": "tile"
@@ -615,7 +615,7 @@
   "sheet": "locations",
   "row": 224,
   "col": 10,
-  "file": "assets/img/mvp/locations-image91.webp",
+  "file": "assets/img/mvp/locations-ae24403894.webp",
   "w": 127,
   "h": 126,
   "kind": "tile"
@@ -624,7 +624,7 @@
   "sheet": "locations",
   "row": 225,
   "col": 0,
-  "file": "assets/img/mvp/locations-image83.webp",
+  "file": "assets/img/mvp/locations-81274db626.webp",
   "w": 125,
   "h": 122,
   "kind": "tile"
@@ -633,7 +633,7 @@
   "sheet": "locations",
   "row": 237,
   "col": 0,
-  "file": "assets/img/mvp/locations-image94.webp",
+  "file": "assets/img/mvp/locations-682f97026a.webp",
   "w": 127,
   "h": 126,
   "kind": "tile"
@@ -642,7 +642,7 @@
   "sheet": "locations",
   "row": 237,
   "col": 10,
-  "file": "assets/img/mvp/locations-image96.webp",
+  "file": "assets/img/mvp/locations-42dd4f26d5.webp",
   "w": 127,
   "h": 124,
   "kind": "tile"
@@ -651,7 +651,7 @@
   "sheet": "locations",
   "row": 249,
   "col": 0,
-  "file": "assets/img/mvp/locations-image99.webp",
+  "file": "assets/img/mvp/locations-2ed1761554.webp",
   "w": 130,
   "h": 114,
   "kind": "tile"
@@ -660,7 +660,7 @@
   "sheet": "locations",
   "row": 261,
   "col": 0,
-  "file": "assets/img/mvp/locations-image106.webp",
+  "file": "assets/img/mvp/locations-42ed3993a4.webp",
   "w": 124,
   "h": 124,
   "kind": "tile"
@@ -669,7 +669,7 @@
   "sheet": "locations",
   "row": 261,
   "col": 10,
-  "file": "assets/img/mvp/locations-image105.webp",
+  "file": "assets/img/mvp/locations-587dfada94.webp",
   "w": 128,
   "h": 126,
   "kind": "tile"
@@ -678,7 +678,7 @@
   "sheet": "nightmare",
   "row": 2,
   "col": 0,
-  "file": "assets/img/mvp/nightmare-image4.webp",
+  "file": "assets/img/mvp/nightmare-821828ba01.webp",
   "w": 126,
   "h": 91,
   "kind": "tile"
@@ -687,7 +687,7 @@
   "sheet": "nightmare",
   "row": 2,
   "col": 1,
-  "file": "assets/img/mvp/nightmare-image14.webp",
+  "file": "assets/img/mvp/nightmare-588828573a.webp",
   "w": 129,
   "h": 125,
   "kind": "tile"
@@ -696,7 +696,7 @@
   "sheet": "nightmare",
   "row": 15,
   "col": 0,
-  "file": "assets/img/mvp/nightmare-image5.webp",
+  "file": "assets/img/mvp/nightmare-7edaf4910c.webp",
   "w": 122,
   "h": 121,
   "kind": "tile"
@@ -705,7 +705,7 @@
   "sheet": "nightmare",
   "row": 15,
   "col": 1,
-  "file": "assets/img/mvp/nightmare-image2.webp",
+  "file": "assets/img/mvp/nightmare-ffa54b02a8.webp",
   "w": 128,
   "h": 125,
   "kind": "tile"
@@ -714,7 +714,7 @@
   "sheet": "nightmare",
   "row": 25,
   "col": 0,
-  "file": "assets/img/mvp/nightmare-image10.webp",
+  "file": "assets/img/mvp/nightmare-38d14a3955.webp",
   "w": 128,
   "h": 126,
   "kind": "tile"
@@ -723,8 +723,98 @@
   "sheet": "nightmare",
   "row": 25,
   "col": 1,
-  "file": "assets/img/mvp/nightmare-image7.webp",
+  "file": "assets/img/mvp/nightmare-4849f173a6.webp",
   "w": 130,
+  "h": 128,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-abbey-sealed-chambers",
+  "row": 0,
+  "col": 0,
+  "file": "assets/img/mvp/quest-abbey-sealed-chambers-6bd6f28e98.webp",
+  "w": 492,
+  "h": 373,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-abbey-sealed-chambers",
+  "row": 0,
+  "col": 3,
+  "file": "assets/img/mvp/quest-abbey-sealed-chambers-d3924c9917.webp",
+  "w": 131,
+  "h": 126,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-abbey-sealed-chambers",
+  "row": 17,
+  "col": 0,
+  "file": "assets/img/mvp/quest-abbey-sealed-chambers-aa2b5f9dfb.webp",
+  "w": 516,
+  "h": 367,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-abbey-sealed-chambers",
+  "row": 17,
+  "col": 3,
+  "file": "assets/img/mvp/quest-abbey-sealed-chambers-8c4ea0f89c.webp",
+  "w": 128,
+  "h": 133,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-abbey-sealed-chambers",
+  "row": 34,
+  "col": 0,
+  "file": "assets/img/mvp/quest-abbey-sealed-chambers-deeed2f2a9.webp",
+  "w": 497,
+  "h": 339,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-abbey-sealed-chambers",
+  "row": 34,
+  "col": 3,
+  "file": "assets/img/mvp/quest-abbey-sealed-chambers-acf5b57be8.webp",
+  "w": 130,
+  "h": 128,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-abbey-sealed-chambers",
+  "row": 50,
+  "col": 0,
+  "file": "assets/img/mvp/quest-abbey-sealed-chambers-064e314d60.webp",
+  "w": 487,
+  "h": 316,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-abbey-sealed-chambers",
+  "row": 59,
+  "col": 3,
+  "file": "assets/img/mvp/quest-abbey-sealed-chambers-6e2b38066d.webp",
+  "w": 129,
+  "h": 129,
+  "kind": "tile"
+ },
+ {
+  "sheet": "quest-abbey-sealed-chambers",
+  "row": 65,
+  "col": 0,
+  "file": "assets/img/mvp/quest-abbey-sealed-chambers-e2375d24a7.webp",
+  "w": 527,
+  "h": 367,
+  "kind": "wide"
+ },
+ {
+  "sheet": "quest-abbey-sealed-chambers",
+  "row": 77,
+  "col": 3,
+  "file": "assets/img/mvp/quest-abbey-sealed-chambers-aeee3af4b7.webp",
+  "w": 129,
   "h": 128,
   "kind": "tile"
  },
@@ -732,7 +822,7 @@
   "sheet": "quest-amatsu",
   "row": 0,
   "col": 3,
-  "file": "assets/img/mvp/quest-amatsu-image19.webp",
+  "file": "assets/img/mvp/quest-amatsu-5b2a1602b8.webp",
   "w": 128,
   "h": 123,
   "kind": "tile"
@@ -741,7 +831,7 @@
   "sheet": "quest-amatsu",
   "row": 0,
   "col": 5,
-  "file": "assets/img/mvp/quest-amatsu-image2.webp",
+  "file": "assets/img/mvp/quest-amatsu-ae922e4b1b.webp",
   "w": 778,
   "h": 531,
   "kind": "wide"
@@ -750,7 +840,7 @@
   "sheet": "quest-amatsu",
   "row": 1,
   "col": 0,
-  "file": "assets/img/mvp/quest-amatsu-image98.webp",
+  "file": "assets/img/mvp/quest-amatsu-2720c8b93a.webp",
   "w": 583,
   "h": 536,
   "kind": "wide"
@@ -759,7 +849,7 @@
   "sheet": "quest-amatsu",
   "row": 25,
   "col": 3,
-  "file": "assets/img/mvp/quest-amatsu-image6.webp",
+  "file": "assets/img/mvp/quest-amatsu-3ce9cc32e3.webp",
   "w": 124,
   "h": 125,
   "kind": "tile"
@@ -768,7 +858,7 @@
   "sheet": "quest-amatsu",
   "row": 25,
   "col": 5,
-  "file": "assets/img/mvp/quest-amatsu-image40.webp",
+  "file": "assets/img/mvp/quest-amatsu-6fcb2a1e76.webp",
   "w": 276,
   "h": 176,
   "kind": "wide"
@@ -777,7 +867,7 @@
   "sheet": "quest-amatsu",
   "row": 26,
   "col": 0,
-  "file": "assets/img/mvp/quest-amatsu-image10.webp",
+  "file": "assets/img/mvp/quest-amatsu-24c4652012.webp",
   "w": 767,
   "h": 588,
   "kind": "wide"
@@ -786,7 +876,7 @@
   "sheet": "quest-amatsu",
   "row": 34,
   "col": 5,
-  "file": "assets/img/mvp/quest-amatsu-image54.webp",
+  "file": "assets/img/mvp/quest-amatsu-84da397627.webp",
   "w": 275,
   "h": 117,
   "kind": "wide"
@@ -795,7 +885,7 @@
   "sheet": "quest-black-ops",
   "row": 0,
   "col": 0,
-  "file": "assets/img/mvp/quest-black-ops-image103.webp",
+  "file": "assets/img/mvp/quest-black-ops-b9c11aca84.webp",
   "w": 721,
   "h": 621,
   "kind": "wide"
@@ -804,7 +894,7 @@
   "sheet": "quest-black-ops",
   "row": 0,
   "col": 3,
-  "file": "assets/img/mvp/quest-black-ops-image168.webp",
+  "file": "assets/img/mvp/quest-black-ops-6f4923f1d7.webp",
   "w": 125,
   "h": 123,
   "kind": "tile"
@@ -813,7 +903,7 @@
   "sheet": "quest-black-ops",
   "row": 2,
   "col": 5,
-  "file": "assets/img/mvp/quest-black-ops-image80.webp",
+  "file": "assets/img/mvp/quest-black-ops-74baef3c0d.webp",
   "w": 272,
   "h": 275,
   "kind": "wide"
@@ -822,7 +912,7 @@
   "sheet": "quest-black-ops",
   "row": 2,
   "col": 8,
-  "file": "assets/img/mvp/quest-black-ops-image91.webp",
+  "file": "assets/img/mvp/quest-black-ops-c86a33ea79.webp",
   "w": 274,
   "h": 277,
   "kind": "wide"
@@ -831,7 +921,7 @@
   "sheet": "quest-black-ops",
   "row": 3,
   "col": 11,
-  "file": "assets/img/mvp/quest-black-ops-image77.webp",
+  "file": "assets/img/mvp/quest-black-ops-80395188fd.webp",
   "w": 273,
   "h": 273,
   "kind": "wide"
@@ -840,7 +930,7 @@
   "sheet": "quest-black-ops",
   "row": 22,
   "col": 5,
-  "file": "assets/img/mvp/quest-black-ops-image110.webp",
+  "file": "assets/img/mvp/quest-black-ops-1b5f828557.webp",
   "w": 672,
   "h": 458,
   "kind": "wide"
@@ -849,7 +939,7 @@
   "sheet": "quest-black-ops",
   "row": 22,
   "col": 10,
-  "file": "assets/img/mvp/quest-black-ops-image73.webp",
+  "file": "assets/img/mvp/quest-black-ops-4dc4824b93.webp",
   "w": 125,
   "h": 124,
   "kind": "tile"
@@ -858,7 +948,7 @@
   "sheet": "quest-black-ops",
   "row": 23,
   "col": 0,
-  "file": "assets/img/mvp/quest-black-ops-image58.webp",
+  "file": "assets/img/mvp/quest-black-ops-023bc6b195.webp",
   "w": 748,
   "h": 609,
   "kind": "wide"
@@ -867,7 +957,7 @@
   "sheet": "quest-black-ops",
   "row": 23,
   "col": 3,
-  "file": "assets/img/mvp/quest-black-ops-image47.webp",
+  "file": "assets/img/mvp/quest-black-ops-3ec8eb9e3b.webp",
   "w": 124,
   "h": 124,
   "kind": "tile"
@@ -876,7 +966,7 @@
   "sheet": "quest-black-ops",
   "row": 43,
   "col": 0,
-  "file": "assets/img/mvp/quest-black-ops-image134.webp",
+  "file": "assets/img/mvp/quest-black-ops-939b3e2435.webp",
   "w": 900,
   "h": 606,
   "kind": "wide"
@@ -885,7 +975,7 @@
   "sheet": "quest-black-ops",
   "row": 43,
   "col": 3,
-  "file": "assets/img/mvp/quest-black-ops-image101.webp",
+  "file": "assets/img/mvp/quest-black-ops-ecf27f894f.webp",
   "w": 123,
   "h": 125,
   "kind": "tile"
@@ -894,7 +984,7 @@
   "sheet": "quest-black-ops",
   "row": 43,
   "col": 5,
-  "file": "assets/img/mvp/quest-black-ops-image88.webp",
+  "file": "assets/img/mvp/quest-black-ops-22d274334a.webp",
   "w": 727,
   "h": 629,
   "kind": "wide"
@@ -903,7 +993,7 @@
   "sheet": "quest-black-ops",
   "row": 43,
   "col": 10,
-  "file": "assets/img/mvp/quest-black-ops-image45.webp",
+  "file": "assets/img/mvp/quest-black-ops-e2347e93ae.webp",
   "w": 123,
   "h": 118,
   "kind": "tile"
@@ -912,7 +1002,7 @@
   "sheet": "quest-black-ops",
   "row": 63,
   "col": 3,
-  "file": "assets/img/mvp/quest-black-ops-image83.webp",
+  "file": "assets/img/mvp/quest-black-ops-b3a494426d.webp",
   "w": 125,
   "h": 125,
   "kind": "tile"
@@ -921,7 +1011,7 @@
   "sheet": "quest-black-ops",
   "row": 64,
   "col": 0,
-  "file": "assets/img/mvp/quest-black-ops-image69.webp",
+  "file": "assets/img/mvp/quest-black-ops-77ea08a59e.webp",
   "w": 744,
   "h": 705,
   "kind": "wide"
@@ -930,7 +1020,7 @@
   "sheet": "quest-black-ops",
   "row": 89,
   "col": 0,
-  "file": "assets/img/mvp/quest-black-ops-image55.webp",
+  "file": "assets/img/mvp/quest-black-ops-e6217dc385.webp",
   "w": 641,
   "h": 483,
   "kind": "wide"
@@ -939,7 +1029,7 @@
   "sheet": "quest-black-ops",
   "row": 89,
   "col": 5,
-  "file": "assets/img/mvp/quest-black-ops-image99.webp",
+  "file": "assets/img/mvp/quest-black-ops-8f495fb58c.webp",
   "w": 126,
   "h": 125,
   "kind": "tile"
@@ -948,7 +1038,7 @@
   "sheet": "quest-black-ops",
   "row": 112,
   "col": 0,
-  "file": "assets/img/mvp/quest-black-ops-image166.webp",
+  "file": "assets/img/mvp/quest-black-ops-1fa774cac0.webp",
   "w": 529,
   "h": 397,
   "kind": "wide"
@@ -957,7 +1047,7 @@
   "sheet": "quest-black-ops",
   "row": 112,
   "col": 5,
-  "file": "assets/img/mvp/quest-black-ops-image65.webp",
+  "file": "assets/img/mvp/quest-black-ops-d0afff4d72.webp",
   "w": 126,
   "h": 126,
   "kind": "tile"
@@ -966,7 +1056,7 @@
   "sheet": "quest-celine-kimi",
   "row": 1,
   "col": 8,
-  "file": "assets/img/mvp/quest-celine-kimi-image108.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-19d1f8ba3e.webp",
   "w": 276,
   "h": 464,
   "kind": "wide"
@@ -975,7 +1065,7 @@
   "sheet": "quest-celine-kimi",
   "row": 1,
   "col": 11,
-  "file": "assets/img/mvp/quest-celine-kimi-image144.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-7bcbfa2266.webp",
   "w": 362,
   "h": 358,
   "kind": "wide"
@@ -984,7 +1074,7 @@
   "sheet": "quest-celine-kimi",
   "row": 1,
   "col": 15,
-  "file": "assets/img/mvp/quest-celine-kimi-image90.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-7f5a6abe3d.webp",
   "w": 276,
   "h": 444,
   "kind": "wide"
@@ -993,7 +1083,7 @@
   "sheet": "quest-celine-kimi",
   "row": 2,
   "col": 2,
-  "file": "assets/img/mvp/quest-celine-kimi-image119.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-cb8ed088b9.webp",
   "w": 275,
   "h": 256,
   "kind": "wide"
@@ -1002,7 +1092,7 @@
   "sheet": "quest-celine-kimi",
   "row": 2,
   "col": 18,
-  "file": "assets/img/mvp/quest-celine-kimi-image164.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-2e093eaffc.webp",
   "w": 273,
   "h": 436,
   "kind": "wide"
@@ -1011,7 +1101,7 @@
   "sheet": "quest-celine-kimi",
   "row": 3,
   "col": 0,
-  "file": "assets/img/mvp/quest-celine-kimi-image172.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-a4f658b8cb.webp",
   "w": 276,
   "h": 313,
   "kind": "wide"
@@ -1020,7 +1110,7 @@
   "sheet": "quest-celine-kimi",
   "row": 21,
   "col": 0,
-  "file": "assets/img/mvp/quest-celine-kimi-image85.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-8fab954f88.webp",
   "w": 587,
   "h": 511,
   "kind": "wide"
@@ -1029,7 +1119,7 @@
   "sheet": "quest-celine-kimi",
   "row": 22,
   "col": 15,
-  "file": "assets/img/mvp/quest-celine-kimi-image135.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-2c69fb922e.webp",
   "w": 275,
   "h": 439,
   "kind": "wide"
@@ -1038,7 +1128,7 @@
   "sheet": "quest-celine-kimi",
   "row": 22,
   "col": 18,
-  "file": "assets/img/mvp/quest-celine-kimi-image127.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-adf4c51d41.webp",
   "w": 273,
   "h": 449,
   "kind": "wide"
@@ -1047,7 +1137,7 @@
   "sheet": "quest-celine-kimi",
   "row": 48,
   "col": 0,
-  "file": "assets/img/mvp/quest-celine-kimi-image165.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-c8dbdf07da.webp",
   "w": 643,
   "h": 601,
   "kind": "wide"
@@ -1056,7 +1146,7 @@
   "sheet": "quest-celine-kimi",
   "row": 72,
   "col": 0,
-  "file": "assets/img/mvp/quest-celine-kimi-image53.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-c89a6641fe.webp",
   "w": 277,
   "h": 278,
   "kind": "wide"
@@ -1065,7 +1155,7 @@
   "sheet": "quest-celine-kimi",
   "row": 86,
   "col": 3,
-  "file": "assets/img/mvp/quest-celine-kimi-image61.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-2546796579.webp",
   "w": 108,
   "h": 125,
   "kind": "tile"
@@ -1074,7 +1164,7 @@
   "sheet": "quest-celine-kimi",
   "row": 86,
   "col": 5,
-  "file": "assets/img/mvp/quest-celine-kimi-image131.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-9d55a91fc7.webp",
   "w": 256,
   "h": 260,
   "kind": "wide"
@@ -1083,7 +1173,7 @@
   "sheet": "quest-celine-kimi",
   "row": 87,
   "col": 0,
-  "file": "assets/img/mvp/quest-celine-kimi-image155.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-d2e608be33.webp",
   "w": 874,
   "h": 669,
   "kind": "wide"
@@ -1092,7 +1182,7 @@
   "sheet": "quest-celine-kimi",
   "row": 107,
   "col": 3,
-  "file": "assets/img/mvp/quest-celine-kimi-image121.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-bbf813768e.webp",
   "w": 141,
   "h": 129,
   "kind": "tile"
@@ -1101,7 +1191,7 @@
   "sheet": "quest-celine-kimi",
   "row": 108,
   "col": 0,
-  "file": "assets/img/mvp/quest-celine-kimi-image132.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-ee267abcef.webp",
   "w": 767,
   "h": 606,
   "kind": "wide"
@@ -1110,7 +1200,7 @@
   "sheet": "quest-celine-kimi",
   "row": 129,
   "col": 0,
-  "file": "assets/img/mvp/quest-celine-kimi-image113.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-6eef124ee0.webp",
   "w": 381,
   "h": 403,
   "kind": "wide"
@@ -1119,7 +1209,7 @@
   "sheet": "quest-celine-kimi",
   "row": 152,
   "col": 4,
-  "file": "assets/img/mvp/quest-celine-kimi-image128.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-5faf9de3b4.webp",
   "w": 101,
   "h": 125,
   "kind": "tile"
@@ -1128,7 +1218,7 @@
   "sheet": "quest-celine-kimi",
   "row": 153,
   "col": 0,
-  "file": "assets/img/mvp/quest-celine-kimi-image117.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-777928b4c9.webp",
   "w": 825,
   "h": 633,
   "kind": "wide"
@@ -1137,7 +1227,7 @@
   "sheet": "quest-celine-kimi",
   "row": 173,
   "col": 0,
-  "file": "assets/img/mvp/quest-celine-kimi-image87.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-df74f05ef2.webp",
   "w": 256,
   "h": 282,
   "kind": "wide"
@@ -1146,7 +1236,7 @@
   "sheet": "quest-celine-kimi",
   "row": 188,
   "col": 0,
-  "file": "assets/img/mvp/quest-celine-kimi-image66.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-0c81f139f5.webp",
   "w": 134,
   "h": 250,
   "kind": "wide"
@@ -1155,7 +1245,7 @@
   "sheet": "quest-celine-kimi",
   "row": 201,
   "col": 0,
-  "file": "assets/img/mvp/quest-celine-kimi-image78.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-597b614120.webp",
   "w": 121,
   "h": 151,
   "kind": "tile"
@@ -1164,7 +1254,7 @@
   "sheet": "quest-celine-kimi",
   "row": 211,
   "col": 3,
-  "file": "assets/img/mvp/quest-celine-kimi-image170.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-a917d2e38b.webp",
   "w": 129,
   "h": 126,
   "kind": "tile"
@@ -1173,7 +1263,7 @@
   "sheet": "quest-celine-kimi",
   "row": 212,
   "col": 0,
-  "file": "assets/img/mvp/quest-celine-kimi-image116.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-befae94515.webp",
   "w": 455,
   "h": 440,
   "kind": "wide"
@@ -1182,7 +1272,7 @@
   "sheet": "quest-celine-kimi",
   "row": 234,
   "col": 0,
-  "file": "assets/img/mvp/quest-celine-kimi-image106.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-f9f04c1292.webp",
   "w": 128,
   "h": 157,
   "kind": "tile"
@@ -1191,7 +1281,7 @@
   "sheet": "quest-celine-kimi",
   "row": 242,
   "col": 0,
-  "file": "assets/img/mvp/quest-celine-kimi-image71.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-4df7f44671.webp",
   "w": 103,
   "h": 166,
   "kind": "tile"
@@ -1200,7 +1290,7 @@
   "sheet": "quest-celine-kimi",
   "row": 252,
   "col": 0,
-  "file": "assets/img/mvp/quest-celine-kimi-image74.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-fc9bf33aec.webp",
   "w": 125,
   "h": 128,
   "kind": "tile"
@@ -1209,7 +1299,7 @@
   "sheet": "quest-celine-kimi",
   "row": 259,
   "col": 1,
-  "file": "assets/img/mvp/quest-celine-kimi-image161.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-4ab0063a4c.webp",
   "w": 271,
   "h": 118,
   "kind": "wide"
@@ -1218,7 +1308,7 @@
   "sheet": "quest-celine-kimi",
   "row": 260,
   "col": 0,
-  "file": "assets/img/mvp/quest-celine-kimi-image96.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-280625b1c3.webp",
   "w": 155,
   "h": 258,
   "kind": "wide"
@@ -1227,7 +1317,7 @@
   "sheet": "quest-celine-kimi",
   "row": 275,
   "col": 0,
-  "file": "assets/img/mvp/quest-celine-kimi-image106.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-f9f04c1292.webp",
   "w": 128,
   "h": 157,
   "kind": "tile"
@@ -1236,7 +1326,7 @@
   "sheet": "quest-celine-kimi",
   "row": 283,
   "col": 0,
-  "file": "assets/img/mvp/quest-celine-kimi-image71.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-4df7f44671.webp",
   "w": 103,
   "h": 166,
   "kind": "tile"
@@ -1245,7 +1335,7 @@
   "sheet": "quest-celine-kimi",
   "row": 294,
   "col": 0,
-  "file": "assets/img/mvp/quest-celine-kimi-image66.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-0c81f139f5.webp",
   "w": 134,
   "h": 250,
   "kind": "wide"
@@ -1254,7 +1344,7 @@
   "sheet": "quest-celine-kimi",
   "row": 307,
   "col": 3,
-  "file": "assets/img/mvp/quest-celine-kimi-image82.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-4950dd9568.webp",
   "w": 130,
   "h": 125,
   "kind": "tile"
@@ -1263,7 +1353,7 @@
   "sheet": "quest-celine-kimi",
   "row": 308,
   "col": 0,
-  "file": "assets/img/mvp/quest-celine-kimi-image153.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-14ae5f70a0.webp",
   "w": 446,
   "h": 501,
   "kind": "wide"
@@ -1272,7 +1362,7 @@
   "sheet": "quest-celine-kimi",
   "row": 334,
   "col": 0,
-  "file": "assets/img/mvp/quest-celine-kimi-image114.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-0fab128fe7.webp",
   "w": 188,
   "h": 214,
   "kind": "wide"
@@ -1281,7 +1371,7 @@
   "sheet": "quest-celine-kimi",
   "row": 347,
   "col": 0,
-  "file": "assets/img/mvp/quest-celine-kimi-image92.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-9de8aec8df.webp",
   "w": 271,
   "h": 296,
   "kind": "wide"
@@ -1290,7 +1380,7 @@
   "sheet": "quest-celine-kimi",
   "row": 362,
   "col": 0,
-  "file": "assets/img/mvp/quest-celine-kimi-image89.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-bbbc45a1e0.webp",
   "w": 276,
   "h": 291,
   "kind": "wide"
@@ -1299,7 +1389,7 @@
   "sheet": "quest-celine-kimi",
   "row": 377,
   "col": 0,
-  "file": "assets/img/mvp/quest-celine-kimi-image94.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-1336269dd3.webp",
   "w": 280,
   "h": 293,
   "kind": "wide"
@@ -1308,7 +1398,7 @@
   "sheet": "quest-celine-kimi",
   "row": 393,
   "col": 0,
-  "file": "assets/img/mvp/quest-celine-kimi-image86.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-251b9a4bb8.webp",
   "w": 277,
   "h": 291,
   "kind": "wide"
@@ -1317,7 +1407,7 @@
   "sheet": "quest-celine-kimi",
   "row": 409,
   "col": 0,
-  "file": "assets/img/mvp/quest-celine-kimi-image66.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-0c81f139f5.webp",
   "w": 134,
   "h": 250,
   "kind": "wide"
@@ -1326,7 +1416,7 @@
   "sheet": "quest-celine-kimi",
   "row": 423,
   "col": 3,
-  "file": "assets/img/mvp/quest-celine-kimi-image109.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-4081d5cc12.webp",
   "w": 282,
   "h": 172,
   "kind": "wide"
@@ -1335,7 +1425,7 @@
   "sheet": "quest-celine-kimi",
   "row": 433,
   "col": 0,
-  "file": "assets/img/mvp/quest-celine-kimi-image171.webp",
+  "file": "assets/img/mvp/quest-celine-kimi-71b754adbd.webp",
   "w": 276,
   "h": 466,
   "kind": "wide"
@@ -1344,7 +1434,7 @@
   "sheet": "quest-endless-desert",
   "row": 0,
   "col": 0,
-  "file": "assets/img/mvp/quest-endless-desert-image142.webp",
+  "file": "assets/img/mvp/quest-endless-desert-47ccb28417.webp",
   "w": 279,
   "h": 172,
   "kind": "wide"
@@ -1353,7 +1443,7 @@
   "sheet": "quest-fallen-hero",
   "row": 1,
   "col": 0,
-  "file": "assets/img/mvp/quest-fallen-hero-image46.webp",
+  "file": "assets/img/mvp/quest-fallen-hero-10fa9f04fa.webp",
   "w": 564,
   "h": 374,
   "kind": "wide"
@@ -1362,7 +1452,7 @@
   "sheet": "quest-fallen-hero",
   "row": 1,
   "col": 4,
-  "file": "assets/img/mvp/quest-fallen-hero-image44.webp",
+  "file": "assets/img/mvp/quest-fallen-hero-d9de1efa39.webp",
   "w": 124,
   "h": 99,
   "kind": "tile"
@@ -1371,7 +1461,7 @@
   "sheet": "quest-fallen-hero",
   "row": 1,
   "col": 5,
-  "file": "assets/img/mvp/quest-fallen-hero-image41.webp",
+  "file": "assets/img/mvp/quest-fallen-hero-3375208673.webp",
   "w": 526,
   "h": 353,
   "kind": "wide"
@@ -1380,7 +1470,7 @@
   "sheet": "quest-fallen-hero",
   "row": 1,
   "col": 10,
-  "file": "assets/img/mvp/quest-fallen-hero-image60.webp",
+  "file": "assets/img/mvp/quest-fallen-hero-78916b4e0c.webp",
   "w": 126,
   "h": 95,
   "kind": "tile"
@@ -1389,7 +1479,7 @@
   "sheet": "quest-fallen-hero",
   "row": 20,
   "col": 0,
-  "file": "assets/img/mvp/quest-fallen-hero-image57.webp",
+  "file": "assets/img/mvp/quest-fallen-hero-b3950f2c74.webp",
   "w": 549,
   "h": 347,
   "kind": "wide"
@@ -1398,7 +1488,7 @@
   "sheet": "quest-fallen-hero",
   "row": 20,
   "col": 4,
-  "file": "assets/img/mvp/quest-fallen-hero-image30.webp",
+  "file": "assets/img/mvp/quest-fallen-hero-4e0ab625a0.webp",
   "w": 130,
   "h": 95,
   "kind": "tile"
@@ -1407,7 +1497,7 @@
   "sheet": "quest-fallen-hero",
   "row": 20,
   "col": 5,
-  "file": "assets/img/mvp/quest-fallen-hero-image8.webp",
+  "file": "assets/img/mvp/quest-fallen-hero-99385d73db.webp",
   "w": 407,
   "h": 309,
   "kind": "wide"
@@ -1416,7 +1506,7 @@
   "sheet": "quest-fallen-hero",
   "row": 20,
   "col": 10,
-  "file": "assets/img/mvp/quest-fallen-hero-image48.webp",
+  "file": "assets/img/mvp/quest-fallen-hero-36a51be08a.webp",
   "w": 126,
   "h": 96,
   "kind": "tile"
@@ -1425,7 +1515,7 @@
   "sheet": "quest-kiel-challenge",
   "row": 0,
   "col": 0,
-  "file": "assets/img/mvp/quest-kiel-challenge-image97.webp",
+  "file": "assets/img/mvp/quest-kiel-challenge-d8bc6b5f77.webp",
   "w": 755,
   "h": 526,
   "kind": "wide"
@@ -1434,7 +1524,7 @@
   "sheet": "quest-kiel-challenge",
   "row": 0,
   "col": 3,
-  "file": "assets/img/mvp/quest-kiel-challenge-image75.webp",
+  "file": "assets/img/mvp/quest-kiel-challenge-1335000232.webp",
   "w": 126,
   "h": 127,
   "kind": "tile"
@@ -1443,7 +1533,7 @@
   "sheet": "quest-kiel-challenge",
   "row": 21,
   "col": 0,
-  "file": "assets/img/mvp/quest-kiel-challenge-image29.webp",
+  "file": "assets/img/mvp/quest-kiel-challenge-0e8528ec12.webp",
   "w": 277,
   "h": 176,
   "kind": "wide"
@@ -1452,7 +1542,7 @@
   "sheet": "quest-kiel-challenge",
   "row": 31,
   "col": 0,
-  "file": "assets/img/mvp/quest-kiel-challenge-image140.webp",
+  "file": "assets/img/mvp/quest-kiel-challenge-86f5ed6395.webp",
   "w": 276,
   "h": 176,
   "kind": "wide"
@@ -1461,7 +1551,7 @@
   "sheet": "quest-lighthalzen-entrance",
   "row": 4,
   "col": 0,
-  "file": "assets/img/mvp/quest-lighthalzen-entrance-image151.webp",
+  "file": "assets/img/mvp/quest-lighthalzen-entrance-3065ebe113.webp",
   "w": 720,
   "h": 525,
   "kind": "wide"
@@ -1470,7 +1560,7 @@
   "sheet": "quest-lighthalzen-entrance",
   "row": 4,
   "col": 3,
-  "file": "assets/img/mvp/quest-lighthalzen-entrance-image129.webp",
+  "file": "assets/img/mvp/quest-lighthalzen-entrance-8606f30be3.webp",
   "w": 126,
   "h": 125,
   "kind": "tile"
@@ -1479,7 +1569,7 @@
   "sheet": "quest-lighthalzen-entrance",
   "row": 25,
   "col": 0,
-  "file": "assets/img/mvp/quest-lighthalzen-entrance-image145.webp",
+  "file": "assets/img/mvp/quest-lighthalzen-entrance-af075ebf58.webp",
   "w": 351,
   "h": 290,
   "kind": "wide"
@@ -1488,7 +1578,7 @@
   "sheet": "quest-niflheim-challenge",
   "row": 2,
   "col": 0,
-  "file": "assets/img/mvp/quest-niflheim-challenge-image3.webp",
+  "file": "assets/img/mvp/quest-niflheim-challenge-5ecb59893c.webp",
   "w": 275,
   "h": 174,
   "kind": "wide"
@@ -1497,7 +1587,7 @@
   "sheet": "quest-niflheim-challenge",
   "row": 2,
   "col": 2,
-  "file": "assets/img/mvp/quest-niflheim-challenge-image28.webp",
+  "file": "assets/img/mvp/quest-niflheim-challenge-a764967d60.webp",
   "w": 276,
   "h": 364,
   "kind": "wide"
@@ -1506,7 +1596,7 @@
   "sheet": "quest-niflheim-challenge",
   "row": 11,
   "col": 0,
-  "file": "assets/img/mvp/quest-niflheim-challenge-image68.webp",
+  "file": "assets/img/mvp/quest-niflheim-challenge-445b492077.webp",
   "w": 272,
   "h": 171,
   "kind": "wide"
@@ -1515,7 +1605,7 @@
   "sheet": "quest-niflheim-challenge",
   "row": 21,
   "col": 3,
-  "file": "assets/img/mvp/quest-niflheim-challenge-image111.webp",
+  "file": "assets/img/mvp/quest-niflheim-challenge-b2556fdbb0.webp",
   "w": 120,
   "h": 93,
   "kind": "tile"
@@ -1524,7 +1614,7 @@
   "sheet": "quest-niflheim-challenge",
   "row": 22,
   "col": 0,
-  "file": "assets/img/mvp/quest-niflheim-challenge-image39.webp",
+  "file": "assets/img/mvp/quest-niflheim-challenge-397015dd3b.webp",
   "w": 860,
   "h": 627,
   "kind": "wide"
@@ -1533,7 +1623,7 @@
   "sheet": "quest-niflheim-challenge",
   "row": 43,
   "col": 0,
-  "file": "assets/img/mvp/quest-niflheim-challenge-image52.webp",
+  "file": "assets/img/mvp/quest-niflheim-challenge-78f55ee8e1.webp",
   "w": 538,
   "h": 409,
   "kind": "wide"
@@ -1542,7 +1632,7 @@
   "sheet": "quest-niflheim-challenge",
   "row": 43,
   "col": 5,
-  "file": "assets/img/mvp/quest-niflheim-challenge-image42.webp",
+  "file": "assets/img/mvp/quest-niflheim-challenge-c552abab88.webp",
   "w": 272,
   "h": 328,
   "kind": "wide"
@@ -1551,7 +1641,7 @@
   "sheet": "quest-niflheim-challenge",
   "row": 43,
   "col": 10,
-  "file": "assets/img/mvp/quest-niflheim-challenge-image32.webp",
+  "file": "assets/img/mvp/quest-niflheim-challenge-fcf100dc80.webp",
   "w": 535,
   "h": 374,
   "kind": "wide"
@@ -1560,7 +1650,7 @@
   "sheet": "quest-niflheim-challenge",
   "row": 66,
   "col": 0,
-  "file": "assets/img/mvp/quest-niflheim-challenge-image50.webp",
+  "file": "assets/img/mvp/quest-niflheim-challenge-cae97c19b9.webp",
   "w": 261,
   "h": 244,
   "kind": "wide"
@@ -1569,7 +1659,7 @@
   "sheet": "quest-niflheim-challenge",
   "row": 66,
   "col": 2,
-  "file": "assets/img/mvp/quest-niflheim-challenge-image12.webp",
+  "file": "assets/img/mvp/quest-niflheim-challenge-cd00739da6.webp",
   "w": 398,
   "h": 302,
   "kind": "wide"
@@ -1578,7 +1668,7 @@
   "sheet": "quest-niflheim-challenge",
   "row": 66,
   "col": 6,
-  "file": "assets/img/mvp/quest-niflheim-challenge-image35.webp",
+  "file": "assets/img/mvp/quest-niflheim-challenge-381184b5d6.webp",
   "w": 883,
   "h": 822,
   "kind": "wide"
@@ -1587,7 +1677,7 @@
   "sheet": "quest-niflheim-challenge",
   "row": 67,
   "col": 0,
-  "file": "assets/img/mvp/quest-niflheim-challenge-image18.webp",
+  "file": "assets/img/mvp/quest-niflheim-challenge-ccdb6849bd.webp",
   "w": 120,
   "h": 94,
   "kind": "tile"
@@ -1596,7 +1686,7 @@
   "sheet": "quest-niflheim-challenge",
   "row": 67,
   "col": 2,
-  "file": "assets/img/mvp/quest-niflheim-challenge-image102.webp",
+  "file": "assets/img/mvp/quest-niflheim-challenge-0183bf74f0.webp",
   "w": 126,
   "h": 98,
   "kind": "tile"
@@ -1605,7 +1695,7 @@
   "sheet": "quest-niflheim-challenge",
   "row": 80,
   "col": 0,
-  "file": "assets/img/mvp/quest-niflheim-challenge-image63.webp",
+  "file": "assets/img/mvp/quest-niflheim-challenge-88848c184b.webp",
   "w": 407,
   "h": 317,
   "kind": "wide"
@@ -1614,7 +1704,7 @@
   "sheet": "quest-niflheim-challenge",
   "row": 80,
   "col": 2,
-  "file": "assets/img/mvp/quest-niflheim-challenge-image81.webp",
+  "file": "assets/img/mvp/quest-niflheim-challenge-dabb610723.webp",
   "w": 127,
   "h": 120,
   "kind": "tile"
@@ -1623,7 +1713,7 @@
   "sheet": "quest-niflheim-challenge",
   "row": 80,
   "col": 4,
-  "file": "assets/img/mvp/quest-niflheim-challenge-image79.webp",
+  "file": "assets/img/mvp/quest-niflheim-challenge-a18ed20408.webp",
   "w": 421,
   "h": 310,
   "kind": "wide"
@@ -1632,7 +1722,7 @@
   "sheet": "quest-niflheim-challenge",
   "row": 80,
   "col": 7,
-  "file": "assets/img/mvp/quest-niflheim-challenge-image31.webp",
+  "file": "assets/img/mvp/quest-niflheim-challenge-1a60be315d.webp",
   "w": 127,
   "h": 126,
   "kind": "tile"
@@ -1641,7 +1731,7 @@
   "sheet": "quest-niflheim-challenge",
   "row": 97,
   "col": 0,
-  "file": "assets/img/mvp/quest-niflheim-challenge-image95.webp",
+  "file": "assets/img/mvp/quest-niflheim-challenge-c66ea78a28.webp",
   "w": 675,
   "h": 518,
   "kind": "wide"
@@ -1650,7 +1740,7 @@
   "sheet": "quest-niflheim-challenge",
   "row": 97,
   "col": 2,
-  "file": "assets/img/mvp/quest-niflheim-challenge-image14.webp",
+  "file": "assets/img/mvp/quest-niflheim-challenge-dc884e641f.webp",
   "w": 124,
   "h": 123,
   "kind": "tile"
@@ -1659,7 +1749,7 @@
   "sheet": "quest-niflheim-challenge",
   "row": 97,
   "col": 4,
-  "file": "assets/img/mvp/quest-niflheim-challenge-image76.webp",
+  "file": "assets/img/mvp/quest-niflheim-challenge-cb1178ce54.webp",
   "w": 386,
   "h": 365,
   "kind": "wide"
@@ -1668,7 +1758,7 @@
   "sheet": "quest-niflheim-challenge",
   "row": 97,
   "col": 7,
-  "file": "assets/img/mvp/quest-niflheim-challenge-image125.webp",
+  "file": "assets/img/mvp/quest-niflheim-challenge-be5d151aa8.webp",
   "w": 126,
   "h": 126,
   "kind": "tile"
@@ -1677,7 +1767,7 @@
   "sheet": "quest-niflheim-challenge",
   "row": 123,
   "col": 0,
-  "file": "assets/img/mvp/quest-niflheim-challenge-image70.webp",
+  "file": "assets/img/mvp/quest-niflheim-challenge-6412eb5a20.webp",
   "w": 786,
   "h": 452,
   "kind": "wide"
@@ -1686,7 +1776,7 @@
   "sheet": "quest-niflheim-challenge",
   "row": 147,
   "col": 0,
-  "file": "assets/img/mvp/quest-niflheim-challenge-image84.webp",
+  "file": "assets/img/mvp/quest-niflheim-challenge-a2a0ce0270.webp",
   "w": 262,
   "h": 224,
   "kind": "wide"
@@ -1695,7 +1785,7 @@
   "sheet": "quest-niflheim-challenge",
   "row": 147,
   "col": 4,
-  "file": "assets/img/mvp/quest-niflheim-challenge-image37.webp",
+  "file": "assets/img/mvp/quest-niflheim-challenge-791a20a493.webp",
   "w": 256,
   "h": 241,
   "kind": "wide"
@@ -1704,7 +1794,7 @@
   "sheet": "quest-niflheim-challenge",
   "row": 158,
   "col": 0,
-  "file": "assets/img/mvp/quest-niflheim-challenge-image23.webp",
+  "file": "assets/img/mvp/quest-niflheim-challenge-08214c2656.webp",
   "w": 273,
   "h": 259,
   "kind": "wide"
@@ -1713,7 +1803,7 @@
   "sheet": "quest-niflheim-challenge",
   "row": 159,
   "col": 4,
-  "file": "assets/img/mvp/quest-niflheim-challenge-image49.webp",
+  "file": "assets/img/mvp/quest-niflheim-challenge-f53ecf9e38.webp",
   "w": 275,
   "h": 259,
   "kind": "wide"
@@ -1722,7 +1812,7 @@
   "sheet": "quest-relic-gear-options",
   "row": 1,
   "col": 0,
-  "file": "assets/img/mvp/quest-relic-gear-options-image59.webp",
+  "file": "assets/img/mvp/quest-relic-gear-options-e64e3e9cb6.webp",
   "w": 891,
   "h": 670,
   "kind": "wide"
@@ -1731,7 +1821,7 @@
   "sheet": "quest-relic-gear-options",
   "row": 1,
   "col": 3,
-  "file": "assets/img/mvp/quest-relic-gear-options-image4.webp",
+  "file": "assets/img/mvp/quest-relic-gear-options-b34a39009c.webp",
   "w": 124,
   "h": 124,
   "kind": "tile"
@@ -1740,7 +1830,7 @@
   "sheet": "quest-relic-gear-options",
   "row": 22,
   "col": 0,
-  "file": "assets/img/mvp/quest-relic-gear-options-image51.webp",
+  "file": "assets/img/mvp/quest-relic-gear-options-a19dcaebe9.webp",
   "w": 883,
   "h": 597,
   "kind": "wide"
@@ -1749,7 +1839,7 @@
   "sheet": "quest-relic-gear-options",
   "row": 27,
   "col": 3,
-  "file": "assets/img/mvp/quest-relic-gear-options-image72.webp",
+  "file": "assets/img/mvp/quest-relic-gear-options-a5a5ae6e9d.webp",
   "w": 127,
   "h": 128,
   "kind": "tile"
@@ -1758,7 +1848,7 @@
   "sheet": "quest-relic-gear-options",
   "row": 42,
   "col": 0,
-  "file": "assets/img/mvp/quest-relic-gear-options-image43.webp",
+  "file": "assets/img/mvp/quest-relic-gear-options-789caf914a.webp",
   "w": 578,
   "h": 510,
   "kind": "wide"
@@ -1767,7 +1857,7 @@
   "sheet": "quest-relic-gear-options",
   "row": 42,
   "col": 4,
-  "file": "assets/img/mvp/quest-relic-gear-options-image26.webp",
+  "file": "assets/img/mvp/quest-relic-gear-options-437f3ee102.webp",
   "w": 126,
   "h": 125,
   "kind": "tile"
@@ -1776,7 +1866,7 @@
   "sheet": "quest-thor-challenge",
   "row": 3,
   "col": 0,
-  "file": "assets/img/mvp/quest-thor-challenge-image146.webp",
+  "file": "assets/img/mvp/quest-thor-challenge-170f2102ce.webp",
   "w": 447,
   "h": 326,
   "kind": "wide"
@@ -1785,7 +1875,7 @@
   "sheet": "quest-thor-challenge",
   "row": 22,
   "col": 0,
-  "file": "assets/img/mvp/quest-thor-challenge-image34.webp",
+  "file": "assets/img/mvp/quest-thor-challenge-74d0f728d3.webp",
   "w": 279,
   "h": 174,
   "kind": "wide"
@@ -1794,7 +1884,7 @@
   "sheet": "quest-true-hero-shadow-gloves",
   "row": 0,
   "col": 3,
-  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image9.webp",
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-bc5d1cb439.webp",
   "w": 125,
   "h": 127,
   "kind": "tile"
@@ -1803,7 +1893,7 @@
   "sheet": "quest-true-hero-shadow-gloves",
   "row": 1,
   "col": 0,
-  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image20.webp",
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-556aca08eb.webp",
   "w": 726,
   "h": 588,
   "kind": "wide"
@@ -1812,7 +1902,7 @@
   "sheet": "quest-true-hero-shadow-gloves",
   "row": 23,
   "col": 0,
-  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image62.webp",
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-9dc1ddf148.webp",
   "w": 769,
   "h": 633,
   "kind": "wide"
@@ -1821,7 +1911,7 @@
   "sheet": "quest-true-hero-shadow-gloves",
   "row": 45,
   "col": 0,
-  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image11.webp",
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-6d7392cd59.webp",
   "w": 808,
   "h": 563,
   "kind": "wide"
@@ -1830,7 +1920,7 @@
   "sheet": "quest-true-hero-shadow-gloves",
   "row": 63,
   "col": 0,
-  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image147.webp",
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-c569f7464a.webp",
   "w": 274,
   "h": 118,
   "kind": "wide"
@@ -1839,7 +1929,7 @@
   "sheet": "quest-true-hero-shadow-gloves",
   "row": 70,
   "col": 0,
-  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image33.webp",
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-6c6c31cc56.webp",
   "w": 280,
   "h": 113,
   "kind": "drops"
@@ -1848,7 +1938,7 @@
   "sheet": "quest-true-hero-shadow-gloves",
   "row": 76,
   "col": 0,
-  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image38.webp",
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-3d1a67ccff.webp",
   "w": 281,
   "h": 296,
   "kind": "wide"
@@ -1857,7 +1947,7 @@
   "sheet": "quest-true-hero-shadow-gloves",
   "row": 90,
   "col": 0,
-  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image1.webp",
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-79bfef9367.webp",
   "w": 275,
   "h": 292,
   "kind": "wide"
@@ -1866,7 +1956,7 @@
   "sheet": "quest-true-hero-shadow-gloves",
   "row": 104,
   "col": 0,
-  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image21.webp",
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-cd4858d8d1.webp",
   "w": 276,
   "h": 293,
   "kind": "wide"
@@ -1875,7 +1965,7 @@
   "sheet": "quest-true-hero-shadow-gloves",
   "row": 117,
   "col": 0,
-  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image27.webp",
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-8eb7053c7a.webp",
   "w": 276,
   "h": 290,
   "kind": "wide"
@@ -1884,7 +1974,7 @@
   "sheet": "quest-true-hero-shadow-gloves",
   "row": 133,
   "col": 3,
-  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image67.webp",
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-60d2f2e67d.webp",
   "w": 128,
   "h": 127,
   "kind": "tile"
@@ -1893,7 +1983,7 @@
   "sheet": "quest-true-hero-shadow-gloves",
   "row": 134,
   "col": 0,
-  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image64.webp",
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-926a3ae238.webp",
   "w": 835,
   "h": 617,
   "kind": "wide"
@@ -1902,7 +1992,7 @@
   "sheet": "quest-true-hero-shadow-gloves",
   "row": 154,
   "col": 0,
-  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image13.webp",
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-37e6213d3b.webp",
   "w": 278,
   "h": 291,
   "kind": "wide"
@@ -1911,7 +2001,7 @@
   "sheet": "quest-true-hero-shadow-gloves",
   "row": 170,
   "col": 0,
-  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image15.webp",
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-9a3a94e726.webp",
   "w": 278,
   "h": 293,
   "kind": "wide"
@@ -1920,7 +2010,7 @@
   "sheet": "quest-true-hero-shadow-gloves",
   "row": 186,
   "col": 0,
-  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image17.webp",
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-3a7f405737.webp",
   "w": 887,
   "h": 564,
   "kind": "wide"
@@ -1929,7 +2019,7 @@
   "sheet": "quest-true-hero-shadow-gloves",
   "row": 203,
   "col": 0,
-  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image22.webp",
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-8997f7b4a0.webp",
   "w": 132,
   "h": 152,
   "kind": "tile"
@@ -1938,7 +2028,7 @@
   "sheet": "quest-true-hero-shadow-gloves",
   "row": 211,
   "col": 0,
-  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image120.webp",
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-93580aee69.webp",
   "w": 159,
   "h": 254,
   "kind": "wide"
@@ -1947,7 +2037,7 @@
   "sheet": "quest-true-hero-shadow-gloves",
   "row": 212,
   "col": 1,
-  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image56.webp",
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-80c797861a.webp",
   "w": 280,
   "h": 173,
   "kind": "wide"
@@ -1956,7 +2046,7 @@
   "sheet": "quest-true-hero-shadow-gloves",
   "row": 223,
   "col": 4,
-  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image16.webp",
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-35def9efb8.webp",
   "w": 128,
   "h": 127,
   "kind": "tile"
@@ -1965,7 +2055,7 @@
   "sheet": "quest-true-hero-shadow-gloves",
   "row": 224,
   "col": 0,
-  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image36.webp",
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-4f2fca2dfc.webp",
   "w": 590,
   "h": 499,
   "kind": "wide"
@@ -1974,7 +2064,7 @@
   "sheet": "quest-true-hero-shadow-gloves",
   "row": 249,
   "col": 0,
-  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image5.webp",
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-b025600665.webp",
   "w": 123,
   "h": 204,
   "kind": "wide"
@@ -1983,7 +2073,7 @@
   "sheet": "quest-true-hero-shadow-gloves",
   "row": 261,
   "col": 0,
-  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image7.webp",
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-8e6cdea46c.webp",
   "w": 555,
   "h": 378,
   "kind": "wide"
@@ -1992,7 +2082,7 @@
   "sheet": "quest-true-hero-shadow-gloves",
   "row": 284,
   "col": 0,
-  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image36.webp",
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-4f2fca2dfc.webp",
   "w": 590,
   "h": 499,
   "kind": "wide"
@@ -2001,7 +2091,7 @@
   "sheet": "quest-true-hero-shadow-gloves",
   "row": 284,
   "col": 4,
-  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image16.webp",
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-35def9efb8.webp",
   "w": 128,
   "h": 127,
   "kind": "tile"
@@ -2010,7 +2100,7 @@
   "sheet": "quest-true-hero-shadow-gloves",
   "row": 288,
   "col": 4,
-  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image16.webp",
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-35def9efb8.webp",
   "w": 128,
   "h": 127,
   "kind": "tile"
@@ -2019,7 +2109,7 @@
   "sheet": "quest-true-hero-shadow-gloves",
   "row": 310,
   "col": 0,
-  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image126.webp",
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-2a63f31683.webp",
   "w": 900,
   "h": 565,
   "kind": "wide"
@@ -2028,7 +2118,7 @@
   "sheet": "quest-true-hero-shadow-gloves",
   "row": 327,
   "col": 0,
-  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image25.webp",
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-8f3f44dcd6.webp",
   "w": 786,
   "h": 593,
   "kind": "wide"
@@ -2037,7 +2127,7 @@
   "sheet": "quest-true-hero-shadow-gloves",
   "row": 347,
   "col": 0,
-  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-image24.webp",
+  "file": "assets/img/mvp/quest-true-hero-shadow-gloves-5fe6f4aeeb.webp",
   "w": 270,
   "h": 443,
   "kind": "wide"

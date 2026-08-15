@@ -55,7 +55,31 @@ QUESTS = [
      "The longest one here. Lutie, Juno, Prontera and back again."),
     ("quest-endless-desert", "Endless Desert",
      "The map that loops. Here is the route table."),
+    ("quest-abbey-sealed-chambers", "Abbey sealed chambers",
+     "Five things to click, and an altar that opens once you have."),
 ]
+
+# A tab whose steps are only screenshots, with not one word of cell text in
+# it, so the CSV export comes back empty. The lines below are read off those
+# screenshots and carry the row each one is anchored to, which is how the
+# pictures still land on the right step. If the tab ever gets real text,
+# delete the entry and it goes back to being read like every other quest.
+WRITTEN_STEPS = {
+    "quest-abbey-sealed-chambers": [
+        (0, "1", "Read the book lying open on the desk. It is a diary, or a "
+                 "logbook, kept by the bishop who was once in charge of the "
+                 "monastery."),
+        (17, "2", "Click the pulpit. “The beauty of the stars wanes in "
+                  "comparison...”"),
+        (34, "3", "Click the statue. “...We lost our hearts to that "
+                  "golden hair...”"),
+        (50, "4", "Find the bizarre and somewhat disturbing statue of a woman "
+                  "chained to the wall."),
+        (65, "5", "Now the ancient altar will talk to you. Check Requirements "
+                  "says what you are still missing, and Break the Seal opens "
+                  "the sealed chambers."),
+    ],
+}
 
 STEP_RE = re.compile(r"^\s*(\d+(?:\.\d+)?)\s*[.:)]?\s+(.*)$")
 
@@ -113,6 +137,30 @@ def lines_of(rows):
             if cell:
                 out.append({"row": r, "text": cell})
     return out
+
+
+# The four lines telling you how to walk to each Avatar. They were in the
+# Endless Desert tab until someone cleared that column on 14 Aug 2026, leaving
+# the Avatars and their maps behind. The route still matches the maps that are
+# still there, so it is kept here and filled back in. Delete this if the sheet
+# ever says something different.
+DESERT_ROUTE = {
+    "avatar of agony": "843 esquerda ate chegar no 544",
+    "avatar of sorrow": "544 leste ate chegar 198",
+    "avatar of hatred": "198 norte ate chegar 696",
+    "avatar of despair": "696 leste para 999",
+}
+
+
+def restore_desert_route(rows):
+    """Puts the walking directions back next to the Avatar they belong to."""
+    for row in rows:
+        names = [i for i, c in enumerate(row) if c.strip().lower() in DESERT_ROUTE]
+        if not names or len(row) < 5:
+            continue
+        if not row[4].strip():
+            row[4] = DESERT_ROUTE[row[names[0]].strip().lower()]
+    return rows
 
 
 def table_html(rows, first, last, has_head, phrases):
@@ -181,10 +229,28 @@ def desert_table(rows, first, last):
             .format(legend=legend, head=head_html, body="".join(body)))
 
 
+def written_steps(stem, art):
+    """Steps for a tab that holds screenshots and nothing else."""
+    shots = sorted([a for a in art if a["sheet"] == stem],
+                   key=lambda a: (a["row"], a["col"]))
+    written = WRITTEN_STEPS[stem]
+    steps = []
+    for i, (row, number, text) in enumerate(written):
+        end = written[i + 1][0] if i + 1 < len(written) else 10 ** 6
+        steps.append({"row": row, "n": number, "text": text, "table": "",
+                      "shots": [a for a in shots if row <= a["row"] < end]})
+    return steps
+
+
 def build_steps(stem, art, phrases):
+    if stem in WRITTEN_STEPS:
+        return written_steps(stem, art)
+
     rows = read_csv(stem)
     if not rows:
         return []
+    if stem == "quest-endless-desert":
+        rows = restore_desert_route(rows)
 
     blocked = set()
     for first, last, _head in TABLES.get(stem, []):
@@ -270,18 +336,22 @@ POTIONS = [
          "Heals 100 to 200 HP"),
         ("Orange Potion", ["10 Red Herb", "5 Yellow Herb", "15 Stem"],
          "Heals 400 to 600 HP"),
-        ("Yellow Potion", ["25 Yellow Herb", "25 Mantis Scythe",
-                           "25 Moth Dust"], "Heals 1000 to 2000 HP"),
+        ("Yellow Potion", ["25 Yellow Herb", "30 Mantis Scythe",
+                           "30 Moth Dust"], "Heals 1000 to 2000 HP"),
         ("White Potion", ["30 White Herb", "1 Burning Shard",
                           "1 Enchanted Key", "1 Pyroxene"],
          "Heals 3000 to 6000 HP"),
-    ]),
+    ], ["Red Herb: red plants", "Yellow Herb: yellow plants",
+        "Stem: red, yellow and purple plants", "Mantis Scythe: Mantis",
+        "Moth Dust: Dustiness"]),
     ("Spirit potions", [
         ("Grape Juice", ["25 Grape", "10 Ant Jaw", "10 Golden Hair"],
          "Recovers 50 to 100 SP"),
         ("Blue Potion", ["25 Blue Herb", "25 Grave Dust", "25 Blazing Stone",
                          "25 Broken Urn"], "Recovers 400 to 600 SP"),
-    ]),
+    ], ["Grape: purple plants",
+        "Ant Jaw: Soldier Deniro, Soldier Andre, Soldier Pierre",
+        "Blue Herb: the plants a boss leaves when it is summoned at an altar"]),
     ("Attack speed potions", [
         ("Concentration Potion", ["25 Mushroom Spore", "1 Gnome's Moustache",
                                   "1 Memento"], "ASPD +2"),
@@ -291,12 +361,14 @@ POTIONS = [
         ("Berserk Potion", ["25 Mushroom Spore", "25 Poison Spore",
                             "1 Detrimindexta", "1 Karvodailnirol"],
          "ASPD +6"),
-    ]),
+    ], ["Mushroom Spore: red mushrooms", "Gnome's Moustache: Knocker",
+        "Memento: Zombie Master"]),
     ("Status cure", [
         ("Green Potion", ["30 Green Herb", "30 Stem", "25 Scell",
                           "25 Nine Tail"],
          "Cures Bleeding, Poison and Burning on the spot"),
-    ]),
+    ], ["Green Herb: green plants",
+        "Stem: red, yellow and purple plants"]),
 ]
 
 POTION_SOURCE = "https://wiki.nightmareofragnarok.com/wiki/Potion"
@@ -312,16 +384,27 @@ POTION_RULES = [
      "No potion can be traded, and neither can blue herbs. Blue herbs can at "
      "least go into storage."),
     ("q.potionWhere", "Where to craft",
-     "The Alchemist Guild in Aldebaran does the whole ladder. The Orange "
-     "Potion and the Grape Juice are the exception: any major city tool "
-     "dealer has a guild representative who can make those two, so you do not "
-     "have to make the trip for them."),
+     "The Alchemist Guild in Aldebaran, at 68 56, does the whole ladder. The "
+     "Orange Potion and the Grape Juice are the exception: any major city "
+     "tool dealer has a guild representative who can make those two, so you "
+     "do not have to make the trip for them."),
+    ("q.potionChar", "Once per character",
+     "The ladder is not shared. Every character climbs it again from the Red "
+     "Potion, which is the main reason a second character feels slower than "
+     "the first. Herbs are much easier to come by at high level, so the "
+     "second run is shorter than it looks."),
+    ("q.potionHerbs", "Where herbs come from",
+     "Herbs drop from plants, which sit on ordinary maps and can be found "
+     "with the map search box. Blue herbs are the exception: they only come "
+     "from the plants a boss leaves behind when it is summoned at an altar. "
+     "Plants belong to whoever hits them first, so leave one alone if it is "
+     "not yours."),
 ]
 
 
 def potion_section():
     groups = []
-    for label, rows in POTIONS:
+    for label, rows, sources in POTIONS:
         items = "".join(
             """            <tr>
               <td><b>{name}</b></td>
@@ -345,7 +428,11 @@ def potion_section():
 {items}
             </tbody>
           </table>
-        </div>""".format(label=esc(label), items=items))
+        </div>
+        <p class="q-potion-from"><span data-i18n="q.potionFrom">Where those come from</span>{sources}</p>""".format(
+            label=esc(label), items=items,
+            sources="".join('<span class="q-mat">%s</span>' % esc(s)
+                            for s in sources)))
 
     return """
   <section class="section-pad-sm" id="potions">

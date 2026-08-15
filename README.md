@@ -364,7 +364,14 @@ Three things about the source are worth knowing:
   `fetch_mvp_art.py` downloads the workbook as xlsx instead, where every
   drawing carries the row and column it is anchored to, and writes those
   coordinates to `tools/data/mvp-art.json`. That is how each minimap and each
-  drop table screenshot ends up filed under the right boss.
+  drop table screenshot ends up filed under the right boss. It reads the tab
+  names out of the workbook and matches `BOOKS` against them; the list used to
+  be positional, which silently filed every picture after a newly added tab
+  under the wrong quest. A tab that is not in `BOOKS` is named on stdout and
+  skipped, so a new one announces itself. File names are the first ten
+  characters of the picture's own sha1, because Google renumbers `xl/media`
+  on every export and a name taken from it renames half the folder for
+  nothing.
 - **The drop tables only exist as screenshots.** They are transcribed by hand
   into `tools/data/mvp-drops.json` so the page can show real, searchable text.
   The screenshot stays in the card as well, so the transcription can be
@@ -435,6 +442,18 @@ between them. Screenshots are attached to the step above them, using the same
 anchor rows as the MVP page. The jump buttons at the top are generated from
 `QUESTS`, so adding a quest there adds its button too.
 
+Two tabs do not behave, and both are handled in `build_quests.py`:
+
+- **Abbey Sealed Chambers is screenshots and nothing else**, so its CSV comes
+  back empty. `WRITTEN_STEPS` holds the five steps read off those screenshots,
+  each with the row it is anchored to, which is how the pictures still land on
+  the right step. If the tab ever gets real text, delete the entry and it goes
+  back to being read like every other quest.
+- **The Endless Desert walking directions were deleted from the sheet** on 14
+  Aug 2026, leaving the Avatars and their maps behind. `DESERT_ROUTE` keeps
+  those four lines and fills them back in, because the route still matches the
+  maps that are still there. Delete it if the sheet ever says otherwise.
+
 The Endless Desert route table is a special case. The sheet marks the layer of
 every moc_fild map with a cell colour, and the CSV export drops colour, so the
 column of "Layer 1" to "Layer 5" labels next to the table is a legend rather
@@ -451,6 +470,13 @@ that hold a reference table instead of a step list.
 
 The potion recipes come from a player made wiki rather than from Twilight, and
 are labelled as such on the page along with the date they were last touched.
+They live in `POTIONS` in `build_quests.py`: a label, the rows, and the list of
+plants and monsters each material comes from, which is the part players
+actually ask about. Re-read
+[the wiki page](https://wiki.nightmareofragnarok.com/wiki/Potion) when it
+changes; it is edited far more often than the sheets are. `POTION_RULES` holds
+what is not an amount, including the one thing the wiki does not say: the
+ladder is per character, which Twilight confirmed in Discord on 8 Aug 2026.
 
 ## The navigation
 

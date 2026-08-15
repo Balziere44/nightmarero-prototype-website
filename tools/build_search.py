@@ -107,7 +107,9 @@ PAGES = [
     ("The server", "What makes it different", "index.html#server",
      "about server rates pve rules sobre servidor taxas regras"),
     ("FAQ", "The short answers", "index.html#faq",
-     "faq question answer free pay to win pvp perguntas duvidas gratis"),
+     "faq question answer free pay to win pvp woe autoloot potion quest per "
+     "character where does this drop mvp altar perguntas duvidas gratis "
+     "pocao onde dropa"),
     ("Class test", "Six questions, one class to try", "quiz.html",
      "quiz test personality which class should i play teste qual classe jogar"),
 ]

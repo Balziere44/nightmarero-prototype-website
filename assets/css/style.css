@@ -3015,6 +3015,23 @@ html[data-theme="light"] .site-footer { background: color-mix(in srgb, var(--bg)
   line-height: 1.5;
 }
 
+/* the "where those come from" line under each potion table: the wiki lists
+   the plant or the monster behind every material, which is the question
+   people ask far more often than the amounts */
+.q-potion-from {
+  margin-top: 0.6rem;
+  color: var(--text-muted);
+}
+.q-potion-from > span:first-child {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
 /* --------------------------------------------------------------------------
    20g. Endless Desert layers
 

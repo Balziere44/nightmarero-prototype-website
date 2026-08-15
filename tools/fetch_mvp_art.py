@@ -16,6 +16,7 @@ picture with the sheet, row and column it was anchored to. build_mvps.py uses
 those coordinates to attach the pictures to the right boss.
 """
 
+import hashlib
 import io
 import json
 import os
@@ -33,20 +34,38 @@ OUT_JSON = os.path.join(ROOT, "tools", "data", "mvp-art.json")
 URL = "https://docs.google.com/spreadsheets/d/%s/export?format=xlsx"
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) NightmareRO-site-build/1.0"
 
-# Worksheet order in each workbook, which is also the tab order. The names
-# match the CSV stems that fetch_mvps.py writes.
+# Tab name as it reads in the workbook -> the CSV stem fetch_mvps.py writes.
+# This used to be a list in tab order, which quietly broke the day a tab was
+# added: every picture after it was filed under the wrong quest. Names are
+# matched instead, and a tab that is not in here is reported and skipped.
 BOOKS = [
-    ("1ojSow2JMglSDcvXii3Sppoa9Nx9mWAcVtC3c_OzApzk",
-     ["summon-items", "locations", "nightmare", "cards", "relic-gears",
-      "spoiler-quest"]),
-    ("1Nr10_X30Okn5MgPTZVSpoSGuy50g7VdRvyOm1p9IRSk",
-     ["quest-index", "quest-relic-gear-options", "quest-amatsu",
-      "quest-true-hero-shadow-gloves", "quest-fallen-hero",
-      "quest-niflheim-challenge", "quest-kiel-challenge",
-      "quest-thor-challenge", "quest-black-ops", "quest-celine-kimi",
-      "quest-endless-desert", "quest-spare-12", "quest-spare-14",
-      "quest-spare-1", "quest-lighthalzen-entrance"]),
+    ("1ojSow2JMglSDcvXii3Sppoa9Nx9mWAcVtC3c_OzApzk", {
+        "Summon items Location": "summon-items",
+        "MVP Locations": "locations",
+        "Nightmare": "nightmare",
+        "MVP Cards": "cards",
+        "Relic Gears": "relic-gears",
+        "SpoilerQuest": "spoiler-quest",
+    }),
+    ("1Nr10_X30Okn5MgPTZVSpoSGuy50g7VdRvyOm1p9IRSk", {
+        "Ínicio": "quest-index",
+        "Relic Gear Options": "quest-relic-gear-options",
+        "Amatsu FieldDungeon": "quest-amatsu",
+        "True Hero Shadow Gloves": "quest-true-hero-shadow-gloves",
+        "Fallen Hero Quest": "quest-fallen-hero",
+        "Niflheim Challenge Dungeon": "quest-niflheim-challenge",
+        "Kiel Challenge Dungeon": "quest-kiel-challenge",
+        "Thor Challenge Dungeon": "quest-thor-challenge",
+        "Black Ops": "quest-black-ops",
+        "Celine Kimi Quest": "quest-celine-kimi",
+        "Endless Desert": "quest-endless-desert",
+        "Abbey Sealed  Chambers": "quest-abbey-sealed-chambers",
+        "Lighthalzen Dungeon Entrance": "quest-lighthalzen-entrance",
+    }),
 ]
+
+SHEETS_RE = re.compile(r'<sheet [^>]*name="([^"]+)"[^>]*r:id="(rId\d+)"')
+WB_REL_RE = re.compile(r'Id="(rId\d+)"[^>]*Target="([^"]+)"')
 
 ANCHOR_RE = re.compile(
     r"<xdr:from><xdr:col>(\d+)</xdr:col>.*?<xdr:row>(\d+)</xdr:row>.*?"
@@ -61,10 +80,8 @@ MIN_PIXELS = 40
 # site is shown wider than the content column, so cap them.
 MAX_SIDE = 900
 
-# Leftover tabs in the quest workbook, named Pagina1 and so on. They hold
-# images that no longer belong to any quest.
-SKIP_TABS = ("quest-spare-1", "quest-spare-12", "quest-spare-14",
-             # the spoiler quest tab duplicates pictures the per quest tabs
+# Tabs that are listed above but whose pictures are not wanted.
+SKIP_TABS = (# the spoiler quest tab duplicates pictures the per quest tabs
              # already carry, and only its text is used
              "spoiler-quest",
              # relic gear is mostly tooltip screenshots, transcribed into
@@ -90,17 +107,36 @@ def kind_of(width, height):
     return "tile"
 
 
+def worksheets(book):
+    """Every tab, as (name, path to its sheet xml), straight off the workbook
+    rather than guessed from the order tabs happen to be in."""
+    body = book.read("xl/workbook.xml").decode("utf-8")
+    rels = dict(WB_REL_RE.findall(
+        book.read("xl/_rels/workbook.xml.rels").decode("utf-8")))
+    found = []
+    for name, rid in SHEETS_RE.findall(body):
+        target = rels.get(rid, "")
+        if target:
+            found.append((name, "xl/" + target.lstrip("/")))
+    return found
+
+
 def read_book(sheet_id, tabs, out, kept):
     req = urllib.request.Request(URL % sheet_id, headers={"User-Agent": UA})
     blob = urllib.request.urlopen(req, timeout=180).read()
     print("workbook %s...: %.1f MB" % (sheet_id[:8], len(blob) / 1048576.0))
     book = zipfile.ZipFile(io.BytesIO(blob))
 
-    for index, tab in enumerate(tabs, start=1):
+    for tab_name, path in worksheets(book):
+        tab = tabs.get(tab_name)
+        if not tab:
+            print("  tab not in the list, skipped: %s" % tab_name)
+            continue
         if tab in SKIP_TABS:
             continue
+        rel_name = path.replace("worksheets/", "worksheets/_rels/") + ".rels"
         try:
-            rels = book.read("xl/worksheets/_rels/sheet%d.xml.rels" % index)
+            rels = book.read(rel_name)
         except KeyError:
             continue
         found = SHEET_DRAWING_RE.search(rels.decode("utf-8"))
@@ -130,7 +166,10 @@ def read_book(sheet_id, tabs, out, kept):
             if max(image.size) > MAX_SIDE:
                 image.thumbnail((MAX_SIDE, MAX_SIDE), Image.LANCZOS)
 
-            stem = "%s-%s" % (tab, os.path.splitext(name)[0])
+            # Google renumbers xl/media on every export, so a name taken
+            # from it renames half the folder for no reason. The picture's
+            # own bytes do not move.
+            stem = "%s-%s" % (tab, hashlib.sha1(raw).hexdigest()[:10])
             if stem not in kept:
                 image.save(os.path.join(OUT_IMG, stem + ".webp"),
                            "WEBP", quality=82, method=6)
