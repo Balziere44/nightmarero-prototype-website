@@ -4,7 +4,7 @@
  "_ambiguous": "A display name is not unique in the client, so an entry is only kept when the Type line agrees with the category the site has it under and every remaining candidate reads the same. Anything left over is reported by the script and deliberately not written here, so the sheet keeps the item.",
  "_source": "E:/NightmareRO (Release)/SystemEN/LuaFiles514/itemInfo.lua",
  "_base": "llchrisll/ROenglishRE 74ab56c59184 20210313",
- "count": 3605,
+ "count": 3603,
  "items": [
   {
    "id": 500,
@@ -796,30 +796,6 @@
    "new": true,
    "material": true,
    "cat": "Relic material",
-   "slot": "",
-   "kind": "material"
-  },
-  {
-   "id": 644,
-   "name": "\"Gift\" Box",
-   "slots": 0,
-   "type": "Container",
-   "stat": "",
-   "statLabel": "",
-   "level": null,
-   "weight": 10,
-   "classes": "",
-   "compound": "",
-   "mastery": [],
-   "effect": [
-    "Effect: Gives 1 random item"
-   ],
-   "flavour": "A box that contains some sort of \"present.\" Judging by the...smell...you find it hard to believe there is anything of value inside.",
-   "origin": "edited",
-   "ourName": "\"Gift\" Box",
-   "new": true,
-   "material": true,
-   "cat": "Container",
    "slot": "",
    "kind": "material"
   },
@@ -43125,31 +43101,6 @@
    "flavour": "A sword with a bright red blade favored by miner's everywhere for its compact design and hard edge, capable of cleaving through flesh with ease and, should the situation call for it, stone and metal too.",
    "origin": "edited",
    "ourName": "Mining Saber"
-  },
-  {
-   "id": 100272,
-   "name": "?ncient Hero's Boots +9 Refinement Ticket",
-   "slots": 0,
-   "type": "",
-   "stat": "",
-   "statLabel": "",
-   "level": null,
-   "weight": 1,
-   "classes": "",
-   "compound": "",
-   "mastery": [],
-   "effect": [
-    "A refinement ticket that refines Ancient Hero's Boots up to +9 at once.",
-    "Warning - Great Hero's Boots cannot be refined."
-   ],
-   "flavour": "",
-   "origin": "edited",
-   "ourName": "?ncient Hero's Boots +9 Refinement Ticket",
-   "new": true,
-   "material": true,
-   "cat": "Loot",
-   "slot": "",
-   "kind": "material"
   },
   {
    "id": 100479,

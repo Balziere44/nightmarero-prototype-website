@@ -105,6 +105,10 @@ DEV_ITEMS = {
     1100,       # Test Sword, "Test weapon do not steal"
     180001,     # Crash Test, "Time to Crash"
     170085,     # No Enchants Available, a line of interface text
+    644,        # "Gift" Box, an official container that says only "Gives 1
+                # random item" and names none of them
+    100272,     # ?ncient Hero's Boots +9 Refinement Ticket, for boots this
+                # server does not have, and the name is broken in the client
 }
 
 
