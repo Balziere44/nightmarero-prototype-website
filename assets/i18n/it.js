@@ -382,6 +382,7 @@ window.NM_I18N_REGISTER('it', {
   'db.s.shadow-gloves': 'Guanti shadow',
   'db.s.shadow-shoes': 'Stivali shadow',
   'db.s.shadow-pendant': 'Ciondolo shadow',
+  'db.s.costume': 'Costume',
   'db.src.shadow': 'Shadow gear',
   'db.src.relic': 'Equipaggiamento relic',
   'db.src.mvp-card': 'Carta di boss',

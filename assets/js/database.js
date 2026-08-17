@@ -42,7 +42,7 @@
   }
 
   var SLOT_KEYS = ['weapon', 'armor', 'shield', 'garment', 'shoes', 'headgear',
-    'accessory', 'shadow-armor', 'shadow-gloves', 'shadow-shoes',
+    'accessory', 'costume', 'shadow-armor', 'shadow-gloves', 'shadow-shoes',
     'shadow-pendant', 'any'];
   /* Shadow gear equips in a second window, so it has slots of its own that
      sit alongside the ordinary ones rather than competing with them. */
@@ -50,7 +50,8 @@
     weapon: 'Weapon', armor: 'Armour', shield: 'Shield', garment: 'Garment',
     shoes: 'Shoes', headgear: 'Headgear', accessory: 'Accessory', any: 'Fits any slot',
     'shadow-armor': 'Shadow armour', 'shadow-gloves': 'Shadow gloves',
-    'shadow-shoes': 'Shadow shoes', 'shadow-pendant': 'Shadow pendant'
+    'shadow-shoes': 'Shadow shoes', 'shadow-pendant': 'Shadow pendant',
+    costume: 'Costume'
   };
   /* "unknown" is for the pieces typed out of in game tooltips, which nobody
      has written down a drop for yet. */

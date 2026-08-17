@@ -116,7 +116,7 @@ def parse_gear(path, source, kind_of_sheet):
             continue
 
         cells = (row + [""] * 6)[:6]
-        name = clean(cells[0])
+        name = game_name(clean(cells[0]))
         if not name:
             continue
 
@@ -141,6 +141,46 @@ def parse_gear(path, source, kind_of_sheet):
     return items
 
 
+# Names the sheets spell one way and the game spells another, found by
+# checking every sheet row against the client's display names. The game's
+# spelling wins: it is what the player reads in the item window and types into
+# the search, and half of these were showing up twice on the site, once under
+# each spelling. Corrected here rather than in the CSVs, which are refetched.
+#
+# Only unambiguous cases are listed. "Glacial Shield" has no client entry and
+# is left alone rather than folded into the Gaia Shield it merely resembles.
+GAME_SPELLING = {
+    # gear
+    "Bloody Knight Shield": "Bloody Knight's Shield",
+    "Faceworm Queen's Leg": "Faceworm Queen Leg",
+    "Glacier Manteau": "Glacial Manteau",
+    "Glacier Muffler": "Glacial Muffler",
+    "High Arcanist Robes": "High Arcanist Robe",
+    "Iron Knuckles": "Iron Knuckle",
+    "Legacy of Dragons": "Legacy of Dragon",
+    "Operative's Scarf": "Operative Scarf",
+    "Operative's Shoes": "Operative Shoes",
+    "Operative's Suit": "Operative Suit",
+    "Pariah's Cloth": "Pariah Cloth",
+    # cards, which the site names after the monster
+    "Cat O' Ninetails": "Cat O' Nine Tails",
+    "Desert Wofl": "Desert Wolf",
+    "Gran Papilia": "Grand Papilia",
+    "Matrix Nanounit": "Matrix Nanonunit",
+    "Muspellkoll": "Muspellskoll",
+    "Peco Peco": "Pecopeco",
+    "Peco Peco Egg": "Pecopeco Egg",
+    "Pirate Skeleton": "Pirate Skel",
+    "Skeleton Prisoner": "Skel Prisoner",
+    "Skeleton Worker": "Skel Worker",
+    "Worm Tail": "Wormtail",
+}
+
+
+def game_name(name):
+    return GAME_SPELLING.get(name, name)
+
+
 # Five of the 583 card rows are typed differently from the rest. Corrected
 # here rather than in the CSV, because the CSV is refetched and would bring
 # them back. The wiki's own card page spells all five the short way.
@@ -163,7 +203,7 @@ def parse_cards(path, slot):
             continue
         cells = (row + [""] * 4)[:4]
         name = clean(cells[0])
-        name = CARD_NAME_FIX.get(name, name)
+        name = game_name(CARD_NAME_FIX.get(name, name))
         if not name:
             continue
         items.append({
@@ -192,7 +232,7 @@ def parse_mvp_cards(path):
     items = []
     for row in read(path):
         cells = (list(row) + [""] * 3)[:3]
-        name = clean(cells[0])
+        name = game_name(clean(cells[0]))
         if not name or name.lower() == "name":
             continue
         slot = MVP_CARD_SLOT.get(clean(cells[2]).lower(), "any")
@@ -322,6 +362,11 @@ def apply_client(items, path):
     and the effects, keeping the drop location, which is the one thing a
     tooltip never says. And it adds the gear that is in the game but on no
     sheet at all, which is most of what the client turned out to hold.
+
+    Everything in that file is an entry this server wrote: fetch_client_items.py
+    drops the ones that are word for word the community translation the client
+    ships, because those name thousands of items no server enables. So an item
+    arriving from here is an item that exists.
     """
     try:
         data = json.load(io.open(path, encoding="utf-8"))
@@ -339,8 +384,10 @@ def apply_client(items, path):
         if got.get("new"):
             if got["name"].lower() in ours:
                 continue
-            card = got["cat"] == "Card"
-            material = bool(got.get("material"))
+            kind = got.get("kind") or ("card" if got["cat"] == "Card"
+                                       else "gear")
+            card = kind == "card"
+            material = kind == "material"
             # for loot and materials the description IS the information, and
             # the reader files a plain paragraph as flavour, so take it back
             effect = client_effect(got)
@@ -348,8 +395,7 @@ def apply_client(items, path):
                 effect = [got["flavour"]]
             items.append({
                 "name": got["name"],
-                "kind": ("material" if material
-                         else "card" if card else "gear"),
+                "kind": kind,
                 "slot": got["slot"],
                 "cat": got["cat"],
                 # a card has no card slots of its own, and "0 slots" on the

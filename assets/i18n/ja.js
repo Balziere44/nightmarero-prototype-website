@@ -382,6 +382,7 @@ window.NM_I18N_REGISTER('ja', {
   'db.s.shadow-gloves': 'シャドウ手袋',
   'db.s.shadow-shoes': 'シャドウ靴',
   'db.s.shadow-pendant': 'シャドウペンダント',
+  'db.s.costume': 'コスチューム',
   'db.src.shadow': 'シャドウ装備',
   'db.src.relic': 'レリック装備',
   'db.src.mvp-card': 'MVPカード',

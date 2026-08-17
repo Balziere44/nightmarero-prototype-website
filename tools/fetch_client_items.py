@@ -7,16 +7,33 @@ sheet.
 
     python tools/fetch_client_items.py ["E:/NightmareRO (Release)"]
 
-The client keeps its English tooltips in SystemEN/LuaFiles514/itemInfo.lua, a
-plain Lua table the patcher rewrites on every patch. That file is the same text
-the item description window shows in game, which makes it the last word: the
-reference sheets are typed by hand and lag behind, a screenshot of a tooltip
-does not, and this is where the screenshot's text comes from.
+The client keeps its English tooltips in SystemEN/LuaFiles514/itemInfo.lua, and
+that file is the same text the item description window shows in game, which
+makes it the last word on what an item does: the reference sheets are typed by
+hand and lag behind, a screenshot of a tooltip does not, and this is where the
+screenshot's text comes from.
 
-Only the items the site already lists are kept, so the committed JSON stays
-about the size of the database rather than the size of the client. Everything
-that looks like server made gear and is *not* on the site is reported instead,
-which is how the next batch of new items gets noticed.
+It is *not* a list of the items this server has. The file is llchrisll's
+ROenglishRE, a community translation of the whole official database, and it
+ships the same 19,315 entries to every server that installs it -- Siege White
+Potion, the anniversary cakes, event coins from 2011, none of which exist here.
+The owner edits that file in place for his own content, so the only entries this
+script will publish are the ones he changed:
+
+  * custom  -- an id the translation never had, so it is his
+  * edited  -- an id whose name, description or slot count he rewrote
+  * vanilla -- byte for byte the translation, therefore no evidence at all
+
+The base it diffs against is the exact release the client was built from, taken
+from the "Last updated" stamp in the client file's own header and pinned below
+by commit. If that stamp ever names a release we have no pin for, the script
+stops instead of guessing, because guessing here is what put items that are not
+in the game on the site.
+
+An untouched entry is not a claim that the item is missing -- Jellopy is
+untouched and obviously real. It only means nothing we can read says it is
+here, so it stays out until a sheet, a print or an answer in the Discord says
+otherwise.
 
 Nothing here needs the game running, but it does need the client installed, so
 the JSON is committed and the rest of the build works without it.
@@ -33,12 +50,25 @@ import build_database as db
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "tools", "data", "client-items.json")
+CACHE = os.path.join(ROOT, "tools", "cache")
 
 DEFAULT_CLIENTS = (
     r"E:/NightmareRO (Release)",
     r"C:/NightmareRO (Release)",
 )
 INSIDE = os.path.join("SystemEN", "LuaFiles514", "itemInfo.lua")
+
+# The translation release the client was built from, by the stamp in its header.
+# Add a line here when a patch moves the client to a newer release: find the
+# commit whose itemInfo carries that "Last updated" date in
+# https://github.com/llchrisll/ROenglishRE/commits/master
+BASE_REPO = "llchrisll/ROenglishRE"
+BASE_RAW = "https://raw.githubusercontent.com/%s/%s/%s"
+BASE_PINS = {
+    "20210313": ("74ab56c59184b4b2b2f5f8276333e083ba14bb4a",
+                 "Renewal/System/itemInfo_EN.lua"),
+}
+STAMP = re.compile(r"^--\s*Last updated:\s*(\d{8})", re.M)
 
 ENTRY = re.compile(r"^\t\[(\d+)\]\s*=\s*\{")
 STRING = r'"((?:[^"\\]|\\.)*)"'
@@ -47,8 +77,18 @@ SLOTS = re.compile(r"slotCount\s*=\s*(\d+)")
 ONE_LINE = re.compile(r'^\s*' + STRING + r',?\s*$')
 
 # ^FF0000 turns a word red in the client. The site colours the same words
-# itself from the status codex, so the codes go.
+# itself from the status codex, so the codes go. SHORT_COLOUR catches the ones
+# written with a digit missing -- three cards say ^00000 where they mean
+# ^000000, and without this the site prints "Water^00000".
 COLOUR = re.compile(r"\^[0-9a-fA-F]{6}")
+SHORT_COLOUR = re.compile(r"\^[0-9a-fA-F]{3,5}(?![0-9a-fA-F])")
+
+# <NAVI>Mayomayo<INFO>malangdo,213,167,0,100,0,0</INFO></NAVI> is a link the
+# client turns into "Mayomayo", clickable, walking you there. Keep the name and
+# the place, which is more than the site would otherwise know.
+NAVI = re.compile(r"<NAVI>(.*?)<INFO>([a-z0-9_@]+),(\d+),(\d+)[^<]*</INFO></NAVI>")
+ANGLE = re.compile(r"<(/?[A-Za-z][A-Za-z ]*)>")
+
 RULE = re.compile(r"^_{3,}$")
 
 # the first line of most tooltips, and never useful
@@ -56,8 +96,16 @@ NOISE = ("Can be identified by using a Magnifier.",)
 
 LABEL = re.compile(r"^([A-Z][A-Za-z /]*):\s*(.*)$")
 
-# label in the tooltip -> what we do with it
 STAT_LABELS = ("Attack", "Magic Attack", "Defense", "Magic Defense")
+
+# Entries the owner wrote and then left lying around: a dev weapon, a crash
+# test, and the placeholder the enchant window shows when a spot has no random
+# enchants. Named by id because the names are ordinary words.
+DEV_ITEMS = {
+    1100,       # Test Sword, "Test weapon do not steal"
+    180001,     # Crash Test, "Time to Crash"
+    170085,     # No Enchants Available, a line of interface text
+}
 
 
 def find_client(argv):
@@ -72,22 +120,93 @@ def find_client(argv):
     return None
 
 
+def stamp_of(path):
+    """The translation release a copy of itemInfo.lua was built from."""
+    head = io.open(path, encoding="cp949", errors="replace").read(4096)
+    found = STAMP.search(head)
+    return found.group(1) if found else ""
+
+
+def base_copy(stamp):
+    """The untouched translation the client started from, downloaded once.
+
+    Cached under tools/cache because it is 15 MB and reproducible: the pin is
+    a commit, so the same stamp always fetches the same bytes.
+    """
+    if stamp not in BASE_PINS:
+        print("o cliente diz 'Last updated: %s' e não temos pin para essa\n"
+              "versão da tradução. Sem a base não há como saber quais itens\n"
+              "são deste servidor, então nada é escrito. Ache o commit com\n"
+              "essa data em https://github.com/%s/commits/master e junte em\n"
+              "BASE_PINS." % (stamp or "?", BASE_REPO))
+        return None
+
+    commit, inside = BASE_PINS[stamp]
+    if not os.path.isdir(CACHE):
+        os.makedirs(CACHE)
+    path = os.path.join(CACHE, "itemInfo-base-%s.lua" % stamp)
+    if not os.path.exists(path):
+        url = BASE_RAW % (BASE_REPO, commit, inside.replace(" ", "%20"))
+        print("  baixando a tradução base (%s) uma vez..." % stamp)
+        try:
+            import urllib.request
+            with urllib.request.urlopen(url, timeout=300) as answer:
+                blob = answer.read()
+        except Exception as exc:                     # noqa: BLE001
+            print("  não deu para baixar (%s).\n"
+                  "  Baixe à mão e salve em %s:\n  %s" % (exc, path, url))
+            return None
+        io.open(path, "wb").write(blob)
+
+    got = stamp_of(path)
+    if got != stamp:
+        # a wrong base would call half the database custom, which is the exact
+        # mistake this whole mechanism exists to prevent
+        print("  a base baixada diz '%s' e o cliente diz '%s'; apagando %s"
+              % (got or "?", stamp, path))
+        os.remove(path)
+        return None
+    return path
+
+
 def unescape(text):
     return text.replace('\\"', '"').replace("\\\\", "\\")
 
 
 def clean(text):
-    text = COLOUR.sub("", unescape(text))
+    text = unescape(text)
+    text = NAVI.sub(lambda m: "%s (%s %s,%s)" % (m.group(1), m.group(2),
+                                                 m.group(3), m.group(4)), text)
+    text = COLOUR.sub("", text)
+    text = SHORT_COLOUR.sub("", text)
+    # <None> is how the homunculus embryos say a slot has no skill
+    text = ANGLE.sub(lambda m: m.group(1), text)
     return re.sub(r"\s+", " ", text).strip()
 
 
+def readable(text):
+    """False for a line the translation never got to.
+
+    A handful of entries still carry their Korean, and the client reads the
+    file as a Korean codepage. Hangul on an English site is a bug, so the line
+    is dropped and the item keeps whatever else it has.
+    """
+    if not text:
+        return False
+    odd = sum(1 for ch in text if ord(ch) > 127)
+    return odd * 3 <= len(text)
+
+
 def read_client(path):
-    """id -> {name, slots, lines}. The file is 16 MB of Lua and a third of it
-    is Korean sprite names in a codepage we do not care about, so it is read
-    with replacement and only the ASCII fields are used."""
+    """id -> {name, slots, lines}.
+
+    The file is 16 MB of Lua and a third of it is Korean sprite names, so it is
+    read as the codepage the client itself uses and only the fields we name are
+    touched.
+    """
     items, cur, in_desc = {}, None, False
 
-    for raw in io.open(path, encoding="utf-8", errors="replace"):
+    for raw in io.open(path, encoding="cp949", errors="replace"):
         found = ENTRY.match(raw)
         if found:
             cur = {"id": int(found.group(1)), "name": "", "slots": None,
@@ -124,12 +243,33 @@ def read_client(path):
     return items
 
 
+def origins(ours, base):
+    """id -> custom | edited | vanilla, by what the owner changed.
+
+    Compared on exactly what a player can read: the name, the description and
+    the number of card slots. The translation and the client differ in one
+    mechanical way everywhere -- the client adds costume = false -- and that is
+    not an edit, so the fields are named rather than the whole block compared.
+    """
+    out = {}
+    for iid, entry in ours.items():
+        was = base.get(iid)
+        if was is None:
+            out[iid] = "custom"
+        elif (entry["name"], entry["lines"], entry["slots"]) != \
+             (was["name"], was["lines"], was["slots"]):
+            out[iid] = "edited"
+        else:
+            out[iid] = "vanilla"
+    return out
+
+
 def blocks(lines):
     """The tooltip is written as blocks divided by a rule of underscores."""
     out, current = [], []
     for line in lines:
         text = clean(line)
-        if not text:
+        if not text or not readable(text):
             continue
         if RULE.match(text):
             if current:
@@ -197,8 +337,11 @@ def describe(entry):
                 out["type"] = value
                 continue
             if label in STAT_LABELS:
-                stats[label] = value
-                continue
+                # A homunculus embryo lists its skills as "Attack: Caprice"
+                # and "Defense: None". Only a number is a stat.
+                if re.search(r"\d", value):
+                    stats[label] = value
+                    continue
             if label == "Mastery Type":
                 mastery_type = value
                 continue
@@ -234,9 +377,17 @@ def describe(entry):
                 out["classes"] = line
                 continue
 
+            # the salvagers and a few chests repeat their own name as the
+            # description, which tells the reader nothing twice
+            if line == entry["name"]:
+                continue
+
             # "For each Refine:" and friends head a block; fold the heading
-            # into each line under it so one bullet reads on its own
-            if line.endswith(":"):
+            # into each line under it so one bullet reads on its own. A whole
+            # sentence ending in a colon is not a heading -- the homunculus
+            # embryos open with one, and folding it in repeated it on every
+            # line under it.
+            if line.endswith(":") and len(line) <= 40 and line.count(" ") <= 5:
                 header = line.rstrip(":")
                 continue
             out["effect"].append("%s: %s" % (header, line) if header else line)
@@ -258,12 +409,6 @@ def describe(entry):
     return out
 
 
-# A tooltip written by this server rather than by Gravity: the custom stat
-# vocabulary. Used only to decide what is worth reporting as missing.
-CUSTOM = re.compile(
-    r"Mastery Bonus|Potency|Exuvic Blessing|Breach|Per Refine|per Refine|"
-    r"Relic |Reputation")
-
 # The client's Type line -> the category the sheets use. Needed for more than
 # tidiness: a display name is not unique in the client, so this is how the
 # right entry gets picked out of several. Mysteltainn is both a sword and a
@@ -276,40 +421,63 @@ TYPE_CAT = {
     "two-handed axe": "Two-Handed Axes",
     "one-handed spear": "One-Handed Spears", "spear": "One-Handed Spears",
     "two-handed spear": "Two-Handed Spears",
-    "mace": "Maces", "katar": "Katars", "knuckle": "Fists",
+    "mace": "Maces", "katar": "Katars", "legendary katar": "Katars",
+    "knuckle": "Fists", "fist": "Fists",
     "bow": "Bows", "staff": "Staffs", "one-handed staff": "Staffs",
-    "two-handed staff": "Staffs", "book": "Books", "soul": "Souls",
+    "two-handed staff": "Staffs", "legendary staff": "Staffs",
+    "book": "Books", "soul": "Souls",
     "instrument": "Instruments & Whips",
     "musical instrument": "Instruments & Whips",
     "whip": "Instruments & Whips", "revolver": "Revolvers", "rifle": "Rifles",
     "shotgun": "Shotguns", "gatling gun": "Gatling Guns",
     "grenade launcher": "Grenade Launchers",
-    "huuma shuriken": "Huuma Shurikens",
+    "huuma shuriken": "Huuma Shurikens", "huuma": "Huuma Shurikens",
+    "taekwon glove": "Taekwon Gloves",
     "armor": "Armors", "garment": "Garments", "shoes": "Shoes",
     "shield": "Shields", "accessory": "Accessories",
+    "godly armor": "Armors", "godly garment": "Garments",
+    "godly shoes": "Shoes", "godly shield": "Shields",
+    "godly accessory": "Accessories",
 }
 
 
-# The client's Type line for the things that are not worn: loot, materials and
-# the herbs. These are the items players hunt and cannot look up anywhere, so
-# they belong in the database even though they have no stats. Cosmetics, pets,
-# eggs, ammunition, scrolls, runes and enchant stones are deliberately left
-# out: nobody asks who drops a costume.
+# The Type lines for the things that are not worn, folded into the few groups a
+# reader would actually filter by. The owner's own wording is kept wherever he
+# has one -- these are his systems and his words for them are what the game and
+# the Discord use.
 ETC_CAT = {
-    "collectible": "Loot",
+    # the loot you pick up
+    "collectible": "Loot", "???": "Loot", "trophy": "Trophy",
+    "valuable": "Valuable", "essential": "Essential", "artifact": "Artifact",
     "relic": "Relic material",
-    "quest": "Quest item",
     "crafting ingredient": "Crafting ingredient",
-    "cooking ingredient": "Cooking ingredient",
+    "crafting material": "Crafting ingredient",
+    "cooking ingredient": "Crafting ingredient",
     "forging material": "Forging material",
     "refining material": "Refining material",
-    "skill catalyst": "Skill catalyst",
-    "skill necessity": "Skill catalyst",
-    "restorative": "Restorative",
-    "trophy": "Trophy",
-    "valuable": "Valuable",
-    "essential": "Essential",
-    "artifact": "Artifact",
+    "skill catalyst": "Skill catalyst", "skill necessity": "Skill catalyst",
+    "skill requirement": "Skill catalyst", "skill material": "Skill catalyst",
+    "quest": "Quest item", "currency": "Currency",
+    # what you drink, read or throw away
+    "potion": "Consumable", "restorative": "Consumable",
+    "throwable potion": "Consumable", "consumable": "Consumable",
+    "apple": "Consumable", "usable": "Consumable", "supportive": "Consumable",
+    "stat bonus": "Stat booster", "attack speed potion": "Stat booster",
+    "guild exp boost": "Stat booster",
+    # this server's own systems
+    "enchant": "Enchant", "option enchanter": "Enchant scroll",
+    "rune": "Rune", "homunculus embryo": "Homunculus embryo",
+    "container": "Container", "card album": "Container",
+    "shadow coffer": "Container",
+    "salvager": "Salvager",
+    "weapon modification": "Modification",
+    "armor modification": "Modification",
+    "weapon maintenance kit": "Maintenance kit",
+    "armor maintenance kit": "Maintenance kit",
+    "teleporter": "Travel", "warper": "Travel", "travel permit": "Travel",
+    "summoning ticket": "Summoning", "utility": "Utility",
+    "arrow": "Ammunition", "ammo": "Ammunition", "kunai": "Ammunition",
+    "shuriken": "Ammunition",
 }
 
 
@@ -322,13 +490,15 @@ def client_cat(kind):
     kind = kind.strip().lower()
     if not kind:
         return ""
-    if kind.startswith("relic "):
+    if kind.startswith("relic ") or kind == "relic gear":
         return "Relic Gear"
-    if kind.startswith("shadow "):
+    if kind.startswith("shadow ") or kind.startswith("relic shadow "):
         return "Shadow Gear"
     if kind.startswith("headgear"):
         return "Headgears"
-    if kind == "card":
+    if kind.startswith("costume"):
+        return "Costumes"
+    if kind in ("card", "card?"):
         return "Card"
     return TYPE_CAT.get(kind, "")
 
@@ -336,6 +506,7 @@ def client_cat(kind):
 CAT_SLOT = {
     "Armors": "armor", "Garments": "garment", "Shoes": "shoes",
     "Shields": "shield", "Headgears": "headgear", "Accessories": "accessory",
+    "Costumes": "costume",
 }
 SHADOW_SLOT = {
     "shadow armor": "shadow-armor", "shadow gloves": "shadow-gloves",
@@ -357,7 +528,8 @@ def slot_for(got):
         where = got["compound"].strip().lower()
         return COMPOUND_SLOT.get(where, "any")
     if cat == "Shadow Gear":
-        return SHADOW_SLOT.get(kind, "shadow-armor")
+        bare = kind[6:] if kind.startswith("relic ") else kind
+        return SHADOW_SLOT.get(bare, "shadow-armor")
     if cat in CAT_SLOT:
         return CAT_SLOT[cat]
     if kind.startswith("relic "):
@@ -387,12 +559,12 @@ def same_reading(a, b):
 
 
 def asked_about():
-    """Names somebody asked about in the Discord, from who-drops.json.
+    """Names somebody in the Discord answered about, from who-drops.json.
 
-    An item a player went looking for belongs in the database even when its
-    tooltip is plain official text with none of this server's vocabulary in it.
-    Sunglasses is the case that proved it: a champion drop people hunt, and the
-    reader would otherwise skip it.
+    An answer naming an item is independent evidence that the item is in the
+    game, so it stands in for an edited tooltip: these come in even when the
+    entry is word for word the translation. Sunglasses is the case that proved
+    it, a champion drop people hunt with an entirely official description.
     """
     path = os.path.join(db.SRC, "who-drops.json")
     try:
@@ -403,8 +575,8 @@ def asked_about():
 
 
 def wanted_names():
-    """Everything the site already lists, so the extract can be trimmed to it
-    and the rest reported."""
+    """Everything the site already lists, so a name in the client can be
+    matched to the row it corrects."""
     items = []
     for fname, source, kind in (
             ("gear__core-weapons.csv", "core", "weapons"),
@@ -439,44 +611,64 @@ def wanted_names():
 def main():
     path = find_client(sys.argv)
     if not path:
-            print("client não encontrado. Passe a pasta do jogo:\n"
-                  "  python tools/fetch_client_items.py \"E:/NightmareRO (Release)\"")
-            return 1
+        print("client não encontrado. Passe a pasta do jogo:\n"
+              "  python tools/fetch_client_items.py \"E:/NightmareRO (Release)\"")
+        return 1
 
     print("lendo %s" % path)
     raw = read_client(path)
     print("  %d itens no cliente" % len(raw))
 
+    stamp = stamp_of(path)
+    base = base_copy(stamp)
+    if not base:
+        return 1
+    mine = origins(raw, read_client(base))
+    counts = {}
+    for kind in mine.values():
+        counts[kind] = counts.get(kind, 0) + 1
+    print("  do servidor: %d novos + %d reescritos; da tradução: %d ignorados"
+          % (counts.get("custom", 0), counts.get("edited", 0),
+             counts.get("vanilla", 0)))
+
     wanted = wanted_names()
     asked = asked_about()
-    found, unknown = {}, {}
+    found, unknown, untouched = {}, {}, []
 
     for entry in sorted(raw.values(), key=lambda e: e["id"]):
         if not entry["name"] or not entry["lines"]:
+            continue
+        if entry["id"] in DEV_ITEMS:
             continue
         low = entry["name"].lower()
         ours = wanted.get(low)
         if ours is None and low.endswith(" card"):
             ours = wanted.get(low[:-5])
+
+        # the gate: only what this server wrote, or what the Discord confirms
+        if mine[entry["id"]] == "vanilla" and low not in asked:
+            if ours is not None:
+                untouched.append(ours["name"])
+            continue
+
         if ours is None:
-            # gear the site has never listed. Kept only when it is equipment
-            # or a card and the description carries this server's own stat
-            # vocabulary, which is what tells a live item apart from the
-            # leftovers every client ships.
             got = describe(entry)
-            if client_cat(got["type"]) and (
-                    low in asked or CUSTOM.search(" ".join(entry["lines"]))):
-                got["ourName"] = got["name"]
-                got["new"] = True
-                got["custom"] = bool(CUSTOM.search(" ".join(entry["lines"])))
+            got["origin"] = mine[entry["id"]]
+            got["ourName"] = got["name"]
+            got["new"] = True
+            if client_cat(got["type"]):
                 unknown.setdefault(got["name"], []).append(got)
-            elif etc_cat(got["type"]):
-                got["ourName"] = got["name"]
-                got["new"] = True
+            elif etc_cat(got["type"]) or got["flavour"] or got["effect"]:
+                # loot, materials and the rest of what is not worn. A few of
+                # them have no Type line at all and are nothing but their
+                # description, which is still the answer to "what is this".
                 got["material"] = True
                 unknown.setdefault(got["name"], []).append(got)
             continue
-        found.setdefault(ours["name"], []).append((ours, describe(entry)))
+
+        got = describe(entry)
+        got["origin"] = mine[entry["id"]]
+        found.setdefault(ours["name"], []).append((ours, got))
 
     keep, ambiguous, wrong_cat = [], [], []
     for name in sorted(found):
@@ -519,7 +711,7 @@ def main():
             # an item pulled in only because somebody asked about it, whose
             # name is already a piece of loot, is the wrong item: RO has a
             # Fresh Fish you can equip and a Fresh Fish that Phen drops
-            if loot and not got.get("custom"):
+            if loot and got["origin"] == "vanilla":
                 continue
             by_cat.setdefault(client_cat(got["type"]), []).append(got)
 
@@ -535,11 +727,13 @@ def main():
                 # keep the one that actually says something
                 first = max(group, key=lambda g: len(g.get("flavour", "")) +
                             len(" ".join(g.get("effect", []))))
-                first["cat"] = etc_cat(first["type"])
+                first["cat"] = etc_cat(first["type"]) or "Loot"
                 first["slot"] = ""
+                first["kind"] = "material"
             else:
                 first["cat"] = cat
                 first["slot"] = slot_for(first)
+                first["kind"] = "card" if cat == "Card" else "gear"
             added.append(first)
 
     keep += added
@@ -548,8 +742,16 @@ def main():
         "_note": "Item tooltips read out of the client by "
                  "tools/fetch_client_items.py. This is what the game itself "
                  "shows, so build_database.py trusts it over every sheet. "
-                 "Trimmed to the items the site lists. ourName is the name the "
-                 "site uses, which is what the override is keyed on.",
+                 "ourName is the name the site uses, which is what the "
+                 "override is keyed on.",
+        "_only": "Only entries this server wrote are here. The client's "
+                 "itemInfo.lua is a translation of the whole official item "
+                 "database and lists thousands of items no server enables, so "
+                 "every entry is diffed against the release it was built from "
+                 "and the untouched ones are dropped: origin custom means an "
+                 "id the translation never had, edited means the owner "
+                 "rewrote it. An untouched entry is not proof an item is "
+                 "missing, only that nothing here says it is present.",
         "_ambiguous": "A display name is not unique in the client, so an entry "
                       "is only kept when the Type line agrees with the "
                       "category the site has it under and every remaining "
@@ -557,6 +759,7 @@ def main():
                       "reported by the script and deliberately not written "
                       "here, so the sheet keeps the item.",
         "_source": path.replace("\\", "/"),
+        "_base": "%s %s %s" % (BASE_REPO, BASE_PINS[stamp][0][:12], stamp),
         "count": len(keep),
         "items": keep,
     }
@@ -567,6 +770,10 @@ def main():
           "tools/data/client-items.json (%.0f KB)"
           % (len(keep) - len(added), len(added),
              os.path.getsize(OUT) / 1024.0))
+    if untouched:
+        print("\n%d itens do site cuja entrada no cliente é da tradução, não\n"
+              "  deste servidor: a planilha fica valendo. Ex.: %s"
+              % (len(untouched), ", ".join(sorted(untouched)[:8])))
 
     for title, rows in (("ambíguos, mantidos com a planilha", ambiguous),
                         ("cliente discorda da categoria", wrong_cat),

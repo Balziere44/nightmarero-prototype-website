@@ -288,6 +288,10 @@ reference sheets, which are the only thing that says where an item drops. Then
 `relic-gear.json` and `tooltip-items.json`, both typed out of screenshots by
 hand.
 
+Nothing is listed unless one of those four says the item is on **this** server.
+That rule cost the database 733 entries once and is the reason the section
+below exists.
+
 ```bash
 python tools/fetch_sheets.py        # re-download tools/data/*.csv from Google
 python tools/fetch_client_items.py  # re-read the installed game client
@@ -336,29 +340,79 @@ python tools/fetch_client_items.py "E:/NightmareRO (Release)"
 python tools/build_database.py
 ```
 
-`fetch_client_items.py` reads the 20,851 entries in that file and writes
-`tools/data/client-items.json`. It needs the client installed, which is why its
-output is committed: everyone else rebuilds from the JSON. It does two things:
+#### but it is not a list of the items this server has
 
-- **Corrects what the site already lists.** 1306 of them. The stats and the
+That file is llchrisll's ROenglishRE, a community translation of the **whole**
+official item database, and it ships the same 19,315 entries to every server
+that installs it. Siege White Potion, Enriched White PotionZ, the 11th
+Anniversary Coin, three flavours of Light White Potion: all present in the file,
+none of them in this game. Reading it as an item list put 733 items that do not
+exist on the site, and a player noticed by screenshotting the real White Potion
+next to them.
+
+Twilight edits that file in place for his own content, so the only entries
+`fetch_client_items.py` will publish are the ones he changed. Every entry is
+diffed against the exact release the client was built from:
+
+| origin | meaning | count |
+| --- | --- | --- |
+| `custom` | an id the translation never had | 1536 |
+| `edited` | name, description or slot count rewritten | 2173 |
+| `vanilla` | byte for byte the translation, so no evidence | 17142 |
+
+The base comes from the `-- Last updated: 20210313` stamp in the client file's
+own header, pinned by commit in `BASE_PINS`, downloaded once into
+`tools/cache/` (gitignored, 15 MB). **If a patch ever moves the client to a
+release with no pin, the script stops instead of guessing**, because guessing
+is what put the 733 there. Add the new commit from
+[the upstream history](https://github.com/llchrisll/ROenglishRE/commits/master)
+and re-run.
+
+The gate proves itself in both directions: all 131 items transcribed off the
+guild's screenshots come back `custom` or `edited`, and all 11 items the player
+reported come back `vanilla`.
+
+An untouched entry is **not** a claim that the item is missing. Jellopy is
+untouched and obviously real. It only means nothing readable says it is here, so
+it stays out until a sheet, a screenshot or an answer in the Discord says
+otherwise — an item named in `who-drops.json` is imported however its tooltip
+reads, which is how Sunglasses stays in.
+
+#### what it does with what is left
+
+`fetch_client_items.py` writes `tools/data/client-items.json`. It needs the
+client installed, which is why its output is committed: everyone else rebuilds
+from the JSON. It does two things:
+
+- **Corrects what the site already lists.** 1449 of them. The stats and the
   effects come from the client, and the one thing a tooltip never says is kept
   from the sheet: where the item drops. Card slot counts, affixes, categories
-  and `Found on <map>` lines survive too.
-- **Adds the gear that is in the game and on no sheet at all.** 422 pieces,
-  including whole families the sheets never mention. They carry no location, so
-  they land under *Location unknown* in the source filter.
+  and `Found on <map>` lines survive too. 207 rows are left alone because their
+  client entry is untouched translation text, which would be a downgrade.
+- **Adds what is in the game and on no sheet at all.** 2156 entries, including
+  whole families the sheets never mention. They carry no location, so they land
+  under *Location unknown* in the source filter.
 
-Two things stop it from doing damage:
+Three things stop it from doing damage:
 
 - **A display name is not unique in the client.** Mysteltainn is a sword and a
   card, RO ships three different Falchions, and the renewal version of a weapon
   keeps the old one's name. An entry is only used when its `Type:` line agrees
   with the category the site has the item under *and* every remaining candidate
-  reads the same. The 140 that stay ambiguous are printed and left with the
+  reads the same. The 14 that stay ambiguous are printed and left with the
   sheet.
 - **A tooltip that parses down to nothing is a bug in the reader, not an item
   without effects.** `build_database.py` refuses to replace a filled effect
   list with an empty one and names whatever it skipped.
+
+The client's own markup has to come off on the way in. `^FF0000` colour codes go
+(the site colours the same words itself from the status codex), including the
+three cards written `^00000` with a digit missing, which used to print as
+`Water^00000` on the page. `<NAVI>Mayomayo<INFO>malangdo,213,167,...</INFO>
+</NAVI>` is a link the client turns into a clickable walk-there name, so it
+becomes `Mayomayo (malangdo 213,167)`. `<None>` becomes `None`. A line that is
+still Korean is dropped rather than printed at an English reader, and the file
+is read as `cp949`, which is the codepage the client itself uses.
 
 The reader has to tell an effect from flavour text, since the client separates
 its blocks with a rule of underscores and labels almost nothing. Flavour is the
@@ -404,19 +458,38 @@ item database. So the site answers it three ways.
 ### Loot and materials
 
 The database used to be gear and cards only, and a player said so in
-`#item-finder`: *"it doesn't work for etc/use items."* The client knows every
-one of them, so `fetch_client_items.py` also keeps the categories people
-actually hunt — loot, relic and quest materials, herbs, crafting, forging,
-refining and cooking ingredients, catalysts, trophies, valuables and artifacts.
-That is 1200 more entries, under a third filter chip. Costumes, pets, eggs,
-ammunition, scrolls, runes and enchant stones are left out on purpose: nobody
-asks who drops a costume.
+`#item-finder`: *"it doesn't work for etc/use items."* Everything the owner
+wrote an entry for is in now, under a third filter chip: loot, relic and quest
+materials, herbs, crafting, forging and refining ingredients, catalysts,
+trophies, valuables and artifacts, and the systems that are his own work and are
+documented nowhere else — enchants and enchant scrolls, containers and coffers,
+runes, homunculus embryos, stat boosters, salvagers, modifications, maintenance
+kits and travel items. Costumes come in as gear, in a costume slot of their own.
+
+The categories are the `Type:` line he writes, folded only where he spells the
+same thing two ways, so the filter reads in the words the game and the Discord
+already use.
 
 Loot has no stats, so for those entries the description *is* the information
 and the reader's flavour text becomes the entry body. An item somebody asked
 about in `who-drops.json` is imported even when its tooltip is plain official
 text with none of this server's vocabulary in it, which is how Sunglasses got
 in.
+
+### When the sheet and the game spell it differently
+
+Every sheet row was checked against the client's display names. 21 of them are
+spelled another way in game — `Peco Peco` is `Pecopeco`, `Worm Tail` is
+`Wormtail`, `Iron Knuckles` is `Iron Knuckle`, `Desert Wofl` is a typo for
+`Desert Wolf`. The game's spelling wins, in `GAME_SPELLING` in
+`build_database.py` rather than in the CSVs, which are refetched: it is what the
+player reads in the item window and types into the search, and ten of those
+names were putting the same item on the site twice, once under each spelling.
+
+Only unambiguous cases are listed. `Glacial Shield` has no client entry at all
+and is left as the sheet has it rather than folded into the `Gaia Shield` it
+merely resembles. Where the game itself carries the typo it is kept: the server
+really does call one bow `True Faith Bow Bow`.
 
 ## The gear reference tabs
 
