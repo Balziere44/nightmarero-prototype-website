@@ -305,6 +305,49 @@ def parse_tooltips(path):
     return items
 
 
+def apply_tooltips(items):
+    """A tooltip is the game itself talking, so it outranks the sheets.
+
+    Where a name is in both, the tooltip's stats and effects replace the
+    sheet's and everything the tooltip cannot know is kept: the drop location,
+    the card slots, the affix, and which sheet the row came from, so the item
+    keeps its place in the filters. An empty stat in the tooltip file means a
+    mouse cursor was over the number in the screenshot, and the sheet value is
+    left alone rather than replaced by a guess.
+    """
+    sheet = {}
+    for it in items:
+        if it["source"] != "unknown":
+            sheet.setdefault(it["name"].lower(), it)
+
+    kept, fixed = [], []
+    for it in items:
+        if it["source"] != "unknown":
+            kept.append(it)
+            continue
+        old = sheet.get(it["name"].lower())
+        if old is None:
+            kept.append(it)
+            continue
+
+        effect = list(it["effect"])
+        # the map a relic is found on is ours, not the tooltip's
+        effect += [line for line in old.get("effect", [])
+                   if line.startswith("Found on ")]
+        old["effect"] = effect
+        if it.get("stat"):
+            old["stat"] = it["stat"]
+            old["statLabel"] = it["statLabel"]
+        if it.get("level") is not None:
+            old["level"] = it["level"]
+        fixed.append(it["name"])
+
+    if fixed:
+        print("  %d corrigidos pelo tooltip: %s"
+              % (len(fixed), ", ".join(sorted(fixed))))
+    return kept
+
+
 # Shadow gear equips in a second equipment window, so a Shadow Armor and an
 # ordinary Armor are worn at the same time and need slots of their own.
 SHADOW_PIECES = {
@@ -426,19 +469,7 @@ def main():
     else:
         print("  faltando: mvp-cards.csv")
 
-    # The tooltip file only holds what the sheets do not. If a sheet later
-    # grows a row for one of those names, the sheet wins and the hand typed
-    # copy is dropped, so the same item never shows up twice.
-    from_sheets = set(i["name"].lower() for i in items
-                      if i["source"] != "unknown")
-    kept = []
-    for it in items:
-        if it["source"] == "unknown" and it["name"].lower() in from_sheets:
-            print("  agora está na planilha, tirando do tooltip: %s"
-                  % it["name"])
-            continue
-        kept.append(it)
-    items = kept
+    items = apply_tooltips(items)
 
     # de-duplicate on name + slot + source, keeping the first
     seen, unique = set(), []

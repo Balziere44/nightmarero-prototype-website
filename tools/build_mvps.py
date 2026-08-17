@@ -148,6 +148,15 @@ def parse_cards():
             continue
         out[cells[0].lower()] = {"name": cells[0], "effect": cells[1],
                                  "slot": cells[2]}
+
+    # A tooltip screenshot is the game talking, so it overrules the sheet row
+    # here the same way it does in the database. Moonlight Flower is the reason
+    # this exists: the sheet still describes the card it used to be.
+    typed = load_json("tooltip-items.json", {})
+    for card in typed.get("cards", []):
+        key = card["name"].lower()
+        if key in out:
+            out[key]["effect"] = ". ".join(card["effect"])
     return out
 
 

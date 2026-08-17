@@ -1,6 +1,7 @@
 {
- "_note": "Gear and cards transcribed by hand from client item tooltips screenshotted in game by the SENAI guild. Only names the published sheets do not carry yet are in here; anything the sheets already list stays with the sheet so there is one entry per item. Several tooltips are cut off at the bottom in the screenshot, so the flavour text can be shorter than in game, and a mouse cursor sits over a few numbers, which is why some stat fields are empty rather than guessed.",
- "_where": "Nobody has documented where these drop. Every entry therefore ships the same honest placeholder instead of a location. The sheets do give a location for other pieces of six of these families, so the guess is Rgan Tunnels for Exuvic, Far North for Glacial, Thanatos Tower for Honor Guard and True Morpheus's/Morrigane's, Rgan Sacred Ground for Ascendant and Kiel D-01 for Apolytos, but a guess is not a source and none of it is written into the entries.",
+ "_note": "Gear and cards transcribed by hand from client item tooltips screenshotted in game by the SENAI guild. A tooltip is the game itself talking, so it outranks the published sheets: where a name is in both, build_database.py takes the stats and the effects from here and keeps only what a tooltip cannot know, which is the drop location. Several tooltips are cut off at the bottom in the screenshot, so the flavour text can be shorter than in game, and a mouse cursor sits over a few numbers, which is why some stat fields are empty: an empty stat means the sheet value is left alone rather than replaced by a guess.",
+ "_where": "A tooltip never says where a piece drops, so the 78 names the sheets do not carry at all ship a placeholder and land under Location unknown in the source filter. The sheets do give a location for other pieces of six of these families, so the guess is Rgan Tunnels for Exuvic, Far North for Glacial, Thanatos Tower for Honor Guard and True Morpheus's/Morrigane's, Rgan Sacred Ground for Ascendant and Kiel D-01 for Apolytos, but a guess is not a source and none of it is written into the entries.",
+ "_skipped": "Black Forest Boots was screenshotted too and reads exactly like the entry in relic-gear.json, so it is deliberately not repeated here.",
  "_skills": "Exuvic Blessing, which half the Exuvic entries raise, is a passive with no listed maximum level: Atk and Matk +1% per level, and it drains 1% of Max HP every 5 seconds.",
  "_source": "In game item tooltips, screenshotted 17 Aug 2026.",
  "items": [
@@ -1680,6 +1681,622 @@
    "weight": null,
    "classes": "",
    "flavour": "A horrifying bow found in the Endless Desert."
+  },
+  {
+   "name": "Dawnbringer Violin",
+   "type": "Instrument",
+   "slot": "weapon",
+   "cat": "Instruments & Whips",
+   "set": "Dawnbringer",
+   "position": "",
+   "stat": "80/80",
+   "mastery": [
+    "Musical mastery: SP Consumption -3%"
+   ],
+   "effect": [
+    "Per refine, Physical Damage to enemies under Searing Light +4%",
+    "Per refine, Magical Damage to enemies under Searing Light +2%",
+    "If +7, Searing Light Duration +5s",
+    "If +7, Searing Light Damage +50%"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": ""
+  },
+  {
+   "name": "Dawnbringer Whip",
+   "type": "Whip",
+   "slot": "weapon",
+   "cat": "Instruments & Whips",
+   "set": "Dawnbringer",
+   "position": "",
+   "stat": "80/80",
+   "mastery": [
+    "Dancing Dexterity mastery: SP Consumption -3%"
+   ],
+   "effect": [
+    "Per refine, Physical Damage to enemies under Searing Light +4%",
+    "Per refine, Magical Damage to enemies under Searing Light +2%",
+    "If +7, Searing Light Duration +5s",
+    "If +7, Searing Light Damage +50%"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": ""
+  },
+  {
+   "name": "Dawnbringer Lance",
+   "type": "Two-Handed Spear",
+   "slot": "weapon",
+   "cat": "Two-Handed Spears",
+   "set": "Dawnbringer",
+   "position": "",
+   "stat": "150/0",
+   "mastery": [
+    "Spear mastery: Vulnerable Potency +4%"
+   ],
+   "effect": [
+    "Per refine, Physical Damage to enemies under Searing Light +4%",
+    "If +7, Searing Light Duration +5s",
+    "If +7, Damage Taken from enemies under Searing Light -15%"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A lance once used by those who guarded the Bifrost Bridge."
+  },
+  {
+   "name": "Dawnbringer Katar",
+   "type": "Katar",
+   "slot": "weapon",
+   "cat": "Katars",
+   "set": "Dawnbringer",
+   "position": "",
+   "stat": "120/0",
+   "mastery": [
+    "Katar mastery: Crit Damage +3%"
+   ],
+   "effect": [
+    "Per refine, Physical Damage to enemies under Searing Light +4%",
+    "If +7, Searing Light Duration +5s",
+    "If +7, Damage Taken from enemies under Searing Light -15%"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A katar once used by those who guarded the Bifrost Bridge."
+  },
+  {
+   "name": "Dawnbringer Knuckle",
+   "type": "Knuckle",
+   "slot": "weapon",
+   "cat": "Fists",
+   "set": "Dawnbringer",
+   "position": "",
+   "stat": "100/0",
+   "mastery": [
+    "Fist mastery: Crit Damage +3%"
+   ],
+   "effect": [
+    "Per refine, Physical Damage to enemies under Searing Light +4%",
+    "If +7, Searing Light Duration +5s",
+    "If +7, Searing Light Damage +50%"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A knuckle once used by those who guarded the Bifrost Bridge."
+  },
+  {
+   "name": "Dawnbringer Sigil",
+   "type": "Accessory",
+   "slot": "accessory",
+   "cat": "Accessories",
+   "set": "Dawnbringer",
+   "position": "",
+   "stat": "0/0",
+   "mastery": [],
+   "effect": [
+    "Physical and Magical Attacks have a chance to inflict the Searing Light Status",
+    "The chance is 10% for each Dawnbringer item equipped"
+   ],
+   "combo": {},
+   "level": 130,
+   "weight": 10,
+   "classes": "",
+   "flavour": "A sigil worn by those who guarded the Bifrost Bridge. It can unlock the true power sleeping in their weapons."
+  },
+  {
+   "name": "Hat of the Sun God",
+   "type": "Headgear (Upper)",
+   "slot": "headgear",
+   "cat": "Headgears",
+   "set": "Dawnbringer",
+   "position": "Upper headgear",
+   "stat": "0/0",
+   "mastery": [],
+   "effect": [
+    "Damage Taken from enemies under Searing Light -10%"
+   ],
+   "combo": {},
+   "level": 130,
+   "weight": 150,
+   "classes": "",
+   "flavour": "A magnificent crown found in the possession of the Herald of Dawn. Though it is too large and heavy to be practical in combat, it bears the magical enchantments needed for it nonetheless."
+  },
+  {
+   "name": "Odin's Blessing",
+   "type": "Armor",
+   "slot": "armor",
+   "cat": "Armors",
+   "set": "Odin",
+   "position": "",
+   "stat": "35/0",
+   "mastery": [],
+   "effect": [
+    "Str +2",
+    "Vit +2",
+    "If +7, Str +3 and Vit +3",
+    "If +7, Atk +10% and Defense Pierce +20%"
+   ],
+   "combo": {
+    "with": "Odin's Blessing + Vali's Manteau + Vidar's Boots",
+    "gives": [
+     "Physical and Magical Attacks ignore the elemental weaknesses and resistances of Holy"
+    ]
+   },
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": ""
+  },
+  {
+   "name": "Vali's Manteau",
+   "type": "Garment",
+   "slot": "garment",
+   "cat": "Garments",
+   "set": "Odin",
+   "position": "",
+   "stat": "25/15",
+   "mastery": [],
+   "effect": [
+    "Int +2",
+    "Dex +2",
+    "If +7, Int +3 and Dex +3",
+    "If +7, Neutral Resistance +5% and Non-Neutral Resistances +10%"
+   ],
+   "combo": {},
+   "level": 130,
+   "weight": null,
+   "classes": "",
+   "flavour": "A manteau that legends say once belonged to Vali, protecting him in his quest for vengeance."
+  },
+  {
+   "name": "Vidar's Boots",
+   "type": "Shoes",
+   "slot": "shoes",
+   "cat": "Shoes",
+   "set": "Odin",
+   "position": "",
+   "stat": "25/10",
+   "mastery": [],
+   "effect": [
+    "Agi +2",
+    "Luk +2",
+    "If +7, Agi +3 and Luk +3",
+    "If +7, Fixed Cast Time -0.5s and Crit Rate +10"
+   ],
+   "combo": {},
+   "level": 130,
+   "weight": 70,
+   "classes": "",
+   "flavour": "A pair of boots purportedly owned by Vidar, Odin's son and promised avenger."
+  },
+  {
+   "name": "Exuvic Robe",
+   "type": "Armor",
+   "slot": "armor",
+   "cat": "Armors",
+   "set": "Exuvic",
+   "position": "",
+   "stat": "25/25",
+   "mastery": [],
+   "effect": [
+    "Per refine, Magical Damage to Neutral and Poison Property enemies +1%",
+    "If +7, Poison Property Resistance +5%",
+    "If +7, Poison Status Damage Taken -10%"
+   ],
+   "combo": {
+    "with": "Exuvic Robe + Muffler + Shoes",
+    "gives": [
+     "For each level of Exuvic Blessing, Damage Taken from All Enemies -1%"
+    ]
+   },
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": ""
+  },
+  {
+   "name": "Exuvic Armor",
+   "type": "Armor",
+   "slot": "armor",
+   "cat": "Armors",
+   "set": "Exuvic",
+   "position": "",
+   "stat": "50/0",
+   "mastery": [],
+   "effect": [
+    "Per refine, Physical Damage to Neutral and Poison Property enemies +1%",
+    "If +7, Poison Property Resistance +5%",
+    "If +7, Poison Status Damage Taken -10%"
+   ],
+   "combo": {
+    "with": "Exuvic Armor + Manteau + Boots",
+    "gives": [
+     "For each level of Exuvic Blessing, Damage Taken from All Enemies -1%"
+    ]
+   },
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": ""
+  },
+  {
+   "name": "Exuvic Manteau",
+   "type": "Garment",
+   "slot": "garment",
+   "cat": "Garments",
+   "set": "Exuvic",
+   "position": "",
+   "stat": "40/0",
+   "mastery": [],
+   "effect": [
+    "Per refine, Physical Damage to Neutral and Poison Property enemies +1%",
+    "If +7, Poison Property Resistance +5%",
+    "If +7, Poison Status Damage Taken -10%"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A Glacial Manteau found in the Far North Tunnels, corrupted by the influence of the Rgan that inhabit it."
+  },
+  {
+   "name": "Exuvic Boots",
+   "type": "Shoes",
+   "slot": "shoes",
+   "cat": "Shoes",
+   "set": "Exuvic",
+   "position": "",
+   "stat": "40/0",
+   "mastery": [],
+   "effect": [
+    "Per refine, Physical Damage to Neutral and Poison Property enemies +1%",
+    "If +7, Poison Property Resistance +5%",
+    "If +7, Poison Status Damage Taken -10%"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A pair of Glacial Boots found in the Far North Tunnels, corrupted by the influence of the Rgan that inhabit it."
+  },
+  {
+   "name": "Exuvic Ring",
+   "type": "Accessory",
+   "slot": "accessory",
+   "cat": "Accessories",
+   "set": "Exuvic",
+   "position": "",
+   "stat": "0/0",
+   "mastery": [],
+   "effect": [
+    "For each Exuvic item equipped, Exuvic Blessing level +1"
+   ],
+   "combo": {},
+   "level": 130,
+   "weight": 10,
+   "classes": "",
+   "flavour": "A ring infused with the toxic energies polluting the Rgan Tunnels."
+  },
+  {
+   "name": "Glacial Armor",
+   "type": "Armor",
+   "slot": "armor",
+   "cat": "Armors",
+   "set": "Glacial",
+   "position": "",
+   "stat": "",
+   "mastery": [],
+   "effect": [
+    "Per refine, Physical Damage to Wind and Water Property enemies +1%",
+    "If +7, Wind and Water Property Resistance +5%"
+   ],
+   "combo": {
+    "with": "Glacial Armor + Manteau + Boots",
+    "gives": [
+     "While under the Chilled Status, Physical Damage +10% and All Damage Taken -10%"
+    ]
+   },
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A suit of armor found in the frozen canyons of the Far North."
+  },
+  {
+   "name": "Glacial Robe",
+   "type": "Armor",
+   "slot": "armor",
+   "cat": "Armors",
+   "set": "Glacial",
+   "position": "",
+   "stat": "",
+   "mastery": [],
+   "effect": [
+    "Per refine, Magical Damage to Wind and Water Property enemies +1%",
+    "If +7, Wind and Water Property Resistance +5%"
+   ],
+   "combo": {
+    "with": "Glacial Robe + Muffler + Shoes",
+    "gives": [
+     "While under the Chilled Status, Magical Damage +10% and All Damage Taken -10%"
+    ]
+   },
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": ""
+  },
+  {
+   "name": "Glacial Boots",
+   "type": "Shoes",
+   "slot": "shoes",
+   "cat": "Shoes",
+   "set": "Glacial",
+   "position": "",
+   "stat": "40/0",
+   "mastery": [],
+   "effect": [
+    "Per refine, Physical Damage to Wind and Water Property enemies +1%",
+    "If +7, Wind and Water Property Resistance +5%"
+   ],
+   "combo": {},
+   "level": 130,
+   "weight": 80,
+   "classes": "",
+   "flavour": "A pair of boots found in the frozen canyons of the Far North. Snow and ice feel like no obstacle while wearing them."
+  },
+  {
+   "name": "Glacial Ring",
+   "type": "Accessory",
+   "slot": "accessory",
+   "cat": "Accessories",
+   "set": "Glacial",
+   "position": "",
+   "stat": "0/0",
+   "mastery": [],
+   "effect": [
+    "For each Glacial item equipped, Atk +5"
+   ],
+   "combo": {},
+   "level": 130,
+   "weight": 10,
+   "classes": "",
+   "flavour": "An icy ring found in the frozen canyons of the Far North. It seems to draw the cold out of you rather than make you feel colder."
+  },
+  {
+   "name": "Glacial Necklace",
+   "type": "Accessory",
+   "slot": "accessory",
+   "cat": "Accessories",
+   "set": "Glacial",
+   "position": "",
+   "stat": "0/0",
+   "mastery": [],
+   "effect": [
+    "For each Glacial item equipped, Matk +5"
+   ],
+   "combo": {},
+   "level": 130,
+   "weight": 10,
+   "classes": "",
+   "flavour": "An icy necklace found in the frozen canyons of the Far North. It lends a frigid clarity to your mind."
+  },
+  {
+   "name": "Apolytos Staff",
+   "type": "Staff",
+   "slot": "weapon",
+   "cat": "Staffs",
+   "set": "Apolytos",
+   "position": "",
+   "stat": "15/115",
+   "mastery": [
+    "Magical Attunement mastery: Variable Cast Time -2%"
+   ],
+   "effect": [
+    "If +3, Int +5 and Dex +5",
+    "If +6, ignore all Elemental Weaknesses and Resistances",
+    "If +9, Magic Damage to All Races +30%"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": ""
+  },
+  {
+   "name": "Apolytos Lance",
+   "type": "Two-Handed Spear",
+   "slot": "weapon",
+   "cat": "Two-Handed Spears",
+   "set": "Apolytos",
+   "position": "",
+   "stat": "150/0",
+   "mastery": [
+    "Spear mastery: Vulnerable Potency +4%"
+   ],
+   "effect": [
+    "If +3, Str +5 and Dex +5",
+    "If +6, Physical Damage to Vulnerable enemies +30%",
+    "If +9, Vulnerable inflicts damage over time"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": ""
+  },
+  {
+   "name": "Ascendant Robe",
+   "type": "Armor",
+   "slot": "armor",
+   "cat": "Armors",
+   "set": "Ascendant",
+   "position": "",
+   "stat": "30/15",
+   "mastery": [],
+   "effect": [
+    "Per refine, Physical Damage to Bleeding, Burning and Poisoned enemies +0.5%"
+   ],
+   "combo": {
+    "with": "Ascendant Robe + Muffler + Shoes",
+    "gives": [
+     "Increase the duration of Bleeding, Burning and Poison inflicted by the user by 5 seconds"
+    ]
+   },
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A set of pristine robes highly coveted by the worshipers in the Rgan Sacred Ground."
+  },
+  {
+   "name": "Ascendant Muffler",
+   "type": "Garment",
+   "slot": "garment",
+   "cat": "Garments",
+   "set": "Ascendant",
+   "position": "",
+   "stat": "20/15",
+   "mastery": [],
+   "effect": [
+    "Per refine, Bleeding, Burning and Poison Damage Taken -3%"
+   ],
+   "combo": {},
+   "level": 130,
+   "weight": 75,
+   "classes": "",
+   "flavour": "An ornate muffler highly coveted by the worshipers in the Rgan Sacred Ground."
+  },
+  {
+   "name": "Ascendant Shoes",
+   "type": "Shoes",
+   "slot": "shoes",
+   "cat": "Shoes",
+   "set": "Ascendant",
+   "position": "",
+   "stat": "20/15",
+   "mastery": [],
+   "effect": [
+    "Per refine, Bleeding, Burning and Poison Status Damage dealt +3%"
+   ],
+   "combo": {},
+   "level": 130,
+   "weight": 50,
+   "classes": "",
+   "flavour": "An ornate pair of shoes highly coveted by the worshipers in the Rgan Sacred Ground."
+  },
+  {
+   "name": "Ascendant Earring",
+   "type": "Accessory",
+   "slot": "accessory",
+   "cat": "Accessories",
+   "set": "Ascendant",
+   "position": "",
+   "stat": "0/0",
+   "mastery": [],
+   "effect": [
+    "Reduce the duration of Bleeding, Burning and Poison received by 1 second"
+   ],
+   "combo": {},
+   "level": 130,
+   "weight": 10,
+   "classes": "",
+   "flavour": "An ornate set of earrings highly coveted by the worshipers in the Rgan Sacred Ground."
+  },
+  {
+   "name": "Honor Guard Cloak",
+   "type": "Garment",
+   "slot": "garment",
+   "cat": "Garments",
+   "set": "Honor Guard",
+   "position": "",
+   "stat": "25/10",
+   "mastery": [],
+   "effect": [
+    "Per refine, Bleeding, Burning and Poison Damage Taken -3%"
+   ],
+   "combo": {
+    "with": "Honor Guard Armor + Cloak + Boots",
+    "gives": [
+     "Per refine of the Cloak, Bleeding, Burning and Poison Status Damage +3%"
+    ]
+   },
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A formal cloak with strong defensive properties used by the ceremonial guard detail that watched over Thanatos Tower in the distant past."
+  },
+  {
+   "name": "Honor Guard Boots",
+   "type": "Shoes",
+   "slot": "shoes",
+   "cat": "Shoes",
+   "set": "Honor Guard",
+   "position": "",
+   "stat": "25/10",
+   "mastery": [],
+   "effect": [
+    "Per refine, Slow Potency Received -5%",
+    "Per refine, Blind Potency Received -2"
+   ],
+   "combo": {
+    "with": "Honor Guard Armor + Cloak + Boots",
+    "gives": [
+     "Per refine of the Boots, Slow Potency +5%",
+     "Per refine of the Boots, Blind Potency +2"
+    ]
+   },
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A pair of formal boots with strong defensive properties used by the ceremonial guard detail that watched over Thanatos Tower in the distant past."
+  },
+  {
+   "name": "Honor Guard Signet",
+   "type": "Accessory",
+   "slot": "accessory",
+   "cat": "Accessories",
+   "set": "Honor Guard",
+   "position": "",
+   "stat": "0/0",
+   "mastery": [],
+   "effect": [
+    "Stun Duration Received -0.5s",
+    "Sleep Duration Received -1.5s"
+   ],
+   "combo": {},
+   "level": 110,
+   "weight": 10,
+   "classes": "",
+   "flavour": "A signet ring worn by the ceremonial guard tasked with watching over Thanatos Tower in the distant past. They had been placed there out of respect for Thanatos's sacrifice in the battle against Satan Morroc."
   }
  ],
  "cards": [
@@ -1838,6 +2455,87 @@
    "set": "Glacial",
    "effect": [
     "Damage Taken while Chilled -25%"
+   ],
+   "flavour": ""
+  },
+  {
+   "name": "Moonlight Flower",
+   "slot": "headgear",
+   "set": "",
+   "effect": [
+    "Add a 5% chance to autocast Call of the Grave when attacked, inflicting Curse, Vulnerable and Blind on all enemies in an area around you",
+    "Vulnerable Potency +10%",
+    "Blind Potency +10"
+   ],
+   "flavour": ""
+  },
+  {
+   "name": "Jorgan Shadowkeeper",
+   "slot": "shoes",
+   "set": "Exuvic",
+   "effect": [
+    "Movement Speed +10%",
+    "Exuvic Blessing level +1"
+   ],
+   "flavour": ""
+  },
+  {
+   "name": "Jorgan Lightkeeper",
+   "slot": "weapon",
+   "set": "Exuvic",
+   "effect": [
+    "Healing Power +30%",
+    "Exuvic Blessing level +1"
+   ],
+   "flavour": ""
+  },
+  {
+   "name": "Jorgan Stormkeeper",
+   "slot": "accessory",
+   "set": "Exuvic",
+   "effect": [
+    "Static Burst additionally inflicts the Poison Status",
+    "Exuvic Blessing level +1"
+   ],
+   "flavour": ""
+  },
+  {
+   "name": "Jorgan Flamekeeper",
+   "slot": "accessory",
+   "set": "Exuvic",
+   "effect": [
+    "Fireball additionally inflicts the Deadly Poison Status",
+    "Exuvic Blessing level +1"
+   ],
+   "flavour": ""
+  },
+  {
+   "name": "Jorgan Bladekeeper",
+   "slot": "armor",
+   "set": "Exuvic",
+   "effect": [
+    "Max HP +15%",
+    "Ranged Damage Taken -10%",
+    "Exuvic Blessing level +2"
+   ],
+   "flavour": ""
+  },
+  {
+   "name": "Unfrost Flower",
+   "slot": "weapon",
+   "set": "Glacial",
+   "effect": [
+    "Physical Attacks have a 10% chance to inflict the Chill Status"
+   ],
+   "flavour": ""
+  },
+  {
+   "name": "Angel Iceslug",
+   "slot": "weapon",
+   "set": "Glacial",
+   "effect": [
+    "Magic Damage to Chilled enemies +15%",
+    "This card's effect does not stack"
    ],
    "flavour": ""
   }
