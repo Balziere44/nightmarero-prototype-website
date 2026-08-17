@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="dark" data-build="772fe4da19">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,8 +26,8 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="fetch" href="assets/data/items.json" crossorigin>
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="preload" as="fetch" href="assets/data/items.json?v=772fe4da19" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css?v=772fe4da19">
 <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"></noscript>
 
@@ -274,6 +274,14 @@
 
           <ul class="db-grid" id="dbGrid"></ul>
 
+          <!-- Nothing is listed until a filter is filled in, so the filter
+               column stays reachable instead of the results taking over the
+               scroll. This is what stands there in the meantime. -->
+          <p class="empty-state" id="dbPrompt" hidden>
+            <span data-i18n="db.startHint">Search by name, effect or the monster that drops it.</span>
+            <button class="btn -ghost -sm mt-md" id="dbAll" type="button" data-i18n="db.showAll">Show everything</button>
+          </p>
+
           <p class="empty-state" id="dbEmpty" hidden data-i18n="db.empty">Nothing matched those filters.</p>
           <div id="dbSentinel" aria-hidden="true"></div>
           <button class="btn -ghost -block mt-lg" id="dbMore" type="button" hidden>Show more</button>
@@ -347,8 +355,8 @@
   </div>
 </div>
 
-<script src="assets/js/i18n.js" defer></script>
-<script src="assets/js/main.js" defer></script>
-<script src="assets/js/database.js" defer></script>
+<script src="assets/js/i18n.js?v=772fe4da19" defer></script>
+<script src="assets/js/main.js?v=772fe4da19" defer></script>
+<script src="assets/js/database.js?v=772fe4da19" defer></script>
 </body>
 </html>

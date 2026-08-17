@@ -1,42 +1,27 @@
 # Cloudflare Pages header rules.
 # https://developers.cloudflare.com/pages/configuration/headers/
 
+# Nothing is served out of a cache without asking us first. `no-cache` does not
+# mean "do not store", it means "store it, but never use it without checking",
+# which is what Ctrl+Shift+R does by hand: the reader always lands on the newest
+# deploy. A file that has not changed comes back 304 with no body, so this costs
+# one small conditional request per file rather than a download.
+#
+# There are no exceptions, artwork included. Pages merges every matching rule
+# instead of letting the most specific one win, so a second block naming
+# Cache-Control for /assets/img/* would send two contradictory values in one
+# header and the browser would be free to pick either. One rule, no ambiguity.
+#
+# This governs copies fetched from now on. Anyone who was here before it landed
+# still holds files under the old rules -- the item database was allowed to sit
+# for a day -- and no header sent today can reach into a cache that is not
+# asking. That is what the build stamp from tools/stamp_build.py is for: it
+# changes the address, and an address the old cache has never seen cannot be
+# answered from it.
 /*
+  Cache-Control: no-cache, must-revalidate
   X-Content-Type-Options: nosniff
   X-Frame-Options: SAMEORIGIN
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), microphone=(), camera=(), interest-cohort=()
   Strict-Transport-Security: max-age=31536000; includeSubDomains
-
-# Hashed-forever assets. Artwork never changes under the same name.
-#
-# The share card deliberately lives outside this folder, in /assets/social/.
-# Pages merges every matching rule instead of letting a more specific one
-# win, so a second block for one file here produces a header with two
-# conflicting max-age values. Keeping it off this path is the way to give it
-# a different cache policy.
-/assets/img/*
-  Cache-Control: public, max-age=31536000, immutable
-
-# Replaced under the same name whenever the branding changes, so it has to
-# revalidate or Discord and Google keep showing last year's card.
-/assets/social/*
-  Cache-Control: public, max-age=3600, must-revalidate
-
-# CSS and JS do change, so keep them fresh but cheap to revalidate.
-/assets/css/*
-  Cache-Control: public, max-age=3600, must-revalidate
-
-/assets/js/*
-  Cache-Control: public, max-age=3600, must-revalidate
-
-/assets/i18n/*
-  Cache-Control: public, max-age=3600, must-revalidate
-
-/assets/quiz/*
-  Cache-Control: public, max-age=3600, must-revalidate
-
-# The item database is rebuilt from the sheets, not on every deploy, and it is
-# the biggest thing the site downloads.
-/assets/data/*
-  Cache-Control: public, max-age=86400, must-revalidate

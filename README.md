@@ -103,6 +103,44 @@ A label that names the host wants a key in the five locale files, the way
 
 `_headers` is picked up automatically and sets the cache and security headers.
 
+### Nobody reads a cached copy of this site
+
+Run this before committing, whenever anything under `assets/` changed:
+
+```bash
+python tools/stamp_build.py          # stamp every page with the new build
+python tools/stamp_build.py --check  # exit 1 if a page is out of date
+```
+
+Two halves, and both are needed.
+
+`_headers` sends `Cache-Control: no-cache, must-revalidate` on **everything**.
+That does not mean "do not store", it means "store it, but never serve it
+without asking us first", which is what a Ctrl+Shift+R does by hand. An
+unchanged file answers 304 with no body, so the cost is one conditional request
+per file rather than a download. There are no exceptions, artwork included:
+Pages merges every matching rule instead of letting the most specific one win,
+so a second block naming `Cache-Control` would put two contradictory values in
+one header and let the browser choose.
+
+That only governs copies fetched from now on. A reader who was here before it
+landed still holds files under the old rules — the item database was allowed to
+sit for a day — and no header can reach into a cache that is not asking.
+`stamp_build.py` can: it hashes everything under `assets/css`, `js`, `i18n`,
+`data` and `quiz` into one short build id, writes it onto every page as
+`<html data-build>`, and rewrites each stylesheet, script and preload to
+`?v=<id>`. An address the old cache has never seen cannot be answered from it.
+
+The scripts fetch their own JSON through `window.NM_FRESH()`, defined in
+`i18n.js` (the first script on every page) off that same attribute, so
+`items.json`, `search.json`, the locale files and the quiz packs are on the
+stamp too. `database.html` preloads `items.json`, and that preload is stamped
+as well — a preload asking for a different address than the script does would
+download 1.2 MB twice.
+
+The id is a hash, not a clock, so a rebuild that changes nothing changes no
+URLs.
+
 ---
 
 ## Regenerating the class pages
@@ -280,7 +318,15 @@ exits non zero when something is wrong.
 
 `database.html` searches every weapon, armour piece and card on the server.
 It loads `assets/data/items.json` once and filters in memory, painting results
-in chunks of 60 so a 1900 entry list never stalls the page.
+in chunks of 60 so a long list never stalls the page.
+
+**The page opens with nothing listed.** Painting all 3638 entries on arrival
+gave the results column a scrollbar of its own and made the filters below the
+fold unreachable: the wheel scrolled the results instead of the page. So the
+grid stays empty until something is asked for — a word in any of the three
+boxes, a select, a level, or one of the kind chips — and *Show everything* is a
+button for when browsing the lot is the point. `?drops=` and `?item=` both fill
+a filter in, so a link from the site search still lands on results.
 
 Three sources feed it, in order of how much they are trusted. The game client
 first, because it is the game (see below). Then Twilight's two published

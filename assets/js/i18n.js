@@ -43,6 +43,20 @@
     return s.src.replace(/assets\/js\/i18n\.js.*$/, '');
   })();
 
+  /* Every page is stamped by tools/stamp_build.py with the build it belongs
+     to, and everything the site fetches for itself asks under that stamp. A
+     copy the browser cached before a deploy sits under the old address, which
+     is one we never ask for again, so nobody reads yesterday's site.
+
+     This file is the first script on every page, so the helper is here and the
+     others use it. */
+  var build = document.documentElement.getAttribute('data-build') || '';
+  window.NM_BUILD = build;
+  window.NM_FRESH = function (url) {
+    if (!build) return url;
+    return url + (url.indexOf('?') === -1 ? '?' : '&') + 'v=' + build;
+  };
+
   /* ---------------------------------------------------------------- store */
 
   window.NM_I18N_REGISTER = function (code, table) {
@@ -55,7 +69,7 @@
 
     loading[code] = new Promise(function (resolve) {
       var el = document.createElement('script');
-      el.src = base + 'assets/i18n/' + code + '.js';
+      el.src = window.NM_FRESH(base + 'assets/i18n/' + code + '.js');
       el.onload = resolve;
       el.onerror = function () { resolve(); };   // fall back to English
       document.head.appendChild(el);

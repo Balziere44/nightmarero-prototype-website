@@ -13,6 +13,13 @@
 (function () {
   'use strict';
 
+  /* Ask for our own files under the build stamp the page carries, so a copy
+     cached before the last deploy is at an address we never request again.
+     i18n.js defines it and is the first script on every page. */
+  function fresh(url) {
+    return window.NM_FRESH ? window.NM_FRESH(url) : url;
+  }
+
   var root = document.getElementById('quiz');
   if (!root) return;
 
@@ -821,7 +828,7 @@
 
   function loadPack(code) {
     if (packs[code]) return Promise.resolve();
-    return fetch('assets/quiz/' + code + '.json')
+    return fetch(fresh('assets/quiz/' + code + '.json'))
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (data) { if (data) packs[code] = data; })
       .catch(function () {});
@@ -837,7 +844,7 @@
 
   /* ------------------------------------------------------------------- boot */
 
-  fetch('assets/data/classes-brief.json')
+  fetch(fresh('assets/data/classes-brief.json'))
     .then(function (r) { return r.json(); })
     .then(function (data) {
       (data.classes || []).forEach(function (c) { classes[c.name] = c; });

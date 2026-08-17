@@ -6,6 +6,13 @@
 (function () {
   'use strict';
 
+  /* Ask for our own files under the build stamp the page carries, so a copy
+     cached before the last deploy is at an address we never request again.
+     i18n.js defines it and is the first script on every page. */
+  function fresh(url) {
+    return window.NM_FRESH ? window.NM_FRESH(url) : url;
+  }
+
   var $ = function (sel, root) { return (root || document).querySelector(sel); };
   var $$ = function (sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); };
 
@@ -164,7 +171,7 @@
 
     var load = function () {
       if (pending) return pending;
-      pending = fetch(PREFIX + 'assets/data/search.json')
+      pending = fetch(fresh(PREFIX + 'assets/data/search.json'))
         .then(function (r) { return r.json(); })
         .then(function (json) {
           rows = json.rows.map(function (r) {

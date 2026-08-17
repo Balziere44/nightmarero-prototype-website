@@ -10,6 +10,13 @@
 (function () {
   'use strict';
 
+  /* Ask for our own files under the build stamp the page carries, so a copy
+     cached before the last deploy is at an address we never request again.
+     i18n.js defines it and is the first script on every page. */
+  function fresh(url) {
+    return window.NM_FRESH ? window.NM_FRESH(url) : url;
+  }
+
   var grid = document.getElementById('dbGrid');
   if (!grid) return;
 
@@ -22,7 +29,8 @@
     count: $('dbCount'), empty: $('dbEmpty'), reset: $('dbReset'),
     more: $('dbMore'), sentinel: $('dbSentinel'),
     modal: $('dbModal'), modalBody: $('dbModalBody'), modalClose: $('dbModalClose'),
-    share: $('dbShare'), shareLink: $('dbShareLink')
+    share: $('dbShare'), shareLink: $('dbShareLink'),
+    prompt: $('dbPrompt'), all: $('dbAll')
   };
 
   var CHUNK = 60;
@@ -33,6 +41,7 @@
   var statusTerms = {};
   var statusRe = null;
   var open = null;          // the item currently in the panel
+  var showAll = false;      // the reader asked to see the lot anyway
 
   /* ------------------------------------------------------------ dictionary */
 
@@ -145,7 +154,34 @@
 
   function norm(s) { return (s || '').toLowerCase(); }
 
+  /* Is the reader asking for anything yet? Painting all 3638 entries the
+     moment the page opens gives the results column a scrollbar of its own,
+     and the filters below the fold become unreachable: the wheel scrolls the
+     results instead of the page. So nothing is listed until something is
+     asked for, and "show everything" is a button rather than the default. */
+  function filtering() {
+    return !!(els.name.value.trim() || els.effect.value.trim() ||
+              els.drops.value.trim() || els.slot.value || els.cat.value ||
+              els.source.value || els.lvMin.value || els.lvMax.value ||
+              kind !== 'all');
+  }
+
   function apply() {
+    if (!filtering() && !showAll) {
+      view = [];
+      grid.innerHTML = '';
+      painted = 0;
+      els.empty.hidden = true;
+      if (els.prompt) els.prompt.hidden = false;
+      els.count.textContent = all.length + ' ' +
+        t('db.inDatabase', 'items in the database');
+      return;
+    }
+    if (els.prompt) els.prompt.hidden = true;
+    run();
+  }
+
+  function run() {
     var qn = norm(els.name.value).trim();
     var qe = norm(els.effect.value).trim();
     var qd = norm(els.drops.value).trim();
@@ -408,7 +444,15 @@
     });
   });
 
+  if (els.all) {
+    els.all.addEventListener('click', function () {
+      showAll = true;
+      apply();
+    });
+  }
+
   els.reset.addEventListener('click', function () {
+    showAll = false;
     els.name.value = els.effect.value = els.drops.value = '';
     els.lvMin.value = els.lvMax.value = '';
     els.slot.value = els.cat.value = els.source.value = '';
@@ -443,7 +487,7 @@
 
   /* ------------------------------------------------------------------ boot */
 
-  fetch('assets/data/items.json')
+  fetch(fresh('assets/data/items.json'))
     .then(function (r) {
       if (!r.ok) throw new Error('HTTP ' + r.status);
       return r.json();
@@ -474,7 +518,13 @@
       var wanted = params.get('item');
       if (wanted) {
         var hit = all.filter(function (i) { return i.name === wanted; })[0];
-        if (hit) openItem(hit);
+        if (hit) {
+          // so closing the panel leaves that item on screen rather than the
+          // empty grid the page now opens with
+          els.name.value = wanted;
+          apply();
+          openItem(hit);
+        }
       }
     })
     .catch(function () {
