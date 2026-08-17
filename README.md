@@ -280,18 +280,23 @@ exits non zero when something is wrong.
 
 `database.html` searches every weapon, armour piece and card on the server.
 It loads `assets/data/items.json` once and filters in memory, painting results
-in chunks of 60 so a 1200 entry list never stalls the page.
+in chunks of 60 so a 1900 entry list never stalls the page.
 
-The data comes from Twilight's two published reference sheets. Refresh it in
-two steps:
+Three sources feed it, in order of how much they are trusted. The game client
+first, because it is the game (see below). Then Twilight's two published
+reference sheets, which are the only thing that says where an item drops. Then
+`relic-gear.json` and `tooltip-items.json`, both typed out of screenshots by
+hand.
 
 ```bash
-python tools/fetch_sheets.py     # re-download tools/data/*.csv from Google
-python tools/build_database.py   # rebuild assets/data/items.json
+python tools/fetch_sheets.py        # re-download tools/data/*.csv from Google
+python tools/fetch_client_items.py  # re-read the installed game client
+python tools/build_database.py      # rebuild assets/data/items.json
 ```
 
-`fetch_sheets.py` is the only script that needs the network. The CSVs are
-committed, so anyone can rebuild the JSON offline.
+`fetch_sheets.py` is the only script that needs the network and
+`fetch_client_items.py` the only one that needs the game installed. Both commit
+what they produce, so anyone can rebuild the JSON with neither.
 
 Three things to know about the source data:
 
@@ -318,36 +323,59 @@ Category names differ slightly between the two gear docs (`GATLINGS` versus
 `GATLING GUNS`). `CATEGORY_ALIASES` in `build_database.py` folds those
 together so the filter does not list near-duplicates.
 
-### A screenshot of a tooltip beats the sheet
+### The game client outranks every sheet
 
-**The tooltip is the game itself talking, so it wins.** The sheets are typed
-by hand and lag behind patches; a screenshot of the item description window is
-what the server was actually running the moment it was taken. Those
-transcriptions live in `tools/data/tooltip-items.json`. `parse_tooltips()`
-reshapes them into ordinary entries and `apply_tooltips()` decides what happens
-when a name is in both places:
+The reference sheets are typed by hand and lag behind patches. The client is
+not: `SystemEN/LuaFiles514/itemInfo.lua` inside the game folder is the exact
+text the item description window shows in game, and the patcher rewrites it on
+every patch. So that file has the last word, and a screenshot of a tooltip is
+only a photograph of it.
 
-- **Same name in a sheet.** The tooltip's stats and effects replace the
-  sheet's, and everything a tooltip cannot know is kept: the drop location, how
-  many card slots the piece has, the card affix, and which sheet the row came
-  from, so the item keeps its place in the filters. The build prints the names
-  it corrected on every run.
-- **In no sheet at all.** It goes in as a new entry with no location, filed
-  under *Location unknown* in the source filter. The sheets do name a location
-  for sibling pieces of six of these families, and the guesses that implies are
-  written down in `_where` inside the JSON, deliberately outside the entries
-  themselves. A guess is not a source.
-- **An empty `stat`** means a mouse cursor was sitting over the number in the
-  screenshot. The sheet value is then left alone rather than replaced by a
-  guess, which is why `Glacial Armor` still reads 50/0.
-- **`Found on <map>`** lines survive an override, because that fact comes from
-  `relic-gear.json` and no tooltip carries it.
+```bash
+python tools/fetch_client_items.py "E:/NightmareRO (Release)"
+python tools/build_database.py
+```
 
-A tooltip also carries things the sheets leave out, and those are folded into
-the effect list because that is the only field the result card and the item
-panel print in full: which mastery grants which bonus, what the set combo
-gives (`Set: A + B + C`, then a `Set bonus:` line each), the class restriction,
-and which headgear slot a hat occupies.
+`fetch_client_items.py` reads the 20,851 entries in that file and writes
+`tools/data/client-items.json`. It needs the client installed, which is why its
+output is committed: everyone else rebuilds from the JSON. It does two things:
+
+- **Corrects what the site already lists.** 1306 of them. The stats and the
+  effects come from the client, and the one thing a tooltip never says is kept
+  from the sheet: where the item drops. Card slot counts, affixes, categories
+  and `Found on <map>` lines survive too.
+- **Adds the gear that is in the game and on no sheet at all.** 422 pieces,
+  including whole families the sheets never mention. They carry no location, so
+  they land under *Location unknown* in the source filter.
+
+Two things stop it from doing damage:
+
+- **A display name is not unique in the client.** Mysteltainn is a sword and a
+  card, RO ships three different Falchions, and the renewal version of a weapon
+  keeps the old one's name. An entry is only used when its `Type:` line agrees
+  with the category the site has the item under *and* every remaining candidate
+  reads the same. The 140 that stay ambiguous are printed and left with the
+  sheet.
+- **A tooltip that parses down to nothing is a bug in the reader, not an item
+  without effects.** `build_database.py` refuses to replace a filled effect
+  list with an empty one and names whatever it skipped.
+
+The reader has to tell an effect from flavour text, since the client separates
+its blocks with a rule of underscores and labels almost nothing. Flavour is the
+block that hands out no numbers, does not open like an effect (`Enables`,
+`Add`, `If`, ...) and is written as finished sentences; everything doubtful
+stays an effect, because an extra line on a card is a blemish and a lost effect
+is a lie. Headings are folded into the lines under them, so `For each Refine:`
+and `Combo: Novice Hat + Breastplate` never end up as bullets on their own.
+
+`tools/data/tooltip-items.json` is still there and still read first, before the
+client overwrites it. It is the transcription of the screenshots the guild took,
+it is what named the 78 items nobody had listed, and it is what the build falls
+back on for anything the client reader cannot resolve. Every name in it has been
+checked against the client. Two were wrong and were corrected there: the game
+really does call one bow `True Faith Bow Bow`, and `Nightfall's Flame of the
+Apostle` was `Nightfall's Flame` wearing a random option suffix in the title
+bar.
 
 
 ## The gear reference tabs

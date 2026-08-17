@@ -305,6 +305,89 @@ def parse_tooltips(path):
     return items
 
 
+def client_effect(got):
+    lines = list(got.get("mastery", [])) + list(got.get("effect", []))
+    if got.get("classes"):
+        lines.append("Usable by %s" % got["classes"])
+    return lines
+
+
+def apply_client(items, path):
+    """tools/data/client-items.json, read straight out of the game client by
+    fetch_client_items.py, and therefore the last word.
+
+    It does two jobs. For an item the site already lists it replaces the stats
+    and the effects, keeping the drop location, which is the one thing a
+    tooltip never says. And it adds the gear that is in the game but on no
+    sheet at all, which is most of what the client turned out to hold.
+    """
+    try:
+        data = json.load(io.open(path, encoding="utf-8"))
+    except (IOError, ValueError):
+        print("  sem client-items.json, seguindo só com as planilhas")
+        return items
+
+    ours = {}
+    for it in items:
+        ours.setdefault(it["name"].lower(), it)
+
+    fixed = added = 0
+    empty = []
+    for got in data.get("items", []):
+        if got.get("new"):
+            if got["name"].lower() in ours:
+                continue
+            card = got["cat"] == "Card"
+            items.append({
+                "name": got["name"],
+                "kind": "card" if card else "gear",
+                "slot": got["slot"],
+                "cat": got["cat"],
+                # a card has no card slots of its own, and "0 slots" on the
+                # result card would just be noise
+                "slots": None if card else got.get("slots"),
+                "stat": got.get("stat", ""),
+                "statLabel": got.get("statLabel", ""),
+                "effect": client_effect(got),
+                "level": got.get("level"),
+                "drops": UNKNOWN_WHERE,
+                "source": "unknown",
+            })
+            if card:
+                items[-1]["affix"] = ""
+            added += 1
+            continue
+
+        old = ours.get(got.get("ourName", got["name"]).lower())
+        if old is None:
+            continue
+        effect = client_effect(got)
+        if not effect and old.get("effect"):
+            # a tooltip that parsed down to nothing is a bug in the reader,
+            # not an item without effects, so leave the sheet alone and say so
+            empty.append(old["name"])
+            continue
+        effect += [line for line in old.get("effect", [])
+                   if line.startswith("Found on ")]
+        old["effect"] = effect
+        if got.get("stat"):
+            old["stat"] = got["stat"]
+            old["statLabel"] = got["statLabel"]
+        if got.get("level") is not None:
+            old["level"] = got["level"]
+        if (got.get("slots") is not None and old.get("slots") is None
+                and old["kind"] != "card"):
+            old["slots"] = got["slots"]
+        fixed += 1
+
+    print("  %-32s %4d corrigidos, %d novos"
+          % ("client-items.json", fixed, added))
+    if empty:
+        print("  tooltip vazio, planilha mantida (%d): %s"
+              % (len(empty), ", ".join(sorted(empty))))
+    return items
+
+
 def apply_tooltips(items):
     """A tooltip is the game itself talking, so it outranks the sheets.
 
@@ -469,7 +552,10 @@ def main():
     else:
         print("  faltando: mvp-cards.csv")
 
+    # hand typed screenshots first, then the client itself over the top of
+    # everything, because that is the order of how much they can be trusted
     items = apply_tooltips(items)
+    items = apply_client(items, os.path.join(SRC, "client-items.json"))
 
     # de-duplicate on name + slot + source, keeping the first
     seen, unique = set(), []

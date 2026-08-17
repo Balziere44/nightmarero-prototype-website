@@ -293,7 +293,7 @@
    "flavour": "A ring found on the mysterious Bifrost Bridge. You can only wonder what kind of people brought it there."
   },
   {
-   "name": "Nightfall's Flame of the Apostle",
+   "name": "Nightfall's Flame",
    "type": "Headgear (Mid)",
    "slot": "headgear",
    "cat": "Headgears",
@@ -1273,7 +1273,7 @@
    "flavour": "A tremendous katar forged by the elite blacksmiths of the Sessrumnir Temple. It wields a power unlike anything seen in this world."
   },
   {
-   "name": "True Faith Bow",
+   "name": "True Faith Bow Bow",
    "type": "Bow",
    "slot": "weapon",
    "cat": "Bows",
@@ -1639,9 +1639,9 @@
   },
   {
    "name": "Pure Light Bow",
-   "type": "Bow",
+   "type": "Relic Bow",
    "slot": "weapon",
-   "cat": "Bows",
+   "cat": "Relic Gear",
    "set": "",
    "position": "",
    "stat": "80/0",
@@ -1662,9 +1662,9 @@
   },
   {
    "name": "Extinction's Wing",
-   "type": "Bow",
+   "type": "Relic Bow",
    "slot": "weapon",
-   "cat": "Bows",
+   "cat": "Relic Gear",
    "set": "Diabolus",
    "position": "",
    "stat": "",
