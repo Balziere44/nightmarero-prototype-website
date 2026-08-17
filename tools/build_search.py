@@ -33,6 +33,7 @@ import io
 import json
 import os
 import re
+import urllib.parse
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -46,7 +47,8 @@ OUT = os.path.join(DATA, "search.json")
 
 # group keys, in the order they are shown. The labels are translated in the
 # locale files as find.g<key>.
-GROUPS = ["page", "class", "skill", "item", "boss", "quest", "status", "map"]
+GROUPS = ["page", "class", "skill", "item", "drops", "boss", "quest",
+          "status", "map"]
 
 
 # The pages and the sections inside them. Hand written, because a heading is
@@ -152,6 +154,40 @@ def items_rows():
     return rows
 
 
+# What a "Drops From" cell can hold that is not a monster. The sheets use the
+# same column for a place, and the client cannot say where anything drops.
+NOT_A_MONSTER = ("not confirmed yet", "unknown", "quest", "npc", "shop",
+                 "craft", "vending", "event", "cash", "unobtainable")
+
+
+def drops_rows():
+    """The other direction: given a monster, what does it drop?
+
+    This is the question players actually ask, and until now the site could
+    only answer it backwards, one item at a time. Every name in a "Drops From"
+    cell becomes a row that opens the database already filtered to that name,
+    so one click lists everything it is known to leave behind.
+    """
+    from_who = {}
+    for it in load("items.json")["items"]:
+        for name in re.split(r",(?![^(]*\))", it.get("drops") or ""):
+            name = re.sub(r"\s+", " ", name).strip(" .")
+            if len(name) < 3 or not re.search(r"[A-Za-z]", name):
+                continue          # the sheets use ??? for "nobody knows"
+            if any(bad in name.lower() for bad in NOT_A_MONSTER):
+                continue
+            from_who.setdefault(name, []).append(it["name"])
+
+    rows = []
+    for name, items in sorted(from_who.items()):
+        # a relic's "where from" is a map code, not a monster
+        what = "On this map" if re.match(r"^[a-z0-9_]+$", name) else                "%d drop%s" % (len(items), "" if len(items) == 1 else "s")
+        rows.append([name, what,
+                     "database.html?drops=" + urllib.parse.quote(name),
+                     "drops", " ".join(items).lower()])
+    return rows
+
+
 def anchored(page, pattern, group, sub, flags=0):
     """Pull anchors and their headings straight out of a built page."""
     text = io.open(os.path.join(ROOT, page), encoding="utf-8").read()
@@ -195,7 +231,8 @@ def map_rows():
 
 def main():
     rows = ([[t, s, u, "page", k] for t, s, u, k in PAGES]
-            + classes_rows() + items_rows() + boss_rows() + quest_rows()
+            + classes_rows() + items_rows() + drops_rows()
+            + boss_rows() + quest_rows()
             + status_rows() + map_rows())
 
     # Two things with the same name and the same destination are one thing.

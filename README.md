@@ -378,6 +378,46 @@ Apostle` was `Nightfall's Flame` wearing a random option suffix in the title
 bar.
 
 
+### Who drops it
+
+This is the question players actually ask, and the game gives them nothing to
+ask it with: there is no working `@whodrops`, the client never says where
+anything comes from, the wiki has no monster pages and the control panel has no
+item database. So the site answers it three ways.
+
+- **From the sheets.** The gear docs have a *Drops From* column, and that is
+  where 639 of the answers come from. `database.html` now has a **Dropped by**
+  filter over that column, and `?drops=Poporing` opens the page already
+  filtered, which is what the site search links to.
+- **Backwards, out of the same column.** `drops_rows()` in `build_search.py`
+  turns every distinct name in it into a search row, so typing a monster into
+  the header search offers *Poporing, 2 drops* and one click lists them. A card
+  is named after the monster that drops it, so the filter matches a card by its
+  own name too.
+- **From the Discord, for everything else.** No sheet covers loot and
+  materials. `tools/data/who-drops.json` holds what people answered in
+  `#item-finder`, each line credited to whoever said it, and those items are
+  labelled *Answered on Discord* in the source filter rather than being passed
+  off as documented. `_wanted` in that file is the list nobody has answered
+  yet, which is what to ask Twilight for.
+
+### Loot and materials
+
+The database used to be gear and cards only, and a player said so in
+`#item-finder`: *"it doesn't work for etc/use items."* The client knows every
+one of them, so `fetch_client_items.py` also keeps the categories people
+actually hunt — loot, relic and quest materials, herbs, crafting, forging,
+refining and cooking ingredients, catalysts, trophies, valuables and artifacts.
+That is 1200 more entries, under a third filter chip. Costumes, pets, eggs,
+ammunition, scrolls, runes and enchant stones are left out on purpose: nobody
+asks who drops a costume.
+
+Loot has no stats, so for those entries the description *is* the information
+and the reader's flavour text becomes the entry body. An item somebody asked
+about in `who-drops.json` is imported even when its tooltip is plain official
+text with none of this server's vocabulary in it, which is how Sunglasses got
+in.
+
 ## The gear reference tabs
 
 Two tabs of the gear sheet are reference tables rather than item lists, so

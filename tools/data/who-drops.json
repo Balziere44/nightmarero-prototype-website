@@ -1,0 +1,170 @@
+{
+ "_note": "Where an item comes from, for items no sheet covers. Nothing here is guessed: every line was answered by somebody in the Discord and is credited to them, or was stated by TwilightsCall, who runs the server. The game has no working @whodrops, and #item-finder is where players ask instead, so this is the closest thing to a drop table that exists outside the server itself.",
+ "_how": "build_database.py writes `from` into the item's drop field, but only when the item has no drop of its own, so a sheet or the relic transcription always wins. Items still unanswered are listed under _wanted, which is what to ask Twilight for.",
+ "_source": "#item-finder and #general in the Discord export, read 17 Aug 2026.",
+ "items": [
+  {
+   "name": "Living Wood",
+   "from": "Greatest General on pay_fild10, or from other players in Prontera",
+   "said": "Camomile"
+  },
+  {
+   "name": "Burning Shard",
+   "from": "Ignis Fang",
+   "said": "Sleepy, confirmed by Shiiiiikiyo"
+  },
+  {
+   "name": "Pyroxene",
+   "from": "Mutant Dragonoid, on its usual spawn point",
+   "said": "Sleepy, confirmed by Shiiiiikiyo"
+  },
+  {
+   "name": "Wild Flower",
+   "from": "Alnoldi and Rafflesia, one map north of Lighthalzen",
+   "said": "Sfyn"
+  },
+  {
+   "name": "Fresh Fish",
+   "from": "Phen",
+   "said": "Yggr"
+  },
+  {
+   "name": "Cyfar",
+   "from": "Seal, on Comodo beach",
+   "said": "Einzbern"
+  },
+  {
+   "name": "Diamond of the Deep",
+   "from": "Kraken, the Byalan dungeon MVP",
+   "said": "Alyu"
+  },
+  {
+   "name": "Yggdrasil Berry",
+   "from": "The Umbala dungeon MVP, and the rainbow plant it leaves behind",
+   "said": "Sorenkazer"
+  },
+  {
+   "name": "Yggdrasil Seed",
+   "from": "The Umbala dungeon MVP, and the rainbow plant it leaves behind",
+   "said": "Sorenkazer"
+  },
+  {
+   "name": "Jungle Leaf",
+   "from": "um_fild03",
+   "said": "ChrisOhChris, who found it himself"
+  },
+  {
+   "name": "Coagulated Spell",
+   "from": "Nightmare Glast Heim. Talk to the NPC at the Glast Heim entrance, head for the castle and stop just short of the map",
+   "said": "Yggr and Raul"
+  },
+  {
+   "name": "Enchanted Key",
+   "from": "Clock Tower Manager, the mini boss on the last floor",
+   "said": "Yggr"
+  },
+  {
+   "name": "Sunglasses",
+   "from": "The champion on cmd_fild07",
+   "said": "Shiiiiikiyo, confirmed by another player"
+  },
+  {
+   "name": "Grape",
+   "from": "Purple plants, in the Geffen fields",
+   "said": "Razios and Panda"
+  },
+  {
+   "name": "Red Herb",
+   "from": "Red plants, in the Prontera fields",
+   "said": "Panda"
+  },
+  {
+   "name": "Yellow Herb",
+   "from": "Yellow plants, in the Morroc fields. The map with the Ant Hell entrance is the good one",
+   "said": "Panda and Yggr"
+  },
+  {
+   "name": "Green Herb",
+   "from": "Green plants, in the Payon fields",
+   "said": "Panda"
+  },
+  {
+   "name": "White Herb",
+   "from": "White plants, in the Yuno fields",
+   "said": "Panda"
+  },
+  {
+   "name": "Blue Herb",
+   "from": "Blue plants, which only appear where an MVP has been killed at an altar",
+   "said": "Panda, and TwilightsCall in #general"
+  },
+  {
+   "name": "Phracon",
+   "from": "MVPs up to level 50",
+   "said": "Grif"
+  },
+  {
+   "name": "Iron",
+   "from": "MVPs up to level 50",
+   "said": "Grif"
+  },
+  {
+   "name": "Emveretarcon",
+   "from": "MVPs between level 51 and 100",
+   "said": "Grif"
+  },
+  {
+   "name": "Steel",
+   "from": "MVPs between level 51 and 100",
+   "said": "Grif"
+  },
+  {
+   "name": "Oridecon",
+   "from": "MVPs between level 101 and 150",
+   "said": "Grif"
+  },
+  {
+   "name": "Elunium",
+   "from": "MVPs between level 101 and 150",
+   "said": "Grif"
+  },
+  {
+   "name": "Enriched Oridecon",
+   "from": "MVPs over level 150",
+   "said": "Grif"
+  },
+  {
+   "name": "Enriched Elunium",
+   "from": "MVPs over level 150",
+   "said": "Grif"
+  },
+  {
+   "name": "Magma Jelly",
+   "from": "Thor Volcano, worth farming there",
+   "said": "Conker"
+  }
+ ],
+ "_rules": [
+  "Souls drop from bosses only. Two of them are unique to Labyrinth Forest, and anything a boss drops can also be crafted at an Archaeologist, except in the secret dungeons. Said by TwilightsCall.",
+  "A Nightmare dungeon champion or mini boss only drops its card on the third floor. The ones on the first two floors do not use their real drop table. Said by Shiiiiikiyo and Sylius.",
+  "Nightmare dungeons are where shadow gear and the materials for it come from. Said by Sfyn.",
+  "Abyss weapons come from Nightmare Abyss and the Nightmare dungeons of the same tier, mostly out of weapon boxes.",
+  "The relic exchange NPC tells you which relic drops on which floor, and every dungeon Archaeologist can show the map for the relic you are missing.",
+  "The novice set pieces come from the Archaeologists in the low level areas. Said by Brandonowitz."
+ ],
+ "_wanted": [
+  "Ghostly Essence, for the homunculus upgrade",
+  "Grave Dust and Broken Urn",
+  "Detrimindexta",
+  "Animal Skin",
+  "Wooden Heart",
+  "Dried Bone",
+  "Memento",
+  "Sparkling Diamond",
+  "Ancient Tooth and Cultish Mask",
+  "Karvodailnirol, asked as \"does Karv only come from black shrooms\"",
+  "Fluorescent Liquid, for throwable potions",
+  "Golden Hair, for the Grape Juice quest, which a player reports no living monster drops",
+  "The Sandstorm relic dagger"
+ ]
+}

@@ -215,11 +215,21 @@
           </div>
 
           <div class="db-field">
+            <label for="qDrops" data-i18n="db.byDrops">Dropped by</label>
+            <div class="search-field">
+              <svg aria-hidden="true"><use href="#i-search"></use></svg>
+              <input id="qDrops" type="search" autocomplete="off" placeholder="Monster or boss name"
+                     data-i18n-attr="placeholder:db.phDrops">
+            </div>
+          </div>
+
+          <div class="db-field">
             <span class="db-label" data-i18n="db.kind">Kind</span>
             <div class="filter-bar" role="group">
               <button class="chip" type="button" data-kind="all" aria-pressed="true" data-i18n="db.all">All</button>
               <button class="chip" type="button" data-kind="gear" aria-pressed="false" data-i18n="db.gear">Equipment</button>
               <button class="chip" type="button" data-kind="card" aria-pressed="false" data-i18n="db.cards">Cards</button>
+              <button class="chip" type="button" data-kind="material" aria-pressed="false" data-i18n="db.materials">Loot and materials</button>
             </div>
           </div>
 

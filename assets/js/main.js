@@ -148,12 +148,13 @@
        cards and of one section that explains what fire actually does. */
     var WEIGHT = {
       page: 60, 'class': 52, boss: 40, quest: 38, status: 36,
-      map: 30, skill: 26, item: 20
+      map: 30, skill: 26, item: 20, drops: 44
     };
     var LABEL = {
       page: 'Pages', 'class': 'Classes', skill: 'Skills',
       item: 'Items and cards', boss: 'Bosses', quest: 'Quests',
-      status: 'Status effects', map: 'Fields and dungeons'
+      status: 'Status effects', map: 'Fields and dungeons',
+      drops: 'Dropped by'
     };
     var PER_GROUP = 7;
     var TOTAL = 28;

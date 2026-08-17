@@ -16,7 +16,7 @@
   var $ = function (id) { return document.getElementById(id); };
 
   var els = {
-    name: $('qName'), effect: $('qEffect'),
+    name: $('qName'), effect: $('qEffect'), drops: $('qDrops'),
     slot: $('fSlot'), cat: $('fCat'), source: $('fSource'), sort: $('fSort'),
     lvMin: $('lvMin'), lvMax: $('lvMax'),
     count: $('dbCount'), empty: $('dbEmpty'), reset: $('dbReset'),
@@ -56,7 +56,8 @@
      has written down a drop for yet. */
   var SOURCE_FALLBACK = {
     core: 'World drop', mvp: 'Boss drop', card: 'Card', shadow: 'Shadow gear',
-    relic: 'Relic gear', 'mvp-card': 'Boss card', unknown: 'Location unknown'
+    relic: 'Relic gear', 'mvp-card': 'Boss card',
+    unknown: 'Location unknown', discord: 'Answered on Discord'
   };
 
   function slotLabel(s) { return t('db.s.' + s, SLOT_FALLBACK[s] || s); }
@@ -104,7 +105,8 @@
 
     els.source.innerHTML = '';
     els.source.appendChild(option('', t('db.anySource', 'Any source')));
-    ['core', 'mvp', 'card', 'mvp-card', 'shadow', 'relic', 'unknown']
+    ['core', 'mvp', 'card', 'mvp-card', 'shadow', 'relic', 'discord',
+     'unknown']
       .forEach(function (s) {
         if (all.some(function (i) { return i.source === s; })) {
           els.source.appendChild(option(s, sourceLabel(s)));
@@ -145,6 +147,7 @@
   function apply() {
     var qn = norm(els.name.value).trim();
     var qe = norm(els.effect.value).trim();
+    var qd = norm(els.drops.value).trim();
     var slot = els.slot.value;
     var cat = els.cat.value;
     var src = els.source.value;
@@ -158,6 +161,10 @@
       if (src && i.source !== src) return false;
       if (qn && norm(i.name).indexOf(qn) === -1) return false;
       if (qe && i._search.indexOf(qe) === -1) return false;
+      /* A card is named after the monster that drops it, so searching a
+         monster by name has to turn up its card as well as its gear. */
+      if (qd && norm(i.drops).indexOf(qd) === -1 &&
+          !(i.kind === 'card' && norm(i.name).indexOf(qd) !== -1)) return false;
       if (!isNaN(lo) && (i.level == null || i.level < lo)) return false;
       if (!isNaN(hi) && (i.level == null || i.level > hi)) return false;
       return true;
@@ -195,7 +202,7 @@
   /* A card's category is always the word "Card", which says nothing. The slot
      it goes in is the useful part, so that is what the tag shows. */
   function tagFor(i) {
-    return i.kind === 'card' ? slotLabel(i.slot) : i.cat;
+    return i.kind === 'card' && i.slot ? slotLabel(i.slot) : i.cat;
   }
 
   function effectList(i, limit) {
@@ -260,6 +267,7 @@
      every UI language, and the item names are English in game anyway. */
   function shareText(i) {
     var head = ['**' + i.name + '**', i.kind === 'card' ? 'Card' : i.cat];
+    if (i.kind === 'material' && !i.drops) head.push('source not confirmed');
     if (i.kind === 'card') head.push(SLOT_FALLBACK[i.slot] + ' slot');
     if (i.slots != null) head.push(i.slots + ' slots');
     if (i.stat) head.push(i.statLabel + ' ' + i.stat);
@@ -283,12 +291,16 @@
     var meta = metaBits(i);
 
     var html =
-      '<p class="db-modal-tag">' + esc(i.cat) + '<span aria-hidden="true"> · </span>' +
-        '<b>' + esc(slotLabel(i.slot)) + '</b><span aria-hidden="true"> · </span>' +
+      '<p class="db-modal-tag">' + esc(i.cat) +
+        (i.slot ? '<span aria-hidden="true"> · </span><b>' +
+                  esc(slotLabel(i.slot)) + '</b>' : '') +
+        '<span aria-hidden="true"> · </span>' +
         esc(sourceLabel(i.source)) + '</p>' +
       '<h2 id="dbModalTitle">' + esc(i.name) + '</h2>' +
       (meta.length ? '<p class="db-meta">' + meta.join('<span aria-hidden="true"> · </span>') + '</p>' : '') +
-      '<h3 class="db-modal-h">' + t('db.effectHead', 'Effects') + '</h3>' +
+      '<h3 class="db-modal-h">' +
+        (i.kind === 'material' ? t('db.aboutHead', 'What it is')
+                               : t('db.effectHead', 'Effects')) + '</h3>' +
       effectList(i);
 
     if (i.affix) {
@@ -375,7 +387,7 @@
     debounce = setTimeout(apply, 140);
   }
 
-  [els.name, els.effect, els.lvMin, els.lvMax].forEach(function (el) {
+  [els.name, els.effect, els.drops, els.lvMin, els.lvMax].forEach(function (el) {
     el.addEventListener('input', onInput);
   });
 
@@ -396,7 +408,8 @@
   });
 
   els.reset.addEventListener('click', function () {
-    els.name.value = els.effect.value = els.lvMin.value = els.lvMax.value = '';
+    els.name.value = els.effect.value = els.drops.value = '';
+    els.lvMin.value = els.lvMax.value = '';
     els.slot.value = els.cat.value = els.source.value = '';
     els.sort.value = 'name';
     kind = 'all';
@@ -447,7 +460,17 @@
       els.sort.value = 'name';
       apply();
 
-      var wanted = new URLSearchParams(location.search).get('item');
+      var params = new URLSearchParams(location.search);
+
+      /* ?drops=Poporing is how the site search sends a monster here: the
+         answer to "what does this thing drop" is this page, filtered. */
+      var from = params.get('drops');
+      if (from) {
+        els.drops.value = from;
+        apply();
+      }
+
+      var wanted = params.get('item');
       if (wanted) {
         var hit = all.filter(function (i) { return i.name === wanted; })[0];
         if (hit) openItem(hit);

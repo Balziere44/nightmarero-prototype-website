@@ -290,6 +290,33 @@ TYPE_CAT = {
 }
 
 
+# The client's Type line for the things that are not worn: loot, materials and
+# the herbs. These are the items players hunt and cannot look up anywhere, so
+# they belong in the database even though they have no stats. Cosmetics, pets,
+# eggs, ammunition, scrolls, runes and enchant stones are deliberately left
+# out: nobody asks who drops a costume.
+ETC_CAT = {
+    "collectible": "Loot",
+    "relic": "Relic material",
+    "quest": "Quest item",
+    "crafting ingredient": "Crafting ingredient",
+    "cooking ingredient": "Cooking ingredient",
+    "forging material": "Forging material",
+    "refining material": "Refining material",
+    "skill catalyst": "Skill catalyst",
+    "skill necessity": "Skill catalyst",
+    "restorative": "Restorative",
+    "trophy": "Trophy",
+    "valuable": "Valuable",
+    "essential": "Essential",
+    "artifact": "Artifact",
+}
+
+
+def etc_cat(kind):
+    return ETC_CAT.get(kind.strip().lower(), "")
+
+
 def client_cat(kind):
     """Category for a client Type line, or "" when it says nothing useful."""
     kind = kind.strip().lower()
@@ -359,6 +386,22 @@ def same_reading(a, b):
            (b["stat"], b["effect"], b["mastery"], b["level"])
 
 
+def asked_about():
+    """Names somebody asked about in the Discord, from who-drops.json.
+
+    An item a player went looking for belongs in the database even when its
+    tooltip is plain official text with none of this server's vocabulary in it.
+    Sunglasses is the case that proved it: a champion drop people hunt, and the
+    reader would otherwise skip it.
+    """
+    path = os.path.join(db.SRC, "who-drops.json")
+    try:
+        data = json.load(io.open(path, encoding="utf-8"))
+    except (IOError, ValueError):
+        return set()
+    return set(it["name"].lower() for it in data.get("items", []))
+
+
 def wanted_names():
     """Everything the site already lists, so the extract can be trimmed to it
     and the rest reported."""
@@ -405,6 +448,7 @@ def main():
     print("  %d itens no cliente" % len(raw))
 
     wanted = wanted_names()
+    asked = asked_about()
     found, unknown = {}, {}
 
     for entry in sorted(raw.values(), key=lambda e: e["id"]):
@@ -420,9 +464,16 @@ def main():
             # vocabulary, which is what tells a live item apart from the
             # leftovers every client ships.
             got = describe(entry)
-            if client_cat(got["type"]) and CUSTOM.search(" ".join(entry["lines"])):
+            if client_cat(got["type"]) and (
+                    low in asked or CUSTOM.search(" ".join(entry["lines"]))):
                 got["ourName"] = got["name"]
                 got["new"] = True
+                got["custom"] = bool(CUSTOM.search(" ".join(entry["lines"])))
+                unknown.setdefault(got["name"], []).append(got)
+            elif etc_cat(got["type"]):
+                got["ourName"] = got["name"]
+                got["new"] = True
+                got["material"] = True
                 unknown.setdefault(got["name"], []).append(got)
             continue
         found.setdefault(ours["name"], []).append((ours, describe(entry)))
@@ -455,18 +506,40 @@ def main():
     # rule: only when every candidate of that name and kind reads alike.
     added, twins = [], []
     for name in sorted(unknown):
+        # Loot is grouped by name alone: the client files the same material
+        # under two Type lines now and then, Enriched Elunium being both a
+        # forging and a refining material, and that is one item.
+        loot = [g for g in unknown[name] if g.get("material")]
+        gear = [g for g in unknown[name] if not g.get("material")]
+
         by_cat = {}
-        for got in unknown[name]:
+        if loot:
+            by_cat["loot"] = loot
+        for got in gear:
+            # an item pulled in only because somebody asked about it, whose
+            # name is already a piece of loot, is the wrong item: RO has a
+            # Fresh Fish you can equip and a Fresh Fish that Phen drops
+            if loot and not got.get("custom"):
+                continue
             by_cat.setdefault(client_cat(got["type"]), []).append(got)
+
         for cat, group in sorted(by_cat.items()):
             first = group[0]
-            if not all(same_reading(first, other) for other in group[1:]):
+            if cat != "loot" and not all(
+                    same_reading(first, other) for other in group[1:]):
                 twins.append("%-30s %s" % (name, ", ".join(
                     "%d (%s)" % (g["id"], g["stat"] or "sem stat")
                     for g in group)))
                 continue
-            first["cat"] = cat
-            first["slot"] = slot_for(first)
+            if cat == "loot":
+                # keep the one that actually says something
+                first = max(group, key=lambda g: len(g.get("flavour", "")) +
+                            len(" ".join(g.get("effect", []))))
+                first["cat"] = etc_cat(first["type"])
+                first["slot"] = ""
+            else:
+                first["cat"] = cat
+                first["slot"] = slot_for(first)
             added.append(first)
 
     keep += added

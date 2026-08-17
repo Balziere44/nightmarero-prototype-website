@@ -236,7 +236,9 @@ def parse_relics(path):
             "statLabel": ("ATK/MATK" if it["slot"] == "weapon" else "DEF/MDEF"),
             "effect": effect,
             "level": it.get("level", 0),
-            "drops": it.get("type", ""),
+            # the map is the answer to "where do I get this", which is what
+            # the field is for. The type is already the category.
+            "drops": it.get("map", ""),
             "source": "relic",
         })
     return items
@@ -338,19 +340,26 @@ def apply_client(items, path):
             if got["name"].lower() in ours:
                 continue
             card = got["cat"] == "Card"
+            material = bool(got.get("material"))
+            # for loot and materials the description IS the information, and
+            # the reader files a plain paragraph as flavour, so take it back
+            effect = client_effect(got)
+            if material and not effect and got.get("flavour"):
+                effect = [got["flavour"]]
             items.append({
                 "name": got["name"],
-                "kind": "card" if card else "gear",
+                "kind": ("material" if material
+                         else "card" if card else "gear"),
                 "slot": got["slot"],
                 "cat": got["cat"],
                 # a card has no card slots of its own, and "0 slots" on the
                 # result card would just be noise
-                "slots": None if card else got.get("slots"),
+                "slots": None if card or material else got.get("slots"),
                 "stat": got.get("stat", ""),
                 "statLabel": got.get("statLabel", ""),
-                "effect": client_effect(got),
+                "effect": effect,
                 "level": got.get("level"),
-                "drops": UNKNOWN_WHERE,
+                "drops": "" if material else UNKNOWN_WHERE,
                 "source": "unknown",
             })
             if card:
@@ -385,6 +394,43 @@ def apply_client(items, path):
     if empty:
         print("  tooltip vazio, planilha mantida (%d): %s"
               % (len(empty), ", ".join(sorted(empty))))
+    return items
+
+
+def apply_who_drops(items, path):
+    """tools/data/who-drops.json: where an item comes from, for the items no
+    sheet covers.
+
+    The game has no working @whodrops and the client never says where anything
+    drops, so for loot and materials the only answer that exists is the one a
+    player gave in the Discord. Each line is credited in the JSON. A drop we
+    already had always wins, and the placeholder counts as not having one.
+    """
+    try:
+        data = json.load(io.open(path, encoding="utf-8"))
+    except (IOError, ValueError):
+        return items
+
+    ours = {}
+    for it in items:
+        ours.setdefault(it["name"].lower(), it)
+
+    filled, absent = 0, []
+    for said in data.get("items", []):
+        it = ours.get(said["name"].lower())
+        if it is None:
+            absent.append(said["name"])
+            continue
+        if it.get("drops") and it["drops"] != UNKNOWN_WHERE:
+            continue
+        it["drops"] = said["from"]
+        # say where the answer came from: a player in the Discord, not a sheet
+        it["source"] = "discord"
+        filled += 1
+
+    print("  %-32s %4d com origem do Discord" % ("who-drops.json", filled))
+    if absent:
+        print("  não estão na database: %s" % ", ".join(absent))
     return items
 
 
@@ -556,6 +602,7 @@ def main():
     # everything, because that is the order of how much they can be trusted
     items = apply_tooltips(items)
     items = apply_client(items, os.path.join(SRC, "client-items.json"))
+    items = apply_who_drops(items, os.path.join(SRC, "who-drops.json"))
 
     # de-duplicate on name + slot + source, keeping the first
     seen, unique = set(), []
