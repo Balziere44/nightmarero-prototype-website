@@ -242,6 +242,69 @@ def parse_relics(path):
     return items
 
 
+# What the entries transcribed from tooltips say where the sheets say a
+# monster or a map. Nobody has written down where any of them drop yet.
+UNKNOWN_WHERE = "Not confirmed yet, ask on Discord or in game"
+
+
+def parse_tooltips(path):
+    """tools/data/tooltip-items.json, typed out of client item tooltips.
+
+    Same shape as the sheet rows once it is through here, so one search covers
+    the lot. The tooltip is the game itself talking, so it carries things the
+    sheets do not: which mastery gives which bonus, what the set combo does,
+    and the class restriction. Those all land in the effect list, because that
+    is the only field the cards and the modal print in full.
+    """
+    try:
+        data = json.load(io.open(path, encoding="utf-8"))
+    except (IOError, ValueError):
+        return []
+
+    items = []
+    for it in data.get("items", []):
+        effect = []
+        if it.get("position"):
+            effect.append(it["position"])
+        effect.extend(it.get("mastery", []))
+        effect.extend(it.get("effect", []))
+        combo = it.get("combo") or {}
+        if combo:
+            effect.append("Set: %s" % combo["with"])
+            effect.extend("Set bonus: %s" % line for line in combo["gives"])
+        if it.get("classes"):
+            effect.append("Usable by %s" % it["classes"])
+
+        items.append({
+            "name": it["name"],
+            "kind": "gear",
+            "slot": it["slot"],
+            "cat": it["cat"],
+            "slots": None,          # the tooltip never shows card slots
+            "stat": it.get("stat", ""),
+            "statLabel": ("ATK/MATK" if it["slot"] == "weapon"
+                          else "DEF/MDEF"),
+            "effect": effect,
+            "level": it.get("level"),
+            "drops": UNKNOWN_WHERE,
+            "source": "unknown",
+        })
+
+    for it in data.get("cards", []):
+        items.append({
+            "name": it["name"],
+            "kind": "card",
+            "slot": it["slot"],
+            "cat": "Card",
+            "effect": list(it.get("effect", [])),
+            "affix": "",
+            "drops": UNKNOWN_WHERE,
+            "source": "unknown",
+        })
+
+    return items
+
+
 # Shadow gear equips in a second equipment window, so a Shadow Armor and an
 # ordinary Armor are worn at the same time and need slots of their own.
 SHADOW_PIECES = {
@@ -351,6 +414,10 @@ def main():
     items.extend(relics)
     print("  %-32s %4d relíquias" % ("relic-gear.json", len(relics)))
 
+    tooltips = parse_tooltips(os.path.join(SRC, "tooltip-items.json"))
+    items.extend(tooltips)
+    print("  %-32s %4d de tooltip" % ("tooltip-items.json", len(tooltips)))
+
     mvp_cards = os.path.join(SRC, "mvp-cards.csv")
     if os.path.exists(mvp_cards):
         got = parse_mvp_cards(mvp_cards)
@@ -358,6 +425,20 @@ def main():
         print("  %-32s %4d cartas de MVP" % ("mvp-cards.csv", len(got)))
     else:
         print("  faltando: mvp-cards.csv")
+
+    # The tooltip file only holds what the sheets do not. If a sheet later
+    # grows a row for one of those names, the sheet wins and the hand typed
+    # copy is dropped, so the same item never shows up twice.
+    from_sheets = set(i["name"].lower() for i in items
+                      if i["source"] != "unknown")
+    kept = []
+    for it in items:
+        if it["source"] == "unknown" and it["name"].lower() in from_sheets:
+            print("  agora está na planilha, tirando do tooltip: %s"
+                  % it["name"])
+            continue
+        kept.append(it)
+    items = kept
 
     # de-duplicate on name + slot + source, keeping the first
     seen, unique = set(), []

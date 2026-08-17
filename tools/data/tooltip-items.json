@@ -1,0 +1,1845 @@
+{
+ "_note": "Gear and cards transcribed by hand from client item tooltips screenshotted in game by the SENAI guild. Only names the published sheets do not carry yet are in here; anything the sheets already list stays with the sheet so there is one entry per item. Several tooltips are cut off at the bottom in the screenshot, so the flavour text can be shorter than in game, and a mouse cursor sits over a few numbers, which is why some stat fields are empty rather than guessed.",
+ "_where": "Nobody has documented where these drop. Every entry therefore ships the same honest placeholder instead of a location. The sheets do give a location for other pieces of six of these families, so the guess is Rgan Tunnels for Exuvic, Far North for Glacial, Thanatos Tower for Honor Guard and True Morpheus's/Morrigane's, Rgan Sacred Ground for Ascendant and Kiel D-01 for Apolytos, but a guess is not a source and none of it is written into the entries.",
+ "_skills": "Exuvic Blessing, which half the Exuvic entries raise, is a passive with no listed maximum level: Atk and Matk +1% per level, and it drains 1% of Max HP every 5 seconds.",
+ "_source": "In game item tooltips, screenshotted 17 Aug 2026.",
+ "items": [
+  {
+   "name": "Yggdrasilid Robe",
+   "type": "Relic Armor",
+   "slot": "armor",
+   "cat": "Relic Gear",
+   "set": "Yggdrasilid",
+   "position": "",
+   "stat": "0/0",
+   "mastery": [],
+   "effect": [
+    "Max HP/SP +10%",
+    "Per refine, Damage from All Races -1%",
+    "Per refine, Damage Taken from Bleeding, Burning and Poison -1%",
+    "Per refine, Magic Defense Pierce +3%",
+    "If +7, Matk +15%"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A robe worn by the Yggdrasilids, a cult of Druids responsible for tending to the World Tree."
+  },
+  {
+   "name": "Yggdrasilid Armor",
+   "type": "Relic Armor",
+   "slot": "armor",
+   "cat": "Relic Gear",
+   "set": "Yggdrasilid",
+   "position": "",
+   "stat": "0/0",
+   "mastery": [],
+   "effect": [
+    "Max HP/SP +10%",
+    "Per refine, Damage from All Races -1%",
+    "Per refine, Damage Taken from Bleeding, Burning and Poison -1%",
+    "Per refine, Defense Pierce +3%",
+    "If +7, Atk +15%"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A suit of armor worn by the Yggdrasilids, a cult of Druids responsible for tending to the World Tree."
+  },
+  {
+   "name": "Yggdrasilid Muffler",
+   "type": "Relic Garment",
+   "slot": "garment",
+   "cat": "Relic Gear",
+   "set": "Yggdrasilid",
+   "position": "",
+   "stat": "0/0",
+   "mastery": [],
+   "effect": [
+    "Max HP/SP +5%",
+    "Per refine, Damage from All Races -1%",
+    "Per refine, Damage Taken from Bleeding, Burning and Poison -1%",
+    "Per refine, Magic Defense Pierce +3%",
+    "If +7, Non-Neutral Resistance +15%"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A muffler worn by the Yggdrasilids, a cult of Druids responsible for tending to the World Tree."
+  },
+  {
+   "name": "Yggdrasilid Shoes",
+   "type": "Relic Shoes",
+   "slot": "shoes",
+   "cat": "Relic Gear",
+   "set": "Yggdrasilid",
+   "position": "",
+   "stat": "0/0",
+   "mastery": [],
+   "effect": [
+    "Max HP/SP +5%",
+    "Per refine, Damage from All Races -1%",
+    "Per refine, Damage Taken from Bleeding, Burning and Poison -1%",
+    "Per refine, Magic Defense Pierce +3%",
+    "If +7, Variable Cast Time -20%"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A pair of shoes worn by the Yggdrasilids, a cult of Druids responsible for tending to the World Tree."
+  },
+  {
+   "name": "Lost King's Tunic",
+   "type": "Relic Armor",
+   "slot": "armor",
+   "cat": "Relic Gear",
+   "set": "Lost King's",
+   "position": "",
+   "stat": "30/10",
+   "mastery": [],
+   "effect": [
+    "Enables use of King's Authority Lv1"
+   ],
+   "combo": {
+    "with": "Lost King's Tunic + Manteau + Shoes + Insignia",
+    "gives": [
+     "Increase the level of all King's Skills by 1"
+    ]
+   },
+   "level": 110,
+   "weight": 90,
+   "classes": "",
+   "flavour": "An ancient tunic purportedly worn by the last king of Glast Heim. Wearing it makes you feel like true royalty."
+  },
+  {
+   "name": "Lost King's Manteau",
+   "type": "Relic Garment",
+   "slot": "garment",
+   "cat": "Relic Gear",
+   "set": "Lost King's",
+   "position": "",
+   "stat": "20/5",
+   "mastery": [],
+   "effect": [
+    "Enables use of King's Insight Lv1"
+   ],
+   "combo": {},
+   "level": 110,
+   "weight": 90,
+   "classes": "",
+   "flavour": "An ancient cloak purportedly worn by the last king of Glast Heim. Wearing it makes you feel wise and powerful."
+  },
+  {
+   "name": "Lost King's Insignia",
+   "type": "Relic Accessory",
+   "slot": "accessory",
+   "cat": "Relic Gear",
+   "set": "Lost King's",
+   "position": "",
+   "stat": "0/0",
+   "mastery": [],
+   "effect": [
+    "Enables use of King's Mercy Lv1"
+   ],
+   "combo": {},
+   "level": 110,
+   "weight": 10,
+   "classes": "",
+   "flavour": "An ancient insignia purportedly worn by the last king of Glast Heim. Wearing it makes you feel responsible for the people around you."
+  },
+  {
+   "name": "Shinobi Suit",
+   "type": "Armor",
+   "slot": "armor",
+   "cat": "Armors",
+   "set": "Shinobi",
+   "position": "",
+   "stat": "30/0",
+   "mastery": [],
+   "effect": [
+    "Str, Int and Dex +1",
+    "Per refine, Crit Damage +2%",
+    "Crit Rate -30",
+    "For each Shinobi Sash equipped, Crit Rate +15"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A unique outfit made to help Ninja carry out their covert operations."
+  },
+  {
+   "name": "Shinobi Muffler",
+   "type": "Garment",
+   "slot": "garment",
+   "cat": "Garments",
+   "set": "Shinobi",
+   "position": "",
+   "stat": "20/10",
+   "mastery": [],
+   "effect": [
+    "Str, Int and Dex +1",
+    "Per refine, All Element Magic Damage +1%",
+    "All Fixed Cast Times +100%",
+    "For each Shinobi Sash equipped, All Fixed Cast Times -50%"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A unique scarf made to help Ninja carry out their covert operations."
+  },
+  {
+   "name": "Shinobi Boots",
+   "type": "Shoes",
+   "slot": "shoes",
+   "cat": "Shoes",
+   "set": "Shinobi",
+   "position": "",
+   "stat": "20/5",
+   "mastery": [],
+   "effect": [
+    "Str, Int and Dex +1",
+    "Per refine, Ranged Damage +1%",
+    "Movement Speed -20%",
+    "For each Shinobi Sash equipped, Movement Speed +10%"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A unique pair of boots made to help Ninja carry out their covert operations."
+  },
+  {
+   "name": "Shinobi Sash",
+   "type": "Accessory",
+   "slot": "accessory",
+   "cat": "Accessories",
+   "set": "Shinobi",
+   "position": "",
+   "stat": "0/0",
+   "mastery": [],
+   "effect": [
+    "Str, Int and Dex +1"
+   ],
+   "combo": {},
+   "level": 110,
+   "weight": 10,
+   "classes": "",
+   "flavour": "An old sash worn by an ancient clan of Ninja that were wiped out by the Amatsu Clan after falling into heresy."
+  },
+  {
+   "name": "Insurgent Cloak",
+   "type": "Garment",
+   "slot": "garment",
+   "cat": "Garments",
+   "set": "Insurgent",
+   "position": "",
+   "stat": "20/10",
+   "mastery": [],
+   "effect": [
+    "Per refine, Vulnerable Potency +2%",
+    "If +7, Damage Taken from Vulnerable enemies -5%"
+   ],
+   "combo": {},
+   "level": 110,
+   "weight": 50,
+   "classes": "",
+   "flavour": "A heavy cloak worn by members of the Schwarzwald Rebellion, a group founded to free the Republic from its corporate chains."
+  },
+  {
+   "name": "Insurgent Boots",
+   "type": "Shoes",
+   "slot": "shoes",
+   "cat": "Shoes",
+   "set": "Insurgent",
+   "position": "",
+   "stat": "20/5",
+   "mastery": [],
+   "effect": [
+    "Per refine, Slow Potency +3",
+    "If +7, Damage Taken from Slowed enemies -5%"
+   ],
+   "combo": {},
+   "level": 110,
+   "weight": 50,
+   "classes": "",
+   "flavour": "Sturdy boots designed to handle the rough terrain of any battlefield, commonly used by members of the Schwarzwald Rebellion."
+  },
+  {
+   "name": "Ring of the Bifrost",
+   "type": "Accessory",
+   "slot": "accessory",
+   "cat": "Accessories",
+   "set": "Bifrost",
+   "position": "",
+   "stat": "0/0",
+   "mastery": [],
+   "effect": [
+    "Slow Resistance +25%",
+    "Slow Duration +2s",
+    "Chill Resistance +25%",
+    "Chill Duration +2s"
+   ],
+   "combo": {},
+   "level": 130,
+   "weight": 10,
+   "classes": "",
+   "flavour": "A ring found on the mysterious Bifrost Bridge. You can only wonder what kind of people brought it there."
+  },
+  {
+   "name": "Nightfall's Flame of the Apostle",
+   "type": "Headgear (Mid)",
+   "slot": "headgear",
+   "cat": "Headgears",
+   "set": "",
+   "position": "Mid headgear",
+   "stat": "0/0",
+   "mastery": [],
+   "effect": [
+    "Fixed Cast Time -0.5s"
+   ],
+   "combo": {},
+   "level": 130,
+   "weight": 10,
+   "classes": "",
+   "flavour": "Miniature wings of dark fire that seem to absorb light rather than give it off."
+  },
+  {
+   "name": "True Morpheus's Bandana",
+   "type": "Relic Headgear (Upper)",
+   "slot": "headgear",
+   "cat": "Relic Gear",
+   "set": "True Morpheus's",
+   "position": "Upper headgear",
+   "stat": "0/5",
+   "mastery": [],
+   "effect": [
+    "Dex +3",
+    "Variable Cast Time -8%",
+    "Fixed Cast Time -0.5s"
+   ],
+   "combo": {
+    "with": "Morpheus's Bandana + Shawl + Ring + Bracelet",
+    "gives": [
+     "Dex +3",
+     "Variable Cast Time -8%",
+     "Fixed Cast Time -1s",
+     "Magic Defense Pierce +20%",
+     "Casting can't be interrupted",
+     "Gain immunity to Slowcast"
+    ]
+   },
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "An ancient bandana excavated from the ruins of Thanatos Tower. Restored to its original form, it now exhibits tremendous power."
+  },
+  {
+   "name": "True Morpheus's Shawl",
+   "type": "Relic Garment",
+   "slot": "garment",
+   "cat": "Relic Gear",
+   "set": "True Morpheus's",
+   "position": "",
+   "stat": "15/20",
+   "mastery": [],
+   "effect": [
+    "Dex +3",
+    "Variable Cast Time -8%",
+    "Magic Defense Pierce +15%"
+   ],
+   "combo": {},
+   "level": 130,
+   "weight": 60,
+   "classes": "",
+   "flavour": "An ancient shawl excavated from the ruins of Thanatos Tower. Restored to its original form, it now exhibits tremendous power."
+  },
+  {
+   "name": "True Morpheus's Ring",
+   "type": "Relic Accessory",
+   "slot": "accessory",
+   "cat": "Relic Gear",
+   "set": "True Morpheus's",
+   "position": "",
+   "stat": "0/0",
+   "mastery": [],
+   "effect": [
+    "Dex +3",
+    "Variable Cast Time -8%",
+    "Fixed Cast Time -0.5s"
+   ],
+   "combo": {},
+   "level": 130,
+   "weight": 10,
+   "classes": "",
+   "flavour": "An ancient ring excavated from the ruins of Thanatos Tower. Restored to its original form, it now exhibits tremendous power."
+  },
+  {
+   "name": "True Morpheus's Bracelet",
+   "type": "Relic Accessory",
+   "slot": "accessory",
+   "cat": "Relic Gear",
+   "set": "True Morpheus's",
+   "position": "",
+   "stat": "0/0",
+   "mastery": [],
+   "effect": [
+    "Dex +3",
+    "Variable Cast Time -8%",
+    "Magic Defense Pierce +15%"
+   ],
+   "combo": {},
+   "level": 130,
+   "weight": 10,
+   "classes": "",
+   "flavour": "An ancient bracelet excavated from the ruins of Thanatos Tower. Restored to its original form, it now exhibits tremendous power."
+  },
+  {
+   "name": "True Morrigane's Helm",
+   "type": "Relic Headgear",
+   "slot": "headgear",
+   "cat": "Relic Gear",
+   "set": "True Morrigane's",
+   "position": "",
+   "stat": "",
+   "mastery": [],
+   "effect": [
+    "Luk +3",
+    "Crit Rate +5",
+    "Crit Damage +10%"
+   ],
+   "combo": {
+    "with": "Morrigane's Helm + Manteau + Belt + Pendant",
+    "gives": [
+     "Crit Rate +5",
+     "Crit Damage +10%",
+     "Critical Hits gain an additional 20% Defense Pierce",
+     "Whenever an attack fails to Crit, Crit Rate +10 and Crit Damage +15%, stacking up to +100/+150%. The effect ends after landing a Critical Hit"
+    ]
+   },
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "An ancient helm excavated from the ruins of Thanatos Tower. Restored to its original form, it now exhibits tremendous power."
+  },
+  {
+   "name": "True Morrigane's Manteau",
+   "type": "Relic Garment",
+   "slot": "garment",
+   "cat": "Relic Gear",
+   "set": "True Morrigane's",
+   "position": "",
+   "stat": "20/15",
+   "mastery": [],
+   "effect": [
+    "Luk +3",
+    "Crit Rate +5",
+    "Critical Hits gain an additional 15% Defense Pierce"
+   ],
+   "combo": {},
+   "level": 110,
+   "weight": 60,
+   "classes": "",
+   "flavour": "An ancient cloak excavated from the ruins of Thanatos Tower. Restored to its original form, it now exhibits tremendous power."
+  },
+  {
+   "name": "True Morrigane's Belt",
+   "type": "Relic Accessory",
+   "slot": "accessory",
+   "cat": "Relic Gear",
+   "set": "True Morrigane's",
+   "position": "",
+   "stat": "0/0",
+   "mastery": [],
+   "effect": [
+    "Luk +3",
+    "Crit Rate +5",
+    "Crit Damage +10%"
+   ],
+   "combo": {},
+   "level": 130,
+   "weight": 20,
+   "classes": "",
+   "flavour": "An ancient belt excavated from the ruins of Thanatos Tower. Restored to its original form, it now exhibits tremendous power."
+  },
+  {
+   "name": "True Morrigane's Pendant",
+   "type": "Relic Accessory",
+   "slot": "accessory",
+   "cat": "Relic Gear",
+   "set": "True Morrigane's",
+   "position": "",
+   "stat": "0/0",
+   "mastery": [],
+   "effect": [
+    "Luk +3",
+    "Crit Rate +5",
+    "Critical Hits gain an additional 15% Defense Pierce"
+   ],
+   "combo": {},
+   "level": 130,
+   "weight": 20,
+   "classes": "",
+   "flavour": "An ancient pendant excavated from the ruins of Thanatos Tower. Restored to its original form, it now exhibits tremendous power."
+  },
+  {
+   "name": "Valkyrie Armor",
+   "type": "Relic Armor",
+   "slot": "armor",
+   "cat": "Relic Gear",
+   "set": "Valkyrie",
+   "position": "",
+   "stat": "50/10",
+   "mastery": [],
+   "effect": [
+    "Max HP/SP +10%",
+    "Per refine, Damage Taken from All Sizes -1%",
+    "If +7, Atk/Matk +5%",
+    "If +7, Immune to Knockback"
+   ],
+   "combo": {
+    "with": "Valkyrie Armor + Manteau + Shoes",
+    "gives": [
+     "Armor becomes Holy Property",
+     "Physical and Magical Attacks ignore the elemental weaknesses and resistances of Holy"
+    ]
+   },
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A suit of armor worn by the Valkyries, the messengers of the gods."
+  },
+  {
+   "name": "Valkyrie Manteau",
+   "type": "Relic Garment",
+   "slot": "garment",
+   "cat": "Relic Gear",
+   "set": "Valkyrie",
+   "position": "",
+   "stat": "30/15",
+   "mastery": [],
+   "effect": [
+    "Neutral Resistance +10%",
+    "Per refine, Perfect Dodge +2",
+    "If +7, Atk/Matk +5%",
+    "If +7, Bleeding, Burning and Poison Status Damage received -20%"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A heavy cloak worn by the Valkyries, the messengers of the gods. The light of providence shines on those who wear it."
+  },
+  {
+   "name": "Valkyrie Shoes",
+   "type": "Relic Shoes",
+   "slot": "shoes",
+   "cat": "Relic Gear",
+   "set": "Valkyrie",
+   "position": "",
+   "stat": "20/15",
+   "mastery": [],
+   "effect": [
+    "Crit Rate +15",
+    "Fixed Cast Time -1s",
+    "Per refine, Defense and Magic Defense Pierce +3%",
+    "If +7, Atk/Matk +5%",
+    "If +7, High Jump Cooldown -3s"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A set of beautiful but sturdy footwear worn by Valkyries, the messengers of the gods."
+  },
+  {
+   "name": "Exuvic Dagger",
+   "type": "Dagger",
+   "slot": "weapon",
+   "cat": "Daggers",
+   "set": "Exuvic",
+   "position": "",
+   "stat": "64/64",
+   "mastery": [
+    "Dagger mastery: Flee +3",
+    "Magical Attunement mastery: SP Recovery +4%"
+   ],
+   "effect": [
+    "Per refine, Exuvic Blessing Level +1",
+    "Melee Damage +10%",
+    "Ranged Damage +10%",
+    "All Element Magic Damage +10%",
+    "If +7, Defense Pierce +30% and Magic Defense Pierce +30%"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A dagger said to be forged from cast off remnants of the World Serpent's own skin."
+  },
+  {
+   "name": "Exuvic Katar",
+   "type": "Katar",
+   "slot": "weapon",
+   "cat": "Katars",
+   "set": "Exuvic",
+   "position": "",
+   "stat": "120/0",
+   "mastery": [
+    "Katar mastery: Crit Damage +3%"
+   ],
+   "effect": [
+    "Per refine, Exuvic Blessing Level +1",
+    "Physical Damage to Poisoned enemies +20%",
+    "If +7, Poison Status Damage Received -99%",
+    "If +7, Damage Taken from Poisoned enemies -15%"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A katar said to be forged from cast off remnants of the World Serpent's own skin."
+  },
+  {
+   "name": "Exuvic Knuckle",
+   "type": "Knuckle",
+   "slot": "weapon",
+   "cat": "Fists",
+   "set": "Exuvic",
+   "position": "",
+   "stat": "100/0",
+   "mastery": [
+    "Fist mastery: Crit Damage +3%"
+   ],
+   "effect": [
+    "Per refine, Exuvic Blessing Level +1",
+    "Melee Damage +20%",
+    "If +7, Zen Cooldown -20s",
+    "If +7, Judge's Conviction Cooldown -20s"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A knuckle said to be forged from cast off remnants of the World Serpent's own skin."
+  },
+  {
+   "name": "Exuvic Mace",
+   "type": "Mace",
+   "slot": "weapon",
+   "cat": "Maces",
+   "set": "Exuvic",
+   "position": "",
+   "stat": "80/80",
+   "mastery": [
+    "Mace mastery: Crit Rate +3"
+   ],
+   "effect": [
+    "Per refine, Exuvic Blessing Level +1",
+    "Crit Damage +20%",
+    "If +7, Autoattacks have a 5% chance to autocast Scorpion Lash Lv5",
+    "If +7, Physical Skills have a 25% chance to autocast Scorpion Lash Lv5"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A mace said to be forged from cast off remnants of the World Serpent's own skin."
+  },
+  {
+   "name": "Exuvic Axe",
+   "type": "One-Handed Axe",
+   "slot": "weapon",
+   "cat": "One-Handed Axes",
+   "set": "Exuvic",
+   "position": "",
+   "stat": "120/0",
+   "mastery": [
+    "Axe mastery: Crit Rate +3"
+   ],
+   "effect": [
+    "Per refine, Exuvic Blessing Level +1",
+    "Ranged Damage +20%",
+    "If +7, Vulnerable Potency +30%"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A axe said to be forged from cast off remnants of the World Serpent's own skin."
+  },
+  {
+   "name": "Exuvic Greataxe",
+   "type": "Two-Handed Axe",
+   "slot": "weapon",
+   "cat": "Two-Handed Axes",
+   "set": "Exuvic",
+   "position": "",
+   "stat": "150/0",
+   "mastery": [
+    "Axe mastery: Crit Damage +3%"
+   ],
+   "effect": [
+    "Per refine, Exuvic Blessing Level +1",
+    "Melee Damage +20%",
+    "If +7, Burning Damage Taken -99%",
+    "If +7, Damage Taken from All Sizes -15%"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A greataxe said to be forged from cast off remnants of the World Serpent's own skin."
+  },
+  {
+   "name": "Exuvic Claymore",
+   "type": "Two-Handed Sword",
+   "slot": "weapon",
+   "cat": "Two-Handed Swords",
+   "set": "Exuvic",
+   "position": "",
+   "stat": "150/0",
+   "mastery": [
+    "Two-Handed Sword mastery: Crit +3"
+   ],
+   "effect": [
+    "Per refine, Exuvic Blessing Level +1",
+    "Physical Damage to Bleeding enemies +20%",
+    "If +7, Bleeding Damage +30%"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A greatsword said to be forged from cast off remnants of the World Serpent's own skin."
+  },
+  {
+   "name": "Exuvic Lance",
+   "type": "Two-Handed Spear",
+   "slot": "weapon",
+   "cat": "Two-Handed Spears",
+   "set": "Exuvic",
+   "position": "",
+   "stat": "150/0",
+   "mastery": [
+    "Spear mastery: Vulnerable Potency +4%"
+   ],
+   "effect": [
+    "Per refine, Exuvic Blessing Level +1",
+    "Physical Damage to Vulnerable enemies +20%",
+    "If +7, Damage Taken from All Sizes -15%"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A lance said to be forged from cast off remnants of the World Serpent's own skin."
+  },
+  {
+   "name": "Exuvic Bow",
+   "type": "Bow",
+   "slot": "weapon",
+   "cat": "Bows",
+   "set": "Exuvic",
+   "position": "",
+   "stat": "80/0",
+   "mastery": [
+    "Bow mastery: Ranged Damage +2%"
+   ],
+   "effect": [
+    "Per refine, Exuvic Blessing Level +1",
+    "Physical Damage to Slowed enemies +20%",
+    "If +7, ASPD +10"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A bow said to be forged from cast off remnants of the World Serpent's own skin."
+  },
+  {
+   "name": "Exuvic Staff",
+   "type": "Staff",
+   "slot": "weapon",
+   "cat": "Staffs",
+   "set": "Exuvic",
+   "position": "",
+   "stat": "15/115",
+   "mastery": [
+    "Magical Attunement mastery: Variable Cast Time -2%"
+   ],
+   "effect": [
+    "Per refine, Exuvic Blessing Level +1",
+    "All Element Magic Damage +20%",
+    "If +7, Fixed Cast Time -1s"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A staff said to be forged from cast off remnants of the World Serpent's own skin."
+  },
+  {
+   "name": "Exuvic Shuriken",
+   "type": "Huuma Shuriken",
+   "slot": "weapon",
+   "cat": "Huuma Shurikens",
+   "set": "Exuvic",
+   "position": "",
+   "stat": "150/0",
+   "mastery": [
+    "Throwing mastery: Skill Level +1"
+   ],
+   "effect": [
+    "Enables use of Throw Huuma Shuriken Lv0",
+    "Per refine, Exuvic Blessing Level +1",
+    "Melee Damage Taken -15%",
+    "If +7, Throw Huuma inflicts the Deadly Poison Status"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A shuriken said to be forged from cast off remnants of the World Serpent's own skin."
+  },
+  {
+   "name": "Exuvic Launcher",
+   "type": "Grenade Launcher",
+   "slot": "weapon",
+   "cat": "Grenade Launchers",
+   "set": "Exuvic",
+   "position": "",
+   "stat": "",
+   "mastery": [
+    "All Launcher Skills mastery: Burning Damage +1%"
+   ],
+   "effect": [
+    "Per refine, Launcher Damage +3%",
+    "Per refine, Exuvic Blessing Level +1",
+    "Ranged Damage +10%",
+    "If +7, Ammunition Economy Cooldown -15s"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A launcher said to be forged from cast off remnants of the World Serpent's own skin."
+  },
+  {
+   "name": "Exuvic Necklace",
+   "type": "Accessory",
+   "slot": "accessory",
+   "cat": "Accessories",
+   "set": "Exuvic",
+   "position": "",
+   "stat": "0/0",
+   "mastery": [],
+   "effect": [
+    "Exuvic Blessing level +2",
+    "For each level of Exuvic Blessing, All Skill Cooldowns -1%"
+   ],
+   "combo": {},
+   "level": 130,
+   "weight": 10,
+   "classes": "",
+   "flavour": "A necklace infused with the toxic energies polluting the Rgan Tunnels."
+  },
+  {
+   "name": "Rgan Disguise",
+   "type": "Headgear (Mid and Low)",
+   "slot": "headgear",
+   "cat": "Headgears",
+   "set": "Exuvic",
+   "position": "Mid and Low headgear",
+   "stat": "0/0",
+   "mastery": [],
+   "effect": [
+    "Exuvic Blessing level +3",
+    "For each level of Exuvic Blessing, Defense and Magic Defense Pierce +3%"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A (thankfully) artificial Rgan head that you can wear as a disguise to help blend in among them."
+  },
+  {
+   "name": "Glacial Manteau",
+   "type": "Garment",
+   "slot": "garment",
+   "cat": "Garments",
+   "set": "Glacial",
+   "position": "",
+   "stat": "40/0",
+   "mastery": [],
+   "effect": [
+    "Per refine, Physical Damage to Wind and Water Property enemies +1%",
+    "If +7, Wind and Water Property Resistance +5%"
+   ],
+   "combo": {},
+   "level": 130,
+   "weight": null,
+   "classes": "",
+   "flavour": "A heavy cloak found in the frozen canyons of the Far North. It seems less intended to protect from the cold, and more to fight it."
+  },
+  {
+   "name": "Glacial Bow",
+   "type": "Bow",
+   "slot": "weapon",
+   "cat": "Bows",
+   "set": "Glacial",
+   "position": "",
+   "stat": "80/0",
+   "mastery": [
+    "Bow mastery: Ranged Damage +2%"
+   ],
+   "effect": [
+    "Per refine, Physical and Magical Damage +3% while suffering from the Chilled Status",
+    "Permanently applies the Chilled Status on equip",
+    "The Chilled Status persists for 5 seconds after unequipping"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A mysterious bow found in the frozen canyons of the Far North."
+  },
+  {
+   "name": "Glacial Soul",
+   "type": "Soul",
+   "slot": "weapon",
+   "cat": "Souls",
+   "set": "Glacial",
+   "position": "",
+   "stat": "20/20",
+   "mastery": [
+    "Soul Harmony mastery: Skill Levels +1"
+   ],
+   "effect": [
+    "Enables use of Winter Razor and Frostbite at Level 0",
+    "Physical and Magical Damage +10% while suffering from the Chilled Status",
+    "Permanently applies the Chilled Status on equip",
+    "The Chilled Status persists for 5 seconds after unequipping"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": ""
+  },
+  {
+   "name": "Frozen Pendant",
+   "type": "Accessory",
+   "slot": "accessory",
+   "cat": "Accessories",
+   "set": "",
+   "position": "",
+   "stat": "0/0",
+   "mastery": [],
+   "effect": [
+    "Non-Neutral Resistance +5%",
+    "Max HP -10%"
+   ],
+   "combo": {},
+   "level": 130,
+   "weight": 10,
+   "classes": "",
+   "flavour": "A pendant locked in perpetual ice. Wearing it makes you feel constantly numb from the cold."
+  },
+  {
+   "name": "Ice Wing Ears",
+   "type": "Headgear (Mid)",
+   "slot": "headgear",
+   "cat": "Headgears",
+   "set": "",
+   "position": "Mid headgear",
+   "stat": "0/0",
+   "mastery": [],
+   "effect": [
+    "Physical and Magical Damage to Chilled enemies +5%",
+    "Physical and Magical Damage dealt while Chilled +5%"
+   ],
+   "combo": {},
+   "level": 130,
+   "weight": 10,
+   "classes": "",
+   "flavour": "Miniature wings of ice that keep your face perpetually freezing."
+  },
+  {
+   "name": "Prototype \"Exciser\"",
+   "type": "Dagger",
+   "slot": "weapon",
+   "cat": "Daggers",
+   "set": "Prototype",
+   "position": "",
+   "stat": "58/0",
+   "mastery": [
+    "Dagger mastery: Flee +3"
+   ],
+   "effect": [
+    "Per refine, Damage dealt to Poisoned enemies +1.5%",
+    "Per refine, Damage dealt to Blind enemies +1.5%",
+    "If +9, Defense Pierce +40%"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A prototype dagger being tested in the heart of the Black Ops Base. It needs quite a bit of work to show off its full potential."
+  },
+  {
+   "name": "Prototype \"Guardian\"",
+   "type": "One-Handed Sword",
+   "slot": "weapon",
+   "cat": "One-Handed Swords",
+   "set": "Prototype",
+   "position": "",
+   "stat": "70/0",
+   "mastery": [
+    "Sword mastery: ASPD +2"
+   ],
+   "effect": [
+    "Per refine, Damage dealt to Vulnerable enemies +1.5%",
+    "Per refine, Damage taken from Vulnerable enemies -1.5%",
+    "If +9, Barrier Potency +25%"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A prototype sword being tested in the heart of the Black Ops Base. It needs quite a bit of work to show off its full potential."
+  },
+  {
+   "name": "Prototype \"Decimator\"",
+   "type": "Two-Handed Sword",
+   "slot": "weapon",
+   "cat": "Two-Handed Swords",
+   "set": "Prototype",
+   "position": "",
+   "stat": "",
+   "mastery": [
+    "Two-Handed Sword mastery: Crit Rate +3"
+   ],
+   "effect": [
+    "Per refine, Damage dealt to Bleeding enemies +1.5%",
+    "Per refine, Damage dealt to Burning enemies +1.5%",
+    "If +9, Bleeding and Burning Damage +30%"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A prototype great sword being tested in the heart of the Black Ops Base. It needs quite a bit of work to show off its full potential."
+  },
+  {
+   "name": "Prototype \"Slaughter\"",
+   "type": "Gatling Gun",
+   "slot": "weapon",
+   "cat": "Gatling Guns",
+   "set": "Prototype",
+   "position": "",
+   "stat": "",
+   "mastery": [
+    "All Gatling Skills mastery: Gatling Cooldowns -2%"
+   ],
+   "effect": [
+    "Per refine, Gatling Damage +2%",
+    "Per refine, reduce all Active Cooldowns by 0.5s when an enemy is killed"
+   ],
+   "combo": {},
+   "level": 110,
+   "weight": null,
+   "classes": "",
+   "flavour": "A prototype gatling gun being tested in the heart of the Black Ops Base. It needs quite a bit of work to show off its full potential."
+  },
+  {
+   "name": "Prototype \"Avenger\"",
+   "type": "Grenade Launcher",
+   "slot": "weapon",
+   "cat": "Grenade Launchers",
+   "set": "Prototype",
+   "position": "",
+   "stat": "",
+   "mastery": [
+    "All Launcher Skills mastery: Burning Damage +1%"
+   ],
+   "effect": [
+    "Per refine, Launcher Damage +3%",
+    "Per refine, reduce the Active Cooldown of Ammunition Economy by 1s when an enemy is killed"
+   ],
+   "combo": {},
+   "level": 110,
+   "weight": null,
+   "classes": "",
+   "flavour": "A prototype grenade launcher being tested in the heart of the Black Ops Base. It needs quite a bit of work to show off its full potential."
+  },
+  {
+   "name": "Heartseeker's Sigil",
+   "type": "Accessory",
+   "slot": "accessory",
+   "cat": "Accessories",
+   "set": "Black Ops",
+   "position": "",
+   "stat": "0/0",
+   "mastery": [],
+   "effect": [
+    "Crit Rate +10"
+   ],
+   "combo": {
+    "with": "Heartseeker's Sigil + Heartseeker's Sigil",
+    "gives": [
+     "Crit Damage +10%"
+    ]
+   },
+   "level": 110,
+   "weight": 10,
+   "classes": "",
+   "flavour": "A mysterious sigil held by the Heartseeker in the Black Ops Base."
+  },
+  {
+   "name": "True Faith Saber",
+   "type": "One-Handed Sword",
+   "slot": "weapon",
+   "cat": "One-Handed Swords",
+   "set": "True Faith",
+   "position": "",
+   "stat": "90/0",
+   "mastery": [
+    "Sword mastery: ASPD +2"
+   ],
+   "effect": [
+    "Per refine, Damage to Vulnerable enemies +3%",
+    "If +7, Vulnerable Potency +30%"
+   ],
+   "combo": {},
+   "level": 130,
+   "weight": null,
+   "classes": "",
+   "flavour": "A tremendous sword forged by the elite blacksmiths of the Sessrumnir Temple. It wields a power unlike anything seen in this world."
+  },
+  {
+   "name": "True Faith Greatsword",
+   "type": "Two-Handed Sword",
+   "slot": "weapon",
+   "cat": "Two-Handed Swords",
+   "set": "True Faith",
+   "position": "",
+   "stat": "170/0",
+   "mastery": [
+    "Two-Handed Sword mastery: Crit +3"
+   ],
+   "effect": [
+    "Per refine, Damage to Bleeding enemies +3%",
+    "If +7, Damage Taken from Bleeding enemies -15%"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A tremendous greatsword forged by the elite blacksmiths of the Sessrumnir Temple. It wields a power unlike anything seen in this world."
+  },
+  {
+   "name": "True Faith Spear",
+   "type": "One-Handed Spear",
+   "slot": "weapon",
+   "cat": "One-Handed Spears",
+   "set": "True Faith",
+   "position": "",
+   "stat": "90/0",
+   "mastery": [
+    "Spear mastery: Vulnerable Potency +3%"
+   ],
+   "effect": [
+    "Per refine, Damage to Vulnerable enemies +3%",
+    "If +7, Vulnerable inflicts damage over time"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A tremendous spear forged by the elite blacksmiths of the Sessrumnir Temple. It wields a power unlike anything seen in this world."
+  },
+  {
+   "name": "True Faith Lance",
+   "type": "Two-Handed Spear",
+   "slot": "weapon",
+   "cat": "Two-Handed Spears",
+   "set": "True Faith",
+   "position": "",
+   "stat": "170/0",
+   "mastery": [
+    "Spear mastery: Vulnerable Potency +4%"
+   ],
+   "effect": [
+    "Per refine, Damage to Vulnerable enemies +3%",
+    "If +7, Damage Taken from Vulnerable enemies -15%"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A tremendous lance forged by the elite blacksmiths of the Sessrumnir Temple. It wields a power unlike anything seen in this world."
+  },
+  {
+   "name": "True Faith Handaxe",
+   "type": "One-Handed Axe",
+   "slot": "weapon",
+   "cat": "One-Handed Axes",
+   "set": "True Faith",
+   "position": "",
+   "stat": "135/0",
+   "mastery": [
+    "Axe mastery: Crit Rate +3"
+   ],
+   "effect": [
+    "Per refine, Ranged Damage +3%",
+    "If +7, Burning Damage +30% and Vulnerable Potency +30%"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A tremendous handaxe forged by the elite blacksmiths of the Sessrumnir Temple. It wields a power unlike anything seen in this world."
+  },
+  {
+   "name": "True Faith Greataxe",
+   "type": "Two-Handed Axe",
+   "slot": "weapon",
+   "cat": "Two-Handed Axes",
+   "set": "True Faith",
+   "position": "",
+   "stat": "170/0",
+   "mastery": [
+    "Axe mastery: Crit Damage +3%"
+   ],
+   "effect": [
+    "Per refine, Physical Damage to All Sizes +3%",
+    "If +7, Damage Received from All Sizes -15%"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A tremendous greataxe forged by the elite blacksmiths of the Sessrumnir Temple. It wields a power unlike anything seen in this world."
+  },
+  {
+   "name": "True Faith Dagger",
+   "type": "Dagger",
+   "slot": "weapon",
+   "cat": "Daggers",
+   "set": "True Faith",
+   "position": "",
+   "stat": "70/0",
+   "mastery": [
+    "Dagger mastery: Flee +3"
+   ],
+   "effect": [
+    "Main hand, per refine, Physical Damage to Blind and Vulnerable enemies +2%",
+    "Main hand, if +7, Crit Rate +30",
+    "Off hand, per refine, Damage Taken from Blind and Vulnerable enemies -2%",
+    "Off hand, if +7, ASPD +10"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A tremendous dagger forged by the elite blacksmiths of the Sessrumnir Temple. It wields a power unlike anything seen in this world."
+  },
+  {
+   "name": "True Faith Katar",
+   "type": "Katar",
+   "slot": "weapon",
+   "cat": "Katars",
+   "set": "True Faith",
+   "position": "",
+   "stat": "135/0",
+   "mastery": [
+    "Katar mastery: Crit Damage +3%"
+   ],
+   "effect": [
+    "Per refine, Physical Damage to Vulnerable enemies +3%",
+    "If +7, Vulnerable Potency +30%"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A tremendous katar forged by the elite blacksmiths of the Sessrumnir Temple. It wields a power unlike anything seen in this world."
+  },
+  {
+   "name": "True Faith Bow",
+   "type": "Bow",
+   "slot": "weapon",
+   "cat": "Bows",
+   "set": "True Faith",
+   "position": "",
+   "stat": "90/0",
+   "mastery": [
+    "Bow mastery: Ranged Damage +2%"
+   ],
+   "effect": [
+    "Per refine, Physical Damage to Slowed enemies +3%",
+    "If +7, Slow Duration +5s"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A tremendous bow forged by the elite blacksmiths of the Sessrumnir Temple. It wields a power unlike anything seen in this world."
+  },
+  {
+   "name": "True Faith Violin",
+   "type": "Instrument",
+   "slot": "weapon",
+   "cat": "Instruments & Whips",
+   "set": "True Faith",
+   "position": "",
+   "stat": "90/90",
+   "mastery": [
+    "Musical mastery: SP Consumption -3%"
+   ],
+   "effect": [
+    "Per refine, Physical and Magical Damage to Blind enemies +3%",
+    "If +7, Blind Potency +30"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A tremendous violin forged by the elite blacksmiths of the Sessrumnir Temple. It wields a power unlike anything seen in this world."
+  },
+  {
+   "name": "True Faith Chain",
+   "type": "Whip",
+   "slot": "weapon",
+   "cat": "Instruments & Whips",
+   "set": "True Faith",
+   "position": "",
+   "stat": "90/90",
+   "mastery": [
+    "Dancing Dexterity mastery: SP Consumption -3%"
+   ],
+   "effect": [
+    "Per refine, Physical and Magical Damage to Slowed enemies +3%",
+    "If +7, Slow Potency +50"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A tremendous whip forged by the elite blacksmiths of the Sessrumnir Temple. It wields a power unlike anything seen in this world."
+  },
+  {
+   "name": "True Faith Staff",
+   "type": "Staff",
+   "slot": "weapon",
+   "cat": "Staffs",
+   "set": "True Faith",
+   "position": "",
+   "stat": "25/130",
+   "mastery": [
+    "Magical Attunement mastery: Variable Cast Time -2%"
+   ],
+   "effect": [
+    "Per refine, Magical Damage to Burning, Chilled, Sleeping, Dazed and Bleeding enemies +1%",
+    "If +7, Burning, Chilled, Sleeping, Dazed and Bleeding Duration +3s"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A tremendous staff forged by the elite blacksmiths of the Sessrumnir Temple. It wields a power unlike anything seen in this world."
+  },
+  {
+   "name": "True Faith Rod",
+   "type": "Staff",
+   "slot": "weapon",
+   "cat": "Staffs",
+   "set": "True Faith",
+   "position": "",
+   "stat": "25/130",
+   "mastery": [
+    "Magical Attunement mastery: Variable Cast Time -2%"
+   ],
+   "effect": [
+    "Per refine, Magical Damage to Breached enemies +3%",
+    "If +7, Breach Potency +30%"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A tremendous rod forged by the elite blacksmiths of the Sessrumnir Temple. It wields a power unlike anything seen in this world."
+  },
+  {
+   "name": "True Faith Scepter",
+   "type": "Mace",
+   "slot": "weapon",
+   "cat": "Maces",
+   "set": "True Faith",
+   "position": "",
+   "stat": "90/90",
+   "mastery": [
+    "Mace mastery: Crit Rate +3",
+    "Piety mastery: Healing Power +4%"
+   ],
+   "effect": [
+    "Per refine, Magic Damage to enemies under Searing Light +3%",
+    "If +7, Searing Light Damage +30%"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A tremendous scepter forged by the elite blacksmiths of the Sessrumnir Temple. It wields a power unlike anything seen in this world."
+  },
+  {
+   "name": "True Faith Knuckle",
+   "type": "Knuckle",
+   "slot": "weapon",
+   "cat": "Fists",
+   "set": "True Faith",
+   "position": "",
+   "stat": "115/0",
+   "mastery": [
+    "Fist mastery: Crit Damage +3%"
+   ],
+   "effect": [
+    "Per refine, Physical Damage during Spiritual Cadence +3%",
+    "If +7, Spiritual Cadence stacks twice as fast"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A tremendous knuckle forged by the elite blacksmiths of the Sessrumnir Temple. It wields a power unlike anything seen in this world."
+  },
+  {
+   "name": "True Faith Tome",
+   "type": "Book",
+   "slot": "weapon",
+   "cat": "Books",
+   "set": "True Faith",
+   "position": "",
+   "stat": "115/0",
+   "mastery": [
+    "Cosmic Insight mastery: All Stats +1 per 2 levels"
+   ],
+   "effect": [
+    "Per refine, Physical Damage to All Sizes +3%",
+    "If +7, All Stats +5"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A tremendous book forged by the elite blacksmiths of the Sessrumnir Temple. It wields a power unlike anything seen in this world."
+  },
+  {
+   "name": "True Faith Nindo",
+   "type": "Dagger",
+   "slot": "weapon",
+   "cat": "Daggers",
+   "set": "True Faith",
+   "position": "",
+   "stat": "70/70",
+   "mastery": [
+    "Dagger mastery: Flee +3",
+    "Magical Attunement mastery: SP Regen +4%"
+   ],
+   "effect": [
+    "Per refine, Physical and Magical Damage to All Sizes +3%",
+    "If +7, Defense Pierce +30% and Magic Defense Pierce +30%"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A tremendous Ninja blade forged by the elite blacksmiths of the Sessrumnir Temple. It wields a power unlike anything seen in this world."
+  },
+  {
+   "name": "True Faith Gatling Gun",
+   "type": "Gatling Gun",
+   "slot": "weapon",
+   "cat": "Gatling Guns",
+   "set": "True Faith",
+   "position": "",
+   "stat": "",
+   "mastery": [
+    "All Gatling Skills mastery: Gatling Cooldowns -2%"
+   ],
+   "effect": [
+    "Per refine, Gatling Damage +3%",
+    "Per refine, Damage Taken from Bleeding, Vulnerable and Slowed enemies -1%",
+    "If +7, Bleeding Damage +15%, Vulnerable Potency +15% and Slow Potency +30"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A tremendous gatling gun forged by the elite blacksmiths of the Sessrumnir Temple. It wields a power unlike anything seen in this world."
+  },
+  {
+   "name": "Apolytos Mace",
+   "type": "Relic Mace",
+   "slot": "weapon",
+   "cat": "Relic Gear",
+   "set": "Apolytos",
+   "position": "",
+   "stat": "80/80",
+   "mastery": [
+    "Mace mastery: Crit Rate +3",
+    "Piety mastery: Healing Power +4%"
+   ],
+   "effect": [
+    "If +3, Fixed Cast Time -2s",
+    "If +6, Holy Magic Damage +30%",
+    "If +9, increase the level of Grace and Authority granted by all skills by 1, to a maximum of 15"
+   ],
+   "combo": {},
+   "level": 130,
+   "weight": 150,
+   "classes": "Acolyte classes",
+   "flavour": "A hi-tech mace developed in the mysterious Robot Factory."
+  },
+  {
+   "name": "Honor Guard Armor",
+   "type": "Armor",
+   "slot": "armor",
+   "cat": "Armors",
+   "set": "Honor Guard",
+   "position": "",
+   "stat": "40/10",
+   "mastery": [],
+   "effect": [
+    "Per refine, Vulnerable and Breach Potency Received -2%"
+   ],
+   "combo": {
+    "with": "Honor Guard Armor + Cloak + Boots",
+    "gives": [
+     "Per refine of the Armor, Vulnerable and Breach Potency +2%"
+    ]
+   },
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A set of formal clothing with strong defensive properties used by the ceremonial guard detail that watched over Thanatos Tower in the distant past."
+  },
+  {
+   "name": "Stargazer Robe",
+   "type": "Armor",
+   "slot": "armor",
+   "cat": "Armors",
+   "set": "Stargazer",
+   "position": "",
+   "stat": "30/0",
+   "mastery": [],
+   "effect": [
+    "Per refine, Luk +1",
+    "For every 9 Base Luk, Max HP +1%"
+   ],
+   "combo": {
+    "with": "Stargazer Robe + Cloak + Boots + Shield",
+    "gives": [
+     "ASPD Limit +2"
+    ]
+   },
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A robe infused with the essence of the cosmos."
+  },
+  {
+   "name": "Stargazer Cloak",
+   "type": "Garment",
+   "slot": "garment",
+   "cat": "Garments",
+   "set": "Stargazer",
+   "position": "",
+   "stat": "20/10",
+   "mastery": [],
+   "effect": [
+    "Per refine, Luk +1",
+    "For every 9 Base Luk, Non-Neutral Resistance +2%"
+   ],
+   "combo": {},
+   "level": 110,
+   "weight": null,
+   "classes": "",
+   "flavour": "A cloak infused with the essence of the cosmos, designed to protect those chosen by fate."
+  },
+  {
+   "name": "Stargazer Boots",
+   "type": "Shoes",
+   "slot": "shoes",
+   "cat": "Shoes",
+   "set": "Stargazer",
+   "position": "",
+   "stat": "20/5",
+   "mastery": [],
+   "effect": [
+    "Per refine, Luk +1",
+    "For every 9 Base Luk, Crit Rate +1 and Fixed Cast Time -0.1s"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A pair of boots infused with the power of the cosmos, leading those who wear them toward their destiny."
+  },
+  {
+   "name": "Book of Unity",
+   "type": "Book",
+   "slot": "weapon",
+   "cat": "Books",
+   "set": "",
+   "position": "",
+   "stat": "70/0",
+   "mastery": [
+    "Cosmic Insight mastery: Agi +1 per 3 levels"
+   ],
+   "effect": [
+    "Per refine, ASPD +1",
+    "If +7, increase the learned levels of Solar Warmth, Lunar Protection, Stellar Blessing and Umbral Veil by 1"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": ""
+  },
+  {
+   "name": "Salvage Saw",
+   "type": "One-Handed Axe",
+   "slot": "weapon",
+   "cat": "One-Handed Axes",
+   "set": "",
+   "position": "",
+   "stat": "90/0",
+   "mastery": [
+    "Axe mastery: Crit Rate +3"
+   ],
+   "effect": [
+    "For each level of Veins Reputation, Physical Damage to All Sizes +1%",
+    "For each level of Veins Reputation, Defense Pierce +3%",
+    "If +7, additional Physical Damage to All Sizes +5%",
+    "If +7, additional Defense Pierce +15%"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "An axe that looks like it belongs on a salvage crew."
+  },
+  {
+   "name": "Pure Light Bow",
+   "type": "Bow",
+   "slot": "weapon",
+   "cat": "Bows",
+   "set": "",
+   "position": "",
+   "stat": "80/0",
+   "mastery": [
+    "Bow mastery: Ranged Damage +2%"
+   ],
+   "effect": [
+    "Per refine, Physical Damage to Slowed enemies +3%",
+    "Per refine, add a 1% chance to autocast Scouring Light on attack",
+    "Per refine, add a 3% chance to autocast Scouring Light on skills",
+    "If +9, Scouring Light Damage +30%"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": ""
+  },
+  {
+   "name": "Extinction's Wing",
+   "type": "Bow",
+   "slot": "weapon",
+   "cat": "Bows",
+   "set": "Diabolus",
+   "position": "",
+   "stat": "",
+   "mastery": [],
+   "effect": [
+    "Enables use of Inevitable Extinction Lv0",
+    "Each refine increases the level granted by 1",
+    "If +7, weapon becomes Dark Property",
+    "If +7, ignore the elemental weaknesses and resistances of Dark Property enemies",
+    "For each Diabolus item equipped, Crit Damage +5%"
+   ],
+   "combo": {},
+   "level": null,
+   "weight": null,
+   "classes": "",
+   "flavour": "A horrifying bow found in the Endless Desert."
+  }
+ ],
+ "cards": [
+  {
+   "name": "Herald of Dawn",
+   "slot": "headgear",
+   "set": "Dawnbringer",
+   "effect": [
+    "Breach Potency +30%",
+    "Multiple copies of this card do not stack"
+   ],
+   "flavour": ""
+  },
+  {
+   "name": "Rebel Trooper",
+   "slot": "accessory",
+   "set": "Insurgent",
+   "effect": [
+    "Reduce all active skill Cooldowns by 1 second when an enemy is killed"
+   ],
+   "flavour": ""
+  },
+  {
+   "name": "Witch of the Bifrost",
+   "slot": "accessory",
+   "set": "Bifrost",
+   "effect": [
+    "Wind, Water and Earth Property Magic Damage +5%"
+   ],
+   "flavour": ""
+  },
+  {
+   "name": "Dullahan",
+   "slot": "any",
+   "set": "",
+   "effect": [
+    "Atk +2%",
+    "Fits any slot except a weapon"
+   ],
+   "flavour": ""
+  },
+  {
+   "name": "Loli Ruri",
+   "slot": "any",
+   "set": "",
+   "effect": [
+    "Matk +2%",
+    "Fits any slot except a weapon"
+   ],
+   "flavour": ""
+  },
+  {
+   "name": "Lude",
+   "slot": "accessory",
+   "set": "",
+   "effect": [
+    "Max SP +5%",
+    "Lude + Quve: Max HP/SP +5%"
+   ],
+   "flavour": ""
+  },
+  {
+   "name": "Disguise",
+   "slot": "any",
+   "set": "",
+   "effect": [
+    "Blind and Vulnerable Resistance +20%"
+   ],
+   "flavour": ""
+  },
+  {
+   "name": "Hylozoist",
+   "slot": "armor",
+   "set": "",
+   "effect": [
+    "For each level of Vicious Possession learned, Atk +1%",
+    "For each level of Arcane Possession learned, Matk +1%"
+   ],
+   "flavour": ""
+  },
+  {
+   "name": "Rgan Devourer",
+   "slot": "weapon",
+   "set": "Exuvic",
+   "effect": [
+    "Physical Damage to Poisoned enemies +15%",
+    "Exuvic Blessing level +3",
+    "If a Two-Handed Weapon is equipped, Damage Taken from Poisoned enemies -15%",
+    "Multiple copies of this card do not stack"
+   ],
+   "flavour": ""
+  },
+  {
+   "name": "Black Ops \"Heartseeker\"",
+   "slot": "garment",
+   "set": "Black Ops",
+   "effect": [
+    "Neutral Resistance +35%",
+    "Non-Neutral Resistance -35%"
+   ],
+   "flavour": ""
+  },
+  {
+   "name": "Fanat",
+   "slot": "shield",
+   "set": "Rachel",
+   "effect": [
+    "Damage Taken from Angel, Demon and Demihuman Race enemies -20%",
+    "Max HP +1% per level of Rachel Reputation"
+   ],
+   "flavour": ""
+  },
+  {
+   "name": "Abakhu",
+   "slot": "weapon",
+   "set": "Rachel",
+   "effect": [
+    "Magical Damage to Fire, Water, Wind and Earth Property enemies +10%",
+    "Variable Cast Time -1% per level of Rachel Reputation"
+   ],
+   "flavour": ""
+  },
+  {
+   "name": "Vokhel",
+   "slot": "weapon",
+   "set": "Rachel",
+   "effect": [
+    "Physical Damage to Fire, Water, Wind and Earth Property enemies +15%",
+    "Crit Rate +1 per level of Rachel Reputation"
+   ],
+   "flavour": ""
+  },
+  {
+   "name": "Aunoe",
+   "slot": "garment",
+   "set": "Rachel",
+   "effect": [
+    "Earth, Water and Holy Resistance +20%",
+    "Neutral Resistance +1% for each level of Rachel Reputation"
+   ],
+   "flavour": ""
+  },
+  {
+   "name": "Grand Apostate",
+   "slot": "armor",
+   "set": "Rachel",
+   "effect": [
+    "Damage Taken from Fire, Water, Wind and Earth Property enemies -5%",
+    "Movement Speed +1% per level of Rachel Reputation"
+   ],
+   "flavour": ""
+  },
+  {
+   "name": "Fallen Angel Iceslug",
+   "slot": "shield",
+   "set": "Glacial",
+   "effect": [
+    "Damage Taken while Chilled -25%"
+   ],
+   "flavour": ""
+  }
+ ]
+}

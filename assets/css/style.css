@@ -2268,6 +2268,10 @@ html[data-theme="light"] .site-footer { background: color-mix(in srgb, var(--bg)
 .db-source.-mvp { color: var(--accent-soft); }
 .db-source.-card { color: var(--kw-poison); }
 .db-source.-shadow { color: var(--sk-magic); }
+.db-source.-mvp-card { color: var(--kw-poison); }
+/* deliberately the dim default, so a piece with no known drop reads as the
+   loose end it is rather than as another category */
+.db-source.-unknown { font-style: italic; }
 
 /* ---- item panel ---- */
 

@@ -52,8 +52,11 @@
     'shadow-armor': 'Shadow armour', 'shadow-gloves': 'Shadow gloves',
     'shadow-shoes': 'Shadow shoes', 'shadow-pendant': 'Shadow pendant'
   };
+  /* "unknown" is for the pieces typed out of in game tooltips, which nobody
+     has written down a drop for yet. */
   var SOURCE_FALLBACK = {
-    core: 'World drop', mvp: 'Boss drop', card: 'Card', shadow: 'Shadow gear'
+    core: 'World drop', mvp: 'Boss drop', card: 'Card', shadow: 'Shadow gear',
+    relic: 'Relic gear', 'mvp-card': 'Boss card', unknown: 'Location unknown'
   };
 
   function slotLabel(s) { return t('db.s.' + s, SLOT_FALLBACK[s] || s); }
@@ -101,11 +104,12 @@
 
     els.source.innerHTML = '';
     els.source.appendChild(option('', t('db.anySource', 'Any source')));
-    ['core', 'mvp', 'card', 'shadow'].forEach(function (s) {
-      if (all.some(function (i) { return i.source === s; })) {
-        els.source.appendChild(option(s, sourceLabel(s)));
-      }
-    });
+    ['core', 'mvp', 'card', 'mvp-card', 'shadow', 'relic', 'unknown']
+      .forEach(function (s) {
+        if (all.some(function (i) { return i.source === s; })) {
+          els.source.appendChild(option(s, sourceLabel(s)));
+        }
+      });
 
     els.sort.innerHTML = '';
     [['name', t('db.sortName', 'Name')],

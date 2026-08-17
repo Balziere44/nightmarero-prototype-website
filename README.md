@@ -318,6 +318,31 @@ Category names differ slightly between the two gear docs (`GATLINGS` versus
 `GATLING GUNS`). `CATEGORY_ALIASES` in `build_database.py` folds those
 together so the filter does not list near-duplicates.
 
+### Items that only exist as a screenshot
+
+The guild plays ahead of the sheets, so gear turns up in game months before a
+row is typed for it. Those pieces live in `tools/data/tooltip-items.json`,
+transcribed by hand from client tooltips, and `parse_tooltips()` reshapes them
+into ordinary entries so one search covers both. Two rules keep it from
+rotting:
+
+- **Only what the sheets do not have.** Every name in the file was checked
+  against `items.json` first. If a sheet later grows a row for one of them,
+  `build_database.py` drops the hand typed copy, says which one, and the sheet
+  wins — so the same item can never show up twice.
+- **No invented drops.** Nobody has documented where any of these come from,
+  so they all carry the same placeholder and the source filter files them under
+  *Location unknown*. The sheets do name a location for sibling pieces of six
+  of these families, and the guesses that implies are written down in `_where`
+  inside the JSON, deliberately outside the entries themselves.
+
+A tooltip carries a few things the sheets leave out, and those are folded into
+the effect list because that is the only field the result card and the item
+panel print in full: which mastery grants which bonus, what the set combo
+gives (`Set: A + B + C`, then a `Set bonus:` line each), the class restriction, and which headgear
+slot a hat occupies. Where a mouse cursor sat over a number in the screenshot
+the stat field is left empty rather than guessed.
+
 ## The gear reference tabs
 
 Two tabs of the gear sheet are reference tables rather than item lists, so
