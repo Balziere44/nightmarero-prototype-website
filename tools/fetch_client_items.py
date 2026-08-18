@@ -445,9 +445,15 @@ TYPE_CAT = {
     "taekwon glove": "Taekwon Gloves",
     "armor": "Armors", "garment": "Garments", "shoes": "Shoes",
     "shield": "Shields", "accessory": "Accessories",
-    "godly armor": "Armors", "godly garment": "Garments",
-    "godly shoes": "Shoes", "godly shield": "Shields",
-    "godly accessory": "Accessories",
+}
+
+# The six god items are worn in six different slots, but a player looking at
+# one wants to see the other five, not the other shields. So they are a family
+# of their own, like relic and shadow gear.
+GODLY_SLOT = {
+    "godly armor": "armor", "godly garment": "garment",
+    "godly shoes": "shoes", "godly shield": "shield",
+    "godly accessory": "accessory",
 }
 
 
@@ -500,6 +506,8 @@ def client_cat(kind):
     kind = kind.strip().lower()
     if not kind:
         return ""
+    if kind in GODLY_SLOT:
+        return "Godly Gear"
     if kind.startswith("relic ") or kind == "relic gear":
         return "Relic Gear"
     if kind.startswith("shadow ") or kind.startswith("relic shadow "):
@@ -534,6 +542,8 @@ def slot_for(got):
     """Which equipment slot a client entry belongs in."""
     kind = got["type"].strip().lower()
     cat = client_cat(got["type"])
+    if cat == "Godly Gear":
+        return GODLY_SLOT[kind]
     if cat == "Card":
         where = got["compound"].strip().lower()
         return COMPOUND_SLOT.get(where, "any")

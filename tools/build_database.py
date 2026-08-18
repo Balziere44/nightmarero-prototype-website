@@ -583,6 +583,37 @@ def apply_flavour(items):
     return items
 
 
+def apply_unfinished(items):
+    """"Unfinished Hervor Alvitr" is the material for "Hervor Alvitr".
+
+    Not an inference: it is the same name with a word in front, and the client
+    files one of these for each of the six god items. Saying so on both ends
+    means a player who finds the material knows what it turns into, and a
+    player looking at the god item knows what to hunt.
+    """
+    named = {}
+    for it in items:
+        named.setdefault(it["name"].lower(), it)
+
+    linked = 0
+    for it in items:
+        if not it["name"].lower().startswith("unfinished "):
+            continue
+        made = named.get(it["name"][11:].lower())
+        if made is None:
+            continue
+        line = "Used to make: %s" % made["name"]
+        if line not in it["effect"]:
+            it["effect"].append(line)
+        if not made.get("drops") or made["drops"] == UNKNOWN_WHERE:
+            made["drops"] = "Made from %s" % it["name"]
+            made["source"] = "client"
+        linked += 1
+
+    print("  %-32s %4d pares" % ("(inacabado -> acabado)", linked))
+    return items
+
+
 def apply_who_drops(items, path):
     """tools/data/who-drops.json: where an item comes from, for the items no
     sheet covers.
@@ -796,6 +827,7 @@ def main():
     # beats what the description implies
     items = apply_containers(items)
     items = apply_flavour(items)
+    items = apply_unfinished(items)
 
     # de-duplicate on name + slot + source, keeping the first
     seen, unique = set(), []

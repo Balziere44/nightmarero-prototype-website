@@ -9194,7 +9194,7 @@
    "origin": "edited",
    "ourName": "Hervor Alvitr",
    "new": true,
-   "cat": "Shields",
+   "cat": "Godly Gear",
    "slot": "shield",
    "kind": "gear"
   },
@@ -10410,7 +10410,7 @@
    "origin": "edited",
    "ourName": "Brynhild",
    "new": true,
-   "cat": "Armors",
+   "cat": "Godly Gear",
    "slot": "armor",
    "kind": "gear"
   },
@@ -10601,7 +10601,7 @@
    "origin": "edited",
    "ourName": "Sleipnir",
    "new": true,
-   "cat": "Shoes",
+   "cat": "Godly Gear",
    "slot": "shoes",
    "kind": "gear"
   },
@@ -11497,7 +11497,7 @@
    "origin": "edited",
    "ourName": "Aesprika",
    "new": true,
-   "cat": "Garments",
+   "cat": "Godly Gear",
    "slot": "garment",
    "kind": "gear"
   },
@@ -11984,7 +11984,7 @@
    "origin": "edited",
    "ourName": "Megingjard",
    "new": true,
-   "cat": "Accessories",
+   "cat": "Godly Gear",
    "slot": "accessory",
    "kind": "gear"
   },
@@ -12010,7 +12010,7 @@
    "origin": "edited",
    "ourName": "Brisingamen",
    "new": true,
-   "cat": "Accessories",
+   "cat": "Godly Gear",
    "slot": "accessory",
    "kind": "gear"
   },
