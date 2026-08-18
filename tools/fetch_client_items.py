@@ -111,6 +111,12 @@ DEV_ITEMS = {
                 # server does not have, and the name is broken in the client
 }
 
+# The placeholder cards from the beta -- Generic Weapon Card, Generic Shield
+# Card and so on, one per slot, sitting on consecutive ids. They are the
+# owner's own entries, so the provenance gate has nothing to say about them,
+# but they are not cards anybody can get.
+DEV_ITEMS |= set(range(160121, 160128))
+
 
 def find_client(argv):
     if len(argv) > 1:
