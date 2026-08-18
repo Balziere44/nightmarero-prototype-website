@@ -562,6 +562,30 @@ def same_reading(a, b):
            (b["stat"], b["effect"], b["mastery"], b["level"])
 
 
+def needed_by_a_recipe():
+    """Names a crafting recipe asks for, from recipes.json.
+
+    A recipe that asks for 25 Nine Tail is proof the game has Nine Tail, so
+    these come in whatever their client entry looks like. Without this the
+    provenance gate quietly deletes half the potion ladder's shopping list:
+    Scell, Nine Tail, Detrimindexta, Karvodailnirol and Golden Hair are all
+    plain official items the owner never had a reason to rewrite.
+    """
+    path = os.path.join(db.SRC, "recipes.json")
+    try:
+        data = json.load(io.open(path, encoding="utf-8"))
+    except (IOError, ValueError):
+        return set()
+    out = set()
+    for group in data.get("groups", []):
+        for recipe in group.get("makes", []):
+            out.add(recipe["item"].lower())
+            for need in recipe.get("needs", []):
+                if "item" in need:
+                    out.add(need["item"].lower())
+    return out
+
+
 def asked_about():
     """Names somebody in the Discord answered about, from who-drops.json.
 
@@ -636,7 +660,7 @@ def main():
              counts.get("vanilla", 0)))
 
     wanted = wanted_names()
-    asked = asked_about()
+    asked = asked_about() | needed_by_a_recipe()
     found, unknown, untouched = {}, {}, []
 
     for entry in sorted(raw.values(), key=lambda e: e["id"]):
@@ -654,6 +678,16 @@ def main():
             if ours is not None:
                 untouched.append(ours["name"])
             continue
+
+        # A card carries its monster's name, and plenty of those monsters
+        # drop a piece of loot named after themselves too: the site's Poison
+        # Spore is a card, the client's is the mushroom you hand to an
+        # alchemist. Two different items, so the loot is a new entry rather
+        # than a failed correction of the card.
+        if ours is not None and ours["kind"] == "card":
+            kind = describe(entry)["type"].strip().lower()
+            if kind and kind not in ("card", "card?"):
+                ours = None
 
         if ours is None:
             got = describe(entry)

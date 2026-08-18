@@ -391,6 +391,8 @@ window.NM_I18N_REGISTER('pt', {
   'db.src.mvp-card': 'Carta de chefe',
   'db.src.unknown': 'Local desconhecido',
   'db.src.discord': 'Respondido no Discord',
+  'db.src.wiki': 'Wiki do servidor',
+  'db.src.client': 'Descrito no próprio item',
   'db.aboutHead': 'O que é',
   'q.dFrom': 'De',
   'q.dWest': 'Oeste',

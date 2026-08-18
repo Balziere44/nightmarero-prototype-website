@@ -522,6 +522,49 @@ about in `who-drops.json` is imported even when its tooltip is plain official
 text with none of this server's vocabulary in it, which is how Sunglasses got
 in.
 
+### What a quest needs, and who drops that
+
+`tools/data/recipes.json` holds the crafting ladders off the wiki's Potion
+page. Two builders read it, which is the point of it being a file rather than a
+constant:
+
+- `build_quests.py` prints the tables on `quests.html#potions`, and every
+  ingredient is now a link to that item in the database, which is where the
+  answer to *and who drops that* lives.
+- `build_database.py` uses it twice. A material a recipe asks for is **proof
+  the item is in the game**, so it comes in past the provenance gate however
+  its client entry reads -- without that, Scell, Nine Tail, Detrimindexta,
+  Karvodailnirol and Golden Hair all vanished from the site, because they are
+  plain official items the owner never had a reason to rewrite. And each
+  material's own entry gains a `Used to craft: White Potion` line, so searching
+  a potion by effect lists its whole shopping list.
+
+Of the 27 materials the potion ladder asks for, 16 have a source and 11 do not.
+The wiki names 12 of them, the Discord answered 4 more. The eleven still open
+-- Golden Hair, Grave Dust, Blazing Stone, Broken Urn, Detrimindexta, Ancient
+Tooth, Cultish Mask, Karvodailnirol, Scell, Nine Tail and the loot Poison Spore
+-- are the list to take to Twilight.
+
+Two more passes fill drops in from the client's own words, and both only ever
+fill a blank, so a sheet row or an answer in the Discord always wins:
+
+- **A chest that lists what it gives** is telling you where those items come
+  from. That is 52 pieces of gear, the whole Nightmare and Abyss weapon and
+  armour families, which are bought out of a chest and were sitting under
+  *Location unknown* while the answer was written on the chest.
+- **A description that names the monster it came off.** "A tail cut from a
+  Green Pitaya" is an answer; "an idol carved in a shape reminiscent of a
+  Chimera" is not, so `apply_flavour()` reads the shape of the sentence -- a
+  taken-from verb, then the monster -- and a deny list throws out the
+  resemblances. 20 materials, and it will not guess beyond them.
+
+Both are labelled *The item's own description* in the source filter rather than
+being passed off as a documented drop.
+
+A card is named after its monster and that monster often drops loot of the same
+name. The card Poison Spore and the mushroom Poison Spore are two items, and
+both are listed; the recipe marks the mushroom.
+
 ### When the sheet and the game spell it differently
 
 Every sheet row was checked against the client's display names. 21 of them are

@@ -391,6 +391,8 @@ window.NM_I18N_REGISTER('ja', {
   'db.src.mvp-card': 'MVPカード',
   'db.src.unknown': '入手場所不明',
   'db.src.discord': 'Discordでの回答',
+  'db.src.wiki': 'プレイヤーwiki',
+  'db.src.client': 'アイテムの説明文',
   'db.aboutHead': 'これは何か',
   'q.dFrom': '現在地',
   'q.dWest': '西',

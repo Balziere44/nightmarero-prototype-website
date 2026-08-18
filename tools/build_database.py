@@ -382,7 +382,14 @@ def apply_client(items, path):
     empty = []
     for got in data.get("items", []):
         if got.get("new"):
-            if got["name"].lower() in ours:
+            already = ours.get(got["name"].lower())
+            kind_of = got.get("kind") or ("card" if got["cat"] == "Card"
+                                          else "gear")
+            # a card is named after its monster, and the monster often drops
+            # loot of the same name: the card Poison Spore and the mushroom
+            # Poison Spore are both real and both wanted
+            if already is not None and not (already["kind"] == "card"
+                                            and kind_of == "material"):
                 continue
             kind = got.get("kind") or ("card" if got["cat"] == "Card"
                                        else "gear")
@@ -440,6 +447,139 @@ def apply_client(items, path):
     if empty:
         print("  tooltip vazio, planilha mantida (%d): %s"
               % (len(empty), ", ".join(sorted(empty))))
+    return items
+
+
+def apply_recipes(items, path):
+    """tools/data/recipes.json: what a material is for, and where the wiki says
+    it comes from.
+
+    "Which items do the quests use, and who drops those" is the question this
+    answers. A material that a recipe asks for says so on its own entry, so the
+    answer is where a player is already looking, and searching the potion's name
+    turns up its whole shopping list.
+    """
+    try:
+        data = json.load(io.open(path, encoding="utf-8"))
+    except (IOError, ValueError):
+        return items
+
+    # a recipe asks for the loot, never for the card that shares its name
+    ours = {}
+    for it in items:
+        key = it["name"].lower()
+        if key not in ours or (ours[key]["kind"] == "card"
+                               and it["kind"] == "material"):
+            ours[key] = it
+
+    used, placed, absent = 0, 0, []
+    for group in data.get("groups", []):
+        for recipe in group.get("makes", []):
+            for need in recipe.get("needs", []):
+                if "item" not in need:
+                    continue
+                it = ours.get(need["item"].lower())
+                if it is None:
+                    absent.append(need["item"])
+                    continue
+                line = "Used to craft: %s" % recipe["item"]
+                if line not in it["effect"]:
+                    it["effect"].append(line)
+                    used += 1
+        for hint in group.get("from", []):
+            it = ours.get(hint["item"].lower())
+            if it is None or (it.get("drops") and it["drops"] != UNKNOWN_WHERE):
+                continue
+            it["drops"] = hint["from"]
+            it["source"] = "wiki"
+            placed += 1
+
+    print("  %-32s %4d materiais marcados, %d com origem do wiki"
+          % ("recipes.json", used, placed))
+    if absent:
+        print("  receita pede o que a database não tem: %s"
+              % ", ".join(sorted(set(absent))))
+    return items
+
+
+def apply_containers(items):
+    """A chest that lists what it gives is telling you where those come from.
+
+    The Nightmare and Abyss weapon families are only ever bought out of a
+    chest, so without this they sit under "Location unknown" while the answer
+    is written on the chest.
+    """
+    named = {}
+    for it in items:
+        named.setdefault(it["name"].lower(), it)
+
+    filled = 0
+    for box in items:
+        if box.get("cat") != "Container":
+            continue
+        for line in box.get("effect", []):
+            line = re.sub(r"^\d+\s+", "", line.strip()).strip(".,")
+            it = named.get(line.lower())
+            if it is None or it is box:
+                continue
+            if it.get("drops") and it["drops"] != UNKNOWN_WHERE:
+                continue
+            it["drops"] = box["name"]
+            it["source"] = "client"
+            filled += 1
+
+    print("  %-32s %4d vindos de um baú" % ("(baús do cliente)", filled))
+    return items
+
+
+# "A tail cut from a Green Pitaya" names the monster. "An idol carved in a
+# shape reminiscent of a Chimera" does not, so the shapes of the sentence have
+# to be read rather than the names counted.
+TAKEN_FROM = (
+    r"(?:taken|cut|peeled|harvested|plucked|torn|ripped|scraped|pulled|"
+    r"salvaged|recovered|collected|stripped|extracted|severed|sliced|snapped|"
+    r"pried|gathered|scavenged|skinned|sheared)\s+(?:from|off|out of)",
+    r"(?:shed|dropped|left|worn|wielded|carried|issued|produced|possessed)"
+    r"\s+by",
+    r"belong(?:ing|ed)\s+to",
+)
+NOT_FROM = re.compile(
+    r"reminiscent of|in the shape of|shaped like|resembling|looks like|"
+    r"said to (?:be|have)|rumou?red|reminds", re.I)
+
+
+def apply_flavour(items):
+    """Where the item's own description names the monster it came off."""
+    monsters = sorted((it["name"] for it in items if it["kind"] == "card"),
+                      key=len, reverse=True)
+    # the server's own word for its content, not a monster reference
+    monsters = [m for m in monsters if len(m) >= 4 and m != "Nightmare"]
+    alt = "|".join(re.escape(m) for m in monsters)
+    lead = r"(?:the\s+|a\s+|an\s+|one of the\s+|those\s+)?"
+    remains = r"(?:remains of\s+" + lead + r")?"
+    patterns = [re.compile(verb + r"\s+" + lead + remains + "(" + alt + r")(?![A-Za-z])")
+                for verb in TAKEN_FROM]
+
+    filled = 0
+    for it in items:
+        if it["kind"] != "material":
+            continue
+        if it.get("drops") and it["drops"] != UNKNOWN_WHERE:
+            continue
+        text = " ".join(it.get("effect", []))
+        for pattern in patterns:
+            found = pattern.search(text)
+            if not found:
+                continue
+            if NOT_FROM.search(text[max(0, found.start() - 60):found.end()]):
+                continue
+            it["drops"] = found.group(1)
+            it["source"] = "client"
+            filled += 1
+            break
+
+    print("  %-32s %4d ditos pela própria descrição"
+          % ("(descrição do item)", filled))
     return items
 
 
@@ -648,7 +788,12 @@ def main():
     # everything, because that is the order of how much they can be trusted
     items = apply_tooltips(items)
     items = apply_client(items, os.path.join(SRC, "client-items.json"))
+    items = apply_recipes(items, os.path.join(SRC, "recipes.json"))
     items = apply_who_drops(items, os.path.join(SRC, "who-drops.json"))
+    # last, because both only fill a blank: a player's answer in the Discord
+    # beats what the description implies
+    items = apply_containers(items)
+    items = apply_flavour(items)
 
     # de-duplicate on name + slot + source, keeping the first
     seen, unique = set(), []

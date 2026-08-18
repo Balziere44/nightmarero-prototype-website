@@ -67,7 +67,8 @@
   var SOURCE_FALLBACK = {
     core: 'World drop', mvp: 'Boss drop', card: 'Card', shadow: 'Shadow gear',
     relic: 'Relic gear', 'mvp-card': 'Boss card',
-    unknown: 'Location unknown', discord: 'Answered on Discord'
+    unknown: 'Location unknown', discord: 'Answered on Discord',
+    wiki: 'Player wiki', client: "The item's own description"
   };
 
   function slotLabel(s) { return t('db.s.' + s, SLOT_FALLBACK[s] || s); }
@@ -115,8 +116,8 @@
 
     els.source.innerHTML = '';
     els.source.appendChild(option('', t('db.anySource', 'Any source')));
-    ['core', 'mvp', 'card', 'mvp-card', 'shadow', 'relic', 'discord',
-     'unknown']
+    ['core', 'mvp', 'card', 'mvp-card', 'shadow', 'relic', 'wiki', 'discord',
+     'client', 'unknown']
       .forEach(function (s) {
         if (all.some(function (i) { return i.source === s; })) {
           els.source.appendChild(option(s, sourceLabel(s)));

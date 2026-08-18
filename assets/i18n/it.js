@@ -391,6 +391,8 @@ window.NM_I18N_REGISTER('it', {
   'db.src.mvp-card': 'Carta di boss',
   'db.src.unknown': 'Luogo sconosciuto',
   'db.src.discord': 'Risposto su Discord',
+  'db.src.wiki': 'Wiki del server',
+  'db.src.client': 'La descrizione dell’oggetto',
   'db.aboutHead': 'Che cosa e',
   'q.dFrom': 'Da',
   'q.dWest': 'Ovest',

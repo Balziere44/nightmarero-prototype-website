@@ -23,6 +23,7 @@ import json
 import os
 import re
 import sys
+from urllib.parse import quote_plus
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from build_classes import esc, head, header, footer, slugify, SITE, REGISTER
@@ -330,48 +331,22 @@ def quest_section(stem, title, blurb, steps):
 # Potions, from the player wiki's Potion page
 # --------------------------------------------------------------------------
 
-POTIONS = [
-    ("Health potions", [
-        ("Red Potion", ["Handed to you in the tutorial"],
-         "Heals 100 to 200 HP"),
-        ("Orange Potion", ["10 Red Herb", "5 Yellow Herb", "15 Stem"],
-         "Heals 400 to 600 HP"),
-        ("Yellow Potion", ["25 Yellow Herb", "30 Mantis Scythe",
-                           "30 Moth Dust"], "Heals 1000 to 2000 HP"),
-        ("White Potion", ["30 White Herb", "1 Burning Shard",
-                          "1 Enchanted Key", "1 Pyroxene"],
-         "Heals 3000 to 6000 HP"),
-    ], ["Red Herb: red plants", "Yellow Herb: yellow plants",
-        "Stem: red, yellow and purple plants", "Mantis Scythe: Mantis",
-        "Moth Dust: Dustiness"]),
-    ("Spirit potions", [
-        ("Grape Juice", ["25 Grape", "10 Ant Jaw", "10 Golden Hair"],
-         "Recovers 50 to 100 SP"),
-        ("Blue Potion", ["25 Blue Herb", "25 Grave Dust", "25 Blazing Stone",
-                         "25 Broken Urn"], "Recovers 400 to 600 SP"),
-    ], ["Grape: purple plants",
-        "Ant Jaw: Soldier Deniro, Soldier Andre, Soldier Pierre",
-        "Blue Herb: the plants a boss leaves when it is summoned at an altar"]),
-    ("Attack speed potions", [
-        ("Concentration Potion", ["25 Mushroom Spore", "1 Gnome's Moustache",
-                                  "1 Memento"], "ASPD +2"),
-        ("Awakening Potion", ["25 Mushroom Spore", "25 Poison Spore",
-                              "1 Detrimindexta", "1 Ancient Tooth",
-                              "1 Cultish Mask"], "ASPD +4"),
-        ("Berserk Potion", ["25 Mushroom Spore", "25 Poison Spore",
-                            "1 Detrimindexta", "1 Karvodailnirol"],
-         "ASPD +6"),
-    ], ["Mushroom Spore: red mushrooms", "Gnome's Moustache: Knocker",
-        "Memento: Zombie Master"]),
-    ("Status cure", [
-        ("Green Potion", ["30 Green Herb", "30 Stem", "25 Scell",
-                          "25 Nine Tail"],
-         "Cures Bleeding, Poison and Burning on the spot"),
-    ], ["Green Herb: green plants",
-        "Stem: red, yellow and purple plants"]),
-]
+# The ladder itself lives in tools/data/recipes.json, because
+# build_database.py reads the same file: a material a recipe asks for is proof
+# the item is in the game, and the material's own entry is where a player
+# looks up who drops it.
+def load_recipes():
+    path = os.path.join(SRC, "recipes.json")
+    try:
+        return json.load(io.open(path, encoding="utf-8"))
+    except (IOError, ValueError):
+        print("  faltando: recipes.json")
+        return {"groups": [], "_source": ""}
 
-POTION_SOURCE = "https://wiki.nightmareofragnarok.com/wiki/Potion"
+
+RECIPES = load_recipes()
+
+POTION_SOURCE = RECIPES.get("_source", "")
 
 # The rules around the ladder that are not amounts, so do not belong in a
 # table of amounts.
@@ -402,20 +377,29 @@ POTION_RULES = [
 ]
 
 
+def material(need):
+    """One ingredient chip. It links to the item in the database, which is
+    where the answer to "and who drops that" is kept."""
+    if "item" in need:
+        return ('<span class="q-mat"><a href="database.html?item=%s">%s %s</a>'
+                '</span>' % (quote_plus(need["item"]), need["count"],
+                             esc(need["item"])))
+    return '<span class="q-mat">%s</span>' % esc(need["note"])
+
+
 def potion_section():
     groups = []
-    for label, rows, sources in POTIONS:
+    for group in RECIPES.get("groups", []):
         items = "".join(
             """            <tr>
               <td><b>{name}</b></td>
               <td>{needs}</td>
               <td class="dim">{effect}</td>
             </tr>""".format(
-                name=esc(name),
-                needs="".join('<span class="q-mat">%s</span>' % esc(x)
-                              for x in needs),
-                effect=esc(effect))
-            for name, needs, effect in rows)
+                name=esc(recipe["item"]),
+                needs="".join(material(need) for need in recipe["needs"]),
+                effect=esc(recipe["effect"]))
+            for recipe in group["makes"])
         groups.append("""        <h3 class="q-potion-head">{label}</h3>
         <div class="table-wrap">
           <table class="mvp-table">
@@ -430,9 +414,10 @@ def potion_section():
           </table>
         </div>
         <p class="q-potion-from"><span data-i18n="q.potionFrom">Where those come from</span>{sources}</p>""".format(
-            label=esc(label), items=items,
-            sources="".join('<span class="q-mat">%s</span>' % esc(s)
-                            for s in sources)))
+            label=esc(group["name"]), items=items,
+            sources="".join('<span class="q-mat">%s: %s</span>'
+                            % (esc(hint["item"]), esc(hint["from"]))
+                            for hint in group["from"])))
 
     return """
   <section class="section-pad-sm" id="potions">

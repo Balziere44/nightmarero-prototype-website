@@ -1,0 +1,281 @@
+{
+ "_note": "The crafting ladders, off the player wiki's Potion page. Read by build_quests.py for the table on quests.html and by build_database.py, which uses it twice over: a material a recipe asks for is proof the item is in the game, so it is imported even when its client entry is untouched translation text, and the material's entry says what it is for and who drops it.",
+ "_source": "https://wiki.nightmareofragnarok.com/wiki/Potion",
+ "groups": [
+  {
+   "name": "Health potions",
+   "makes": [
+    {
+     "item": "Red Potion",
+     "needs": [
+      {
+       "note": "Handed to you in the tutorial"
+      }
+     ],
+     "effect": "Heals 100 to 200 HP"
+    },
+    {
+     "item": "Orange Potion",
+     "needs": [
+      {
+       "count": 10,
+       "item": "Red Herb"
+      },
+      {
+       "count": 5,
+       "item": "Yellow Herb"
+      },
+      {
+       "count": 15,
+       "item": "Stem"
+      }
+     ],
+     "effect": "Heals 400 to 600 HP"
+    },
+    {
+     "item": "Yellow Potion",
+     "needs": [
+      {
+       "count": 25,
+       "item": "Yellow Herb"
+      },
+      {
+       "count": 30,
+       "item": "Mantis Scythe"
+      },
+      {
+       "count": 30,
+       "item": "Moth Dust"
+      }
+     ],
+     "effect": "Heals 1000 to 2000 HP"
+    },
+    {
+     "item": "White Potion",
+     "needs": [
+      {
+       "count": 30,
+       "item": "White Herb"
+      },
+      {
+       "count": 1,
+       "item": "Burning Shard"
+      },
+      {
+       "count": 1,
+       "item": "Enchanted Key"
+      },
+      {
+       "count": 1,
+       "item": "Pyroxene"
+      }
+     ],
+     "effect": "Heals 3000 to 6000 HP"
+    }
+   ],
+   "from": [
+    {
+     "item": "Red Herb",
+     "from": "red plants"
+    },
+    {
+     "item": "Yellow Herb",
+     "from": "yellow plants"
+    },
+    {
+     "item": "Stem",
+     "from": "red, yellow and purple plants"
+    },
+    {
+     "item": "Mantis Scythe",
+     "from": "Mantis"
+    },
+    {
+     "item": "Moth Dust",
+     "from": "Dustiness"
+    }
+   ]
+  },
+  {
+   "name": "Spirit potions",
+   "makes": [
+    {
+     "item": "Grape Juice",
+     "needs": [
+      {
+       "count": 25,
+       "item": "Grape"
+      },
+      {
+       "count": 10,
+       "item": "Ant Jaw"
+      },
+      {
+       "count": 10,
+       "item": "Golden Hair"
+      }
+     ],
+     "effect": "Recovers 50 to 100 SP"
+    },
+    {
+     "item": "Blue Potion",
+     "needs": [
+      {
+       "count": 25,
+       "item": "Blue Herb"
+      },
+      {
+       "count": 25,
+       "item": "Grave Dust"
+      },
+      {
+       "count": 25,
+       "item": "Blazing Stone"
+      },
+      {
+       "count": 25,
+       "item": "Broken Urn"
+      }
+     ],
+     "effect": "Recovers 400 to 600 SP"
+    }
+   ],
+   "from": [
+    {
+     "item": "Grape",
+     "from": "purple plants"
+    },
+    {
+     "item": "Ant Jaw",
+     "from": "Soldier Deniro, Soldier Andre, Soldier Pierre"
+    },
+    {
+     "item": "Blue Herb",
+     "from": "the plants a boss leaves when it is summoned at an altar"
+    }
+   ]
+  },
+  {
+   "name": "Attack speed potions",
+   "makes": [
+    {
+     "item": "Concentration Potion",
+     "needs": [
+      {
+       "count": 25,
+       "item": "Mushroom Spore"
+      },
+      {
+       "count": 1,
+       "item": "Gnome's Moustache"
+      },
+      {
+       "count": 1,
+       "item": "Memento"
+      }
+     ],
+     "effect": "ASPD +2"
+    },
+    {
+     "item": "Awakening Potion",
+     "needs": [
+      {
+       "count": 25,
+       "item": "Mushroom Spore"
+      },
+      {
+       "count": 25,
+       "item": "Poison Spore"
+      },
+      {
+       "count": 1,
+       "item": "Detrimindexta"
+      },
+      {
+       "count": 1,
+       "item": "Ancient Tooth"
+      },
+      {
+       "count": 1,
+       "item": "Cultish Mask"
+      }
+     ],
+     "effect": "ASPD +4"
+    },
+    {
+     "item": "Berserk Potion",
+     "needs": [
+      {
+       "count": 25,
+       "item": "Mushroom Spore"
+      },
+      {
+       "count": 25,
+       "item": "Poison Spore"
+      },
+      {
+       "count": 1,
+       "item": "Detrimindexta"
+      },
+      {
+       "count": 1,
+       "item": "Karvodailnirol"
+      }
+     ],
+     "effect": "ASPD +6"
+    }
+   ],
+   "from": [
+    {
+     "item": "Mushroom Spore",
+     "from": "red mushrooms"
+    },
+    {
+     "item": "Gnome's Moustache",
+     "from": "Knocker"
+    },
+    {
+     "item": "Memento",
+     "from": "Zombie Master"
+    }
+   ]
+  },
+  {
+   "name": "Status cure",
+   "makes": [
+    {
+     "item": "Green Potion",
+     "needs": [
+      {
+       "count": 30,
+       "item": "Green Herb"
+      },
+      {
+       "count": 30,
+       "item": "Stem"
+      },
+      {
+       "count": 25,
+       "item": "Scell"
+      },
+      {
+       "count": 25,
+       "item": "Nine Tail"
+      }
+     ],
+     "effect": "Cures Bleeding, Poison and Burning on the spot"
+    }
+   ],
+   "from": [
+    {
+     "item": "Green Herb",
+     "from": "green plants"
+    },
+    {
+     "item": "Stem",
+     "from": "red, yellow and purple plants"
+    }
+   ]
+  }
+ ]
+}
