@@ -689,6 +689,38 @@ python tools/build_mvps.py
 `build_database.py` also puts `Found on <map>` on each relic entry, so a
 search for a map name in the database turns up the pieces that come from it.
 
+### The database used to call that map a "drop"
+
+`database.html` reused its ordinary "Drops from" field for relic gear too,
+with the map code as the value. A player screenshotted the modal for **Black
+Forest Boots** -- "DROPS FROM hu_fild02" -- and went looking for a monster on
+that field that does not exist: Relic Gear is never a monster drop, it is
+traded from the Roaming Archaeologist NPC for a Relic, and the map is where
+her altar sits.
+
+`database.js` now special-cases anything with `cat === 'Relic Gear'` (`117`
+items, not just the `20` transcribed into `relic-gear.json`) with its own
+"How to get it" heading, in both the modal and the Discord share text:
+
+- The `20` with a transcribed map (`source === 'relic'`) read *"Quest reward
+  from the Roaming Archaeologist, found on hu_fild02"*, linked to
+  **`endgame.html#archaeologist`**, which explains who she is, and to a **"See
+  the map"** link that jumps straight to that piece's own card on
+  `mvps.html#r-<slug>` -- the minimap and cost strip, the actual answer to
+  "where do I get this". `parse_relics()` writes that slug onto the item as
+  `relicSlug`, computed with the same `slugify()` `build_mvps.py` uses for the
+  card's `id="r-<slug>"`, so the two are guaranteed to agree without hand
+  matching two lists.
+- The other `97`, read out of the client with no location attached, read
+  *"Quest reward from the Roaming Archaeologist. The location has not been
+  written down yet"* -- the mechanism is still true even where the specific
+  map is not, so it is still said, and nothing is invented for the part that
+  is not known.
+
+The Discord share text spells out full origin URLs rather than a relative
+`href`, since Discord cannot follow those, and stays English no matter the
+page's language, the same as every other line `shareText()` builds.
+
 ## Quests
 
 `quests.html` collects the quests that have no NPC pointing at them. Everything

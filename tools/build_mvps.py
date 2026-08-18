@@ -479,7 +479,7 @@ def relic_section():
         if it.get("weight"):
             foot.append("Weight %d" % it["weight"])
 
-        cards.append("""        <article class="relic-card">
+        cards.append("""        <article class="relic-card" id="r-{slug}">
           <div class="relic-top">
             <strong>{name}</strong>
             <span class="relic-type">{type}</span>
@@ -488,6 +488,7 @@ def relic_section():
           <ul class="relic-lines">{bits}</ul>
           {foot}{where}
         </article>""".format(
+            slug=slugify(it["name"]),
             name=esc(it["name"]), type=esc(it.get("type", "")), badges=badges,
             bits="".join(bits), where=relic_where(it, sizes),
             foot=('<p class="relic-foot">%s</p>' % ", ".join(foot)) if foot else ""))

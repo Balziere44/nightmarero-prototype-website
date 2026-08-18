@@ -21,6 +21,7 @@ import datetime
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from status_codex import STATUS, TERM_CLASS
+from build_classes import slugify as _slugify
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "tools", "data")
@@ -280,6 +281,11 @@ def parse_relics(path):
             # the field is for. The type is already the category.
             "drops": it.get("map", ""),
             "source": "relic",
+            # mvps.html#relics gives every piece its own id, "r-" plus this
+            # same slug, computed off this same name -- so the database can
+            # link straight to the map and cost-strip picture for this piece
+            # instead of only naming the map code.
+            "relicSlug": _slugify(it["name"]),
         })
     return items
 

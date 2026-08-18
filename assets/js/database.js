@@ -314,13 +314,71 @@
     var lines = [head.shift() + '  ' + head.join(' · ')];
     (i.effect || []).forEach(function (line) { lines.push('- ' + line); });
     if (i.affix) lines.push('Affix: ' + i.affix);
-    if (i.drops) lines.push('Drops from: ' + i.drops);
+    if (i.drops) {
+      lines.push(i.cat === 'Relic Gear' ? relicWhere(i, false)
+                                        : 'Drops from: ' + i.drops);
+    }
     lines.push('<' + itemUrl(i) + '>');
     return lines.join('\n');
   }
 
   function itemUrl(i) {
     return location.origin + location.pathname + '?item=' + encodeURIComponent(i.name);
+  }
+
+  /* mvps.html and database.html are always siblings in the same folder, so
+     this is how one page links into the other without hard-coding a path
+     that would break the day either one moves. */
+  function siblingUrl(page) {
+    return location.origin + location.pathname.replace(/[^/]*$/, page);
+  }
+
+  /* Relic gear is never a monster drop: the Roaming Archaeologist trades it
+     for a Relic, and the map in i.drops (when one is known) is where her
+     altar sits, not a spot to farm. Labelling that map "Drops from" reads
+     exactly like a monster drop, and it sent at least one player hunting the
+     field for a boots dropping mob that does not exist. This is the fix, in
+     both the modal (linked, HTML, pointing at the mechanism and, where the
+     guild has transcribed one, at the piece's own map and cost picture on
+     mvps.html) and the Discord share text (plain, unescaped like every other
+     line shareText builds, with the same links spelled out since Discord
+     cannot follow a relative href).
+
+     Every "Relic Gear" item gets the mechanism explained, but only the 20
+     the guild has transcribed off the sheet (source "relic") name a map --
+     the rest were read out of the client with no location attached, and
+     i.drops on those is the ordinary "not confirmed" placeholder, so no map
+     is invented for them and there is no map picture to link to. The
+     underlying i.drops value is untouched either way, since the map code is
+     what makes the Dropped by search and the ?drops= link work for the ones
+     that have one. */
+  function relicWhere(i, linked) {
+    var known = i.source === 'relic';
+    var mapLink = known && i.relicSlug ? siblingUrl('mvps.html') + '#r-' + i.relicSlug : '';
+
+    if (!linked) {
+      // shareText is always English, like every other line it builds, since
+      // the Discord message it becomes is read by people running every UI
+      // language on the site itself
+      var plain = known
+        ? 'Quest reward from the Roaming Archaeologist, found on ' + i.drops + '.'
+        : 'Quest reward from the Roaming Archaeologist. The location has not been written down yet.';
+      return mapLink ? plain + '\nSee the map: <' + mapLink + '>' : plain;
+    }
+
+    var who = t('db.archaeologist', 'the Roaming Archaeologist');
+    var link = '<a href="endgame.html#archaeologist">' + esc(who) + '</a>';
+    var html = known
+      ? t('db.relicText', 'Quest reward from {who}, found on {map}.')
+          .replace('{who}', link).replace('{map}', esc(i.drops))
+      : t('db.relicTextUnknown',
+          'Quest reward from {who}. The location has not been written down yet.')
+          .replace('{who}', link);
+    if (mapLink) {
+      html += ' <a href="mvps.html#r-' + esc(i.relicSlug) + '">' +
+        esc(t('db.relicMap', 'See the map')) + '</a>';
+    }
+    return html;
   }
 
   function openItem(i) {
@@ -346,8 +404,13 @@
               '<p class="db-modal-p">' + esc(i.affix) + '</p>';
     }
     if (i.drops) {
-      html += '<h3 class="db-modal-h">' + t('db.drops', 'Drops from') + '</h3>' +
-              '<p class="db-modal-p">' + esc(i.drops) + '</p>';
+      if (i.cat === 'Relic Gear') {
+        html += '<h3 class="db-modal-h">' + t('db.relicHow', 'How to get it') + '</h3>' +
+                '<p class="db-modal-p">' + relicWhere(i, true) + '</p>';
+      } else {
+        html += '<h3 class="db-modal-h">' + t('db.drops', 'Drops from') + '</h3>' +
+                '<p class="db-modal-p">' + esc(i.drops) + '</p>';
+      }
     }
 
     els.modalBody.innerHTML = html;

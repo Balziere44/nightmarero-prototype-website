@@ -2328,6 +2328,7 @@ html[data-theme="light"] .site-footer { background: color-mix(in srgb, var(--bg)
 }
 
 .db-modal-p { font-size: var(--step--1); line-height: 1.55; color: var(--text-muted); }
+.db-modal-p a { color: var(--accent-soft); text-decoration: underline; text-underline-offset: 3px; }
 
 .db-modal-actions {
   display: flex;
