@@ -788,8 +788,10 @@ def main():
     # everything, because that is the order of how much they can be trusted
     items = apply_tooltips(items)
     items = apply_client(items, os.path.join(SRC, "client-items.json"))
-    items = apply_recipes(items, os.path.join(SRC, "recipes.json"))
+    # a credited answer names the floor and the monster; the wiki note behind
+    # a recipe usually names only the monster, so it fills what is left
     items = apply_who_drops(items, os.path.join(SRC, "who-drops.json"))
+    items = apply_recipes(items, os.path.join(SRC, "recipes.json"))
     # last, because both only fill a blank: a player's answer in the Discord
     # beats what the description implies
     items = apply_containers(items)

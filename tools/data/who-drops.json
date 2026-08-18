@@ -4,9 +4,14 @@
  "_source": "#item-finder and #general in the Discord export, read 17 Aug 2026.",
  "items": [
   {
-   "name": "Living Wood",
-   "from": "Greatest General on pay_fild10, or from other players in Prontera",
-   "said": "Camomile"
+   "name": "Ancient Tooth",
+   "from": "Byalan dungeon, not confirmed",
+   "said": "Bovi in #general, who said \"should be bya\""
+  },
+  {
+   "name": "Blue Herb",
+   "from": "Blue plants, which only appear where an MVP has been killed at an altar",
+   "said": "Panda, and TwilightsCall in #general"
   },
   {
    "name": "Burning Shard",
@@ -14,19 +19,14 @@
    "said": "Sleepy, confirmed by Shiiiiikiyo"
   },
   {
-   "name": "Pyroxene",
-   "from": "Mutant Dragonoid, on its usual spawn point",
-   "said": "Sleepy, confirmed by Shiiiiikiyo"
+   "name": "Coagulated Spell",
+   "from": "Nightmare Glast Heim. Talk to the NPC at the Glast Heim entrance, head for the castle and stop just short of the map",
+   "said": "Yggr and Raul"
   },
   {
-   "name": "Wild Flower",
-   "from": "Alnoldi and Rafflesia, one map north of Lighthalzen",
-   "said": "Sfyn"
-  },
-  {
-   "name": "Fresh Fish",
-   "from": "Phen",
-   "said": "Yggr"
+   "name": "Cultish Mask",
+   "from": "The Sphinx",
+   "said": "BladedIris, who had just found one, agreeing with Bovi"
   },
   {
    "name": "Cyfar",
@@ -34,9 +34,154 @@
    "said": "Einzbern"
   },
   {
+   "name": "Detrimindexta",
+   "from": "Mushrooms",
+   "said": "GeminiSunfall in #general"
+  },
+  {
    "name": "Diamond of the Deep",
    "from": "Kraken, the Byalan dungeon MVP",
    "said": "Alyu"
+  },
+  {
+   "name": "Elunium",
+   "from": "MVPs between level 101 and 150",
+   "said": "Grif"
+  },
+  {
+   "name": "Emveretarcon",
+   "from": "MVPs between level 51 and 100",
+   "said": "Grif"
+  },
+  {
+   "name": "Enchanted Key",
+   "from": "Clock Tower Manager, the mini boss on the last floor",
+   "said": "Yggr"
+  },
+  {
+   "name": "Enriched Elunium",
+   "from": "MVPs over level 150",
+   "said": "Grif"
+  },
+  {
+   "name": "Enriched Oridecon",
+   "from": "MVPs over level 150",
+   "said": "Grif"
+  },
+  {
+   "name": "Fresh Fish",
+   "from": "Phen",
+   "said": "Yggr"
+  },
+  {
+   "name": "Gnome's Moustache",
+   "from": "Knocker, on Mjolnir mine floor 2, the Coal Mines",
+   "said": "miu in #general, and Bovi said the same"
+  },
+  {
+   "name": "Golden Hair",
+   "from": "Marionette, in the Geffen dungeon",
+   "said": "Mullciber, answering GeminiSunfall in #general; the same person's levelling route lists Geffen dungeon for 10 gold hair"
+  },
+  {
+   "name": "Grape",
+   "from": "Purple plants, in the Geffen fields",
+   "said": "Razios and Panda"
+  },
+  {
+   "name": "Green Herb",
+   "from": "Green plants, in the Payon fields",
+   "said": "Panda"
+  },
+  {
+   "name": "Iron",
+   "from": "MVPs up to level 50",
+   "said": "Grif"
+  },
+  {
+   "name": "Jungle Leaf",
+   "from": "um_fild03",
+   "said": "ChrisOhChris, who found it himself"
+  },
+  {
+   "name": "Living Wood",
+   "from": "Greatest General on pay_fild10, or from other players in Prontera",
+   "said": "Camomile"
+  },
+  {
+   "name": "Magma Jelly",
+   "from": "Thor Volcano, worth farming there",
+   "said": "Conker"
+  },
+  {
+   "name": "Memento",
+   "from": "Zombie Master, Geffen dungeon floor 2",
+   "said": "miu and Camomile in #general"
+  },
+  {
+   "name": "Mushroom Spore",
+   "from": "The mushrooms that spawn in dungeons",
+   "said": "miu in #general"
+  },
+  {
+   "name": "Oridecon",
+   "from": "MVPs between level 101 and 150",
+   "said": "Grif"
+  },
+  {
+   "name": "Phracon",
+   "from": "MVPs up to level 50",
+   "said": "Grif"
+  },
+  {
+   "name": "Pyroxene",
+   "from": "Mutant Dragonoid, on its usual spawn point",
+   "said": "Sleepy, confirmed by Shiiiiikiyo"
+  },
+  {
+   "name": "Red Herb",
+   "from": "Red plants, in the Prontera fields",
+   "said": "Panda"
+  },
+  {
+   "name": "Sparkling Diamond",
+   "from": "The Thanatos Tower monsters",
+   "said": "Crimson Acerola, who farmed them"
+  },
+  {
+   "name": "Steel",
+   "from": "MVPs between level 51 and 100",
+   "said": "Grif"
+  },
+  {
+   "name": "Steel Feather",
+   "from": "The Steel Wings hunting quests at their headquarters. Rachel and Veins tokens convert into them too",
+   "said": "Conker in #questions-and-support"
+  },
+  {
+   "name": "Steel Ore",
+   "from": "Kobold Archer",
+   "said": "an answer in #questions-and-support"
+  },
+  {
+   "name": "Sunglasses",
+   "from": "The champion on cmd_fild07",
+   "said": "Shiiiiikiyo, confirmed by another player"
+  },
+  {
+   "name": "White Herb",
+   "from": "White plants, in the Yuno fields",
+   "said": "Panda"
+  },
+  {
+   "name": "Wild Flower",
+   "from": "Alnoldi and Rafflesia, one map north of Lighthalzen",
+   "said": "Sfyn"
+  },
+  {
+   "name": "Yellow Herb",
+   "from": "Yellow plants, in the Morroc fields. The map with the Ant Hell entrance is the good one",
+   "said": "Panda and Yggr"
   },
   {
    "name": "Yggdrasil Berry",
@@ -47,104 +192,10 @@
    "name": "Yggdrasil Seed",
    "from": "The Umbala dungeon MVP, and the rainbow plant it leaves behind",
    "said": "Sorenkazer"
-  },
-  {
-   "name": "Jungle Leaf",
-   "from": "um_fild03",
-   "said": "ChrisOhChris, who found it himself"
-  },
-  {
-   "name": "Coagulated Spell",
-   "from": "Nightmare Glast Heim. Talk to the NPC at the Glast Heim entrance, head for the castle and stop just short of the map",
-   "said": "Yggr and Raul"
-  },
-  {
-   "name": "Enchanted Key",
-   "from": "Clock Tower Manager, the mini boss on the last floor",
-   "said": "Yggr"
-  },
-  {
-   "name": "Sunglasses",
-   "from": "The champion on cmd_fild07",
-   "said": "Shiiiiikiyo, confirmed by another player"
-  },
-  {
-   "name": "Grape",
-   "from": "Purple plants, in the Geffen fields",
-   "said": "Razios and Panda"
-  },
-  {
-   "name": "Red Herb",
-   "from": "Red plants, in the Prontera fields",
-   "said": "Panda"
-  },
-  {
-   "name": "Yellow Herb",
-   "from": "Yellow plants, in the Morroc fields. The map with the Ant Hell entrance is the good one",
-   "said": "Panda and Yggr"
-  },
-  {
-   "name": "Green Herb",
-   "from": "Green plants, in the Payon fields",
-   "said": "Panda"
-  },
-  {
-   "name": "White Herb",
-   "from": "White plants, in the Yuno fields",
-   "said": "Panda"
-  },
-  {
-   "name": "Blue Herb",
-   "from": "Blue plants, which only appear where an MVP has been killed at an altar",
-   "said": "Panda, and TwilightsCall in #general"
-  },
-  {
-   "name": "Phracon",
-   "from": "MVPs up to level 50",
-   "said": "Grif"
-  },
-  {
-   "name": "Iron",
-   "from": "MVPs up to level 50",
-   "said": "Grif"
-  },
-  {
-   "name": "Emveretarcon",
-   "from": "MVPs between level 51 and 100",
-   "said": "Grif"
-  },
-  {
-   "name": "Steel",
-   "from": "MVPs between level 51 and 100",
-   "said": "Grif"
-  },
-  {
-   "name": "Oridecon",
-   "from": "MVPs between level 101 and 150",
-   "said": "Grif"
-  },
-  {
-   "name": "Elunium",
-   "from": "MVPs between level 101 and 150",
-   "said": "Grif"
-  },
-  {
-   "name": "Enriched Oridecon",
-   "from": "MVPs over level 150",
-   "said": "Grif"
-  },
-  {
-   "name": "Enriched Elunium",
-   "from": "MVPs over level 150",
-   "said": "Grif"
-  },
-  {
-   "name": "Magma Jelly",
-   "from": "Thor Volcano, worth farming there",
-   "said": "Conker"
   }
  ],
  "_rules": [
+  "There is no @whodrops on the live server. It and @whereis were on during testing, and TwilightsCall said he had mixed feelings about @whodrops because \"you can use it to just scan for items and read their effects without actually having to track them down\". Players have asked for it repeatedly since launch. That is why this file, and the Dropped by field on the database, exist at all.",
   "Souls drop from bosses only. Two of them are unique to Labyrinth Forest, and anything a boss drops can also be crafted at an Archaeologist, except in the secret dungeons. Said by TwilightsCall.",
   "A Nightmare dungeon champion or mini boss only drops its card on the third floor. The ones on the first two floors do not use their real drop table. Said by Shiiiiikiyo and Sylius.",
   "Nightmare dungeons are where shadow gear and the materials for it come from. Said by Sfyn.",
@@ -155,16 +206,16 @@
  "_wanted": [
   "Ghostly Essence, for the homunculus upgrade",
   "Grave Dust and Broken Urn",
-  "Detrimindexta",
+  "Blazing Stone",
+  "Scell, asked twice and never answered",
+  "Nine Tail",
   "Animal Skin",
   "Wooden Heart",
   "Dried Bone",
-  "Memento",
-  "Sparkling Diamond",
-  "Ancient Tooth and Cultish Mask",
   "Karvodailnirol, asked as \"does Karv only come from black shrooms\"",
   "Fluorescent Liquid, for throwable potions",
-  "Golden Hair, for the Grape Juice quest, which a player reports no living monster drops",
+  "Living Stone",
+  "Flawless Runestone, which one player says no monster drops",
   "The Sandstorm relic dagger"
  ]
 }
