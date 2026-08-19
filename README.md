@@ -328,6 +328,41 @@ boxes, a select, a level, or one of the kind chips — and *Show everything* is 
 button for when browsing the lot is the point. `?drops=` and `?item=` both fill
 a filter in, so a link from the site search still lands on results.
 
+**The filter panel scrolls on its own when it does not fit.** The same problem
+had a second half, reported by a player on a 700px tall screen: the panel is
+906px of controls, it is `position: sticky`, and a sticky box pins its *top*
+edge. Once pinned, the level range, the sort and *Clear filters* sat below the
+fold with no way to reach them, because the wheel moves the results column.
+They were zooming the whole site out with ctrl+scroll to get at them.
+
+So above the 900px breakpoint the panel is capped to the screen and given its
+own scrollbar:
+
+```css
+max-height: calc(100vh - var(--header-h) - 28px);
+max-height: calc(100svh - var(--header-h) - 28px);
+overflow-y: auto;
+```
+
+Everything in that line is resolution-aware rather than a fixed number. The
+header is always on screen so it comes off the top, and `--header-h` is itself
+a breakpoint variable (132px, 100px under 1000px, 78px under 720px), so the
+sum stays right at every width without a second rule. `svh` follows what
+`.db-modal-card` already uses, with the `vh` line above it as the fallback for
+browsers that do not know the unit — those simply keep today's behaviour rather
+than breaking. Measured:
+
+| Viewport | Cap | Result |
+| --- | --- | --- |
+| 1920×1080 | 920px | panel is 906px, **no scrollbar at all** |
+| 1366×700 | 540px | scrolls 366px inside the panel |
+| 900×600 | 472px | scrolls 434px inside the panel |
+| 375×812 | none | not sticky below 900px, flows in the page |
+
+The point of capping rather than picking a height is that a screen tall enough
+to show the whole panel gets no scrollbar and no visible change, which is why
+this never showed up on the big monitor it was designed on.
+
 Three sources feed it, in order of how much they are trusted. The game client
 first, because it is the game (see below). Then Twilight's two published
 reference sheets, which are the only thing that says where an item drops. Then

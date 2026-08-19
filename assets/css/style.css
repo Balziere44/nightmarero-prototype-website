@@ -2106,8 +2106,32 @@ html[data-theme="light"] .site-footer { background: color-mix(in srgb, var(--bg)
   border-radius: var(--radius);
   backdrop-filter: blur(12px);
 }
+/* Pinned beside the results, and given a scrollbar of its own when it does not
+   fit. A sticky box pins its top edge, so on a short screen everything past
+   the fold -- the level range, the sort, Clear filters -- had no way to be
+   reached at all: the wheel scrolls the results column instead, and the panel
+   just sits there with its bottom half off screen. A player on a 700px tall
+   screen reported having to ctrl+scroll the whole site smaller to get at
+   them. Capping the height to what is actually on screen fixes it for every
+   resolution at once, and a screen tall enough to show the whole panel gets
+   no scrollbar, because there is nothing to scroll. */
 @media (min-width: 900px) {
-  .db-filters { position: sticky; top: calc(var(--header-h) + 14px); }
+  .db-filters {
+    position: sticky;
+    top: calc(var(--header-h) + 14px);
+    /* the header is always visible, so it comes off the top, and the 14px
+       breathing room is counted at both ends */
+    max-height: calc(100vh - var(--header-h) - 28px);
+    max-height: calc(100svh - var(--header-h) - 28px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--surface-line-strong) transparent;
+  }
+  .db-filters::-webkit-scrollbar { width: 6px; }
+  .db-filters::-webkit-scrollbar-thumb {
+    background: var(--surface-line-strong);
+    border-radius: 99px;
+  }
 }
 
 .db-field { display: grid; gap: 0.45rem; }
